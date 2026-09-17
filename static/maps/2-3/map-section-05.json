@@ -1,0 +1,169 @@
+{
+  "selection": "2-3",
+  "level": "zelems_2",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 5,
+    "bounds_min": {
+      "X": 823.42505,
+      "Y": -2432.925,
+      "Z": 0.5064638
+    },
+    "bounds_max": {
+      "X": 903.975,
+      "Y": -2327.4749,
+      "Z": 3.1251183
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 4.248451,
+    "offset_x": 84.89378,
+    "offset_y": 32
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-13",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 5,
+      "x": 863.5541,
+      "y": -2381.309,
+      "z": 0.095177
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-12",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 5,
+      "x": 853.0097,
+      "y": -2341.185,
+      "z": 2.583782
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 5,
+      "x": 874.2065,
+      "y": -2418.2422,
+      "z": 2.569302
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-9",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 5,
+      "x": 833.11774,
+      "y": -2388.6006,
+      "z": 2.588007
+    },
+    {
+      "category": "boss",
+      "label": "C",
+      "name": "SpawnPoint_DirectorBoss.Noun",
+      "noun_name": "SpawnPoint_DirectorBoss.Noun",
+      "section": 5,
+      "x": 864.2311,
+      "y": -2380.2163,
+      "z": 0.052909
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-1",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 849.80286,
+      "y": -2329.2449,
+      "z": 2.587998
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 877.3448,
+      "y": -2431.8457,
+      "z": 2.587998
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-2",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 825.42896,
+      "y": -2390.6926,
+      "z": 2.588001
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-3",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 902.38513,
+      "y": -2369.2324,
+      "z": 2.587998
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-6",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 849.80286,
+      "y": -2329.2449,
+      "z": 2.587998
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-7",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 5,
+      "x": 877.3448,
+      "y": -2431.8457,
+      "z": 2.587998
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ $status := index site.Data.generated.buff.entry .Params.buff }}
+<header class="page-hero term-detail-heading">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/buff/" | strings.TrimPrefix "/" | relURL }}">BUFFS</a> // {{ upper $status.name }}</p><h1>{{ $status.name }}</h1><p>{{ upper $status.category }} gameplay condition.</p></div>
+  <span class="term-glyph term-glyph-large">{{ if $status.icon_path }}<img src="{{ $status.icon_path | strings.TrimPrefix "/" | relURL }}" width="32" height="32" alt="">{{ else }}{{ upper (substr $status.name 0 2) }}{{ end }}</span>
+</header>
+<section class="detail-metric">
+  <div><span>CATEGORY</span><strong class="detail-word">{{ upper $status.category }}</strong><small>CONDITION TYPE</small></div>
+  <div><span>ABILITY LINKS</span><strong>{{ len $status.abilities }}</strong><small>LOCALIZED TEXT MATCHES</small></div>
+  <div><span>LOCALE KEY</span><strong class="detail-word">{{ $status.locale_key }}</strong><small>EN-US RECORD</small></div>
+  <div><span>ASSET STATE</span><strong class="word-stat">RECOVERED</strong><small>AUTHORED LOCALIZATION</small></div>
+</section>
+<section class="detail-grid term-detail-grid">
+  <article class="console-panel term-definition-panel"><header><div><span>01</span><h2>Effect definition</h2></div><small>{{ $status.table_id }}</small></header><div class="term-definition"><span class="term-glyph term-glyph-large">{{ if $status.icon_path }}<img src="{{ $status.icon_path | strings.TrimPrefix "/" | relURL }}" width="32" height="32" alt="">{{ else }}{{ upper (substr $status.name 0 2) }}{{ end }}</span><p>{{ $status.description }}</p></div></article>
+  <article class="console-panel"><header><div><span>02</span><h2>Referenced abilities</h2></div><small>{{ len $status.abilities }} MATCHES</small></header><div class="term-link-list">{{ range $status.abilities }}<a href="{{ printf "/ability/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><strong>{{ .name }}</strong><span>ABILITY DOSSIER</span><i>→</i></a>{{ else }}<p>No currently localized ability description names this condition directly.</p>{{ end }}</div></article>
+</section>
+{{ end }}

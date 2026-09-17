@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.buff }}
+<header class="page-hero">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // BUFFS</p><h1>{{ .Title }}</h1><p>Authored buffs, debuffs, controls, and damage conditions recovered from the English localization tables.</p></div>
+  <div class="page-counter"><strong>{{ $data.count }}</strong><span>STATUS<br>RECORDS</span></div>
+</header>
+<section class="control-rack" aria-label="Status filters">
+  <label class="search-control"><span>SEARCH CONDITIONS</span><input type="search" placeholder="Status, category, effect…" data-search-input data-search-target="status-card"></label>
+  <div class="filter-control" data-filter-group="category"><span>CATEGORY</span><button class="is-active" data-filter="all">ALL</button>{{ range $category, $count := $data.categories }}<button data-filter="{{ $category }}">{{ upper $category }} <small>{{ $count }}</small></button>{{ end }}</div>
+</section>
+<div class="result-line"><span data-result-count>{{ $data.count }}</span> buffs visible <i></i></div>
+<section class="term-grid" data-filter-list>
+  {{ range $data.items }}
+  <a class="term-card status-card status-{{ .category | urlize }}" href="{{ printf "/buff/%s/" .slug | strings.TrimPrefix "/" | relURL }}" data-category="{{ .category }}" data-search="{{ .name }} {{ .category }} {{ .description }}">
+    <span class="term-glyph">{{ if .icon_path }}<img src="{{ .icon_path | strings.TrimPrefix "/" | relURL }}" width="32" height="32" loading="lazy" alt="">{{ else }}{{ upper (substr .name 0 2) }}{{ end }}</span>
+    <div><small>{{ upper .category }}</small><h2>{{ .name }}</h2><p>{{ .description }}</p></div>
+    <b>{{ len .abilities }} ABILIT{{ if eq (len .abilities) 1 }}Y{{ else }}IES{{ end }}</b><i>→</i>
+  </a>
+  {{ end }}
+</section>
+<p class="empty-state" data-empty-state hidden>No buffs match the current filters.</p>
+{{ end }}

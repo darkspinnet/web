@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.effect }}
+<header class="page-hero">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // EFFECTS</p><h1>{{ .Title }}</h1><p>Build-103 visual-effect identifiers. Copy a command to preview an effect in game.</p></div>
+  <div class="page-counter"><strong>{{ $data.count }}</strong><span>VFX<br>RECORDS</span></div>
+</header>
+<section class="control-rack effect-controls" aria-label="Effect filters">
+  <label class="search-control"><span>SEARCH EFFECTS</span><input type="search" placeholder="character_beam, plasma…" data-search-input data-search-target="effect-row"></label>
+  <div class="filter-control" data-filter-group="consumption"><span>TYPE</span>
+    <button class="is-active" data-filter="all">ALL <b>{{ $data.count }}</b></button>
+    <button data-filter="attached">ATTACHED <b>{{ index $data.consumption "attached" }}</b></button>
+    <button data-filter="positioned">POSITIONED <b>{{ index $data.consumption "positioned" }}</b></button>
+    <button data-filter="object-hit">OBJECT-HIT <b>{{ index $data.consumption "object-hit" }}</b></button>
+    <button data-filter="object-bound">OBJECT <b>{{ default 0 (index $data.consumption "object-bound") }}</b></button>
+    <button data-filter="sequence-only">SEQUENCE <b>{{ index $data.consumption "sequence-only" }}</b></button>
+    <button data-filter="client-local">CLIENT <b>{{ default 0 (index $data.consumption "client-local") }}</b></button>
+    <button data-filter="unverified">UNVERIFIED <b>{{ index $data.consumption "unverified" }}</b></button>
+  </div>
+</section>
+<div class="result-line"><span data-result-count>{{ $data.count }}</span> effects visible <i></i></div>
+<section class="effect-index" data-filter-list>
+  {{ range $data.items }}
+  {{ $tags := "" }}{{ with .tags }}{{ $tags = delimit . " " }}{{ end }}
+  <article class="effect-row" id="{{ .slug }}" data-consumption="{{ .consumption }}" data-search="{{ .name }} {{ .category }} {{ .consumption }} {{ .verification }} {{ $tags }}">
+    <code>{{ .name }}</code>
+    <div class="effect-tags">
+      {{ if ne .consumption "unverified" }}<span class="is-type">{{ upper .consumption }}</span>{{ end }}
+      {{ if .packaged }}<span>PACKAGED</span>{{ end }}
+      {{ if gt .lua_references 0 }}<span>LUA</span>{{ end }}
+      {{ range .tags }}<span class="is-context">{{ . }}</span>{{ end }}
+      {{ if eq .verification "negative" }}<span class="is-negative">NOT STANDALONE</span>{{ end }}
+    </div>
+    <button class="effect-copy" type="button" data-copy-effect="{{ .name }}" aria-label="Copy /effect {{ .name }} command" title="Copy /effect command">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M5 8h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2Z"/></svg>
+      <span>COPY</span>
+    </button>
+  </article>
+  {{ end }}
+</section>
+<p class="empty-state" data-empty-state hidden>No effects match the current filters.</p>
+{{ end }}

@@ -1,0 +1,218 @@
+{
+  "selection": "tutorial",
+  "level": "corrupted-tutorial-cryos-1",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 2,
+    "bounds_min": {
+      "X": -364.275,
+      "Y": -249.67502,
+      "Z": 10.624999
+    },
+    "bounds_max": {
+      "X": -321.37506,
+      "Y": -192.97499,
+      "Z": 10.624999
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 7.901231,
+    "offset_x": 86.51886,
+    "offset_y": 32
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "boss",
+      "label": "B",
+      "name": "SpawnPoint_DirectorBoss.Noun",
+      "noun_name": "SpawnPoint_DirectorBoss.Noun",
+      "section": 2,
+      "x": -350.04453,
+      "y": -223.36415,
+      "z": 10.088032
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-4",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 2,
+      "x": -355.2693,
+      "y": -207.71077,
+      "z": 10.088001
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-2",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 2,
+      "x": -345.89496,
+      "y": -239.5468,
+      "z": 10.16637
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 2,
+      "x": -347.57553,
+      "y": -224.60829,
+      "z": 10.088026
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-65",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -321.9357,
+      "y": -214.38185,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-67",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -316.34293,
+      "y": -230.7419,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-55",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -368.76498,
+      "y": -200.03938,
+      "z": -5.227564
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-60",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -345.0342,
+      "y": -188.81456,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-59",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -350.06076,
+      "y": -186.2807,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-62",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -343.48438,
+      "y": -192.71988,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-63",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -339.81888,
+      "y": -196.55006,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-54",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -349.89493,
+      "y": -258.3466,
+      "z": -6.448577
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-66",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -317.04483,
+      "y": -222.18044,
+      "z": -7.703209
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun-2",
+      "noun_name": "TriggerZone.Noun",
+      "section": 2,
+      "x": -349.4592,
+      "y": -223.14235,
+      "z": 10.088047
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 2,
+      "x": -353.94858,
+      "y": -192.45534,
+      "z": 10.118168
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-1",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 2,
+      "x": -340.43002,
+      "y": -248.87521,
+      "z": 10.118176
+    }
+  ]
+}

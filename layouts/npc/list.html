@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.npc }}
+<header class="page-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // ENEMY GLOSSARY</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.level_count }}</strong><span>LEVELS WITH<br>PLACEMENTS</span></div>
+</header>
+
+<section class="control-rack compact" aria-label="Enemy search">
+  <label class="search-control"><span>SEARCH ENEMIES</span><input type="search" placeholder="Enemy, asset name, level…" data-npc-search="{{ "/data/npc/index.json" | strings.TrimPrefix "/" | relURL }}" data-total="{{ $data.entry_count }}"></label>
+  <div class="legend"><span><i class="combat-dot"></i> VERIFIED KILLABLE CLASS</span></div>
+</section>
+<div class="result-line"><span data-result-count>{{ $data.entry_count }}</span> enemy classes indexed <i></i></div>
+
+<section class="npc-search-results" data-npc-search-results hidden>
+  <div class="npc-table" data-npc-results></div>
+  <p class="result-limit" data-result-limit hidden>Showing the first 250 matches. Refine the scan to narrow the result.</p>
+</section>
+
+<section class="level-npc-list" data-npc-level-list>
+  {{ range $data.levels }}
+  <details class="npc-level-group" data-npc-source="{{ printf "/data/npc/%s.json" .slug | strings.TrimPrefix "/" | relURL }}">
+    <summary>
+      <div><span class="level-index">LVL // {{ printf "%02.0f" .id }}</span><h2>{{ .name }}</h2></div>
+      <div class="group-stats"><b>{{ .npc_count }}</b> nouns <b>{{ .combat_count }}</b> combat</div>
+      <span class="report-toggle" aria-hidden="true"></span>
+    </summary>
+    <div class="npc-table" data-npc-list><p class="lazy-state">Open report to load entity records.</p></div>
+  </details>
+  {{ end }}
+</section>
+
+<template id="npc-row-template">
+  <div class="npc-row" role="row">
+    <span class="npc-status" data-field="status"></span>
+    <a class="npc-name" data-field="name"></a>
+    <code data-field="asset"></code>
+    <span class="source-tags" data-field="source"></span>
+    <span class="hp-readout" data-field="hp"></span>
+  </div>
+</template>
+{{ end }}

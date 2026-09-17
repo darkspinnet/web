@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.system.drops }}
+<header class="page-hero system-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}">GAME SYSTEMS</a> // DROP MODEL</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.rule_count }}</strong><span>INDEPENDENT<br>ENEMY ROLLS</span></div>
+</header>
+
+<section class="drop-metric" aria-label="Ordinary enemy drop probabilities">
+  {{ range $data.enemy_rules }}
+  <article class="drop-metric-{{ .key }}">
+    <span>{{ upper .name }}</span><strong>{{ printf "%.1f" .chance }}<small>%</small></strong><i style="--chance:{{ .chance }}%"><b></b></i><p>{{ .outcome }}</p>
+  </article>
+  {{ end }}
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>01</span><h2>Ordinary enemy rolls</h2></div><small>INDEPENDENT DECISIONS</small></header>
+  <div class="system-rule-table">
+    <div class="system-rule-head"><span>DROP</span><span>CHANCE</span><span>RESULT</span><span>RUNTIME CONDITION</span></div>
+    {{ range $data.enemy_rules }}
+    <div><strong>{{ .name }}</strong><b>{{ printf "%.1f%%" .chance }}</b><span>{{ .outcome }}</span><small>{{ .condition }}</small></div>
+    {{ end }}
+  </div>
+  <p class="system-evidence-note">Each roll is attempted separately after a valid enemy defeat. A successful equipment roll now continues through the server-owned rarity distribution below.</p>
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>02</span><h2>Equipment rarity</h2></div><small>AFTER THE 4.5% DROP ROLL</small></header>
+  <div class="equipment-rarity-grid">
+    {{ range $data.equipment_rarities }}
+    <article>
+      <span>{{ upper .name }}</span><strong>{{ printf "%.1f%%" .chance }}</strong>
+      <i style="--chance:{{ .chance }}%"><b></b></i>
+      <dl>
+        <div><dt>Per enemy</dt><dd>{{ printf "%.3f%%" .enemy_chance }}</dd></div>
+        <div><dt>Affixes</dt><dd>{{ .affix_count }}</dd></div>
+        <div><dt>Level shift</dt><dd>{{ if gt .level_adjustment 0 }}+{{ end }}{{ .level_adjustment }}</dd></div>
+      </dl>
+    </article>
+    {{ end }}
+  </div>
+  <p class="system-evidence-note">The per-enemy figure combines the 4.5% equipment roll with its conditional rarity chance. Basic drops are reduced by five levels with a floor of one; Rare and Epic drops gain five and ten levels respectively.</p>
+</section>
+
+<div class="system-two-column">
+  <section class="console-panel system-report-panel">
+    <header><div><span>03</span><h2>Capsule type selection</h2></div><small>AFTER THE 25% ROLL</small></header>
+    <div class="capsule-equation"><code>weight = {{ $data.capsule_base_weight }} + {{ $data.capsule_need_weight }} × (1 − resource fraction)</code><p>Lower squad health increases the health-capsule weight; lower squad power increases the power-capsule weight.</p></div>
+    <div class="capsule-table">
+      <div class="capsule-head"><span>SQUAD STATE</span><span>HP</span><span>POWER</span><span>HEALTH / POWER</span></div>
+      {{ range $data.capsule_samples }}
+      <div>
+        <strong>{{ .name }}</strong><code>{{ .health_percent }}%</code><code>{{ .power_percent }}%</code>
+        <span class="capsule-split" title="Health {{ .health_chance }}%, Power {{ .power_chance }}%"><i style="--health:{{ .health_chance }}%"></i><b>{{ printf "%.1f" .health_chance }} / {{ printf "%.1f" .power_chance }}</b></span>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="console-panel system-report-panel">
+    <header><div><span>04</span><h2>DNA amount by difficulty</h2></div><small>25% DROP ROLL</small></header>
+    <div class="dna-table">
+      <div class="dna-head"><span>DIFFICULTY</span><span>MIN</span><span>TYPICAL</span><span>MAX</span></div>
+      {{ range $data.dna_ranges }}
+      <div><strong>{{ .difficulty }}</strong><code>{{ .minimum }}</code><b>{{ .typical }}</b><code>{{ .maximum }}</code></div>
+      {{ end }}
+    </div>
+    <p class="system-evidence-note">Minimum and maximum use the endpoints of the server's amount draw. “Typical” uses its midpoint; the final amount is truncated to a whole number.</p>
+  </section>
+</div>
+
+{{ end }}

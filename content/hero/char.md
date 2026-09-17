@@ -1,0 +1,4 @@
++++
+title = "Char"
+hero = "char"
++++

@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $npc := index site.Data.generated.npc.entry .Params.npc }}
+<header class="page-hero npc-detail-heading">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}">ENEMY GLOSSARY</a> // {{ upper $npc.name }}</p>
+    <h1>{{ $npc.name }}</h1>
+    <p><code>{{ $npc.asset_name }}</code></p>
+  </div>
+  <div class="entity-state is-combat"><span></span>VERIFIED ENEMY</div>
+</header>
+
+<section class="detail-metric">
+  <div><span>INSTANCE ID</span><strong>{{ $npc.instance_id }}</strong><small>FNV RESOURCE KEY</small></div>
+  <div><span>HIT POINT</span><strong>{{ with $npc.hit_points }}{{ printf "%.0f" . }}{{ else }}—{{ end }}</strong><small>DECODED CLASS VALUE</small></div>
+  <div><span>PLACEMENT</span><strong>{{ len $npc.placements }}</strong><small>LEVEL REFERENCES</small></div>
+  <div><span>ENTITY TYPE</span><strong class="detail-word">{{ if $npc.is_combatant }}COMBAT{{ else }}NOUN{{ end }}</strong><small>VERIFICATION STATE</small></div>
+</section>
+
+<section class="detail-grid">
+  <article class="console-panel entity-card">
+    <header><div><span>01</span><h2>Entity identity</h2></div><small>CONTENT DATABASE</small></header>
+    <dl>
+      <div><dt>Display name</dt><dd>{{ $npc.name }}</dd></div>
+      <div><dt>Asset name</dt><dd><code>{{ $npc.asset_name }}</code></dd></div>
+      <div><dt>URL key</dt><dd><code>{{ $npc.slug }}</code></dd></div>
+      <div><dt>Instance</dt><dd><code>{{ $npc.instance_id }}</code></dd></div>
+      <div><dt>Combat class</dt><dd>Verified</dd></div>
+    </dl>
+  </article>
+
+  <article class="console-panel placement-card">
+    <header><div><span>02</span><h2>Level placement</h2></div><small>{{ len $npc.placements }} RECORDS</small></header>
+    <div class="placement-table">
+      <div class="placement-head"><span>LEVEL</span><span>SOURCE</span><span></span></div>
+      {{ range $npc.placements }}<a href="{{ printf "/level/%s/" .level_slug | strings.TrimPrefix "/" | relURL }}"><strong>{{ .level }}</strong><span>{{ delimit .sources ", " | upper }}</span><em>→</em></a>{{ end }}
+    </div>
+  </article>
+</section>
+{{ end }}

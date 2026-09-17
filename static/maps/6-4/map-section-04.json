@@ -1,0 +1,234 @@
+{
+  "selection": "6-4",
+  "level": "scaldron_4",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 4,
+    "bounds_min": {
+      "X": -739.275,
+      "Y": 1452.675,
+      "Z": 40.506424
+    },
+    "bounds_max": {
+      "X": -672.67505,
+      "Y": 1535.175,
+      "Z": 41.59138
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 5.430303,
+    "offset_x": 75.170975,
+    "offset_y": 32
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-49",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -688.2846,
+      "y": 1523.1802,
+      "z": 40.808002
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-5",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 4,
+      "x": -731.65814,
+      "y": 1498.3221,
+      "z": 40.08175
+    },
+    {
+      "category": "teleporter",
+      "name": "Teleporter.Noun-3",
+      "noun_name": "Teleporter.Noun",
+      "section": 4,
+      "x": -735.99115,
+      "y": 1498.322,
+      "z": 40.08175
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-21",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -679.97754,
+      "y": 1501.9283,
+      "z": 40.808
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-25",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -680.0983,
+      "y": 1514.7577,
+      "z": 40.807995
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-50",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -682.8696,
+      "y": 1516.6185,
+      "z": 40.807995
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-64",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -729.11475,
+      "y": 1512.5342,
+      "z": 40.808
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-65",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -732.1501,
+      "y": 1500.996,
+      "z": 40.808006
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-4",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 4,
+      "x": -712.42664,
+      "y": 1530.2772,
+      "z": 40.088
+    },
+    {
+      "category": "teleporter",
+      "name": "Teleporter.Noun-4",
+      "noun_name": "Teleporter.Noun",
+      "section": 4,
+      "x": -712.42664,
+      "y": 1534.6583,
+      "z": 40.088
+    },
+    {
+      "category": "teleporter",
+      "name": "Teleporter.Noun-6",
+      "noun_name": "Teleporter.Noun",
+      "section": 4,
+      "x": -675.6446,
+      "y": 1509.0673,
+      "z": 40.02757
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-10",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 4,
+      "x": -679.8372,
+      "y": 1509.0673,
+      "z": 40.02757
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-66",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -730.71564,
+      "y": 1488.1493,
+      "z": 40.808002
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-67",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -732.9667,
+      "y": 1480.1259,
+      "z": 40.808
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-68",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 4,
+      "x": -733.7673,
+      "y": 1471.5833,
+      "z": 40.808006
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 4,
+      "x": -673.25604,
+      "y": 1508.7242,
+      "z": 40.38417
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 4,
+      "x": -707.04504,
+      "y": 1503.669,
+      "z": 41.08815
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 4,
+      "x": -732.16174,
+      "y": 1460.5745,
+      "z": 40.088
+    }
+  ]
+}

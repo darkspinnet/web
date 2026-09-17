@@ -1,0 +1,448 @@
+{
+  "count": 17,
+  "categories": {
+    "buff": 2,
+    "control": 8,
+    "damage over time": 3,
+    "defense": 1,
+    "movement": 3
+  },
+  "items": [
+    {
+      "name": "Banished",
+      "slug": "banished",
+      "category": "control",
+      "description": "Your hero has been shifted into an alternate dimension.",
+      "locale_key": "0x09cad101",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Burning",
+      "slug": "burning",
+      "category": "damage over time",
+      "description": "Your hero is on fire and taking damage.",
+      "locale_key": "0x09a78c45",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Dazed",
+      "slug": "dazed",
+      "category": "control",
+      "description": "Movement speed is reduced by ~amount~% for ~duration~ seconds.",
+      "locale_key": "0x0a027729",
+      "table_id": "0xd9e0e1e1",
+      "abilities": []
+    },
+    {
+      "name": "Diseased",
+      "slug": "diseased",
+      "category": "damage over time",
+      "description": "Your hero is slowly taking damage. This disease will spread to nearby allies.",
+      "locale_key": "0x09a78c41",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Enraged",
+      "slug": "enraged",
+      "category": "buff",
+      "description": "Your hero is enraged and dealing additional damage.",
+      "locale_key": "0x0b87a188",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Arboreal Might",
+          "slug": "arborealmight"
+        },
+        {
+          "name": "Enrage",
+          "slug": "castenrage"
+        }
+      ]
+    },
+    {
+      "name": "Hasted",
+      "slug": "hasted",
+      "category": "buff",
+      "description": "Your hero is moving and attacking more quickly.",
+      "locale_key": "0x09718f9f",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Poisoned",
+      "slug": "poisoned",
+      "category": "damage over time",
+      "description": "Your hero is slowly taking damage.",
+      "locale_key": "0x09a78c3f",
+      "table_id": "0x46a91a19",
+      "icon_reference": "debuff_poison",
+      "icon_path": "/image/buff/poisoned.webp",
+      "abilities": [
+        {
+          "name": "LFPoison Ravager Expunge",
+          "slug": "lfpoisonravager-expunge"
+        },
+        {
+          "name": "LFPoison Ravager Passive",
+          "slug": "lfpoisonravager-passive"
+        },
+        {
+          "name": "LFPoison Ravager Poison Nova",
+          "slug": "lfpoisonravager-poisonnova"
+        },
+        {
+          "name": "LFPoison Ravager Stab",
+          "slug": "lfpoisonravager-stab"
+        }
+      ]
+    },
+    {
+      "name": "Rooted",
+      "slug": "rooted",
+      "category": "movement",
+      "description": "Your hero is bound and can't move.",
+      "locale_key": "0x09a78c47",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Entangling Rush",
+          "slug": "entanglingrush"
+        },
+        {
+          "name": "Rooting Plague",
+          "slug": "rootingplague"
+        }
+      ]
+    },
+    {
+      "name": "Shielded",
+      "slug": "shielded",
+      "category": "defense",
+      "description": "Your hero is shielded from incoming damage until a predetermined amount of damage has been absorbed.",
+      "locale_key": "0x0ba86434",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "TCShielded Sentinel Active",
+          "slug": "tcshieldedsentinelactive"
+        },
+        {
+          "name": "TCShielded Sentinel Basic",
+          "slug": "tcshieldedsentinelbasic"
+        },
+        {
+          "name": "TCShielded Sentinel Passive",
+          "slug": "tcshieldedsentinelpassive"
+        },
+        {
+          "name": "TCShielded Sentinel Support",
+          "slug": "tcshieldedsentinelsupport"
+        }
+      ]
+    },
+    {
+      "name": "Shocked",
+      "slug": "shocked",
+      "category": "control",
+      "description": "Your hero is unable to move or use abilities.",
+      "locale_key": "0x09a78c43",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Sleep",
+      "slug": "sleep",
+      "category": "control",
+      "description": "Your hero is asleep and unable to move or use abilities. Damage that isn't caused by poisons or diseases will break the sleep.",
+      "locale_key": "0x09a78c39",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Sleeping Cloud",
+          "slug": "sleepingcloud"
+        }
+      ]
+    },
+    {
+      "name": "Slowed",
+      "slug": "slowed",
+      "category": "movement",
+      "description": "Movement speed is slowed by ~movementSlow~% and attack speed has been reduced by ~cooldownIncrease~%.",
+      "locale_key": "0x096edcce",
+      "table_id": "0x2a682c12",
+      "abilities": []
+    },
+    {
+      "name": "Snared",
+      "slug": "snared",
+      "category": "movement",
+      "description": "Your hero's movement speed has been reduced.",
+      "locale_key": "0x09a794e6",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Stunned",
+      "slug": "stunned",
+      "category": "control",
+      "description": "Your hero is unable to move or use abilities.",
+      "locale_key": "0x09a78c3b",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Suppressed",
+      "slug": "suppressed",
+      "category": "control",
+      "description": "Can't swap heroes or use special abilities.",
+      "locale_key": "0xeeef0002",
+      "table_id": "0x06458f60",
+      "abilities": [
+        {
+          "name": "Phantom Charge",
+          "slug": "phantomcharge"
+        }
+      ]
+    },
+    {
+      "name": "Taunted",
+      "slug": "taunted",
+      "category": "control",
+      "description": "Your hero has an uncontrollable urge to attack an enemy.",
+      "locale_key": "0x09a78c3d",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    {
+      "name": "Terrified",
+      "slug": "terrified",
+      "category": "control",
+      "description": "Running in random directions due to horrible nightmares.",
+      "locale_key": "0xeeef0012",
+      "table_id": "0x06458f60",
+      "abilities": []
+    }
+  ],
+  "entry": {
+    "banished": {
+      "name": "Banished",
+      "slug": "banished",
+      "category": "control",
+      "description": "Your hero has been shifted into an alternate dimension.",
+      "locale_key": "0x09cad101",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "burning": {
+      "name": "Burning",
+      "slug": "burning",
+      "category": "damage over time",
+      "description": "Your hero is on fire and taking damage.",
+      "locale_key": "0x09a78c45",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "dazed": {
+      "name": "Dazed",
+      "slug": "dazed",
+      "category": "control",
+      "description": "Movement speed is reduced by ~amount~% for ~duration~ seconds.",
+      "locale_key": "0x0a027729",
+      "table_id": "0xd9e0e1e1",
+      "abilities": []
+    },
+    "diseased": {
+      "name": "Diseased",
+      "slug": "diseased",
+      "category": "damage over time",
+      "description": "Your hero is slowly taking damage. This disease will spread to nearby allies.",
+      "locale_key": "0x09a78c41",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "enraged": {
+      "name": "Enraged",
+      "slug": "enraged",
+      "category": "buff",
+      "description": "Your hero is enraged and dealing additional damage.",
+      "locale_key": "0x0b87a188",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Arboreal Might",
+          "slug": "arborealmight"
+        },
+        {
+          "name": "Enrage",
+          "slug": "castenrage"
+        }
+      ]
+    },
+    "hasted": {
+      "name": "Hasted",
+      "slug": "hasted",
+      "category": "buff",
+      "description": "Your hero is moving and attacking more quickly.",
+      "locale_key": "0x09718f9f",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "poisoned": {
+      "name": "Poisoned",
+      "slug": "poisoned",
+      "category": "damage over time",
+      "description": "Your hero is slowly taking damage.",
+      "locale_key": "0x09a78c3f",
+      "table_id": "0x46a91a19",
+      "icon_reference": "debuff_poison",
+      "icon_path": "/image/buff/poisoned.webp",
+      "abilities": [
+        {
+          "name": "LFPoison Ravager Expunge",
+          "slug": "lfpoisonravager-expunge"
+        },
+        {
+          "name": "LFPoison Ravager Passive",
+          "slug": "lfpoisonravager-passive"
+        },
+        {
+          "name": "LFPoison Ravager Poison Nova",
+          "slug": "lfpoisonravager-poisonnova"
+        },
+        {
+          "name": "LFPoison Ravager Stab",
+          "slug": "lfpoisonravager-stab"
+        }
+      ]
+    },
+    "rooted": {
+      "name": "Rooted",
+      "slug": "rooted",
+      "category": "movement",
+      "description": "Your hero is bound and can't move.",
+      "locale_key": "0x09a78c47",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Entangling Rush",
+          "slug": "entanglingrush"
+        },
+        {
+          "name": "Rooting Plague",
+          "slug": "rootingplague"
+        }
+      ]
+    },
+    "shielded": {
+      "name": "Shielded",
+      "slug": "shielded",
+      "category": "defense",
+      "description": "Your hero is shielded from incoming damage until a predetermined amount of damage has been absorbed.",
+      "locale_key": "0x0ba86434",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "TCShielded Sentinel Active",
+          "slug": "tcshieldedsentinelactive"
+        },
+        {
+          "name": "TCShielded Sentinel Basic",
+          "slug": "tcshieldedsentinelbasic"
+        },
+        {
+          "name": "TCShielded Sentinel Passive",
+          "slug": "tcshieldedsentinelpassive"
+        },
+        {
+          "name": "TCShielded Sentinel Support",
+          "slug": "tcshieldedsentinelsupport"
+        }
+      ]
+    },
+    "shocked": {
+      "name": "Shocked",
+      "slug": "shocked",
+      "category": "control",
+      "description": "Your hero is unable to move or use abilities.",
+      "locale_key": "0x09a78c43",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "sleep": {
+      "name": "Sleep",
+      "slug": "sleep",
+      "category": "control",
+      "description": "Your hero is asleep and unable to move or use abilities. Damage that isn't caused by poisons or diseases will break the sleep.",
+      "locale_key": "0x09a78c39",
+      "table_id": "0x46a91a19",
+      "abilities": [
+        {
+          "name": "Sleeping Cloud",
+          "slug": "sleepingcloud"
+        }
+      ]
+    },
+    "slowed": {
+      "name": "Slowed",
+      "slug": "slowed",
+      "category": "movement",
+      "description": "Movement speed is slowed by ~movementSlow~% and attack speed has been reduced by ~cooldownIncrease~%.",
+      "locale_key": "0x096edcce",
+      "table_id": "0x2a682c12",
+      "abilities": []
+    },
+    "snared": {
+      "name": "Snared",
+      "slug": "snared",
+      "category": "movement",
+      "description": "Your hero's movement speed has been reduced.",
+      "locale_key": "0x09a794e6",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "stunned": {
+      "name": "Stunned",
+      "slug": "stunned",
+      "category": "control",
+      "description": "Your hero is unable to move or use abilities.",
+      "locale_key": "0x09a78c3b",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "suppressed": {
+      "name": "Suppressed",
+      "slug": "suppressed",
+      "category": "control",
+      "description": "Can't swap heroes or use special abilities.",
+      "locale_key": "0xeeef0002",
+      "table_id": "0x06458f60",
+      "abilities": [
+        {
+          "name": "Phantom Charge",
+          "slug": "phantomcharge"
+        }
+      ]
+    },
+    "taunted": {
+      "name": "Taunted",
+      "slug": "taunted",
+      "category": "control",
+      "description": "Your hero has an uncontrollable urge to attack an enemy.",
+      "locale_key": "0x09a78c3d",
+      "table_id": "0x46a91a19",
+      "abilities": []
+    },
+    "terrified": {
+      "name": "Terrified",
+      "slug": "terrified",
+      "category": "control",
+      "description": "Running in random directions due to horrible nightmares.",
+      "locale_key": "0xeeef0012",
+      "table_id": "0x06458f60",
+      "abilities": []
+    }
+  }
+}

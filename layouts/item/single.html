@@ -1,0 +1,124 @@
+{{ define "main" }}
+{{ $item := index site.Data.generated.item.entry .Params.item }}
+{{ $initialVariant := index $item.variants 0 }}
+{{ $initialRecord := index $initialVariant.records 0 }}
+{{ $rigOptionCount := 0 }}{{ range $item.variants }}{{ range .records }}{{ $rigOptionCount = add $rigOptionCount 1 }}{{ end }}{{ end }}
+{{ $prefixIDs := slice }}{{ range $item.prefix_options }}{{ $prefixIDs = $prefixIDs | append .id }}{{ end }}
+{{ $suffixIDs := slice }}{{ range $item.suffix_options }}{{ $suffixIDs = $suffixIDs | append .id }}{{ end }}
+{{ $prefixStats := dict }}{{ range site.Data.generated.item.prefixes }}{{ if in $prefixIDs .id }}{{ $prefixStats = merge $prefixStats (dict (printf "%.0f" .id) .stats) }}{{ end }}{{ end }}
+{{ $suffixStats := dict }}{{ range site.Data.generated.item.suffixes }}{{ if in $suffixIDs .id }}{{ $suffixStats = merge $suffixStats (dict (printf "%.0f" .id) .stats) }}{{ end }}{{ end }}
+<header class="page-hero item-detail-heading">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}">ITEM ARCHIVE</a> // {{ upper $item.name }}</p>
+    <h1>{{ $item.name }}</h1>
+    <p>{{ $item.category }} equipment family &middot; {{ $item.variant_count }} visual styles from {{ $item.record_count }} localized rigblock records</p>
+  </div>
+  <div class="page-counter"><strong>{{ $item.variant_count }}</strong><span>VISUAL<br>STYLES</span></div>
+</header>
+
+<div class="item-configurator-shell" data-item-configurator data-family="{{ $item.name }}" data-item-category="{{ $item.category }}">
+<section class="item-equipment-card">
+  <div class="item-equipment-icon"><img data-item-summary-icon src="{{ $initialVariant.icon_path | strings.TrimPrefix "/" | relURL }}" alt="{{ $initialVariant.name }} item icon" width="144" height="144"></div>
+  <div class="item-equipment-summary">
+    <header><span>DECODED EQUIPMENT</span><code data-item-summary-rig>RIGBLOCK {{ $initialRecord.id }}</code></header>
+    <h2 data-item-summary-title>{{ $initialVariant.name }}</h2>
+    <p><strong data-item-summary-style>{{ $initialVariant.name }}</strong><i data-item-summary-element>{{ delimit $initialRecord.elements " / " }}</i></p>
+    <div class="item-equipment-stats" data-item-summary-stats><p>Select one or more modifiers to inspect their decoded stats.</p></div>
+    <ul>
+      <li><span>PRIMARY MODIFIER</span><b data-item-summary-primary>NONE SELECTED</b></li>
+      <li><span>SECONDARY MODIFIER</span><b data-item-summary-secondary>NONE SELECTED</b></li>
+      <li><span>SUFFIX</span><b data-item-summary-suffix>NONE SELECTED</b></li>
+    </ul>
+    <footer><span>{{ with $item.classes }}{{ delimit . " / " }}{{ else }}UNRESTRICTED / UNKNOWN{{ end }}</span><strong>{{ upper $item.category }} SLOT</strong></footer>
+  </div>
+</section>
+
+<section class="detail-metric">
+  <div><span>CATEGORY</span><strong class="detail-word">{{ $item.category }}</strong><small>EQUIPMENT SLOT</small></div>
+  <div><span>VISUAL STYLES</span><strong>{{ $item.variant_count }}</strong><small>DEDUPLICATED ASSETS</small></div>
+  <div><span>ELEMENTS</span><strong>{{ len $item.elements }}</strong><small>{{ delimit $item.elements " / " }}</small></div>
+  <div><span>RIGBLOCK RECORDS</span><strong>{{ $item.record_count }}</strong><small>ELEMENT + ASSET COMBINATIONS</small></div>
+</section>
+
+<section class="console-panel item-configurator">
+  <header><div><span>01</span><h2>Item configuration link</h2></div><small>URL FRAGMENT / CLIENT-SIDE STATE</small></header>
+  <div class="configurator-grid">
+    <div class="configurator-controls">
+      <label><span>PRIMARY PREFIX</span>{{ if $item.prefix_options }}<select data-config-primary><option value="0">None</option>{{ range $item.prefix_options }}<option value="{{ .id }}">{{ .name }} [{{ .id }}]</option>{{ end }}</select>{{ else }}<output class="config-fixed" data-config-primary data-value="0" data-label="">None</output>{{ end }}</label>
+      <label><span>SECONDARY PREFIX</span>{{ if $item.prefix_options }}<select data-config-secondary><option value="0">None</option>{{ range $item.prefix_options }}<option value="{{ .id }}">{{ .name }} [{{ .id }}]</option>{{ end }}</select>{{ else }}<output class="config-fixed" data-config-secondary data-value="0" data-label="">None</output>{{ end }}</label>
+      <label><span>VISUAL / ELEMENT</span>{{ if eq $rigOptionCount 1 }}<output class="config-fixed" data-config-rig data-value="{{ $initialRecord.id }}" data-label="{{ $initialVariant.name }} / {{ delimit $initialRecord.elements " / " }}" data-icon="{{ $initialVariant.icon_path | strings.TrimPrefix "/" | relURL }}" data-variant="{{ $initialVariant.name }}" data-element="{{ delimit $initialRecord.elements " / " }}">{{ $initialVariant.name }} / {{ delimit $initialRecord.elements " / " }}</output>{{ else }}<select data-config-rig>{{ range $item.variants }}{{ $variant := . }}{{ range .records }}<option value="{{ .id }}" data-icon="{{ $variant.icon_path | strings.TrimPrefix "/" | relURL }}" data-variant="{{ $variant.name }}" data-element="{{ delimit .elements " / " }}">{{ $variant.name }} / {{ delimit .elements " / " }} [{{ .id }}]</option>{{ end }}{{ end }}</select>{{ end }}</label>
+      <label><span>SUFFIX</span>{{ if $item.suffix_options }}<select data-config-suffix><option value="0">None</option>{{ range $item.suffix_options }}<option value="{{ .id }}">{{ .name }} [{{ .id }}]</option>{{ end }}</select>{{ else }}<output class="config-fixed" data-config-suffix data-value="0" data-label="">None</output>{{ end }}</label>
+    </div>
+    <div class="configurator-preview">
+      <img data-config-icon alt="" width="96" height="96">
+      <div><span>CONFIGURED ITEM</span><h3 data-config-title>{{ $item.name }}</h3><code data-config-code></code></div>
+      <div class="summon-command">
+        <span>SUMMON COMMAND</span>
+        <div>
+          <code data-config-command>/summon {{ $initialRecord.id }} 0 0 0</code>
+          <button type="button" data-config-copy aria-label="Copy summon command" title="Copy summon command">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 7V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3h2Zm2 0h4a3 3 0 0 1 3 3v4h2V5h-9v2Zm4 2H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1Z"/></svg>
+          </button>
+        </div>
+        <small data-config-copy-status aria-live="polite"></small>
+      </div>
+    </div>
+  </div>
+  <p class="loot-rule-note">The fragment identifies the exact rigblock and affix component IDs. It restores this configuration locally and does not claim that the combination is an observed drop.</p>
+</section>
+<script type="application/json" data-item-affix-data>{{ dict "prefix" $prefixStats "suffix" $suffixStats | jsonify | safeJS }}</script>
+</div>
+
+<section class="detail-grid item-detail-grid">
+  <article class="console-panel entity-card">
+    <header><div><span>02</span><h2>Family identity</h2></div><small>GROUPED LOCALIZED RECORDS</small></header>
+    <dl>
+      <div><dt>Base name</dt><dd>{{ $item.name }}</dd></div>
+      <div><dt>Category</dt><dd>{{ $item.category }}</dd></div>
+      <div><dt>Visual styles</dt><dd>{{ $item.variant_count }}</dd></div>
+      <div><dt>Localized records</dt><dd>{{ $item.record_count }}</dd></div>
+      <div><dt>Search identity</dt><dd><code>{{ $item.slug }}</code></dd></div>
+    </dl>
+  </article>
+  <article class="console-panel entity-card">
+    <header><div><span>03</span><h2>Compatibility</h2></div><small>PROCEDURAL CONSTRAINTS</small></header>
+    <div class="item-compatibility">
+      <div><span>CLASSES</span><p>{{ range $item.classes }}<i>{{ . }}</i>{{ else }}<b>UNRESTRICTED / UNKNOWN</b>{{ end }}</p></div>
+      <div><span>ELEMENTS</span><p>{{ range $item.elements }}<i>{{ . }}</i>{{ else }}<b>UNRESTRICTED / UNKNOWN</b>{{ end }}</p></div>
+      <div><span>HERO NOUNS</span><p>{{ range $item.creatures }}<code>{{ . }}</code>{{ else }}<b>NO EXPLICIT NOUN RESTRICTIONS</b>{{ end }}</p></div>
+    </div>
+  </article>
+  <article class="console-panel item-asset-panel item-variant-panel">
+    <header><div><span>04</span><h2>Visual and elemental variants</h2></div><small>{{ $item.variant_count }} DEDUPLICATED ASSETS / {{ $item.record_count }} RECORDS</small></header>
+    <div class="item-variant-list">
+      {{ range $item.variants }}
+      <div>
+        {{ with .icon_path }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" loading="lazy">{{ end }}
+        <strong>{{ .name }}</strong>
+        <span>{{ delimit .elements " / " }}</span>
+        <code>{{ .asset_reference }}</code>
+        <small>RIGBLOCK {{ delimit .record_ids ", " }}</small>
+      </div>
+      {{ end }}
+    </div>
+    <p>Records sharing the same package asset are collapsed into one visual style. Their elemental variants and original rigblock IDs remain visible here.</p>
+  </article>
+  <article class="console-panel item-variation-panel">
+    <header><div><span>05</span><h2>Rolled variations</h2></div><small>BASE ITEM REMAINS SEARCH IDENTITY</small></header>
+    <div class="variation-model">
+      <div class="variation-equation">
+        <span>PRIMARY PREFIX</span><b>+</b><span>SECONDARY PREFIX</span><b>+</b><span>VISUAL / ELEMENT</span><b>+</b><strong>{{ $item.name }}</strong><b>+</b><span>SUFFIX</span>
+      </div>
+      <div class="variation-summary">
+        <div><strong>{{ $item.compatible_prefix_count }}</strong><span>COMPATIBLE PREFIX RECORDS</span><small>Either primary or secondary modifier slot</small></div>
+        <div><strong>{{ $item.compatible_suffix_count }}</strong><span>COMPATIBLE SUFFIX RECORDS</span><small>Named and internal suffix components</small></div>
+      </div>
+      <div class="suffix-example">
+        <span>EXAMPLE NAMED SUFFIXES</span>
+        <p>{{ range $item.suffix_examples }}<i>{{ $.Title }} {{ .name }}</i>{{ else }}<b>No localized suffix examples match this component.</b>{{ end }}</p>
+      </div>
+      <p>The archive reports this family once. Visual, elemental, and affix combinations are possible procedural inputs, not separate searchable items or guaranteed drops.</p>
+    </div>
+  </article>
+</section>
+{{ end }}

@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.hero }}
+<header class="page-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // HERO MATRIX</p>
+    <h1>{{ .Title }}</h1>
+    <p>Squad roster overview. Open a hero dossier to inspect its Alpha baseline and recovered variants.</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.family_count }}</strong><span>FAMILIES<br>{{ $data.count }} VARIANTS</span></div>
+</header>
+
+<section class="control-rack" aria-label="Hero filters">
+  <label class="search-control"><span>SEARCH MATRIX</span><input type="search" placeholder="Family, element, class…" data-search-input data-search-target="hero-family"></label>
+  <div class="filter-control" data-filter-group="element">
+    <span>ELEMENT</span><button class="is-active" data-filter="all">ALL</button>
+    {{ range $element, $count := $data.elements }}<button data-filter="{{ $element | lower }}">{{ $element }} <small>{{ div $count 4 }}</small></button>{{ end }}
+  </div>
+</section>
+<div class="result-line"><span data-result-count>{{ $data.family_count }}</span> families visible <i></i></div>
+
+<section class="hero-family-list" data-filter-list>
+  {{ range $data.families }}
+  {{ $family := . }}
+  {{ $canonical := index .variants (sub (len .variants) 1) }}
+  {{ $baseline := index .variants 0 }}
+  {{ $opening := index (split .biography "\n") 0 }}
+  <article class="hero-family element-{{ .element | lower }}" id="{{ .slug }}" data-element="{{ .element | lower }}" data-search="{{ .name }} {{ .title }} {{ .element }} {{ .class }} {{ $opening }}">
+    <header>
+      <div><span class="element-badge">{{ .element }}</span><h2><a href="{{ printf "/hero/%s/" .slug | strings.TrimPrefix "/" | relURL }}">{{ .name }}</a></h2><small>{{ .class }} // 4 VARIANTS</small></div>
+      <span class="family-code">{{ upper .slug }}</span>
+    </header>
+    <div class="hero-family-summary">
+      <a class="hero-family-portrait" href="{{ printf "/hero/%s/" $family.slug | strings.TrimPrefix "/" | relURL }}"><img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }} portrait" loading="lazy" width="128" height="128"><span>{{ upper .element }}</span></a>
+      <div>
+        <em>{{ .title }}</em>
+        <p>{{ $opening }}</p>
+        <dl><div><dt>ALPHA ACCESS</dt><dd>LVL {{ $baseline.unlock_level }}</dd></div><div><dt>PROFILES</dt><dd>{{ len .variants }}</dd></div></dl>
+        <a href="{{ printf "/hero/%s/" $family.slug | strings.TrimPrefix "/" | relURL }}">OPEN DOSSIER &rarr;</a>
+      </div>
+    </div>
+  </article>
+  {{ end }}
+</section>
+<p class="empty-state" data-empty-state hidden>No hero families match the current scan parameters.</p>
+{{ end }}

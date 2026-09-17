@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.system.progression }}
+<header class="page-hero system-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}">GAME SYSTEMS</a> // PROGRESSION</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.level_count }}</strong><span>CROGENITOR<br>LEVELS</span></div>
+</header>
+
+<section class="detail-metric progression-metric">
+  <div><span>LEVEL CURVE</span><strong>{{ $data.level_count }}</strong><small>COMPLETE BUILD-103 TABLE</small></div>
+  <div><span>LEVEL 100 START</span><strong>{{ lang.FormatNumber 0 $data.maximum_level_minimum_xp }}</strong><small>CUMULATIVE XP</small></div>
+  <div><span>HERO REWARDS</span><strong>{{ $data.hero_reward_count }}</strong><small>THROUGH LEVEL 50</small></div>
+</section>
+
+<section class="console-panel system-report-panel progression-overview">
+  <header><div><span>01</span><h2>Hero reward milestones</h2></div><small>{{ $data.hero_reward_count }} SERVER ENTITLEMENTS</small></header>
+  <div class="milestone-strip">
+    {{ range $data.hero_reward_milestones }}<span><small>LVL</small><b>{{ . }}</b></span>{{ end }}
+  </div>
+  <p class="system-evidence-note">Reaching each marked Crogenitor level grants one hero-reward entitlement. The XP curve continues to level 100; hero milestones stop at level 50.</p>
+  <a class="progression-unlock-link" href="{{ "/system/level-unlocks/" | strings.TrimPrefix "/" | relURL }}"><span>SEE ACCOUNT AND HERO MILESTONES</span><strong>OPEN LEVEL UNLOCK GUIDE →</strong></a>
+</section>
+
+<section class="progression-table-section">
+  <header class="system-section-heading"><div><span>02</span><h2>Complete XP table</h2></div><small>MINIMUMS ARE INCLUSIVE</small></header>
+  {{ range $index, $band := $data.bands }}
+  <details class="xp-band"{{ if eq $index 0 }} open{{ end }}>
+    <summary><span>{{ $band.name }}</span><small>{{ len $band.levels }} LEVEL RECORDS</small><i></i></summary>
+    <div class="xp-table">
+      <div class="xp-head"><span>LEVEL</span><span>MINIMUM XP</span><span>MAXIMUM XP</span><span>XP TO NEXT</span><span>HERO REWARD</span></div>
+      {{ range $band.levels }}
+      <div{{ if .is_hero_reward }} class="is-milestone"{{ end }}>
+        <strong>{{ .level }}</strong>
+        <code>{{ lang.FormatNumber 0 .minimum_xp }}</code>
+        <code>{{ if .is_open_ended }}∞{{ else }}{{ lang.FormatNumber 0 .maximum_xp }}{{ end }}</code>
+        <b>{{ if .is_open_ended }}—{{ else }}{{ lang.FormatNumber 0 .xp_to_next }}{{ end }}</b>
+        <span>{{ if .is_hero_reward }}+1 <small>({{ .hero_reward_total }} total)</small>{{ else }}—{{ end }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </details>
+  {{ end }}
+</section>
+
+{{ end }}

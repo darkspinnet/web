@@ -1,0 +1,576 @@
+{
+  "selection": "2-3",
+  "level": "zelems_2",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 6,
+    "bounds_min": {
+      "X": 2097.375,
+      "Y": -4019.925,
+      "Z": 0.5749998
+    },
+    "bounds_max": {
+      "X": 2181.2246,
+      "Y": -3938.0251,
+      "Z": 0.5749998
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 5.342899,
+    "offset_x": 32.000015,
+    "offset_y": 37.208557
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "teleporter",
+      "name": "SecurityTeleporter.Noun-6",
+      "noun_name": "SecurityTeleporter.Noun",
+      "section": 6,
+      "x": 2102.2124,
+      "y": -3980.9014,
+      "z": 0.006483
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-2",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 6,
+      "x": 2108.6353,
+      "y": -3980.211,
+      "z": 0.088001
+    },
+    {
+      "category": "teleporter",
+      "name": "SecurityTeleporter.Noun-7",
+      "noun_name": "SecurityTeleporter.Noun",
+      "section": 6,
+      "x": 2173.7104,
+      "y": -3973.1565,
+      "z": 0.234032
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-7",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 6,
+      "x": 2169.5093,
+      "y": -3967.5557,
+      "z": 0.088001
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-18",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 6,
+      "x": 2151.3787,
+      "y": -3999.4863,
+      "z": 0.088001
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-72",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2139.9575,
+      "y": -4014.976,
+      "z": 0.807998
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-74",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2144.9714,
+      "y": -4007.7883,
+      "z": 0.808009
+    },
+    {
+      "category": "obelisk",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-67",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2129.9873,
+      "y": -4013.8074,
+      "z": 0.807998
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-17",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 6,
+      "x": 2169.2275,
+      "y": -3950.234,
+      "z": 0.087999
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-16",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 6,
+      "x": 2111.5645,
+      "y": -3949.061,
+      "z": 0.087997
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-19",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 6,
+      "x": 2116.696,
+      "y": -3992.2031,
+      "z": 0.088003
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-33",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 6,
+      "x": 2102.7585,
+      "y": -3970.788,
+      "z": 0.087999
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-206",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2126.0999,
+      "y": -3949.5913,
+      "z": 0.088005
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-213",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2171.0571,
+      "y": -3960.5273,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-208",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2144.5566,
+      "y": -4012.9956,
+      "z": 0.08799
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-204",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2126.622,
+      "y": -3980.3,
+      "z": 0.065167
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-214",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2149.4556,
+      "y": -3947.48,
+      "z": 0.087999
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-205",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2160.279,
+      "y": -3959.3528,
+      "z": 0.088003
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-210",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2148.3367,
+      "y": -4006.946,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-201",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2135.5183,
+      "y": -3965.8176,
+      "z": 0.06604
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-212",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2150.1943,
+      "y": -3988.2744,
+      "z": 0.087997
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-207",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2118.6404,
+      "y": -3952.671,
+      "z": 0.066185
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-211",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2159.1013,
+      "y": -4005.4119,
+      "z": 0.088009
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-160",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2128.7095,
+      "y": -3961.456,
+      "z": 0.065884
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-147",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2162.878,
+      "y": -3954.3474,
+      "z": 0.066547
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-202",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2145.3088,
+      "y": -3994.682,
+      "z": 0.088009
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-146",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2141.6416,
+      "y": -3943.1943,
+      "z": 0.088005
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-148",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2163.5527,
+      "y": -3975.9048,
+      "z": 0.06665
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-209",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2154.17,
+      "y": -4011.0654,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-217",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2135.6394,
+      "y": -4015.8276,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-218",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2128.9604,
+      "y": -4012.8904,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-216",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2139.917,
+      "y": -3999.8838,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-215",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2133.449,
+      "y": -3945.9417,
+      "z": 0.088005
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-130",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2127.295,
+      "y": -4007.429,
+      "z": 0.088005
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-131",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2160.318,
+      "y": -3999.2634,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-132",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2155.0845,
+      "y": -3993.5432,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-133",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2168.7068,
+      "y": -3997.1226,
+      "z": 0.087994
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-134",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2127.82,
+      "y": -3969.6511,
+      "z": 0.065407
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-136",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2147.3196,
+      "y": -3967.3018,
+      "z": 0.066441
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-137",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2155.1697,
+      "y": -3953.0522,
+      "z": 0.087996
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-138",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2147.3044,
+      "y": -3982.1875,
+      "z": 0.088001
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-140",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2131.1646,
+      "y": -3953.971,
+      "z": 0.066307
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-141",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2143.3076,
+      "y": -3975.8406,
+      "z": 0.066265
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-142",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2111.7112,
+      "y": -3958.0884,
+      "z": 0.065697
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-143",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2141.8167,
+      "y": -3969.5125,
+      "z": 0.066238
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-144",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2153.0754,
+      "y": -3964.1323,
+      "z": 0.066563
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-145",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 6,
+      "x": 2134.5044,
+      "y": -3976.37,
+      "z": 0.065826
+    },
+    {
+      "category": "spawn",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-73",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2143.219,
+      "y": -3965.8413,
+      "z": 0.808001
+    },
+    {
+      "category": "spawn",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-64",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2155.7827,
+      "y": -3957.2068,
+      "z": 0.786627
+    },
+    {
+      "category": "spawn",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-65",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2128.7168,
+      "y": -3957.1362,
+      "z": 0.786101
+    },
+    {
+      "category": "spawn",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-66",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 6,
+      "x": 2166.181,
+      "y": -3962.2605,
+      "z": 0.786696
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun-2",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 6,
+      "x": 2124.7925,
+      "y": -4018.7234,
+      "z": 0.040718
+    }
+  ]
+}

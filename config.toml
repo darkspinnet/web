@@ -1,0 +1,12 @@
+baseURL = 'https://darkspin.net/'
+languageCode = 'en-us'
+title = 'Darkspin'
+disableKinds = ['taxonomy', 'RSS']
+
+[params]
+  description = 'Darkspin is a community server and launcher project restoring online play for the original game.'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

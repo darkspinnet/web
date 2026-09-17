@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{ $level := index site.Data.generated.level.entry .Params.level }}
+{{ $campaign := $level.campaign }}
+<header class="page-hero level-detail-heading">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">DARKSPIN</a> // <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}">CAMPAIGN</a> // {{ upper $level.display_name }}</p>
+    <h1>{{ $level.display_name }}</h1>
+    <p>{{ $level.region }} · {{ $level.name }} · first-clear field guide</p>
+  </div>
+  <div class="page-counter"><strong>{{ with $campaign }}{{ len .enemies }}{{ else }}{{ $level.npc_count }}{{ end }}</strong><span>ENEMY<br>FAMILIES</span></div>
+</header>
+
+{{ with $campaign }}
+<section class="detail-metric level-run-metrics">
+  <div><span>FIRST RUN</span><strong>{{ .difficulty }}</strong><small>DIFFICULTY</small></div>
+  <div><span>SUGGESTED</span><strong>{{ .expected_avatar_level }}</strong><small>HERO LEVEL</small></div>
+  <div><span>ENEMY HP</span><strong>{{ printf "%.0f%%" (mul .health_multiplier 100) }}</strong><small>BASE HEALTH</small></div>
+  <div><span>ENEMY DAMAGE</span><strong>{{ printf "%.0f%%" (mul .damage_multiplier 100) }}</strong><small>BASE DAMAGE</small></div>
+</section>
+
+<section class="level-campaign-stack">
+  {{ with $level.map }}{{ partial "level-map.html" (dict "level" $level "map" . "number" "01") }}{{ end }}
+
+  {{ with $level.map.positions }}
+  <article class="console-panel level-position-panel">
+    <header><div><span>02</span><h2>Position index</h2></div><small>{{ len . }} NAVIGABLE AREAS</small></header>
+    <p class="level-estimate-note">Browse each connected area, follow authored teleport links, and inspect the encounter pools attached to its mapped loci. Nouns are eligible first-run candidates; the runtime director still decides which encounters actually appear.</p>
+    <nav class="level-position-jump" aria-label="Jump to a mapped position">
+      {{ range . }}<a href="#{{ .anchor }}">POSITION {{ printf "%02.0f" .component_id }}</a>{{ end }}
+    </nav>
+    <div class="level-position-grid">
+      {{ range . }}
+      <section class="level-position-card" id="{{ .anchor }}">
+        <header>
+          <div><small>CONNECTED MAP AREA</small><h3>Position {{ printf "%02.0f" .component_id }}</h3></div>
+          <strong>{{ .marker_count }} POINTS</strong>
+        </header>
+        <a class="level-position-map" href="{{ .image_url | strings.TrimPrefix "/" | relURL }}"><img src="{{ .image_url | strings.TrimPrefix "/" | relURL }}" alt="Position {{ .component_id }} map" loading="lazy"></a>
+        {{ with .teleports }}
+        <div class="level-position-block level-position-routes">
+          <small>TELEPORT LINKS</small>
+          {{ range . }}
+          <a href="#{{ .other_anchor }}"><b>{{ .label }}</b><span>{{ if eq .direction "outbound" }}TO{{ else }}FROM{{ end }} POSITION {{ printf "%02.0f" .other_component_id }}</span><code>{{ printf "%.1f, %.1f, %.1f" .x .y .z }}</code></a>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ with .signals }}
+        <div class="level-position-block">
+          <small>ENCOUNTER SIGNALS</small>
+          <div class="level-position-signals">
+            {{ range . }}<span title="{{ .meaning }}"><b>{{ .label }}</b>{{ .count }} × {{ .meaning }}</span>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+        {{ with .nouns }}
+        <div class="level-position-block">
+          <small>ELIGIBLE FIRST-RUN NOUNS</small>
+          <div class="level-position-nouns">
+            {{ range . }}
+            <a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><span><strong>{{ .name }}</strong><code>{{ .noun }}</code></span><small>{{ upper .pool }} →</small></a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+        {{ with .entries }}
+        <details class="level-position-entries">
+          <summary>AUTHORED POSITION ENTRIES <span>{{ len . }} TYPES</span></summary>
+          <div>
+            {{ range . }}<p><span>{{ upper .category }}</span><strong>{{ .name }}</strong><code>{{ .noun }}</code><b>×{{ .count }}</b></p>{{ end }}
+          </div>
+        </details>
+        {{ end }}
+        <a class="level-position-back" href="#top">BACK TO TOP ↑</a>
+      </section>
+      {{ end }}
+    </div>
+  </article>
+  {{ end }}
+
+  <article class="console-panel level-dossier-panel">
+    <header><div><span>03</span><h2>First-run enemy dossiers</h2></div><small>HP + HIT ESTIMATES</small></header>
+    <p class="level-estimate-note">Values apply the mission's first-run difficulty tuning to each enemy's base class. A rolled encounter can choose a subset of this roster; buffs, party size, critical hits, damage-over-time effects, and elite variants can change the live result.</p>
+    <div class="level-dossier-grid">
+      {{ range .enemies }}
+      <article class="level-enemy-dossier" id="{{ .slug }}">
+        <header>
+          <div><small>{{ upper .role }} · CV {{ .challenge_value }}</small><h3>{{ .name }}</h3><code>{{ .noun }}</code></div>
+          <a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}" aria-label="Open {{ .name }} entity record">ENTITY →</a>
+        </header>
+        <div class="level-enemy-estimates">
+          <div><span>EST. HP</span><strong>{{ .estimated_hit_points }}</strong><small>{{ .base_hit_points }} BASE</small></div>
+          <div><span>EST. HIT</span>{{ if .estimated_damage_min }}<strong>{{ .estimated_damage_min }}–{{ .estimated_damage_max }}</strong><small>DIRECT DAMAGE</small>{{ else }}<strong>—</strong><small>NO SINGLE HIT PROFILE</small>{{ end }}</div>
+        </div>
+        {{ with .descriptions }}
+        <div class="level-enemy-description">
+          <small>IN-GAME DESCRIPTION</small>
+          {{ range . }}<p>{{ . }}</p>{{ end }}
+        </div>
+        {{ end }}
+        {{ with .behavior }}<p class="level-enemy-behavior"><span>IN DARKSPIN</span>{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </article>
+
+  <div class="level-detail-grid">
+    <article class="console-panel level-loot-panel">
+      <header><div><span>04</span><h2>Loot intelligence</h2></div><small>GLOBAL RULES</small></header>
+      <div class="loot-placeholder">
+        <span>PROCEDURAL SYSTEM</span>
+        <h3>Drops are rolled, not assigned to this map</h3>
+        <p>Enemy drops use the global DNA, item, rarity, and medal rules. This mission does not carry a fixed per-enemy item table.</p>
+        <a href="{{ "/system/drops/" | strings.TrimPrefix "/" | relURL }}">OPEN DROP PROBABILITIES →</a>
+      </div>
+    </article>
+
+    <article class="console-panel level-system-panel">
+      <header><div><span>05</span><h2>Mission environment</h2></div><small>RUNTIME CONFIG</small></header>
+      <dl class="level-system-list">
+        <div><dt>Planet config</dt><dd>{{ $level.planet_config | default "—" }}</dd></div>
+        <div><dt>Rendering</dt><dd>{{ $level.rendering_config | default "—" }}</dd></div>
+        <div><dt>Music</dt><dd>{{ $level.music | default "—" }}</dd></div>
+        <div><dt>Navigation</dt><dd>{{ $level.navigation_mesh | default "—" }}</dd></div>
+        <div><dt>Physics</dt><dd>{{ $level.physics_mesh | default "—" }}</dd></div>
+      </dl>
+    </article>
+  </div>
+</section>
+{{ else }}
+<section class="detail-metric">
+  <div><span>GROUP</span><strong class="detail-word">AUXILIARY</strong><small>NON-CAMPAIGN MAP</small></div>
+  <div><span>MARKERS</span><strong>{{ $level.marker_count }}</strong><small>{{ $level.marker_set_count }} MARKER SETS</small></div>
+  <div><span>EVENT HOOKS</span><strong>{{ $level.event_count }}</strong><small>{{ $level.script_count }} LUA LINKS</small></div>
+  <div><span>REGION</span><strong class="detail-word">{{ $level.region }}</strong><small>ENVIRONMENT CLASS</small></div>
+</section>
+{{ with $level.map }}
+<section class="level-campaign-stack">
+  {{ partial "level-map.html" (dict "level" $level "map" . "number" "01") }}
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,115 @@
+{
+  "category_count": 8,
+  "unlock_count": 44,
+  "maximum_level": 90,
+  "categories": [
+    {
+      "key": "catalyst_grid",
+      "name": "Catalyst grid",
+      "description": "Adds another usable slot to the catalyst grid.",
+      "unit": "slots",
+      "unlocks": [
+        {"id": 1, "level": 11, "cost": 2000, "rank": 1, "value": 4},
+        {"id": 2, "level": 19, "cost": 6000, "rank": 2, "value": 5},
+        {"id": 3, "level": 26, "cost": 16000, "rank": 3, "value": 6},
+        {"id": 4, "level": 31, "cost": 30000, "rank": 4, "value": 7},
+        {"id": 5, "level": 37, "cost": 80000, "rank": 5, "value": 8},
+        {"id": 6, "level": 43, "cost": 150000, "rank": 6, "value": 9}
+      ]
+    },
+    {
+      "key": "diagonal_catalysts",
+      "name": "Diagonal catalyst links",
+      "description": "Enables diagonal links across the catalyst grid.",
+      "unit": "enabled",
+      "unlocks": [
+        {"id": 7, "level": 49, "cost": 300000, "rank": 1, "value": 1}
+      ]
+    },
+    {
+      "key": "stat_caps",
+      "name": "Stat upgrade cap",
+      "description": "Raises the account's available genetic stat-upgrade tier.",
+      "unit": "tier",
+      "unlocks": [
+        {"id": 8, "level": 4, "cost": 200, "rank": 1, "value": 1},
+        {"id": 9, "level": 7, "cost": 350, "rank": 2, "value": 2},
+        {"id": 10, "level": 10, "cost": 500, "rank": 3, "value": 3},
+        {"id": 11, "level": 12, "cost": 700, "rank": 4, "value": 4},
+        {"id": 12, "level": 14, "cost": 900, "rank": 5, "value": 5},
+        {"id": 13, "level": 16, "cost": 1200, "rank": 6, "value": 6},
+        {"id": 14, "level": 18, "cost": 1600, "rank": 7, "value": 7},
+        {"id": 15, "level": 21, "cost": 4000, "rank": 8, "value": 8},
+        {"id": 16, "level": 24, "cost": 8000, "rank": 9, "value": 9},
+        {"id": 17, "level": 27, "cost": 13000, "rank": 10, "value": 10},
+        {"id": 18, "level": 30, "cost": 19000, "rank": 11, "value": 11},
+        {"id": 19, "level": 33, "cost": 29000, "rank": 12, "value": 12},
+        {"id": 20, "level": 36, "cost": 42000, "rank": 13, "value": 13},
+        {"id": 21, "level": 39, "cost": 57000, "rank": 14, "value": 14},
+        {"id": 22, "level": 42, "cost": 76000, "rank": 15, "value": 15},
+        {"id": 23, "level": 45, "cost": 100000, "rank": 16, "value": 16},
+        {"id": 24, "level": 48, "cost": 160000, "rank": 17, "value": 17},
+        {"id": 25, "level": 50, "cost": 250000, "rank": 18, "value": 18}
+      ]
+    },
+    {
+      "key": "inventory",
+      "name": "Inventory capacity",
+      "description": "Raises the maximum number of parts the account can hold.",
+      "unit": "parts",
+      "unlocks": [
+        {"id": 26, "level": 22, "cost": 12500, "rank": 1, "value": 252},
+        {"id": 27, "level": 28, "cost": 25000, "rank": 2, "value": 324},
+        {"id": 28, "level": 34, "cost": 50000, "rank": 3, "value": 396},
+        {"id": 29, "level": 40, "cost": 100000, "rank": 4, "value": 468},
+        {"id": 30, "level": 46, "cost": 200000, "rank": 5, "value": 540},
+        {"id": 31, "level": 52, "cost": 400000, "rank": 6, "value": 612},
+        {"id": 32, "level": 60, "cost": 1000000, "rank": 7, "value": 684},
+        {"id": 33, "level": 70, "cost": 2500000, "rank": 8, "value": 756},
+        {"id": 34, "level": 80, "cost": 7500000, "rank": 9, "value": 828},
+        {"id": 35, "level": 90, "cost": 20000000, "rank": 10, "value": 900}
+      ]
+    },
+    {
+      "key": "pve_squads",
+      "name": "PvE squads",
+      "description": "Adds another usable squad slot for campaign play.",
+      "unit": "squads",
+      "unlocks": [
+        {"id": 36, "level": 7, "cost": 600, "rank": 1, "value": 2},
+        {"id": 37, "level": 15, "cost": 4000, "rank": 2, "value": 3}
+      ]
+    },
+    {
+      "key": "pvp_squads",
+      "name": "PvP access",
+      "description": "Makes the competitive squad mode available.",
+      "unit": "enabled",
+      "unlocks": [
+        {"id": 38, "level": 10, "cost": 0, "rank": 1, "value": 1}
+      ]
+    },
+    {
+      "key": "chain_capacity",
+      "name": "Mission chain capacity",
+      "description": "Raises how many missions can be continued before cashing out.",
+      "unit": "missions",
+      "unlocks": [
+        {"id": 42, "level": 9, "cost": 400, "rank": 1, "value": 3},
+        {"id": 43, "level": 13, "cost": 1600, "rank": 2, "value": 4},
+        {"id": 44, "level": 29, "cost": 10000, "rank": 3, "value": 5}
+      ]
+    },
+    {
+      "key": "flair_slots",
+      "name": "Editor flair slots",
+      "description": "Adds another decorative flair slot in the hero editor.",
+      "unit": "slots",
+      "unlocks": [
+        {"id": 46, "level": 23, "cost": 1000, "rank": 1, "value": 4},
+        {"id": 47, "level": 32, "cost": 5000, "rank": 2, "value": 5},
+        {"id": 48, "level": 38, "cost": 10000, "rank": 3, "value": 6}
+      ]
+    }
+  ]
+}

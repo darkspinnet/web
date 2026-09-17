@@ -1,0 +1,17 @@
+{{ $level := .level }}
+{{ $map := .map }}
+<article class="console-panel level-map-panel">
+  <header><div><span>{{ .number }}</span><h2>{{ if $level.campaign }}Mission{{ else }}Navigation{{ end }} minimap</h2></div><small>{{ len $map.sections }} CONNECTED COMPONENTS</small></header>
+  <p class="level-estimate-note">Each image is an independently scaled connected component from the selected baked navigation layer. Markers show authored encounter loci and objects, not a guaranteed runtime spawn roster.</p>
+  <div class="level-map-gallery">
+    {{ range $map.sections }}
+    <figure>
+      <a href="{{ .image_url | strings.TrimPrefix "/" | relURL }}"><img src="{{ .image_url | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.display_name }} navigation component {{ .component_id }}" loading="lazy"></a>
+      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} mapped points</strong></figcaption>
+    </figure>
+    {{ end }}
+  </div>
+  <div class="level-map-legend">
+    {{ range $label, $meaning := $map.labels }}<span><b>{{ $label }}</b>{{ $meaning }}</span>{{ end }}
+  </div>
+</article>

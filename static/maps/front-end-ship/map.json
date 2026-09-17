@@ -1,0 +1,129 @@
+{
+  "selection": "front_end_ship",
+  "level": "front_end_ship",
+  "map": {
+    "plan_layer": 0,
+    "bounds_min": {
+      "X": 18.374998,
+      "Y": -23.07,
+      "Z": 0.57499737
+    },
+    "bounds_max": {
+      "X": 239.52005,
+      "Y": 189.52501,
+      "Z": 2.5249972
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 2.0258198,
+    "offset_x": 31.999985,
+    "offset_y": 40.660416
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "sections": [
+    {
+      "component_id": 1,
+      "image": "map-section-01.webp",
+      "metadata": "map-section-01.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 1,
+        "bounds_min": {
+          "X": 18.374998,
+          "Y": -23.07,
+          "Z": 0.57499737
+        },
+        "bounds_max": {
+          "X": 239.52005,
+          "Y": 189.52501,
+          "Z": 0.57499737
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 2.0258198,
+        "offset_x": 31.999985,
+        "offset_y": 40.660416
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 2,
+      "image": "map-section-02.webp",
+      "metadata": "map-section-02.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 2,
+        "bounds_min": {
+          "X": 131.32503,
+          "Y": 65.775,
+          "Z": 2.5249972
+        },
+        "bounds_max": {
+          "X": 154.27501,
+          "Y": 88.725006,
+          "Z": 2.5249972
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 19.520693,
+        "offset_x": 32.00023,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    }
+  ],
+  "markers": [
+    {
+      "category": "entry",
+      "label": "P",
+      "name": "player_start",
+      "x": 117.454056,
+      "y": 79.121506,
+      "z": 262.10992
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "x": 146.50755,
+      "y": 80.94467,
+      "z": 264.10754
+    }
+  ]
+}

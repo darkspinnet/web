@@ -1,0 +1,157 @@
+{
+  "selection": "verdanth_3_PVP",
+  "level": "verdanth_3_PVP",
+  "map": {
+    "plan_layer": 0,
+    "bounds_min": {
+      "X": 570.375,
+      "Y": 702.975,
+      "Z": 27.818077
+    },
+    "bounds_max": {
+      "X": 1967.3252,
+      "Y": 805.5752,
+      "Z": 30.730295
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 0.32069862,
+    "offset_x": 32,
+    "offset_y": 239.54813
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "sections": [
+    {
+      "component_id": 1,
+      "image": "map-section-01.webp",
+      "metadata": "map-section-01.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 1,
+        "bounds_min": {
+          "X": 570.375,
+          "Y": 706.125,
+          "Z": 27.818077
+        },
+        "bounds_max": {
+          "X": 652.57495,
+          "Y": 805.5752,
+          "Z": 30.730295
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 4.5047674,
+        "offset_x": 70.85417,
+        "offset_y": 32
+      },
+      "marker_count": 2
+    },
+    {
+      "component_id": 2,
+      "image": "map-section-02.webp",
+      "metadata": "map-section-02.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 2,
+        "bounds_min": {
+          "X": 1253.9249,
+          "Y": 718.2749,
+          "Z": 30.575026
+        },
+        "bounds_max": {
+          "X": 1308.075,
+          "Y": 771.6752,
+          "Z": 30.575026
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 8.273311,
+        "offset_x": 32.000015,
+        "offset_y": 35.1015
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 3,
+      "image": "map-section-03.webp",
+      "metadata": "map-section-03.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 3,
+        "bounds_min": {
+          "X": 1914.075,
+          "Y": 702.975,
+          "Z": 30.575026
+        },
+        "bounds_max": {
+          "X": 1967.3252,
+          "Y": 756.525,
+          "Z": 30.575026
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 8.366006,
+        "offset_x": 33.254074,
+        "offset_y": 31.999985
+      },
+      "marker_count": 0
+    }
+  ],
+  "markers": [
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-940813430",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 1,
+      "x": 613.44745,
+      "y": 713.38776,
+      "z": 29.88189
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun",
+      "noun_name": "TriggerZone.Noun",
+      "section": 1,
+      "x": 613.01965,
+      "y": 745.876,
+      "z": 30.20491
+    }
+  ]
+}

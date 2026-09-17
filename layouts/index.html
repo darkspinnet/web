@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ $hero := site.Data.generated.hero }}
+{{ $npc := site.Data.generated.npc }}
+{{ $level := site.Data.generated.level }}
+{{ $item := site.Data.generated.item }}
+{{ $ability := site.Data.generated.ability }}
+{{ $system := site.Data.generated.system }}
+<section class="home-intro">
+  <div class="home-intro-copy">
+    <p class="eyebrow"><span>PROJECT</span> // ONLINE RESTORATION</p>
+    <h1>Bring<br><em>the game</em><br>back online.</h1>
+    <p class="home-lede">Darkspin is a community-built server and launcher project restoring the online services the original game needs to run. We are rebuilding its systems, preserving what we recover, and working toward a simple goal: making it playable again.</p>
+    <div class="home-actions">
+      <button class="home-download" type="button" disabled aria-describedby="download-status">
+        <span>DOWNLOAD DARKSPIN</span><strong>COMING SOON</strong><small id="download-status">The launcher package is being prepared.</small>
+      </button>
+    </div>
+  </div>
+  <div class="specimen-array home-specimen-array" aria-label="Genetic hero specimens">
+    <i class="orbit orbit-a" aria-hidden="true"></i><i class="orbit orbit-b" aria-hidden="true"></i>
+    {{ range first 5 $hero.families }}{{ $variant := index .variants (sub (len .variants) 1) }}
+    <figure class="specimen specimen-{{ .element | lower }}"><img src="{{ $variant.image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" width="220" height="220"><figcaption>{{ .name }}</figcaption></figure>
+    {{ end }}
+    <p class="array-label"><b>{{ $hero.family_count }}</b> HERO FAMILIES // RECOVERED</p>
+  </div>
+</section>
+
+<section class="home-purpose" aria-labelledby="home-purpose-title">
+  <header class="home-section-heading"><div><p class="eyebrow"><span>MISSION</span> // PROJECT OVERVIEW</p><h2 id="home-purpose-title">Rebuilding the path back online</h2></div><p>The original online services are gone. Darkspin recreates the infrastructure around the original game client so its campaign, progression, heroes, and systems can live again.</p></header>
+  <div class="home-purpose-grid">
+    <article><span>01</span><h3>Restore the servers</h3><p>Reimplement the network services that power accounts, sessions, campaign play, combat, rewards, and progression.</p></article>
+    <article><span>02</span><h3>Make it approachable</h3><p>Bring the server and launcher together into a straightforward desktop experience players can start without rebuilding the project themselves.</p></article>
+    <article><span>03</span><h3>Preserve the game</h3><p>Document recovered heroes, levels, enemies, items, abilities, and gameplay rules in a public reference that grows alongside the server.</p></article>
+  </div>
+</section>
+
+<section class="home-archive" aria-labelledby="home-archive-title">
+  <header class="home-section-heading"><div><p class="eyebrow"><span>ARCHIVE</span> // EXPLORE THE GAME</p><h2 id="home-archive-title">The game, decoded</h2></div><p>While the playable release is being prepared, explore the content and runtime systems already recovered by the project.</p></header>
+  <div class="home-archive-grid">
+    <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"><span>HR</span><strong>Heroes</strong><b>{{ $hero.family_count }}</b><small>{{ $hero.count }} variants recovered</small><i>→</i></a>
+    <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"><span>LV</span><strong>Campaign</strong><b>{{ $level.playable_count }}</b><small>playable maps cataloged</small><i>→</i></a>
+    <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"><span>EN</span><strong>Enemies</strong><b>{{ $npc.entry_count }}</b><small>combat classes indexed</small><i>→</i></a>
+    <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"><span>IT</span><strong>Items</strong><b>{{ $item.count }}</b><small>equipment families decoded</small><i>→</i></a>
+    <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"><span>AB</span><strong>Abilities</strong><b>{{ $ability.count }}</b><small>loadout assets linked</small><i>→</i></a>
+    <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"><span>SY</span><strong>Game systems</strong><b>{{ $system.report_count }}</b><small>runtime reports published</small><i>→</i></a>
+  </div>
+</section>
+
+<section class="console-panel home-hero-spotlight">
+  <header><div><span>04</span><h2>Recovered hero roster</h2></div><a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}">OPEN HERO MATRIX →</a></header>
+  <div class="quicklook-grid">
+    {{ range first 6 $hero.families }}{{ $variant := index .variants (sub (len .variants) 1) }}<figure class="element-{{ .element | lower }}"><img src="{{ $variant.image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" width="120" height="120" loading="lazy"><figcaption><b>{{ .name }}</b><span>{{ .element }} / {{ .class }}</span></figcaption></figure>{{ end }}
+  </div>
+</section>
+{{ end }}

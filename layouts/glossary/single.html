@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $term := index site.Data.generated.glossary.entry .Params.glossary }}
+<header class="page-hero term-detail-heading">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/glossary/" | strings.TrimPrefix "/" | relURL }}">GLOSSARY</a> // {{ upper $term.name }}</p><h1>{{ $term.name }}</h1><p>{{ upper $term.category }} terminology record.</p></div>
+  <span class="term-glyph term-glyph-large">{{ upper (substr $term.name 0 2) }}</span>
+</header>
+<section class="detail-metric term-metric">
+  <div><span>CATEGORY</span><strong class="detail-word">{{ upper $term.category }}</strong><small>TERM GROUP</small></div>
+  <div><span>RELATED TERMS</span><strong>{{ len $term.see_also }}</strong><small>CROSS REFERENCES</small></div>
+  <div><span>REFERENCE</span><strong class="word-stat">DEFINED</strong><small>DARKSPIN GLOSSARY</small></div>
+</section>
+<section class="detail-grid term-detail-grid">
+  <article class="console-panel term-definition-panel"><header><div><span>01</span><h2>Definition</h2></div><small>{{ upper $term.category }}</small></header><div class="term-definition"><span class="term-glyph term-glyph-large">{{ upper (substr $term.name 0 2) }}</span><div><p>{{ $term.definition }}</p>{{ with $term.link }}<a class="term-primary-link" href="{{ . | strings.TrimPrefix "/" | relURL }}">OPEN RELATED ARCHIVE →</a>{{ end }}</div></div></article>
+  <article class="console-panel"><header><div><span>02</span><h2>See also</h2></div><small>{{ len $term.see_also }} TERMS</small></header><div class="term-link-list">{{ range $term.see_also }}{{ $related := index site.Data.generated.glossary.entry . }}<a href="{{ printf "/glossary/%s/" $related.slug | strings.TrimPrefix "/" | relURL }}"><strong>{{ $related.name }}</strong><span>{{ upper $related.category }}</span><i>→</i></a>{{ else }}<p>No additional glossary references are attached to this term.</p>{{ end }}</div></article>
+</section>
+{{ end }}

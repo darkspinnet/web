@@ -1,0 +1,4 @@
++++
+title = "Wraith"
+hero = "wraith"
++++

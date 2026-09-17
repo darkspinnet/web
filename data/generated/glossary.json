@@ -1,0 +1,615 @@
+{
+  "count": 33,
+  "categories": {
+    "archive": 5,
+    "combat": 11,
+    "equipment": 5,
+    "hero": 12
+  },
+  "items": [
+    {
+      "name": "Ability",
+      "slug": "ability",
+      "category": "combat",
+      "definition": "A hero action or persistent trait defined by packaged gameplay data. Abilities occupy basic, passive, random, or special loadout slots.",
+      "link": "/ability/",
+      "see_also": [
+        "basic-ability",
+        "passive-ability",
+        "special-ability",
+        "variant-ability"
+      ]
+    },
+    {
+      "name": "Basic Ability",
+      "slug": "basic-ability",
+      "category": "combat",
+      "definition": "The hero's standard combat action in the basic loadout slot.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    {
+      "name": "Class",
+      "slug": "class",
+      "category": "hero",
+      "definition": "A hero's broad combat role: Sentinel, Ravager, or Tempest.",
+      "link": "/hero/",
+      "see_also": [
+        "ravager",
+        "sentinel",
+        "tempest"
+      ]
+    },
+    {
+      "name": "Cooldown",
+      "slug": "cooldown",
+      "category": "combat",
+      "definition": "The recovery period after an ability is used before it can be activated again.",
+      "see_also": [
+        "ability",
+        "power"
+      ]
+    },
+    {
+      "name": "Crogenitor Level",
+      "slug": "crogenitor-level",
+      "category": "hero",
+      "definition": "The progression level used to determine when hero profiles become available.",
+      "see_also": []
+    },
+    {
+      "name": "Element",
+      "slug": "element",
+      "category": "hero",
+      "definition": "A hero's genesis affinity. The archive preserves the content labels Cyber, Chrono, Bio, Plasma, and Necro.",
+      "link": "/hero/",
+      "see_also": [
+        "genesis",
+        "quantum"
+      ]
+    },
+    {
+      "name": "Enemy",
+      "slug": "enemy",
+      "category": "archive",
+      "definition": "A combat-capable non-player creature recovered from placed level nouns and class data.",
+      "link": "/npc/",
+      "see_also": []
+    },
+    {
+      "name": "Energy Damage",
+      "slug": "energy-damage",
+      "category": "combat",
+      "definition": "One of corrupted's two broad damage channels. Abilities identify their authored damage channel separately from their elemental theme.",
+      "see_also": [
+        "element",
+        "physical-damage"
+      ]
+    },
+    {
+      "name": "Genesis",
+      "slug": "genesis",
+      "category": "hero",
+      "definition": "The in-game term for elemental affinity, used to group heroes and combat relationships.",
+      "see_also": [
+        "element"
+      ]
+    },
+    {
+      "name": "Genetic Variant",
+      "slug": "genetic-variant",
+      "category": "hero",
+      "definition": "One of four profiles in a hero family: Alpha, Beta, Gamma, or Delta. Variants can change unlock level, statistics, and the variant ability.",
+      "link": "/hero/",
+      "see_also": [
+        "hero-family",
+        "variant-ability"
+      ]
+    },
+    {
+      "name": "Health",
+      "slug": "health",
+      "category": "combat",
+      "definition": "A creature's remaining survivability. A hero or enemy is defeated when its health is exhausted.",
+      "see_also": []
+    },
+    {
+      "name": "Hero",
+      "slug": "hero",
+      "category": "hero",
+      "definition": "A playable genetic combatant with an element, class, statistics, equipment, and ability loadout.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    {
+      "name": "Hero Family",
+      "slug": "hero-family",
+      "category": "hero",
+      "definition": "The archive grouping that combines a hero's four genetic variants into one dossier.",
+      "link": "/hero/",
+      "see_also": [
+        "genetic-variant"
+      ]
+    },
+    {
+      "name": "Item",
+      "slug": "item",
+      "category": "equipment",
+      "definition": "A piece of equipment used to improve a hero. The archive groups procedural item variations beneath a recovered base family.",
+      "link": "/item/",
+      "see_also": []
+    },
+    {
+      "name": "Item Level",
+      "slug": "item-level",
+      "category": "equipment",
+      "definition": "The level attached to an equipment roll, used as a compact indication of that item's progression tier.",
+      "link": "/item/",
+      "see_also": []
+    },
+    {
+      "name": "Level",
+      "slug": "level",
+      "category": "archive",
+      "definition": "A playable or development area recovered from packaged level, chain, marker, and spawn data.",
+      "link": "/level/",
+      "see_also": []
+    },
+    {
+      "name": "Locale Key",
+      "slug": "locale-key",
+      "category": "archive",
+      "definition": "A stable identifier used to look up authored text in corrupted's localization tables.",
+      "see_also": []
+    },
+    {
+      "name": "Noun",
+      "slug": "noun",
+      "category": "archive",
+      "definition": "corrupted's content term for a game object definition, including creatures, projectiles, pickups, and world objects.",
+      "see_also": []
+    },
+    {
+      "name": "Package",
+      "slug": "package",
+      "category": "archive",
+      "definition": "A DBPF container from the corrupted client that stores typed game resources such as UI images, levels, scripts, and asset definitions.",
+      "see_also": []
+    },
+    {
+      "name": "Passive Ability",
+      "slug": "passive-ability",
+      "category": "combat",
+      "definition": "An always-on or automatically triggered ability in the passive loadout slot.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    {
+      "name": "Physical Damage",
+      "slug": "physical-damage",
+      "category": "combat",
+      "definition": "One of corrupted's two broad damage channels, distinct from energy damage.",
+      "see_also": [
+        "energy-damage"
+      ]
+    },
+    {
+      "name": "Power",
+      "slug": "power",
+      "category": "combat",
+      "definition": "The resource spent to activate abilities. Packaged Lua registrations commonly call this value mana cost internally.",
+      "see_also": [
+        "ability",
+        "cooldown"
+      ]
+    },
+    {
+      "name": "Prefix",
+      "slug": "prefix",
+      "category": "equipment",
+      "definition": "A procedural item-name component associated with one set of generated item modifiers.",
+      "link": "/item/",
+      "see_also": [
+        "rigblock",
+        "suffix"
+      ]
+    },
+    {
+      "name": "Quantum",
+      "slug": "quantum",
+      "category": "hero",
+      "definition": "The player-facing affinity name associated with quantum and spacetime powers. Some recovered content fields use the label Chrono.",
+      "see_also": [
+        "element"
+      ]
+    },
+    {
+      "name": "Ravager",
+      "slug": "ravager",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with aggressive close-range or mobile combat.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    {
+      "name": "Rigblock",
+      "slug": "rigblock",
+      "category": "equipment",
+      "definition": "A generated equipment record that joins a visual part, compatible affinities, and procedural item data.",
+      "link": "/item/",
+      "see_also": [
+        "prefix",
+        "suffix"
+      ]
+    },
+    {
+      "name": "Sentinel",
+      "slug": "sentinel",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with durability and defensive control.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    {
+      "name": "Special Ability",
+      "slug": "special-ability",
+      "category": "combat",
+      "definition": "An activated hero ability occupying one of the two special loadout positions.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    {
+      "name": "Squad",
+      "slug": "squad",
+      "category": "hero",
+      "definition": "A player-selected group of heroes used together during an expedition.",
+      "see_also": []
+    },
+    {
+      "name": "Status Effect",
+      "slug": "status-effect",
+      "category": "combat",
+      "definition": "A temporary gameplay condition that buffs, damages, controls, protects, or restricts a creature.",
+      "link": "/buff/",
+      "see_also": []
+    },
+    {
+      "name": "Suffix",
+      "slug": "suffix",
+      "category": "equipment",
+      "definition": "A procedural item-name component associated with an additional generated modifier.",
+      "link": "/item/",
+      "see_also": [
+        "prefix",
+        "rigblock"
+      ]
+    },
+    {
+      "name": "Tempest",
+      "slug": "tempest",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with ranged abilities and support or control.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    {
+      "name": "Variant Ability",
+      "slug": "variant-ability",
+      "category": "combat",
+      "definition": "The ability that changes between a hero family's Alpha, Beta, Gamma, and Delta profiles. The archive labels this as the random slot.",
+      "link": "/ability/",
+      "see_also": [
+        "genetic-variant"
+      ]
+    }
+  ],
+  "entry": {
+    "ability": {
+      "name": "Ability",
+      "slug": "ability",
+      "category": "combat",
+      "definition": "A hero action or persistent trait defined by packaged gameplay data. Abilities occupy basic, passive, random, or special loadout slots.",
+      "link": "/ability/",
+      "see_also": [
+        "basic-ability",
+        "passive-ability",
+        "special-ability",
+        "variant-ability"
+      ]
+    },
+    "basic-ability": {
+      "name": "Basic Ability",
+      "slug": "basic-ability",
+      "category": "combat",
+      "definition": "The hero's standard combat action in the basic loadout slot.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    "class": {
+      "name": "Class",
+      "slug": "class",
+      "category": "hero",
+      "definition": "A hero's broad combat role: Sentinel, Ravager, or Tempest.",
+      "link": "/hero/",
+      "see_also": [
+        "ravager",
+        "sentinel",
+        "tempest"
+      ]
+    },
+    "cooldown": {
+      "name": "Cooldown",
+      "slug": "cooldown",
+      "category": "combat",
+      "definition": "The recovery period after an ability is used before it can be activated again.",
+      "see_also": [
+        "ability",
+        "power"
+      ]
+    },
+    "crogenitor-level": {
+      "name": "Crogenitor Level",
+      "slug": "crogenitor-level",
+      "category": "hero",
+      "definition": "The progression level used to determine when hero profiles become available.",
+      "see_also": []
+    },
+    "element": {
+      "name": "Element",
+      "slug": "element",
+      "category": "hero",
+      "definition": "A hero's genesis affinity. The archive preserves the content labels Cyber, Chrono, Bio, Plasma, and Necro.",
+      "link": "/hero/",
+      "see_also": [
+        "genesis",
+        "quantum"
+      ]
+    },
+    "enemy": {
+      "name": "Enemy",
+      "slug": "enemy",
+      "category": "archive",
+      "definition": "A combat-capable non-player creature recovered from placed level nouns and class data.",
+      "link": "/npc/",
+      "see_also": []
+    },
+    "energy-damage": {
+      "name": "Energy Damage",
+      "slug": "energy-damage",
+      "category": "combat",
+      "definition": "One of corrupted's two broad damage channels. Abilities identify their authored damage channel separately from their elemental theme.",
+      "see_also": [
+        "element",
+        "physical-damage"
+      ]
+    },
+    "genesis": {
+      "name": "Genesis",
+      "slug": "genesis",
+      "category": "hero",
+      "definition": "The in-game term for elemental affinity, used to group heroes and combat relationships.",
+      "see_also": [
+        "element"
+      ]
+    },
+    "genetic-variant": {
+      "name": "Genetic Variant",
+      "slug": "genetic-variant",
+      "category": "hero",
+      "definition": "One of four profiles in a hero family: Alpha, Beta, Gamma, or Delta. Variants can change unlock level, statistics, and the variant ability.",
+      "link": "/hero/",
+      "see_also": [
+        "hero-family",
+        "variant-ability"
+      ]
+    },
+    "health": {
+      "name": "Health",
+      "slug": "health",
+      "category": "combat",
+      "definition": "A creature's remaining survivability. A hero or enemy is defeated when its health is exhausted.",
+      "see_also": []
+    },
+    "hero": {
+      "name": "Hero",
+      "slug": "hero",
+      "category": "hero",
+      "definition": "A playable genetic combatant with an element, class, statistics, equipment, and ability loadout.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    "hero-family": {
+      "name": "Hero Family",
+      "slug": "hero-family",
+      "category": "hero",
+      "definition": "The archive grouping that combines a hero's four genetic variants into one dossier.",
+      "link": "/hero/",
+      "see_also": [
+        "genetic-variant"
+      ]
+    },
+    "item": {
+      "name": "Item",
+      "slug": "item",
+      "category": "equipment",
+      "definition": "A piece of equipment used to improve a hero. The archive groups procedural item variations beneath a recovered base family.",
+      "link": "/item/",
+      "see_also": []
+    },
+    "item-level": {
+      "name": "Item Level",
+      "slug": "item-level",
+      "category": "equipment",
+      "definition": "The level attached to an equipment roll, used as a compact indication of that item's progression tier.",
+      "link": "/item/",
+      "see_also": []
+    },
+    "level": {
+      "name": "Level",
+      "slug": "level",
+      "category": "archive",
+      "definition": "A playable or development area recovered from packaged level, chain, marker, and spawn data.",
+      "link": "/level/",
+      "see_also": []
+    },
+    "locale-key": {
+      "name": "Locale Key",
+      "slug": "locale-key",
+      "category": "archive",
+      "definition": "A stable identifier used to look up authored text in corrupted's localization tables.",
+      "see_also": []
+    },
+    "noun": {
+      "name": "Noun",
+      "slug": "noun",
+      "category": "archive",
+      "definition": "corrupted's content term for a game object definition, including creatures, projectiles, pickups, and world objects.",
+      "see_also": []
+    },
+    "package": {
+      "name": "Package",
+      "slug": "package",
+      "category": "archive",
+      "definition": "A DBPF container from the corrupted client that stores typed game resources such as UI images, levels, scripts, and asset definitions.",
+      "see_also": []
+    },
+    "passive-ability": {
+      "name": "Passive Ability",
+      "slug": "passive-ability",
+      "category": "combat",
+      "definition": "An always-on or automatically triggered ability in the passive loadout slot.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    "physical-damage": {
+      "name": "Physical Damage",
+      "slug": "physical-damage",
+      "category": "combat",
+      "definition": "One of corrupted's two broad damage channels, distinct from energy damage.",
+      "see_also": [
+        "energy-damage"
+      ]
+    },
+    "power": {
+      "name": "Power",
+      "slug": "power",
+      "category": "combat",
+      "definition": "The resource spent to activate abilities. Packaged Lua registrations commonly call this value mana cost internally.",
+      "see_also": [
+        "ability",
+        "cooldown"
+      ]
+    },
+    "prefix": {
+      "name": "Prefix",
+      "slug": "prefix",
+      "category": "equipment",
+      "definition": "A procedural item-name component associated with one set of generated item modifiers.",
+      "link": "/item/",
+      "see_also": [
+        "rigblock",
+        "suffix"
+      ]
+    },
+    "quantum": {
+      "name": "Quantum",
+      "slug": "quantum",
+      "category": "hero",
+      "definition": "The player-facing affinity name associated with quantum and spacetime powers. Some recovered content fields use the label Chrono.",
+      "see_also": [
+        "element"
+      ]
+    },
+    "ravager": {
+      "name": "Ravager",
+      "slug": "ravager",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with aggressive close-range or mobile combat.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    "rigblock": {
+      "name": "Rigblock",
+      "slug": "rigblock",
+      "category": "equipment",
+      "definition": "A generated equipment record that joins a visual part, compatible affinities, and procedural item data.",
+      "link": "/item/",
+      "see_also": [
+        "prefix",
+        "suffix"
+      ]
+    },
+    "sentinel": {
+      "name": "Sentinel",
+      "slug": "sentinel",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with durability and defensive control.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    "special-ability": {
+      "name": "Special Ability",
+      "slug": "special-ability",
+      "category": "combat",
+      "definition": "An activated hero ability occupying one of the two special loadout positions.",
+      "link": "/ability/",
+      "see_also": [
+        "ability"
+      ]
+    },
+    "squad": {
+      "name": "Squad",
+      "slug": "squad",
+      "category": "hero",
+      "definition": "A player-selected group of heroes used together during an expedition.",
+      "see_also": []
+    },
+    "status-effect": {
+      "name": "Status Effect",
+      "slug": "status-effect",
+      "category": "combat",
+      "definition": "A temporary gameplay condition that buffs, damages, controls, protects, or restricts a creature.",
+      "link": "/buff/",
+      "see_also": []
+    },
+    "suffix": {
+      "name": "Suffix",
+      "slug": "suffix",
+      "category": "equipment",
+      "definition": "A procedural item-name component associated with an additional generated modifier.",
+      "link": "/item/",
+      "see_also": [
+        "prefix",
+        "rigblock"
+      ]
+    },
+    "tempest": {
+      "name": "Tempest",
+      "slug": "tempest",
+      "category": "hero",
+      "definition": "One of the three hero classes, generally associated with ranged abilities and support or control.",
+      "link": "/hero/",
+      "see_also": []
+    },
+    "variant-ability": {
+      "name": "Variant Ability",
+      "slug": "variant-ability",
+      "category": "combat",
+      "definition": "The ability that changes between a hero family's Alpha, Beta, Gamma, and Delta profiles. The archive labels this as the random slot.",
+      "link": "/ability/",
+      "see_also": [
+        "genetic-variant"
+      ]
+    }
+  }
+}

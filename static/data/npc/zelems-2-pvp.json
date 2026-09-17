@@ -1,0 +1,1 @@
+{"id":59,"name":"zelems_2_PVP","slug":"zelems-2-pvp","npc_count":1,"combat_count":1,"npcs":[{"asset_name":"ZelemBasicRanged.Noun","name":"Zelem Basic Ranged","slug":"zelembasicranged-noun","instance_id":2401835763,"hit_points":20,"is_combatant":true,"sources":["director"]}]}

@@ -1,0 +1,1270 @@
+{
+  "report_count": 5,
+  "drops": {
+    "rule_count": 4,
+    "enemy_rules": [
+      {
+        "key": "equipment",
+        "name": "Equipment",
+        "chance": 4.5,
+        "outcome": "One compatible rarity-rolled part",
+        "condition": "Ordinary campaign enemies; disabled in the tutorial"
+      },
+      {
+        "key": "capsule",
+        "name": "Health / power capsule",
+        "chance": 25,
+        "outcome": "One capsule weighted by squad need",
+        "condition": "Ordinary enemies; tutorial enemies only after capsule drops unlock"
+      },
+      {
+        "key": "catalyst",
+        "name": "Catalyst",
+        "chance": 4,
+        "outcome": "One eligible catalyst",
+        "condition": "Only after catalyst drops are unlocked"
+      },
+      {
+        "key": "dna",
+        "name": "DNA",
+        "chance": 25,
+        "outcome": "A difficulty-scaled DNA pickup",
+        "condition": "Ordinary campaign enemies; disabled in the tutorial"
+      }
+    ],
+    "equipment_rarities": [
+      {
+        "name": "Basic",
+        "chance": 65,
+        "enemy_chance": 2.925,
+        "affix_count": 0,
+        "level_adjustment": -5
+      },
+      {
+        "name": "Uncommon",
+        "chance": 27,
+        "enemy_chance": 1.215,
+        "affix_count": 1,
+        "level_adjustment": 0
+      },
+      {
+        "name": "Rare",
+        "chance": 7,
+        "enemy_chance": 0.315,
+        "affix_count": 2,
+        "level_adjustment": 5
+      },
+      {
+        "name": "Epic",
+        "chance": 1,
+        "enemy_chance": 0.045,
+        "affix_count": 3,
+        "level_adjustment": 10
+      }
+    ],
+    "capsule_samples": [
+      {
+        "name": "Full squad resources",
+        "health_percent": 100,
+        "power_percent": 100,
+        "health_chance": 50,
+        "power_chance": 50
+      },
+      {
+        "name": "Balanced pressure",
+        "health_percent": 50,
+        "power_percent": 50,
+        "health_chance": 50,
+        "power_chance": 50
+      },
+      {
+        "name": "Health pressure",
+        "health_percent": 25,
+        "power_percent": 100,
+        "health_chance": 74.2,
+        "power_chance": 25.8
+      },
+      {
+        "name": "Power pressure",
+        "health_percent": 100,
+        "power_percent": 25,
+        "health_chance": 25.8,
+        "power_chance": 74.2
+      },
+      {
+        "name": "Critical health",
+        "health_percent": 0,
+        "power_percent": 100,
+        "health_chance": 77.8,
+        "power_chance": 22.2
+      }
+    ],
+    "dna_ranges": [
+      {
+        "difficulty": 1,
+        "minimum": 3,
+        "typical": 6,
+        "maximum": 9
+      },
+      {
+        "difficulty": 10,
+        "minimum": 5,
+        "typical": 11,
+        "maximum": 16
+      },
+      {
+        "difficulty": 25,
+        "minimum": 17,
+        "typical": 35,
+        "maximum": 53
+      },
+      {
+        "difficulty": 50,
+        "minimum": 58,
+        "typical": 116,
+        "maximum": 174
+      },
+      {
+        "difficulty": 75,
+        "minimum": 106,
+        "typical": 213,
+        "maximum": 320
+      },
+      {
+        "difficulty": 100,
+        "minimum": 196,
+        "typical": 392,
+        "maximum": 588
+      }
+    ],
+    "capsule_base_weight": 2,
+    "capsule_need_weight": 5,
+    "equipment_source": 10,
+    "capsule_source": 25,
+    "catalyst_source": 26
+  },
+  "progression": {
+    "level_count": 100,
+    "maximum_level_minimum_xp": 2410501,
+    "hero_reward_count": 30,
+    "hero_reward_milestones": [
+      4,
+      5,
+      8,
+      11,
+      14,
+      17,
+      18,
+      20,
+      22,
+      23,
+      25,
+      27,
+      28,
+      30,
+      32,
+      33,
+      35,
+      37,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "bands": [
+      {
+        "name": "Levels 1–10",
+        "start": 1,
+        "end": 10,
+        "levels": [
+          {
+            "level": 1,
+            "minimum_xp": 0,
+            "maximum_xp": 100,
+            "xp_to_next": 101,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 0
+          },
+          {
+            "level": 2,
+            "minimum_xp": 101,
+            "maximum_xp": 200,
+            "xp_to_next": 100,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 0
+          },
+          {
+            "level": 3,
+            "minimum_xp": 201,
+            "maximum_xp": 3000,
+            "xp_to_next": 2800,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 0
+          },
+          {
+            "level": 4,
+            "minimum_xp": 3001,
+            "maximum_xp": 6000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 1
+          },
+          {
+            "level": 5,
+            "minimum_xp": 6001,
+            "maximum_xp": 9000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 2
+          },
+          {
+            "level": 6,
+            "minimum_xp": 9001,
+            "maximum_xp": 12000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 2
+          },
+          {
+            "level": 7,
+            "minimum_xp": 12001,
+            "maximum_xp": 15000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 2
+          },
+          {
+            "level": 8,
+            "minimum_xp": 15001,
+            "maximum_xp": 18000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 3
+          },
+          {
+            "level": 9,
+            "minimum_xp": 18001,
+            "maximum_xp": 21000,
+            "xp_to_next": 3000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 3
+          },
+          {
+            "level": 10,
+            "minimum_xp": 21001,
+            "maximum_xp": 24500,
+            "xp_to_next": 3500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 3
+          }
+        ]
+      },
+      {
+        "name": "Levels 11–20",
+        "start": 11,
+        "end": 20,
+        "levels": [
+          {
+            "level": 11,
+            "minimum_xp": 24501,
+            "maximum_xp": 28500,
+            "xp_to_next": 4000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 4
+          },
+          {
+            "level": 12,
+            "minimum_xp": 28501,
+            "maximum_xp": 33000,
+            "xp_to_next": 4500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 4
+          },
+          {
+            "level": 13,
+            "minimum_xp": 33001,
+            "maximum_xp": 38000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 4
+          },
+          {
+            "level": 14,
+            "minimum_xp": 38001,
+            "maximum_xp": 43000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 5
+          },
+          {
+            "level": 15,
+            "minimum_xp": 43001,
+            "maximum_xp": 48000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 5
+          },
+          {
+            "level": 16,
+            "minimum_xp": 48001,
+            "maximum_xp": 53000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 5
+          },
+          {
+            "level": 17,
+            "minimum_xp": 53001,
+            "maximum_xp": 58000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 6
+          },
+          {
+            "level": 18,
+            "minimum_xp": 58001,
+            "maximum_xp": 63000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 7
+          },
+          {
+            "level": 19,
+            "minimum_xp": 63001,
+            "maximum_xp": 68000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 7
+          },
+          {
+            "level": 20,
+            "minimum_xp": 68001,
+            "maximum_xp": 73000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 8
+          }
+        ]
+      },
+      {
+        "name": "Levels 21–30",
+        "start": 21,
+        "end": 30,
+        "levels": [
+          {
+            "level": 21,
+            "minimum_xp": 73001,
+            "maximum_xp": 78000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 8
+          },
+          {
+            "level": 22,
+            "minimum_xp": 78001,
+            "maximum_xp": 83000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 9
+          },
+          {
+            "level": 23,
+            "minimum_xp": 83001,
+            "maximum_xp": 88000,
+            "xp_to_next": 5000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 10
+          },
+          {
+            "level": 24,
+            "minimum_xp": 88001,
+            "maximum_xp": 93500,
+            "xp_to_next": 5500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 10
+          },
+          {
+            "level": 25,
+            "minimum_xp": 93501,
+            "maximum_xp": 99500,
+            "xp_to_next": 6000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 11
+          },
+          {
+            "level": 26,
+            "minimum_xp": 99501,
+            "maximum_xp": 106000,
+            "xp_to_next": 6500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 11
+          },
+          {
+            "level": 27,
+            "minimum_xp": 106001,
+            "maximum_xp": 113000,
+            "xp_to_next": 7000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 12
+          },
+          {
+            "level": 28,
+            "minimum_xp": 113001,
+            "maximum_xp": 120500,
+            "xp_to_next": 7500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 13
+          },
+          {
+            "level": 29,
+            "minimum_xp": 120501,
+            "maximum_xp": 128500,
+            "xp_to_next": 8000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 13
+          },
+          {
+            "level": 30,
+            "minimum_xp": 128501,
+            "maximum_xp": 137000,
+            "xp_to_next": 8500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 14
+          }
+        ]
+      },
+      {
+        "name": "Levels 31–40",
+        "start": 31,
+        "end": 40,
+        "levels": [
+          {
+            "level": 31,
+            "minimum_xp": 137001,
+            "maximum_xp": 146000,
+            "xp_to_next": 9000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 14
+          },
+          {
+            "level": 32,
+            "minimum_xp": 146001,
+            "maximum_xp": 155500,
+            "xp_to_next": 9500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 15
+          },
+          {
+            "level": 33,
+            "minimum_xp": 155501,
+            "maximum_xp": 165500,
+            "xp_to_next": 10000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 16
+          },
+          {
+            "level": 34,
+            "minimum_xp": 165501,
+            "maximum_xp": 176000,
+            "xp_to_next": 10500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 16
+          },
+          {
+            "level": 35,
+            "minimum_xp": 176001,
+            "maximum_xp": 187000,
+            "xp_to_next": 11000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 17
+          },
+          {
+            "level": 36,
+            "minimum_xp": 187001,
+            "maximum_xp": 198500,
+            "xp_to_next": 11500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 17
+          },
+          {
+            "level": 37,
+            "minimum_xp": 198501,
+            "maximum_xp": 210500,
+            "xp_to_next": 12000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 18
+          },
+          {
+            "level": 38,
+            "minimum_xp": 210501,
+            "maximum_xp": 223000,
+            "xp_to_next": 12500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 19
+          },
+          {
+            "level": 39,
+            "minimum_xp": 223001,
+            "maximum_xp": 236000,
+            "xp_to_next": 13000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 19
+          },
+          {
+            "level": 40,
+            "minimum_xp": 236001,
+            "maximum_xp": 249500,
+            "xp_to_next": 13500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 20
+          }
+        ]
+      },
+      {
+        "name": "Levels 41–50",
+        "start": 41,
+        "end": 50,
+        "levels": [
+          {
+            "level": 41,
+            "minimum_xp": 249501,
+            "maximum_xp": 263500,
+            "xp_to_next": 14000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 21
+          },
+          {
+            "level": 42,
+            "minimum_xp": 263501,
+            "maximum_xp": 278000,
+            "xp_to_next": 14500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 22
+          },
+          {
+            "level": 43,
+            "minimum_xp": 278001,
+            "maximum_xp": 293000,
+            "xp_to_next": 15000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 23
+          },
+          {
+            "level": 44,
+            "minimum_xp": 293001,
+            "maximum_xp": 308500,
+            "xp_to_next": 15500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 24
+          },
+          {
+            "level": 45,
+            "minimum_xp": 308501,
+            "maximum_xp": 324500,
+            "xp_to_next": 16000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 25
+          },
+          {
+            "level": 46,
+            "minimum_xp": 324501,
+            "maximum_xp": 341000,
+            "xp_to_next": 16500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 26
+          },
+          {
+            "level": 47,
+            "minimum_xp": 341001,
+            "maximum_xp": 358000,
+            "xp_to_next": 17000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 27
+          },
+          {
+            "level": 48,
+            "minimum_xp": 358001,
+            "maximum_xp": 375500,
+            "xp_to_next": 17500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 28
+          },
+          {
+            "level": 49,
+            "minimum_xp": 375501,
+            "maximum_xp": 393500,
+            "xp_to_next": 18000,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 29
+          },
+          {
+            "level": 50,
+            "minimum_xp": 393501,
+            "maximum_xp": 412000,
+            "xp_to_next": 18500,
+            "is_open_ended": false,
+            "is_hero_reward": true,
+            "hero_reward_total": 30
+          }
+        ]
+      },
+      {
+        "name": "Levels 51–60",
+        "start": 51,
+        "end": 60,
+        "levels": [
+          {
+            "level": 51,
+            "minimum_xp": 412001,
+            "maximum_xp": 431000,
+            "xp_to_next": 19000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 52,
+            "minimum_xp": 431001,
+            "maximum_xp": 451000,
+            "xp_to_next": 20000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 53,
+            "minimum_xp": 451001,
+            "maximum_xp": 471500,
+            "xp_to_next": 20500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 54,
+            "minimum_xp": 471501,
+            "maximum_xp": 492500,
+            "xp_to_next": 21000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 55,
+            "minimum_xp": 492501,
+            "maximum_xp": 514000,
+            "xp_to_next": 21500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 56,
+            "minimum_xp": 514001,
+            "maximum_xp": 536000,
+            "xp_to_next": 22000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 57,
+            "minimum_xp": 536001,
+            "maximum_xp": 558500,
+            "xp_to_next": 22500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 58,
+            "minimum_xp": 558501,
+            "maximum_xp": 581500,
+            "xp_to_next": 23000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 59,
+            "minimum_xp": 581501,
+            "maximum_xp": 605000,
+            "xp_to_next": 23500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 60,
+            "minimum_xp": 605001,
+            "maximum_xp": 629000,
+            "xp_to_next": 24000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          }
+        ]
+      },
+      {
+        "name": "Levels 61–70",
+        "start": 61,
+        "end": 70,
+        "levels": [
+          {
+            "level": 61,
+            "minimum_xp": 629001,
+            "maximum_xp": 653500,
+            "xp_to_next": 24500,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 62,
+            "minimum_xp": 653501,
+            "maximum_xp": 678500,
+            "xp_to_next": 25000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 63,
+            "minimum_xp": 678501,
+            "maximum_xp": 704500,
+            "xp_to_next": 26000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 64,
+            "minimum_xp": 704501,
+            "maximum_xp": 731500,
+            "xp_to_next": 27000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 65,
+            "minimum_xp": 731501,
+            "maximum_xp": 759500,
+            "xp_to_next": 28000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 66,
+            "minimum_xp": 759501,
+            "maximum_xp": 788500,
+            "xp_to_next": 29000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 67,
+            "minimum_xp": 788501,
+            "maximum_xp": 818500,
+            "xp_to_next": 30000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 68,
+            "minimum_xp": 818501,
+            "maximum_xp": 849500,
+            "xp_to_next": 31000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 69,
+            "minimum_xp": 849501,
+            "maximum_xp": 881500,
+            "xp_to_next": 32000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 70,
+            "minimum_xp": 881501,
+            "maximum_xp": 914500,
+            "xp_to_next": 33000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          }
+        ]
+      },
+      {
+        "name": "Levels 71–80",
+        "start": 71,
+        "end": 80,
+        "levels": [
+          {
+            "level": 71,
+            "minimum_xp": 914501,
+            "maximum_xp": 948500,
+            "xp_to_next": 34000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 72,
+            "minimum_xp": 948501,
+            "maximum_xp": 983500,
+            "xp_to_next": 35000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 73,
+            "minimum_xp": 983501,
+            "maximum_xp": 1019500,
+            "xp_to_next": 36000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 74,
+            "minimum_xp": 1019501,
+            "maximum_xp": 1056500,
+            "xp_to_next": 37000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 75,
+            "minimum_xp": 1056501,
+            "maximum_xp": 1094500,
+            "xp_to_next": 38000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 76,
+            "minimum_xp": 1094501,
+            "maximum_xp": 1133500,
+            "xp_to_next": 39000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 77,
+            "minimum_xp": 1133501,
+            "maximum_xp": 1173500,
+            "xp_to_next": 40000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 78,
+            "minimum_xp": 1173501,
+            "maximum_xp": 1214500,
+            "xp_to_next": 41000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 79,
+            "minimum_xp": 1214501,
+            "maximum_xp": 1256500,
+            "xp_to_next": 42000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 80,
+            "minimum_xp": 1256501,
+            "maximum_xp": 1299500,
+            "xp_to_next": 43000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          }
+        ]
+      },
+      {
+        "name": "Levels 81–90",
+        "start": 81,
+        "end": 90,
+        "levels": [
+          {
+            "level": 81,
+            "minimum_xp": 1299501,
+            "maximum_xp": 1343500,
+            "xp_to_next": 44000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 82,
+            "minimum_xp": 1343501,
+            "maximum_xp": 1388500,
+            "xp_to_next": 45000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 83,
+            "minimum_xp": 1388501,
+            "maximum_xp": 1434500,
+            "xp_to_next": 46000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 84,
+            "minimum_xp": 1434501,
+            "maximum_xp": 1481500,
+            "xp_to_next": 47000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 85,
+            "minimum_xp": 1481501,
+            "maximum_xp": 1529500,
+            "xp_to_next": 48000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 86,
+            "minimum_xp": 1529501,
+            "maximum_xp": 1578500,
+            "xp_to_next": 49000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 87,
+            "minimum_xp": 1578501,
+            "maximum_xp": 1628500,
+            "xp_to_next": 50000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 88,
+            "minimum_xp": 1628501,
+            "maximum_xp": 1679500,
+            "xp_to_next": 51000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 89,
+            "minimum_xp": 1679501,
+            "maximum_xp": 1731500,
+            "xp_to_next": 52000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 90,
+            "minimum_xp": 1731501,
+            "maximum_xp": 1784500,
+            "xp_to_next": 53000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          }
+        ]
+      },
+      {
+        "name": "Levels 91–100",
+        "start": 91,
+        "end": 100,
+        "levels": [
+          {
+            "level": 91,
+            "minimum_xp": 1784501,
+            "maximum_xp": 1839500,
+            "xp_to_next": 55000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 92,
+            "minimum_xp": 1839501,
+            "maximum_xp": 1896500,
+            "xp_to_next": 57000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 93,
+            "minimum_xp": 1896501,
+            "maximum_xp": 1955500,
+            "xp_to_next": 59000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 94,
+            "minimum_xp": 1955501,
+            "maximum_xp": 2016500,
+            "xp_to_next": 61000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 95,
+            "minimum_xp": 2016501,
+            "maximum_xp": 2080500,
+            "xp_to_next": 64000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 96,
+            "minimum_xp": 2080501,
+            "maximum_xp": 2149500,
+            "xp_to_next": 69000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 97,
+            "minimum_xp": 2149501,
+            "maximum_xp": 2225500,
+            "xp_to_next": 76000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 98,
+            "minimum_xp": 2225501,
+            "maximum_xp": 2310500,
+            "xp_to_next": 85000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 99,
+            "minimum_xp": 2310501,
+            "maximum_xp": 2410500,
+            "xp_to_next": 100000,
+            "is_open_ended": false,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          },
+          {
+            "level": 100,
+            "minimum_xp": 2410501,
+            "maximum_xp": 0,
+            "xp_to_next": 0,
+            "is_open_ended": true,
+            "is_hero_reward": false,
+            "hero_reward_total": 30
+          }
+        ]
+      }
+    ]
+  },
+  "rewards": {
+    "maximum_part_count": 4,
+    "maximum_cash_out_level": 17,
+    "reward_level_model": "completion_depth",
+    "cash_out": [
+      {
+        "planets_completed": 1,
+        "difficulty": 1,
+        "part_count": 1,
+        "item_level": 11
+      },
+      {
+        "planets_completed": 2,
+        "difficulty": 2,
+        "part_count": 2,
+        "item_level": 13
+      },
+      {
+        "planets_completed": 3,
+        "difficulty": 3,
+        "part_count": 3,
+        "item_level": 15
+      },
+      {
+        "planets_completed": 4,
+        "difficulty": 4,
+        "part_count": 4,
+        "item_level": 17
+      }
+    ],
+    "rarity_samples": [
+      {
+        "name": "No medals",
+        "planets_completed": 4,
+        "bronze": 0,
+        "silver": 0,
+        "gold": 0,
+        "special_chance": 100,
+        "rarified_chance": 0,
+        "purified_chance": 0
+      },
+      {
+        "name": "Bronze sweep",
+        "planets_completed": 4,
+        "bronze": 4,
+        "silver": 0,
+        "gold": 0,
+        "special_chance": 99,
+        "rarified_chance": 1,
+        "purified_chance": 0
+      },
+      {
+        "name": "Silver sweep",
+        "planets_completed": 4,
+        "bronze": 0,
+        "silver": 4,
+        "gold": 0,
+        "special_chance": 97,
+        "rarified_chance": 3,
+        "purified_chance": 0
+      },
+      {
+        "name": "Gold sweep",
+        "planets_completed": 4,
+        "bronze": 0,
+        "silver": 0,
+        "gold": 4,
+        "special_chance": 94,
+        "rarified_chance": 6,
+        "purified_chance": 0
+      },
+      {
+        "name": "All medal grades",
+        "planets_completed": 4,
+        "bronze": 4,
+        "silver": 4,
+        "gold": 4,
+        "special_chance": 90,
+        "rarified_chance": 10,
+        "purified_chance": 0
+      }
+    ],
+    "hero_milestones": [
+      4,
+      5,
+      8,
+      11,
+      14,
+      17,
+      18,
+      20,
+      22,
+      23,
+      25,
+      27,
+      28,
+      30,
+      32,
+      33,
+      35,
+      37,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.level }}
+<header class="page-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // LEVEL REPORT</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.group_count }}</strong><span>LEVEL GROUPS<br>{{ $data.playable_count }} MAPS</span></div>
+</header>
+
+<section class="level-group-index">
+  {{ range $data.groups }}
+  <article class="level-group-card">
+    <header>
+      <div><span class="level-index">{{ if eq .slug "other" }}AUX{{ else }}LVL // {{ .slug }}{{ end }}</span><h2>{{ .name }}</h2></div>
+      <div class="group-stats"><b>{{ .count }}</b> {{ if eq .count 1 }}map{{ else }}maps{{ end }}</div>
+    </header>
+    <div class="level-stage-list">
+      {{ range .levels }}
+      <a class="level-stage-link" href="{{ printf "/level/%s/" .slug | strings.TrimPrefix "/" | relURL }}">
+        <span class="stage-number">{{ .display_name }}</span>
+        <span><strong>{{ .name }}</strong><small>{{ .region }} // {{ .npc_count }} ENEMIES</small></span>
+        <em>→</em>
+      </a>
+      {{ end }}
+    </div>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

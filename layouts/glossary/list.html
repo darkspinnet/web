@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.glossary }}
+<header class="page-hero">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // GLOSSARY</p><h1>{{ .Title }}</h1><p>Gameplay, hero, equipment, and archive terminology used throughout Darkspin.</p></div>
+  <div class="page-counter"><strong>{{ $data.count }}</strong><span>DEFINED<br>TERMS</span></div>
+</header>
+<section class="control-rack" aria-label="Glossary filters">
+  <label class="search-control"><span>SEARCH TERMINOLOGY</span><input type="search" placeholder="Term or definition…" data-search-input data-search-target="glossary-card"></label>
+  <div class="filter-control" data-filter-group="category"><span>CATEGORY</span><button class="is-active" data-filter="all">ALL</button>{{ range $category, $count := $data.categories }}<button data-filter="{{ $category }}">{{ upper $category }} <small>{{ $count }}</small></button>{{ end }}</div>
+</section>
+<div class="result-line"><span data-result-count>{{ $data.count }}</span> terms visible <i></i></div>
+<section class="term-grid" data-filter-list>
+  {{ range $data.items }}<a class="term-card glossary-card" href="{{ printf "/glossary/%s/" .slug | strings.TrimPrefix "/" | relURL }}" data-category="{{ .category }}" data-search="{{ .name }} {{ .category }} {{ .definition }}"><span class="term-glyph">{{ upper (substr .name 0 2) }}</span><div><small>{{ upper .category }}</small><h2>{{ .name }}</h2><p>{{ .definition }}</p></div><i>→</i></a>{{ end }}
+</section>
+<p class="empty-state" data-empty-state hidden>No glossary terms match the current filters.</p>
+{{ end }}

@@ -1,0 +1,3843 @@
+{
+  "selection": "tutorial",
+  "level": "corrupted-tutorial-cryos-1",
+  "map": {
+    "plan_layer": 0,
+    "bounds_min": {
+      "X": -364.275,
+      "Y": -249.67502,
+      "Z": 0.57499593
+    },
+    "bounds_max": {
+      "X": 319.57455,
+      "Y": 251.7736,
+      "Z": 30.575003
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 0.6551148,
+    "offset_x": 32.000015,
+    "offset_y": 91.746796
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "sections": [
+    {
+      "component_id": 1,
+      "image": "map-section-01.webp",
+      "metadata": "map-section-01.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 1,
+        "bounds_min": {
+          "X": 57.975246,
+          "Y": -243.97499,
+          "Z": 0.57499593
+        },
+        "bounds_max": {
+          "X": 319.57455,
+          "Y": 251.7736,
+          "Z": 30.575003
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 0.90368384,
+        "offset_x": 137.79846,
+        "offset_y": 32
+      },
+      "marker_count": 266
+    },
+    {
+      "component_id": 2,
+      "image": "map-section-02.webp",
+      "metadata": "map-section-02.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 2,
+        "bounds_min": {
+          "X": -364.275,
+          "Y": -249.67502,
+          "Z": 10.624999
+        },
+        "bounds_max": {
+          "X": -321.37506,
+          "Y": -192.97499,
+          "Z": 10.624999
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 7.901231,
+        "offset_x": 86.51886,
+        "offset_y": 32
+      },
+      "marker_count": 16
+    }
+  ],
+  "markers": [
+    {
+      "category": "entry",
+      "label": "P",
+      "name": "player_start",
+      "section": 1,
+      "x": 176.28816,
+      "y": -239.94894,
+      "z": -0.058266
+    },
+    {
+      "category": "boss",
+      "label": "B",
+      "name": "SpawnPoint_DirectorBoss.Noun",
+      "noun_name": "SpawnPoint_DirectorBoss.Noun",
+      "section": 2,
+      "x": -350.04453,
+      "y": -223.36415,
+      "z": 10.088032
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-4",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 2,
+      "x": -355.2693,
+      "y": -207.71077,
+      "z": 10.088001
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-2",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 2,
+      "x": -345.89496,
+      "y": -239.5468,
+      "z": 10.16637
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 2,
+      "x": -347.57553,
+      "y": -224.60829,
+      "z": 10.088026
+    },
+    {
+      "category": "teleporter",
+      "name": "BossSecurityTeleporter.Noun",
+      "noun_name": "BossSecurityTeleporter.Noun",
+      "section": 1,
+      "x": 260.83334,
+      "y": 232.78407,
+      "z": 20.168016
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-82",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 228.2432,
+      "y": 240.66133,
+      "z": -3.718216
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-81",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 235.59526,
+      "y": 254.48822,
+      "z": -4.225693
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-1",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 155.77162,
+      "y": -241.0416,
+      "z": -0.058903
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-6",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 162.82803,
+      "y": -210.3222,
+      "z": -0.04709
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-99",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 251.31369,
+      "y": 179.72949,
+      "z": -20.348488
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-11",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 218.77022,
+      "y": -130.78923,
+      "z": 9.993814
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-16",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 189.57114,
+      "y": -88.563866,
+      "z": 14.984399
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-98",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 335.96317,
+      "y": 244.28043,
+      "z": -39.901688
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-94",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 316.40555,
+      "y": 291.47922,
+      "z": -43.487152
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-21",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 100.24556,
+      "y": -69.504524,
+      "z": 14.988481
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-84",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 254.62468,
+      "y": 214.72644,
+      "z": -11.670384
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-4",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 142.35423,
+      "y": -241.32555,
+      "z": -0.075441
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-9",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 204.44052,
+      "y": -170.62003,
+      "z": -0.049386
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-14",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 226.52522,
+      "y": -90.054855,
+      "z": 10.62318
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-96",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 317.52777,
+      "y": 250.59818,
+      "z": -23.126219
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-92",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 293.17526,
+      "y": 274.53506,
+      "z": -15.0998
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-19",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 99.32293,
+      "y": -96.53265,
+      "z": 14.982409
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-87",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 287.31372,
+      "y": 203.83855,
+      "z": -6.018877
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-2",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 180.40619,
+      "y": -235.124,
+      "z": -0.049521
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-7",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 181.7423,
+      "y": -195.5345,
+      "z": -0.016127
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-12",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 237.11511,
+      "y": -136.24138,
+      "z": 9.938579
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-17",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 130.32793,
+      "y": -97.62342,
+      "z": 14.984919
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-90",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 280.4581,
+      "y": 265.61542,
+      "z": -6.741156
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-22",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 76.090385,
+      "y": -58.74482,
+      "z": 18.143084
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-89",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 248.10071,
+      "y": 194.74579,
+      "z": -5.576337
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-80",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 256.38043,
+      "y": 263.4886,
+      "z": -3.861019
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-85",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 269.54532,
+      "y": 211.11528,
+      "z": -11.849771
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-5",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 144.96707,
+      "y": -215.18756,
+      "z": -0.047925
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-86",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 266.2953,
+      "y": 196.88371,
+      "z": -13.719625
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-10",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 200.48337,
+      "y": -146.63687,
+      "z": 4.363464
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-15",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 207.15762,
+      "y": -81.41556,
+      "z": 13.628143
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-97",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 320.23105,
+      "y": 220.4786,
+      "z": -25.763264
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-93",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 301.724,
+      "y": 259.21658,
+      "z": -16.905804
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-20",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 84.23295,
+      "y": -90.98779,
+      "z": 14.982788
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-83",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 241.55663,
+      "y": 232.04668,
+      "z": -6.01888
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-88",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 232.4406,
+      "y": 222.8648,
+      "z": -15.20775
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-3",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 146.78421,
+      "y": -233.14836,
+      "z": -0.049188
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-8",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 180.55106,
+      "y": -194.4156,
+      "z": -0.045133
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-13",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 224.44016,
+      "y": -101.93564,
+      "z": 9.980317
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-95",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 330.9153,
+      "y": 207.84889,
+      "z": -26.469286
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_small.Noun-18",
+      "noun_name": "tutorial_rock_small.Noun",
+      "section": 1,
+      "x": 108.913765,
+      "y": -93.683716,
+      "z": 14.457201
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-18",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 97.96442,
+      "y": -192.79396,
+      "z": -32.56749
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-65",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -384.91516,
+      "y": -176.72728,
+      "z": -18.20031
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-21",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 169.46048,
+      "y": -167.43427,
+      "z": -10.885098
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-17",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 130.73315,
+      "y": -180.1527,
+      "z": -19.51051
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-66",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -369.2822,
+      "y": -163.62115,
+      "z": -17.55009
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-24",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 221.90178,
+      "y": -169.80304,
+      "z": -28.379395
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-16",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 162.98058,
+      "y": -183.3556,
+      "z": -10.885098
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-2",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 167.35577,
+      "y": -226.98825,
+      "z": -7.471128
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-49",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 54.357822,
+      "y": -69.31563,
+      "z": 12.915454
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-2",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 80.23025,
+      "y": 7.204776,
+      "z": 16.883833
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-56",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 46.198757,
+      "y": -13.983688,
+      "z": 8.275065
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-48",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 102.957436,
+      "y": -39.412327,
+      "z": 12.745183
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-20",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 138.62259,
+      "y": -205.27496,
+      "z": -1.526766
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-63",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 154.83318,
+      "y": -4.171683,
+      "z": 10.594439
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-70",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -390.46674,
+      "y": -122.749374,
+      "z": -47.419422
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-73",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -300.9474,
+      "y": -179.4191,
+      "z": -47.19483
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-47",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 143.50185,
+      "y": -116.5719,
+      "z": -14.666393
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-55",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 43.003967,
+      "y": -42.475677,
+      "z": 12.745187
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-1",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 119.65838,
+      "y": -70.64385,
+      "z": 14.197653
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-59",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 96.77385,
+      "y": -24.463217,
+      "z": 1.958042
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-41",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 198.5453,
+      "y": -63.736034,
+      "z": 7.269709
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-5",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 194.35323,
+      "y": -234.79863,
+      "z": -8.486982
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-32",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 245.15512,
+      "y": -69.5136,
+      "z": -11.017928
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-34",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 275.29282,
+      "y": -90.7857,
+      "z": -40.735294
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-3",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 244.42484,
+      "y": -113.18503,
+      "z": 9.864542
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-38",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 166.89912,
+      "y": -46.843967,
+      "z": -14.396477
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-45",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 179.02823,
+      "y": -115.48711,
+      "z": -3.373018
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-35",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 267.38116,
+      "y": -72.12161,
+      "z": -13.257671
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-4",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 104.76695,
+      "y": 18.42801,
+      "z": 21.851456
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-7",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 209.7399,
+      "y": 57.03385,
+      "z": 29.283775
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 195.97787,
+      "y": -184.17151,
+      "z": -0.058899
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-22",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 209.63683,
+      "y": -113.06141,
+      "z": -2.870187
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-64",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -395.60144,
+      "y": -217.61514,
+      "z": -24.517399
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-11",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 115.785515,
+      "y": -225.46626,
+      "z": -18.126637
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-5",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 127.00468,
+      "y": 27.338642,
+      "z": 22.293558
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-68",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -424.8416,
+      "y": -226.1023,
+      "z": -47.419422
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-10",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 148.7033,
+      "y": -250.96153,
+      "z": -6.024761
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-23",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 177.33345,
+      "y": -139.0116,
+      "z": -26.121323
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-75",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -300.5827,
+      "y": -216.62367,
+      "z": -22.390709
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-72",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -306.62823,
+      "y": -131.67744,
+      "z": -47.19483
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-29",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 216.73845,
+      "y": -198.28532,
+      "z": -22.518658
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-54",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 118.51661,
+      "y": -101.12893,
+      "z": 3.045766
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-8",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 191.68172,
+      "y": -244.92949,
+      "z": -26.173649
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-52",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 103.18941,
+      "y": -56.0119,
+      "z": 12.745183
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-60",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 95.23315,
+      "y": 44.41689,
+      "z": 4.020634
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-7",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 170.04745,
+      "y": -256.63336,
+      "z": -21.60887
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-57",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 68.3785,
+      "y": -60.4979,
+      "z": 14.719909
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-28",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 188.964,
+      "y": -209.77504,
+      "z": -16.608532
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-40",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 203.40857,
+      "y": -29.009996,
+      "z": -23.363297
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-6",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 188.08955,
+      "y": 6.136696,
+      "z": 26.587402
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-67",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -429.6701,
+      "y": -175.84897,
+      "z": -47.419422
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-3",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 161.07675,
+      "y": -250.61588,
+      "z": -8.227799
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-53",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 90.57527,
+      "y": -109.07715,
+      "z": -2.314967
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-33",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 219.33722,
+      "y": -64.497894,
+      "z": -1.367622
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-4",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 176.73918,
+      "y": -250.20323,
+      "z": -8.680246
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-51",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 69.40794,
+      "y": -81.581,
+      "z": 4.802451
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-71",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -338.823,
+      "y": -95.09774,
+      "z": -52.461575
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-50",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 61.809597,
+      "y": -93.251915,
+      "z": 12.745187
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-37",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 163.17233,
+      "y": -64.11892,
+      "z": -4.7696
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-76",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -335.65778,
+      "y": -164.47598,
+      "z": -14.544792
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-15",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 176.00583,
+      "y": -215.85547,
+      "z": -5.203469
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-27",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 255.32274,
+      "y": -145.87209,
+      "z": -38.112038
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-62",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 70.85294,
+      "y": 29.227356,
+      "z": 1.414099
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-6",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 192.55278,
+      "y": 54.118763,
+      "z": 30.08825
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-31",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 251.45383,
+      "y": -47.0135,
+      "z": -15.759953
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-36",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 221.5667,
+      "y": -153.77226,
+      "z": -11.695393
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-7",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 195.62125,
+      "y": 59.098164,
+      "z": 30.088234
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 144.7357,
+      "y": -83.06857,
+      "z": 11.132936
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock_med.Noun-3",
+      "noun_name": "tutorial_rock_med.Noun",
+      "section": 1,
+      "x": 102.814766,
+      "y": -1.128244,
+      "z": 17.377146
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-5",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 143.88794,
+      "y": 13.564265,
+      "z": 25.088013
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-42",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 135.09659,
+      "y": -70.449844,
+      "z": 2.660343
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-13",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 154.538,
+      "y": -222.3351,
+      "z": -6.401043
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-1",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 235.54187,
+      "y": -128.47418,
+      "z": 9.894472
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-26",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 192.44745,
+      "y": -150.37132,
+      "z": -7.310284
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-44",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 159.0077,
+      "y": -104.854965,
+      "z": -1.212959
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-4",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 168.5785,
+      "y": -87.931145,
+      "z": 14.972935
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-58",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 50.572144,
+      "y": -42.011063,
+      "z": 14.834701
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-69",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -395.9626,
+      "y": -271.40167,
+      "z": -47.419422
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_obstacle1.Noun-2",
+      "noun_name": "tutorial_obstacle1.Noun",
+      "section": 1,
+      "x": 238.55638,
+      "y": -123.34288,
+      "z": 9.865168
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-43",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 136.76462,
+      "y": -103.60328,
+      "z": -5.976553
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-74",
+      "noun_name": "tutorial_rock.Noun",
+      "x": -265.07953,
+      "y": -169.07256,
+      "z": -47.19483
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun",
+      "noun_name": "tutorial_rock.Noun",
+      "section": 1,
+      "x": 126.49906,
+      "y": -238.7623,
+      "z": -10.145399
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_rock.Noun-61",
+      "noun_name": "tutorial_rock.Noun",
+      "x": 125.061775,
+      "y": 46.773018,
+      "z": 2.356233
+    },
+    {
+      "category": "boss",
+      "label": "B",
+      "name": "tutorial_terrainboss.Noun",
+      "noun_name": "tutorial_terrainboss.Noun",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_terrain.Noun",
+      "noun_name": "tutorial_terrain.Noun",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_spacedome.Noun",
+      "noun_name": "tutorial_spacedome.Noun",
+      "x": 175.6724,
+      "y": 119.84446,
+      "z": -235.12878
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_spacedome.Noun",
+      "noun_name": "tutorial_spacedome.Noun",
+      "x": -709.45886,
+      "y": -342.44153,
+      "z": -234.18799
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-126",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 281.5049,
+      "y": 221.62625,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-123",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 269.7284,
+      "y": 221.592,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-102",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 268.3609,
+      "y": 245.3892,
+      "z": 20.140335
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-99",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 252.48302,
+      "y": 232.14113,
+      "z": 20.37835
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-64",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 204.01622,
+      "y": -141.3431,
+      "z": 4.869369
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-42",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 204.18889,
+      "y": -194.31305,
+      "z": 0.076308
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-78",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 144.13171,
+      "y": -90.97001,
+      "z": 15.104607
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-56",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 226.1092,
+      "y": -141.61891,
+      "z": 10.241918
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-92",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 113.017166,
+      "y": -81.89738,
+      "z": 15.12235
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-59",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 236.76982,
+      "y": -94.85916,
+      "z": 10.123673
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-84",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 144.34196,
+      "y": -100.3119,
+      "z": 15.091694
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-129",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 297.97742,
+      "y": 226.18211,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-12",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 180.07353,
+      "y": -240.46764,
+      "z": 0.05165
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-51",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 190.76662,
+      "y": -164.24074,
+      "z": 0.06032
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-29",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 146.1956,
+      "y": -200.55104,
+      "z": 0.101307
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-54",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 215.47108,
+      "y": -146.55418,
+      "z": 7.392191
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-79",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 134.45424,
+      "y": -90.0845,
+      "z": 15.129227
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-9",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 170.45903,
+      "y": -241.89967,
+      "z": 0.073478
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-20",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 135.25513,
+      "y": -228.9889,
+      "z": 0.07837
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-60",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 225.18634,
+      "y": -89.87661,
+      "z": 10.89504
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-1",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 161.1617,
+      "y": -234.7305,
+      "z": 0.065526
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-74",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 171.49557,
+      "y": -75.99978,
+      "z": 15.123511
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-13",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 182.60533,
+      "y": -236.49318,
+      "z": 0.060183
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-41",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 181.94379,
+      "y": -178.3536,
+      "z": 0.088144
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-66",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 230.70518,
+      "y": -81.3739,
+      "z": 11.028461
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-44",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 199.26,
+      "y": -195.73769,
+      "z": 0.099119
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-33",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 166.68433,
+      "y": -213.70395,
+      "z": 0.075054
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-58",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 246.10551,
+      "y": -126.32381,
+      "z": 9.964902
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-94",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 100.9797,
+      "y": -75.40936,
+      "z": 15.104818
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-72",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 208.82481,
+      "y": -72.98799,
+      "z": 13.735485
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-11",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 179.31621,
+      "y": -241.62105,
+      "z": 0.092089
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-86",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 172.08804,
+      "y": -106.3261,
+      "z": 15.094762
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-137",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 300.20944,
+      "y": 221.81241,
+      "z": 20.264633
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-134",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 297.05942,
+      "y": 241.81895,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-130",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 297.8833,
+      "y": 235.99722,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-127",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 279.92654,
+      "y": 220.51918,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-124",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 270.85526,
+      "y": 223.05104,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-110",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 259.62155,
+      "y": 224.17345,
+      "z": 19.950987
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-104",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 273.7832,
+      "y": 245.62993,
+      "z": 20.249952
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-75",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 169.37643,
+      "y": -76.0911,
+      "z": 15.117845
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-53",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 199.09938,
+      "y": -148.65044,
+      "z": 3.942381
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-31",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 157.51312,
+      "y": -199.79462,
+      "z": 0.072331
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-17",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 155.55261,
+      "y": -234.83499,
+      "z": 0.084984
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-22",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 135.1448,
+      "y": -227.50375,
+      "z": 0.067823
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-81",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 136.26663,
+      "y": -90.5797,
+      "z": 15.078769
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-95",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 90.02127,
+      "y": -97.85629,
+      "z": 15.113657
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-73",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 190.72728,
+      "y": -73.186264,
+      "z": 15.100022
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-6",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 173.31125,
+      "y": -234.0617,
+      "z": 0.037563
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-40",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 163.25266,
+      "y": -194.64932,
+      "z": 0.089089
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-76",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 156.4654,
+      "y": -77.260414,
+      "z": 15.112123
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-15",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 153.07227,
+      "y": -234.46906,
+      "z": 0.099238
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-32",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 167.99199,
+      "y": -213.6203,
+      "z": 0.0736
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-57",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 219.86945,
+      "y": -128.34114,
+      "z": 10.118857
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-93",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 124.63409,
+      "y": -77.31642,
+      "z": 15.105582
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-71",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 206.91405,
+      "y": -72.96843,
+      "z": 14.025307
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-49",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 204.68991,
+      "y": -168.87003,
+      "z": 0.078269
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-85",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 148.3168,
+      "y": -98.598305,
+      "z": 15.092133
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-7",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 177.59303,
+      "y": -233.74837,
+      "z": 0.083851
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-52",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 187.72626,
+      "y": -168.03835,
+      "z": 0.090825
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-30",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 159.1076,
+      "y": -197.95064,
+      "z": 0.072333
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-55",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 214.67155,
+      "y": -147.30243,
+      "z": 7.047941
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-21",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 137.07744,
+      "y": -231.83496,
+      "z": 0.084203
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-14",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 154.32346,
+      "y": -235.30855,
+      "z": 0.072529
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-47",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 206.59595,
+      "y": -172.43321,
+      "z": 0.067465
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-83",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 145.81885,
+      "y": -101.33897,
+      "z": 15.110235
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-5",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 158.24835,
+      "y": -241.42952,
+      "z": 0.083662
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-39",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 175.59746,
+      "y": -206.45538,
+      "z": 0.100828
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-138",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 291.37085,
+      "y": 216.06793,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-135",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 288.4247,
+      "y": 250.65358,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-131",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 298.22922,
+      "y": 241.12592,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-128",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 286.77008,
+      "y": 215.64943,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-125",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 279.42365,
+      "y": 221.67673,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-122",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 268.61353,
+      "y": 221.1589,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-101",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 260.50256,
+      "y": 241.05093,
+      "z": 19.85187
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-98",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 252.6864,
+      "y": 234.93668,
+      "z": 19.984442
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-106",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 275.32687,
+      "y": 246.37093,
+      "z": 19.831879
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-28",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 147.3618,
+      "y": -199.97421,
+      "z": 0.072612
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-89",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 190.97864,
+      "y": -88.194916,
+      "z": 15.0702
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-67",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 212.29305,
+      "y": -73.72394,
+      "z": 13.300819
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-103",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 266.38998,
+      "y": 245.06636,
+      "z": 20.059334
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-45",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 198.17685,
+      "y": -195.71637,
+      "z": 0.065114
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-96",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 253.88388,
+      "y": 236.56845,
+      "z": 20.021101
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-34",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 163.17009,
+      "y": -213.48744,
+      "z": 0.051895
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-3",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 162.7388,
+      "y": -234.9554,
+      "z": 0.058776
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-37",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 177.58057,
+      "y": -204.22838,
+      "z": 0.090245
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-62",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 219.29068,
+      "y": -125.99489,
+      "z": 10.069856
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-26",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 134.53877,
+      "y": -217.17616,
+      "z": 0.091602
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-87",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 183.6593,
+      "y": -105.41192,
+      "z": 15.07094
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-65",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 231.62384,
+      "y": -82.392975,
+      "z": 10.931757
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-43",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 199.1561,
+      "y": -195.81544,
+      "z": 0.099119
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-68",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 212.53123,
+      "y": -73.47886,
+      "z": 13.300819
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-46",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 205.68213,
+      "y": -186.04292,
+      "z": 0.093359
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-82",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 145.4981,
+      "y": -101.537964,
+      "z": 15.110235
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-10",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 173.72864,
+      "y": -243.32124,
+      "z": 0.061348
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-38",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 177.16406,
+      "y": -206.37851,
+      "z": 0.071963
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-63",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 204.80255,
+      "y": -139.41028,
+      "z": 5.238419
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-27",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 146.19127,
+      "y": -214.24005,
+      "z": 0.066204
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-88",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 183.67458,
+      "y": -104.11978,
+      "z": 15.113387
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-8",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 179.01581,
+      "y": -234.26001,
+      "z": 0.084552
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-91",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 199.16989,
+      "y": -80.479,
+      "z": 14.821953
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-69",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 200.44936,
+      "y": -80.3128,
+      "z": 14.568903
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-2",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 143.77815,
+      "y": -242.5709,
+      "z": 0.063735
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-36",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 162.33678,
+      "y": -212.46767,
+      "z": 0.090036
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-61",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 219.4251,
+      "y": -124.57623,
+      "z": 10.091865
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-50",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 205.9624,
+      "y": -171.17937,
+      "z": 0.075123
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-132",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 298.33066,
+      "y": 242.40244,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-139",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 291.71634,
+      "y": 217.39774,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_plant.Noun-136",
+      "noun_name": "tutorial_plant.Noun",
+      "section": 1,
+      "x": 289.40027,
+      "y": 252.09941,
+      "z": 20.400198
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-110",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 295.68707,
+      "y": 118.59039,
+      "z": 22.585484
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-77",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 233.06554,
+      "y": 119.94987,
+      "z": 18.297773
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-88",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 282.08823,
+      "y": 192.76892,
+      "z": -9.022307
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-106",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 286.3389,
+      "y": 99.867744,
+      "z": 17.375391
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-84",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 275.0495,
+      "y": 170.34624,
+      "z": 1.62035
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-105",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 268.44116,
+      "y": 69.73202,
+      "z": 25.059666
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-76",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 264.0105,
+      "y": 93.61677,
+      "z": 24.769485
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-102",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 273.28317,
+      "y": 73.39871,
+      "z": 24.50868
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-78",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 237.99803,
+      "y": 102.42071,
+      "z": 23.992369
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-100",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 252.02423,
+      "y": 69.863266,
+      "z": 24.104336
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-82",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 270.01312,
+      "y": 153.10017,
+      "z": 1.62035
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-93",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 178.53381,
+      "y": 0.553463,
+      "z": 25.259026
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-91",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 312.43195,
+      "y": 186.31229,
+      "z": -5.410267
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-73",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 246.1522,
+      "y": 114.96784,
+      "z": 22.155046
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-107",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 303.5455,
+      "y": 130.78687,
+      "z": 16.16361
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-81",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 269.25436,
+      "y": 139.15596,
+      "z": 4.809986
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-83",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 279.4629,
+      "y": 127.986,
+      "z": 14.806671
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-101",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 259.1498,
+      "y": 68.63384,
+      "z": 22.803991
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-86",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 255.41711,
+      "y": 119.068954,
+      "z": 19.837433
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-92",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 318.8214,
+      "y": 168.38931,
+      "z": 1.62035
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-104",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 277.9826,
+      "y": 78.484474,
+      "z": 24.171028
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-71",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 224.29405,
+      "y": 71.51005,
+      "z": 28.079582
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-80",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 268.12967,
+      "y": 123.81162,
+      "z": 18.833973
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-109",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 324.38077,
+      "y": 154.7641,
+      "z": 2.44064
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-74",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 255.24686,
+      "y": 103.27933,
+      "z": 17.375391
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-108",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 321.508,
+      "y": 143.25348,
+      "z": 9.751809
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-94",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 194.38074,
+      "y": 6.271261,
+      "z": 27.75811
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-79",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 215.14159,
+      "y": 96.685646,
+      "z": 30.883617
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-103",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 298.45523,
+      "y": 54.42237,
+      "z": 28.079582
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-89",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 310.961,
+      "y": 174.24135,
+      "z": 1.62035
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-87",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 282.19568,
+      "y": 185.06679,
+      "z": 1.62035
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-75",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 249.06796,
+      "y": 102.39723,
+      "z": 24.809801
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-99",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 238.14061,
+      "y": 75.372696,
+      "z": 23.4642
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-90",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 314.62756,
+      "y": 192.91629,
+      "z": -9.022307
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-23",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 123.97747,
+      "y": -0.007337,
+      "z": 2.65925
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-65",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -321.9357,
+      "y": -214.38185,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-43",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 189.06332,
+      "y": 111.99134,
+      "z": 24.816854
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-19",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 171.85458,
+      "y": 62.868076,
+      "z": 27.298313
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-10",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 154.49129,
+      "y": 28.683945,
+      "z": 24.108536
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-9",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 92.46563,
+      "y": 12.438225,
+      "z": 18.527048
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-51",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -363.263,
+      "y": -239.84341,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-26",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 180.56253,
+      "y": 81.437744,
+      "z": 28.492186
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-28",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 146.52583,
+      "y": 83.06493,
+      "z": 18.449501
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-33",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 117.08763,
+      "y": 34.10341,
+      "z": 12.46927
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-50",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -366.06815,
+      "y": -243.13342,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-16",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 169.05269,
+      "y": 48.108326,
+      "z": 23.6899
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-30",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 172.84741,
+      "y": 33.373566,
+      "z": 23.610355
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-68",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -315.125,
+      "y": -237.09087,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-41",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 213.93298,
+      "y": 63.1537,
+      "z": 28.521671
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-49",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -366.99747,
+      "y": -233.10466,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-44",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 206.88704,
+      "y": 114.144196,
+      "z": 24.816854
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-67",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -316.34293,
+      "y": -230.7419,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-13",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 109.66835,
+      "y": 49.529243,
+      "z": 14.044914
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-27",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 167.54826,
+      "y": 86.62333,
+      "z": 24.816854
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-53",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -357.86984,
+      "y": -253.1073,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-45",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 160.66385,
+      "y": 106.0961,
+      "z": 18.235441
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-6",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 68.78828,
+      "y": -8.13602,
+      "z": 13.614126
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-52",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -365.045,
+      "y": -249.70328,
+      "z": -12.802254
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-35",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 171.95883,
+      "y": 5.621324,
+      "z": 22.032948
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-38",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 191.61264,
+      "y": 96.74394,
+      "z": 28.565796
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-1",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 103.77718,
+      "y": -67.4005,
+      "z": 13.122875
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-61",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -339.49194,
+      "y": -187.61876,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-25",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 172.26756,
+      "y": 27.385317,
+      "z": 23.856758
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-55",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -368.76498,
+      "y": -200.03938,
+      "z": -5.227564
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-20",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 180.82137,
+      "y": 27.630571,
+      "z": 25.092558
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-31",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 146.21068,
+      "y": 31.685497,
+      "z": 24.936249
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-60",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -345.0342,
+      "y": -188.81456,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-36",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 199.59496,
+      "y": 14.636274,
+      "z": 21.847212
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-22",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 119.86435,
+      "y": -0.735585,
+      "z": 13.872656
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-59",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -350.06076,
+      "y": -186.2807,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-8",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 71.37122,
+      "y": 1.76586,
+      "z": 5.669924
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-18",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 169.9375,
+      "y": 71.81349,
+      "z": 27.680689
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-64",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -326.32858,
+      "y": -208.90611,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-15",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 178.05875,
+      "y": 36.846367,
+      "z": 29.396753
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-24",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 136.18108,
+      "y": -5.735607,
+      "z": 11.082717
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-62",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -343.48438,
+      "y": -192.71988,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-40",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 204.83575,
+      "y": 97.923706,
+      "z": 29.890194
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-42",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 208.27925,
+      "y": 59.893646,
+      "z": 28.584421
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-63",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -339.81888,
+      "y": -196.55006,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-14",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 120.91678,
+      "y": 37.182995,
+      "z": 23.478886
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-48",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -368.07367,
+      "y": -219.84521,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-37",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 205.07176,
+      "y": 35.25297,
+      "z": 31.582878
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-5",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 84.206184,
+      "y": -36.221615,
+      "z": 14.028732
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-72",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -332.95593,
+      "y": -252.42606,
+      "z": -23.937273
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-47",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -370.2482,
+      "y": -213.84557,
+      "z": -11.219173
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-70",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -341.3751,
+      "y": -256.56747,
+      "z": -23.937273
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-12",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 109.349014,
+      "y": 21.689323,
+      "z": 23.193504
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-34",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 110.68713,
+      "y": 33.807987,
+      "z": 11.465914
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-56",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -371.6325,
+      "y": -190.9593,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-69",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -324.8364,
+      "y": -249.67964,
+      "z": -9.430723
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-46",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -372.7153,
+      "y": -201.90593,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-17",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 159.60136,
+      "y": 59.57804,
+      "z": 26.245457
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-21",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 205.15654,
+      "y": 40.783424,
+      "z": 32.6797
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-54",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -349.89493,
+      "y": -258.3466,
+      "z": -6.448577
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-3",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 78.25966,
+      "y": -86.26794,
+      "z": 10.706965
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-32",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 153.18495,
+      "y": 42.081425,
+      "z": 18.389452
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-58",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -356.8389,
+      "y": -183.73137,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-39",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 223.98634,
+      "y": 95.54736,
+      "z": 23.837873
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-4",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 55.182236,
+      "y": -53.851692,
+      "z": 16.342802
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-7",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 65.99966,
+      "y": -17.769793,
+      "z": 14.01827
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-57",
+      "noun_name": "tutorial_tree.Noun",
+      "x": -364.2244,
+      "y": -186.65617,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-11",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 115.602234,
+      "y": 4.848283,
+      "z": 20.188187
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-29",
+      "noun_name": "tutorial_tree.Noun",
+      "x": 141.3926,
+      "y": 66.261955,
+      "z": 18.666052
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-2",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 1,
+      "x": 105.55702,
+      "y": -83.810196,
+      "z": 12.158895
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "tutorial_tree.Noun-66",
+      "noun_name": "tutorial_tree.Noun",
+      "section": 2,
+      "x": -317.04483,
+      "y": -222.18044,
+      "z": -7.703209
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialSpecialOne.Noun-1",
+      "noun_name": "TutorialSpecialOne.Noun",
+      "section": 1,
+      "x": 268.71585,
+      "y": 231.4832,
+      "z": 20.394464
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun",
+      "noun_name": "TutorialBasicPoison.Noun",
+      "section": 1,
+      "x": 266.76926,
+      "y": 238.13489,
+      "z": 20.102356
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-19",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 218.50615,
+      "y": -137.07283,
+      "z": 9.59108
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun-12",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 302.03873,
+      "y": 144.39534,
+      "z": 25.087334
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun-11",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 296.8789,
+      "y": 149.28857,
+      "z": 25.087357
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicDiseased.Noun-2",
+      "noun_name": "TutorialBasicDiseased.Noun",
+      "section": 1,
+      "x": 86.052,
+      "y": -76.17503,
+      "z": 14.975922
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-35",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 233.22112,
+      "y": -116.11628,
+      "z": 9.901413
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-23",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 94.83415,
+      "y": -67.135864,
+      "z": 14.97541
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicDiseased.Noun-5",
+      "noun_name": "TutorialBasicDiseased.Noun",
+      "section": 1,
+      "x": 156.30786,
+      "y": 20.472826,
+      "z": 25.088003
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-30",
+      "noun_name": "TutorialBasicPoison.Noun",
+      "section": 1,
+      "x": 146.19623,
+      "y": 20.35911,
+      "z": 25.087984
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun-10",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 288.802,
+      "y": 149.37874,
+      "z": 25.089664
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-22",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 89.59967,
+      "y": -83.330795,
+      "z": 14.973415
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-21",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 177.57903,
+      "y": -93.48753,
+      "z": 14.972934
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-18",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 197.70692,
+      "y": -162.08148,
+      "z": 0.231011
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-31",
+      "noun_name": "TutorialBasicPoison.Noun",
+      "section": 1,
+      "x": 266.94968,
+      "y": 228.76335,
+      "z": 20.108055
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 267.98505,
+      "y": 235.41283,
+      "z": 19.943075
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-24",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 92.23341,
+      "y": -75.93851,
+      "z": 14.97488
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-5",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 176.33856,
+      "y": -85.99541,
+      "z": 14.973099
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialSpecialOne.Noun-2",
+      "noun_name": "TutorialSpecialOne.Noun",
+      "section": 1,
+      "x": 294.80383,
+      "y": 142.84398,
+      "z": 25.087357
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-34",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 227.76906,
+      "y": -121.498695,
+      "z": 9.945616
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-32",
+      "noun_name": "TutorialBasicPoison.Noun",
+      "section": 1,
+      "x": 138.74571,
+      "y": 25.075415,
+      "z": 25.087986
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun-6",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 264.0205,
+      "y": 226.89703,
+      "z": 20.088001
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-15",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 183.65517,
+      "y": -82.99968,
+      "z": 14.973253
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicDiseased.Noun-1",
+      "noun_name": "TutorialBasicDiseased.Noun",
+      "section": 1,
+      "x": 88.80134,
+      "y": -67.448944,
+      "z": 14.976368
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicPoison.Noun-4",
+      "noun_name": "TutorialBasicPoisonNoOrbs.Noun",
+      "section": 1,
+      "x": 170.89767,
+      "y": -79.87807,
+      "z": 14.975555
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialBasicRanged.Noun-14",
+      "noun_name": "TutorialBasicRanged.Noun",
+      "section": 1,
+      "x": 268.8671,
+      "y": 108.59303,
+      "z": 25.084816
+    },
+    {
+      "category": "spawn",
+      "label": "M",
+      "name": "TutorialSpecialOne_Intro.Noun",
+      "noun_name": "TutorialSpecialOne_Intro.Noun",
+      "section": 1,
+      "x": 259.34564,
+      "y": 81.391426,
+      "z": 25.08849
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun-2",
+      "noun_name": "TriggerZone.Noun",
+      "section": 2,
+      "x": -349.4592,
+      "y": -223.14235,
+      "z": 10.088047
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun-3",
+      "noun_name": "TriggerZone.Noun",
+      "section": 1,
+      "x": 232.2869,
+      "y": -93.751595,
+      "z": 10.526188
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun-1",
+      "noun_name": "TriggerZone.Noun",
+      "section": 1,
+      "x": 68.63038,
+      "y": -38.059475,
+      "z": 19.973497
+    },
+    {
+      "category": "trigger",
+      "name": "TriggerZone.Noun",
+      "noun_name": "TriggerZone.Noun",
+      "section": 1,
+      "x": 233.6743,
+      "y": -96.281075,
+      "z": 10.150299
+    },
+    {
+      "category": "trigger",
+      "name": "SecondCreature_trigger.Noun-1",
+      "noun_name": "TriggerZone.Noun",
+      "section": 1,
+      "x": 259.34567,
+      "y": 81.39143,
+      "z": 25.088488
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 1,
+      "x": 191.91814,
+      "y": 22.709234,
+      "z": 29.764088
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 2,
+      "x": -353.94858,
+      "y": -192.45534,
+      "z": 10.118168
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_health_obelisk.Noun-1",
+      "noun_name": "prefab_health_obelisk.Noun",
+      "section": 2,
+      "x": -340.43002,
+      "y": -248.87521,
+      "z": 10.118176
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun-1",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 1,
+      "x": 313.6685,
+      "y": 152.12164,
+      "z": 25.087353
+    },
+    {
+      "category": "obelisk",
+      "label": "O",
+      "name": "prefab_boss_obelisk.Noun-2",
+      "noun_name": "prefab_boss_obelisk.Noun",
+      "section": 1,
+      "x": 289.36856,
+      "y": 252.68077,
+      "z": 20.088005
+    }
+  ]
+}

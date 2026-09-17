@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+<head>
+  {{- $pageTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+  {{- $pageDescription := .Site.Params.description -}}
+  {{- with .Description }}{{ $pageDescription = . }}{{ end -}}
+  {{- $socialImage := "og.png" | strings.TrimPrefix "/" | absURL -}}
+  {{- $pageImage := "" -}}
+  {{- if not .IsPage -}}
+    {{- $pageImage = $socialImage -}}
+  {{- else if eq .Section "hero" -}}
+    {{- with index site.Data.generated.hero.family .Params.hero -}}
+      {{- $pageDescription = printf "%s, %s, is a %s %s hero in the restored game archive." .name .title (lower .element) (lower .class) -}}
+      {{- $variant := index .variants (sub (len .variants) 1) -}}
+      {{- $pageImage = $variant.image | strings.TrimPrefix "/" | absURL -}}
+    {{- end -}}
+  {{- end -}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d11">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="{{ $pageDescription }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ $pageTitle }}">
+  <meta property="og:description" content="{{ $pageDescription }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta name="twitter:title" content="{{ $pageTitle }}">
+  <meta name="twitter:description" content="{{ $pageDescription }}">
+  {{- if $pageImage }}
+  <meta property="og:image" content="{{ $pageImage }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ $pageImage }}">
+  {{- else }}
+  <meta name="twitter:card" content="summary">
+  {{- end }}
+  <title>{{ $pageTitle }}</title>
+  <style>html,body{min-height:100%;margin:0;background:#090c10;color:#e9edf1;color-scheme:dark}</style>
+  {{- $css := resources.FromString "css/main.bundle.css" (readFile "static/css/main.css") | fingerprint -}}
+  {{- $js := resources.FromString "js/main.bundle.js" (readFile "static/js/main.js") | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX64NN2S2N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NX64NN2S2N');
+  </script>
+</head>
+<body id="top" data-section="{{ .Section }}" data-base-url="{{ "" | relURL }}">
+  <a class="skip-link" href="#main">Skip to archive</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="{{ "/" | strings.TrimPrefix "/" | relURL }}" aria-label="Darkspin Archive home">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span><strong>DARKSPIN</strong><small>SERVER PROJECT</small></span>
+      </a>
+      <div class="global-search">
+        <label><span aria-hidden="true">⌕</span><input type="search" placeholder="Search hero, level, enemy, item, ability, term…" aria-label="Search all archive records" autocomplete="off" data-global-search="{{ "/data/search/index.json" | strings.TrimPrefix "/" | relURL }}"></label>
+        <div class="global-search-result" data-global-result hidden></div>
+      </div>
+      <div class="system-state"><span></span> DATABASE ONLINE</div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="side-nav" aria-label="Archive navigation">
+        <p>ARCHIVE</p>
+        <a href="{{ "/" | strings.TrimPrefix "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><i>OV</i><span>Overview</span></a>
+        <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "hero" }} aria-current="page"{{ end }}><i>HR</i><span>Hero matrix</span><b>{{ site.Data.generated.hero.family_count }}</b></a>
+        <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i>LV</i><span>Level report</span><b>{{ site.Data.generated.level.group_count }}</b></a>
+        <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "npc" }} aria-current="page"{{ end }}><i>EN</i><span>Enemy glossary</span><b>{{ site.Data.generated.npc.entry_count }}</b></a>
+        <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "item" }} aria-current="page"{{ end }}><i>IT</i><span>Item archive</span><b>{{ site.Data.generated.item.count }}</b></a>
+        <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i>SY</i><span>Game systems</span><b>{{ site.Data.generated.system.report_count }}</b></a>
+        <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "ability" }} aria-current="page"{{ end }}><i>AB</i><span>Ability archive</span><b>{{ site.Data.generated.ability.count }}</b></a>
+        <a href="{{ "/buff/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "buff" }} aria-current="page"{{ end }}><i>BF</i><span>Buffs</span><b>{{ site.Data.generated.buff.count }}</b></a>
+        <a href="{{ "/effect/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "effect" }} aria-current="page"{{ end }}><i>FX</i><span>Effects</span><b>{{ site.Data.generated.effect.count }}</b></a>
+        <a href="{{ "/glossary/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "glossary" }} aria-current="page"{{ end }}><i>GL</i><span>Glossary</span><b>{{ site.Data.generated.glossary.count }}</b></a>
+      </nav>
+      <div class="sidebar-meta">
+        <span>CONTENT SOURCE</span>
+        <b>content.db</b>
+        <small>DBPF / SQLite<br>local immutable cache</small>
+      </div>
+    </aside>
+
+    <main class="workspace" id="main">
+      {{ block "main" . }}{{ end }}
+      <footer class="workspace-footer"><span>DARKSPIN RESEARCH NODE</span><span>LOCAL CONTENT ARCHIVE</span><span>BUILD {{ now.Format "2006.01.02" }}</span></footer>
+    </main>
+  </div>
+</body>
+</html>

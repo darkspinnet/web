@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{ $hero := index site.Data.generated.hero.family .Params.hero }}
+{{ $abilityEntry := site.Data.generated.ability.entry }}
+{{ $heroAbility := dict }}{{ range $hero.variants }}{{ range .abilities }}{{ with index $abilityEntry .slug }}{{ $heroAbility = merge $heroAbility (dict .slug .) }}{{ end }}{{ end }}{{ end }}
+{{ $canonical := index $hero.variants (sub (len $hero.variants) 1) }}
+{{ $baseline := index $hero.variants 0 }}
+{{ $baselineAbility := dict }}{{ range $baseline.abilities }}{{ if eq .slot "random" }}{{ $baselineAbility = . }}{{ end }}{{ end }}
+
+<header class="hero-detail-heading"><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}">HERO MATRIX</a> // {{ upper $hero.name }}</p></header>
+
+<section class="hero-game-card element-{{ $hero.element | lower }}" data-hero-configurator data-baseline="{{ lower $baseline.variant }}">
+  <div class="hero-game-sticky">
+    <header class="hero-game-header">
+      <div class="hero-game-portrait-wrap">
+        <button class="hero-canonical-portrait" type="button" aria-label="Preview enlarged {{ $hero.name }} portrait"><img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="{{ $hero.name }} canonical portrait" width="180" height="180"><span>{{ upper $canonical.variant }}</span></button>
+        <div class="hero-portrait-preview" aria-hidden="true"><img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="" width="300" height="300">{{ $opening := index (split $hero.biography "\n") 0 }}<p>{{ $opening }}</p></div>
+      </div>
+      <div class="hero-game-identity">
+        <div><strong>{{ upper $hero.name }}</strong><sup data-hero-active-variant>{{ upper $baseline.variant }}</sup></div>
+        <h2>{{ upper $hero.title }}</h2>
+        <p><span>{{ $hero.element }}</span><i>◆</i><span>{{ $hero.class }}</span></p>
+      </div>
+      <div class="hero-game-profile-state"><span>ACTIVE PROFILE</span><strong data-hero-active-metric>{{ upper $baseline.variant }}</strong><code data-hero-active-id>ID {{ $baseline.id }}</code></div>
+    </header>
+
+    <nav class="hero-profile-tabs" aria-label="Hero variant profile">
+      {{ range $hero.variants }}<button type="button" data-hero-variant="{{ lower .variant }}"{{ if eq .variant $baseline.variant }} class="is-active"{{ end }}>{{ upper .variant }}</button>{{ end }}
+    </nav>
+  </div>
+
+  <div class="hero-game-body">
+    <section class="hero-game-abilities">
+      <header class="hero-game-section-head"><div><span>01</span><h2>Ability loadout</h2></div><small>SELECT AN ABILITY FOR FULL DATA</small></header>
+      <ul class="hero-profile-ability" data-hero-ability>{{ range $baseline.abilities }}{{ $record := index $abilityEntry .slug }}<li><b>{{ replace .slot "_" " " | upper }}</b><a href="{{ printf "/ability/%s/" .slug | strings.TrimPrefix "/" | relURL }}">{{ with $record.icon_path }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" width="48" height="48" loading="lazy" decoding="async">{{ end }}<span><strong>{{ with $record }}{{ .name }}{{ else }}{{ .name }}{{ end }}</strong>{{ with $record.description }}<small>{{ . | plainify | truncate 128 }}</small>{{ end }}</span></a></li>{{ end }}</ul>
+      <div class="hero-variant-ability"><span>VARIANT ABILITY</span>{{ with $baselineAbility }}<a href="{{ printf "/ability/%s/" .slug | strings.TrimPrefix "/" | relURL }}" data-hero-variant-ability>{{ .name }}</a>{{ else }}<a data-hero-variant-ability>UNRESOLVED</a>{{ end }}<small>OPEN RECORD →</small></div>
+      <details class="hero-game-lore">
+        <summary>FIELD DOSSIER <span>READ BIOGRAPHY</span></summary>
+        <div class="hero-biography">{{ range split $hero.biography "\n" }}{{ if strings.TrimSpace . }}<p>{{ . }}</p>{{ end }}{{ end }}</div>
+      </details>
+    </section>
+
+    <aside class="hero-game-telemetry">
+      <section class="hero-slot-panel">
+        <div class="hero-slot-group"><div class="hero-slot-row"><i>◉</i><i>⌁</i><i>◆</i></div><strong>ITEM SLOTS</strong></div>
+        <div class="hero-slot-group"><div class="hero-slot-row"><i>◌</i><i>◌</i><i>◌</i></div><strong>DETAIL SLOTS</strong></div>
+      </section>
+
+      <section class="hero-stat-panel">
+        <header><div><span>BASE STATS</span><h2 data-hero-active-name>{{ $baseline.name }}</h2></div><small>UNEQUIPPED / BUILD 103</small></header>
+        <div class="hero-stat-block is-primary">
+          <div><span>Health</span><strong data-hero-stat="health">{{ printf "%.0f" $baseline.stats.health }}</strong><i data-hero-stat-delta="health">BASELINE</i></div>
+          <div><span>Power</span><strong data-hero-stat="power">{{ printf "%.0f" $baseline.stats.power }}</strong><i data-hero-stat-delta="power">BASELINE</i></div>
+        </div>
+        <div class="hero-stat-block">
+          <div><span>Strength</span><strong data-hero-stat="strength">{{ printf "%.0f" $baseline.stats.strength }}</strong><i data-hero-stat-delta="strength">BASELINE</i></div>
+          <div><span>Dexterity</span><strong data-hero-stat="dexterity">{{ printf "%.0f" $baseline.stats.dexterity }}</strong><i data-hero-stat-delta="dexterity">BASELINE</i></div>
+          <div><span>Mind</span><strong data-hero-stat="mind">{{ printf "%.0f" $baseline.stats.mind }}</strong><i data-hero-stat-delta="mind">BASELINE</i></div>
+        </div>
+        <div class="hero-stat-block">
+          <div><span>Critical Rating</span><strong data-hero-stat="critical_rating">{{ printf "%.0f" $baseline.stats.critical_rating }}</strong><i data-hero-stat-delta="critical_rating">BASELINE</i></div>
+          <div><span>Resist Rating</span><strong data-hero-stat="resist_rating">{{ printf "%.0f" $baseline.stats.resist_rating }}</strong><i data-hero-stat-delta="resist_rating">BASELINE</i></div>
+          <div><span>Dodge Rating</span><strong data-hero-stat="dodge_rating">{{ printf "%.0f" $baseline.stats.dodge_rating }}</strong><i data-hero-stat-delta="dodge_rating">BASELINE</i></div>
+        </div>
+        <dl class="hero-profile-flags">
+          <div><dt>Crogenitor level</dt><dd><span data-hero-unlock>{{ $baseline.unlock_level }}</span> <small data-hero-unlock-delta>BASELINE</small></dd></div>
+          <div><dt>Weapon damage</dt><dd><b data-hero-min>{{ printf "%.0f" $baseline.weapon_min_damage }}</b>–<b data-hero-max>{{ printf "%.0f" $baseline.weapon_max_damage }}</b></dd></div>
+          <div hidden><dt>Damage delta</dt><dd><b data-hero-min-delta>BASELINE</b> / <b data-hero-max-delta>BASELINE</b></dd></div>
+          <div><dt>Ability records</dt><dd><span data-hero-ability-count>{{ len $baseline.abilities }}</span> <small data-hero-ability-delta>BASELINE</small></dd></div>
+          <div><dt>Hand slot</dt><dd data-hero-hand>{{ if $baseline.is_hand_present }}AVAILABLE{{ else }}LOCKED{{ end }}</dd></div>
+          <div><dt>Foot slot</dt><dd data-hero-foot>{{ if $baseline.is_foot_present }}AVAILABLE{{ else }}LOCKED{{ end }}</dd></div>
+          <div><dt>Locale record</dt><dd><code data-hero-locale>{{ $baseline.name_locale_key }}</code></dd></div>
+        </dl>
+      </section>
+      <code class="hero-profile-fragment" data-hero-fragment>#variant={{ lower $baseline.variant }}</code>
+    </aside>
+  </div>
+</section>
+<script type="application/json" data-hero-profile-data>{{ $hero.variants | jsonify | safeJS }}</script>
+<script type="application/json" data-hero-ability-data>{{ $heroAbility | jsonify | safeJS }}</script>
+{{ end }}

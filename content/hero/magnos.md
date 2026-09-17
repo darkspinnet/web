@@ -1,0 +1,4 @@
++++
+title = "Magnos"
+hero = "magnos"
++++

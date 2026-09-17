@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.system }}
+<header class="page-hero system-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // RUNTIME REFERENCE</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.report_count }}</strong><span>LIVE RULE<br>REPORTS</span></div>
+</header>
+
+<section class="system-card-grid" aria-label="Server rule reports">
+  <a class="system-card" href="{{ "/system/drops/" | strings.TrimPrefix "/" | relURL }}">
+    <span>DROP MODEL // {{ $data.drops.rule_count }} ROLLS</span><strong>Loot probabilities</strong>
+    <p>Enemy equipment rarity, capsule, catalyst, and DNA rolls with runtime conditions.</p><i>DR →</i>
+  </a>
+  <a class="system-card" href="{{ "/system/progression/" | strings.TrimPrefix "/" | relURL }}">
+    <span>PROGRESSION // {{ $data.progression.level_count }} LEVELS</span><strong>XP table</strong>
+    <p>The complete Crogenitor level curve, per-level deltas, and hero milestones.</p><i>XP →</i>
+  </a>
+  <a class="system-card" href="{{ "/system/level-unlocks/" | strings.TrimPrefix "/" | relURL }}">
+    <span>LEVEL GUIDE // {{ (index site.Data.generated "upgrade-unlocks").unlock_count }} UPGRADES</span><strong>Level unlocks</strong>
+    <p>Crogenitor requirements for account upgrades and hero eligibility, including DNA costs and resulting capacities.</p><i>LU →</i>
+  </a>
+  <a class="system-card" href="{{ "/system/rewards/" | strings.TrimPrefix "/" | relURL }}">
+    <span>REWARD MODEL // {{ $data.rewards.maximum_part_count }} PART CAP</span><strong>Cash Out rewards</strong>
+    <p>Part counts, item levels, medal-weighted rarity bands, and reward boundaries.</p><i>RW →</i>
+  </a>
+  <a class="system-card" href="{{ "/system/objectives/" | strings.TrimPrefix "/" | relURL }}">
+    <span>OBJECTIVE MODEL // 5 ACTIVE</span><strong>Objectives & medals</strong>
+    <p>Clear-map counting, medal thresholds, fast-clear timing, persistence boundaries, and co-op scoring.</p><i>OB →</i>
+  </a>
+</section>
+
+<section class="console-panel system-method-panel">
+  <header><div><span>06</span><h2>Publication boundary</h2></div><small>SOURCE-DERIVED</small></header>
+  <div class="system-method-copy">
+    <p>The archive generator reads named runtime operands from the Darkspin source tree, evaluates public server decisions, and refuses to publish if the expected source shape changes.</p>
+    <p>These pages describe the current local server policy. Re-running <code>mage system</code> refreshes every table after server-side tuning changes.</p>
+  </div>
+</section>
+{{ end }}

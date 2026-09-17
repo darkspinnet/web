@@ -1,0 +1,397 @@
+{
+  "selection": "1-1",
+  "level": "zelems_1",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 5,
+    "bounds_min": {
+      "X": -637.875,
+      "Y": 538.4251,
+      "Z": 0.5750153
+    },
+    "bounds_max": {
+      "X": -504.52496,
+      "Y": 671.9252,
+      "Z": 0.5750153
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 3.3558037,
+    "offset_x": 32.251724,
+    "offset_y": 32
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "teleporter",
+      "name": "SecurityTeleporter.Noun-4",
+      "noun_name": "SecurityTeleporter.Noun",
+      "section": 5,
+      "x": -543.576,
+      "y": 546.1642,
+      "z": 0.158057
+    },
+    {
+      "category": "teleporter",
+      "name": "SecurityTeleporter.Noun-3",
+      "noun_name": "SecurityTeleporter.Noun",
+      "section": 5,
+      "x": -625.0099,
+      "y": 655.0704,
+      "z": 0.135831
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-857063341",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 5,
+      "x": -621.0203,
+      "y": 650.617,
+      "z": 0.604246
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-403168945",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 5,
+      "x": -541.5687,
+      "y": 553.55347,
+      "z": 0.13418
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-92",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -551.0074,
+      "y": 568.711,
+      "z": 0.134193
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-93",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -528.08356,
+      "y": 563.62683,
+      "z": 0.134193
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-94",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -533.75616,
+      "y": 552.58,
+      "z": 0.134163
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-95",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -546.3379,
+      "y": 562.4782,
+      "z": 0.134186
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-96",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -520.8879,
+      "y": 566.65295,
+      "z": 0.134178
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-97",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -533.9558,
+      "y": 564.2988,
+      "z": 0.134117
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-98",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -623.68567,
+      "y": 634.29895,
+      "z": 0.70343
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-103",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -600.6136,
+      "y": 621.57135,
+      "z": 0.300277
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-104",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -594.3267,
+      "y": 638.9233,
+      "z": 0.262649
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-105",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -605.8868,
+      "y": 628.3135,
+      "z": 0.657245
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-106",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -603.0376,
+      "y": 635.1227,
+      "z": 0.53183
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-249",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -536.97015,
+      "y": 557.98267,
+      "z": 0.134178
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-245",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -596.8819,
+      "y": 630.08734,
+      "z": 0.298675
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-246",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -540.8679,
+      "y": 565.28534,
+      "z": 0.134201
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-247",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -545.5623,
+      "y": 556.97974,
+      "z": 0.134186
+    },
+    {
+      "category": "spawn",
+      "label": "W",
+      "name": "SpawnPoint_DirectorWanderer.Noun-248",
+      "noun_name": "SpawnPoint_DirectorWanderer.Noun",
+      "section": 5,
+      "x": -528.8528,
+      "y": 571.2648,
+      "z": 0.134193
+    },
+    {
+      "category": "spawn",
+      "label": "L",
+      "name": "SpawnPoint_DirectorSpike.Noun-11",
+      "noun_name": "SpawnPoint_DirectorSpike.Noun",
+      "section": 5,
+      "x": -539.7283,
+      "y": 561.3768,
+      "z": 0.134186
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "TestDoor_design_blockin_horde_open.Noun-5",
+      "noun_name": "TestDoor_design_blockin_horde_open.Noun",
+      "section": 5,
+      "x": -549.89575,
+      "y": 551.2089,
+      "z": 0.136928
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "TestDoor_design_blockin_horde_open.Noun-8",
+      "noun_name": "TestDoor_design_blockin_horde_open.Noun",
+      "section": 5,
+      "x": -538.70386,
+      "y": 547.35846,
+      "z": 0.224308
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "TestDoor_design_blockin_horde_open.Noun-3",
+      "noun_name": "TestDoor_design_blockin_horde_open.Noun",
+      "section": 5,
+      "x": -541.9044,
+      "y": 584.85297,
+      "z": 1.029364
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 5,
+      "x": -525.2462,
+      "y": 561.1359,
+      "z": 0.134182
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-7",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 5,
+      "x": -544.646,
+      "y": 568.921,
+      "z": 0.134182
+    },
+    {
+      "category": "teleporter",
+      "name": "HordeGateTeleporter.Noun-5",
+      "noun_name": "HordeGateTeleporter.Noun",
+      "section": 5,
+      "x": -540.54016,
+      "y": 546.49524,
+      "z": 0.13418
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-2",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 5,
+      "x": -538.4607,
+      "y": 563.75714,
+      "z": 0.088543
+    },
+    {
+      "category": "teleporter",
+      "name": "HordeGateTeleporter.Noun-3",
+      "noun_name": "HordeGateTeleporter.Noun",
+      "section": 5,
+      "x": -541.76514,
+      "y": 587.6254,
+      "z": -0.159801
+    },
+    {
+      "category": "teleporter",
+      "name": "HordeGateTeleporter.Noun-4",
+      "noun_name": "HordeGateTeleporter.Noun",
+      "section": 5,
+      "x": -549.4912,
+      "y": 548.9866,
+      "z": 0.134176
+    },
+    {
+      "category": "trigger",
+      "name": "SpawnPoint_HordeTrigger.Noun-2",
+      "noun_name": "SpawnPoint_HordeTrigger.Noun",
+      "section": 5,
+      "x": -533.6099,
+      "y": 561.4774,
+      "z": 0.134186
+    },
+    {
+      "category": "teleporter-route",
+      "label": "T3B",
+      "name": "teleporter_3_destination",
+      "section": 5,
+      "x": -621.0203,
+      "y": 650.617,
+      "z": 0.6042
+    },
+    {
+      "category": "teleporter-route",
+      "label": "T4A",
+      "name": "teleporter_4_source",
+      "section": 5,
+      "x": -625.0099,
+      "y": 655.0704,
+      "z": 0.1358
+    },
+    {
+      "category": "teleporter-route",
+      "label": "T5A",
+      "name": "teleporter_5_source",
+      "section": 5,
+      "x": -543.576,
+      "y": 546.1642,
+      "z": 0.1581
+    },
+    {
+      "category": "teleporter-route",
+      "label": "T6B",
+      "name": "teleporter_6_destination",
+      "section": 5,
+      "x": -541.5687,
+      "y": 553.5535,
+      "z": 0.1342
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "selection": "2-4",
+  "level": "zelems_4",
+  "map": {
+    "plan_layer": 0,
+    "component_id": 7,
+    "bounds_min": {
+      "X": 1715.0251,
+      "Y": 3565.4246,
+      "Z": 45.57505
+    },
+    "bounds_max": {
+      "X": 1740.9753,
+      "Y": 3592.425,
+      "Z": 45.57505
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 16.592293,
+    "offset_x": 40.71338,
+    "offset_y": 32
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "markers": [
+    {
+      "category": "teleporter",
+      "name": "SecurityTeleporter.Noun-3",
+      "noun_name": "SecurityTeleporter.Noun",
+      "section": 7,
+      "x": 1721.4965,
+      "y": 3577.2847,
+      "z": 45.29271
+    },
+    {
+      "category": "teleporter",
+      "name": "TeleporterSpawnPoint.Noun-9",
+      "noun_name": "TeleporterSpawnPoint.Noun",
+      "section": 7,
+      "x": 1727.2345,
+      "y": 3579.2454,
+      "z": 45.088005
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-10",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 7,
+      "x": 1732.6084,
+      "y": 3566.1392,
+      "z": 45.138
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-29",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 7,
+      "x": 1716.4596,
+      "y": 3584.5715,
+      "z": 45.137993
+    },
+    {
+      "category": "stationary",
+      "label": "S",
+      "name": "DEST_prefab_islands_instrument_scitech_11.Noun-63",
+      "noun_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+      "section": 7,
+      "x": 1736.7012,
+      "y": 3587.2217,
+      "z": 45.137997
+    }
+  ]
+}

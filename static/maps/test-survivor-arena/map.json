@@ -1,0 +1,1372 @@
+{
+  "selection": "test_survivor_arena",
+  "level": "test_survivor_arena",
+  "map": {
+    "plan_layer": 0,
+    "bounds_min": {
+      "X": -642.22485,
+      "Y": -162.67459,
+      "Z": -4.524973
+    },
+    "bounds_max": {
+      "X": 980.3251,
+      "Y": 749.17505,
+      "Z": 33.575047
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 0.2761086,
+    "offset_x": 32.000015,
+    "offset_y": 130.11523
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "sections": [
+    {
+      "component_id": 1,
+      "image": "map-section-01.webp",
+      "metadata": "map-section-01.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 1,
+        "bounds_min": {
+          "X": 506.625,
+          "Y": -80.77462,
+          "Z": 0.47059065
+        },
+        "bounds_max": {
+          "X": 675.375,
+          "Y": 69.374985,
+          "Z": 33.575047
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 2.6548147,
+        "offset_x": 32.000015,
+        "offset_y": 56.690323
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 2,
+      "image": "map-section-02.webp",
+      "metadata": "map-section-02.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 2,
+        "bounds_min": {
+          "X": -203.925,
+          "Y": -162.67459,
+          "Z": 0.4250275
+        },
+        "bounds_max": {
+          "X": -113.775406,
+          "Y": 90.22499,
+          "Z": 10.713475
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 1.7714541,
+        "offset_x": 176.15207,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 3,
+      "image": "map-section-03.webp",
+      "metadata": "map-section-03.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 3,
+        "bounds_min": {
+          "X": 110.625,
+          "Y": 551.32495,
+          "Z": 0.41425467
+        },
+        "bounds_max": {
+          "X": 283.27502,
+          "Y": 749.17505,
+          "Z": 10.758836
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 2.2643406,
+        "offset_x": 60.53076,
+        "offset_y": 31.999985
+      },
+      "marker_count": 5
+    },
+    {
+      "component_id": 4,
+      "image": "map-section-04.webp",
+      "metadata": "map-section-04.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 4,
+        "bounds_min": {
+          "X": 903.52515,
+          "Y": 613.42505,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 980.3251,
+          "Y": 733.1251,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 3.7426877,
+        "offset_x": 112.28093,
+        "offset_y": 32
+      },
+      "marker_count": 4
+    },
+    {
+      "component_id": 5,
+      "image": "map-section-05.webp",
+      "metadata": "map-section-05.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 5,
+        "bounds_min": {
+          "X": -637.875,
+          "Y": 537.075,
+          "Z": -4.524973
+        },
+        "bounds_max": {
+          "X": -503.02496,
+          "Y": 675.2251,
+          "Z": 0.7270961
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 3.24285,
+        "offset_x": 37.35077,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 6,
+      "image": "map-section-06.webp",
+      "metadata": "map-section-06.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 6,
+        "bounds_min": {
+          "X": 922.7251,
+          "Y": 706.875,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 940.27515,
+          "Y": 724.4252,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 25.526817,
+        "offset_x": 32.001556,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 7,
+      "image": "map-section-07.webp",
+      "metadata": "map-section-07.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 7,
+        "bounds_min": {
+          "X": 943.875,
+          "Y": 622.5751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 961.275,
+          "Y": 639.9751,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 25.74709,
+        "offset_x": 32.000015,
+        "offset_y": 32.000015
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 8,
+      "image": "map-section-08.webp",
+      "metadata": "map-section-08.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 8,
+        "bounds_min": {
+          "X": 913.8751,
+          "Y": 684.0751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 923.6251,
+          "Y": 693.67505,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 45.94872,
+        "offset_x": 32,
+        "offset_y": 35.446716
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 9,
+      "image": "map-section-09.webp",
+      "metadata": "map-section-09.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 9,
+        "bounds_min": {
+          "X": 924.9751,
+          "Y": 641.3251,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 934.125,
+          "Y": 650.475,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 48.962273,
+        "offset_x": 32,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 10,
+      "image": "map-section-10.webp",
+      "metadata": "map-section-10.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 10,
+        "bounds_min": {
+          "X": -638.0249,
+          "Y": 643.125,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -628.57495,
+          "Y": 660.525,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 25.74709,
+        "offset_x": 134.34564,
+        "offset_y": 32.000015
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 11,
+      "image": "map-section-11.webp",
+      "metadata": "map-section-11.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 11,
+        "bounds_min": {
+          "X": -525.67505,
+          "Y": 576.6751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -521.1749,
+          "Y": 581.1751,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55286,
+        "offset_x": 32,
+        "offset_y": 32.006073
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 12,
+      "image": "map-section-12.webp",
+      "metadata": "map-section-12.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 12,
+        "bounds_min": {
+          "X": -526.725,
+          "Y": 551.47504,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -522.225,
+          "Y": 555.97504,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55556,
+        "offset_x": 32,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 13,
+      "image": "map-section-13.webp",
+      "metadata": "map-section-13.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 13,
+        "bounds_min": {
+          "X": -556.57495,
+          "Y": 557.62506,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -552.0751,
+          "Y": 562.12506,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55556,
+        "offset_x": 32.006073,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 14,
+      "image": "map-section-14.webp",
+      "metadata": "map-section-14.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 14,
+        "bounds_min": {
+          "X": -612.67505,
+          "Y": 617.77515,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -608.17505,
+          "Y": 622.275,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55556,
+        "offset_x": 32,
+        "offset_y": 32.006073
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 15,
+      "image": "map-section-15.webp",
+      "metadata": "map-section-15.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 15,
+        "bounds_min": {
+          "X": -603.975,
+          "Y": 643.125,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -599.4751,
+          "Y": 647.6251,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55286,
+        "offset_x": 32.012146,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 16,
+      "image": "map-section-16.webp",
+      "metadata": "map-section-16.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 16,
+        "bounds_min": {
+          "X": -631.4249,
+          "Y": 632.32495,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -627.07495,
+          "Y": 636.8251,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 99.55286,
+        "offset_x": 39.473755,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 17,
+      "image": "map-section-17.webp",
+      "metadata": "map-section-17.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 17,
+        "bounds_min": {
+          "X": 558.8251,
+          "Y": -28.275015,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": 562.42505,
+          "Y": -22.725012,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 80.72067,
+        "offset_x": 110.70378,
+        "offset_y": 32.000015
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 18,
+      "image": "map-section-18.webp",
+      "metadata": "map-section-18.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 18,
+        "bounds_min": {
+          "X": 557.92505,
+          "Y": 47.024994,
+          "Z": 33.575035
+        },
+        "bounds_max": {
+          "X": 562.875,
+          "Y": 50.47499,
+          "Z": 33.575035
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 90.50594,
+        "offset_x": 32,
+        "offset_y": 99.87738
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 19,
+      "image": "map-section-19.webp",
+      "metadata": "map-section-19.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 19,
+        "bounds_min": {
+          "X": -164.62502,
+          "Y": 33.674984,
+          "Z": 0.4250275
+        },
+        "bounds_max": {
+          "X": -161.02501,
+          "Y": 36.674988,
+          "Z": 0.4250275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 124.44424,
+        "offset_x": 32,
+        "offset_y": 69.333405
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 20,
+      "image": "map-section-20.webp",
+      "metadata": "map-section-20.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 20,
+        "bounds_min": {
+          "X": 542.02515,
+          "Y": 29.17499,
+          "Z": 5.5250273
+        },
+        "bounds_max": {
+          "X": 545.6251,
+          "Y": 32.02499,
+          "Z": 5.5250273
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 124.44529,
+        "offset_x": 32,
+        "offset_y": 78.665436
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 21,
+      "image": "map-section-21.webp",
+      "metadata": "map-section-21.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 21,
+        "bounds_min": {
+          "X": -129.82504,
+          "Y": -45.375015,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -127.125015,
+          "Y": -41.92502,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 129.8552,
+        "offset_x": 80.69371,
+        "offset_y": 31.999985
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 22,
+      "image": "map-section-22.webp",
+      "metadata": "map-section-22.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 22,
+        "bounds_min": {
+          "X": -184.27501,
+          "Y": -46.275017,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -181.57503,
+          "Y": -43.275017,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 149.33333,
+        "offset_x": 54.401367,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 23,
+      "image": "map-section-23.webp",
+      "metadata": "map-section-23.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 23,
+        "bounds_min": {
+          "X": -176.77501,
+          "Y": -77.47502,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -174.075,
+          "Y": -74.625015,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 157.19264,
+        "offset_x": 43.78897,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 24,
+      "image": "map-section-24.webp",
+      "metadata": "map-section-24.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 24,
+        "bounds_min": {
+          "X": -166.12502,
+          "Y": 56.47499,
+          "Z": 0.4250275
+        },
+        "bounds_max": {
+          "X": -162.97502,
+          "Y": 58.274994,
+          "Z": 0.4250275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 142.2225,
+        "offset_x": 31.999985,
+        "offset_y": 127.99953
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 25,
+      "image": "map-section-25.webp",
+      "metadata": "map-section-25.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 25,
+        "bounds_min": {
+          "X": 636.225,
+          "Y": -37.42501,
+          "Z": 20.525026
+        },
+        "bounds_max": {
+          "X": 638.17505,
+          "Y": -34.275017,
+          "Z": 20.525026
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 142.2225,
+        "offset_x": 117.32785,
+        "offset_y": 31.999985
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 26,
+      "image": "map-section-26.webp",
+      "metadata": "map-section-26.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 26,
+        "bounds_min": {
+          "X": 642.67505,
+          "Y": -1.1250116,
+          "Z": 15.575028
+        },
+        "bounds_max": {
+          "X": 645.82495,
+          "Y": 0.8249884,
+          "Z": 15.575028
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 142.22664,
+        "offset_x": 31.999985,
+        "offset_y": 117.329025
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 27,
+      "image": "map-section-27.webp",
+      "metadata": "map-section-27.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 27,
+        "bounds_min": {
+          "X": 657.9751,
+          "Y": -47.475014,
+          "Z": 20.525026
+        },
+        "bounds_max": {
+          "X": 661.125,
+          "Y": -45.525017,
+          "Z": 20.525026
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 142.22664,
+        "offset_x": 31.999985,
+        "offset_y": 117.32924
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 28,
+      "image": "map-section-28.webp",
+      "metadata": "map-section-28.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 28,
+        "bounds_min": {
+          "X": 600.3751,
+          "Y": 26.92499,
+          "Z": 10.625028
+        },
+        "bounds_max": {
+          "X": 602.4751,
+          "Y": 29.924986,
+          "Z": 10.625028
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 149.33353,
+        "offset_x": 99.201614,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 29,
+      "image": "map-section-29.webp",
+      "metadata": "map-section-29.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 29,
+        "bounds_min": {
+          "X": 600.9751,
+          "Y": -8.175013,
+          "Z": 10.625028
+        },
+        "bounds_max": {
+          "X": 603.9751,
+          "Y": -6.225012,
+          "Z": 10.625028
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 149.33333,
+        "offset_x": 32,
+        "offset_y": 110.39995
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 30,
+      "image": "map-section-30.webp",
+      "metadata": "map-section-30.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 30,
+        "bounds_min": {
+          "X": 561.3751,
+          "Y": 22.12499,
+          "Z": 5.5250273
+        },
+        "bounds_max": {
+          "X": 562.5751,
+          "Y": 25.274988,
+          "Z": 5.5250273
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 142.22232,
+        "offset_x": 170.67007,
+        "offset_y": 32.000015
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 31,
+      "image": "map-section-31.webp",
+      "metadata": "map-section-31.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 31,
+        "bounds_min": {
+          "X": -623.0249,
+          "Y": 670.5751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -621.375,
+          "Y": 672.67505,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 213.33582,
+        "offset_x": 80.00836,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 32,
+      "image": "map-section-32.webp",
+      "metadata": "map-section-32.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 32,
+        "bounds_min": {
+          "X": -642.22485,
+          "Y": 631.57495,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -640.275,
+          "Y": 633.82495,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 199.11111,
+        "offset_x": 61.883682,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 33,
+      "image": "map-section-33.webp",
+      "metadata": "map-section-33.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 33,
+        "bounds_min": {
+          "X": 522.525,
+          "Y": 13.574988,
+          "Z": 33.575035
+        },
+        "bounds_max": {
+          "X": 523.725,
+          "Y": 15.824989,
+          "Z": 33.575035
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 199.11102,
+        "offset_x": 136.53824,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 34,
+      "image": "map-section-34.webp",
+      "metadata": "map-section-34.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 34,
+        "bounds_min": {
+          "X": -625.875,
+          "Y": 665.3251,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -624.3749,
+          "Y": 667.275,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 229.74934,
+        "offset_x": 83.673965,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 35,
+      "image": "map-section-35.webp",
+      "metadata": "map-section-35.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 35,
+        "bounds_min": {
+          "X": -623.32495,
+          "Y": 665.92505,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -621.82495,
+          "Y": 667.875,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 229.74934,
+        "offset_x": 83.68799,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 36,
+      "image": "map-section-36.webp",
+      "metadata": "map-section-36.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 36,
+        "bounds_min": {
+          "X": 517.8751,
+          "Y": -22.425013,
+          "Z": 33.575035
+        },
+        "bounds_max": {
+          "X": 519.0751,
+          "Y": -20.475012,
+          "Z": 33.575035
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 229.7435,
+        "offset_x": 118.159515,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 37,
+      "image": "map-section-37.webp",
+      "metadata": "map-section-37.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 37,
+        "bounds_min": {
+          "X": -627.07495,
+          "Y": 663.0751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -624.82495,
+          "Y": 664.275,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 199.11111,
+        "offset_x": 32,
+        "offset_y": 136.5382
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 38,
+      "image": "map-section-38.webp",
+      "metadata": "map-section-38.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 38,
+        "bounds_min": {
+          "X": 552.9751,
+          "Y": 24.974989,
+          "Z": 33.575035
+        },
+        "bounds_max": {
+          "X": 554.02515,
+          "Y": 27.37499,
+          "Z": 33.575035
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 186.66655,
+        "offset_x": 157.99551,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 39,
+      "image": "map-section-39.webp",
+      "metadata": "map-section-39.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 39,
+        "bounds_min": {
+          "X": 584.9252,
+          "Y": 37.274986,
+          "Z": 33.575035
+        },
+        "bounds_max": {
+          "X": 587.02515,
+          "Y": 38.024986,
+          "Z": 33.575035
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 213.33582,
+        "offset_x": 32,
+        "offset_y": 175.99907
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 40,
+      "image": "map-section-40.webp",
+      "metadata": "map-section-40.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 40,
+        "bounds_min": {
+          "X": -638.7749,
+          "Y": 636.9751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -635.9249,
+          "Y": 638.36993,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 157.19434,
+        "offset_x": 31.999985,
+        "offset_y": 146.36981
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 41,
+      "image": "map-section-41.webp",
+      "metadata": "map-section-41.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 41,
+        "bounds_min": {
+          "X": -636.3749,
+          "Y": 634.125,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -635.32495,
+          "Y": 635.775,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 271.51114,
+        "offset_x": 113.4666,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 42,
+      "image": "map-section-42.webp",
+      "metadata": "map-section-42.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 42,
+        "bounds_min": {
+          "X": -638.7749,
+          "Y": 633.6749,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -637.725,
+          "Y": 634.5751,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 426.69644,
+        "offset_x": 32,
+        "offset_y": 63.955353
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 43,
+      "image": "map-section-43.webp",
+      "metadata": "map-section-43.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 43,
+        "bounds_min": {
+          "X": -636.6749,
+          "Y": 639.0751,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -635.1749,
+          "Y": 640.125,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 298.66666,
+        "offset_x": 32,
+        "offset_y": 99.21094
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 44,
+      "image": "map-section-44.webp",
+      "metadata": "map-section-44.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 44,
+        "bounds_min": {
+          "X": -639.375,
+          "Y": 639.8251,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -636.82495,
+          "Y": 640.725,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 175.6829,
+        "offset_x": 32,
+        "offset_y": 176.95126
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 45,
+      "image": "map-section-45.webp",
+      "metadata": "map-section-45.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 45,
+        "bounds_min": {
+          "X": -638.7749,
+          "Y": 631.57495,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -638.1749,
+          "Y": 632.025,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 746.697,
+        "offset_x": 32.000015,
+        "offset_y": 87.96582
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 46,
+      "image": "map-section-46.webp",
+      "metadata": "map-section-46.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 46,
+        "bounds_min": {
+          "X": -623.9249,
+          "Y": 669.37476,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -623.32495,
+          "Y": 669.5249,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 746.697,
+        "offset_x": 32.000015,
+        "offset_y": 199.94304
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 47,
+      "image": "map-section-47.webp",
+      "metadata": "map-section-47.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 47,
+        "bounds_min": {
+          "X": -640.125,
+          "Y": 634.875,
+          "Z": 0.5750275
+        },
+        "bounds_max": {
+          "X": -639.975,
+          "Y": 635.025,
+          "Z": 0.5750275
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 2986.1807,
+        "offset_x": 32,
+        "offset_y": 32
+      },
+      "marker_count": 0
+    }
+  ],
+  "markers": [
+    {
+      "category": "entry",
+      "label": "P",
+      "name": "player_start",
+      "section": 3,
+      "x": 191.46341,
+      "y": 649.25305,
+      "z": 5.029999
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-255981019",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 3,
+      "x": 132.91669,
+      "y": 617.1469,
+      "z": 5.034592
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-868962486",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 3,
+      "x": 191.28789,
+      "y": 728.8226,
+      "z": 0.035217
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-89534512",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 3,
+      "x": 260.01083,
+      "y": 679.5396,
+      "z": 10.053417
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-39489424",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 3,
+      "x": 214.87125,
+      "y": 578.4677,
+      "z": 10.052433
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-1",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 4,
+      "x": 959.2801,
+      "y": 698.7213,
+      "z": 0.087999
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-3",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 4,
+      "x": 972.6259,
+      "y": 652.4561,
+      "z": 0.087999
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-4",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 4,
+      "x": 940.4082,
+      "y": 642.70526,
+      "z": 0.087999
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-8",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 4,
+      "x": 924.6718,
+      "y": 699.20667,
+      "z": 0.087999
+    }
+  ]
+}

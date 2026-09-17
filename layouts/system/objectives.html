@@ -1,0 +1,93 @@
+{{ define "main" }}
+<header class="page-hero system-hero objective-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}">GAME SYSTEMS</a> // OBJECTIVE MODEL</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>5</strong><span>SELECTED<br>OBJECTIVES</span></div>
+</header>
+
+<section class="detail-metric progression-metric objective-metric">
+  <div><span>CLEAR GOLD</span><strong>95<small>%</small></strong><small>DEFEATED / ADMITTED</small></div>
+  <div><span>FULL CLEAR DISPLAY</span><strong>100</strong><small>GENUINE COMPLETE COUNT</small></div>
+  <div><span>FAST-CLEAR GOLD</span><strong>10<small>M</small></strong><small>SERVER WALL CLOCK</small></div>
+  <div><span>CO-OP CASH OUT</span><strong>P0</strong><small>MEDAL TOTAL SOURCE</small></div>
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>01</span><h2>What “clear the map” measures</h2></div><small>UNIQUE ADMITTED HOSTILES</small></header>
+  <div class="objective-medal-strip" aria-label="Defeat All Monsters medal thresholds">
+    <div><span>BRONZE</span><strong>50<small>%</small></strong><p>At least half of admitted hostiles defeated</p></div>
+    <div><span>SILVER</span><strong>75<small>%</small></strong><p>Three quarters of admitted hostiles defeated</p></div>
+    <div><span>GOLD</span><strong>95<small>%</small></strong><p>Gold does not require a literal full clear</p></div>
+    <div class="is-complete"><span>FULL CLEAR</span><strong>100</strong><p>Written to displayed progress only at 100%</p></div>
+  </div>
+  <div class="objective-formula">
+    <code>clear progress = defeated unique admitted hostiles ÷ total unique admitted hostiles</code>
+    <p>The denominator is assembled during play. It is not a static count of every enemy authored into the map.</p>
+  </div>
+</section>
+
+<div class="objective-population-grid">
+  <section class="console-panel objective-population-panel">
+    <header><div><span>02A</span><h2>Counted when spawned</h2></div><small>ADMITTED</small></header>
+    <ul>
+      <li><b>Population enemies</b><span>Ordinary hostile population registered as it enters play.</span></li>
+      <li><b>Hordes</b><span>Triggered wave members admitted as each hostile spawns.</span></li>
+      <li><b>Boss adds</b><span>Hostile reinforcements created during the boss encounter.</span></li>
+      <li><b>Active boss</b><span>The current boss joins the same unique-hostile count.</span></li>
+    </ul>
+  </section>
+  <section class="console-panel objective-population-panel is-excluded">
+    <header><div><span>02B</span><h2>Intentionally excluded</h2></div><small>NOT ADMITTED</small></header>
+    <ul>
+      <li><b>Fixtures</b><span>Map machinery and fixture-like combat objects are not objectives.</span></li>
+      <li><b>Reward-suppressed summons</b><span>Summons explicitly excluded from rewards do not inflate the denominator.</span></li>
+      <li><b>Never-triggered encounters</b><span>Enemies in skipped areas or triggers never spawn and never enter the count.</span></li>
+    </ul>
+  </section>
+</div>
+
+<aside class="objective-warning">
+  <strong>SPAWN CLEAR ≠ AUTHORED MAP CLEAR</strong>
+  <p>Defeating every enemy that actually spawned can report 100% even when an authored encounter was bypassed. Mission completion remains boss/result-driven and does not require the Defeat All Monsters objective to reach 100%.</p>
+</aside>
+
+<section class="console-panel system-report-panel objective-timing-panel">
+  <header><div><span>03</span><h2>Fast-clear wall clock</h2></div><small>ZONE CREATE → RESULT EVALUATION</small></header>
+  <div class="objective-time-strip" aria-label="Finish Level Quickly medal thresholds">
+    <div><span>GOLD</span><strong>≤ 10:00</strong></div>
+    <div><span>SILVER</span><strong>≤ 15:00</strong></div>
+    <div><span>BRONZE</span><strong>≤ 20:00</strong></div>
+    <div><span>FAILED</span><strong>&gt; 20:00</strong></div>
+  </div>
+  <div class="objective-clock-flow" aria-label="Fast-clear timer lifecycle">
+    <div><b>START</b><span>Server creates the zone</span></div><i>→</i>
+    <div><b>RESTORE</b><span>Checkpoint keeps the original clock</span></div><i>→</i>
+    <div><b>STOP</b><span>Beam-out/result processing evaluates objectives</span></div>
+  </div>
+  <p class="system-evidence-note">This is a shared server wall clock, not combat-only time. Loading and setup plus the final boss-completion and beam-out interval can be included, so the full measurement is not strictly player-controlled.</p>
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>04</span><h2>Current objective selection</h2></div><small>FIXED FIVE-OBJECTIVE SET</small></header>
+  <div class="objective-rule-table">
+    <div class="objective-rule-head"><span>OBJECTIVE</span><span>BRONZE</span><span>SILVER</span><span>GOLD</span><span>MEASUREMENT</span></div>
+    <div><strong>Finish Level Quickly</strong><b>≤20 min</b><b>≤15 min</b><b>≤10 min</b><span>Shared server wall clock</span></div>
+    <div><strong>Do Damage Often</strong><b>Scaled</b><b>Scaled</b><b>Scaled</b><span>Difficulty-scaled hit-count thresholds</span></div>
+    <div><strong>Touch All Obelisks</strong><b>1 use</b><b>2 uses</b><b>3 uses</b><span>Included only when obelisks are present; accepted uses count</span></div>
+    <div><strong>Defeat All Monsters</strong><b>50%</b><b>75%</b><b>95%</b><span>Defeated share of unique admitted hostiles</span></div>
+    <div><strong>Huge Damage</strong><b>5 hits</b><b>15 hits</b><b>30 hits</b><span>Qualifying large-damage hits</span></div>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel objective-result-panel">
+  <header><div><span>05</span><h2>Mission results, persistence, and co-op</h2></div><small>MEDALS ARE NOT ACHIEVEMENTS</small></header>
+  <div class="objective-result-grid">
+    <article><span>CHAIN RESULT</span><strong>Objective medals</strong><p>Medals remain attached to the current chain result and influence cash-out rarity.</p></article>
+    <article><span>DURABLE PROGRESS</span><strong>Completion and XP</strong><p>Campaign completion and account experience are persisted separately from objective medals.</p></article>
+    <article class="is-warning"><span>CO-OP CAVEAT</span><strong>Player slot 0 scoring</strong><p>Cash-out reward generation currently reads slot 0’s medal totals, so non-host players can receive rarity odds based on the host’s personal medals.</p></article>
+  </div>
+</section>
+{{ end }}

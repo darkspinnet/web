@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.system.rewards }}
+<header class="page-hero system-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}">GAME SYSTEMS</a> // REWARD MODEL</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.maximum_part_count }}</strong><span>MAXIMUM<br>CASH OUT PARTS</span></div>
+</header>
+
+<section class="detail-metric progression-metric">
+  <div><span>PART CAP</span><strong>{{ $data.maximum_part_count }}</strong><small>ONE PER COMPLETED PLANET</small></div>
+  <div><span>{{ if eq $data.reward_level_model "difficulty" }}FIRST CHAIN EXIT{{ else }}FOUR-PLANET LEVEL{{ end }}</span><strong>{{ $data.maximum_cash_out_level }}</strong><small>ITEM LEVEL</small></div>
+  <div><span>HERO MILESTONES</span><strong>{{ len $data.hero_milestones }}</strong><small>CROGENITOR REWARDS</small></div>
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>01</span><h2>Cash Out reward table</h2></div><small>SUCCESSFUL EXPEDITION</small></header>
+  <div class="cashout-grid">
+    {{ range $data.cash_out }}
+    <article>
+      <span>{{ .planets_completed }} {{ if eq .planets_completed 1 }}PLANET{{ else }}PLANETS{{ end }}{{ if eq $data.reward_level_model "difficulty" }} // DIFFICULTY {{ .difficulty }}{{ end }}</span>
+      <strong>{{ .part_count }}</strong><small>{{ if eq .part_count 1 }}PART{{ else }}PARTS{{ end }}</small>
+      <dl><div><dt>Item level</dt><dd>{{ .item_level }}</dd></div><div><dt>Selection</dt><dd>Unique-family tier</dd></div></dl>
+    </article>
+    {{ end }}
+  </div>
+  <p class="system-evidence-note">Cash Out awards one part per completed planet, capped at four. {{ if eq $data.reward_level_model "difficulty" }}This table follows the first four-difficulty chain; later chains use the same server difficulty formula.{{ else }}The item level is determined by completion depth.{{ end }}</p>
+</section>
+
+<section class="console-panel system-report-panel">
+  <header><div><span>02</span><h2>Cash Out rarity bands</h2></div><small>FOUR-PLANET EXAMPLES</small></header>
+  <div class="cashout-rarity-formula"><code>Rarified % = floor((bronze + 3 × silver + 6 × gold) ÷ planets completed)</code></div>
+  <div class="cashout-rarity-table">
+    <div class="cashout-rarity-head"><span>RESULT</span><span>MEDALS B / S / G</span><span>SPECIAL</span><span>RARIFIED</span><span>PURIFIED</span></div>
+    {{ range $data.rarity_samples }}
+    <div><strong>{{ .name }}</strong><code>{{ .bronze }} / {{ .silver }} / {{ .gold }}</code><b>{{ .special_chance }}%</b><b>{{ .rarified_chance }}%</b><b>{{ .purified_chance }}%</b></div>
+    {{ end }}
+  </div>
+  <p class="system-evidence-note">Special maps to the Unique family and Rarified maps to Rare Unique. The current medal policy does not assign a Purified chance, so Epic Unique remains 0%.</p>
+</section>
+
+<div class="system-two-column reward-columns">
+  <section class="console-panel system-report-panel">
+    <header><div><span>03</span><h2>Hero entitlement levels</h2></div><small>{{ len $data.hero_milestones }} TOTAL</small></header>
+    <div class="reward-milestone-grid">
+      {{ range $index, $level := $data.hero_milestones }}<span><small>{{ add $index 1 }}</small><b>LVL {{ $level }}</b></span>{{ end }}
+    </div>
+  </section>
+  <section class="console-panel system-report-panel reward-boundary">
+    <header><div><span>04</span><h2>Current policy boundary</h2></div><small>PARITY-SAFE</small></header>
+    <div>
+      <p><strong>Implemented:</strong> compatible unique-family selection, medal-weighted rarity bands, difficulty-derived item levels, inventory-capacity admission, and durable reward settlement.</p>
+      <p><strong>Not claimed:</strong> enemy-family item ownership or an active Purified reward chance. Neither is currently assigned by server policy.</p>
+      <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}">Open the procedural item archive →</a>
+    </div>
+  </section>
+</div>
+
+{{ end }}

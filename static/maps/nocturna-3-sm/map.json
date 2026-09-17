@@ -1,0 +1,359 @@
+{
+  "selection": "nocturna_3_SM",
+  "level": "nocturna_3_SM",
+  "map": {
+    "plan_layer": 0,
+    "bounds_min": {
+      "X": 70.27498,
+      "Y": 0.3750053,
+      "Z": 0.4054013
+    },
+    "bounds_max": {
+      "X": 1288.125,
+      "Y": 133.12503,
+      "Z": 5.605495
+    },
+    "width": 512,
+    "height": 512,
+    "padding": 32,
+    "scale": 0.3678614,
+    "offset_x": 32,
+    "offset_y": 231.58319
+  },
+  "legend": {
+    "boss": "#f5485c",
+    "entry": "#f5f8fa",
+    "horde": "#ff973d",
+    "interactable": "#c079ff",
+    "obelisk": "#c079ff",
+    "spawn": "#da404b",
+    "stationary": "#c079ff",
+    "teleporter": "#42d3ff",
+    "teleporter-route": "#42d3ff",
+    "trigger": "#ffdf5c"
+  },
+  "labels": {
+    "A": "authored fixed Mutation Agent actor",
+    "B": "boss pit with unknown tier because campaign-slot context is unavailable",
+    "C": "Captain boss pit on a non-X-4 campaign slot",
+    "D": "Destructor boss pit on an X-4 campaign slot",
+    "H": "horde director anchor; roster selected at runtime",
+    "L": "Director Spike locus; lieutenant-centered, not an Elite marker",
+    "M": "authored fixed enemy marker; not a monster tier",
+    "O": "obelisk",
+    "P": "player starting area",
+    "S": "destructible stationary object",
+    "TnA": "teleporter n source",
+    "TnB": "teleporter n destination",
+    "W": "Director Wanderer locus; usually minions, roster selected at runtime"
+  },
+  "enemy_class_notes": [
+    "Static map markers describe encounter loci, not a guaranteed spawned enemy tier.",
+    "Elite is a runtime stronger variant with additional affixes; no static E marker is emitted.",
+    "Operatives are co-op-only runtime enemies and therefore have no static map marker.",
+    "Mutation Agent is labeled A only for an exact authored actor; campaign horde anchors do not imply one.",
+    "Captain boss pits occur outside X-4; X-4 boss pits contain Destructors."
+  ],
+  "sections": [
+    {
+      "component_id": 1,
+      "image": "map-section-01.webp",
+      "metadata": "map-section-01.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 1,
+        "bounds_min": {
+          "X": 70.27498,
+          "Y": 0.3750053,
+          "Z": 0.4054013
+        },
+        "bounds_max": {
+          "X": 231.52501,
+          "Y": 133.12503,
+          "Z": 5.605495
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 2.778294,
+        "offset_x": 32,
+        "offset_y": 71.59068
+      },
+      "marker_count": 6
+    },
+    {
+      "component_id": 2,
+      "image": "map-section-02.webp",
+      "metadata": "map-section-02.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 2,
+        "bounds_min": {
+          "X": 1242.9753,
+          "Y": 23.175005,
+          "Z": 5.525015
+        },
+        "bounds_max": {
+          "X": 1288.125,
+          "Y": 68.175,
+          "Z": 5.525015
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 9.922556,
+        "offset_x": 32,
+        "offset_y": 32.742493
+      },
+      "marker_count": 0
+    },
+    {
+      "component_id": 3,
+      "image": "map-section-03.webp",
+      "metadata": "map-section-03.json",
+      "map": {
+        "plan_layer": 0,
+        "component_id": 3,
+        "bounds_min": {
+          "X": 745.275,
+          "Y": 23.775007,
+          "Z": 5.525015
+        },
+        "bounds_max": {
+          "X": 789.525,
+          "Y": 67.875,
+          "Z": 5.525015
+        },
+        "width": 512,
+        "height": 512,
+        "padding": 32,
+        "scale": 10.124293,
+        "offset_x": 32.000015,
+        "offset_y": 32.759384
+      },
+      "marker_count": 0
+    }
+  ],
+  "markers": [
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 176.27971,
+      "y": 14.946699,
+      "z": 5.04372
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-13",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 83.97532,
+      "y": 120.14026,
+      "z": 5.045704
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-9",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 84.52428,
+      "y": 118.9769,
+      "z": 5.045689
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-5",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 223.0022,
+      "y": 56.841682,
+      "z": 0.038265
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-11",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 176.73793,
+      "y": 14.761235,
+      "z": 5.04372
+    },
+    {
+      "category": "horde",
+      "label": "H",
+      "name": "SpawnPoint_DirectorHorde.Noun-12",
+      "noun_name": "SpawnPoint_DirectorHorde.Noun",
+      "section": 1,
+      "x": 223.49696,
+      "y": 56.836678,
+      "z": 0.038265
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-14",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -127.61871,
+      "y": 498.47043,
+      "z": 53.154236
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-10",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -119.623924,
+      "y": 501.4696,
+      "z": 53.154236
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_b.Noun",
+      "noun_name": "DEST_prefab_nocturna_root_b.Noun",
+      "x": -125.52499,
+      "y": 433.07706,
+      "z": 55.151577
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun-12",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -97.95281,
+      "y": 492.282,
+      "z": 53.100853
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun-1",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -158.67552,
+      "y": 428.57837,
+      "z": 55.107414
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun-3",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -97.4488,
+      "y": 441.65747,
+      "z": 55.0758
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun-2",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -127.88858,
+      "y": 430.1331,
+      "z": 55.137093
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_b.Noun-1",
+      "noun_name": "DEST_prefab_nocturna_root_b.Noun",
+      "x": -99.34173,
+      "y": 446.18558,
+      "z": 55.155895
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-1",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -104.38706,
+      "y": 443.36115,
+      "z": 55.09643
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_b.Noun-8",
+      "noun_name": "DEST_prefab_nocturna_root_b.Noun",
+      "x": -118.03055,
+      "y": 459.0467,
+      "z": 53.09303
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-9",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -127.332695,
+      "y": 503.5829,
+      "z": 53.154236
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-13",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -122.31386,
+      "y": 457.68384,
+      "z": 53.114243
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -155.07137,
+      "y": 421.89215,
+      "z": 55.149513
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_b.Noun-7",
+      "noun_name": "DEST_prefab_nocturna_root_b.Noun",
+      "x": -102.78846,
+      "y": 492.67325,
+      "z": 53.10603
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-11",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -103.83404,
+      "y": 488.26352,
+      "z": 53.154236
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_a.Noun-9",
+      "noun_name": "DEST_prefab_nocturna_root_a.Noun",
+      "x": -116.77211,
+      "y": 503.80225,
+      "z": 53.105564
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-2",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -132.70297,
+      "y": 434.80414,
+      "z": 55.149204
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun-12",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -101.00945,
+      "y": 498.091,
+      "z": 53.104053
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_b.Noun-5",
+      "noun_name": "DEST_prefab_nocturna_root_b.Noun",
+      "x": -133.66734,
+      "y": 494.6319,
+      "z": 53.105606
+    },
+    {
+      "category": "trigger",
+      "name": "DEST_prefab_nocturna_root_d.Noun",
+      "noun_name": "DEST_prefab_nocturna_root_d.Noun",
+      "x": -160.3177,
+      "y": 423.4951,
+      "z": 55.165157
+    }
+  ]
+}

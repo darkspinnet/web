@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $ability := index site.Data.generated.ability.entry .Params.ability }}
+{{ $relatedStatus := slice }}
+{{ range site.Data.generated.buff.items }}
+  {{ $status := . }}
+  {{ range .abilities }}{{ if eq .slug $ability.slug }}{{ $relatedStatus = $relatedStatus | append $status }}{{ end }}{{ end }}
+{{ end }}
+<header class="page-hero ability-detail-heading">
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}">ABILITY ARCHIVE</a> // {{ upper $ability.name }}</p><h1>{{ $ability.name }}</h1><p>Recovered hero ability ownership record.</p></div>
+  <span class="ability-sigil ability-sigil-large slot-{{ $ability.primary_slot }}">{{ if $ability.icon_path }}<img src="{{ $ability.icon_path | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" decoding="async">{{ else }}{{ upper (substr $ability.name 0 2) }}{{ end }}</span>
+</header>
+<section class="detail-metric">
+  <div><span>PRIMARY SLOT</span><strong class="detail-word">{{ replace $ability.primary_slot "_" " " }}</strong><small>LOADOUT POSITION</small></div>
+  <div><span>HERO FAMILIES</span><strong>{{ len $ability.heroes }}</strong><small>KNOWN OWNERS</small></div>
+  <div><span>PROFILE USES</span><strong>{{ $ability.usage_count }}</strong><small>ALPHA THROUGH DELTA</small></div>
+  <div><span>ASSET STATE</span><strong class="word-stat">{{ if $ability.combat }}DECODED{{ else }}RECOVERED{{ end }}</strong><small>{{ if $ability.combat }}RANK 1 SCRIPT DATA{{ else if $ability.description }}ICON + LOCALIZED TEXT{{ else }}ICON + LOADOUT LINK{{ end }}</small></div>
+</section>
+<section class="detail-grid ability-detail-grid">
+  <article class="console-panel ability-summary-panel">
+    <header><div><span>01</span><h2>Ability record</h2></div><small>PACKAGE REFERENCE</small></header>
+    <div class="ability-summary-body"><span class="ability-sigil ability-sigil-large slot-{{ $ability.primary_slot }}">{{ if $ability.icon_path }}<img src="{{ $ability.icon_path | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" decoding="async">{{ else }}{{ upper (substr $ability.name 0 2) }}{{ end }}</span><div><h2>{{ $ability.name }}</h2><p>{{ with $ability.description }}{{ . }}{{ else }}The authored icon and hero loadout relationship are recovered. A reliable localized description has not yet been linked to this internal ability identifier.{{ end }}</p><code>{{ $ability.asset_name }}</code></div></div>
+  </article>
+  <article class="console-panel ability-owner-panel">
+    <header><div><span>02</span><h2>Hero ownership</h2></div><small>{{ len $ability.heroes }} FAMILIES</small></header>
+    <div class="ability-owner-list">{{ range $ability.heroes }}<a href="{{ printf "/hero/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><span class="element-badge element-{{ .element | lower }}">{{ .element }}</span><div><strong>{{ .name }}</strong><small>{{ .class }} // {{ delimit .variants " / " }}</small></div><b>{{ delimit .slots " / " | upper }}</b><i>→</i></a>{{ end }}</div>
+  </article>
+</section>
+{{ if gt (len $relatedStatus) 0 }}
+<section class="console-panel ability-status-panel">
+  <header><div><span>03</span><h2>Buffs</h2></div><small>{{ len $relatedStatus }} LOCALIZED MATCHES</small></header>
+  <div class="term-link-list">{{ range $relatedStatus }}<a href="{{ printf "/buff/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><strong>{{ .name }}</strong><span>{{ upper .category }}</span><i>&rarr;</i></a>{{ end }}</div>
+</section>
+{{ end }}
+{{ with $ability.combat }}
+<section class="console-panel ability-combat-panel">
+  <header><div><span>{{ if gt (len $relatedStatus) 0 }}04{{ else }}03{{ end }}</span><h2>Rank 1 combat data</h2></div><small>PACKAGED LUA REGISTRATION</small></header>
+  <div class="ability-combat-grid">
+    {{ with .kind }}<div><span>TYPE</span><strong>{{ replace . "_" " " | upper }}</strong></div>{{ end }}
+    {{ if gt .cooldown_seconds 0.0 }}<div><span>COOLDOWN</span><strong>{{ .cooldown_seconds }} SEC</strong></div>{{ end }}
+    {{ if gt .power_cost 0.0 }}<div><span>POWER COST</span><strong>{{ .power_cost }}</strong></div>{{ end }}
+    {{ if gt .range_meters 0.0 }}<div><span>CAST RANGE</span><strong>{{ .range_meters }} M</strong></div>{{ end }}
+    {{ if or (gt .minimum_damage 0.0) (gt .maximum_damage 0.0) }}<div><span>DAMAGE</span><strong>{{ .minimum_damage }}–{{ .maximum_damage }}</strong></div>{{ end }}
+    {{ if or (gt .minimum_damage_per_tick 0.0) (gt .maximum_damage_per_tick 0.0) }}<div><span>DAMAGE / TICK</span><strong>{{ .minimum_damage_per_tick }}–{{ .maximum_damage_per_tick }}</strong></div>{{ end }}
+    {{ if or (gt .minimum_healing_per_tick 0.0) (gt .maximum_healing_per_tick 0.0) }}<div><span>HEAL / TICK</span><strong>{{ .minimum_healing_per_tick }}–{{ .maximum_healing_per_tick }}</strong></div>{{ end }}
+    {{ if or (gt .minimum_final_healing 0.0) (gt .maximum_final_healing 0.0) }}<div><span>FINAL HEAL</span><strong>{{ .minimum_final_healing }}–{{ .maximum_final_healing }}</strong></div>{{ end }}
+    {{ if gt .duration_seconds 0.0 }}<div><span>DURATION</span><strong>{{ .duration_seconds }} SEC</strong></div>{{ end }}
+    {{ if gt .tick_seconds 0.0 }}<div><span>TICK RATE</span><strong>{{ .tick_seconds }} SEC</strong></div>{{ end }}
+    {{ if gt .tick_count 0 }}<div><span>TICKS</span><strong>{{ .tick_count }}</strong></div>{{ end }}
+    {{ if gt .radius_meters 0.0 }}<div><span>RADIUS</span><strong>{{ .radius_meters }} M</strong></div>{{ end }}
+    {{ if gt .projectile_speed 0.0 }}<div><span>PROJECTILE SPEED</span><strong>{{ .projectile_speed }}</strong></div>{{ end }}
+    {{ if gt .root_chance 0.0 }}<div><span>ROOT CHANCE</span><strong>{{ mul .root_chance 100 }}%</strong></div>{{ end }}
+    {{ with .animation }}<div><span>ANIMATION</span><strong>{{ . }}</strong></div>{{ end }}
+  </div>
+  {{ with $ability.source }}<footer class="ability-source"><span>SOURCE</span><code>{{ .lua_source }}</code><small>CHUNK {{ .lua_chunk_id }} // RANK {{ .rank }}</small></footer>{{ end }}
+</section>
+{{ end }}
+{{ end }}

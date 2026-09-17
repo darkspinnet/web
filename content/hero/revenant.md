@@ -1,0 +1,4 @@
++++
+title = "Revenant"
+hero = "revenant"
++++

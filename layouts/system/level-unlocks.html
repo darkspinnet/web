@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{ $heroes := site.Data.generated.hero }}
+{{ $progression := site.Data.generated.system.progression }}
+{{ $upgrades := index site.Data.generated "upgrade-unlocks" }}
+<header class="page-hero system-hero hero-unlock-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}">GAME SYSTEMS</a> // LEVEL ELIGIBILITY</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+  <div class="page-counter"><strong>{{ $upgrades.unlock_count }}</strong><span>ACCOUNT<br>UPGRADES</span></div>
+</header>
+
+<section class="detail-metric progression-metric">
+  <div><span>UPGRADE FAMILIES</span><strong>{{ $upgrades.category_count }}</strong><small>DNA PURCHASE TRACKS</small></div>
+  <div><span>LEVEL-GATED UPGRADES</span><strong>{{ $upgrades.unlock_count }}</strong><small>THROUGH LEVEL {{ $upgrades.maximum_level }}</small></div>
+  <div><span>HERO REWARDS</span><strong>{{ $progression.hero_reward_count }}</strong><small>BANKABLE HERO CREDITS</small></div>
+  <div><span>HERO VARIANTS</span><strong>{{ $heroes.count }}</strong><small>{{ $heroes.family_count }} HERO FAMILIES</small></div>
+</section>
+
+<section class="console-panel hero-unlock-explainer">
+  <header><div><span>01</span><h2>How level unlocks work</h2></div><small>LEVEL → ELIGIBILITY</small></header>
+  <div class="hero-unlock-steps">
+    <div><b>1</b><span>REACH THE LEVEL</span><p>The listed upgrade or hero variant becomes eligible at that Crogenitor level.</p></div>
+    <div><b>2</b><span>PAY OR EARN</span><p>Account upgrades still cost DNA. Hero choices consume a banked hero-reward credit.</p></div>
+    <div><b>3</b><span>FOLLOW THE TRACK</span><p>Later upgrade ranks also require the previous rank in the same family.</p></div>
+  </div>
+</section>
+
+<section class="console-panel level-upgrade-panel">
+  <header><div><span>02</span><h2>Account upgrade unlocks</h2></div><small>{{ $upgrades.unlock_count }} LEVEL-GATED PURCHASES</small></header>
+  <p class="system-evidence-note">Reaching a level opens purchase eligibility; it does not grant the upgrade automatically. DNA costs are paid per rank, and each later rank follows the previous purchase in its track.</p>
+  <div class="level-upgrade-category-grid">
+    {{ range $category := $upgrades.categories }}
+    <article class="level-upgrade-category">
+      <header><div><strong>{{ $category.name }}</strong><small>{{ $category.description }}</small></div><b>{{ len $category.unlocks }} RANK{{ if ne (len $category.unlocks) 1 }}S{{ end }}</b></header>
+      <div class="level-upgrade-table">
+        <div class="level-upgrade-head"><span>LEVEL</span><span>RANK</span><span>DNA COST</span><span>RESULT</span></div>
+        {{ range $unlock := $category.unlocks }}
+        <div>
+          <strong>{{ $unlock.level }}</strong>
+          <span>{{ $unlock.rank }}</span>
+          <code>{{ if eq (int $unlock.cost) 0 }}FREE{{ else }}{{ lang.FormatNumber 0 $unlock.cost }}{{ end }}</code>
+          <b>{{ if eq $category.unit "enabled" }}ENABLED{{ else }}{{ $unlock.value }} {{ upper $category.unit }}{{ end }}</b>
+        </div>
+        {{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="console-panel hero-onboarding-panel">
+  <header><div><span>03</span><h2>Early hero availability</h2></div><small>LEVELS 1–3</small></header>
+  <p class="system-evidence-note">These hero variants have early Crogenitor requirements. They sit before the recurring hero-reward milestones, so onboarding and starting-roster grants are handled separately.</p>
+  <div class="hero-onboarding-grid">
+    {{ range $level := slice 1 2 3 }}
+    <section>
+      <header><span>CROGENITOR</span><strong>LVL {{ $level }}</strong></header>
+      <div>
+        {{ range $family := $heroes.families }}{{ $canonical := index $family.variants (sub (len $family.variants) 1) }}{{ range $variant := $family.variants }}{{ if eq (int $variant.unlock_level) $level }}
+        <a class="hero-unlock-mini" href="{{ printf "/hero/%s/" $family.slug | strings.TrimPrefix "/" | relURL }}"><img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="{{ $family.name }} portrait" loading="lazy" width="48" height="48"><span><strong>{{ $variant.name }}</strong><small>{{ $variant.element }} · {{ $variant.class }}</small></span></a>
+        {{ end }}{{ end }}{{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+</section>
+
+<header class="system-section-heading level-hero-heading"><div><span>04</span><h2>Hero reward unlocks</h2></div><small>LEVELS 4–50</small></header>
+<p class="system-evidence-note">Each marked level grants one bankable hero credit. The variants shown at that level become newly eligible choices; one credit unlocks one eligible, unowned variant.</p>
+<nav class="hero-unlock-jump" aria-label="Jump to hero reward level">
+  <span>JUMP TO HERO LEVEL</span>
+  {{ range $level := $progression.hero_reward_milestones }}<a href="#level-{{ $level }}">{{ $level }}</a>{{ end }}
+</nav>
+
+<section class="hero-unlock-levels">
+  {{ range $level := $progression.hero_reward_milestones }}
+  {{ $counter := newScratch }}{{ $counter.Set "count" 0 }}
+  {{ range $family := $heroes.families }}{{ range $variant := $family.variants }}{{ if eq (int $variant.unlock_level) (int $level) }}{{ $counter.Add "count" 1 }}{{ end }}{{ end }}{{ end }}
+  <article class="console-panel hero-unlock-level" id="level-{{ $level }}">
+    <header>
+      <div><span>LVL {{ $level }}</span><h2>Crogenitor level {{ $level }}</h2></div>
+      <small>+1 HERO CREDIT · {{ $counter.Get "count" }} NEW CHOICES</small>
+    </header>
+    <div class="hero-unlock-choice-grid">
+      {{ range $family := $heroes.families }}{{ $canonical := index $family.variants (sub (len $family.variants) 1) }}{{ range $variant := $family.variants }}{{ if eq (int $variant.unlock_level) (int $level) }}
+      <a class="hero-unlock-choice" href="{{ printf "/hero/%s/" $family.slug | strings.TrimPrefix "/" | relURL }}">
+        <img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="{{ $family.name }} portrait" loading="lazy" width="82" height="82">
+        <span><small>{{ $variant.element }} // {{ $variant.class }}</small><strong>{{ $family.name }}</strong><b>{{ $variant.variant }}</b></span><i>→</i>
+      </a>
+      {{ end }}{{ end }}{{ end }}
+    </div>
+  </article>
+  {{ end }}
+</section>
+{{ end }}

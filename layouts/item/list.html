@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.item }}
+<header class="page-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // ITEM ARCHIVE</p>
+    <h1>{{ .Title }}</h1>
+    <p>Decoded equipment rigblocks, procedural affixes, and recovered loot-generation rules.</p>
+  </div>
+  <div class="page-counter"><strong>{{ $data.count }}</strong><span>ITEM<br>FAMILIES</span></div>
+</header>
+
+<section class="detail-metric item-metric">
+  <div><span>ITEM FAMILIES</span><strong>{{ $data.count }}</strong><small>SEARCHABLE BASE NAMES</small></div>
+  <div><span>RIGBLOCK RECORDS</span><strong>{{ $data.rigblock_count }}</strong><small>{{ $data.localized_count }} LOCALIZED</small></div>
+  <div><span>PREFIX RECORDS</span><strong>{{ $data.prefix_count }}</strong><small>APPLICABILITY DATA</small></div>
+  <div><span>SUFFIX RECORDS</span><strong>{{ $data.suffix_count }}</strong><small>{{ len (where $data.suffixes "name_locale_key" "ne" "") }} NAMED</small></div>
+</section>
+
+<section class="console-panel loot-rule-panel">
+  <header><div><span>01</span><h2>Recovered loot rules</h2></div><small>{{ upper $data.loot_rules.source }}</small></header>
+  <div class="loot-rule-grid">
+    <dl>
+      <div><dt>Gold medal</dt><dd>{{ $data.loot_rules.gold_multiplier }}x / VALUE {{ $data.loot_rules.gold_value }}</dd></div>
+      <div><dt>Silver medal</dt><dd>{{ $data.loot_rules.silver_multiplier }}x / VALUE {{ $data.loot_rules.silver_value }}</dd></div>
+      <div><dt>Bronze medal</dt><dd>{{ $data.loot_rules.bronze_multiplier }}x / VALUE {{ $data.loot_rules.bronze_value }}</dd></div>
+      <div><dt>Chain bonus</dt><dd>+{{ $data.loot_rules.chain_bonus_per_additional_planet }} / PLANET</dd></div>
+    </dl>
+    <div class="epic-curve">
+      <div><strong>EPIC CHANCE CURVE</strong><span>PROGRESSION STEPS</span></div>
+      <ol>{{ range $index, $chance := $data.loot_rules.epic_chance }}<li title="Step {{ $index }}: {{ $chance }}%"><i style="--chance: {{ $chance }}"></i><small>{{ $chance }}</small></li>{{ end }}</ol>
+    </div>
+  </div>
+  <p class="loot-rule-note">These are global procedural rules. No authored enemy-to-item or map-to-item ownership table has been identified in the recovered data.</p>
+</section>
+
+<section class="console-panel item-catalog-panel" data-item-catalog>
+  <header><div><span>02</span><h2>Item family catalog</h2></div><small><b data-item-count>{{ $data.count }}</b> FAMILIES</small></header>
+  <div class="control-rack item-controls">
+    <label class="search-control"><span>SEARCH FAMILIES</span><input type="search" placeholder="Family name, class, element..." autocomplete="off" data-item-search data-item-source="{{ "/data/item/index.json" | strings.TrimPrefix "/" | relURL }}"></label>
+    <div class="filter-control" data-item-filter>
+      <span>CATEGORY</span><button class="is-active" type="button" data-category="all">ALL</button>
+      {{ range $name := slice "Defense" "Offense" "Utility" "Weapon" "Grasper" "Foot" }}
+      <button type="button" data-category="{{ lower $name }}">{{ upper $name }} <b>{{ index $data.categories $name }}</b></button>
+      {{ end }}
+    </div>
+  </div>
+  <div class="item-table">
+    <div class="item-head"><span>FAMILY</span><span>CATEGORY</span><span>AFFINITY</span><span>STYLES</span><span></span></div>
+    <div data-item-results><p class="item-loading">Loading compact item index...</p></div>
+  </div>
+  <p class="result-limit" data-item-limit hidden>Showing the first 200 matches. Refine the search to narrow the catalog.</p>
+  <p class="loot-rule-note">Search indexes one base family name. Visual styles, elemental records, prefixes, and suffixes are nested on the family detail page.</p>
+</section>
+
+<template id="item-row-template">
+  <a class="item-row"><strong data-field="name"></strong><span data-field="category"></span><i data-field="affinity"></i><code data-field="id"></code><em>&rarr;</em></a>
+</template>
+{{ end }}
