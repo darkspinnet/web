@@ -1,4 +1,4 @@
 +++
 title = "Game Systems"
-description = "Server-authoritative drop rates, progression curves, and reward tables generated directly from the runtime source."
+description = "Combat and resistance formulas, drop rates, progression curves, and reward tables derived from the Darkspin runtime source."
 +++

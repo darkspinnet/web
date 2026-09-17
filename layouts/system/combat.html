@@ -1,0 +1,108 @@
+{{ define "main" }}
+{{ $data := site.Data.generated.combat }}
+<header class="page-hero system-hero">
+  <div>
+    <p class="eyebrow"><a href="{{ "system/" | relURL }}">GAME SYSTEMS</a> // COMBAT RULES</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</header>
+
+<section class="combat-caps" aria-label="Defense limits">
+  <article><span>HERO AVOIDANCE</span><strong>{{ mul $data.hero_avoidance 100 }}<small>%</small></strong><p>Rating-based dodge or resist approaches this chance.</p></article>
+  <article><span>HERO MITIGATION</span><strong>{{ mul $data.hero_mitigation 100 }}<small>%</small></strong><p>Combined ordinary reductions and flat armor share one limit.</p></article>
+  <article><span>NPC ORDINARY DEFENSE</span><strong>{{ mul $data.npc_passive 100 }}<small>%</small></strong><p>Rating, passive reductions, and carapace share one limit.</p></article>
+  <article><span>NPC TEMPORARY REDUCTION</span><strong>{{ mul $data.npc_phase 100 }}<small>%</small></strong><p>Timed reduction and area-shift defense share this limit. Scripted immunity is separate.</p></article>
+</section>
+
+<section class="combat-explainer" aria-labelledby="combat-basics-title">
+  <h2 id="combat-basics-title">Two different kinds of protection</h2>
+  <div class="combat-columns">
+    <article><h3>Avoid the hit</h3><p>For heroes, physical attacks use the dodge rating and energy attacks use the resist rating. A successful roll prevents the hit. Rating has diminishing returns: more still helps, but the gains get smaller. Already-attached periodic damage does not reroll avoidance.</p></article>
+    <article><h3>Reduce a landed hit</h3><p>General, physical or energy, science-type, and area reductions are fractional modifiers. Applicable factors multiply the damage that remains, then flat armor is subtracted. NPC ratings also reduce damage continuously, so they do not add random misses to hero attacks.</p></article>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel combat-panel" aria-labelledby="combat-curve-title">
+  <header><div><span>01</span><h2 id="combat-curve-title">Diminishing returns</h2></div><small>RATING → PROTECTION</small></header>
+  <div class="combat-panel-body">
+    <div class="combat-formula"><code>protection = C × r / (r + C × k)</code><p><b>r</b> = applicable defense rating. <b>k</b> = 100 × the authored conversion for the encounter’s difficulty. <b>C</b> = {{ $data.hero_avoidance }} for hero avoidance, or {{ $data.npc_passive }} for NPC rating reduction.</p></div>
+    <p>At <code>r = C × k</code>, protection is half its ceiling. Finite ratings approach the ceiling without reaching it. The same rating gives less protection when the difficulty conversion is larger.</p>
+    <div class="combat-curve-layout">
+      <div>
+        <svg class="combat-curve" viewBox="0 0 590 275" role="img" aria-labelledby="combat-chart-title combat-chart-description">
+          <title id="combat-chart-title">Hero avoidance and NPC rating reduction</title>
+          <desc id="combat-chart-description">Both curves rise quickly at low rating and flatten toward their respective ceilings. The horizontal axis is rating divided by 100 times the difficulty conversion. Values are also provided in the table.</desc>
+          <g class="combat-chart-grid"><path d="M50 20H550M50 70H550M50 120H550M50 170H550M50 220H550M50 20V220M150 20V220M250 20V220M350 20V220M450 20V220M550 20V220"/></g>
+          <g class="combat-chart-labels"><text x="42" y="24" text-anchor="end">100%</text><text x="42" y="74" text-anchor="end">75%</text><text x="42" y="124" text-anchor="end">50%</text><text x="42" y="174" text-anchor="end">25%</text><text x="42" y="224" text-anchor="end">0%</text><text x="50" y="240" text-anchor="middle">0</text><text x="150" y="240" text-anchor="middle">1</text><text x="250" y="240" text-anchor="middle">2</text><text x="350" y="240" text-anchor="middle">3</text><text x="450" y="240" text-anchor="middle">4</text><text x="550" y="240" text-anchor="middle">5</text><text x="300" y="265" text-anchor="middle">Rating ÷ k</text></g>
+          <path class="combat-ceiling combat-hero-line" d="M50 {{ sub 220 (mul 200 $data.hero_avoidance) }}H550"/>
+          <path class="combat-ceiling combat-npc-line" d="M50 {{ sub 220 (mul 200 $data.npc_passive) }}H550"/>
+          <polyline class="combat-hero-line" points="{{ $data.hero_curve }}"/>
+          <polyline class="combat-npc-line" points="{{ $data.npc_curve }}"/>
+        </svg>
+        <p class="combat-legend"><span>— Hero avoidance</span><span>— NPC rating reduction</span><small>Dashed lines: ceilings</small></p>
+      </div>
+      <div class="combat-table-wrap">
+        <table class="combat-table"><caption>Same normalized rating, different outcomes</caption><thead><tr><th scope="col">Rating ÷ k</th><th scope="col">Hero avoidance</th><th scope="col">NPC reduction</th></tr></thead><tbody>
+          {{ range $data.rating_samples }}<tr><th scope="row">{{ .rating_ratio }}</th><td>{{ printf "%.2f%%" .hero_avoidance }}</td><td>{{ printf "%.2f%%" .npc_reduction }}</td></tr>{{ end }}
+        </tbody></table>
+      </div>
+    </div>
+    <div class="combat-calculator" data-combat-calculator data-hero-ceiling="{{ $data.hero_avoidance }}" data-npc-ceiling="{{ $data.npc_passive }}">
+      <label for="combat-rating-ratio">Explore the curve: rating ÷ k <output for="combat-rating-ratio" data-combat-ratio>1.00×</output></label>
+      <input id="combat-rating-ratio" type="range" min="0" max="5" step="0.05" value="1">
+      <div class="combat-calculator-results" aria-live="polite"><span>Hero avoidance <output data-combat-hero>{{ printf "%.2f%%" (mul 100 (div $data.hero_avoidance (add 1 $data.hero_avoidance))) }}</output></span><span>NPC rating reduction <output data-combat-npc>{{ printf "%.2f%%" (mul 100 (div $data.npc_passive (add 1 $data.npc_passive))) }}</output></span></div>
+    </div>
+    <p class="combat-note">A ratio of 1 means your rating equals <code>100 × difficulty conversion</code>; it does not mean 1 rating point. These normalized examples work at any valid difficulty conversion. The two percentages apply to different targets and are not added together.</p>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel combat-panel" aria-labelledby="hero-mitigation-title">
+  <header><div><span>02</span><h2 id="hero-mitigation-title">Hero resistance, stacking & armor</h2></div><small>{{ mul $data.hero_mitigation 100 }}% COMBINED CAP</small></header>
+  <div class="combat-panel-body">
+    <ol class="combat-steps"><li>Apply passive and aura reductions before equipment mitigation.</li><li>Multiply the remaining damage by each applicable general, physical/energy, science-type, and area factor. Each factor is <code>1 − clamp(reduction, 0, {{ $data.hero_mitigation }})</code>.</li><li>Subtract the non-negative flat armor for the attack’s physical or energy source.</li><li>Enforce one floor relative to the incoming hit, including reductions from earlier stages.</li></ol>
+    <div class="combat-formula"><code>D = max(original incoming hit, damage entering equipment mitigation)</code><code>floor = min(D, max(1, D × {{ printf "%.2f" (sub 1 $data.hero_mitigation) }}))</code><code>landed damage = max(floor, reduced damage − armor)</code></div>
+    <p>Two 50% factors leave 25% of the damage before armor. They do not sum to immunity. The one-point minimum also means hits smaller than one are never increased by the floor.</p>
+    <div class="combat-table-wrap"><table class="combat-table combat-hit-table"><caption>Illustrative landed hits before separate shields or sharing</caption><thead><tr><th scope="col">Defenses</th><th scope="col">Incoming</th><th scope="col">After factors & armor</th><th scope="col">Floor</th><th scope="col">Damage</th></tr></thead><tbody>
+      {{ range $data.hit_samples }}<tr><th scope="row">{{ .name }}</th><td>{{ .incoming }}</td><td>{{ .before_cap }}</td><td>{{ .floor }}</td><td><strong>{{ .damage }}</strong></td></tr>{{ end }}
+    </tbody></table></div>
+    <p class="combat-note">Physical and energy are damage-source classifications. Science resistance uses the known science type independently. Area flags can coexist with periodic flags; attached periodic damage skips the hero avoidance roll but still passes through applicable mitigation.</p>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel combat-panel" aria-labelledby="npc-mitigation-title">
+  <header><div><span>03</span><h2 id="npc-mitigation-title">NPC defenses & immunity</h2></div><small>REDUCTION LIMITS</small></header>
+  <div class="combat-panel-body combat-columns">
+    <article><h3>Ordinary defense: {{ mul $data.npc_passive 100 }}%</h3><p>Physical hits use the NPC’s dodge rating plus its passive physical defense. Energy hits use its resist rating plus passive energy defense; Turtle suspends that passive energy contribution. The curve produces continuous mitigation, including for periodic damage.</p><p>Applicable physical, damage-over-time, and special area reductions multiply afterward. Carapace’s per-hit limit also stays inside the ordinary budget.</p><div class="combat-formula"><code>ordinary damage ≥ incoming × {{ sub 1 $data.npc_passive }}</code></div></article>
+    <article><h3>Temporary reduction: {{ mul $data.npc_phase 100 }}% total</h3><p>Timed damage reduction and the specific area-shift defense can lower damage further. Their combined reduction stays within this limit measured against the original hit.</p><div class="combat-formula"><code>damage after reductions ≥ incoming × {{ sub 1 $data.npc_phase }}</code></div><p>A 1,000-damage hit retains at least {{ mul 1000 (sub 1 $data.npc_passive) }} damage through ordinary defense, or {{ mul 1000 (sub 1 $data.npc_phase) }} through temporary reduction, before later mechanics. This floor does not apply when a scripted immunity blocks the hit.</p></article>
+  </div>
+</section>
+
+<section class="combat-explainer" aria-labelledby="combat-exceptions-title">
+  <h2 id="combat-exceptions-title">What sits outside these caps?</h2>
+  <div class="combat-columns">
+    <article><h3>Scripted immunity can fully block a hit</h3><p>NPC charge protection, Turtle protection against physical hits, and directional shields protecting against the attack’s direction now preserve their immunity behavior. They are separate from the {{ mul $data.npc_phase 100 }}% reduction cap, just like intangibility and banishment. Explicit temporary hero immunity is also separate. Scripted defeats still bypass defenses, shields, and phase thresholds.</p></article>
+    <article><h3>Absorption, vulnerability & sharing</h3><p>NPC vulnerability is applied after ordinary and temporary reduction, followed by finite absorption. Damage sharing and encounter health thresholds have separate handling. The reduction floor is not a promise that every hit removes health. PvP honors finite TC shields and does not consume them for rejected attacks.</p></article>
+    <article><h3>Why equipment protection changed</h3><p>The suffix-stat reader previously started five attribute slots too early, which could put Dexterity into damage reduction and shift other modifiers. The corrected suffix offset restores those stats; the server rebuilds its content cache for the change.</p></article>
+    <article><h3>Darkspin’s balance policy</h3><p>The caps and diminishing-return defense curves are server balance decisions. Difficulty conversion comes from authored game tuning. Critical-hit chance is a separate calculation and is not described by this defense curve.</p></article>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel combat-panel" aria-labelledby="combat-party-title">
+  <header><div><span>04</span><h2 id="combat-party-title">Auras, companions & hit reactions</h2></div><small>RECENT CORRECTIONS</small></header>
+  <div class="combat-panel-body combat-columns">
+    <article><h3>Crushing Dread uses the strongest aura</h3><p>Overlapping personal and allied Crushing Dread auras apply once, using the strongest applicable reduction around the attacking enemy. Two 30% auras therefore reduce its damage by 30%, not 51% or 60%. The result remains inside the hero’s combined mitigation cap.</p></article>
+    <article><h3>Companion protection has one combined cap</h3><p>Companions use their own authored defense ratings. Allied aura reduction now shares their {{ mul $data.npc_passive 100 }}% ordinary-defense cap, measured against the hit before the aura. A 1,000-damage hit therefore cannot fall below {{ mul 1000 (sub 1 $data.npc_passive) }} through these combined reductions.</p></article>
+    <article><h3>Debuff immunity belongs to the target</h3><p>In multiplayer, enemy poison, physical and energy vulnerabilities, and control effects check the immunity of the hero actually receiving the effect. Another player’s immunity no longer determines whether that hero receives the debuff.</p></article>
+    <article><h3>Thorn Bark reflects the accepted hit</h3><p>Reflection uses health lost by the surviving hero who was struck. Reflected damage, rewards, and feedback are attributed to that hero in multiplayer. Reflection carries the hero’s position, so enemy directional shields apply correctly. An enemy killed by a damage reaction cannot heal itself afterward through life drain.</p></article>
+    <article><h3>Soul Link resolves before a hero replacement</h3><p>Reserve heroes receive their shared damage before a lethal hit selects a replacement or decides squad defeat. Hit reactions belong to the surviving hero who received the hit, rather than a newly deployed replacement. Defensive on-hit stacks also activate on surviving duel targets that take damage.</p></article>
+    <article><h3>Damage classification and catalyst bonuses</h3><p>Companion attacks carry their own damage classification and position, and Sprout’s poison element reaches resistance checks. Expunge’s single-target remaining-damage burst no longer inherits area mitigation. Catalyst primary-stat bonuses now feed damage and healing; elemental damage and defense-based attack bonuses update with inventory changes, and physical/energy defense-based attack bonuses use their correct attributes.</p></article>
+  </div>
+</section>
+
+<section class="console-panel system-report-panel combat-panel" aria-labelledby="combat-history-title">
+  <header><div><span>05</span><h2 id="combat-history-title">Recent combat changes</h2></div><small>COMMITTED HISTORY</small></header>
+  <ol class="combat-history">{{ range $data.commits }}<li><div><time>{{ .date }}</time><a href="{{ .url }}">{{ .revision }}</a></div><p>{{ .summary }}</p></li>{{ end }}</ol>
+</section>
+<details class="combat-sources"><summary>Reviewed source · {{ $data.short_revision }}</summary><p>Caps, curve samples, and worked examples are generated from this committed source snapshot. Uncommitted tuning is excluded.</p><ul>{{ range $data.sources }}<li><a href="{{ .url }}">{{ .name }}</a></li>{{ end }}</ul></details>
+{{ end }}

@@ -346,6 +346,86 @@ body::before { opacity: .08; background-size: 32px 32px; }
 .download-link:hover, .download-link[aria-current="page"] { border-color: #e4f7a4; background: var(--acid); }
 .header-button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 
+.combat-sources a, .combat-history a { color: var(--acid); text-decoration: underline; text-underline-offset: 3px; }
+.combat-caps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; margin-bottom: 32px; }
+.combat-caps article { padding: 22px; border: 1px solid #4b6176; background: linear-gradient(145deg,#1b2a34,#0d151b 75%); }
+.combat-caps article > span { display: block; color: #a9b6c0; font: 600 .68rem/1.5 monospace; letter-spacing: .06em; }
+.combat-caps strong { display: block; margin-top: 14px; color: var(--acid); font: 500 2.8rem/1 monospace; }
+.combat-caps strong small { font-size: 1.2rem; }
+.combat-caps article:nth-child(n+3) strong { color: var(--cyan); }
+.combat-caps p { margin: 14px 0 0; color: #a6b2ba; font-size: .8rem; line-height: 1.6; }
+.combat-explainer { margin: 30px 0; }
+.combat-explainer h2 { margin: 0 0 18px; font-size: clamp(1.25rem,2vw,1.7rem); }
+.combat-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px 28px; }
+.combat-columns h3 { margin: 0 0 10px; color: #dce5ea; font-size: 1rem; }
+.combat-columns p, .combat-panel-body > p, .combat-steps { color: #aebbc4; font-size: .85rem; line-height: 1.75; }
+.combat-columns p { margin: 0 0 12px; }
+.combat-panel { margin-bottom: 26px; }
+.combat-panel > header { gap: 12px; }
+.combat-panel > header small { text-align: right; }
+.combat-panel-body { padding: 24px; }
+.combat-formula { margin: 0 0 18px; padding: 18px; border-left: 2px solid var(--acid); background: #151e17; }
+.combat-formula > code { display: block; color: #deedaf; font: .84rem/1.8 monospace; overflow-wrap: anywhere; }
+.combat-formula p { margin: 12px 0 0; color: #b3beb2; font-size: .8rem; line-height: 1.7; }
+.combat-curve-layout { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(280px,1fr); gap: 24px; align-items: center; margin-top: 24px; }
+.combat-curve { display: block; width: 100%; height: auto; }
+.combat-chart-grid path { fill: none; stroke: #293946; stroke-width: 1; }
+.combat-chart-labels text { fill: #a1b0bc; font: 11px monospace; }
+.combat-hero-line, .combat-npc-line { fill: none; stroke: var(--acid); stroke-width: 3; stroke-linejoin: round; }
+.combat-npc-line { stroke: var(--cyan); }
+.combat-ceiling { stroke-dasharray: 6 5; stroke-width: 1; opacity: .65; }
+.combat-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 10px 0 0; font: .7rem/1.6 monospace; }
+.combat-legend span:first-child { color: var(--acid); }
+.combat-legend span:nth-child(2) { color: var(--cyan); }
+.combat-legend small { color: #a1b0bc; font-size: inherit; }
+.combat-table-wrap { min-width: 0; overflow-x: auto; }
+.combat-table { width: 100%; border-collapse: collapse; color: #c4d0d8; font: .76rem/1.6 monospace; }
+.combat-table caption { margin-bottom: 10px; color: #a6b5be; font: .75rem/1.6 "Segoe UI",sans-serif; text-align: left; }
+.combat-table th, .combat-table td { padding: 10px; border-bottom: 1px solid #2a3842; text-align: right; }
+.combat-table thead th { color: #8fa2b0; font-size: .66rem; font-weight: 600; }
+.combat-table th:first-child { text-align: left; }
+.combat-table tbody th { font-weight: 400; }
+.combat-hit-table { min-width: 610px; }
+.combat-hit-table th:first-child { width: 40%; font-family: "Segoe UI",sans-serif; }
+.combat-hit-table strong { color: var(--acid); }
+.combat-calculator { margin-top: 26px; padding: 18px; border: 1px solid #3b5141; background: #111a17; }
+.combat-calculator label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: #c3d0c5; font-size: .83rem; }
+.combat-calculator input { width: 100%; margin: 18px 0; accent-color: var(--acid); cursor: pointer; }
+.combat-calculator input:focus-visible { outline: 2px solid var(--acid); outline-offset: 5px; }
+.combat-calculator-results { display: flex; flex-wrap: wrap; gap: 14px 32px; color: #aab8b0; font-size: .8rem; }
+.combat-calculator output { margin-left: 8px; color: var(--acid); font: 700 .95rem/1.5 monospace; }
+.combat-calculator-results span:last-child output { color: var(--cyan); }
+.combat-panel-body .combat-note { margin: 20px 0 0; color: #93a6b2; font-size: .77rem; }
+.combat-steps { margin: 0 0 24px; padding-left: 22px; }
+.combat-steps li { margin-bottom: 10px; padding-left: 5px; }
+.combat-history { margin: 0; padding: 0 24px; list-style: none; }
+.combat-history li { display: grid; grid-template-columns: 130px minmax(0,1fr); gap: 22px; padding: 20px 0; border-bottom: 1px solid #2a3842; }
+.combat-history li:last-child { border-bottom: 0; }
+.combat-history time, .combat-history a { display: block; font: .72rem/1.7 monospace; }
+.combat-history time { color: #a6b5be; }
+.combat-history p { margin: 0; color: #b5c1c9; font-size: .81rem; line-height: 1.7; }
+.combat-sources { padding: 18px; border: 1px solid #344753; color: #aebac4; font-size: .8rem; line-height: 1.8; }
+.combat-sources summary { cursor: pointer; color: #d4dde2; }
+.combat-sources ul { margin-bottom: 0; padding-left: 22px; }
+@media (max-width: 1120px) {
+  .combat-caps { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .combat-curve-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .combat-caps { gap: 8px; }
+  .combat-caps article { padding: 16px; }
+  .combat-caps article > span { font-size: .6rem; }
+  .combat-caps strong { font-size: 2.3rem; }
+  .combat-columns { grid-template-columns: 1fr; }
+  .combat-panel-body { padding: 16px; }
+  .combat-panel > header small { display: none; }
+  .combat-formula { padding: 14px; }
+  .combat-formula > code { font-size: .75rem; }
+  .combat-history { padding-inline: 16px; }
+  .combat-history li { grid-template-columns: 1fr; gap: 8px; }
+  .combat-history li > div { display: flex; gap: 12px; }
+}
+
 .downloads-heading h1 { max-width: 900px; }
 .downloads-heading h1 a { color: var(--acid); }
 .downloads-heading h1 a:hover { text-decoration: underline; text-underline-offset: .12em; }

@@ -79,7 +79,7 @@
         <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i>LV</i><span>Level report</span><b>{{ site.Data.generated.level.group_count }}</b></a>
         <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "npc" }} aria-current="page"{{ end }}><i>EN</i><span>Enemy glossary</span><b>{{ site.Data.generated.npc.entry_count }}</b></a>
         <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "item" }} aria-current="page"{{ end }}><i>IT</i><span>Item archive</span><b>{{ site.Data.generated.item.count }}</b></a>
-        <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i>SY</i><span>Game systems</span><b>{{ site.Data.generated.system.report_count }}</b></a>
+        <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i>SY</i><span>Game systems</span><b>{{ len (where site.RegularPages "Section" "system") }}</b></a>
         <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "ability" }} aria-current="page"{{ end }}><i>AB</i><span>Ability archive</span><b>{{ site.Data.generated.ability.count }}</b></a>
         <a href="{{ "/buff/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "buff" }} aria-current="page"{{ end }}><i>BF</i><span>Buffs</span><b>{{ site.Data.generated.buff.count }}</b></a>
         <a href="{{ "/effect/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "effect" }} aria-current="page"{{ end }}><i>FX</i><span>Effects</span><b>{{ site.Data.generated.effect.count }}</b></a>

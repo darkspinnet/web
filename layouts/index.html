@@ -42,7 +42,7 @@
     <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"><span>EN</span><strong>Enemies</strong><b>{{ $npc.entry_count }}</b><small>combat classes indexed</small><i>→</i></a>
     <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"><span>IT</span><strong>Items</strong><b>{{ $item.count }}</b><small>equipment families decoded</small><i>→</i></a>
     <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"><span>AB</span><strong>Abilities</strong><b>{{ $ability.count }}</b><small>loadout assets linked</small><i>→</i></a>
-    <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"><span>SY</span><strong>Game systems</strong><b>{{ $system.report_count }}</b><small>runtime reports published</small><i>→</i></a>
+    <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"><span>SY</span><strong>Game systems</strong><b>{{ len (where site.RegularPages "Section" "system") }}</b><small>runtime reports published</small><i>→</i></a>
   </div>
 </section>
 

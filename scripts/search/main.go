@@ -205,6 +205,7 @@ func build(dataPath string) ([][]string, error) {
 		return nil, fmt.Errorf("systemCount: got %d, want 5", systems.ReportCount)
 	}
 	rows = append(rows,
+		searchRow("Combat & Resistance", "SYSTEM", "DEFENSE / DIMINISHING RETURNS", "/system/combat/", "combat resistance caps resist caps resists dodge defense caps armour armor mitigation damage reduction diminishing returns formulas physical energy science area periodic damage over time immunity shield NPC pet companion difficulty rating stacking Crushing Dread aura Soul Link Thorn Bark reflection Sprout Expunge catalyst debuff immunity Turtle charge protection multiplayer"),
 		searchRow("Drop Probabilities", "SYSTEM", "LOOT / SERVER RUNTIME", "/system/drops/", "drop probabilities loot equipment rarity basic uncommon rare epic capsule health power catalyst DNA chance server runtime"),
 		searchRow("XP & Progression", "SYSTEM", "XP / SERVER RUNTIME", "/system/progression/", "experience XP Crogenitor level curve table hero rewards progression server runtime"),
 		searchRow("Level Unlocks", "SYSTEM", "UPGRADES / HEROES", "/system/level-unlocks/", "level unlocks upgrades DNA costs catalysts inventory squads chain capacity flair heroes variants alpha beta gamma delta Crogenitor eligibility reward choices milestones"),

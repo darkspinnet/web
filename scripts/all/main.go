@@ -25,6 +25,7 @@ func main() {
 		{"run", "./scripts/npc", "-db", *databasePath},
 		{"run", "./scripts/level", "-db", *databasePath},
 		{"run", "./scripts/item"},
+		{"run", "./scripts/combat"},
 		{"run", "./scripts/search"},
 	}
 	if !*skipAssets {

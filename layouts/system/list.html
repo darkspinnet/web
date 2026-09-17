@@ -6,10 +6,14 @@
     <h1>{{ .Title }}</h1>
     <p>{{ .Description }}</p>
   </div>
-  <div class="page-counter"><strong>{{ $data.report_count }}</strong><span>LIVE RULE<br>REPORTS</span></div>
+  <div class="page-counter"><strong>{{ len (where site.RegularPages "Section" "system") }}</strong><span>LIVE RULE<br>REPORTS</span></div>
 </header>
 
 <section class="system-card-grid" aria-label="Server rule reports">
+  <a class="system-card" href="{{ "system/combat/" | relURL }}">
+    <span>COMBAT // CAPS & DIMINISHING RETURNS</span><strong>Combat & resistance</strong>
+    <p>Hero avoidance, resistance stacking, NPC defense caps, and worked damage examples from the reviewed server code.</p><i>CR →</i>
+  </a>
   <a class="system-card" href="{{ "/system/drops/" | strings.TrimPrefix "/" | relURL }}">
     <span>DROP MODEL // {{ $data.drops.rule_count }} ROLLS</span><strong>Loot probabilities</strong>
     <p>Enemy equipment rarity, capsule, catalyst, and DNA rolls with runtime conditions.</p><i>DR →</i>
@@ -33,10 +37,10 @@
 </section>
 
 <section class="console-panel system-method-panel">
-  <header><div><span>06</span><h2>Publication boundary</h2></div><small>SOURCE-DERIVED</small></header>
+  <header><div><span>07</span><h2>Publication boundary</h2></div><small>SOURCE-DERIVED</small></header>
   <div class="system-method-copy">
     <p>The archive generator reads named runtime operands from the Darkspin source tree, evaluates public server decisions, and refuses to publish if the expected source shape changes.</p>
-    <p>These pages describe the current local server policy. Re-running <code>mage system</code> refreshes every table after server-side tuning changes.</p>
+    <p>Reports describe the source snapshot used to generate them. Combat & resistance identifies the reviewed commit and excludes uncommitted tuning. Use <code>mage combat</code> to refresh that report; <code>mage system</code> refreshes the drop, progression, and reward tables.</p>
   </div>
 </section>
 {{ end }}

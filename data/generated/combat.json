@@ -1,0 +1,180 @@
+{
+  "revision": "b03fc3e007eec7a0442895ab98094e76f53d5a7c",
+  "short_revision": "b03fc3e",
+  "revision_date": "2026-09-17",
+  "revision_url": "https://github.com/darkspinnet/darkspin/commit/b03fc3e007eec7a0442895ab98094e76f53d5a7c",
+  "hero_avoidance": 0.75,
+  "hero_mitigation": 0.9,
+  "npc_passive": 0.5,
+  "npc_phase": 0.75,
+  "rating_samples": [
+    {
+      "rating_ratio": 0,
+      "hero_avoidance": 0,
+      "npc_reduction": 0
+    },
+    {
+      "rating_ratio": 0.25,
+      "hero_avoidance": 18.75,
+      "npc_reduction": 16.667
+    },
+    {
+      "rating_ratio": 0.5,
+      "hero_avoidance": 30,
+      "npc_reduction": 25
+    },
+    {
+      "rating_ratio": 1,
+      "hero_avoidance": 42.857,
+      "npc_reduction": 33.333
+    },
+    {
+      "rating_ratio": 2,
+      "hero_avoidance": 54.545,
+      "npc_reduction": 40
+    },
+    {
+      "rating_ratio": 5,
+      "hero_avoidance": 65.217,
+      "npc_reduction": 45.455
+    },
+    {
+      "rating_ratio": 10,
+      "hero_avoidance": 69.767,
+      "npc_reduction": 47.619
+    }
+  ],
+  "hit_samples": [
+    {
+      "name": "50% general + 50% science",
+      "incoming": 1000,
+      "before_cap": 250,
+      "floor": 100,
+      "damage": 250
+    },
+    {
+      "name": "Same reductions + 100 flat armor",
+      "incoming": 1000,
+      "before_cap": 150,
+      "floor": 100,
+      "damage": 150
+    },
+    {
+      "name": "Same reductions + 999 flat armor",
+      "incoming": 1000,
+      "before_cap": -749,
+      "floor": 100,
+      "damage": 100
+    },
+    {
+      "name": "Small hit with two 90% reductions",
+      "incoming": 5,
+      "before_cap": 0.05,
+      "floor": 1,
+      "damage": 1
+    },
+    {
+      "name": "Sub-one hit with two 90% reductions",
+      "incoming": 0.4,
+      "before_cap": 0.004,
+      "floor": 0.4,
+      "damage": 0.4
+    }
+  ],
+  "hero_curve": "50.00,220.00 55.00,210.62 60.00,202.35 65.00,195.00 70.00,188.42 75.00,182.50 80.00,177.14 85.00,172.27 90.00,167.83 95.00,163.75 100.00,160.00 105.00,156.54 110.00,153.33 115.00,150.36 120.00,147.59 125.00,145.00 130.00,142.58 135.00,140.31 140.00,138.18 145.00,136.18 150.00,134.29 155.00,132.50 160.00,130.81 165.00,129.21 170.00,127.69 175.00,126.25 180.00,124.88 185.00,123.57 190.00,122.33 195.00,121.14 200.00,120.00 205.00,118.91 210.00,117.87 215.00,116.88 220.00,115.92 225.00,115.00 230.00,114.12 235.00,113.27 240.00,112.45 245.00,111.67 250.00,110.91 255.00,110.18 260.00,109.47 265.00,108.79 270.00,108.14 275.00,107.50 280.00,106.89 285.00,106.29 290.00,105.71 295.00,105.16 300.00,104.62 305.00,104.09 310.00,103.58 315.00,103.09 320.00,102.61 325.00,102.14 330.00,101.69 335.00,101.25 340.00,100.82 345.00,100.41 350.00,100.00 355.00,99.61 360.00,99.22 365.00,98.85 370.00,98.48 375.00,98.12 380.00,97.78 385.00,97.44 390.00,97.11 395.00,96.79 400.00,96.47 405.00,96.16 410.00,95.86 415.00,95.57 420.00,95.28 425.00,95.00 430.00,94.73 435.00,94.46 440.00,94.19 445.00,93.94 450.00,93.68 455.00,93.44 460.00,93.20 465.00,92.96 470.00,92.73 475.00,92.50 480.00,92.28 485.00,92.06 490.00,91.84 495.00,91.63 500.00,91.43 505.00,91.23 510.00,91.03 515.00,90.83 520.00,90.64 525.00,90.45 530.00,90.27 535.00,90.09 540.00,89.91 545.00,89.74 550.00,89.57",
+  "npc_curve": "50.00,220.00 55.00,210.91 60.00,203.33 65.00,196.92 70.00,191.43 75.00,186.67 80.00,182.50 85.00,178.82 90.00,175.56 95.00,172.63 100.00,170.00 105.00,167.62 110.00,165.45 115.00,163.48 120.00,161.67 125.00,160.00 130.00,158.46 135.00,157.04 140.00,155.71 145.00,154.48 150.00,153.33 155.00,152.26 160.00,151.25 165.00,150.30 170.00,149.41 175.00,148.57 180.00,147.78 185.00,147.03 190.00,146.32 195.00,145.64 200.00,145.00 205.00,144.39 210.00,143.81 215.00,143.26 220.00,142.73 225.00,142.22 230.00,141.74 235.00,141.28 240.00,140.83 245.00,140.41 250.00,140.00 255.00,139.61 260.00,139.23 265.00,138.87 270.00,138.52 275.00,138.18 280.00,137.86 285.00,137.54 290.00,137.24 295.00,136.95 300.00,136.67 305.00,136.39 310.00,136.13 315.00,135.87 320.00,135.62 325.00,135.38 330.00,135.15 335.00,134.93 340.00,134.71 345.00,134.49 350.00,134.29 355.00,134.08 360.00,133.89 365.00,133.70 370.00,133.51 375.00,133.33 380.00,133.16 385.00,132.99 390.00,132.82 395.00,132.66 400.00,132.50 405.00,132.35 410.00,132.20 415.00,132.05 420.00,131.90 425.00,131.76 430.00,131.63 435.00,131.49 440.00,131.36 445.00,131.24 450.00,131.11 455.00,130.99 460.00,130.87 465.00,130.75 470.00,130.64 475.00,130.53 480.00,130.42 485.00,130.31 490.00,130.20 495.00,130.10 500.00,130.00 505.00,129.90 510.00,129.80 515.00,129.71 520.00,129.62 525.00,129.52 530.00,129.43 535.00,129.35 540.00,129.26 545.00,129.17 550.00,129.09",
+  "sources": [
+    {
+      "name": "Hero avoidance and mitigation",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/combat/defense.go"
+    },
+    {
+      "name": "NPC and companion defenses",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/zone/npc/defense.go"
+    },
+    {
+      "name": "Equipment and damage classification",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/defense.go"
+    },
+    {
+      "name": "NPC damage, vulnerability, and absorption",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/zone/npc/session.go"
+    },
+    {
+      "name": "Combat hits and scripted defeat",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/zone/npc/damage.go"
+    },
+    {
+      "name": "Passive and aura reductions",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/passive.go"
+    },
+    {
+      "name": "PvP shields and damage",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/arena.go"
+    },
+    {
+      "name": "Soul Link and hit reactions",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/combat.go"
+    },
+    {
+      "name": "Thorn Bark reflection",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/passive_thorn.go"
+    },
+    {
+      "name": "Enemy life drain",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/combat_drain.go"
+    },
+    {
+      "name": "Catalyst combat bonuses",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/session.go"
+    },
+    {
+      "name": "Damage and defense-based attack bonuses",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/game/damage.go"
+    },
+    {
+      "name": "Expunge's remaining-damage burst",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/gameplay/ability_expunge.go"
+    },
+    {
+      "name": "Area and single-target damage",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/zone/ability/area.go"
+    },
+    {
+      "name": "Sprout poison classification",
+      "url": "https://github.com/darkspinnet/darkspin/blob/b03fc3e007eec7a0442895ab98094e76f53d5a7c/server/zone/ability/cloud.go"
+    }
+  ],
+  "commits": [
+    {
+      "revision": "b03fc3e",
+      "date": "2026-09-17",
+      "summary": "Add various combat fixes",
+      "url": "https://github.com/darkspinnet/darkspin/commit/b03fc3e007eec7a0442895ab98094e76f53d5a7c"
+    },
+    {
+      "revision": "fe01774",
+      "date": "2026-09-17",
+      "summary": "Fix damage classifiers across board, Scripted deaths now bypass defenses and shields. Pet attacks and burns retain their damage classifications. Area and periodic resistance can apply together. Pets use their own authored defense ratings. PvP now honors finite TC shields without consuming them on rejected attacks. Enemy damage stages use consistent physical/energy classification.",
+      "url": "https://github.com/darkspinnet/darkspin/commit/fe01774621e4f76489b109df09fc1d5d19d7617a"
+    },
+    {
+      "revision": "85120bb",
+      "date": "2026-09-17",
+      "summary": "Add caps to NPC defenses",
+      "url": "https://github.com/darkspinnet/darkspin/commit/85120bb9ca243a3fa8bb97c48e70fd0b8f0b9c0f"
+    },
+    {
+      "revision": "d048acd",
+      "date": "2026-09-17",
+      "summary": "Fix item stat bug, nerf inc",
+      "url": "https://github.com/darkspinnet/darkspin/commit/d048acd673d60dacad5496736e01f0db896d0b21"
+    },
+    {
+      "revision": "77a89f0",
+      "date": "2026-09-17",
+      "summary": "Fix immunity caps and add fullscreen borderless",
+      "url": "https://github.com/darkspinnet/darkspin/commit/77a89f0c52478c35100768375147f49cad718715"
+    }
+  ]
+}

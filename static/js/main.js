@@ -637,6 +637,23 @@
     render(hashVariant(), !location.hash);
   };
 
+  const initializeCombatCalculator = () => {
+    const calculator = document.querySelector("[data-combat-calculator]");
+    if (!calculator) return;
+    const slider = calculator.querySelector("input[type='range']");
+    const heroCeiling = Number(calculator.dataset.heroCeiling);
+    const npcCeiling = Number(calculator.dataset.npcCeiling);
+    const render = () => {
+      const ratio = Number(slider.value);
+      calculator.querySelector("[data-combat-ratio]").textContent = `${ratio.toFixed(2)}×`;
+      calculator.querySelector("[data-combat-hero]").textContent = `${(100 * heroCeiling * ratio / (ratio + heroCeiling)).toFixed(2)}%`;
+      calculator.querySelector("[data-combat-npc]").textContent = `${(100 * npcCeiling * ratio / (ratio + npcCeiling)).toFixed(2)}%`;
+    };
+    slider.addEventListener("input", render);
+    render();
+  };
+
+  initializeCombatCalculator();
   initializeFilters();
   initializeNPC();
   initializeLevel();

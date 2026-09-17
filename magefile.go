@@ -131,7 +131,22 @@ func generateItem() error {
 	return nil
 }
 
-// System refreshes source-derived server drop, progression, and reward reports.
+// Combat refreshes the committed-source combat report and global lookup index.
+func Combat() error {
+	if err := generateCombat(); err != nil {
+		return err
+	}
+	return Search()
+}
+
+func generateCombat() error {
+	if err := run("go", "run", "./scripts/combat"); err != nil {
+		return fmt.Errorf("combat: %w", err)
+	}
+	return nil
+}
+
+// System refreshes source-derived drop, progression, and reward reports.
 func System() error {
 	if err := generateSystem(); err != nil {
 		return err
@@ -170,7 +185,7 @@ func Asset() error {
 
 // Generate refreshes every generated JSON catalog and image asset.
 func Generate() {
-	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, Search, Asset)
+	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, generateCombat, Search, Asset)
 }
 
 // Build writes the Hugo site to public using current generated inputs.
@@ -184,7 +199,7 @@ func Build() error {
 
 // All refreshes every generated input and then builds the Hugo site.
 func All() {
-	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, Search, Asset, Build)
+	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, generateCombat, Search, Asset, Build)
 }
 
 // Server starts the Hugo development server using the current generated data.

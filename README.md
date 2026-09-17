@@ -8,7 +8,7 @@ The site currently publishes:
 - an Enemy Glossary limited to verified killable combat classes, plus generated enemy detail pages;
 - seven level groups—Level 1 through Level 6 and Other—with dedicated reports and connected-component minimaps for campaign, PvP, tutorial, arena, small-map, Spectra/TNX, and test levels where prepared navigation exists;
 - an Item Archive containing decoded base equipment rigblocks, prefix/suffix applicability, and procedural medal, chain, and epic-chance rules;
-- a Game Systems reference generated from the server runtime, covering enemy drop probabilities, capsule weighting, the full 100-level XP curve, hero milestones, and Cash Out rewards;
+- a Game Systems reference generated from the server runtime, covering combat and resistance caps, diminishing returns, enemy drop probabilities, capsule weighting, the full 100-level XP curve, hero milestones, and Cash Out rewards;
 - an Ability Archive grouping recovered loadout assets by hero, variant, and slot;
 - a Status Effect Archive sourced from client localization and correlated with recovered abilities;
 - a general Glossary for combat, hero, equipment, and archive terminology;
@@ -44,7 +44,15 @@ Refresh everything and then build Hugo:
 mage all
 ```
 
-Individual generators are available as `mage hero`, `mage ability`, `mage buff`, `mage effect`, `mage glossary`, `mage npc`, `mage level`, `mage item`, `mage system`, `mage asset`, and `mage search`. `mage generate` runs the data and asset generators without building Hugo.
+Individual generators are available as `mage hero`, `mage ability`, `mage buff`, `mage effect`, `mage glossary`, `mage npc`, `mage level`, `mage item`, `mage system`, `mage combat`, `mage asset`, and `mage search`. `mage generate` runs the data and asset generators without building Hugo.
+
+## Combat and resistance report
+
+`/system/combat/` documents hero avoidance and mitigation, NPC ordinary and temporary-reduction caps, multiplicative stacking, flat armor, and separate shield/immunity rules. It also covers party auras, companion defenses, multiplayer debuffs, and hit reactions. It includes a rating curve explorer, worked examples, recent combat commits, and links to the exact source revision.
+
+Run `mage combat` after committing Darkspin tuning changes, then `mage build`. The combat generator resolves the sibling repository's `HEAD` once and reads committed files with `git show`; uncommitted combat work is excluded. It writes `data/generated/combat.json` independently of the loot and reward generators. `go run ./scripts/combat -server D:/src/darkspin` can also generate the report directly; follow it with `mage search` to refresh the global index.
+
+Caps are extracted from source constants. Decision functions are compared with the reviewed revision in `scripts/combat/main.go`, with formatting and comments ignored. Cap-only changes refresh the generated numbers and curves. Changes to those functions stop generation before replacing the catalog; review the report text, formulas, calculator, and examples against the new implementation before advancing `reviewedCombatRevision`. Builds use the committed generated catalog, so Firebase CI does not need a sibling Darkspin checkout. Updating Darkspin alone does not republish the website.
 
 ## Navigation minimaps
 
@@ -88,6 +96,7 @@ go run ./scripts/npc
 go run ./scripts/level
 go run ./scripts/item
 go run ./scripts/system
+go run ./scripts/combat
 go run ./scripts/assets
 go run ./scripts/search
 ```
