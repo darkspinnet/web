@@ -35,6 +35,8 @@
   <meta name="twitter:card" content="summary">
   {{- end }}
   <title>{{ $pageTitle }}</title>
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" sizes="16x16">
+  <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png" sizes="16x16">
   <style>html,body{min-height:100%;margin:0;background:#090c10;color:#e9edf1;color-scheme:dark}</style>
   {{- $css := resources.FromString "css/main.bundle.css" (readFile "static/css/main.css") | fingerprint -}}
   {{- $js := resources.FromString "js/main.bundle.js" (readFile "static/js/main.js") | fingerprint -}}
