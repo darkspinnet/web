@@ -1,0 +1,45 @@
+{{ define "main" }}
+<header class="page-hero downloads-heading">
+  <div>
+    <p class="eyebrow"><span>LAUNCHER</span> // DOWNLOADS</p>
+    <h1>Welcome to the <a href="{{ "" | relURL }}">darkspin.net</a> project!</h1>
+    <p>Download the latest stable release of Darkspinner for your platform, then follow the setup steps below.</p>
+  </div>
+</header>
+
+<div class="downloads-content">
+  <section class="download-feature" aria-labelledby="windows-download-title">
+    <div>
+      <p class="eyebrow"><span>STABLE RELEASE</span></p>
+      <h2 id="windows-download-title">Darkspinner for Windows</h2>
+      <p>Windows 64-bit · ZIP archive</p>
+    </div>
+    <a class="download-primary" href="{{ (index .Params.targets 0).stable }}">Download for Windows <span aria-hidden="true">↓</span></a>
+  </section>
+
+  <section class="console-panel downloads-panel" aria-labelledby="all-downloads-title">
+    <header><div><span>01</span><h2 id="all-downloads-title">Latest releases</h2></div><small>STABLE · ZIP</small></header>
+    <div class="downloads-table-scroll" role="region" aria-labelledby="all-downloads-title" tabindex="0">
+      <table class="downloads-table" aria-labelledby="all-downloads-title">
+        <thead><tr><th scope="col">Platform</th><th scope="col">Latest release</th></tr></thead>
+        <tbody>
+          {{ range .Params.targets }}
+          <tr>
+            <th scope="row"><strong>{{ .label }}</strong><code>{{ .target }}</code>{{ with .note }}<small>{{ . }}</small>{{ end }}</th>
+            <td><a class="download-zip" href="{{ .stable }}" aria-label="Download Darkspinner for {{ .target }} (ZIP)">ZIP <span aria-hidden="true">↓</span></a></td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="download-setup" aria-labelledby="download-setup-title">
+    <p class="eyebrow"><span>02</span> // GET STARTED</p>
+    <h2 id="download-setup-title">Set up Darkspinner</h2>
+    <div class="download-setup-grid">
+      <article><h3>Windows</h3><p>Open the ZIP, double-click the program inside, and follow its setup steps.</p></article>
+      <article><h3>macOS and Linux</h3><p>Extract <code>darkspinner</code> and place it in the root of your game’s folder.</p></article>
+    </div>
+  </section>
+</div>
+{{ end }}

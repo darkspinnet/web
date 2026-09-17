@@ -53,14 +53,17 @@
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="{{ "/" | strings.TrimPrefix "/" | relURL }}" aria-label="Darkspin Archive home">
-        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <img class="brand-logo" src="{{ "logo.png" | relURL }}" alt="" width="34" height="36">
         <span><strong>DARKSPIN</strong><small>SERVER PROJECT</small></span>
       </a>
       <div class="global-search">
         <label><span aria-hidden="true">⌕</span><input type="search" placeholder="Search hero, level, enemy, item, ability, term…" aria-label="Search all archive records" autocomplete="off" data-global-search="{{ "/data/search/index.json" | strings.TrimPrefix "/" | relURL }}"></label>
         <div class="global-search-result" data-global-result hidden></div>
       </div>
-      <div class="system-state"><span></span> DATABASE ONLINE</div>
+      <nav class="topbar-actions" aria-label="Project links">
+        <a class="header-button download-link" href="{{ "download/" | relURL }}"{{ if eq .Section "download" }} aria-current="page"{{ end }}>Download <span aria-hidden="true">↓</span></a>
+        <a class="header-button discord-link" href="https://discord.gg/pg8uvwtVBS" target="_blank" rel="noopener noreferrer" aria-label="Join the Darkspin Discord (opens in a new tab)">Discord <span aria-hidden="true">↗</span></a>
+      </nav>
     </header>
 
     <aside class="sidebar">
