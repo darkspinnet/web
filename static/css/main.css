@@ -339,6 +339,9 @@ body::before { opacity: .08; background-size: 32px 32px; }
 .header-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 0 14px; border: 1px solid; border-radius: 4px; font: 700 .68rem/1 monospace; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
 .discord-link { border-color: #8790ff; background: #4752c4; color: #fff; }
 .discord-link:hover { background: #5865f2; border-color: #b4baff; }
+.header-button.github-link { flex-shrink: 0; width: 36px; padding: 0; border-color: #657589; background: #1a2532; color: #edf2f5; }
+.header-button.github-link:hover { border-color: #a3b8ce; background: #2b3b4e; }
+.github-link svg { display: block; }
 .download-link { border-color: #b7cd57; background: #c6df55; color: #11170b; }
 .download-link:hover, .download-link[aria-current="page"] { border-color: #e4f7a4; background: var(--acid); }
 .header-button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
