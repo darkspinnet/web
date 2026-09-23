@@ -16,15 +16,15 @@
         <div class="hero-portrait-preview" aria-hidden="true"><img src="{{ $canonical.image | strings.TrimPrefix "/" | relURL }}" alt="" width="300" height="300">{{ $opening := index (split $hero.biography "\n") 0 }}<p>{{ $opening }}</p></div>
       </div>
       <div class="hero-game-identity">
-        <div><strong>{{ upper $hero.name }}</strong><sup data-hero-active-variant>{{ upper $baseline.variant }}</sup></div>
-        <h2>{{ upper $hero.title }}</h2>
+        <div><strong>{{ $hero.name }}</strong><sup data-hero-active-variant>{{ $baseline.variant }}</sup></div>
+        <h2>{{ $hero.title }}</h2>
         <p><span>{{ $hero.element }}</span><i>◆</i><span>{{ $hero.class }}</span></p>
       </div>
-      <div class="hero-game-profile-state"><span>ACTIVE PROFILE</span><strong data-hero-active-metric>{{ upper $baseline.variant }}</strong><code data-hero-active-id>ID {{ $baseline.id }}</code></div>
+      <div class="hero-game-profile-state"><span>Active profile</span><strong data-hero-active-metric>{{ $baseline.variant }}</strong><code data-hero-active-id>ID {{ $baseline.id }}</code></div>
     </header>
 
     <nav class="hero-profile-tabs" aria-label="Hero variant profile">
-      {{ range $hero.variants }}<button type="button" data-hero-variant="{{ lower .variant }}"{{ if eq .variant $baseline.variant }} class="is-active"{{ end }}>{{ upper .variant }}</button>{{ end }}
+      {{ range $hero.variants }}<button type="button" data-hero-variant="{{ lower .variant }}"{{ if eq .variant $baseline.variant }} class="is-active"{{ end }}>{{ .variant }}</button>{{ end }}
     </nav>
   </div>
 
@@ -46,7 +46,7 @@
       </section>
 
       <section class="hero-stat-panel">
-        <header><div><span>BASE STATS</span><h2 data-hero-active-name>{{ $baseline.name }}</h2></div><small>UNEQUIPPED / BUILD 103</small></header>
+        <header><div><span>BASE STATS</span><h2 data-hero-active-name>{{ $baseline.name }}</h2></div><small>UNEQUIPPED</small></header>
         <div class="hero-stat-block is-primary">
           <div><span>Health</span><strong data-hero-stat="health">{{ printf "%.0f" $baseline.stats.health }}</strong><i data-hero-stat-delta="health">BASELINE</i></div>
           <div><span>Power</span><strong data-hero-stat="power">{{ printf "%.0f" $baseline.stats.power }}</strong><i data-hero-stat-delta="power">BASELINE</i></div>

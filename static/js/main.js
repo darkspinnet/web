@@ -269,6 +269,13 @@
         input.blur();
       }
     });
+    document.addEventListener("keydown", (event) => {
+      if (event.key.toLowerCase() === "k" && (event.ctrlKey || event.metaKey)) {
+        event.preventDefault();
+        input.focus();
+        input.select();
+      }
+    });
     document.addEventListener("pointerdown", (event) => {
       if (!event.target.closest(".global-search")) close();
     });

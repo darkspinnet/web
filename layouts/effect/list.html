@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $data := site.Data.generated.effect }}
 <header class="page-hero">
-  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // EFFECTS</p><h1>{{ .Title }}</h1><p>Build-103 visual-effect identifiers. Copy a command to preview an effect in game.</p></div>
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // EFFECTS</p><h1>{{ .Title }}</h1><p>Recovered visual-effect identifiers. Copy a command to preview an effect in game.</p></div>
   <div class="page-counter"><strong>{{ $data.count }}</strong><span>VFX<br>RECORDS</span></div>
 </header>
 <section class="control-rack effect-controls" aria-label="Effect filters">

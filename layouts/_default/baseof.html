@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.Language.LanguageCode }}">
+<html lang="{{ .Site.Language.LanguageCode }}" class="dark">
 <head>
   {{- $pageTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
   {{- $pageDescription := .Site.Params.description -}}
@@ -17,7 +17,7 @@
   {{- end -}}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0d11">
+  <meta name="theme-color" content="#09090b">
   <meta name="color-scheme" content="dark">
   <meta name="description" content="{{ $pageDescription }}">
   <meta property="og:type" content="website">
@@ -37,7 +37,7 @@
   <title>{{ $pageTitle }}</title>
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" sizes="16x16">
   <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png" sizes="16x16">
-  <style>html,body{min-height:100%;margin:0;background:#090c10;color:#e9edf1;color-scheme:dark}</style>
+  <style>html,body{min-height:100%;margin:0;background:#09090b;color:#fafafa;color-scheme:dark}</style>
   {{- $css := resources.FromString "css/main.bundle.css" (readFile "static/css/main.css") | fingerprint -}}
   {{- $js := resources.FromString "js/main.bundle.js" (readFile "static/js/main.js") | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
@@ -56,10 +56,10 @@
     <header class="topbar">
       <a class="brand" href="{{ "/" | strings.TrimPrefix "/" | relURL }}" aria-label="Darkspin Archive home">
         <img class="brand-logo" src="{{ "logo.png" | relURL }}" alt="" width="34" height="36">
-        <span><strong>DARKSPIN</strong><small>SERVER PROJECT</small></span>
+        <span class="brand-wordmark"><span>DARK</span> <strong>SPIN</strong></span>
       </a>
       <div class="global-search">
-        <label><span aria-hidden="true">⌕</span><input type="search" placeholder="Search hero, level, enemy, item, ability, term…" aria-label="Search all archive records" autocomplete="off" data-global-search="{{ "/data/search/index.json" | strings.TrimPrefix "/" | relURL }}"></label>
+        <label><span aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></span><input type="search" placeholder="Search the archive…" aria-label="Search all archive records" autocomplete="off" data-global-search="{{ "/data/search/index.json" | strings.TrimPrefix "/" | relURL }}"><kbd>Ctrl K</kbd></label>
         <div class="global-search-result" data-global-result hidden></div>
       </div>
       <nav class="topbar-actions" aria-label="Project links">
@@ -74,27 +74,21 @@
     <aside class="sidebar">
       <nav class="side-nav" aria-label="Archive navigation">
         <p>ARCHIVE</p>
-        <a href="{{ "/" | strings.TrimPrefix "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><i>OV</i><span>Overview</span></a>
-        <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "hero" }} aria-current="page"{{ end }}><i>HR</i><span>Hero matrix</span><b>{{ site.Data.generated.hero.family_count }}</b></a>
-        <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i>LV</i><span>Level report</span><b>{{ site.Data.generated.level.group_count }}</b></a>
-        <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "npc" }} aria-current="page"{{ end }}><i>EN</i><span>Enemy glossary</span><b>{{ site.Data.generated.npc.entry_count }}</b></a>
-        <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "item" }} aria-current="page"{{ end }}><i>IT</i><span>Item archive</span><b>{{ site.Data.generated.item.count }}</b></a>
-        <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i>SY</i><span>Game systems</span><b>{{ len (where site.RegularPages "Section" "system") }}</b></a>
-        <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "ability" }} aria-current="page"{{ end }}><i>AB</i><span>Ability archive</span><b>{{ site.Data.generated.ability.count }}</b></a>
-        <a href="{{ "/buff/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "buff" }} aria-current="page"{{ end }}><i>BF</i><span>Buffs</span><b>{{ site.Data.generated.buff.count }}</b></a>
-        <a href="{{ "/effect/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "effect" }} aria-current="page"{{ end }}><i>FX</i><span>Effects</span><b>{{ site.Data.generated.effect.count }}</b></a>
-        <a href="{{ "/glossary/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "glossary" }} aria-current="page"{{ end }}><i>GL</i><span>Glossary</span><b>{{ site.Data.generated.glossary.count }}</b></a>
+        <a href="{{ "/" | strings.TrimPrefix "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i><span>Overview</span></a>
+        <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "hero" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></i><span>Heroes</span><b>{{ site.Data.generated.hero.family_count }}</b></a>
+        <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><path d="M9 3v15M15 6v15"/></svg></i><span>Levels</span><b>{{ site.Data.generated.level.group_count }}</b></a>
+        <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "npc" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8v4a3 3 0 0 0 3 3v3h10v-3a3 3 0 0 0 3-3v-4a8 8 0 0 0-8-8Z"/><circle cx="9" cy="11" r="1"/><circle cx="15" cy="11" r="1"/></svg></i><span>Enemies</span><b>{{ site.Data.generated.npc.entry_count }}</b></a>
+        <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "item" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6Z"/><path d="m3 9 18 0M9 3l-2 6 5 12 5-12-2-6"/></svg></i><span>Items</span><b>{{ site.Data.generated.item.count }}</b></a>
+        <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></i><span>Systems</span><b>{{ len (where site.RegularPages "Section" "system") }}</b></a>
+        <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "ability" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></i><span>Abilities</span><b>{{ site.Data.generated.ability.count }}</b></a>
+        <a href="{{ "/buff/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "buff" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></i><span>Buffs</span><b>{{ site.Data.generated.buff.count }}</b></a>
+        <a href="{{ "/effect/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "effect" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="m12 3 1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg></i><span>Effects</span><b>{{ site.Data.generated.effect.count }}</b></a>
+        <a href="{{ "/glossary/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "glossary" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14Z"/><path d="M8 7h8M8 11h6"/></svg></i><span>Glossary</span><b>{{ site.Data.generated.glossary.count }}</b></a>
       </nav>
-      <div class="sidebar-meta">
-        <span>CONTENT SOURCE</span>
-        <b>content.db</b>
-        <small>DBPF / SQLite<br>local immutable cache</small>
-      </div>
     </aside>
 
     <main class="workspace" id="main">
       {{ block "main" . }}{{ end }}
-      <footer class="workspace-footer"><span>DARKSPIN RESEARCH NODE</span><span>LOCAL CONTENT ARCHIVE</span><span>BUILD {{ now.Format "2006.01.02" }}</span></footer>
     </main>
   </div>
 </body>

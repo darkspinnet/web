@@ -65,7 +65,7 @@ type effectEvidence struct {
 }
 
 // This table is intentionally conservative. Entries are added only when a
-// build-103 consumer and its packet shape were recovered. Asset/package names
+// client consumer and its packet shape were recovered. Asset/package names
 // and Lua string constants never promote an effect into the usable set.
 var recoveredEvidence = map[string]effectEvidence{
 	"LT_jetpack_effect_lvl1": lightspeedTempestEffect(),
@@ -265,7 +265,7 @@ func applyEvidence(entry effectEntry) effectEntry {
 	} else {
 		entry.Source = "Lua string constant only"
 	}
-	entry.Note = "No recovered build-103 consumer; not safe for server preview."
+	entry.Note = "No recovered consumer; not safe for server preview."
 	if evidence, found := recoveredEvidence[entry.Name]; found {
 		entry.Consumption = evidence.Consumption
 		entry.Verification = evidence.Verification
