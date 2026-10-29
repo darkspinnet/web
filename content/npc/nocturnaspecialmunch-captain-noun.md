@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Munch Captain"
+title = "Kane the Chief Cannibal"
 npc = "nocturnaspecialmunch-captain-noun"
 generated = true
 +++

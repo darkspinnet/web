@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Charge 2"
+title = "Blitzing Grendel"
 npc = "cryosbasiccharge-2-noun"
 generated = true
 +++

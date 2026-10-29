@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Two.noun"
+title = "Magnetic Master"
 npc = "zelemspecialtwo-noun"
 generated = true
 +++

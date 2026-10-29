@@ -1,5 +1,5 @@
 +++
-title = "nct lieu su stealther"
+title = "Pterodyne"
 npc = "nct-lieu-su-stealther-noun"
 generated = true
 +++

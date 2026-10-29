@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Melee Dog"
+title = "Distracted Mongrel"
 npc = "noctbasicmeleedog-noun"
 generated = true
 +++

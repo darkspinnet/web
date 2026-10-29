@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Rootmob"
+title = "Dread Root"
 npc = "verdanthbasicrootmob-noun"
 generated = true
 +++

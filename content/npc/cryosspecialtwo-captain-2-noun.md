@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Two Captain 2"
+title = "Astri the Magnificent Igniter"
 npc = "cryosspecialtwo-captain-2-noun"
 generated = true
 +++

@@ -18,13 +18,13 @@ func main() {
 	flag.Parse()
 	tools := [][]string{
 		{"run", "./scripts/hero", "-db", *databasePath},
+		{"run", "./scripts/npc", "-db", *databasePath, "-game", *gamePath},
 		{"run", "./scripts/ability", "-db", *databasePath, "-game", *gamePath},
 		{"run", "./scripts/buff", "-db", *databasePath},
 		{"run", "./scripts/effect", "-db", *databasePath, "-game", *gamePath},
 		{"run", "./scripts/glossary"},
-		{"run", "./scripts/npc", "-db", *databasePath},
 		{"run", "./scripts/level", "-db", *databasePath},
-		{"run", "./scripts/item"},
+		{"run", "./scripts/item", "-db", *databasePath, "-game", *gamePath},
 		{"run", "./scripts/combat"},
 		{"run", "./scripts/search"},
 	}

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two Captain 2"
+title = "Roart the Blitzkrieg"
 npc = "nomadbiospecialtwo-captain-2-noun"
 generated = true
 +++

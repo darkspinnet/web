@@ -1,29 +1,38 @@
 {{ define "main" }}
 {{ $ability := index site.Data.generated.ability.entry .Params.ability }}
+{{ $enemies := $ability.enemies | default (slice) }}
 {{ $relatedStatus := slice }}
 {{ range site.Data.generated.buff.items }}
   {{ $status := . }}
   {{ range .abilities }}{{ if eq .slug $ability.slug }}{{ $relatedStatus = $relatedStatus | append $status }}{{ end }}{{ end }}
 {{ end }}
+{{ $modeBadge := partial "ability-enemy-mode.html" $ability }}
 <header class="page-hero ability-detail-heading">
-  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}">ABILITY ARCHIVE</a> // {{ upper $ability.name }}</p><h1>{{ $ability.name }}</h1><p>Recovered hero ability ownership record.</p></div>
+  <div><p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}">ABILITY ARCHIVE</a> // {{ upper $ability.name }}</p><h1>{{ $ability.name }}{{ with $modeBadge }} <span class="ability-mode-badge mode-{{ lower . }}">{{ . }}</span>{{ end }}</h1><p>Recovered ability record and known users.</p></div>
   <span class="ability-sigil ability-sigil-large slot-{{ $ability.primary_slot }}">{{ if $ability.icon_path }}<img src="{{ $ability.icon_path | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" decoding="async">{{ else }}{{ upper (substr $ability.name 0 2) }}{{ end }}</span>
 </header>
 <section class="detail-metric">
-  <div><span>PRIMARY SLOT</span><strong class="detail-word">{{ replace $ability.primary_slot "_" " " }}</strong><small>LOADOUT POSITION</small></div>
-  <div><span>HERO FAMILIES</span><strong>{{ len $ability.heroes }}</strong><small>KNOWN OWNERS</small></div>
-  <div><span>PROFILE USES</span><strong>{{ $ability.usage_count }}</strong><small>ALPHA THROUGH DELTA</small></div>
-  <div><span>ASSET STATE</span><strong class="word-stat">{{ if $ability.combat }}DECODED{{ else }}RECOVERED{{ end }}</strong><small>{{ if $ability.combat }}RANK 1 SCRIPT DATA{{ else if $ability.description }}ICON + LOCALIZED TEXT{{ else }}ICON + LOADOUT LINK{{ end }}</small></div>
+  <div><span>PRIMARY SLOT</span><strong class="detail-word">{{ replace $ability.primary_slot "_" " " }}</strong><small>{{ if $ability.heroes }}LOADOUT POSITION{{ else }}ENEMY ABILITY{{ end }}</small></div>
+  <div><span>KNOWN OWNERS</span><strong>{{ add (len $ability.heroes) (len $enemies) }}</strong><small>HEROES / ENEMIES</small></div>
+  <div><span>KNOWN USES</span><strong>{{ $ability.usage_count }}</strong><small>RECOVERED REFERENCES</small></div>
+  <div><span>ASSET STATE</span><strong class="word-stat">{{ if $ability.combat }}DECODED{{ else }}RECOVERED{{ end }}</strong><small>{{ if $ability.combat }}RANK 1 SCRIPT DATA{{ else if $ability.description }}LOCALIZED TEXT{{ else }}OWNERSHIP LINK{{ end }}</small></div>
 </section>
 <section class="detail-grid ability-detail-grid">
   <article class="console-panel ability-summary-panel">
     <header><div><span>01</span><h2>Ability record</h2></div><small>PACKAGE REFERENCE</small></header>
-    <div class="ability-summary-body"><span class="ability-sigil ability-sigil-large slot-{{ $ability.primary_slot }}">{{ if $ability.icon_path }}<img src="{{ $ability.icon_path | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" decoding="async">{{ else }}{{ upper (substr $ability.name 0 2) }}{{ end }}</span><div><h2>{{ $ability.name }}</h2><p>{{ with $ability.description }}{{ . }}{{ else }}The authored icon and hero loadout relationship are recovered. A reliable localized description has not yet been linked to this internal ability identifier.{{ end }}</p><code>{{ $ability.asset_name }}</code></div></div>
+    <div class="ability-summary-body"><span class="ability-sigil ability-sigil-large slot-{{ $ability.primary_slot }}">{{ if $ability.icon_path }}<img src="{{ $ability.icon_path | strings.TrimPrefix "/" | relURL }}" alt="" width="64" height="64" decoding="async">{{ else }}{{ upper (substr $ability.name 0 2) }}{{ end }}</span><div><h2>{{ $ability.name }}</h2><p>{{ with $ability.description }}{{ . }}{{ else }}The ownership relationship is recovered. A reliable localized description has not yet been linked to this ability identifier.{{ end }}</p>{{ with $ability.description_basis }}<p class="muted"><small>{{ . }}</small></p>{{ end }}<code>{{ $ability.asset_name }}</code></div></div>
   </article>
-  <article class="console-panel ability-owner-panel">
+  {{ if $ability.heroes }}<article class="console-panel ability-owner-panel">
     <header><div><span>02</span><h2>Hero ownership</h2></div><small>{{ len $ability.heroes }} FAMILIES</small></header>
     <div class="ability-owner-list">{{ range $ability.heroes }}<a href="{{ printf "/hero/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><span class="element-badge element-{{ .element | lower }}">{{ .element }}</span><div><strong>{{ .name }}</strong><small>{{ .class }} // {{ delimit .variants " / " }}</small></div><b>{{ delimit .slots " / " | upper }}</b><i>→</i></a>{{ end }}</div>
   </article>
+  {{ end }}
+  {{ if $enemies }}
+  <article class="console-panel ability-owner-panel">
+    <header><div><span>02</span><h2>Enemy ownership</h2></div><small>{{ len $enemies }} CREATURES / DESTRUCTABLES</small></header>
+    <div class="ability-owner-list">{{ range $enemies }}<a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}"><span class="element-badge element-{{ .element | lower }}">{{ .element | default "—" | upper }}</span><div><strong>{{ .name }}</strong><small>{{ replace (delimit .slots " / ") "_" " " | upper }}</small></div><i>→</i></a>{{ end }}</div>
+  </article>
+  {{ end }}
 </section>
 {{ if gt (len $relatedStatus) 0 }}
 <section class="console-panel ability-status-panel">

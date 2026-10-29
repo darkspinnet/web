@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Stealth 2"
+title = "Cloaked Slayer"
 npc = "nocturnabasicstealth-2-noun"
 generated = true
 +++

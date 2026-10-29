@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Three 3"
+title = "Laser Tank Gamma"
 npc = "citadelspecialthree-3-noun"
 generated = true
 +++

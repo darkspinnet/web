@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab cryos ACunit small animated"
+title = "Ecostabilizer"
 npc = "dest-prefab-cryos-acunit-small-animated-noun"
 generated = true
 +++

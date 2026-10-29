@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Three Captain 3"
+title = "Ulf the Dark Sunderer"
 npc = "cryosspecialthree-captain-3-noun"
 generated = true
 +++

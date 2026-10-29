@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Melee 2"
+title = "Pyro Devastator"
 npc = "citadelbasicmelee-2-noun"
 generated = true
 +++

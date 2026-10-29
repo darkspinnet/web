@@ -1,5 +1,5 @@
 +++
-title = "Nomad Ruption Captain 3"
+title = "Marqx the Fiery Terror"
 npc = "nomadruption-captain-3-noun"
 generated = true
 +++

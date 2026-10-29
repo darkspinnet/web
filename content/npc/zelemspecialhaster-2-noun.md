@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Haster 2.noun"
+title = "Temporal Haster"
 npc = "zelemspecialhaster-2-noun"
 generated = true
 +++

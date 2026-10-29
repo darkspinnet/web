@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab spectra object ghosttotem"
+title = "Ghost Totem"
 npc = "dest-prefab-spectra-object-ghosttotem-noun"
 generated = true
 +++

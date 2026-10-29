@@ -1,0 +1,12 @@
+{{/* Global badges only apply when every known enemy user is a later variant. */}}
+{{ $rank := 4 }}
+{{ if not .heroes }}
+  {{ range .enemies }}
+    {{ $owner := index site.Data.generated.npc.entry .slug }}
+    {{ $ownerRank := 1 }}{{ with $owner.npc_rank }}{{ $ownerRank = int . }}{{ end }}
+    {{ if lt $ownerRank $rank }}{{ $rank = $ownerRank }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $badge := "" }}
+{{ if eq $rank 2 }}{{ $badge = "Invasion" }}{{ else if eq $rank 3 }}{{ $badge = "Apocalypse" }}{{ end }}
+{{ return $badge }}

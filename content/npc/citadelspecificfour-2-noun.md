@@ -1,5 +1,5 @@
 +++
-title = "Citadel Specific Four 2"
+title = "Force Blastopod"
 npc = "citadelspecificfour-2-noun"
 generated = true
 +++

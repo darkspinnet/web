@@ -1,5 +1,5 @@
 +++
-title = "DEST nocturna herotree yellow 1"
+title = "Nightmare Vines"
 npc = "dest-nocturna-herotree-yellow-1-noun"
 generated = true
 +++

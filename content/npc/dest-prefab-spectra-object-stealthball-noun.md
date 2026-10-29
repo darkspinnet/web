@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab spectra object stealthball"
+title = "Soul Crate"
 npc = "dest-prefab-spectra-object-stealthball-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Munch Captain 2"
+title = "Beelzebub the All-Consuming"
 npc = "nocturnaspecialmunch-captain-2-noun"
 generated = true
 +++

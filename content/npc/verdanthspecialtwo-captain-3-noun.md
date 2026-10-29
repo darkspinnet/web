@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special Two Captain 3"
+title = "Kobw the Maleficent"
 npc = "verdanthspecialtwo-captain-3-noun"
 generated = true
 +++

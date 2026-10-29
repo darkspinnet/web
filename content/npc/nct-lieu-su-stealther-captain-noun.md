@@ -1,5 +1,5 @@
 +++
-title = "nct lieu su stealther Captain"
+title = "Khoo the Unseen"
 npc = "nct-lieu-su-stealther-captain-noun"
 generated = true
 +++

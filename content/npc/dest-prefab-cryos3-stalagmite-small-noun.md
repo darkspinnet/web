@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab cryos3 stalagmite small"
+title = "Stalagmite"
 npc = "dest-prefab-cryos3-stalagmite-small-noun"
 generated = true
 +++

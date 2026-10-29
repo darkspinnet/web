@@ -1,39 +1,30 @@
 {{ define "main" }}
 {{ $npc := index site.Data.generated.npc.entry .Params.npc }}
-<header class="page-hero npc-detail-heading">
-  <div>
-    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}">ENEMY GLOSSARY</a> // {{ upper $npc.name }}</p>
-    <h1>{{ $npc.name }}</h1>
-    <p><code>{{ $npc.asset_name }}</code></p>
+<nav class="npc-breadcrumb" aria-label="Breadcrumb"><a data-npc-context-link href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}">Enemies</a><span aria-hidden="true"> / </span><span>{{ $npc.name }}</span></nav>
+{{ partial "npc-difficulty.html" . }}
+<div class="npc-detail-layout">
+<article class="console-panel npc-profile" data-npc-profile data-base-hp="{{ $npc.hit_points }}" data-party-health="{{ $npc.player_count_health_scale }}" data-health-policy="{{ $npc.health_scaling }}">
+  <header><h1>{{ $npc.name }}</h1><small>{{ $npc.asset_name }}</small></header>
+  <div class="npc-profile-summary">
+    <div class="npc-profile-portrait">{{ with $npc.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $npc.name }}" width="240" height="240" loading="lazy" decoding="async">{{ else }}<span>Portrait unavailable</span>{{ end }}</div>
+    <div class="npc-profile-health"><span>Total HP</span><strong data-npc-health>{{ if isset $npc "hit_points" }}{{ printf "%g" $npc.hit_points }}{{ else }}—{{ end }}</strong><small data-npc-health-basis>Base health</small></div>
   </div>
-  <div class="entity-state is-combat"><span></span>VERIFIED ENEMY</div>
-</header>
-
-<section class="detail-metric">
-  <div><span>INSTANCE ID</span><strong>{{ $npc.instance_id }}</strong><small>FNV RESOURCE KEY</small></div>
-  <div><span>HIT POINT</span><strong>{{ with $npc.hit_points }}{{ printf "%.0f" . }}{{ else }}—{{ end }}</strong><small>DECODED CLASS VALUE</small></div>
-  <div><span>PLACEMENT</span><strong>{{ len $npc.placements }}</strong><small>LEVEL REFERENCES</small></div>
-  <div><span>ENTITY TYPE</span><strong class="detail-word">{{ if $npc.is_combatant }}COMBAT{{ else }}NOUN{{ end }}</strong><small>VERIFICATION STATE</small></div>
-</section>
-
-<section class="detail-grid">
-  <article class="console-panel entity-card">
-    <header><div><span>01</span><h2>Entity identity</h2></div><small>CONTENT DATABASE</small></header>
-    <dl>
-      <div><dt>Display name</dt><dd>{{ $npc.name }}</dd></div>
-      <div><dt>Asset name</dt><dd><code>{{ $npc.asset_name }}</code></dd></div>
-      <div><dt>URL key</dt><dd><code>{{ $npc.slug }}</code></dd></div>
-      <div><dt>Instance</dt><dd><code>{{ $npc.instance_id }}</code></dd></div>
-      <div><dt>Combat class</dt><dd>Verified</dd></div>
-    </dl>
-  </article>
-
-  <article class="console-panel placement-card">
-    <header><div><span>02</span><h2>Level placement</h2></div><small>{{ len $npc.placements }} RECORDS</small></header>
-    <div class="placement-table">
-      <div class="placement-head"><span>LEVEL</span><span>SOURCE</span><span></span></div>
-      {{ range $npc.placements }}<a href="{{ printf "/level/%s/" .level_slug | strings.TrimPrefix "/" | relURL }}"><strong>{{ .level }}</strong><span>{{ delimit .sources ", " | upper }}</span><em>→</em></a>{{ end }}
-    </div>
-  </article>
-</section>
+  {{ with $npc.description }}<p class="npc-profile-description">{{ . }}</p>{{ end }}
+  <div class="source-tags npc-profile-tags" aria-label="Tags">{{ with $npc.element }}<i data-element="{{ lower . }}">{{ . }}</i>{{ end }}<i>{{ if eq $npc.category "destructables" }}Destructable{{ else }}Creature{{ end }}</i></div>
+  {{ $kit := partial "npc-ability-kit.html" $npc }}
+  {{ with $kit.items }}
+  <section class="npc-profile-abilities" aria-labelledby="npc-abilities-title">
+    <h2 id="npc-abilities-title">Abilities</h2>
+    <p>Before target defenses, elite affixes, and temporary buffs.</p>
+    <ul>{{ range . }}<li><div class="npc-ability-title"><a href="{{ printf "/ability/%s/" .ability.slug | strings.TrimPrefix "/" | relURL }}">{{ .ability.name }}</a>{{ if eq .rank 2 }}<span class="ability-mode-badge mode-invasion" title="Introduced in Invasion">Invasion</span>{{ else if eq .rank 3 }}<span class="ability-mode-badge mode-apocalypse" title="Introduced in Apocalypse">Apocalypse</span>{{ end }}</div><span data-npc-ability="{{ .ability.asset_name }}">Numeric values unavailable.</span></li>{{ end }}</ul>
+  </section>
+  {{ end }}
+  <script type="application/json" id="npc-combat-data">{{ $kit.previews | jsonify | safeJS }}</script>
+</article>
+{{ $maps := slice }}{{ range $npc.placements }}{{ if not (hasPrefix (lower .level) "test_") }}{{ $maps = $maps | append . }}{{ end }}{{ end }}
+  <section class="console-panel npc-profile-maps npc-locations-panel" aria-labelledby="npc-maps-title">
+    <header><h2 id="npc-maps-title">Locations</h2><small>{{ len $maps }} {{ if eq (len $maps) 1 }}MAP{{ else }}MAPS{{ end }}</small></header>
+    <ul>{{ range $maps }}{{ $map := index site.Data.generated.level.entry .level_slug }}<li><a href="{{ printf "/level/%s/" .level_slug | strings.TrimPrefix "/" | relURL }}"><span>{{ with $map.display_name }}{{ . }}{{ else }}{{ .level }}{{ end }}</span><span aria-hidden="true">→</span></a></li>{{ else }}<li class="npc-profile-empty">No map entries available.</li>{{ end }}</ul>
+  </section>
+</div>
 {{ end }}

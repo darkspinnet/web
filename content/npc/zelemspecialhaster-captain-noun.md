@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Haster Captain"
+title = "Illust the Accelerator"
 npc = "zelemspecialhaster-captain-noun"
 generated = true
 +++

@@ -66,12 +66,21 @@
   </div>
   <p class="loot-rule-note">The fragment identifies the exact rigblock and affix component IDs. It restores this configuration locally and does not claim that the combination is an observed drop.</p>
 </section>
+{{ $supportedHeroes := dict }}{{ range $item.variants }}{{ range .records }}{{ $supportedHeroes = merge $supportedHeroes (dict (printf "%.0f" .id) .supported_heroes) }}{{ end }}{{ end }}
+<section class="console-panel item-supported-panel" aria-labelledby="supported-heroes-title">
+  <header><div><span>02</span><h2 id="supported-heroes-title">Supported heroes</h2></div><small><span data-item-hero-count>{{ len $initialRecord.supported_heroes }}</span> HERO FAMILIES</small></header>
+  <p class="item-heroes-note">Base item compatibility for the selected visual and element. Select a hero to open its profile.</p>
+  <ul class="item-supported-heroes" data-item-supported-heroes aria-live="polite">
+    {{ range $initialRecord.supported_heroes }}<li><a href="{{ printf "/hero/%s/" .slug | strings.TrimPrefix "/" | relURL }}">{{ with .image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" width="56" height="56" loading="lazy">{{ end }}<span><strong>{{ .name }}</strong><small>{{ delimit .variants " · " }}</small></span></a></li>{{ else }}<li class="item-heroes-empty">No supported hero could be verified for this selection.</li>{{ end }}
+  </ul>
+</section>
+<script type="application/json" data-item-heroes-data>{{ $supportedHeroes | jsonify | safeJS }}</script>
 <script type="application/json" data-item-affix-data>{{ dict "prefix" $prefixStats "suffix" $suffixStats | jsonify | safeJS }}</script>
 </div>
 
 <section class="detail-grid item-detail-grid">
   <article class="console-panel entity-card">
-    <header><div><span>02</span><h2>Family identity</h2></div><small>GROUPED LOCALIZED RECORDS</small></header>
+    <header><div><span>03</span><h2>Family identity</h2></div><small>GROUPED LOCALIZED RECORDS</small></header>
     <dl>
       <div><dt>Base name</dt><dd>{{ $item.name }}</dd></div>
       <div><dt>Category</dt><dd>{{ $item.category }}</dd></div>
@@ -81,7 +90,7 @@
     </dl>
   </article>
   <article class="console-panel entity-card">
-    <header><div><span>03</span><h2>Compatibility</h2></div><small>PROCEDURAL CONSTRAINTS</small></header>
+    <header><div><span>04</span><h2>Compatibility</h2></div><small>PROCEDURAL CONSTRAINTS</small></header>
     <div class="item-compatibility">
       <div><span>CLASSES</span><p>{{ range $item.classes }}<i>{{ . }}</i>{{ else }}<b>UNRESTRICTED / UNKNOWN</b>{{ end }}</p></div>
       <div><span>ELEMENTS</span><p>{{ range $item.elements }}<i>{{ . }}</i>{{ else }}<b>UNRESTRICTED / UNKNOWN</b>{{ end }}</p></div>
@@ -89,7 +98,7 @@
     </div>
   </article>
   <article class="console-panel item-asset-panel item-variant-panel">
-    <header><div><span>04</span><h2>Visual and elemental variants</h2></div><small>{{ $item.variant_count }} DEDUPLICATED ASSETS / {{ $item.record_count }} RECORDS</small></header>
+    <header><div><span>05</span><h2>Visual and elemental variants</h2></div><small>{{ $item.variant_count }} DEDUPLICATED ASSETS / {{ $item.record_count }} RECORDS</small></header>
     <div class="item-variant-list">
       {{ range $item.variants }}
       <div>
@@ -104,7 +113,7 @@
     <p>Records sharing the same package asset are collapsed into one visual style. Their elemental variants and original rigblock IDs remain visible here.</p>
   </article>
   <article class="console-panel item-variation-panel">
-    <header><div><span>05</span><h2>Rolled variations</h2></div><small>BASE ITEM REMAINS SEARCH IDENTITY</small></header>
+    <header><div><span>06</span><h2>Rolled variations</h2></div><small>BASE ITEM REMAINS SEARCH IDENTITY</small></header>
     <div class="variation-model">
       <div class="variation-equation">
         <span>PRIMARY PREFIX</span><b>+</b><span>SECONDARY PREFIX</span><b>+</b><span>VISUAL / ELEMENT</span><b>+</b><strong>{{ $item.name }}</strong><b>+</b><span>SUFFIX</span>

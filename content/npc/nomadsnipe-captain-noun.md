@@ -1,5 +1,5 @@
 +++
-title = "Nomad Snipe Captain"
+title = "Mikella the Temporal Impeder"
 npc = "nomadsnipe-captain-noun"
 generated = true
 +++

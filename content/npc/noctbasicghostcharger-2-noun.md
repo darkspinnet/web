@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Ghost Charger 2"
+title = "Stifling Tracker"
 npc = "noctbasicghostcharger-2-noun"
 generated = true
 +++

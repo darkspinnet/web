@@ -1,5 +1,5 @@
 +++
-title = "Nomad Scope Captain 2"
+title = "Pretor the Pyro Incinerator"
 npc = "nomadscope-captain-2-noun"
 generated = true
 +++

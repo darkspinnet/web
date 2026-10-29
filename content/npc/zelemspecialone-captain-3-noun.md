@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special One Captain 3"
+title = "Cyluk the Wormhole Dominator"
 npc = "zelemspecialone-captain-3-noun"
 generated = true
 +++

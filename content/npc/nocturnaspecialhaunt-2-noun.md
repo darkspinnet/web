@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Haunt 2"
+title = "Spectral Strider"
 npc = "nocturnaspecialhaunt-2-noun"
 generated = true
 +++

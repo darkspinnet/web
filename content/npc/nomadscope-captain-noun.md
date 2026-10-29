@@ -1,5 +1,5 @@
 +++
-title = "Nomad Scope Captain"
+title = "Kaai the Craven Blaster"
 npc = "nomadscope-captain-noun"
 generated = true
 +++

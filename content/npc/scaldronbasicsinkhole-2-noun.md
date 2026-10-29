@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Sinkhole 2"
+title = "Warp Sinkhole"
 npc = "scaldronbasicsinkhole-2-noun"
 generated = true
 +++

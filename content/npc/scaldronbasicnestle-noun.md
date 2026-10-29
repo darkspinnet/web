@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Nestle"
+title = "Rapid Slasher"
 npc = "scaldronbasicnestle-noun"
 generated = true
 +++

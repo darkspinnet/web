@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Blink 3"
+title = "Eclectic Predator"
 npc = "scaldronbasicblink-3-noun"
 generated = true
 +++

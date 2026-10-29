@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special One 2.noun"
+title = "Herbaceous Tunneler"
 npc = "verdanthspecialone-2-noun"
 generated = true
 +++

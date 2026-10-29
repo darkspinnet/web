@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Flying Melee"
+title = "Sting Raider"
 npc = "zelembasicflyingmelee-noun"
 generated = true
 +++

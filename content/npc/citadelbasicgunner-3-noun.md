@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Gunner 3"
+title = "Fragbot Mech-X"
 npc = "citadelbasicgunner-3-noun"
 generated = true
 +++

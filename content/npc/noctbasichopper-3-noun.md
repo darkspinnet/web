@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Hopper 3"
+title = "Vampiric Vaulter"
 npc = "noctbasichopper-3-noun"
 generated = true
 +++

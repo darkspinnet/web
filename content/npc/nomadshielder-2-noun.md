@@ -1,5 +1,5 @@
 +++
-title = "Nomad Shielder 2.noun"
+title = "Grenadier Protector"
 npc = "nomadshielder-2-noun"
 generated = true
 +++

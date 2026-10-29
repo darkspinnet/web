@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special One 3"
+title = "Singularity Spawner"
 npc = "zelemspecialone-3-noun"
 generated = true
 +++

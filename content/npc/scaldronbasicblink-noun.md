@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Blink"
+title = "Eclectic Striker"
 npc = "scaldronbasicblink-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Melee 2"
+title = "Shifted Scorpiod"
 npc = "zelembasicmelee-2-noun"
 generated = true
 +++

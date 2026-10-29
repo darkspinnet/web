@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Healer 3"
+title = "Crisis Weed"
 npc = "verdanthbasichealer-3-noun"
 generated = true
 +++

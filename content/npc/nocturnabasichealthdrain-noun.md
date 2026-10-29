@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Health Drain"
+title = "Draining Simian"
 npc = "nocturnabasichealthdrain-noun"
 generated = true
 +++

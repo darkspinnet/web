@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Fiery 2"
+title = "Pyrachnos"
 npc = "cryosbasicfiery-2-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Munch 3"
+title = "Carrion Maw"
 npc = "nocturnaspecialmunch-3-noun"
 generated = true
 +++

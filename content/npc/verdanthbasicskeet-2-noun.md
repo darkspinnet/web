@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Skeet 2"
+title = "Whiz Stinger"
 npc = "verdanthbasicskeet-2-noun"
 generated = true
 +++

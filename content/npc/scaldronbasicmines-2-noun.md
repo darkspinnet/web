@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Mines 2"
+title = "Exploding Kinetic Mines"
 npc = "scaldronbasicmines-2-noun"
 generated = true
 +++

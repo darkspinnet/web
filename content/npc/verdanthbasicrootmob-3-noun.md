@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Rootmob 3"
+title = "Root Mob"
 npc = "verdanthbasicrootmob-3-noun"
 generated = true
 +++

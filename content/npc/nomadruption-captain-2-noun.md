@@ -1,5 +1,5 @@
 +++
-title = "Nomad Ruption Captain 2"
+title = "Hulst the Magmatic Devastator"
 npc = "nomadruption-captain-2-noun"
 generated = true
 +++

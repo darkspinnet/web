@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Two Captain"
+title = "Edict the Insidious Mastermind"
 npc = "zelemspecialtwo-captain-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Repair 3"
+title = "Reparatron Gamma"
 npc = "zelembasicrepair-3-noun"
 generated = true
 +++

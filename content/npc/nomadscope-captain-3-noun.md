@@ -1,5 +1,5 @@
 +++
-title = "Nomad Scope Captain 3"
+title = "Jolyl the Unstable Conflagration"
 npc = "nomadscope-captain-3-noun"
 generated = true
 +++

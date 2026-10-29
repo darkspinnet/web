@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Thorno"
+title = "Thorn Triped"
 npc = "scaldronbasicthorno-noun"
 generated = true
 +++

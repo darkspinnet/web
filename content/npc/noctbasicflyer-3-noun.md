@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Flyer 3"
+title = "Necrodactyl Rex"
 npc = "noctbasicflyer-3-noun"
 generated = true
 +++

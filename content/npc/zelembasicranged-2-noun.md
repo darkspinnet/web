@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Ranged 2"
+title = "Phasing Barracuda"
 npc = "zelembasicranged-2-noun"
 generated = true
 +++

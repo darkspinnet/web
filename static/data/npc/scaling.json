@@ -1,0 +1,370 @@
+{
+  "difficulties": [
+    {
+      "stage": 1,
+      "health": 0.6,
+      "damage": 1
+    },
+    {
+      "stage": 2,
+      "health": 0.72,
+      "damage": 1.05
+    },
+    {
+      "stage": 3,
+      "health": 0.86,
+      "damage": 1.1
+    },
+    {
+      "stage": 4,
+      "health": 1.03,
+      "damage": 1.16
+    },
+    {
+      "stage": 5,
+      "health": 1.28,
+      "damage": 1.39
+    },
+    {
+      "stage": 6,
+      "health": 1.36,
+      "damage": 1.46
+    },
+    {
+      "stage": 7,
+      "health": 1.44,
+      "damage": 1.53
+    },
+    {
+      "stage": 8,
+      "health": 1.53,
+      "damage": 1.61
+    },
+    {
+      "stage": 9,
+      "health": 1.9,
+      "damage": 1.93
+    },
+    {
+      "stage": 10,
+      "health": 2.01,
+      "damage": 2.03
+    },
+    {
+      "stage": 11,
+      "health": 2.13,
+      "damage": 2.13
+    },
+    {
+      "stage": 12,
+      "health": 2.26,
+      "damage": 2.24
+    },
+    {
+      "stage": 13,
+      "health": 2.8,
+      "damage": 2.52
+    },
+    {
+      "stage": 14,
+      "health": 2.97,
+      "damage": 2.65
+    },
+    {
+      "stage": 15,
+      "health": 3.15,
+      "damage": 2.78
+    },
+    {
+      "stage": 16,
+      "health": 3.34,
+      "damage": 2.92
+    },
+    {
+      "stage": 17,
+      "health": 4.14,
+      "damage": 3.5
+    },
+    {
+      "stage": 18,
+      "health": 4.39,
+      "damage": 3.68
+    },
+    {
+      "stage": 19,
+      "health": 4.65,
+      "damage": 3.86
+    },
+    {
+      "stage": 20,
+      "health": 4.93,
+      "damage": 4.05
+    },
+    {
+      "stage": 21,
+      "health": 6.11,
+      "damage": 4.86
+    },
+    {
+      "stage": 22,
+      "health": 6.48,
+      "damage": 5.1
+    },
+    {
+      "stage": 23,
+      "health": 6.87,
+      "damage": 5.36
+    },
+    {
+      "stage": 24,
+      "health": 7.28,
+      "damage": 5.63
+    },
+    {
+      "stage": 25,
+      "health": 9.03,
+      "damage": 6.76
+    },
+    {
+      "stage": 26,
+      "health": 9.57,
+      "damage": 7.11
+    },
+    {
+      "stage": 27,
+      "health": 10.14,
+      "damage": 7.48
+    },
+    {
+      "stage": 28,
+      "health": 10.75,
+      "damage": 7.87
+    },
+    {
+      "stage": 29,
+      "health": 13.33,
+      "damage": 9.52
+    },
+    {
+      "stage": 30,
+      "health": 14.13,
+      "damage": 10.02
+    },
+    {
+      "stage": 31,
+      "health": 14.98,
+      "damage": 10.55
+    },
+    {
+      "stage": 32,
+      "health": 15.88,
+      "damage": 11.1
+    },
+    {
+      "stage": 33,
+      "health": 19.69,
+      "damage": 13.43
+    },
+    {
+      "stage": 34,
+      "health": 20.87,
+      "damage": 14.14
+    },
+    {
+      "stage": 35,
+      "health": 22.12,
+      "damage": 14.88
+    },
+    {
+      "stage": 36,
+      "health": 23.45,
+      "damage": 15.66
+    },
+    {
+      "stage": 37,
+      "health": 29.08,
+      "damage": 18.95
+    },
+    {
+      "stage": 38,
+      "health": 30.82,
+      "damage": 19.94
+    },
+    {
+      "stage": 39,
+      "health": 32.67,
+      "damage": 20.99
+    },
+    {
+      "stage": 40,
+      "health": 34.63,
+      "damage": 22.09
+    },
+    {
+      "stage": 41,
+      "health": 42.94,
+      "damage": 26.73
+    },
+    {
+      "stage": 42,
+      "health": 45.52,
+      "damage": 28.13
+    },
+    {
+      "stage": 43,
+      "health": 48.25,
+      "damage": 29.61
+    },
+    {
+      "stage": 44,
+      "health": 51.15,
+      "damage": 31.16
+    },
+    {
+      "stage": 45,
+      "health": 63.43,
+      "damage": 37.7
+    },
+    {
+      "stage": 46,
+      "health": 67.24,
+      "damage": 39.68
+    },
+    {
+      "stage": 47,
+      "health": 71.27,
+      "damage": 41.76
+    },
+    {
+      "stage": 48,
+      "health": 75.55,
+      "damage": 43.95
+    },
+    {
+      "stage": 49,
+      "health": 93.68,
+      "damage": 53.18
+    },
+    {
+      "stage": 50,
+      "health": 99.54,
+      "damage": 56.1
+    },
+    {
+      "stage": 51,
+      "health": 105.76,
+      "damage": 59.19
+    },
+    {
+      "stage": 52,
+      "health": 112.37,
+      "damage": 62.45
+    },
+    {
+      "stage": 53,
+      "health": 140.46,
+      "damage": 76.19
+    },
+    {
+      "stage": 54,
+      "health": 149.24,
+      "damage": 80.38
+    },
+    {
+      "stage": 55,
+      "health": 158.57,
+      "damage": 84.8
+    },
+    {
+      "stage": 56,
+      "health": 168.48,
+      "damage": 89.46
+    },
+    {
+      "stage": 57,
+      "health": 210.6,
+      "damage": 109.14
+    },
+    {
+      "stage": 58,
+      "health": 223.76,
+      "damage": 115.14
+    },
+    {
+      "stage": 59,
+      "health": 237.75,
+      "damage": 121.47
+    },
+    {
+      "stage": 60,
+      "health": 252.61,
+      "damage": 128.15
+    },
+    {
+      "stage": 61,
+      "health": 315.76,
+      "damage": 156.34
+    },
+    {
+      "stage": 62,
+      "health": 335.5,
+      "damage": 164.94
+    },
+    {
+      "stage": 63,
+      "health": 356.47,
+      "damage": 174.01
+    },
+    {
+      "stage": 64,
+      "health": 378.75,
+      "damage": 183.58
+    },
+    {
+      "stage": 65,
+      "health": 473.44,
+      "damage": 223.97
+    },
+    {
+      "stage": 66,
+      "health": 503.03,
+      "damage": 236.29
+    },
+    {
+      "stage": 67,
+      "health": 534.47,
+      "damage": 249.29
+    },
+    {
+      "stage": 68,
+      "health": 567.87,
+      "damage": 263
+    },
+    {
+      "stage": 69,
+      "health": 709.84,
+      "damage": 320.86
+    },
+    {
+      "stage": 70,
+      "health": 754.21,
+      "damage": 338.51
+    },
+    {
+      "stage": 71,
+      "health": 801.35,
+      "damage": 357.13
+    },
+    {
+      "stage": 72,
+      "health": 851.43,
+      "damage": 376.77
+    }
+  ],
+  "party_damage": [
+    1,
+    1.4,
+    1.8,
+    2.2
+  ]
+}

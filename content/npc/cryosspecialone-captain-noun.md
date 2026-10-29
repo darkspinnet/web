@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special One Captain"
+title = "Ronin the Vindicator"
 npc = "cryosspecialone-captain-noun"
 generated = true
 +++

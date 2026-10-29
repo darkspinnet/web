@@ -1,5 +1,5 @@
 +++
-title = "Nomad Shielder Captain 3"
+title = "TSE-PAK the Planetary Annihilator"
 npc = "nomadshielder-captain-3-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab tnx object lightningball"
+title = "Energy core"
 npc = "dest-prefab-tnx-object-lightningball-noun"
 generated = true
 +++

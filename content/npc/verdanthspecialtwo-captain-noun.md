@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special Two Captain"
+title = "Delphi the Chieftain"
 npc = "verdanthspecialtwo-captain-noun"
 generated = true
 +++

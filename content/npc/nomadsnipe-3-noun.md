@@ -1,5 +1,5 @@
 +++
-title = "Nomad Snipe 3.noun"
+title = "Master Decelerator"
 npc = "nomadsnipe-3-noun"
 generated = true
 +++

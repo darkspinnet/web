@@ -1,4 +1,4 @@
 +++
 title = "Ability Archive"
-description = "Recovered hero ability assets and ownership records."
+description = "Recovered hero and enemy abilities, ownership links, and combat data."
 +++

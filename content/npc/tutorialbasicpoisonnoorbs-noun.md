@@ -1,5 +1,5 @@
 +++
-title = "Tutorial Basic Poison No Orbs"
+title = "Simulated corrupted Chlorosaur"
 npc = "tutorialbasicpoisonnoorbs-noun"
 generated = true
 +++

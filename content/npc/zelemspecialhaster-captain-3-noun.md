@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Haster Captain 3"
+title = "Odio the Temporal Invertor"
 npc = "zelemspecialhaster-captain-3-noun"
 generated = true
 +++

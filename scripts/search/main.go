@@ -35,6 +35,8 @@ type npcCatalog struct {
 }
 
 type npcDetail struct {
+	Category    string   `json:"category"`
+	Element     string   `json:"element"`
 	Name        string   `json:"name"`
 	AssetName   string   `json:"asset_name"`
 	Slug        string   `json:"slug"`
@@ -67,6 +69,7 @@ type abilityEntry struct {
 	Slug        string         `json:"slug"`
 	PrimarySlot string         `json:"primary_slot"`
 	Heroes      []abilityOwner `json:"heroes"`
+	Enemies     []abilityOwner `json:"enemies"`
 }
 type abilityOwner struct{ Name, Element, Class string }
 
@@ -135,11 +138,11 @@ func build(dataPath string) ([][]string, error) {
 		return nil, fmt.Errorf("npcRead: %w", err)
 	}
 	for _, entry := range npcs.Entry {
-		meta := "PLACED NOUN"
+		meta := strings.ToUpper(entry.Category + " / " + entry.Element)
 		if entry.IsCombatant {
-			meta = "COMBAT CLASS"
+			meta = strings.ToUpper(entry.Element) + " / CREATURE"
 			if entry.HitPoints != nil {
-				meta = fmt.Sprintf("COMBAT / %.0f HP", *entry.HitPoints)
+				meta = fmt.Sprintf("%s / %.0f HP", strings.ToUpper(entry.Element), *entry.HitPoints)
 			}
 		}
 		rows = append(rows, searchRow(entry.Name, "ENEMY", meta, "/npc/"+entry.Slug+"/", entry.Name+" "+entry.AssetName+" "+meta))
@@ -163,7 +166,7 @@ func build(dataPath string) ([][]string, error) {
 	}
 	for _, ability := range abilities.Items {
 		heroes := make([]string, 0, len(ability.Heroes))
-		for _, owner := range ability.Heroes {
+		for _, owner := range append(append([]abilityOwner{}, ability.Heroes...), ability.Enemies...) {
 			heroes = append(heroes, owner.Name, owner.Element, owner.Class)
 		}
 		meta := strings.ToUpper(strings.ReplaceAll(ability.PrimarySlot, "_", " ")) + " / ABILITY"

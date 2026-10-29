@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"database/sql"
 	"encoding/json"
 	"errors"
@@ -128,21 +127,17 @@ type campaignTeleportRoute struct {
 type authoredEnemy struct {
 	Name         string
 	Noun         string
-	LocaleKeys   []string
 	Descriptions []string
 	Behavior     string
 }
 
-var localeKeyPattern = regexp.MustCompile(`(?i)0x[0-9a-f]{8}`)
-var quotedDescriptionPattern = regexp.MustCompile(`“([^”]+)”`)
-
-func enrichCampaignLevels(database *sql.DB, levels []levelReport, notesPath string) error {
+func enrichCampaignLevels(database *sql.DB, levels []levelReport) error {
 	for index := range levels {
 		level := &levels[index]
-		if level.DisplayName == "" || len(level.CampaignOrders) == 0 || level.CampaignOrders[0] > 24 {
+		if level.DisplayName == "" || len(level.CampaignOrders) == 0 || level.CampaignOrders[0] > 72 {
 			continue
 		}
-		detail, err := loadCampaignDetail(database, level.Name, level.DisplayName, level.CampaignOrders[0], notesPath)
+		detail, err := loadCampaignDetail(database, level.Name, level.CampaignOrders[0])
 		if err != nil {
 			return fmt.Errorf("campaign[%s]: %w", level.DisplayName, err)
 		}
@@ -156,7 +151,7 @@ func enrichCampaignLevels(database *sql.DB, levels []levelReport, notesPath stri
 	return nil
 }
 
-func loadCampaignDetail(database *sql.DB, levelName, selection string, difficulty int, notesPath string) (campaignDetail, error) {
+func loadCampaignDetail(database *sql.DB, levelName string, difficulty int) (campaignDetail, error) {
 	var detail campaignDetail
 	detail.Difficulty = difficulty
 	err := database.QueryRow(`
@@ -167,26 +162,45 @@ func loadCampaignDetail(database *sql.DB, levelName, selection string, difficult
 	if err != nil {
 		return detail, fmt.Errorf("difficulty: %w", err)
 	}
-	authored, err := readAuthoredEnemies(filepath.Join(notesPath, selection, "descriptions.md"))
-	if err != nil {
-		return detail, fmt.Errorf("descriptions: %w", err)
+	// Resolve the active director pools for this difficulty; later passes change the roster.
+	var levelID int64
+	if err = database.QueryRow("SELECT id FROM level WHERE name=?", levelName).Scan(&levelID); err != nil {
+		return detail, err
 	}
-	if len(authored) == 0 {
-		registry, registryErr := readAuthoredEnemyRegistry(notesPath)
-		if registryErr != nil {
-			return detail, fmt.Errorf("descriptionRegistry: %w", registryErr)
+	pools, err := loadCampaignPoolNouns(database, levelID, difficulty)
+	if err != nil {
+		return detail, err
+	}
+	authored := []authoredEnemy{}
+	seen := map[string]bool{}
+	for _, pool := range pools {
+		if pool.Pool != "minion" && pool.Pool != "special" && pool.Pool != "agent" {
+			continue
 		}
-		roster, rosterErr := readCampaignRoster(filepath.Join(notesPath, "mobs.md"), levelName)
-		if rosterErr != nil {
-			return detail, fmt.Errorf("roster: %w", rosterErr)
+		noun := pool.Noun
+		if strings.HasSuffix(strings.ToLower(noun), ".noun") {
+			noun = noun[:len(noun)-5]
 		}
-		for _, noun := range roster {
-			enemy, isFound := registry[strings.ToLower(noun)]
-			if !isFound {
-				enemy = authoredEnemy{Name: catalog.DisplayName(noun), Noun: noun}
-			}
-			authored = append(authored, enemy)
+		if seen[strings.ToLower(noun)] {
+			continue
 		}
+		seen[strings.ToLower(noun)] = true
+		var display, description string
+		queryErr := database.QueryRow(`SELECT c.display_name,c.description FROM non_player_noun n JOIN non_player_class c ON c.content_source_resource_id=n.non_player_class_resource_id WHERE n.noun_name=? COLLATE NOCASE`, pool.Noun).Scan(&display, &description)
+		if errors.Is(queryErr, sql.ErrNoRows) {
+			queryErr = database.QueryRow("SELECT display_name,description FROM non_player_class WHERE noun_name=? COLLATE NOCASE", pool.Noun).Scan(&display, &description)
+		}
+		if queryErr != nil {
+			return detail, fmt.Errorf("noun[%s]: %w", pool.Noun, queryErr)
+		}
+		if display == "" {
+			display = catalog.DisplayName(noun)
+		}
+		source := authoredEnemy{Name: display, Noun: noun}
+		if description != "" {
+			source.Descriptions = []string{description}
+		}
+		authored = append(authored, source)
 	}
 	detail.Enemies = make([]campaignEnemy, 0, len(authored))
 	for _, source := range authored {
@@ -207,10 +221,10 @@ func enrichLevelMaps(database *sql.DB, levels []levelReport, mapPath string) err
 	if err != nil {
 		return fmt.Errorf("mapDirectory: %w", err)
 	}
-	levelsByName := make(map[string]*levelReport, len(levels))
+	levelsByName := make(map[string][]*levelReport, len(levels))
 	levelsBySlug := make(map[string]*levelReport, len(levels))
 	for index := range levels {
-		levelsByName[strings.ToLower(levels[index].Name)] = &levels[index]
+		levelsByName[strings.ToLower(levels[index].Name)] = append(levelsByName[strings.ToLower(levels[index].Name)], &levels[index])
 		levelsBySlug[levels[index].Slug] = &levels[index]
 	}
 	for _, entry := range entries {
@@ -228,31 +242,39 @@ func enrichLevelMaps(database *sql.DB, levels []levelReport, mapPath string) err
 		if err = json.Unmarshal(mapData, &levelMap); err != nil {
 			return fmt.Errorf("mapDecode[%s]: %w", entry.Name(), err)
 		}
-		level, isFound := levelsByName[strings.ToLower(levelMap.Level)]
+		targets, isFound := levelsByName[strings.ToLower(levelMap.Level)]
 		if !isFound {
-			level, isFound = levelsBySlug[entry.Name()]
+			fallback, found := levelsBySlug[entry.Name()]
+			isFound = found
+			targets = []*levelReport{fallback}
 		}
 		if !isFound {
 			return fmt.Errorf("mapLevel[%s]: level %q not found", entry.Name(), levelMap.Level)
 		}
-		for index := range levelMap.Sections {
-			levelMap.Sections[index].ImageURL = "/maps/" + entry.Name() + "/" + levelMap.Sections[index].Image
+		for _, level := range targets {
+			var levelMap campaignMap
+			if err = json.Unmarshal(mapData, &levelMap); err != nil {
+				return err
+			}
+			for index := range levelMap.Sections {
+				levelMap.Sections[index].ImageURL = "/maps/" + entry.Name() + "/" + levelMap.Sections[index].Image
+			}
+			difficulty := 1
+			if level.Campaign != nil {
+				difficulty = level.Campaign.Difficulty
+			}
+			pools, poolErr := loadCampaignPoolNouns(database, level.ID, difficulty)
+			if poolErr != nil {
+				return fmt.Errorf("mapPools[%s]: %w", entry.Name(), poolErr)
+			}
+			teleports, teleportErr := loadCampaignTeleportRoutes(database, level.ID)
+			if teleportErr != nil {
+				return fmt.Errorf("mapTeleports[%s]: %w", entry.Name(), teleportErr)
+			}
+			levelMap.Positions = buildCampaignPositions(levelMap, pools, teleports)
+			levelMap.Markers = nil
+			level.Map = &levelMap
 		}
-		difficulty := 1
-		if level.Campaign != nil {
-			difficulty = level.Campaign.Difficulty
-		}
-		pools, poolErr := loadCampaignPoolNouns(database, level.ID, difficulty)
-		if poolErr != nil {
-			return fmt.Errorf("mapPools[%s]: %w", entry.Name(), poolErr)
-		}
-		teleports, teleportErr := loadCampaignTeleportRoutes(database, level.ID)
-		if teleportErr != nil {
-			return fmt.Errorf("mapTeleports[%s]: %w", entry.Name(), teleportErr)
-		}
-		levelMap.Positions = buildCampaignPositions(levelMap, pools, teleports)
-		levelMap.Markers = nil
-		level.Map = &levelMap
 	}
 	return nil
 }
@@ -289,6 +311,9 @@ func loadCampaignPoolNouns(database *sql.DB, levelID int64, difficulty int) ([]c
 		SELECT configuration_ordinal, config_kind, noun_name, is_horde_legal
 		FROM level_director_entry
 		WHERE level_id=? AND minimum_difficulty<=? AND maximum_difficulty>=?
+ AND (configuration_name='firstTimeConfig' OR NOT EXISTS (
+ SELECT 1 FROM level_director_entry preferred WHERE preferred.level_id=level_director_entry.level_id
+ AND preferred.config_kind=level_director_entry.config_kind AND preferred.configuration_name='firstTimeConfig'))
 		ORDER BY configuration_ordinal, configuration_entry_ordinal`, levelID, difficulty, difficulty)
 	if err != nil {
 		return nil, err
@@ -505,122 +530,10 @@ func campaignPoolLabel(pool string) string {
 	}
 }
 
-func readAuthoredEnemies(path string) ([]authoredEnemy, error) {
-	file, err := os.Open(path)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-	enemies := make([]authoredEnemy, 0, 16)
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		columns := markdownTableColumns(scanner.Text())
-		if len(columns) < 4 || columns[0] == "Display name" || strings.HasPrefix(columns[0], "---") {
-			continue
-		}
-		noun := cleanMarkdown(columns[1])
-		if noun == "" || strings.Contains(strings.ToLower(noun), "server noun") {
-			continue
-		}
-		descriptionCell := columns[2]
-		descriptions := make([]string, 0, 2)
-		for _, match := range quotedDescriptionPattern.FindAllStringSubmatch(descriptionCell, -1) {
-			if len(match) > 1 {
-				descriptions = append(descriptions, strings.TrimSpace(match[1]))
-			}
-		}
-		if len(descriptions) == 0 {
-			description := cleanMarkdown(descriptionCell)
-			if description != "" {
-				descriptions = append(descriptions, description)
-			}
-		}
-		enemies = append(enemies, authoredEnemy{
-			Name: cleanMarkdown(columns[0]), Noun: noun,
-			LocaleKeys:   localeKeyPattern.FindAllString(strings.ToLower(descriptionCell), -1),
-			Descriptions: descriptions, Behavior: cleanBehavior(columns[3]),
-		})
-	}
-	if err = scanner.Err(); err != nil {
-		return nil, err
-	}
-	return enemies, nil
-}
-
-func readAuthoredEnemyRegistry(notesPath string) (map[string]authoredEnemy, error) {
-	entries, err := os.ReadDir(notesPath)
-	if err != nil {
-		return nil, err
-	}
-	registry := make(map[string]authoredEnemy)
-	for _, entry := range entries {
-		if !entry.IsDir() {
-			continue
-		}
-		enemies, readErr := readAuthoredEnemies(filepath.Join(notesPath, entry.Name(), "descriptions.md"))
-		if errors.Is(readErr, os.ErrNotExist) {
-			continue
-		}
-		if readErr != nil {
-			return nil, readErr
-		}
-		for _, enemy := range enemies {
-			key := strings.ToLower(enemy.Noun)
-			if _, isFound := registry[key]; !isFound {
-				registry[key] = enemy
-			}
-		}
-	}
-	return registry, nil
-}
-
-var backtickedValuePattern = regexp.MustCompile("`([^`]+)`")
-
-func readCampaignRoster(path, levelName string) ([]string, error) {
-	file, err := os.Open(path)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		columns := markdownTableColumns(scanner.Text())
-		if len(columns) != 3 || !strings.EqualFold(cleanMarkdown(columns[0]), levelName) {
-			continue
-		}
-		matches := backtickedValuePattern.FindAllStringSubmatch(columns[2], -1)
-		roster := make([]string, 0, len(matches))
-		for _, match := range matches {
-			if len(match) > 1 {
-				roster = append(roster, match[1])
-			}
-		}
-		if len(roster) == 0 {
-			return nil, errors.New("campaign roster is empty")
-		}
-		return roster, nil
-	}
-	if err = scanner.Err(); err != nil {
-		return nil, err
-	}
-	return nil, fmt.Errorf("level %q not found", levelName)
-}
-
 func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier, damageMultiplier float64) (campaignEnemy, error) {
 	enemy := campaignEnemy{
 		Name: source.Name, Noun: source.Noun, Slug: catalog.Slug(source.Noun + ".Noun"),
 		Descriptions: source.Descriptions, Behavior: source.Behavior,
-	}
-	for _, key := range source.LocaleKeys {
-		var localized string
-		err := database.QueryRow(`
-			SELECT localized_text FROM localization_text
-			WHERE locale='en-us' AND locale_key=? ORDER BY id LIMIT 1`, key).Scan(&localized)
-		if err == nil && strings.TrimSpace(localized) != "" {
-			enemy.Descriptions = appendUnique(enemy.Descriptions, strings.TrimSpace(localized))
-		} else if err != nil && !errors.Is(err, sql.ErrNoRows) {
-			return enemy, fmt.Errorf("locale[%s]: %w", key, err)
-		}
 	}
 	instanceID, hitPoints, challenge, rank, profileNoun, err := loadCampaignEnemyStats(database, source.Noun)
 	if err != nil {
@@ -645,6 +558,17 @@ func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier
 }
 
 func loadCampaignEnemyStats(database *sql.DB, noun string) (uint32, float64, int, int, string, error) {
+	var id uint32
+	var hp float64
+	var cv, rank int
+	var profile string
+	err := database.QueryRow(`SELECT c.instance_id,c.hit_point,c.challenge_value,c.npc_rank,n.noun_name FROM non_player_noun n JOIN non_player_class c ON c.content_source_resource_id=n.non_player_class_resource_id WHERE n.noun_name=? COLLATE NOCASE`, noun+".Noun").Scan(&id, &hp, &cv, &rank, &profile)
+	if err == nil {
+		return id, hp, cv, rank, profile, nil
+	}
+	if !errors.Is(err, sql.ErrNoRows) {
+		return 0, 0, 0, 0, "", err
+	}
 	candidates := []string{noun + ".Noun", noun + ".NonPlayerClass", noun + ".ClassAttributes", noun}
 	for _, candidate := range candidates {
 		instanceID := catalog.HashID(candidate)
@@ -662,46 +586,6 @@ func loadCampaignEnemyStats(database *sql.DB, noun string) (uint32, float64, int
 		}
 	}
 	return 0, 0, 0, 0, "", errors.New("non-player class not found")
-}
-
-func markdownTableColumns(line string) []string {
-	line = strings.TrimSpace(line)
-	if !strings.HasPrefix(line, "|") || !strings.HasSuffix(line, "|") {
-		return nil
-	}
-	parts := strings.Split(strings.Trim(line, "|"), "|")
-	for index := range parts {
-		parts[index] = strings.TrimSpace(parts[index])
-	}
-	return parts
-}
-
-func cleanMarkdown(value string) string {
-	value = strings.ReplaceAll(value, "`", "")
-	value = strings.ReplaceAll(value, "**", "")
-	value = strings.ReplaceAll(value, "“", "")
-	value = strings.ReplaceAll(value, "”", "")
-	return strings.TrimSpace(value)
-}
-
-func cleanBehavior(value string) string {
-	value = cleanMarkdown(value)
-	for _, prefix := range []string{"Matches after this pass:", "Matches:", "Matches;", "Implemented:", "Implemented;"} {
-		value = strings.TrimSpace(strings.TrimPrefix(value, prefix))
-	}
-	if value == "" {
-		return "Behavior is represented by the current campaign runtime."
-	}
-	return strings.ToUpper(value[:1]) + value[1:]
-}
-
-func appendUnique(values []string, value string) []string {
-	for _, existing := range values {
-		if strings.EqualFold(existing, value) {
-			return values
-		}
-	}
-	return append(values, value)
 }
 
 func campaignDamageProfile(noun string) (zonenpc.ActionProfile, bool) {

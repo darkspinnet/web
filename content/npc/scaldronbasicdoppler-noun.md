@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Doppler"
+title = "Split Beetle"
 npc = "scaldronbasicdoppler-noun"
 generated = true
 +++

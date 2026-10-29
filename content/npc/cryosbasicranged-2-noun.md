@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Ranged 2"
+title = "Lightning Hunter"
 npc = "cryosbasicranged-2-noun"
 generated = true
 +++

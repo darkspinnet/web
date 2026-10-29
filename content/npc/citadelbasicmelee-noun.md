@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Melee"
+title = "Pyro"
 npc = "citadelbasicmelee-noun"
 generated = true
 +++

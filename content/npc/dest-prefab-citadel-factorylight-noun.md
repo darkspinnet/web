@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab citadel factorylight"
+title = "Light"
 npc = "dest-prefab-citadel-factorylight-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Two 2"
+title = "Winged Terrorsaur"
 npc = "cryosspecialtwo-2-noun"
 generated = true
 +++

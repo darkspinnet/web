@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Drift"
+title = "Shade Drifter"
 npc = "nocturnaspecialdrift-noun"
 generated = true
 +++

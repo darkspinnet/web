@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Monk"
+title = "Nova"
 npc = "scaldronbasicmonk-noun"
 generated = true
 +++

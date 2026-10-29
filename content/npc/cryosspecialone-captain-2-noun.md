@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special One Captain 2"
+title = "Sau the Electrocutioner"
 npc = "cryosspecialone-captain-2-noun"
 generated = true
 +++

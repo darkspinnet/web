@@ -1,4 +1,4 @@
 ---
 title: "Enemy Glossary"
-description: "Killable enemies verified against decoded combat classes and grouped by known level placements."
+description: "Spawnable creatures and destructables, with names, elements and health previews."
 ---

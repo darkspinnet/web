@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Homer"
+title = "Arachno Striker"
 npc = "nocturnaspecialhomer-noun"
 generated = true
 +++

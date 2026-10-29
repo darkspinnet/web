@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Ranged"
+title = "Swarming Herbipod"
 npc = "verdanthbasicranged-noun"
 generated = true
 +++

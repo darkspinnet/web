@@ -1,5 +1,5 @@
 +++
-title = "Nomad With Drone 3"
+title = "Supreme Invincitron"
 npc = "nomadwithdrone-3-noun"
 generated = true
 +++

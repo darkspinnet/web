@@ -1,0 +1,26 @@
+{{/* Collect a creature family's full kit without hiding later-mode abilities. */}}
+{{ $npc := . }}
+{{ $family := $npc.family_slug | default $npc.slug }}
+{{ $items := slice }}
+{{ $previews := slice }}
+{{ range site.Data.generated.ability.items }}
+  {{ $ability := . }}{{ $rank := 4 }}{{ $own := dict }}{{ $fallback := dict }}{{ $fallbackRank := 4 }}
+  {{ range .enemies }}
+    {{ $owner := index site.Data.generated.npc.entry .slug }}
+    {{ if and $owner (eq ($owner.family_slug | default $owner.slug) $family) (or (in .slots "action") (in .slots "passive") (in .slots "death") $ability.combat $ability.description) }}
+      {{ $ownerRank := int $owner.npc_rank }}
+      {{ if lt $ownerRank $rank }}{{ $rank = $ownerRank }}{{ end }}
+      {{ range $owner.ability_previews }}
+        {{ if eq (lower .asset_name) (lower $ability.asset_name) }}
+          {{ if eq $owner.slug $npc.slug }}{{ $own = . }}{{ end }}
+          {{ if lt $ownerRank $fallbackRank }}{{ $fallback = . }}{{ $fallbackRank = $ownerRank }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if lt $rank 4 }}
+    {{ $items = $items | append (dict "ability" $ability "rank" $rank) }}
+    {{ if $own }}{{ $previews = $previews | append $own }}{{ else if $fallback }}{{ $previews = $previews | append $fallback }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ return (dict "items" $items "previews" $previews) }}

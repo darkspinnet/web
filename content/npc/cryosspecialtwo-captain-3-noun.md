@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Two Captain 3"
+title = "Virga the Death-Torch"
 npc = "cryosspecialtwo-captain-3-noun"
 generated = true
 +++

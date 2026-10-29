@@ -1,5 +1,5 @@
 +++
-title = "cryos stalagmite small destructible"
+title = "Stalagmite"
 npc = "cryos-stalagmite-small-destructible-noun"
 generated = true
 +++

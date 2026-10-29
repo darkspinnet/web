@@ -1,5 +1,5 @@
 +++
-title = "DEST tota headstatue b"
+title = "Ancient Totem"
 npc = "dest-tota-headstatue-b-noun"
 generated = true
 +++

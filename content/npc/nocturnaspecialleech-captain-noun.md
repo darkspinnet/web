@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Leech Captain"
+title = "Mizod the Life Leech"
 npc = "nocturnaspecialleech-captain-noun"
 generated = true
 +++

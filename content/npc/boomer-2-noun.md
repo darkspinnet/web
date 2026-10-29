@@ -1,5 +1,5 @@
 +++
-title = "Boomer 2"
+title = "Unstable Juggernaut"
 npc = "boomer-2-noun"
 generated = true
 +++

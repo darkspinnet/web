@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Melee 2"
+title = "Time Striker"
 npc = "verdanthbasicmelee-2-noun"
 generated = true
 +++

@@ -38,18 +38,12 @@
   <header class="home-section-heading"><div><p class="eyebrow"><span>ARCHIVE</span> // EXPLORE THE GAME</p><h2 id="home-archive-title">The game, decoded</h2></div><p>While the playable release is being prepared, explore the content and runtime systems already recovered by the project.</p></header>
   <div class="home-archive-grid">
     <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"><span>HR</span><strong>Heroes</strong><b>{{ $hero.family_count }}</b><small>{{ $hero.count }} variants recovered</small><i>→</i></a>
-    <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"><span>LV</span><strong>Campaign</strong><b>{{ $level.playable_count }}</b><small>playable maps cataloged</small><i>→</i></a>
-    <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"><span>EN</span><strong>Enemies</strong><b>{{ $npc.entry_count }}</b><small>combat classes indexed</small><i>→</i></a>
+    <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"><span>LV</span><strong>Campaign</strong><b>{{ $level.campaign_count }}</b><small>missions across three difficulties</small><i>→</i></a>
+    <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"><span>EN</span><strong>Enemies</strong><b>{{ $npc.entry_count }}</b><small>creatures & destructables</small><i>→</i></a>
     <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"><span>IT</span><strong>Items</strong><b>{{ $item.count }}</b><small>equipment families decoded</small><i>→</i></a>
-    <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"><span>AB</span><strong>Abilities</strong><b>{{ $ability.count }}</b><small>loadout assets linked</small><i>→</i></a>
+    <a href="{{ "/ability/" | strings.TrimPrefix "/" | relURL }}"><span>AB</span><strong>Abilities</strong><b>{{ $ability.count }}</b><small>hero & enemy abilities linked</small><i>→</i></a>
     <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"><span>SY</span><strong>Game systems</strong><b>{{ len (where site.RegularPages "Section" "system") }}</b><small>runtime reports published</small><i>→</i></a>
   </div>
 </section>
 
-<section class="console-panel home-hero-spotlight">
-  <header><div><span>04</span><h2>Recovered hero roster</h2></div><a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}">OPEN HERO MATRIX →</a></header>
-  <div class="quicklook-grid">
-    {{ range first 6 $hero.families }}{{ $variant := index .variants (sub (len .variants) 1) }}<figure class="element-{{ .element | lower }}"><img src="{{ $variant.image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" width="120" height="120" loading="lazy"><figcaption><b>{{ .name }}</b><span>{{ .element }} / {{ .class }}</span></figcaption></figure>{{ end }}
-  </div>
-</section>
 {{ end }}

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special Four"
+title = "Vaulting Amphiod"
 npc = "nomadspecialfour-noun"
 generated = true
 +++

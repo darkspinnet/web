@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Ranged Homing"
+title = "Homing Striker"
 npc = "zelembasicrangedhoming-noun"
 generated = true
 +++

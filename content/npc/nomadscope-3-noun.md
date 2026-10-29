@@ -1,5 +1,5 @@
 +++
-title = "Nomad Scope 3"
+title = "Subversionist Undermind"
 npc = "nomadscope-3-noun"
 generated = true
 +++

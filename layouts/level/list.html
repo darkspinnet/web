@@ -4,9 +4,9 @@
   <div>
     <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">SYSTEM</a> // LEVEL REPORT</p>
     <h1>{{ .Title }}</h1>
-    <p>{{ .Description }}</p>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
   </div>
-  <div class="page-counter"><strong>{{ $data.group_count }}</strong><span>LEVEL GROUPS<br>{{ $data.playable_count }} MAPS</span></div>
+  <div class="page-counter"><strong>{{ $data.campaign_count }}</strong><span>CAMPAIGN MISSIONS<br>{{ $data.playable_count }} MAPS</span></div>
 </header>
 
 <section class="level-group-index">
@@ -14,13 +14,13 @@
   <article class="level-group-card">
     <header>
       <div><span class="level-index">{{ if eq .slug "other" }}Auxiliary{{ else }}Campaign{{ end }}</span><h2>{{ .name }}</h2></div>
-      <div class="group-stats"><b>{{ .count }}</b> {{ if eq .count 1 }}map{{ else }}maps{{ end }}</div>
+      <div class="group-stats"><b>{{ .count }}</b> {{ if eq .slug "other" }}maps{{ else }}missions{{ end }}</div>
     </header>
     <div class="level-stage-list">
       {{ range .levels }}
       <a class="level-stage-link" href="{{ printf "/level/%s/" .slug | strings.TrimPrefix "/" | relURL }}">
-        <span class="stage-number">{{ .display_name }}</span>
-        <span><strong>{{ .name }}</strong><small>{{ .region }} · {{ .npc_count }} enemies</small></span>
+        <span class="stage-number">{{ .slot | default .display_name }}</span>
+        <span><strong>{{ .name }}</strong><small>{{ if .campaign }}Difficulty {{ .campaign.difficulty }} · {{ .region }}{{ else }}{{ .region }} · {{ .npc_count }} enemies{{ end }}</small></span>
         <em>→</em>
       </a>
       {{ end }}

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Ruption Captain"
+title = "Krife the Ascendant Crater"
 npc = "nomadruption-captain-noun"
 generated = true
 +++

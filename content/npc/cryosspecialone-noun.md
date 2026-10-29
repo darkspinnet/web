@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special One"
+title = "Quadrakiller"
 npc = "cryosspecialone-noun"
 generated = true
 +++

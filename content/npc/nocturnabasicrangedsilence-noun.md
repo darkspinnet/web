@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Ranged Silence"
+title = "Muting Leucopod"
 npc = "nocturnabasicrangedsilence-noun"
 generated = true
 +++

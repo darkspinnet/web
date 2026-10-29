@@ -39,6 +39,7 @@
   <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png" sizes="16x16">
   <style>html,body{min-height:100%;margin:0;background:#09090b;color:#fafafa;color-scheme:dark}</style>
   {{- $css := resources.FromString "css/main.bundle.css" (readFile "static/css/main.css") | fingerprint -}}
+  {{- if eq .Section "npc" }}{{ $npcJS := resources.FromString "js/npc-difficulty.bundle.js" (readFile "static/js/npc-difficulty.js") | fingerprint }}<script src="{{ $npcJS.RelPermalink }}" integrity="{{ $npcJS.Data.Integrity }}" defer></script>{{ end -}}
   {{- $js := resources.FromString "js/main.bundle.js" (readFile "static/js/main.js") | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
@@ -76,7 +77,7 @@
         <p>ARCHIVE</p>
         <a href="{{ "/" | strings.TrimPrefix "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i><span>Overview</span></a>
         <a href="{{ "/hero/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "hero" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></i><span>Heroes</span><b>{{ site.Data.generated.hero.family_count }}</b></a>
-        <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><path d="M9 3v15M15 6v15"/></svg></i><span>Levels</span><b>{{ site.Data.generated.level.group_count }}</b></a>
+        <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "level" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><path d="M9 3v15M15 6v15"/></svg></i><span>Levels</span><b>{{ site.Data.generated.level.campaign_count }}</b></a>
         <a href="{{ "/npc/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "npc" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8v4a3 3 0 0 0 3 3v3h10v-3a3 3 0 0 0 3-3v-4a8 8 0 0 0-8-8Z"/><circle cx="9" cy="11" r="1"/><circle cx="15" cy="11" r="1"/></svg></i><span>Enemies</span><b>{{ site.Data.generated.npc.entry_count }}</b></a>
         <a href="{{ "/item/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "item" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6Z"/><path d="m3 9 18 0M9 3l-2 6 5 12 5-12-2-6"/></svg></i><span>Items</span><b>{{ site.Data.generated.item.count }}</b></a>
         <a href="{{ "/system/" | strings.TrimPrefix "/" | relURL }}"{{ if eq .Section "system" }} aria-current="page"{{ end }}><i><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></i><span>Systems</span><b>{{ len (where site.RegularPages "Section" "system") }}</b></a>

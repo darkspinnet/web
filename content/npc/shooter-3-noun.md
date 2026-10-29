@@ -1,5 +1,5 @@
 +++
-title = "Shooter 3"
+title = "Shadow Fiend"
 npc = "shooter-3-noun"
 generated = true
 +++

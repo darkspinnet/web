@@ -16,11 +16,13 @@ type heroCatalog struct {
 	Heroes []hero `json:"heroes"`
 }
 type hero struct {
-	Family    string    `json:"family"`
-	Variant   string    `json:"variant"`
-	Element   string    `json:"element"`
-	Class     string    `json:"class"`
-	Abilities []ability `json:"abilities"`
+	WeaponMinimum float32   `json:"weapon_min_damage"`
+	WeaponMaximum float32   `json:"weapon_max_damage"`
+	Family        string    `json:"family"`
+	Variant       string    `json:"variant"`
+	Element       string    `json:"element"`
+	Class         string    `json:"class"`
+	Abilities     []ability `json:"abilities"`
 }
 type ability struct {
 	Slot      string `json:"slot"`
@@ -37,24 +39,30 @@ type owner struct {
 	Slots    []string `json:"slots"`
 }
 type abilityEntry struct {
-	AssetName     string        `json:"asset_name"`
-	Name          string        `json:"name"`
-	Slug          string        `json:"slug"`
-	Description   string        `json:"description,omitempty"`
-	IconReference string        `json:"icon_reference,omitempty"`
-	IconPath      string        `json:"icon_path,omitempty"`
-	PrimarySlot   string        `json:"primary_slot"`
-	Slots         []string      `json:"slots"`
-	UsageCount    int           `json:"usage_count"`
-	Heroes        []owner       `json:"heroes"`
-	Combat        *combatRecord `json:"combat,omitempty"`
-	Source        *sourceRecord `json:"source,omitempty"`
+	AssetName        string        `json:"asset_name"`
+	Name             string        `json:"name"`
+	Slug             string        `json:"slug"`
+	Description      string        `json:"description,omitempty"`
+	DescriptionBasis string        `json:"description_basis,omitempty"`
+	UnresolvedTokens []string      `json:"unresolved_tokens,omitempty"`
+	IconReference    string        `json:"icon_reference,omitempty"`
+	IconPath         string        `json:"icon_path,omitempty"`
+	PrimarySlot      string        `json:"primary_slot"`
+	Slots            []string      `json:"slots"`
+	UsageCount       int           `json:"usage_count"`
+	Enemies          []owner       `json:"enemies"`
+	Heroes           []owner       `json:"heroes"`
+	Combat           *combatRecord `json:"combat,omitempty"`
+	Source           *sourceRecord `json:"source,omitempty"`
 }
 type abilityCatalog struct {
-	Count int                     `json:"count"`
-	Slots map[string]int          `json:"slots"`
-	Items []abilityEntry          `json:"items"`
-	Entry map[string]abilityEntry `json:"entry"`
+	OwnershipNotes []string                `json:"ownership_notes,omitempty"`
+	HeroCount      int                     `json:"hero_count"`
+	EnemyCount     int                     `json:"enemy_count"`
+	Count          int                     `json:"count"`
+	Slots          map[string]int          `json:"slots"`
+	Items          []abilityEntry          `json:"items"`
+	Entry          map[string]abilityEntry `json:"entry"`
 }
 type abilityBuilder struct {
 	entry  abilityEntry
@@ -62,6 +70,7 @@ type abilityBuilder struct {
 }
 
 func main() {
+	npcPath := flag.String("npc", filepath.Join("data", "generated", "npc.json"), "generated enemy catalog")
 	heroPath := flag.String("hero", filepath.Join("data", "generated", "hero.json"), "generated hero catalog")
 	databasePath := flag.String("db", catalog.DefaultDatabasePath, "content.db path")
 	gamePath := flag.String("game", catalog.DefaultGamePath, "Darkspore install root")
@@ -82,7 +91,10 @@ func main() {
 		fatal(err)
 	}
 	defer database.Close()
-	err = enrichAbilities(database, *gamePath, result.Items)
+	if err = addEnemyAbilities(database, *npcPath, &result); err != nil {
+		fatal(err)
+	}
+	err = enrichAbilities(database, *gamePath, result.Items, heroes.Heroes)
 	if err != nil {
 		fatal(err)
 	}
@@ -98,11 +110,26 @@ func main() {
 
 func reindex(result *abilityCatalog) {
 	result.Entry = make(map[string]abilityEntry, len(result.Items))
+	result.Count = len(result.Items)
+	result.HeroCount = 0
+	result.EnemyCount = 0
+	result.Slots = make(map[string]int)
 	sort.Slice(result.Items, func(i, j int) bool {
-		return strings.ToLower(result.Items[i].Name) < strings.ToLower(result.Items[j].Name)
+		left, right := strings.ToLower(result.Items[i].Name), strings.ToLower(result.Items[j].Name)
+		if left == right {
+			return result.Items[i].Slug < result.Items[j].Slug
+		}
+		return left < right
 	})
 	for _, entry := range result.Items {
 		result.Entry[entry.Slug] = entry
+		result.Slots[entry.PrimarySlot]++
+		if len(entry.Heroes) > 0 {
+			result.HeroCount++
+		}
+		if len(entry.Enemies) > 0 {
+			result.EnemyCount++
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Hybrid"
+title = "Cannonator"
 npc = "zelembasichybrid-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Cryos Elemental Special Three Captain 3"
+title = "Kamin the Electrocuting Vengeance"
 npc = "cryoselementalspecialthree-captain-3-noun"
 generated = true
 +++

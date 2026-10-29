@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Leech"
+title = "Necrotic Leech"
 npc = "nocturnaspecialleech-noun"
 generated = true
 +++

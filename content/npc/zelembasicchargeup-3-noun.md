@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Chargeup 3"
+title = "Energetic Carapace"
 npc = "zelembasicchargeup-3-noun"
 generated = true
 +++

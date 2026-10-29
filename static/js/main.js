@@ -49,7 +49,7 @@
 
     filterGroups.forEach((group) => {
       const key = group.dataset.filterGroup;
-      state.filters[key] = "all";
+      state.filters[key] = group.querySelector("button.is-active[data-filter]")?.dataset.filter || "all";
       group.addEventListener("click", (event) => {
         const button = event.target.closest("button[data-filter]");
         if (!button) return;
@@ -58,12 +58,13 @@
         apply();
       });
     });
+    apply();
   };
 
   const npcRecord = (entry) => Array.isArray(entry) ? {
-    name: entry[0], asset: entry[1], level: entry[2], hp: entry[3], combat: entry[4], sources: (entry[5] || "").split(",").filter(Boolean), slug: entry[6],
+    name: entry[0], asset: entry[1], level: entry[2], hp: entry[3], combat: entry[4], sources: (entry[5] || "").split(",").filter(Boolean), slug: entry[6], category: entry[7], element: entry[8], image: entry[9], partyHealth: entry[10], healthPolicy: entry[11],
   } : {
-    name: entry.name, asset: entry.asset_name, level: "", hp: entry.hit_points, combat: entry.is_combatant, sources: entry.sources || [], slug: entry.slug,
+    name: entry.name, asset: entry.asset_name, level: "", hp: entry.hit_points, combat: entry.is_combatant, sources: entry.sources || [], slug: entry.slug, category: entry.category, element: entry.element, image: entry.image, partyHealth: entry.player_count_health_scale, healthPolicy: entry.health_scaling,
   };
 
   const renderNPC = (container, entries) => {
@@ -72,24 +73,25 @@
     entries.forEach((entry) => {
       const npc = npcRecord(entry);
       const row = template.content.firstElementChild.cloneNode(true);
-      const status = row.querySelector('[data-field="status"]');
-      status.classList.toggle("is-combat", npc.combat);
-      status.setAttribute("aria-label", npc.combat ? "Verified combatant" : "Placed noun");
+      const portrait = row.querySelector('[data-field="portrait"]');
+      if (npc.image) { const img = document.createElement("img"); img.src = siteURL(npc.image); img.alt = ""; img.loading = "lazy"; img.decoding = "async"; img.width = 64; img.height = 64; portrait.append(img); }
+      else { portrait.textContent = "◇"; portrait.title = "No recovered portrait"; }
       const name = row.querySelector('[data-field="name"]');
       name.textContent = npc.name;
-      name.href = siteURL(`/npc/${npc.slug}/`);
-      row.querySelector('[data-field="asset"]').textContent = npc.asset;
+      name.href = window.npcDifficulty?.urlFor(siteURL(`/npc/${npc.slug}/`)) || siteURL(`/npc/${npc.slug}/`);
       const source = row.querySelector('[data-field="source"]');
-      [...(npc.level ? [npc.level] : []), ...npc.sources].forEach((label) => {
+      [npc.element, ...(npc.category === "destructables" ? ["destructables"] : [])].filter(Boolean).forEach((label) => {
         const tag = document.createElement("i");
         tag.textContent = label;
+        tag.dataset.element = label;
         source.append(tag);
       });
       const hp = row.querySelector('[data-field="hp"]');
       if (npc.hp !== null && npc.hp !== undefined) {
         const number = document.createElement("b");
-        number.textContent = Math.round(npc.hp).toLocaleString();
-        hp.append(number, " HP");
+        const health = window.npcDifficulty?.health(npc.hp, npc.partyHealth, npc.healthPolicy) ?? npc.hp;
+        number.textContent = Math.round(health).toLocaleString();
+        hp.append(number);
       } else {
         hp.textContent = "—";
       }
@@ -101,62 +103,32 @@
   const initializeNPC = () => {
     const input = document.querySelector("[data-npc-search]");
     if (!input) return;
-    const levelList = document.querySelector("[data-npc-level-list]");
-    const searchPanel = document.querySelector("[data-npc-search-results]");
     const resultList = document.querySelector("[data-npc-results]");
     const counter = document.querySelector("[data-result-count]");
-    const limit = document.querySelector("[data-result-limit]");
-    let timer;
-
-    document.querySelectorAll("[data-npc-source]").forEach((group) => {
-      group.addEventListener("toggle", async () => {
-        if (!group.open || group.dataset.loaded) return;
-        const container = group.querySelector("[data-npc-list]");
-        container.textContent = "Loading entity shard…";
-        try {
-          const data = await loadJSON(group.dataset.npcSource);
-          renderNPC(container, data.npcs);
-          group.dataset.loaded = "true";
-        } catch (error) {
-          container.textContent = "Entity shard unavailable.";
-        }
-      });
-    });
-
+    const type = document.querySelector("[data-npc-type]");
+    let generation = 0;
     const search = async () => {
-      const query = normalize(input.value);
-      if (!query) {
-        levelList.hidden = false;
-        searchPanel.hidden = true;
-        counter.textContent = Number(input.dataset.total).toLocaleString();
-        return;
-      }
-      levelList.hidden = true;
-      searchPanel.hidden = false;
-      resultList.textContent = "Loading compact lookup cache…";
+      const current = ++generation;
+      resultList.textContent = "Loading creatures…";
       try {
+        await window.npcDifficulty?.ready;
         const index = await loadJSON(input.dataset.npcSearch);
-        const matches = index.filter((entry) => normalize(`${entry[0]} ${entry[1]} ${entry[2]}`).includes(query));
-        renderNPC(resultList, matches.slice(0, 250));
+        if (current !== generation) return;
+        const query = normalize(input.value);
+        const matches = index.filter(entry => {
+          const npc = npcRecord(entry);
+          return normalize(npc.name + " " + npc.asset).includes(query) && (type.value === "all" || npc.element === type.value || npc.category === type.value);
+        });
+        renderNPC(resultList, matches);
+        if (!matches.length) resultList.textContent = "No creatures match these filters.";
         counter.textContent = matches.length.toLocaleString();
-        limit.hidden = matches.length <= 250;
-      } catch (error) {
-        resultList.textContent = "Search cache unavailable.";
-        counter.textContent = "0";
-      }
+      } catch (error) { if (current === generation) resultList.textContent = "Creature catalog unavailable. Reload to try again."; }
     };
-
-    input.addEventListener("input", () => {
-      clearTimeout(timer);
-      timer = setTimeout(search, 70);
-    });
+    input.addEventListener("input", search);
+    type.addEventListener("change", search);
+    window.addEventListener('npc-difficulty-change', search);
+    search();
   };
-
-  const setField = (root, field, text) => {
-    root.querySelector(`[data-field="${field}"]`).textContent = text === null || text === undefined || text === "" ? "—" : text;
-  };
-
-  const slug = (text) => normalize(text).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
   const initializeLevel = () => {
     const template = document.querySelector("#level-report-template");
@@ -399,6 +371,29 @@
       stats: root.querySelector("[data-item-summary-stats]"),
     };
     const controls = [primary, secondary, rig, suffix];
+    const supportedHeroesNode = root.querySelector("[data-item-heroes-data]");
+    const supportedHeroesData = supportedHeroesNode ? JSON.parse(supportedHeroesNode.textContent) : {};
+    const supportedHeroesList = root.querySelector("[data-item-supported-heroes]");
+    const supportedHeroesCount = root.querySelector("[data-item-hero-count]");
+    const renderSupportedHeroes = () => {
+      if (!supportedHeroesList) return;
+      const heroes = supportedHeroesData[controlValue(rig)] || [];
+      supportedHeroesCount.textContent = heroes.length.toLocaleString();
+      const fragment = document.createDocumentFragment();
+      heroes.forEach(hero => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = siteURL(`/hero/${hero.slug}/`);
+        if (hero.image) { const image = document.createElement("img"); image.src = siteURL(hero.image); image.alt = ""; image.width = 56; image.height = 56; image.loading = "lazy"; image.decoding = "async"; link.append(image); }
+        const text = document.createElement("span");
+        const name = document.createElement("strong"); name.textContent = hero.name;
+        const variants = document.createElement("small"); variants.textContent = hero.variants.join(" · ");
+        text.append(name, variants); link.append(text); li.append(link); fragment.append(li);
+      });
+      if (!heroes.length) { const empty = document.createElement("li"); empty.className = "item-heroes-empty"; empty.textContent = "No supported hero could be verified for this selection."; fragment.append(empty); }
+      supportedHeroesList.replaceChildren(fragment);
+    };
+
 
     const controlValue = (control) => control.matches("select") ? control.value : control.dataset.value;
     const controlOption = (control) => control.matches("select") ? control.selectedOptions[0] : control;
@@ -503,6 +498,7 @@
       summary.suffix.textContent = cleanLabel(suffix) || "NONE SELECTED";
       [summary.primary, summary.secondary, summary.suffix].forEach((field) => field.closest("li").classList.toggle("is-empty", field.textContent === "NONE SELECTED"));
       renderStats();
+      renderSupportedHeroes();
       const state = new URLSearchParams();
       state.set("rig", controlValue(rig));
       if (controlValue(primary) !== "0") state.set("primary", controlValue(primary));
@@ -662,6 +658,17 @@
 
   initializeCombatCalculator();
   initializeFilters();
+  document.querySelectorAll(".threat-cell").forEach(cell => {
+    let pinned = false;
+    const peek = () => { cell.open = true; };
+    const dismiss = () => { if (!pinned && !cell.contains(document.activeElement)) cell.open = false; };
+    cell.addEventListener("pointerenter", event => { if (event.pointerType === "mouse") peek(); });
+    cell.addEventListener("pointerleave", dismiss);
+    cell.addEventListener("focusin", peek);
+    cell.addEventListener("focusout", () => { setTimeout(dismiss, 0); });
+    cell.querySelector("summary").addEventListener("click", event => { event.preventDefault(); pinned = !pinned; cell.open = pinned; });
+    cell.addEventListener("keydown", event => { if (event.key === "Escape") { pinned = false; cell.open = false; cell.querySelector("summary").focus(); cell.open = false; } });
+  });
   initializeNPC();
   initializeLevel();
   initializeItem();

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Spacetime Agent 2"
+title = "Astral Confiner"
 npc = "nomadspacetimeagent-2-noun"
 generated = true
 +++

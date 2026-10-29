@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab tnx object tripmine"
+title = "Broken turret"
 npc = "dest-prefab-tnx-object-tripmine-noun"
 generated = true
 +++

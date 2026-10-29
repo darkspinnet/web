@@ -82,7 +82,8 @@ type compiledAbility struct {
 	Chunk      decodedChunk
 }
 
-func enrichAbilities(database *sql.DB, gamePath string, entries []abilityEntry) error {
+func enrichAbilities(database *sql.DB, gamePath string, entries []abilityEntry, heroes []hero) error {
+	resolver := tooltipResolver{database: database, heroes: heroes, modules: map[int64]*tooltipModule{}}
 	localeByText, err := loadLocalePairs(database)
 	if err != nil {
 		return fmt.Errorf("localeLoad: %w", err)
@@ -113,7 +114,7 @@ func enrichAbilities(database *sql.DB, gamePath string, entries []abilityEntry) 
 		if compiled != nil && iconInstance[catalog.HashID(compiled.Definition.Namespace)] {
 			iconReference = compiled.Definition.Namespace
 		}
-		if iconReference == "" {
+		if iconReference == "" && len(entry.Heroes) > 0 {
 			iconReference = chooseIconReference(constants, entry.AssetName, iconInstance)
 		}
 		if iconReference != "" {
@@ -122,6 +123,9 @@ func enrichAbilities(database *sql.DB, gamePath string, entries []abilityEntry) 
 			iconCount++
 		}
 		entry.Description = resolveDescription(entry.Description, entry.Combat, entry.Heroes)
+		if err := resolver.resolve(entry, compiled, constants); err != nil {
+			return fmt.Errorf("tooltipResolve[%s]: %w", entry.AssetName, err)
+		}
 	}
 	fmt.Printf("abilities: enriched %d localized descriptions, %d combat records, and %d icon references\n", localizedCount, combatCount, iconCount)
 	return nil
@@ -290,7 +294,7 @@ func compileAbility(database *sql.DB, assetName string) (*compiledAbility, error
 		}
 		definition, compileErr := sim.CompileLuaAbilityDefinition(sim.LuaAbilityInput{
 			Root:    sim.LuaBytecode{ChunkID: root.ID, SHA256: root.SHA256, Contents: root.Bytecode},
-			Modules: module, Role: "catalogHero",
+			Modules: module, Role: "catalogAbility",
 		})
 		if compileErr != nil || !strings.EqualFold(definition.Name, assetName) {
 			continue

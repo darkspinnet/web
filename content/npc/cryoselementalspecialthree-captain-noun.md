@@ -1,5 +1,5 @@
 +++
-title = "Cryos Elemental Special Three Captain"
+title = "Persi the Lightning Zealot"
 npc = "cryoselementalspecialthree-captain-noun"
 generated = true
 +++

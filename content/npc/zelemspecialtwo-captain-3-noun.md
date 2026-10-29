@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Two Captain 3"
+title = "Spcmnspf the Quantum Annihilator"
 npc = "zelemspecialtwo-captain-3-noun"
 generated = true
 +++

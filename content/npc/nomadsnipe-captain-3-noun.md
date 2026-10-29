@@ -1,5 +1,5 @@
 +++
-title = "Nomad Snipe Captain 3"
+title = "Zelw the Hyperspace Master"
 npc = "nomadsnipe-captain-3-noun"
 generated = true
 +++

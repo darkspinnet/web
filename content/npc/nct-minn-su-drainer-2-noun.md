@@ -1,5 +1,5 @@
 +++
-title = "nct minn su drainer 2"
+title = "Parasitic Gnasher"
 npc = "nct-minn-su-drainer-2-noun"
 generated = true
 +++

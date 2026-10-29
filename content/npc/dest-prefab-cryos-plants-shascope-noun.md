@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab cryos plants shascope"
+title = "Toxic Fungus"
 npc = "dest-prefab-cryos-plants-shascope-noun"
 generated = true
 +++

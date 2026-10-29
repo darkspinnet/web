@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special Two 2.noun"
+title = "Tanglid Healer"
 npc = "verdanthspecialtwo-2-noun"
 generated = true
 +++

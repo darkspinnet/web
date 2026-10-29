@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Fire Wave"
+title = "Pyramander"
 npc = "cryosbasicfirewave-noun"
 generated = true
 +++

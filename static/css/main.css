@@ -2123,3 +2123,137 @@ body::before { display: none; }
   .hero-game-body { grid-template-columns: 1fr; gap: 12px; padding: 12px; }
   .hero-game-abilities, .hero-game-telemetry { padding: 12px; }
 }
+/* Flat creature catalog and mission threat preview. */
+[data-npc-type] { min-height: 40px; padding: 8px 12px; max-width: 100%; border: 1px solid hsl(var(--border)); border-radius: 6px; color: hsl(var(--foreground)); background: hsl(var(--background)); font: inherit; }
+.npc-portrait { display: flex; width: 56px; height: 56px; align-items: center; justify-content: center; color: hsl(var(--muted-foreground)); background: hsl(var(--muted)); border-radius: 6px; font-size: 1.7rem; }
+.npc-portrait img { width: 100%; height: 100%; object-fit: contain; }
+.npc-row, .npc-table-head { display: grid; grid-template-columns: 56px minmax(0,1fr) 100px minmax(130px,.5fr); gap: 16px; align-items: center; }
+.npc-row { min-height: 78px; }
+.npc-row > [role="cell"] { min-width: 0; }
+.npc-row .npc-name { display: block; }
+.npc-row .hp-readout { text-align: left; }
+.npc-table-head { padding: 12px 1.2rem; border-bottom: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); background: hsl(var(--muted) / .35); font-size: .75rem; font-weight: 600; }
+.npc-breadcrumb { margin: 0 0 20px; color: hsl(var(--muted-foreground)); font-size: .8rem; }
+.npc-breadcrumb a { color: hsl(var(--primary)); }
+.npc-profile > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding: 20px 24px; }
+.npc-profile > header h1 { margin: 0; color: hsl(var(--foreground)); font-size: 1.5rem; line-height: 1.3; }
+.npc-profile > header small { color: hsl(var(--muted-foreground)); overflow-wrap: anywhere; }
+.npc-profile-summary { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 24px; gap: 24px; }
+.npc-profile-portrait { display: flex; align-items: center; justify-content: center; min-height: 200px; border-radius: 8px; background: hsl(var(--muted) / .3); }
+.npc-profile-portrait img { display: block; width: 100%; max-width: 240px; height: 240px; object-fit: contain; }
+.npc-profile-portrait > span { color: hsl(var(--muted-foreground)); font-size: .8rem; }
+.npc-profile-health { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.npc-profile-health > span { color: hsl(var(--muted-foreground)); font-size: .9rem; }
+.npc-profile-health strong { color: hsl(var(--foreground)); font-size: clamp(2rem,5vw,3.5rem); font-weight: 600; font-variant-numeric: tabular-nums; }
+.npc-profile-description { margin: 0; padding: 0 24px 20px; color: hsl(var(--muted-foreground)); font-size: .95rem; line-height: 1.7; }
+.npc-profile-tags { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 24px 24px; }
+.npc-profile-maps { border-top: 1px solid hsl(var(--border)); }
+.npc-profile-maps h2 { margin: 0; padding: 20px 24px 12px; font-size: 1rem; }
+.npc-profile-maps ul { list-style: none; margin: 0; padding: 0 24px 16px; }
+.npc-profile-maps li + li { border-top: 1px solid hsl(var(--border)); }
+.npc-profile-maps a { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; font-size: .9rem; }
+.npc-profile-maps a:hover { color: hsl(var(--primary)); }
+.npc-profile-empty { padding: 12px 0; color: hsl(var(--muted-foreground)); font-size: .85rem; }
+.npc-detail-portrait { object-fit: contain; }
+.mission-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; padding: 14px 0; border-block: 1px solid hsl(var(--border)); font-size: .85rem; }
+.mission-nav a { color: hsl(var(--primary)); }
+.threat-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; overflow: visible; }
+.threat-cell { position: relative; overflow: visible; }
+.threat-cell > summary { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 180px; padding: 18px 12px; text-align: center; cursor: pointer; list-style: none; background: radial-gradient(ellipse at 50% 30%,#1c353f88,transparent 75%); }
+.threat-cell > summary::-webkit-details-marker { display: none; }
+.threat-cell > summary:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+.threat-cell > summary strong { font-size: 1rem; }
+.threat-cell > summary small { margin-top: 8px; color: hsl(var(--muted-foreground)); font-size: .7rem; }
+.threat-portrait { display: flex; align-items: center; justify-content: center; width: 88px; height: 78px; margin-bottom: 12px; color: hsl(var(--primary)); font-size: 2.6rem; clip-path: polygon(18% 0,82% 0,100% 22%,100% 78%,82% 100%,18% 100%,0 78%,0 22%); background: #25333b; }
+.threat-portrait img { width: 100%; height: 100%; object-fit: contain; }
+.threat-cell[open] { border-color: hsl(var(--primary)); z-index: 5; }
+.threat-breakdown { position: absolute; z-index: 10; left: 0; top: 100%; width: max(100%,320px); max-width: min(440px,calc(100vw - 48px)); border: 1px solid hsl(var(--border)); border-radius: 8px; background: hsl(var(--card)); box-shadow: 0 18px 50px #0009; }
+.threat-cell:nth-child(3n) .threat-breakdown { left: auto; right: 0; }
+.threat-breakdown > header { display: flex; justify-content: space-between; gap: 10px; padding: 16px; }
+.threat-breakdown header small { color: hsl(var(--primary)); }
+.threat-breakdown header a { white-space: nowrap; font-size: .65rem; }
+.threat-breakdown h3 { margin-block: 8px; }
+.threat-breakdown code { white-space: normal; overflow-wrap: anywhere; }
+@media(max-width:700px) {
+ .npc-row, .npc-table-head { grid-template-columns: 44px minmax(0,1fr) 60px; gap: 10px; padding-inline: 12px; }
+ .npc-row .source-tags { display: flex; grid-column: 2 / -1; grid-row: 2; flex-wrap: wrap; padding-bottom: 8px; }
+ .npc-table-head [role="columnheader"]:last-child { display: none; }
+ .npc-profile-summary { padding: 16px; gap: 16px; }
+ .npc-profile-portrait { min-height: 140px; }
+ .npc-profile-portrait img { height: 160px; }
+ .npc-profile > header { padding: 16px; }
+ .npc-profile-description, .npc-profile-tags { padding-inline: 16px; }
+ .npc-profile-maps h2 { padding-inline: 16px; }
+ .npc-profile-maps ul { padding-inline: 16px; }
+ .npc-portrait { width: 44px; height: 44px; }
+ .threat-grid { gap: 8px; }
+ .threat-cell > summary { min-height: 150px; padding: 12px 6px; }
+ .threat-cell > summary strong { font-size: .8rem; }
+ .threat-portrait { width: 56px; height: 56px; }
+ .threat-breakdown { position: static; width: 100%; max-width: 100%; box-shadow: none; }
+ .threat-cell[open] { grid-column: 1 / -1; }
+ .threat-cell[open] > summary { min-height: 120px; }
+}
+.source-tags [data-element="bio"] { color: #79c976; border-color: #407746; }
+.source-tags [data-element="cyber"] { color: #dcc777; border-color: #827132; }
+.source-tags [data-element="plasma"] { color: #ef9b7f; border-color: #995d4a; }
+.source-tags [data-element="quantum"] { color: #a9a4f2; border-color: #665d9c; }
+.source-tags [data-element="necro"] { color: #d5a0e3; border-color: #8a5697; }
+.item-supported-panel { margin-top: 20px; }
+.item-heroes-note { padding: 14px 16px 0; color: hsl(var(--muted-foreground)); font-size: .85rem; }
+.item-supported-heroes { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; padding: 16px; margin: 0; list-style: none; }
+.item-supported-heroes a { display: flex; align-items: center; gap: 12px; height: 100%; padding: 12px; border: 1px solid hsl(var(--border)); border-radius: 6px; background: hsl(var(--background)); }
+.item-supported-heroes a:hover { border-color: hsl(var(--primary)); background: hsl(var(--muted)); }
+.item-supported-heroes a:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+.item-supported-heroes img { flex-shrink: 0; object-fit: contain; }
+.item-supported-heroes strong, .item-supported-heroes small { display: block; }
+.item-supported-heroes strong { font-size: .9rem; }
+.item-supported-heroes small { color: hsl(var(--muted-foreground)); font-size: .7rem; margin-top: 5px; }
+.item-heroes-empty { color: hsl(var(--muted-foreground)); font-size: .85rem; }
+.ability-controls { flex-wrap: wrap; }
+.ability-controls .search-control { flex: 1 1 260px; }
+.ability-controls [data-filter-group="slot"] { flex-basis: 100%; flex-wrap: wrap; }
+.npc-ability-panel { margin-top: 20px; }
+.npc-ability-panel .ability-grid { width: auto; padding: 14px; margin: 0; }
+/* Shared enemy difficulty and party previews. */
+.npc-difficulty-controls { padding: 16px; margin-bottom: 20px; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card)); }
+.npc-difficulty-fields { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+.npc-difficulty-fields label { display: flex; flex-direction: column; gap: 8px; min-width: 120px; color: hsl(var(--muted-foreground)); font-size: .8rem; }
+.npc-difficulty-fields label[hidden] { display: none; }
+.npc-difficulty-fields select { min-height: 38px; padding: 8px 32px 8px 12px; border: 1px solid hsl(var(--border)); border-radius: 6px; background: hsl(var(--background)); color: hsl(var(--foreground)); font: inherit; }
+.npc-difficulty-controls > p { margin: 14px 0 0; color: hsl(var(--muted-foreground)); font-size: .8rem; }
+.npc-profile-health > small { max-width: 320px; text-align: center; color: hsl(var(--muted-foreground)); font-size: .75rem; line-height: 1.5; }
+.npc-profile-abilities { padding: 20px 24px; border-top: 1px solid hsl(var(--border)); }
+.npc-profile-abilities h2 { margin: 0 0 10px; font-size: 1rem; }
+.npc-profile-abilities > p { color: hsl(var(--muted-foreground)); font-size: .75rem; line-height: 1.6; }
+.npc-profile-abilities ul { list-style: none; padding: 0; margin: 0; }
+.npc-profile-abilities li { display: grid; gap: 6px; padding: 14px 0; }
+.npc-profile-abilities li + li { border-top: 1px solid hsl(var(--border)); }
+.npc-profile-abilities a { width: fit-content; color: hsl(var(--foreground)); font-size: .9rem; }
+.npc-profile-abilities a:hover { color: hsl(var(--primary)); }
+.npc-profile-abilities li > span { color: hsl(var(--muted-foreground)); font-size: .8rem; line-height: 1.6; }
+@media (max-width:700px) {
+ .npc-difficulty-fields { display: grid; grid-template-columns: 1fr 1fr; }
+ .npc-difficulty-fields label { min-width: 0; }
+ .npc-difficulty-fields select { max-width: 100%; }
+ .npc-profile-abilities { padding-inline: 16px; }
+}
+.npc-ability-title { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.ability-mode-badge { display: inline-flex; align-items: center; padding: 3px 7px; border: 1px solid; border-radius: 4px; font: 500 .65rem/1.3 var(--font-sans, sans-serif); letter-spacing: .02em; text-transform: uppercase; vertical-align: middle; white-space: nowrap; }
+.ability-mode-badge.mode-invasion { color: #e4b86a; border-color: #85652d; background: #85652d20; }
+.ability-mode-badge.mode-apocalypse { color: #c5a4ed; border-color: #775497; background: #77549720; }
+/* Enemy profile and locations share the detail-page columns. */
+.npc-detail-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; gap: 18px; }
+.npc-detail-layout > * { min-width: 0; }
+.npc-locations-panel > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; padding: 20px 24px; }
+.npc-locations-panel > header h2 { margin: 0; padding: 0; font-size: 1rem; }
+.npc-locations-panel > header small { color: hsl(var(--muted-foreground)); white-space: nowrap; }
+.npc-locations-panel ul { padding-top: 8px; }
+.npc-detail-layout .npc-profile-summary { gap: 16px; }
+.npc-detail-layout .npc-profile-health strong { font-size: clamp(1.8rem,3vw,3rem); overflow-wrap: anywhere; }
+@media (max-width:1000px) {
+ .npc-detail-layout { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width:700px) {
+ .npc-locations-panel > header { padding: 16px; min-height: 60px; }
+}

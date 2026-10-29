@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special Three 3.noun"
+title = "Raging Pulsar"
 npc = "verdanthspecialthree-3-noun"
 generated = true
 +++

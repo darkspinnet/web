@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special Three 3.noun"
+title = "Caustic Shell"
 npc = "nomadspecialthree-3-noun"
 generated = true
 +++

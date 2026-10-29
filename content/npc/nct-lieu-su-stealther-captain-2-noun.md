@@ -1,5 +1,5 @@
 +++
-title = "nct lieu su stealther Captain 2"
+title = "Slayer the Horrific Fiend"
 npc = "nct-lieu-su-stealther-captain-2-noun"
 generated = true
 +++

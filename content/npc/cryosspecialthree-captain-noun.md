@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Three Captain"
+title = "Yegg the Hypno Lord"
 npc = "cryosspecialthree-captain-noun"
 generated = true
 +++

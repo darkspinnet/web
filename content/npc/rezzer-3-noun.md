@@ -1,5 +1,5 @@
 +++
-title = "Rezzer 3.noun"
+title = "Animus Resurrector"
 npc = "rezzer-3-noun"
 generated = true
 +++

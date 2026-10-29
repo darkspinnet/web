@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Suicide 3"
+title = "Bursting Scarab"
 npc = "citadelbasicsuicide-3-noun"
 generated = true
 +++

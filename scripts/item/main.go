@@ -5,6 +5,7 @@ import (
 	"encoding/binary"
 	"flag"
 	"fmt"
+	"io"
 	"math"
 	"os"
 	"path/filepath"
@@ -39,17 +40,18 @@ type itemCatalog struct {
 }
 
 type item struct {
-	ID             uint32   `json:"id"`
-	InstanceID     uint32   `json:"instance_id"`
-	Name           string   `json:"name"`
-	NameLocaleKey  string   `json:"name_locale_key"`
-	Category       string   `json:"category"`
-	AssetReference string   `json:"asset_reference,omitempty"`
-	IconReference  string   `json:"icon_reference,omitempty"`
-	Palette        string   `json:"palette,omitempty"`
-	Classes        []string `json:"classes"`
-	Elements       []string `json:"elements"`
-	Creatures      []string `json:"creatures"`
+	SupportedHeroes []supportedHero `json:"supported_heroes"`
+	ID              uint32          `json:"id"`
+	InstanceID      uint32          `json:"instance_id"`
+	Name            string          `json:"name"`
+	NameLocaleKey   string          `json:"name_locale_key"`
+	Category        string          `json:"category"`
+	AssetReference  string          `json:"asset_reference,omitempty"`
+	IconReference   string          `json:"icon_reference,omitempty"`
+	Palette         string          `json:"palette,omitempty"`
+	Classes         []string        `json:"classes"`
+	Elements        []string        `json:"elements"`
+	Creatures       []string        `json:"creatures"`
 }
 
 type itemFamily struct {
@@ -83,8 +85,9 @@ type itemVariant struct {
 }
 
 type itemVariantRecord struct {
-	ID       uint32   `json:"id"`
-	Elements []string `json:"elements"`
+	SupportedHeroes []supportedHero `json:"supported_heroes"`
+	ID              uint32          `json:"id"`
+	Elements        []string        `json:"elements"`
 }
 
 type affixRef struct {
@@ -131,6 +134,8 @@ type decodedResource struct {
 }
 
 func main() {
+	gamePath := flag.String("game", catalog.DefaultGamePath, "installed client root for item resources")
+	heroesPath := flag.String("heroes", filepath.Join("data", "generated", "hero.json"), "hero profiles for equipment compatibility")
 	databasePath := flag.String("db", catalog.DefaultDatabasePath, "content.db path")
 	outputPath := flag.String("out", filepath.Join("data", "generated", "item.json"), "generated JSON path")
 	lookupPath := flag.String("lookup", filepath.Join("static", "data", "item", "index.json"), "compact lookup path")
@@ -143,7 +148,7 @@ func main() {
 	}
 	defer database.Close()
 
-	result, err := loadItems(database)
+	result, err := loadItems(database, *heroesPath, *gamePath)
 	if err != nil {
 		fatal(err)
 	}
@@ -159,7 +164,11 @@ func main() {
 	fmt.Printf("items: wrote %d families from %d rigblocks, %d prefixes, and %d suffixes to %s\n", result.Count, result.RigblockCount, result.PrefixCount, result.SuffixCount, *outputPath)
 }
 
-func loadItems(database *sql.DB) (itemCatalog, error) {
+func loadItems(database *sql.DB, heroesPath, gamePath string) (itemCatalog, error) {
+	heroes, err := loadCompatibilityHeroes(heroesPath)
+	if err != nil {
+		return itemCatalog{}, fmt.Errorf("compatibilityHeroes: %w", err)
+	}
 	rigblockNames, err := loadLocalization(database, catalog.HashID("LootRigblockNames"))
 	if err != nil {
 		return itemCatalog{}, fmt.Errorf("rigblockNamesLoad: %w", err)
@@ -172,15 +181,15 @@ func loadItems(database *sql.DB) (itemCatalog, error) {
 	if err != nil {
 		return itemCatalog{}, fmt.Errorf("suffixNamesLoad: %w", err)
 	}
-	rigblocks, err := loadResources(database, rigblockType)
+	rigblocks, err := loadResources(database, rigblockType, gamePath)
 	if err != nil {
 		return itemCatalog{}, fmt.Errorf("rigblocksLoad: %w", err)
 	}
-	prefixes, err := loadResources(database, prefixType)
+	prefixes, err := loadResources(database, prefixType, gamePath)
 	if err != nil {
 		return itemCatalog{}, fmt.Errorf("prefixesLoad: %w", err)
 	}
-	suffixes, err := loadResources(database, suffixType)
+	suffixes, err := loadResources(database, suffixType, gamePath)
 	if err != nil {
 		return itemCatalog{}, fmt.Errorf("suffixesLoad: %w", err)
 	}
@@ -201,6 +210,7 @@ func loadItems(database *sql.DB) (itemCatalog, error) {
 	decodedItems := make([]item, 0, len(rigblocks))
 	for _, resource := range rigblocks {
 		entry := decodeItem(resource, rigblockNames)
+		entry.SupportedHeroes = supportedHeroes(entry, heroes)
 		decodedItems = append(decodedItems, entry)
 		if entry.NameLocaleKey != "" {
 			result.LocalizedCount++
@@ -334,7 +344,7 @@ func buildFamily(name string, records []item) itemFamily {
 			variantMap[key] = variant
 		}
 		variant.RecordIDs = append(variant.RecordIDs, record.ID)
-		variant.Records = append(variant.Records, itemVariantRecord{ID: record.ID, Elements: append([]string(nil), record.Elements...)})
+		variant.Records = append(variant.Records, itemVariantRecord{ID: record.ID, SupportedHeroes: record.SupportedHeroes, Elements: append([]string(nil), record.Elements...)})
 		variant.Classes = appendUnique(variant.Classes, record.Classes...)
 		variant.Elements = appendUnique(variant.Elements, record.Elements...)
 	}
@@ -364,6 +374,9 @@ func dedupeVariantRecords(records []itemVariantRecord) []itemVariantRecord {
 		elements := append([]string(nil), record.Elements...)
 		sort.Strings(elements)
 		key := strings.Join(elements, "\x00")
+		for _, hero := range record.SupportedHeroes {
+			key += "\x00" + hero.Slug + ":" + strings.Join(hero.Variants, ",")
+		}
 		existing, found := byElement[key]
 		if !found || record.ID < existing.ID {
 			record.Elements = elements
@@ -413,29 +426,50 @@ func appendUnique(values []string, additions ...string) []string {
 	return values
 }
 
-func loadResources(database *sql.DB, typeID uint32) ([]decodedResource, error) {
-	rows, err := database.Query(`
-		SELECT instance_id, stored_size, decoded_size, compression, raw_payload
-		FROM content_source_resource
-		WHERE content_source_package_id=(SELECT id FROM content_source_package WHERE package_name='AssetData_Binary.package')
-		  AND type_id=? ORDER BY ordinal`, typeID)
+func loadResources(database *sql.DB, typeID uint32, gamePath string) ([]decodedResource, error) {
+	source, err := os.Open(filepath.Join(gamePath, "Data", "AssetData_Binary.package"))
+	if err != nil {
+		return nil, err
+	}
+	defer source.Close()
+	info, err := source.Stat()
+	if err != nil {
+		return nil, err
+	}
+	reader, err := dbpf.NewReader(source, info.Size())
+	if err != nil {
+		return nil, err
+	}
+	rows, err := database.Query(`SELECT instance_id,ordinal,decoded_size FROM content_source_resource
+ WHERE content_source_package_id=(SELECT id FROM content_source_package WHERE package_name='AssetData_Binary.package')
+ AND type_id=? ORDER BY ordinal`, typeID)
 	if err != nil {
 		return nil, fmt.Errorf("resourceQuery: %w", err)
 	}
 	defer rows.Close()
-	resources := make([]decodedResource, 0)
+	resources := []decodedResource{}
 	for rows.Next() {
-		var instanceID, storedSize, decodedSize uint32
-		var compression uint16
-		var raw []byte
-		if err = rows.Scan(&instanceID, &storedSize, &decodedSize, &compression, &raw); err != nil {
-			return nil, fmt.Errorf("resourceScan: %w", err)
+		var id uint32
+		var ordinal, size int
+		if err = rows.Scan(&id, &ordinal, &size); err != nil {
+			return nil, err
 		}
-		payload, decodeErr := dbpf.Decode(dbpf.Entry{StoredSize: storedSize, Size: decodedSize, Compression: compression}, raw)
-		if decodeErr != nil {
-			return nil, fmt.Errorf("resourceDecode[%08x]: %w", instanceID, decodeErr)
+		if ordinal < 0 || ordinal >= len(reader.Entries) {
+			return nil, fmt.Errorf("resource ordinal: %d", ordinal)
 		}
-		resources = append(resources, decodedResource{InstanceID: instanceID, Payload: payload})
+		entry := reader.Entries[ordinal]
+		if entry.Instance != uint64(id) || entry.Type != typeID || entry.Size != uint32(size) {
+			return nil, fmt.Errorf("resource package identity mismatch: %08x", id)
+		}
+		data, err := reader.Open(entry)
+		if err != nil {
+			return nil, err
+		}
+		payload, err := io.ReadAll(data)
+		if err != nil {
+			return nil, err
+		}
+		resources = append(resources, decodedResource{InstanceID: id, Payload: payload})
 	}
 	return resources, rows.Err()
 }

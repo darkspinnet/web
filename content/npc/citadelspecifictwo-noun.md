@@ -1,5 +1,5 @@
 +++
-title = "Citadel Specific Two"
+title = "Strontium Fist"
 npc = "citadelspecifictwo-noun"
 generated = true
 +++

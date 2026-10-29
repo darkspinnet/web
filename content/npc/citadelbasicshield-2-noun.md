@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Shield 2"
+title = "Rolling Dynosphere"
 npc = "citadelbasicshield-2-noun"
 generated = true
 +++

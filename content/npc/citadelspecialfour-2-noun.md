@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Four 2"
+title = "Reconstructionist Omega"
 npc = "citadelspecialfour-2-noun"
 generated = true
 +++

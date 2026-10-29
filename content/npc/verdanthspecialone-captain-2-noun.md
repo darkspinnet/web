@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special One Captain 2"
+title = "Cormeer the Cloud of Death"
 npc = "verdanthspecialone-captain-2-noun"
 generated = true
 +++

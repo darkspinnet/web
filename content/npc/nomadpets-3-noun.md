@@ -1,5 +1,5 @@
 +++
-title = "Nomad Pets 3"
+title = "Magmatic Warlord"
 npc = "nomadpets-3-noun"
 generated = true
 +++

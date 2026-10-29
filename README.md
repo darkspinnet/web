@@ -5,11 +5,11 @@ A Hugo field archive generated from the decoded Darkspore content database and o
 The site currently publishes:
 
 - a 25-family hero landing page with one canonical portrait per family and interactive stat profiles on each detail page;
-- an Enemy Glossary limited to verified killable combat classes, plus generated enemy detail pages;
-- seven level groups—Level 1 through Level 6 and Other—with dedicated reports and connected-component minimaps for campaign, PvP, tutorial, arena, small-map, Spectra/TNX, and test levels where prepared navigation exists;
+- a flat, searchable Enemy Glossary of spawnable creature and destructable nouns, using localized names, base HP, element filters, and lazy-loaded original portraits where recovered;
+- 72 campaign missions ordered by Onslaught, Invasion, and Apocalypse, plus auxiliary maps, with difficulty-specific six-enemy previews, dedicated reports and connected-component minimaps for campaign, PvP, tutorial, arena, small-map, Spectra/TNX, and test levels where prepared navigation exists;
 - an Item Archive containing decoded base equipment rigblocks, prefix/suffix applicability, and procedural medal, chain, and epic-chance rules;
 - a Game Systems reference generated from the server runtime, covering combat and resistance caps, diminishing returns, enemy drop probabilities, capsule weighting, the full 100-level XP curve, hero milestones, and Cash Out rewards;
-- an Ability Archive grouping recovered loadout assets by hero, variant, and slot;
+- an Ability Archive covering hero loadouts and enemy AI abilities, with ownership links, combat data where decoded, and a Heroes only filter;
 - a Status Effect Archive sourced from client localization and correlated with recovered abilities;
 - a general Glossary for combat, hero, equipment, and archive terminology;
 - a searchable Buff catalog for localized gameplay conditions and a raw Effects index decoded from packaged VFX resources;
@@ -59,13 +59,13 @@ Caps are extracted from source constants. Decision functions are compared with t
 The sibling Darkspin CLI lists both campaign shortcuts and every prepared miscellaneous level:
 
 ```powershell
-d:\src\darkspin\bin\server\darkrun.exe map --config d:\src\darkspin\bin\darkspinner\darkspin.toml
+d:\src\darkspin\bin\game\darkrun.exe map --config d:\src\darkspin\bin\game\darkspin.toml
 ```
 
 Render a selection into the directory for its website level slug, then refresh the level catalog. The selection may be a campaign slot such as `1-1`, the `tutorial` shortcut, or a canonical PvP, arena, small-map, Spectra/TNX, or test level name.
 
 ```powershell
-d:\src\darkspin\bin\server\darkrun.exe map cryos_2_PVP --config d:\src\darkspin\bin\darkspinner\darkspin.toml --output static\maps\cryos-2-pvp\map.webp --metadata static\maps\cryos-2-pvp\map.json
+d:\src\darkspin\bin\game\darkrun.exe map cryos_2_PVP --config d:\src\darkspin\bin\game\darkspin.toml --output static\maps\cryos-2-pvp\map.webp --metadata static\maps\cryos-2-pvp\map.json
 mage level
 ```
 
@@ -73,8 +73,8 @@ Build the current sibling CLI with `mage darkrun:build` in the Darkspin reposito
 
 The generators default to:
 
-- database: `d:\src\darkspin\bin\darkspinner\darkspin\cache\content.db`
-- client root: `d:\src\darkspin\bin\darkspinner`
+- database: `d:\src\darkspin\bin\game\darkspin\cache\content.db`
+- client root: `d:\src\darkspin\bin\game`
 
 Override either path when needed:
 
@@ -105,7 +105,7 @@ The data tools write deterministic, formatted JSON under `data/generated`. The a
 
 Hero detail pages pair the canonical portrait with the original localized epithet and biography from the client. Alpha is the baseline; Beta, Gamma, and Delta switch the package-backed profile fields while the image remains fixed. The selected profile is stored in the URL fragment (for example, `#variant=beta`), and each numeric field shows its delta from Alpha.
 
-The ability tool deduplicates the ability assets referenced by all 100 hero profiles. It correlates packaged Lua namespaces with the authored 40-pixel UI icons, links exact localized names and descriptions where their identity is proven, and projects rank-one combat fields from the Lua registrations supported by the current decoder. It generates one page per asset with loadout slot, hero ownership, variant coverage, source provenance, and available combat data. Hero loadouts show the same icons and brief descriptions and link directly to these pages.
+The ability tool deduplicates assets referenced by all 100 hero profiles and by the enemy catalog's AI definitions and phase gambits. It correlates packaged Lua namespaces with authored UI icons, links exact localized names and descriptions where their identity is proven, and projects rank-one combat fields from Lua registrations supported by the current decoder. Each asset has a page with hero or enemy ownership, variant or AI-use context, source provenance, and available combat data. Hero loadouts and enemy records link directly to these pages. The archive defaults to all abilities and offers a Heroes only filter, including abilities shared with enemies.
 
 The buff tool resolves curated gameplay conditions from the English client localization and links matching recovered ability text. When a modifier's native `SPID` icon reference has been verified, the asset generator extracts its 32-pixel HUD artwork from `UI.package` into `static/image/buff`; unverified buffs retain the lightweight CSS glyph. The effect tool merges raw names from the packaged VFX resource type with identifiers recovered from compiled Lua `ServerEventDefs` preload tables, preserving references such as `character_beam_in_plasma_electric` while distinguishing referenced-only effects from concrete package records. The glossary is a compact, hand-maintained terminology layer that explains broader combat, hero, equipment, and archive concepts while linking back to the relevant generated sections.
 
@@ -128,3 +128,15 @@ The generated static site is written to `public/`.
 
 Navigation, catalog search results, images, and client-side archive links respect
 the configured base path. The production `baseURL` in `config.toml` is unchanged.
+
+Enemy portraits are extracted by `mage npc` (or `go run ./scripts/npc -db <content.db> -game <client-root>`). The generator joins actual non-player nouns to their classes and authored noun types; placement-only helpers and player pets are excluded. Each noun's assembled-creature asset ID (the little-endian uint64 at offset 152) is matched to the big-endian asset ID in version-13 metadata in `PreBaked.package`. The metadata's resource key identifies the corresponding PNG. Animation names and noun suffixes do not determine appearance: rigs can be shared, and variants carry their own creature IDs. Missing artwork stays visibly unavailable. The enemy index is flat and independent of authored level references, so it also supports randomized spawns.
+
+Campaign pages preserve existing Onslaught URLs and add `invasion-` and `apocalypse-` mission URLs. Each pass uses the corresponding difficulty tuning and first-clear spawn configuration, including its own noun variants. Map position candidates use that same configuration. Live randomizer, party scaling, buffs, and encounter rolls can change the result.
+
+Item pages show supported hero families and variants for the selected visual/element. Compatibility is computed per rigblock from its class and element masks, explicit hero noun restrictions, and the hero’s hand/foot slots. The hero list updates with the configurator and restores from its shared URL fragment. `mage item` reads the committed hero catalog (`-heroes` can override it) and original client resources under `-game`; refresh heroes first when those profiles change.
+
+The ability generator also walks every cataloged enemy’s authored AI definition and phase gambits, preserving action, passive, death, alert, and aggro uses. Shared hero/enemy abilities retain both ownership lists and remain visible under Heroes only. Enemy pages link back to their recovered abilities. Unavailable phase references are recorded in `ownership_notes` without discarding known callbacks. `mage ability` refreshes the enemy catalog first; full generation uses the same dependency order.
+
+Enemy list and detail previews share Onslaught/Invasion/Apocalypse, mission, and Solo/co-op (2–4 players) controls. `mage npc` also writes all 72 authored health/damage tuning rows to `static/data/npc/scaling.json` and exports each class's player-count coefficient. HP follows the runtime formula `base HP × (1 + (players − 1) × class coefficient) × mission health multiplier`; default destructable fixture HP remains unscaled. Damage/healing party multipliers come from `sim.ProjectNonPlayerDamageForParty` (1, 1.4, 1.8, 2.2). Ability previews use recovered runtime action profiles, the noun's effective NPC rank, and source attributes; missing numerical values stay unavailable. Rank remains attached to the selected noun variant rather than changing its identity with the preview mode. Elite affixes, temporary buffs, Star Mode, and target defenses are excluded. The selected context persists in the URL and browser preferences and follows enemy links.
+
+Enemy detail pages show the union of the selected creature family's authored ability sets, including later variants in an Onslaught preview. Invasion and Apocalypse badges mark the earliest variant that references an ability; shared abilities remain unbadged. Variant families require an existing rank-1 base noun with a matching category, so unrelated suffixes are not grouped. The ability archive also badges enemy abilities whose known users are all later-rank variants; abilities shared with heroes are not marked as difficulty-specific.

@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Maser 2"
+title = "Maser Tank Cruiser"
 npc = "scaldronbasicmaser-2-noun"
 generated = true
 +++

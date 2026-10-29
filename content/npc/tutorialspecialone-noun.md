@@ -1,5 +1,5 @@
 +++
-title = "Tutorial Special One"
+title = "Simulated corrupted Quadra"
 npc = "tutorialspecialone-noun"
 generated = true
 +++

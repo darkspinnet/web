@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Ranged 2"
+title = "Isotronic Laser Unit"
 npc = "citadelbasicranged-2-noun"
 generated = true
 +++

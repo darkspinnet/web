@@ -1,5 +1,5 @@
 +++
-title = "Nomad Shielder Captain 2"
+title = "MKS-522 the Shielded Explosionist"
 npc = "nomadshielder-captain-2-noun"
 generated = true
 +++

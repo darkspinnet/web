@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Copter"
+title = "Hover-Bot"
 npc = "scaldronbasiccopter-noun"
 generated = true
 +++

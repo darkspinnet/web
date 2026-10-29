@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Lightning Melee"
+title = "Plasmic Howler"
 npc = "cryosbasiclightningmelee-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad With Drone Captain 3"
+title = "DAG-09 the Invincible Guardian"
 npc = "nomadwithdrone-captain-3-noun"
 generated = true
 +++

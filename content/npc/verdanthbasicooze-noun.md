@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Ooze"
+title = "Protoplasm"
 npc = "verdanthbasicooze-noun"
 generated = true
 +++

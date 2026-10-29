@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab tnx object enrage Plant"
+title = "Enraging Plant"
 npc = "dest-prefab-tnx-object-enrageplant-noun"
 generated = true
 +++

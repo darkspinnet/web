@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Haster Captain 2"
+title = "Mikk the Luminal Aggressor"
 npc = "zelemspecialhaster-captain-2-noun"
 generated = true
 +++

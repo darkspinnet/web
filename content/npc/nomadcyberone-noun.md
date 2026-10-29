@@ -1,5 +1,5 @@
 +++
-title = "Nomad Cyber One"
+title = "Omicron"
 npc = "nomadcyberone-noun"
 generated = true
 +++

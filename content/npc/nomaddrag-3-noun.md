@@ -1,5 +1,5 @@
 +++
-title = "Nomad Drag 3.noun"
+title = "Particle Dimensionist"
 npc = "nomaddrag-3-noun"
 generated = true
 +++

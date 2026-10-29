@@ -1,5 +1,5 @@
 +++
-title = "DEST prefab islands instrument scitech 3"
+title = "Gravitic Regulator"
 npc = "dest-prefab-islands-instrument-scitech-3-noun"
 generated = true
 +++

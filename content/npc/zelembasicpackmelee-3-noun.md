@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Pack Melee 3"
+title = "Killsquad Brawler"
 npc = "zelembasicpackmelee-3-noun"
 generated = true
 +++

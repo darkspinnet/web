@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Poison"
+title = "Toxiraptor"
 npc = "cryosbasicpoison-noun"
 generated = true
 +++

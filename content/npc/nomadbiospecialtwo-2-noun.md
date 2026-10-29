@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two 2.noun"
+title = "Pouncing Hunter"
 npc = "nomadbiospecialtwo-2-noun"
 generated = true
 +++

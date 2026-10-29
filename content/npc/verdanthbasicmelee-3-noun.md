@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Melee 3"
+title = "Temporal Striker"
 npc = "verdanthbasicmelee-3-noun"
 generated = true
 +++

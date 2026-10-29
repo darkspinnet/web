@@ -1,5 +1,5 @@
 +++
-title = "Cryos Special Three Captain 2"
+title = "Seng the Merciless"
 npc = "cryosspecialthree-captain-2-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Plunge"
+title = "Tentacler"
 npc = "verdanthbasicplunge-noun"
 generated = true
 +++

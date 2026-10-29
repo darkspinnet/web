@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two"
+title = "Pouncing Stalker"
 npc = "nomadbiospecialtwo-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Ruption 3.noun"
+title = "Eruption Crawler"
 npc = "nomadruption-3-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special One 3"
+title = "Ragetusk Vengeance"
 npc = "nomadspecialone-3-noun"
 generated = true
 +++

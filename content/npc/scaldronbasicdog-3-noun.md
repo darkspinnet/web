@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Dog 3"
+title = "Ripping Shadower"
 npc = "scaldronbasicdog-3-noun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Citadel Specific One 3"
+title = "Voltroid-EM"
 npc = "citadelspecificone-3-noun"
 generated = true
 +++

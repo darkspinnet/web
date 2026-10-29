@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Picky 2"
+title = "Dashing Brute"
 npc = "verdanthbasicpicky-2-noun"
 generated = true
 +++

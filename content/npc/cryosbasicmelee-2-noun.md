@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Melee 2"
+title = "Triocular Bolt"
 npc = "cryosbasicmelee-2-noun"
 generated = true
 +++

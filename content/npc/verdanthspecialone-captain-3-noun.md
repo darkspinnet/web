@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Special One Captain 3"
+title = "Tunax the Toxic Terror"
 npc = "verdanthspecialone-captain-3-noun"
 generated = true
 +++

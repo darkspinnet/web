@@ -1,5 +1,5 @@
 +++
-title = "DEST nocturna plant supnat"
+title = "Necrotic Plant"
 npc = "dest-nocturna-plant-supnat-noun"
 generated = true
 +++

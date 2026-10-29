@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special One Captain 2"
+title = "Maddyx the Interdimensionist"
 npc = "zelemspecialone-captain-2-noun"
 generated = true
 +++

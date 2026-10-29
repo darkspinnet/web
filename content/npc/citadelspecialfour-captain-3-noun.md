@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Four Captain 3"
+title = "ZW-08 the Omnipotent"
 npc = "citadelspecialfour-captain-3-noun"
 generated = true
 +++

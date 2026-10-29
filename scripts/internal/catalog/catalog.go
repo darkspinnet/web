@@ -16,8 +16,8 @@ import (
 var publicTrademarkPattern = regexp.MustCompile(`(?i)darkspore`)
 
 const (
-	DefaultDatabasePath = `d:\src\darkspin\bin\darkspinner\darkspin\cache\content.db`
-	DefaultGamePath     = `d:\src\darkspin\bin\darkspinner`
+	DefaultDatabasePath = `d:\src\darkspin\bin\game\darkspin\cache\content.db`
+	DefaultGamePath     = `d:\src\darkspin\bin\game`
 )
 
 func Open(databasePath string) (*sql.DB, error) {

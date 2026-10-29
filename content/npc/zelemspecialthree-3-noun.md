@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Three 3.noun"
+title = "Raytheoid Delta"
 npc = "zelemspecialthree-3-noun"
 generated = true
 +++

@@ -24,6 +24,9 @@ func Hero() error {
 
 // Ability refreshes the hero ability ownership catalog and global lookup index.
 func Ability() error {
+	if err := Npc(); err != nil {
+		return err
+	}
 	if err := generateAbility(); err != nil {
 		return err
 	}
@@ -185,7 +188,7 @@ func Asset() error {
 
 // Generate refreshes every generated JSON catalog and image asset.
 func Generate() {
-	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, generateCombat, Search, Asset)
+	mg.SerialDeps(Hero, Npc, generateAbility, generateBuff, generateEffect, generateGlossary, Level, generateItem, generateSystem, generateCombat, Search, Asset)
 }
 
 // Build writes the Hugo site to public using current generated inputs.
@@ -199,7 +202,7 @@ func Build() error {
 
 // All refreshes every generated input and then builds the Hugo site.
 func All() {
-	mg.SerialDeps(Hero, generateAbility, generateBuff, generateEffect, generateGlossary, Npc, Level, generateItem, generateSystem, generateCombat, Search, Asset, Build)
+	mg.SerialDeps(Hero, Npc, generateAbility, generateBuff, generateEffect, generateGlossary, Level, generateItem, generateSystem, generateCombat, Search, Asset, Build)
 }
 
 // Server starts the Hugo development server using the current generated data.
