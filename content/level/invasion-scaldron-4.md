@@ -1,5 +1,5 @@
 +++
-title = "Invasion 6-4"
+title = "Invasion 3-2 · Perceptory"
 level = "invasion-scaldron-4"
 generated = true
 +++

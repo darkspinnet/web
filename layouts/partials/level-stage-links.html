@@ -1,0 +1,11 @@
+<div class="level-stage-list">
+  {{ range . }}
+  <a class="level-stage-link" href="{{ printf "level/%s/" .slug | relURL }}">
+    <span>
+      <strong>{{ with .slot }}<span class="stage-number">{{ . }}</span> · {{ end }}{{ .display_name | default .name }}</strong>
+      <small>{{ if .campaign }}Difficulty {{ .campaign.difficulty }} · {{ .region }}{{ else if .replay }}{{ .npc_count }} possible enemies{{ else }}{{ .name }} · {{ .region }} · {{ .npc_count }} enemies{{ end }}</small>
+    </span>
+    <em aria-hidden="true">→</em>
+  </a>
+  {{ end }}
+</div>

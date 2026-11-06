@@ -1,5 +1,5 @@
 +++
-title = "Zelem SP1 Teleport Gun"
+title = "Teleport Gun"
 ability = "zelemsp1-teleportgun"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 1-3"
+title = "Apocalypse 2-3 · Twilight Summit"
 level = "apocalypse-nocturna-4"
 generated = true
 +++

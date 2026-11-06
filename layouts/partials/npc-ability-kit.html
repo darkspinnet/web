@@ -7,7 +7,7 @@
   {{ $ability := . }}{{ $rank := 4 }}{{ $own := dict }}{{ $fallback := dict }}{{ $fallbackRank := 4 }}
   {{ range .enemies }}
     {{ $owner := index site.Data.generated.npc.entry .slug }}
-    {{ if and $owner (eq ($owner.family_slug | default $owner.slug) $family) (or (in .slots "action") (in .slots "passive") (in .slots "death") $ability.combat $ability.description) }}
+    {{ if and $owner (eq ($owner.family_slug | default $owner.slug) $family) (not (or (in .slots "first_aggro") (in .slots "first_alert") (in .slots "subsequent_aggro"))) (or (in .slots "action") (in .slots "passive") (in .slots "death") $ability.combat $ability.description) }}
       {{ $ownerRank := int $owner.npc_rank }}
       {{ if lt $ownerRank $rank }}{{ $rank = $ownerRank }}{{ end }}
       {{ range $owner.ability_previews }}
@@ -19,8 +19,9 @@
     {{ end }}
   {{ end }}
   {{ if lt $rank 4 }}
-    {{ $items = $items | append (dict "ability" $ability "rank" $rank) }}
+    {{ $label := index site.Data.npc_basic_attacks $ability.slug | default ($ability.short_name | default $ability.name) }}
+    {{ $items = $items | append (dict "ability" $ability "rank" $rank "label" $label) }}
     {{ if $own }}{{ $previews = $previews | append $own }}{{ else if $fallback }}{{ $previews = $previews | append $fallback }}{{ end }}
   {{ end }}
 {{ end }}
-{{ return (dict "items" $items "previews" $previews) }}
+{{ return (dict "items" (partial "npc-ability-order.html" $items) "previews" $previews) }}

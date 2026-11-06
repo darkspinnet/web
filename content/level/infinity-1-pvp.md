@@ -1,5 +1,5 @@
 +++
-title = "infinity 1 PVP"
+title = "Core Extractor"
 level = "infinity-1-pvp"
 generated = true
 +++

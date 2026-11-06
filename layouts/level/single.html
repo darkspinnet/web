@@ -3,14 +3,20 @@
 {{ $campaign := $level.campaign }}
 <header class="page-hero level-detail-heading">
   <div>
-    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">DARKSPIN</a> // <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}">CAMPAIGN</a> // {{ upper $level.display_name }}</p>
-    <h1>{{ $level.display_name }}</h1>
-    <p>{{ $level.region }} · {{ $level.name }} · mission field guide</p>
+    <p class="eyebrow"><a href="{{ "/" | strings.TrimPrefix "/" | relURL }}">DARKSPIN</a> // <a href="{{ "/level/" | strings.TrimPrefix "/" | relURL }}">LEVELS</a></p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ $level.region }} · {{ $level.name }} · {{ if $level.replay }}replay randomizer{{ else }}mission field guide{{ end }}</p>
   </div>
   <div class="page-counter"><strong>{{ with $campaign }}{{ len .enemies }}{{ else }}{{ $level.npc_count }}{{ end }}</strong><span>ENEMY<br>ROSTER</span></div>
 </header>
 
-{{ if $level.mode }}<nav class="mission-nav" aria-label="Campaign progression">{{ with $level.previous }}<a href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">← Previous mission</a>{{ end }}<span>{{ $level.progression }} / 72 · {{ $level.mode }}</span>{{ with $level.next }}<a href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">Next mission →</a>{{ end }}</nav>{{ end }}
+{{ if $level.mode }}
+<nav class="mission-nav" aria-label="Campaign progression">
+  {{ with $level.previous }}<a class="mission-nav-previous" href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">← Previous mission</a>{{ end }}
+  <span class="mission-nav-progress">{{ $level.progression }} / 72 · {{ $level.mode }}</span>
+  {{ with $level.next }}<a class="mission-nav-next" href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">Next mission →</a>{{ end }}
+</nav>
+{{ end }}
 {{ with $campaign }}
 <section class="detail-metric level-run-metrics">
   <div><span>{{ upper $level.mode }}</span><strong>{{ .difficulty }}</strong><small>DIFFICULTY</small></div>
@@ -21,29 +27,48 @@
 
 <section class="level-campaign-stack">
   <article class="console-panel level-dossier-panel">
-    <header><div><span>01</span><h2>Enemy roster</h2></div><small>HOVER, FOCUS OR TAP TO INSPECT</small></header>
-    <p class="level-estimate-note">Values apply the selected difficulty to each enemy’s base class. This is the first-clear roster; randomizer settings can change the lineup. A rolled encounter can choose a subset of this roster; buffs, party size, critical hits, damage-over-time effects, and elite variants can change the live result.</p>
-    <div class="level-dossier-grid threat-grid">
+    <header><div><span>01</span><h2>Enemy roster</h2></div></header>
+    <div class="level-dossier-grid">
       {{ range .enemies }}
-      <details class="level-enemy-dossier threat-cell" id="{{ .slug }}">
- <summary><span class="threat-portrait">{{ $npc := index site.Data.generated.npc.entry .slug }}{{ with $npc.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" loading="lazy" width="96" height="96">{{ else }}<span aria-hidden="true">◇</span>{{ end }}</span><strong>{{ .name }}</strong><small>{{ upper $npc.element }} · {{ .estimated_hit_points }} HP</small></summary>
- <div class="threat-breakdown">
-        <header>
-          <div><small>{{ upper .role }} · CV {{ .challenge_value }}</small><h3>{{ .name }}</h3><code>{{ .noun }}</code></div>
-          <a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}" aria-label="Open {{ .name }} entity record">ENTITY →</a>
+      {{ $npc := index site.Data.generated.npc.entry .slug }}
+      <article class="level-enemy-dossier{{ if eq .role "Destructor" }} level-enemy-destructor{{ end }}" id="{{ .slug }}" data-role="{{ lower .role }}">
+        <header class="level-enemy-header">
+          <h3><a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}" title="{{ .noun }}">{{ .name }}</a></h3>
+          <div class="level-enemy-profile">
+            <span class="level-enemy-stat" role="img" aria-label="{{ printf "%.0f" .estimated_hit_points }} estimated HP, {{ .base_hit_points }} base" title="{{ .base_hit_points }} base">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 9 12v16c0 15 8 25 23 32 15-7 23-17 23-32V12Z"/></svg>
+              <strong>{{ printf "%.0f" .estimated_hit_points }}</strong>
+            </span>
+            <div class="threat-portrait">
+              {{ with $npc.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" loading="lazy" width="96" height="96">{{ else }}<span aria-hidden="true">◇</span>{{ end }}
+              {{ with $npc.element }}
+              <img class="level-enemy-element" src="{{ printf "image/element/%s.png" . | relURL }}" alt="{{ title . }}" title="{{ title . }}" width="28" height="28">
+              {{ end }}
+              <div class="level-enemy-badges">
+                <abbr title="{{ .role }}" data-role="{{ lower .role }}">{{ upper (substr .role 0 1) }}</abbr>
+              </div>
+              <span class="level-enemy-cv" title="Challenge value {{ .challenge_value }}">CV{{ .challenge_value }}</span>
+            </div>
+            {{ $damage := "—" }}
+            {{ $damageTip := "No single hit estimate" }}
+            {{ if isset . "estimated_damage_min" }}
+              {{ $damage = printf "%.0f–%.0f" (math.Round .estimated_damage_min) (math.Round .estimated_damage_max) }}
+              {{ $damageTip = .estimated_damage_type | default "Damage type unavailable" }}
+            {{ end }}
+            <span class="level-enemy-stat" role="img" aria-label="Estimated damage {{ $damage }}. {{ $damageTip }}" title="{{ $damageTip }}">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="m53 7-8 2-27 27-6-6-5 5 10 10-9 9 5 5 9-9 10 10 5-5-6-6L58 22l2-8 1-8Z"/></svg>
+              <strong>{{ $damage }}</strong>
+            </span>
+          </div>
         </header>
-        <div class="level-enemy-estimates">
-          <div><span>EST. HP</span><strong>{{ .estimated_hit_points }}</strong><small>{{ .base_hit_points }} BASE</small></div>
-          <div><span>EST. HIT</span>{{ if .estimated_damage_min }}<strong>{{ .estimated_damage_min }}–{{ .estimated_damage_max }}</strong><small>DIRECT DAMAGE</small>{{ else }}<strong>—</strong><small>NO SINGLE HIT PROFILE</small>{{ end }}</div>
-        </div>
         {{ with .descriptions }}
         <div class="level-enemy-description">
-          <small>IN-GAME DESCRIPTION</small>
           {{ range . }}<p>{{ . }}</p>{{ end }}
         </div>
         {{ end }}
         {{ with .behavior }}<p class="level-enemy-behavior"><span>IN DARKSPIN</span>{{ . }}</p>{{ end }}
-      </div></details>
+        {{ with $npc }}{{ partialCached "level-enemy-abilities.html" . .slug }}{{ end }}
+      </article>
       {{ end }}
     </div>
   </article>
@@ -107,28 +132,37 @@
   </article>
   {{ end }}
 
-  <div class="level-detail-grid">
-    <article class="console-panel level-loot-panel">
-      <header><div><span>04</span><h2>Loot intelligence</h2></div><small>GLOBAL RULES</small></header>
-      <div class="loot-placeholder">
-        <span>PROCEDURAL SYSTEM</span>
-        <h3>Drops are rolled, not assigned to this map</h3>
-        <p>Enemy drops use the global DNA, item, rarity, and medal rules. This mission does not carry a fixed per-enemy item table.</p>
-        <a href="{{ "/system/drops/" | strings.TrimPrefix "/" | relURL }}">OPEN DROP PROBABILITIES →</a>
-      </div>
-    </article>
-
-    <article class="console-panel level-system-panel">
-      <header><div><span>05</span><h2>Mission environment</h2></div><small>RUNTIME CONFIG</small></header>
-      <dl class="level-system-list">
-        <div><dt>Planet config</dt><dd>{{ $level.planet_config | default "—" }}</dd></div>
-        <div><dt>Rendering</dt><dd>{{ $level.rendering_config | default "—" }}</dd></div>
-        <div><dt>Music</dt><dd>{{ $level.music | default "—" }}</dd></div>
-        <div><dt>Navigation</dt><dd>{{ $level.navigation_mesh | default "—" }}</dd></div>
-        <div><dt>Physics</dt><dd>{{ $level.physics_mesh | default "—" }}</dd></div>
-      </dl>
-    </article>
-  </div>
+  <article class="console-panel">
+    <header><div><span>{{ if $level.map.positions }}04{{ else if $level.map }}03{{ else }}02{{ end }}</span><h2>Mission environment</h2></div><small>RUNTIME CONFIG</small></header>
+    <dl class="level-system-list">
+      <div><dt>Planet config</dt><dd>{{ $level.planet_config | default "—" }}</dd></div>
+      <div><dt>Rendering</dt><dd>{{ $level.rendering_config | default "—" }}</dd></div>
+      <div><dt>Music</dt><dd>{{ $level.music | default "—" }}</dd></div>
+      <div><dt>Navigation</dt><dd>{{ $level.navigation_mesh | default "—" }}</dd></div>
+      <div><dt>Physics</dt><dd>{{ $level.physics_mesh | default "—" }}</dd></div>
+    </dl>
+  </article>
+</section>
+{{ else }}
+{{ if $level.replay }}
+<section class="level-campaign-stack">
+  <article class="console-panel">
+    <header><div><span>01</span><h2>Possible enemy population</h2></div><small>{{ $level.npc_count }} CREATURES</small></header>
+    <p class="level-estimate-note">Replay picks a map from the party’s unlocked destinations. The chosen threat and run seed determine which of these enemies can appear together. The list covers the default replay pools, including co-op operatives and authored encounters.</p>
+    <ul class="level-replay-roster">
+      {{ range $level.replay.enemies }}
+      {{ $npc := index site.Data.generated.npc.entry .slug }}
+      <li>
+        {{ with $npc.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" loading="lazy" width="48" height="48">{{ end }}
+        <div>
+          <strong>{{ if $npc }}<a href="{{ printf "npc/%s/" .slug | relURL }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</strong>
+          <small>{{ delimit .roles " / " }} · {{ delimit .modes ", " }}</small>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </article>
+  {{ with $level.map }}{{ partial "level-map.html" (dict "level" $level "map" . "number" "02") }}{{ end }}
 </section>
 {{ else }}
 <section class="detail-metric">
@@ -141,6 +175,7 @@
 <section class="level-campaign-stack">
   {{ partial "level-map.html" (dict "level" $level "map" . "number" "01") }}
 </section>
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}

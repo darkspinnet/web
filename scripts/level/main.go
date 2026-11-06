@@ -47,6 +47,7 @@ type levelReport struct {
 	Aliases         []string        `json:"aliases"`
 	Map             *campaignMap    `json:"map,omitempty"`
 	Campaign        *campaignDetail `json:"campaign,omitempty"`
+	Replay          *replayDetail   `json:"replay,omitempty"`
 }
 
 type levelGroup struct {
@@ -69,7 +70,9 @@ type levelCatalog struct {
 
 func main() {
 	databasePath := flag.String("db", catalog.DefaultDatabasePath, "content.db path")
+	gamePath := flag.String("game", catalog.DefaultGamePath, "installed client root for creature tooltip descriptions")
 	mapPath := flag.String("campaign-maps", filepath.Join("static", "maps"), "rendered campaign map path")
+	runSeed := flag.Uint64("campaign-seed", 1, "nonzero run seed for solo first-clear campaign maps")
 	outputPath := flag.String("out", filepath.Join("data", "generated", "level.json"), "generated JSON path")
 	lookupPath := flag.String("lookup", filepath.Join("static", "data", "level"), "compact report directory")
 	contentPath := flag.String("content", filepath.Join("content", "level"), "generated level content directory")
@@ -84,7 +87,11 @@ func main() {
 		fatal(err)
 	}
 	result.Levels = expandProgression(result.Levels)
-	err = enrichCampaignLevels(database, result.Levels)
+	descriptions, err := catalog.LoadNPCDescriptions(database, *gamePath)
+	if err != nil {
+		fatal(err)
+	}
+	err = enrichCampaignLevels(database, result.Levels, descriptions)
 	if err != nil {
 		fatal(err)
 	}
@@ -92,6 +99,14 @@ func main() {
 	if err != nil {
 		fatal(err)
 	}
+	if err = generateSeededMaps(database, *databasePath, *mapPath, *runSeed, result.Levels, descriptions); err != nil {
+		fatal(err)
+	}
+	replays, err := loadReplayLevels(*databasePath, *mapPath, result.Levels)
+	if err != nil {
+		fatal(err)
+	}
+	result.Levels = append(result.Levels, replays...)
 	result.Groups = buildGroups(result.Levels)
 	result.Count = len(result.Levels)
 	result.GroupCount = len(result.Groups)
@@ -129,6 +144,11 @@ func writeContent(path string, levels []levelReport) error {
 		if title == "" {
 			title = level.Name
 		}
+		if level.Slot != "" {
+			title = fmt.Sprintf("%s %s · %s", level.Mode, level.Slot, title)
+		} else if level.Replay != nil {
+			title = fmt.Sprintf("Replay · %s", title)
+		}
 		contents := fmt.Sprintf("+++\ntitle = %q\nlevel = %q\ngenerated = true\n+++\n", title, level.Slug)
 		if err := catalog.WriteText(filepath.Join(path, level.Slug+".md"), contents); err != nil {
 			return fmt.Errorf("contentWrite[%s]: %w", level.Slug, err)
@@ -155,6 +175,10 @@ func loadLevelReports(database *sql.DB) (levelCatalog, error) {
 		return levelCatalog{}, fmt.Errorf("levelQuery: %w", err)
 	}
 	defer rows.Close()
+	titles, err := loadLevelTitles(database)
+	if err != nil {
+		return levelCatalog{}, err
+	}
 	result := levelCatalog{Regions: map[string]int{}, Levels: make([]levelReport, 0, 61), Entry: make(map[string]levelReport)}
 	for rows.Next() {
 		var report levelReport
@@ -166,6 +190,13 @@ func loadLevelReports(database *sql.DB) (levelCatalog, error) {
 			return levelCatalog{}, fmt.Errorf("levelScan: %w", err)
 		}
 		report.Slug = catalog.Slug(report.Name)
+		report.DisplayName = titles[report.ID]
+		if report.DisplayName == "" {
+			report.DisplayName = catalog.DisplayName(report.Name)
+			if strings.Contains(strings.ToLower(report.Name), "tutorial") {
+				report.DisplayName = "Tutorial"
+			}
+		}
 		report.Region = levelRegion(report.Name, report.PlanetConfig)
 		report.CameraPitch = sensibleCamera(pitch)
 		report.CameraYaw = sensibleCamera(yaw)
@@ -216,17 +247,22 @@ func loadLevelReports(database *sql.DB) (levelCatalog, error) {
 func expandProgression(levels []levelReport) []levelReport {
 	result := make([]levelReport, 0, len(levels)+48)
 	missions := make(map[int]string)
+	modes := []string{"Onslaught", "Invasion", "Apocalypse"}
 	for _, level := range levels {
 		if len(level.CampaignOrders) == 0 || level.CampaignOrders[0] > 24 {
 			result = append(result, level)
 			continue
 		}
-		for pass, mode := range []string{"Onslaught", "Invasion", "Apocalypse"} {
+		for _, stage := range level.CampaignOrders {
+			if stage < 1 || stage > 72 {
+				continue
+			}
+			pass, position := (stage-1)/24, (stage-1)%24
+			mode := modes[pass]
 			mission := level
-			mission.Progression = level.CampaignOrders[0] + pass*24
+			mission.Progression = stage
 			mission.Mode = mode
-			mission.Slot = fmt.Sprintf("%d-%d", (level.CampaignOrders[0]-1)/4+1, (level.CampaignOrders[0]-1)%4+1)
-			mission.DisplayName = mode + " " + mission.Slot
+			mission.Slot = fmt.Sprintf("%d-%d", position/4+1, position%4+1)
 			if pass > 0 {
 				mission.Slug = strings.ToLower(mode) + "-" + level.Slug
 			}
@@ -245,10 +281,16 @@ func expandProgression(levels []levelReport) []levelReport {
 }
 
 func buildGroups(levels []levelReport) []levelGroup {
-	groups := []levelGroup{{Name: "Onslaught", Slug: "onslaught"}, {Name: "Invasion", Slug: "invasion"}, {Name: "Apocalypse", Slug: "apocalypse"}, {Name: "Other", Slug: "other"}}
+	groups := []levelGroup{{Name: "Onslaught", Slug: "onslaught"}, {Name: "Invasion", Slug: "invasion"}, {Name: "Apocalypse", Slug: "apocalypse"}}
+	replay := levelGroup{Name: "Replay", Slug: "replay"}
+	other := levelGroup{Name: "Other", Slug: "other"}
 	for i := range levels {
 		report := &levels[i]
-		if report.Mode != "" {
+		if report.Replay != nil {
+			report.GroupName = replay.Name
+			report.GroupSlug = replay.Slug
+			replay.Levels = append(replay.Levels, *report)
+		} else if report.Mode != "" {
 			group := (report.Progression - 1) / 24
 			report.GroupName = report.Mode
 			report.GroupSlug = groups[group].Slug
@@ -256,22 +298,20 @@ func buildGroups(levels []levelReport) []levelGroup {
 			groups[group].Levels = append(groups[group].Levels, *report)
 		} else if len(report.CampaignOrders) > 0 && report.CampaignOrders[0] <= 24 {
 			// Base map identity before expansion.
-			position := report.CampaignOrders[0]
-			report.DisplayName = fmt.Sprintf("%d-%d", (position-1)/4+1, (position-1)%4+1)
 			groups[0].Levels = append(groups[0].Levels, *report)
 		} else {
-			report.DisplayName = catalog.DisplayName(report.Name)
-			if strings.Contains(strings.ToLower(report.Name), "tutorial") {
-				report.DisplayName = "Tutorial"
-			}
-			report.GroupName = "Other"
-			report.GroupSlug = "other"
-			groups[3].Levels = append(groups[3].Levels, *report)
+			report.GroupName = other.Name
+			report.GroupSlug = other.Slug
+			other.Levels = append(other.Levels, *report)
 		}
 	}
+	if len(replay.Levels) > 0 {
+		groups = append(groups, replay)
+	}
+	groups = append(groups, other)
 	for i := range groups {
 		sort.Slice(groups[i].Levels, func(a, b int) bool {
-			if groups[i].Slug == "other" {
+			if groups[i].Slug == "other" || groups[i].Slug == "replay" {
 				return groups[i].Levels[a].DisplayName < groups[i].Levels[b].DisplayName
 			}
 			return groups[i].Levels[a].Stage < groups[i].Levels[b].Stage

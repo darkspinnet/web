@@ -197,6 +197,7 @@
       "asset_name": "ArcWeldingMelee",
       "name": "Arc Welding Melee",
       "slug": "arcweldingmelee",
+      "description": "Strikes a nearby target with an arc welder, dealing physical damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -2905,6 +2906,7 @@
       "asset_name": "ConsumeCorpse",
       "name": "Consume Corpse",
       "slug": "consumecorpse",
+      "description": "Feeds on a nearby corpse to grow larger and stronger.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -3981,7 +3983,9 @@
     {
       "asset_name": "DirectHeal",
       "name": "Direct Heal",
+      "short_name": "Self Heal",
       "slug": "directheal",
+      "description": "Restores some of the caster’s own health after it takes enough damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -19574,9 +19578,55 @@
       ]
     },
     {
+      "asset_name": "ZelemSpecialThreeEnergyBuff",
+      "name": "Raytheoid Energy Buff",
+      "short_name": "Energy Buff",
+      "slug": "zelemspecialthreeenergybuff",
+      "description": "Applies a temporary energy buff to an allied Raytheoid.",
+      "primary_slot": "enemy_action",
+      "slots": [
+        "enemy_action"
+      ],
+      "usage_count": 3,
+      "enemies": [
+        {
+          "name": "Raytheoid",
+          "slug": "zelemspecialthree-noun",
+          "element": "cyber",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Raytheoid Delta",
+          "slug": "zelemspecialthree-3-noun",
+          "element": "cyber",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Targeting Raytheoid",
+          "slug": "zelemspecialthree-2-noun",
+          "element": "cyber",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        }
+      ],
+      "heroes": []
+    },
+    {
       "asset_name": "Repair",
       "name": "Repair",
       "slug": "repair",
+      "description": "Revives an eligible fallen Cyber ally nearby and restores a portion of its maximum health.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -19795,7 +19845,9 @@
     {
       "asset_name": "RoboRepair",
       "name": "Robo Repair",
+      "short_name": "Self Repair",
       "slug": "roborepair",
+      "description": "Repairs the caster over several ticks after it takes enough damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -22472,49 +22524,6 @@
       "heroes": []
     },
     {
-      "asset_name": "ShadowBossDuplicate",
-      "name": "Shadow Boss Duplicate",
-      "slug": "shadowbossduplicate",
-      "primary_slot": "enemy_action",
-      "slots": [
-        "enemy_action"
-      ],
-      "usage_count": 3,
-      "enemies": [
-        {
-          "name": "Nashira, The Shadow Void",
-          "slug": "shadowboss-2-noun",
-          "element": "necro",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Nashira, The Shadow Void",
-          "slug": "shadowboss-3-noun",
-          "element": "necro",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Nashira, The Shadow Void",
-          "slug": "shadowboss-noun",
-          "element": "necro",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        }
-      ],
-      "heroes": []
-    },
-    {
       "asset_name": "ShadowBossPassive",
       "name": "Shadow Boss Passive",
       "slug": "shadowbosspassive",
@@ -22659,6 +22668,51 @@
         "sha256": "636d98849ac3bedb44d55e6db8de88371e89e6b1217f5ab8f3c3ddc01283ba27",
         "rank": 1
       }
+    },
+    {
+      "asset_name": "ShadowBossDuplicate",
+      "name": "Shadow Duplicate",
+      "short_name": "Duplicate",
+      "slug": "shadowbossduplicate",
+      "description": "Creates a mirror image of Nashira that copies her remaining health.",
+      "primary_slot": "enemy_action",
+      "slots": [
+        "enemy_action"
+      ],
+      "usage_count": 3,
+      "enemies": [
+        {
+          "name": "Nashira, The Shadow Void",
+          "slug": "shadowboss-2-noun",
+          "element": "necro",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Nashira, The Shadow Void",
+          "slug": "shadowboss-3-noun",
+          "element": "necro",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Nashira, The Shadow Void",
+          "slug": "shadowboss-noun",
+          "element": "necro",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        }
+      ],
+      "heroes": []
     },
     {
       "asset_name": "ShadowRavagerActive",
@@ -22816,6 +22870,7 @@
       "asset_name": "ShadowToss",
       "name": "Shadow Toss",
       "slug": "shadowtoss",
+      "description": "Lobs a shadow projectile at a hero. It deals Supernatural energy damage on impact.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -23206,8 +23261,7 @@
       "asset_name": "CastSoulLink",
       "name": "Soul Link",
       "slug": "castsoullink",
-      "description": "Damage taken by the caster is shared among the rest of the squad for 12 seconds. Healing is also shared but only after the caster is at full health.  While Soul Link is active, the caster will gain the passive abilities of the other squad members.",
-      "description_basis": "Rank 1 base values; weapon damage uses the hero’s unmodified weapon profile. Equipment, attributes, and buffs can change live values.",
+      "description": "Damage and healing are being shared with the squad.",
       "icon_reference": "Abilities_necro_soulLink",
       "icon_path": "/image/ability/castsoullink.webp",
       "primary_slot": "random",
@@ -25975,6 +26029,102 @@
       }
     },
     {
+      "asset_name": "ZelemSP1_TeleportGun",
+      "name": "Teleport Gun",
+      "slug": "zelemsp1-teleportgun",
+      "description": "Fires a warping projectile that randomly teleports the hero it hits.",
+      "primary_slot": "enemy_action",
+      "slots": [
+        "enemy_action"
+      ],
+      "usage_count": 6,
+      "enemies": [
+        {
+          "name": "Black Hole Spawner",
+          "slug": "zelemspecialone-2-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Cyluk the Wormhole Dominator",
+          "slug": "zelemspecialone-captain-3-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Maddyx the Interdimensionist",
+          "slug": "zelemspecialone-captain-2-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Singularity Spawner",
+          "slug": "zelemspecialone-3-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Warp Spawner",
+          "slug": "zelemspecialone-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        },
+        {
+          "name": "Zunh the Singularity Void",
+          "slug": "zelemspecialone-captain-noun",
+          "element": "quantum",
+          "class": "combat",
+          "variants": [],
+          "slots": [
+            "action"
+          ]
+        }
+      ],
+      "heroes": [],
+      "combat": {
+        "kind": "projectile",
+        "cooldown_seconds": 3.5,
+        "range_meters": 18,
+        "minimum_damage": 10,
+        "maximum_damage": 16,
+        "damage_coefficient": 0.05,
+        "projectile_speed": 6,
+        "projectile_distance": 50,
+        "animation": "zlm_lieu_sp_1_attack1",
+        "effects": [
+          "ineffective_common_small.ServerEventDef",
+          "spacetime_lieu_shot_projectile.ServerEventDef",
+          "warp_impact_effect.ServerEventDef"
+        ]
+      },
+      "source": {
+        "lua_chunk_id": 856,
+        "lua_source": "Abilities/0xEF9FD403.lua",
+        "sha256": "a52e6deb7aee48f9a06a196bffc6972bb5e68fc0430b799a4870e8e9f8c64fe3",
+        "rank": 1
+      }
+    },
+    {
       "asset_name": "Terrify",
       "name": "Terrify",
       "slug": "terrify",
@@ -28432,101 +28582,6 @@
       }
     },
     {
-      "asset_name": "ZelemSP1_TeleportGun",
-      "name": "Zelem SP1 Teleport Gun",
-      "slug": "zelemsp1-teleportgun",
-      "primary_slot": "enemy_action",
-      "slots": [
-        "enemy_action"
-      ],
-      "usage_count": 6,
-      "enemies": [
-        {
-          "name": "Black Hole Spawner",
-          "slug": "zelemspecialone-2-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Cyluk the Wormhole Dominator",
-          "slug": "zelemspecialone-captain-3-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Maddyx the Interdimensionist",
-          "slug": "zelemspecialone-captain-2-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Singularity Spawner",
-          "slug": "zelemspecialone-3-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Warp Spawner",
-          "slug": "zelemspecialone-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Zunh the Singularity Void",
-          "slug": "zelemspecialone-captain-noun",
-          "element": "quantum",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        }
-      ],
-      "heroes": [],
-      "combat": {
-        "kind": "projectile",
-        "cooldown_seconds": 3.5,
-        "range_meters": 18,
-        "minimum_damage": 10,
-        "maximum_damage": 16,
-        "damage_coefficient": 0.05,
-        "projectile_speed": 6,
-        "projectile_distance": 50,
-        "animation": "zlm_lieu_sp_1_attack1",
-        "effects": [
-          "ineffective_common_small.ServerEventDef",
-          "spacetime_lieu_shot_projectile.ServerEventDef",
-          "warp_impact_effect.ServerEventDef"
-        ]
-      },
-      "source": {
-        "lua_chunk_id": 856,
-        "lua_source": "Abilities/0xEF9FD403.lua",
-        "sha256": "a52e6deb7aee48f9a06a196bffc6972bb5e68fc0430b799a4870e8e9f8c64fe3",
-        "rank": 1
-      }
-    },
-    {
       "asset_name": "ZelemSP1Passive",
       "name": "Zelem SP1Passive",
       "slug": "zelemsp1passive",
@@ -28694,49 +28749,6 @@
         "sha256": "6bc0124ac69f24f6c42e015b3cd40049f8b0208c5c1b1fd3a7bc8e1904fa07f4",
         "rank": 1
       }
-    },
-    {
-      "asset_name": "ZelemSpecialThreeEnergyBuff",
-      "name": "Zelem Special Three Energy Buff",
-      "slug": "zelemspecialthreeenergybuff",
-      "primary_slot": "enemy_action",
-      "slots": [
-        "enemy_action"
-      ],
-      "usage_count": 3,
-      "enemies": [
-        {
-          "name": "Raytheoid",
-          "slug": "zelemspecialthree-noun",
-          "element": "cyber",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Raytheoid Delta",
-          "slug": "zelemspecialthree-3-noun",
-          "element": "cyber",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        },
-        {
-          "name": "Targeting Raytheoid",
-          "slug": "zelemspecialthree-2-noun",
-          "element": "cyber",
-          "class": "combat",
-          "variants": [],
-          "slots": [
-            "action"
-          ]
-        }
-      ],
-      "heroes": []
     },
     {
       "asset_name": "ZelemSpecialTwo_Pull",
@@ -29068,6 +29080,7 @@
       "asset_name": "ArcWeldingMelee",
       "name": "Arc Welding Melee",
       "slug": "arcweldingmelee",
+      "description": "Strikes a nearby target with an arc welder, dealing physical damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -30204,8 +30217,7 @@
       "asset_name": "CastSoulLink",
       "name": "Soul Link",
       "slug": "castsoullink",
-      "description": "Damage taken by the caster is shared among the rest of the squad for 12 seconds. Healing is also shared but only after the caster is at full health.  While Soul Link is active, the caster will gain the passive abilities of the other squad members.",
-      "description_basis": "Rank 1 base values; weapon damage uses the hero’s unmodified weapon profile. Equipment, attributes, and buffs can change live values.",
+      "description": "Damage and healing are being shared with the squad.",
       "icon_reference": "Abilities_necro_soulLink",
       "icon_path": "/image/ability/castsoullink.webp",
       "primary_slot": "random",
@@ -31964,6 +31976,7 @@
       "asset_name": "ConsumeCorpse",
       "name": "Consume Corpse",
       "slug": "consumecorpse",
+      "description": "Feeds on a nearby corpse to grow larger and stronger.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -33040,7 +33053,9 @@
     "directheal": {
       "asset_name": "DirectHeal",
       "name": "Direct Heal",
+      "short_name": "Self Heal",
       "slug": "directheal",
+      "description": "Restores some of the caster’s own health after it takes enough damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -48525,6 +48540,7 @@
       "asset_name": "Repair",
       "name": "Repair",
       "slug": "repair",
+      "description": "Revives an eligible fallen Cyber ally nearby and restores a portion of its maximum health.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -48743,7 +48759,9 @@
     "roborepair": {
       "asset_name": "RoboRepair",
       "name": "Robo Repair",
+      "short_name": "Self Repair",
       "slug": "roborepair",
+      "description": "Repairs the caster over several ticks after it takes enough damage.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -51421,8 +51439,10 @@
     },
     "shadowbossduplicate": {
       "asset_name": "ShadowBossDuplicate",
-      "name": "Shadow Boss Duplicate",
+      "name": "Shadow Duplicate",
+      "short_name": "Duplicate",
       "slug": "shadowbossduplicate",
+      "description": "Creates a mirror image of Nashira that copies her remaining health.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -51764,6 +51784,7 @@
       "asset_name": "ShadowToss",
       "name": "Shadow Toss",
       "slug": "shadowtoss",
+      "description": "Lobs a shadow projectile at a hero. It deals Supernatural energy damage on impact.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -57304,8 +57325,9 @@
     },
     "zelemsp1-teleportgun": {
       "asset_name": "ZelemSP1_TeleportGun",
-      "name": "Zelem SP1 Teleport Gun",
+      "name": "Teleport Gun",
       "slug": "zelemsp1-teleportgun",
+      "description": "Fires a warping projectile that randomly teleports the hero it hits.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"
@@ -57568,8 +57590,10 @@
     },
     "zelemspecialthreeenergybuff": {
       "asset_name": "ZelemSpecialThreeEnergyBuff",
-      "name": "Zelem Special Three Energy Buff",
+      "name": "Raytheoid Energy Buff",
+      "short_name": "Energy Buff",
       "slug": "zelemspecialthreeenergybuff",
+      "description": "Applies a temporary energy buff to an allied Raytheoid.",
       "primary_slot": "enemy_action",
       "slots": [
         "enemy_action"

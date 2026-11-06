@@ -1,0 +1,45 @@
+{
+  "ArcWeldingMelee": {
+    "description": "Strikes a nearby target with an arc welder, dealing physical damage.",
+    "source": "Build 103 ArcWeldingMelee registration and server/zone/npc/action.go"
+  },
+  "ConsumeCorpse": {
+    "description": "Feeds on a nearby corpse to grow larger and stronger.",
+    "source": "Build 103 Carrion Shambler tooltip and server/zone/npc/consume.go"
+  },
+  "DirectHeal": {
+    "short_name": "Self Heal",
+    "description": "Restores some of the caster’s own health after it takes enough damage.",
+    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+  },
+  "Repair": {
+    "description": "Revives an eligible fallen Cyber ally nearby and restores a portion of its maximum health.",
+    "source": "server/gameplay/combat_repair.go, reparatronRepairProfile and reparatronRepairCandidates"
+  },
+  "RoboRepair": {
+    "short_name": "Self Repair",
+    "description": "Repairs the caster over several ticks after it takes enough damage.",
+    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+  },
+  "ShadowBossDuplicate": {
+    "name": "Shadow Duplicate",
+    "short_name": "Duplicate",
+    "description": "Creates a mirror image of Nashira that copies her remaining health.",
+    "source": "Build 103 Nashira tooltip and server/gameplay/combat_nashira.go"
+  },
+  "ShadowToss": {
+    "description": "Lobs a shadow projectile at a hero. It deals Supernatural energy damage on impact.",
+    "source": "server/zone/npc/nashira.go, NashiraShadowTossProfile"
+  },
+  "ZelemSP1_TeleportGun": {
+    "name": "Teleport Gun",
+    "description": "Fires a warping projectile that randomly teleports the hero it hits.",
+    "source": "Build 103 Warp Spawner tooltip and server/zone/npc/action.go"
+  },
+  "ZelemSpecialThreeEnergyBuff": {
+    "name": "Raytheoid Energy Buff",
+    "short_name": "Energy Buff",
+    "description": "Applies a temporary energy buff to an allied Raytheoid.",
+    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+  }
+}

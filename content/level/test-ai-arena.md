@@ -1,5 +1,5 @@
 +++
-title = "test AI arena"
+title = "Whispering Forest"
 level = "test-ai-arena"
 generated = true
 +++

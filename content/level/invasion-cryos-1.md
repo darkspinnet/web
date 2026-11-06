@@ -1,5 +1,5 @@
 +++
-title = "Invasion 4-3"
+title = "Invasion 1-1 · Glacial Rifts"
 level = "invasion-cryos-1"
 generated = true
 +++

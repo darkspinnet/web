@@ -1,0 +1,36 @@
+{{ $slug := .slug }}
+{{ $items := slice }}
+{{ range site.Data.generated.ability.items }}
+  {{ $ability := . }}
+  {{ range where (.enemies | default slice) "slug" $slug }}
+    {{ if not (or (in .slots "first_aggro") (in .slots "first_alert") (in .slots "subsequent_aggro")) }}
+      {{ $kind := "Action" }}
+      {{ if in .slots "passive" }}{{ $kind = "Passive" }}
+      {{ else if in .slots "death" }}{{ $kind = "On death" }}
+      {{ end }}
+      {{ $label := index site.Data.npc_basic_attacks $ability.slug | default ($ability.short_name | default $ability.name) }}
+      {{ $items = $items | append (dict "ability" $ability "kind" $kind "label" $label) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with $items }}
+<ul class="level-enemy-abilities" aria-label="Abilities">
+  {{ range partial "npc-ability-order.html" . }}{{ $ability := .ability }}
+  <li><a href="{{ printf "ability/%s/" $ability.slug | relURL }}" title="{{ $ability.name }} ({{ .kind }}){{ with $ability.description }} — {{ . }}{{ end }}" aria-label="{{ .label }}{{ if ne .label $ability.name }}: {{ $ability.name }}{{ else }} ({{ .kind }}){{ end }}">
+    <span aria-hidden="true" class="ability-sigil{{ if eq .kind "Passive" }} slot-passive{{ end }}">
+      {{ with $ability.icon_path }}
+      <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" width="28" height="28" loading="lazy">
+      {{ else }}
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        {{ if eq .kind "Passive" }}<path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6z"/><path d="M12 8v8m-4-4h8"/>
+        {{ else if eq .kind "On death" }}<path d="M7 17c-3-1-4-3-4-6a9 9 0 1 1 18 0c0 3-1 5-4 6v4H7z"/><circle cx="8.5" cy="12" r="1"/><circle cx="15.5" cy="12" r="1"/><path d="M12 17v4"/>
+        {{ else if eq .label "Ranged" }}<path d="M5 4a8 8 0 0 1 0 16M5 4l4 8-4 8m4-8h11m-4-4 4 4-4 4"/>
+        {{ else }}<path d="m4 20 6-6m-4-3 7 7m-5-5L17 4l4-1-1 4-9 9"/>{{ end }}
+      </svg>
+      {{ end }}
+    </span>
+    <span>{{ .label }}</span>
+  </a></li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,5 +1,5 @@
 +++
-title = "zelems 2 PVP"
+title = "Outer Ring"
 level = "zelems-2-pvp"
 generated = true
 +++

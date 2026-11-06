@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 5-3"
+title = "Apocalypse 6-3 · Core Extractor"
 level = "apocalypse-infinity-1"
 generated = true
 +++

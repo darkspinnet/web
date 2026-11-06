@@ -53,6 +53,9 @@ type levelReport struct {
 	DisplayName string `json:"display_name"`
 	Slug        string `json:"slug"`
 	Region      string `json:"region"`
+	Mode        string `json:"mode"`
+	Slot        string `json:"slot"`
+	GroupSlug   string `json:"group_slug"`
 }
 
 type itemCatalog struct {
@@ -157,7 +160,14 @@ func build(dataPath string) ([][]string, error) {
 		if name == "" {
 			name = level.Name
 		}
-		rows = append(rows, searchRow(name, "LEVEL", level.Region+" / "+level.Name, "/level/"+level.Slug+"/", name+" "+level.Name+" "+level.Region))
+		context := level.Region + " / " + level.Name
+		if level.Slot != "" {
+			context = level.Mode + " " + level.Slot + " / " + level.Region
+		} else if level.GroupSlug == "replay" {
+			name = "Replay · " + name
+			context = level.Region + " / " + level.Name
+		}
+		rows = append(rows, searchRow(name, "LEVEL", context, "/level/"+level.Slug+"/", name+" "+level.Name+" "+context))
 	}
 	var abilities abilityCatalog
 	err = readJSON(filepath.Join(dataPath, "ability.json"), &abilities)

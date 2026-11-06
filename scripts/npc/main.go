@@ -92,6 +92,16 @@ func main() {
 	if err != nil {
 		fatal(err)
 	}
+	descriptions, err := catalog.LoadNPCDescriptions(database, *gamePath)
+	if err != nil {
+		fatal(err)
+	}
+	for slug, entry := range result.Entry {
+		if paragraphs := descriptions[entry.InstanceID]; len(paragraphs) > 0 {
+			entry.Description = strings.Join(paragraphs, "\n\n")
+			result.Entry[slug] = entry
+		}
+	}
 	if err = enrichNPCImages(database, &result, *gamePath); err != nil {
 		fatal(err)
 	}

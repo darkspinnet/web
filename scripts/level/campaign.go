@@ -26,35 +26,40 @@ type campaignDetail struct {
 }
 
 type campaignEnemy struct {
-	Name               string   `json:"name"`
-	Noun               string   `json:"noun"`
-	Slug               string   `json:"slug"`
-	Role               string   `json:"role"`
-	ChallengeValue     int      `json:"challenge_value"`
-	BaseHitPoints      float64  `json:"base_hit_points"`
-	EstimatedHitPoints float64  `json:"estimated_hit_points"`
-	EstimatedDamageMin *float64 `json:"estimated_damage_min,omitempty"`
-	EstimatedDamageMax *float64 `json:"estimated_damage_max,omitempty"`
-	Descriptions       []string `json:"descriptions"`
-	Behavior           string   `json:"behavior"`
+	Name                string   `json:"name"`
+	Noun                string   `json:"noun"`
+	Slug                string   `json:"slug"`
+	Role                string   `json:"role"`
+	ChallengeValue      int      `json:"challenge_value"`
+	BaseHitPoints       float64  `json:"base_hit_points"`
+	EstimatedHitPoints  float64  `json:"estimated_hit_points"`
+	EstimatedDamageMin  *float64 `json:"estimated_damage_min,omitempty"`
+	EstimatedDamageMax  *float64 `json:"estimated_damage_max,omitempty"`
+	EstimatedDamageType string   `json:"estimated_damage_type,omitempty"`
+	Descriptions        []string `json:"descriptions"`
+	Behavior            string   `json:"behavior"`
 }
 
 type campaignMap struct {
-	Selection string               `json:"selection"`
-	Level     string               `json:"level"`
-	Legend    map[string]string    `json:"legend"`
-	Labels    map[string]string    `json:"labels"`
-	Notes     []string             `json:"enemy_class_notes"`
-	Sections  []campaignMapSection `json:"sections"`
-	Markers   []campaignMapMarker  `json:"markers,omitempty"`
-	Positions []campaignPosition   `json:"positions,omitempty"`
+	RunSeed        string               `json:"run_seed,omitempty"`
+	PopulationSeed uint32               `json:"population_seed,omitempty"`
+	UnmappedSpawns int                  `json:"unmapped_spawns,omitempty"`
+	Selection      string               `json:"selection"`
+	Level          string               `json:"level"`
+	Legend         map[string]string    `json:"legend"`
+	Labels         map[string]string    `json:"labels"`
+	Notes          []string             `json:"enemy_class_notes"`
+	Sections       []campaignMapSection `json:"sections"`
+	Markers        []campaignMapMarker  `json:"markers,omitempty"`
+	Positions      []campaignPosition   `json:"positions,omitempty"`
 }
 
 type campaignMapSection struct {
-	ComponentID uint32 `json:"component_id"`
-	Image       string `json:"image"`
-	MarkerCount int    `json:"marker_count"`
-	ImageURL    string `json:"image_url"`
+	Spawns      []seededMapPoint `json:"spawns,omitempty"`
+	ComponentID uint32           `json:"component_id"`
+	Image       string           `json:"image"`
+	MarkerCount int              `json:"marker_count"`
+	ImageURL    string           `json:"image_url"`
 }
 
 type campaignMapMarker struct {
@@ -131,13 +136,13 @@ type authoredEnemy struct {
 	Behavior     string
 }
 
-func enrichCampaignLevels(database *sql.DB, levels []levelReport) error {
+func enrichCampaignLevels(database *sql.DB, levels []levelReport, descriptions map[uint32][]string) error {
 	for index := range levels {
 		level := &levels[index]
 		if level.DisplayName == "" || len(level.CampaignOrders) == 0 || level.CampaignOrders[0] > 72 {
 			continue
 		}
-		detail, err := loadCampaignDetail(database, level.Name, level.CampaignOrders[0])
+		detail, err := loadCampaignDetail(database, level.Name, level.CampaignOrders[0], descriptions)
 		if err != nil {
 			return fmt.Errorf("campaign[%s]: %w", level.DisplayName, err)
 		}
@@ -151,7 +156,7 @@ func enrichCampaignLevels(database *sql.DB, levels []levelReport) error {
 	return nil
 }
 
-func loadCampaignDetail(database *sql.DB, levelName string, difficulty int) (campaignDetail, error) {
+func loadCampaignDetail(database *sql.DB, levelName string, difficulty int, descriptions map[uint32][]string) (campaignDetail, error) {
 	var detail campaignDetail
 	detail.Difficulty = difficulty
 	err := database.QueryRow(`
@@ -204,7 +209,7 @@ func loadCampaignDetail(database *sql.DB, levelName string, difficulty int) (cam
 	}
 	detail.Enemies = make([]campaignEnemy, 0, len(authored))
 	for _, source := range authored {
-		enemy, enemyErr := buildCampaignEnemy(database, source, detail.HealthMultiplier, detail.DamageMultiplier)
+		enemy, enemyErr := buildCampaignEnemy(database, source, detail.HealthMultiplier, detail.DamageMultiplier, descriptions)
 		if enemyErr != nil {
 			return detail, fmt.Errorf("enemy[%s]: %w", source.Noun, enemyErr)
 		}
@@ -252,6 +257,9 @@ func enrichLevelMaps(database *sql.DB, levels []levelReport, mapPath string) err
 			return fmt.Errorf("mapLevel[%s]: level %q not found", entry.Name(), levelMap.Level)
 		}
 		for _, level := range targets {
+			if level.Campaign != nil {
+				continue
+			}
 			var levelMap campaignMap
 			if err = json.Unmarshal(mapData, &levelMap); err != nil {
 				return err
@@ -530,7 +538,7 @@ func campaignPoolLabel(pool string) string {
 	}
 }
 
-func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier, damageMultiplier float64) (campaignEnemy, error) {
+func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier, damageMultiplier float64, descriptions map[uint32][]string) (campaignEnemy, error) {
 	enemy := campaignEnemy{
 		Name: source.Name, Noun: source.Noun, Slug: catalog.Slug(source.Noun + ".Noun"),
 		Descriptions: source.Descriptions, Behavior: source.Behavior,
@@ -539,7 +547,9 @@ func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier
 	if err != nil {
 		return enemy, err
 	}
-	_ = instanceID
+	if paragraphs := descriptions[instanceID]; len(paragraphs) > 0 {
+		enemy.Descriptions = paragraphs
+	}
 	if profileNoun != "" {
 		enemy.Slug = catalog.Slug(profileNoun)
 	}
@@ -553,6 +563,15 @@ func buildCampaignEnemy(database *sql.DB, source authoredEnemy, healthMultiplier
 		maximum := roundCampaignValue(float64(profile.MaximumDamage) * damageMultiplier)
 		enemy.EstimatedDamageMin = &minimum
 		enemy.EstimatedDamageMax = &maximum
+		// Match build 103's nDamageTypes and nDamageSources enums.
+		damageTypes := [...]string{"Technology", "Spacetime", "Life", "Elements", "Supernatural", "Generic"}
+		damageSources := [...]string{"physical", "energy"}
+		if int(profile.DamageType) < len(damageTypes) {
+			enemy.EstimatedDamageType = damageTypes[profile.DamageType]
+			if int(profile.DamageSource) < len(damageSources) {
+				enemy.EstimatedDamageType += " (" + damageSources[profile.DamageSource] + ")"
+			}
+		}
 	}
 	return enemy, nil
 }

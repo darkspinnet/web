@@ -1,0 +1,8 @@
+{{ $items := . }}
+{{ $ordered := slice }}
+{{ range slice (where $items "label" "Melee") (where $items "label" "Ranged") (where $items "label" "not in" (slice "Melee" "Ranged")) }}
+  {{ range . }}
+    {{ $ordered = $ordered | append . }}
+  {{ end }}
+{{ end }}
+{{ return $ordered }}

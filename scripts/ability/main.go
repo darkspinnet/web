@@ -41,6 +41,7 @@ type owner struct {
 type abilityEntry struct {
 	AssetName        string        `json:"asset_name"`
 	Name             string        `json:"name"`
+	ShortName        string        `json:"short_name,omitempty"`
 	Slug             string        `json:"slug"`
 	Description      string        `json:"description,omitempty"`
 	DescriptionBasis string        `json:"description_basis,omitempty"`
@@ -71,6 +72,7 @@ type abilityBuilder struct {
 
 func main() {
 	npcPath := flag.String("npc", filepath.Join("data", "generated", "npc.json"), "generated enemy catalog")
+	npcTextPath := flag.String("npc-text", filepath.Join("data", "npc_ability_text.json"), "curated enemy ability text JSON")
 	heroPath := flag.String("hero", filepath.Join("data", "generated", "hero.json"), "generated hero catalog")
 	databasePath := flag.String("db", catalog.DefaultDatabasePath, "content.db path")
 	gamePath := flag.String("game", catalog.DefaultGamePath, "Darkspore install root")
@@ -96,6 +98,9 @@ func main() {
 	}
 	err = enrichAbilities(database, *gamePath, result.Items, heroes.Heroes)
 	if err != nil {
+		fatal(err)
+	}
+	if err = applyNPCAbilityText(*npcTextPath, result.Items); err != nil {
 		fatal(err)
 	}
 	reindex(&result)

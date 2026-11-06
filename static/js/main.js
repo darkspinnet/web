@@ -658,17 +658,6 @@
 
   initializeCombatCalculator();
   initializeFilters();
-  document.querySelectorAll(".threat-cell").forEach(cell => {
-    let pinned = false;
-    const peek = () => { cell.open = true; };
-    const dismiss = () => { if (!pinned && !cell.contains(document.activeElement)) cell.open = false; };
-    cell.addEventListener("pointerenter", event => { if (event.pointerType === "mouse") peek(); });
-    cell.addEventListener("pointerleave", dismiss);
-    cell.addEventListener("focusin", peek);
-    cell.addEventListener("focusout", () => { setTimeout(dismiss, 0); });
-    cell.querySelector("summary").addEventListener("click", event => { event.preventDefault(); pinned = !pinned; cell.open = pinned; });
-    cell.addEventListener("keydown", event => { if (event.key === "Escape") { pinned = false; cell.open = false; cell.querySelector("summary").focus(); cell.open = false; } });
-  });
   initializeNPC();
   initializeLevel();
   initializeItem();

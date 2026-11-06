@@ -13,18 +13,22 @@
   {{ range $data.groups }}
   <article class="level-group-card">
     <header>
-      <div><span class="level-index">{{ if eq .slug "other" }}Auxiliary{{ else }}Campaign{{ end }}</span><h2>{{ .name }}</h2></div>
-      <div class="group-stats"><b>{{ .count }}</b> {{ if eq .slug "other" }}maps{{ else }}missions{{ end }}</div>
+      <div><span class="level-index">{{ if eq .slug "other" }}Auxiliary{{ else if eq .slug "replay" }}Randomizer{{ else }}Campaign{{ end }}</span><h2>{{ .name }}</h2></div>
+      <div class="group-stats"><b>{{ .count }}</b> {{ if in (slice "other" "replay") .slug }}maps{{ else }}missions{{ end }}</div>
     </header>
-    <div class="level-stage-list">
-      {{ range .levels }}
-      <a class="level-stage-link" href="{{ printf "/level/%s/" .slug | strings.TrimPrefix "/" | relURL }}">
-        <span class="stage-number">{{ .slot | default .display_name }}</span>
-        <span><strong>{{ .name }}</strong><small>{{ if .campaign }}Difficulty {{ .campaign.difficulty }} · {{ .region }}{{ else }}{{ .region }} · {{ .npc_count }} enemies{{ end }}</small></span>
-        <em>→</em>
-      </a>
+    {{ if eq .slug "replay" }}
+      {{ $levels := .levels }}
+      {{ $planets := slice }}
+      {{ range $levels }}{{ $planets = $planets | append .region }}{{ end }}
+      {{ range sort (uniq $planets) }}
+      <section class="level-replay-planet">
+        <h3>{{ . }}</h3>
+        {{ partial "level-stage-links.html" (where $levels "region" .) }}
+      </section>
       {{ end }}
-    </div>
+    {{ else }}
+      {{ partial "level-stage-links.html" .levels }}
+    {{ end }}
   </article>
   {{ end }}
 </section>

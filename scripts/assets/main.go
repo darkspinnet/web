@@ -140,6 +140,9 @@ func generate(ctx context.Context, gamePath, outputPath, heroDataPath, itemDataP
 		return fmt.Errorf("buffIcons: %w", err)
 	}
 	fmt.Printf("assets: extracted and converted %d buff icons to %s (%d references unavailable)\n", buffCount, buffOutputPath, missingBuffCount)
+	if err = generateElementIcons(gamePath, filepath.Join("static", "image", "element")); err != nil {
+		return fmt.Errorf("elementIcons: %w", err)
+	}
 	return nil
 }
 

@@ -2,12 +2,36 @@
 {{ $map := .map }}
 <article class="console-panel level-map-panel">
   <header><div><span>{{ .number }}</span><h2>{{ if $level.campaign }}Mission{{ else }}Navigation{{ end }} minimap</h2></div><small>{{ len $map.sections }} CONNECTED COMPONENTS</small></header>
-  <p class="level-estimate-note">Each image is an independently scaled connected component from the selected baked navigation layer. Markers show authored encounter loci and objects, not a guaranteed runtime spawn roster.</p>
+  {{ if and $level.replay $map.labels }}
+  <p class="level-estimate-note">These maps show authored encounter anchors. The replay roll determines which creatures appear at runtime.</p>
+  {{ else if and (not $map.run_seed) $map.labels }}
+  <p class="level-estimate-note">Each image shows a connected area and its authored encounter points.</p>
+  {{ end }}
   <div class="level-map-gallery">
     {{ range $map.sections }}
     <figure>
+      {{ if $map.run_seed }}
+      <svg class="level-seeded-map" viewBox="0 0 512 512" role="group" aria-label="{{ $level.display_name }} spawn map, component {{ .component_id }}">
+        <image href="{{ .image_url | strings.TrimPrefix "/" | relURL }}" width="512" height="512"/>
+        {{ range .spawns }}
+          {{ $npc := index site.Data.generated.npc.entry .slug }}
+          {{ $name := $npc.name | default .name }}
+          <g transform="translate({{ .x }} {{ .y }})" class="level-map-spawn{{ if .destructor }} is-destructor{{ end }}">
+            <title>{{ $name }}{{ if .destructor }} (Destructor encounter){{ end }}</title>
+            {{ if .destructor }}
+              <circle r="15"/>
+              {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-13" y="-13" width="26" height="26"/>{{ end }}
+            {{ else }}
+              <circle r="7"/>
+              {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-7" y="-7" width="14" height="14"/>{{ end }}
+            {{ end }}
+          </g>
+        {{ end }}
+      </svg>
+      {{ else }}
       <a href="{{ .image_url | strings.TrimPrefix "/" | relURL }}"><img src="{{ .image_url | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.display_name }} navigation component {{ .component_id }}" loading="lazy"></a>
-      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} mapped points</strong></figcaption>
+      {{ end }}
+      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} {{ if $map.run_seed }}enemy markers{{ else }}mapped points{{ end }}</strong></figcaption>
     </figure>
     {{ end }}
   </div>

@@ -6,7 +6,7 @@ The site currently publishes:
 
 - a 25-family hero landing page with one canonical portrait per family and interactive stat profiles on each detail page;
 - a flat, searchable Enemy Glossary of spawnable creature and destructable nouns, using localized names, base HP, element filters, and lazy-loaded original portraits where recovered;
-- 72 campaign missions ordered by Onslaught, Invasion, and Apocalypse, plus auxiliary maps, with difficulty-specific six-enemy previews, dedicated reports and connected-component minimaps for campaign, PvP, tutorial, arena, small-map, Spectra/TNX, and test levels where prepared navigation exists;
+- 72 campaign missions in authored order across Onslaught, Invasion, and Apocalypse, with creature abilities, Destructor encounters, and seeded spawn minimaps. Auxiliary reports cover PvP, tutorial, arena, small-map, Spectra/TNX, and test levels where prepared navigation exists;
 - an Item Archive containing decoded base equipment rigblocks, prefix/suffix applicability, and procedural medal, chain, and epic-chance rules;
 - a Game Systems reference generated from the server runtime, covering combat and resistance caps, diminishing returns, enemy drop probabilities, capsule weighting, the full 100-level XP curve, hero milestones, and Cash Out rewards;
 - an Ability Archive covering hero loadouts and enemy AI abilities, with ownership links, combat data where decoded, and a Heroes only filter;
@@ -62,14 +62,16 @@ The sibling Darkspin CLI lists both campaign shortcuts and every prepared miscel
 d:\src\darkspin\bin\game\darkrun.exe map --config d:\src\darkspin\bin\game\darkspin.toml
 ```
 
-Render a selection into the directory for its website level slug, then refresh the level catalog. The selection may be a campaign slot such as `1-1`, the `tutorial` shortcut, or a canonical PvP, arena, small-map, Spectra/TNX, or test level name.
+Run `mage level` to generate the campaign minimaps and refresh the level catalog. The maps show the standing enemy population and any Destructor encounter for a solo first clear with Darkspin's default spawn rules. To preview a different run seed, use `go run ./scripts/level -campaign-seed 42`. Darkspin derives the first-clear population seed from the stage and uses the run seed for layout selection. Run `mage search` to refresh the global index after regenerating level data.
+
+For auxiliary maps, render a selection into the directory for its website level slug, then refresh the level catalog. The selection may be the `tutorial` shortcut or a canonical PvP, arena, small-map, Spectra/TNX, or test level name.
 
 ```powershell
 d:\src\darkspin\bin\game\darkrun.exe map cryos_2_PVP --config d:\src\darkspin\bin\game\darkspin.toml --output static\maps\cryos-2-pvp\map.webp --metadata static\maps\cryos-2-pvp\map.json
 mage level
 ```
 
-Build the current sibling CLI with `mage darkrun:build` in the Darkspin repository before regenerating maps. Each run emits one WebP and JSON pair per reachable navigation component. The level generator discovers every `static/maps/*/map.json` file by its recorded level name, publishes the component images on the matching level page, and imports the command's current marker-label explanations.
+Build the current sibling CLI with `mage darkrun:build` in the Darkspin repository before regenerating auxiliary maps. Each CLI run emits one WebP and JSON pair per reachable navigation component. The level generator matches auxiliary maps to their pages using the level name recorded in `static/maps/*/map.json`.
 
 The generators default to:
 
@@ -107,6 +109,8 @@ Hero detail pages pair the canonical portrait with the original localized epithe
 
 The ability tool deduplicates assets referenced by all 100 hero profiles and by the enemy catalog's AI definitions and phase gambits. It correlates packaged Lua namespaces with authored UI icons, links exact localized names and descriptions where their identity is proven, and projects rank-one combat fields from Lua registrations supported by the current decoder. Each asset has a page with hero or enemy ownership, variant or AI-use context, source provenance, and available combat data. Hero loadouts and enemy records link directly to these pages. The archive defaults to all abilities and offers a Heroes only filter, including abilities shared with enemies.
 
+Curated enemy ability text lives in Darkspin's `notes/abilities.json`. The web generator reads the checked-in copy at `data/npc_ability_text.json`. After editing the Darkspin lookup, copy it over and run `mage ability` to refresh the ability pages and search. Use exact ability asset names as keys. Each entry can supply a full `name`, a `short_name` for creature lists, and a `description`. Keep a `source` with each entry so the wording can be checked against the game or Darkspin. Routine attacks still use the existing Melee and Ranged labels on creature lists.
+
 The buff tool resolves curated gameplay conditions from the English client localization and links matching recovered ability text. When a modifier's native `SPID` icon reference has been verified, the asset generator extracts its 32-pixel HUD artwork from `UI.package` into `static/image/buff`; unverified buffs retain the lightweight CSS glyph. The effect tool merges raw names from the packaged VFX resource type with identifiers recovered from compiled Lua `ServerEventDefs` preload tables, preserving references such as `character_beam_in_plasma_electric` while distinguishing referenced-only effects from concrete package records. The glossary is a compact, hand-maintained terminology layer that explains broader combat, hero, equipment, and archive concepts while linking back to the relevant generated sections.
 
 The item tool decodes the RefPack-compressed rigblock, prefix, and suffix resources in `AssetData_Binary.package`, joins their localization records, emits compact browser lookup data, and creates item detail pages. `scripts/itemprobe` is a read-only format inspection utility for continued loot research. The recovered `nLootRules` bytecode contains global procedural medal, chain, and epic-chance behavior; no authored enemy-to-item ownership table has been identified yet.
@@ -132,6 +136,8 @@ the configured base path. The production `baseURL` in `config.toml` is unchanged
 Enemy portraits are extracted by `mage npc` (or `go run ./scripts/npc -db <content.db> -game <client-root>`). The generator joins actual non-player nouns to their classes and authored noun types; placement-only helpers and player pets are excluded. Each noun's assembled-creature asset ID (the little-endian uint64 at offset 152) is matched to the big-endian asset ID in version-13 metadata in `PreBaked.package`. The metadata's resource key identifies the corresponding PNG. Animation names and noun suffixes do not determine appearance: rigs can be shared, and variants carry their own creature IDs. Missing artwork stays visibly unavailable. The enemy index is flat and independent of authored level references, so it also supports randomized spawns.
 
 Campaign pages preserve existing Onslaught URLs and add `invasion-` and `apocalypse-` mission URLs. Each pass uses the corresponding difficulty tuning and first-clear spawn configuration, including its own noun variants. Map position candidates use that same configuration. Live randomizer, party scaling, buffs, and encounter rolls can change the result.
+
+Replay groups the 24 randomized destinations by planet. Each `replay-` map page lists the enemies eligible under the default replay rules across all threat bands, then shows its authored encounter anchors. The population is a pool of candidates across runs.
 
 Item pages show supported hero families and variants for the selected visual/element. Compatibility is computed per rigblock from its class and element masks, explicit hero noun restrictions, and the hero’s hand/foot slots. The hero list updates with the configurator and restores from its shared URL fragment. `mage item` reads the committed hero catalog (`-heroes` can override it) and original client resources under `-game`; refresh heroes first when those profiles change.
 

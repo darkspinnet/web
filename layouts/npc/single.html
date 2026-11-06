@@ -9,14 +9,14 @@
     <div class="npc-profile-portrait">{{ with $npc.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $npc.name }}" width="240" height="240" loading="lazy" decoding="async">{{ else }}<span>Portrait unavailable</span>{{ end }}</div>
     <div class="npc-profile-health"><span>Total HP</span><strong data-npc-health>{{ if isset $npc "hit_points" }}{{ printf "%g" $npc.hit_points }}{{ else }}—{{ end }}</strong><small data-npc-health-basis>Base health</small></div>
   </div>
-  {{ with $npc.description }}<p class="npc-profile-description">{{ . }}</p>{{ end }}
+  {{ with $npc.description }}{{ range split . "\n\n" }}<p class="npc-profile-description">{{ . }}</p>{{ end }}{{ end }}
   <div class="source-tags npc-profile-tags" aria-label="Tags">{{ with $npc.element }}<i data-element="{{ lower . }}">{{ . }}</i>{{ end }}<i>{{ if eq $npc.category "destructables" }}Destructable{{ else }}Creature{{ end }}</i></div>
   {{ $kit := partial "npc-ability-kit.html" $npc }}
   {{ with $kit.items }}
   <section class="npc-profile-abilities" aria-labelledby="npc-abilities-title">
     <h2 id="npc-abilities-title">Abilities</h2>
     <p>Before target defenses, elite affixes, and temporary buffs.</p>
-    <ul>{{ range . }}<li><div class="npc-ability-title"><a href="{{ printf "/ability/%s/" .ability.slug | strings.TrimPrefix "/" | relURL }}">{{ .ability.name }}</a>{{ if eq .rank 2 }}<span class="ability-mode-badge mode-invasion" title="Introduced in Invasion">Invasion</span>{{ else if eq .rank 3 }}<span class="ability-mode-badge mode-apocalypse" title="Introduced in Apocalypse">Apocalypse</span>{{ end }}</div><span data-npc-ability="{{ .ability.asset_name }}">Numeric values unavailable.</span></li>{{ end }}</ul>
+    <ul>{{ range . }}<li><div class="npc-ability-title"><a href="{{ printf "/ability/%s/" .ability.slug | strings.TrimPrefix "/" | relURL }}">{{ .label }}</a>{{ if eq .rank 2 }}<span class="ability-mode-badge mode-invasion" title="Introduced in Invasion">Invasion</span>{{ else if eq .rank 3 }}<span class="ability-mode-badge mode-apocalypse" title="Introduced in Apocalypse">Apocalypse</span>{{ end }}</div>{{ with .ability.description }}<p class="npc-ability-description">{{ . }}</p>{{ end }}<span data-npc-ability="{{ .ability.asset_name }}">Numeric values unavailable.</span></li>{{ end }}</ul>
   </section>
   {{ end }}
   <script type="application/json" id="npc-combat-data">{{ $kit.previews | jsonify | safeJS }}</script>

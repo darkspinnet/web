@@ -1604,18 +1604,6 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos3_stalagmite_large.Noun",
-          "name": "Stalagmite",
-          "slug": "dest-prefab-cryos3-stalagmite-large-noun",
-          "instance_id": 1461008522,
-          "hit_points": 1,
-          "category": "destructables",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "DEST_prefab_cryos3_stalagmite_small.Noun",
           "name": "Stalagmite",
           "slug": "dest-prefab-cryos3-stalagmite-small-noun",
@@ -1632,6 +1620,18 @@
           "name": "Stalagmite",
           "slug": "cryos-stalagmite-small-destructible-noun",
           "instance_id": 1956536774,
+          "hit_points": 1,
+          "category": "destructables",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "DEST_prefab_cryos3_stalagmite_large.Noun",
+          "name": "Stalagmite",
+          "slug": "dest-prefab-cryos3-stalagmite-large-noun",
+          "instance_id": 1461008522,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -2163,21 +2163,6 @@
           ]
         },
         {
-          "asset_name": "TutorialSpecialOne_Intro.Noun",
-          "name": "Simulated corrupted Quadra",
-          "slug": "tutorialspecialone-intro-noun",
-          "instance_id": 176731811,
-          "hit_points": 140,
-          "element": "plasma",
-          "image": "/image/npc/3bedd74d.png",
-          "category": "combat",
-          "description": "Fires lightning orb volleys, exhausted afterwards",
-          "is_combatant": true,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "TutorialSpecialOne.Noun",
           "name": "Simulated corrupted Quadra",
           "slug": "tutorialspecialone-noun",
@@ -2190,6 +2175,21 @@
           "is_combatant": true,
           "sources": [
             "director",
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "TutorialSpecialOne_Intro.Noun",
+          "name": "Simulated corrupted Quadra",
+          "slug": "tutorialspecialone-intro-noun",
+          "instance_id": 176731811,
+          "hit_points": 140,
+          "element": "plasma",
+          "image": "/image/npc/3bedd74d.png",
+          "category": "combat",
+          "description": "Fires lightning orb volleys, exhausted afterwards",
+          "is_combatant": true,
+          "sources": [
             "marker"
           ]
         },
@@ -2324,10 +2324,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2337,10 +2337,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2708,10 +2708,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2721,10 +2721,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -3053,19 +3053,6 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
-          "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
-          "hit_points": 1,
-          "category": "destructables",
-          "description": "Explodes when destroyed, damaging enemies",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
@@ -3079,13 +3066,13 @@
           ]
         },
         {
-          "asset_name": "DEST_citadel_factorypipe.Noun",
-          "name": "Fuel Canister",
-          "slug": "dest-citadel-factorypipe-noun",
-          "instance_id": 3033281775,
-          "hit_points": 20,
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "name": "Factory Pipe",
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
+          "hit_points": 1,
           "category": "destructables",
-          "description": "Explodes when destroyed, igniting enemies",
+          "description": "Explodes when destroyed, damaging enemies",
           "is_combatant": false,
           "sources": [
             "marker"
@@ -3097,6 +3084,19 @@
           "slug": "dest-citadel-fuelcanister-noun",
           "instance_id": 1070541292,
           "hit_points": 5,
+          "category": "destructables",
+          "description": "Explodes when destroyed, igniting enemies",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "DEST_citadel_factorypipe.Noun",
+          "name": "Fuel Canister",
+          "slug": "dest-citadel-factorypipe-noun",
+          "instance_id": 3033281775,
+          "hit_points": 20,
           "category": "destructables",
           "description": "Explodes when destroyed, igniting enemies",
           "is_combatant": false,
@@ -3456,19 +3456,6 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
-          "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
-          "hit_points": 1,
-          "category": "destructables",
-          "description": "Explodes when destroyed, damaging enemies",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-noun",
@@ -3486,6 +3473,19 @@
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
           "instance_id": 3581870773,
+          "hit_points": 1,
+          "category": "destructables",
+          "description": "Explodes when destroyed, damaging enemies",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "name": "Factory Pipe",
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -5858,10 +5858,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_scaldron_plant_large_1b.Noun",
+          "asset_name": "DEST_prefab_scaldron_plant_large_1.Noun",
           "name": "Contagion Pustule",
-          "slug": "dest-prefab-scaldron-plant-large-1b-noun",
-          "instance_id": 4283846611,
+          "slug": "dest-prefab-scaldron-plant-large-1-noun",
+          "instance_id": 3142140971,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, diseasing nearby enemies",
@@ -5871,10 +5871,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_scaldron_plant_large_1.Noun",
+          "asset_name": "DEST_prefab_scaldron_plant_large_1b.Noun",
           "name": "Contagion Pustule",
-          "slug": "dest-prefab-scaldron-plant-large-1-noun",
-          "instance_id": 3142140971,
+          "slug": "dest-prefab-scaldron-plant-large-1b-noun",
+          "instance_id": 4283846611,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, diseasing nearby enemies",
@@ -9643,10 +9643,10 @@
           ]
         },
         {
-          "asset_name": "DEST_tota_headstatue_b.Noun",
+          "asset_name": "DEST_tota_headstatue_c.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-b-noun",
-          "instance_id": 3618359148,
+          "slug": "dest-tota-headstatue-c-noun",
+          "instance_id": 3618359149,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -9656,10 +9656,10 @@
           ]
         },
         {
-          "asset_name": "DEST_tota_headstatue_c.Noun",
+          "asset_name": "DEST_tota_headstatue_b.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-c-noun",
-          "instance_id": 3618359149,
+          "slug": "dest-tota-headstatue-b-noun",
+          "instance_id": 3618359148,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -10919,18 +10919,6 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
-          "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
-          "hit_points": 1,
-          "category": "destructables",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "DEST_prefab_islands_instrument_scitech_2.Noun",
           "name": "Gravitic Regulator",
           "slug": "dest-prefab-islands-instrument-scitech-2-noun",
@@ -10947,6 +10935,18 @@
           "name": "Gravitic Regulator",
           "slug": "dest-prefab-islands-instrument-scitech-3-noun",
           "instance_id": 945107635,
+          "hit_points": 1,
+          "category": "destructables",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "name": "Gravitic Regulator",
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -12019,10 +12019,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-noun",
-          "instance_id": 1841571896,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -12032,10 +12032,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-noun",
+          "instance_id": 1841571896,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -14647,10 +14647,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos_stalagmite_small.Noun",
+          "asset_name": "DEST_prefab_cryos3_stalagmite_small.Noun",
           "name": "Stalagmite",
-          "slug": "dest-prefab-cryos-stalagmite-small-noun",
-          "instance_id": 2177136693,
+          "slug": "dest-prefab-cryos3-stalagmite-small-noun",
+          "instance_id": 3599808182,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -14671,10 +14671,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos3_stalagmite_small.Noun",
+          "asset_name": "DEST_prefab_cryos_stalagmite_small.Noun",
           "name": "Stalagmite",
-          "slug": "dest-prefab-cryos3-stalagmite-small-noun",
-          "instance_id": 3599808182,
+          "slug": "dest-prefab-cryos-stalagmite-small-noun",
+          "instance_id": 2177136693,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -17244,10 +17244,10 @@
           ]
         },
         {
-          "asset_name": "DEST_tota_headstatue_c.Noun",
+          "asset_name": "DEST_tota_headstatue_b.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-c-noun",
-          "instance_id": 3618359149,
+          "slug": "dest-tota-headstatue-b-noun",
+          "instance_id": 3618359148,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -17257,10 +17257,10 @@
           ]
         },
         {
-          "asset_name": "DEST_tota_headstatue_b.Noun",
+          "asset_name": "DEST_tota_headstatue_c.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-b-noun",
-          "instance_id": 3618359148,
+          "slug": "dest-tota-headstatue-c-noun",
+          "instance_id": 3618359149,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -17955,10 +17955,10 @@
       "combat_count": 21,
       "npcs": [
         {
-          "asset_name": "DEST_tota_headstatue_b.Noun",
+          "asset_name": "DEST_tota_headstatue_c.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-b-noun",
-          "instance_id": 3618359148,
+          "slug": "dest-tota-headstatue-c-noun",
+          "instance_id": 3618359149,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -17968,10 +17968,10 @@
           ]
         },
         {
-          "asset_name": "DEST_tota_headstatue_c.Noun",
+          "asset_name": "DEST_tota_headstatue_b.Noun",
           "name": "Ancient Totem",
-          "slug": "dest-tota-headstatue-c-noun",
-          "instance_id": 3618359149,
+          "slug": "dest-tota-headstatue-b-noun",
+          "instance_id": 3618359148,
           "hit_points": 10,
           "category": "destructables",
           "description": "Sometimes drops rewards",
@@ -19417,10 +19417,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
-          "instance_id": 945107635,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -19441,10 +19441,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
+          "instance_id": 945107635,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20152,10 +20152,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
-          "instance_id": 945107635,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20164,10 +20164,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
+          "instance_id": 945107635,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20913,10 +20913,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_2.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-2-noun",
+          "instance_id": 945107634,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20925,10 +20925,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_2.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-2-noun",
-          "instance_id": 945107634,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -21227,7 +21227,7 @@
       "element": "plasma",
       "image": "/image/npc/2c222386.png",
       "category": "combat",
-      "description": "Charges its target, explodes upon death",
+      "description": "Charges heroes dealing physical damage.\n\nAttacks with energy damage when up close.\n\nExplodes after dying, dealing damage to all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -21282,7 +21282,7 @@
       "element": "plasma",
       "image": "/image/npc/2c222387.png",
       "category": "combat",
-      "description": "Charges its target, explodes upon death",
+      "description": "Charges heroes dealing physical damage.\n\nAttacks with energy damage when up close.\n\nExplodes after dying, dealing damage to all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -21351,7 +21351,7 @@
       "element": "plasma",
       "image": "/image/npc/51d8608b.png",
       "category": "combat",
-      "description": "Charges its target, explodes upon death",
+      "description": "Charges heroes dealing physical damage.\n\nAttacks with energy damage when up close.\n\nExplodes after dying, dealing damage to all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -21422,7 +21422,7 @@
       "element": "cyber",
       "image": "/image/npc/1d9985b9.png",
       "category": "combat",
-      "description": "Resistant to energy attacks, fires dual machine guns",
+      "description": "Highly resistant to energy damage.\n\nHas a rapid fire machine gun attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -21472,7 +21472,7 @@
       "element": "cyber",
       "image": "/image/npc/1d9985b8.png",
       "category": "combat",
-      "description": "Highly resistant to energy attacks, fires dual machine guns",
+      "description": "Highly resistant to energy damage.\n\nHas a rapid fire machine gun attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -21529,7 +21529,7 @@
       "element": "cyber",
       "image": "/image/npc/5d17f1fe.png",
       "category": "combat",
-      "description": "Resistant to energy attacks, fires dual machine guns",
+      "description": "Highly resistant to energy damage.\n\nHas a rapid fire machine gun attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -21572,7 +21572,7 @@
       "element": "plasma",
       "image": "/image/npc/74be06b2.png",
       "category": "combat",
-      "description": "Breathes fire in a cone shape",
+      "description": "Has a short range fire breath attack that can hit multiple targets within its area.",
       "is_combatant": true,
       "placements": [
         {
@@ -21622,7 +21622,7 @@
       "element": "plasma",
       "image": "/image/npc/74be06b3.png",
       "category": "combat",
-      "description": "Breathes fire in a cone shape",
+      "description": "Has a short range fire breath attack that can hit multiple targets within its area.",
       "is_combatant": true,
       "placements": [
         {
@@ -21672,7 +21672,7 @@
       "element": "plasma",
       "image": "/image/npc/3c20d7bf.png",
       "category": "combat",
-      "description": "Breathes fire in a cone shape",
+      "description": "Has a short range fire breath attack that can hit multiple targets within its area.",
       "is_combatant": true,
       "placements": [
         {
@@ -21722,7 +21722,7 @@
       "element": "cyber",
       "image": "/image/npc/d69e9576.png",
       "category": "combat",
-      "description": "Charges up and fires piercing laser bolts",
+      "description": "Charges up, then fires a piercing laser bolt at its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -21765,7 +21765,7 @@
       "element": "cyber",
       "image": "/image/npc/d69e9577.png",
       "category": "combat",
-      "description": "Charges up and fires piercing laser bolts",
+      "description": "Charges up, then fires a piercing laser bolt at its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -21815,7 +21815,7 @@
       "element": "cyber",
       "image": "/image/npc/5d17f1fb.png",
       "category": "combat",
-      "description": "Charges up and fires piercing laser bolts",
+      "description": "Charges up, then fires a piercing laser bolt at its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -21858,7 +21858,7 @@
       "element": "cyber",
       "image": "/image/npc/fb13ad9c.png",
       "category": "combat",
-      "description": "Periodically recharging absorption shield",
+      "description": "Straightforward melee robot.\n\nSurrounded by a protective shield that will absorb damage and recharge periodically.",
       "is_combatant": true,
       "placements": [
         {
@@ -21901,7 +21901,7 @@
       "element": "cyber",
       "image": "/image/npc/fb13ad9d.png",
       "category": "combat",
-      "description": "Periodically recharging absorption shield",
+      "description": "Straightforward melee robot.\n\nSurrounded by a protective shield that will absorb damage and recharge periodically.",
       "is_combatant": true,
       "placements": [
         {
@@ -21944,7 +21944,7 @@
       "element": "cyber",
       "image": "/image/npc/5d17f1f9.png",
       "category": "combat",
-      "description": "Periodically recharging absorption shield",
+      "description": "Straightforward melee robot.\n\nSurrounded by a protective shield that will absorb damage and recharge periodically.",
       "is_combatant": true,
       "placements": [
         {
@@ -22002,7 +22002,7 @@
       "element": "cyber",
       "image": "/image/npc/808b586b.png",
       "category": "combat",
-      "description": "Low health, explodes and stuns when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will stun and damage heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22046,7 +22046,7 @@
       "element": "cyber",
       "image": "/image/npc/808b586a.png",
       "category": "combat",
-      "description": "Low health, explodes and stuns when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will stun and damage heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22090,7 +22090,7 @@
       "element": "cyber",
       "image": "/image/npc/5d17f1f8.png",
       "category": "combat",
-      "description": "Low health, explodes and dazes when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will daze and damage heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22223,7 +22223,7 @@
       "element": "cyber",
       "image": "/image/npc/5d17f1f8.png",
       "category": "combat",
-      "description": "Low health, explodes and dazes when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will daze and damage heroes.",
       "is_combatant": true,
       "placements": []
     },
@@ -22242,7 +22242,7 @@
       "element": "cyber",
       "image": "/image/npc/808b586b.png",
       "category": "combat",
-      "description": "Low health, explodes and stuns when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will stun and damage heroes.",
       "is_combatant": true,
       "placements": []
     },
@@ -22261,7 +22261,7 @@
       "element": "cyber",
       "image": "/image/npc/808b586a.png",
       "category": "combat",
-      "description": "Low health, explodes and stuns when close",
+      "description": "Runs towards the nearest hero and explodes nearby.\n\nBeing caught in the explosion will stun and damage heroes.",
       "is_combatant": true,
       "placements": []
     },
@@ -22289,7 +22289,7 @@
       "element": "cyber",
       "image": "/image/npc/1dc788a3.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22346,7 +22346,7 @@
       "element": "cyber",
       "image": "/image/npc/1dc788a2.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22396,7 +22396,7 @@
       "element": "cyber",
       "image": "/image/npc/9b5dbb2b.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22446,7 +22446,7 @@
       "element": "cyber",
       "image": "/image/npc/9b5dbb2a.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22496,7 +22496,7 @@
       "element": "cyber",
       "image": "/image/npc/9b5dbb28.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22546,7 +22546,7 @@
       "element": "cyber",
       "image": "/image/npc/888f9a10.png",
       "category": "combat",
-      "description": "Groundslam knocks up all nearby heroes, can repair itself",
+      "description": "Can slam the ground, knocking nearby heroes up into the air.\n\nWhen damaged, will use a repair arm to restore its own health.",
       "is_combatant": true,
       "placements": [
         {
@@ -22721,7 +22721,7 @@
       "element": "cyber",
       "image": "/image/npc/c2560403.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22771,7 +22771,7 @@
       "element": "cyber",
       "image": "/image/npc/c2560402.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22828,7 +22828,7 @@
       "element": "cyber",
       "image": "/image/npc/f12d9e7c.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22885,7 +22885,7 @@
       "element": "cyber",
       "image": "/image/npc/f12d9e7d.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22942,7 +22942,7 @@
       "element": "cyber",
       "image": "/image/npc/f12d9e7f.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -22992,7 +22992,7 @@
       "element": "cyber",
       "image": "/image/npc/00379f30.png",
       "category": "combat",
-      "description": "Energy resistant, creates persistent laser beams",
+      "description": "Highly resistant to energy damage.\n\nWill fire up to three sustained laser beams at nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -23050,7 +23050,7 @@
       "element": "cyber",
       "image": "/image/npc/f5f0388e.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that stun and then daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23108,7 +23108,7 @@
       "element": "cyber",
       "image": "/image/npc/f5f0388f.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that stun and then daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23159,7 +23159,7 @@
       "element": "cyber",
       "image": "/image/npc/a979a9ac.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that stun and then daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23224,7 +23224,7 @@
       "element": "cyber",
       "image": "/image/npc/a979a9ad.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that stun and then daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23289,7 +23289,7 @@
       "element": "cyber",
       "image": "/image/npc/a979a9af.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23361,7 +23361,7 @@
       "element": "cyber",
       "image": "/image/npc/00379f33.png",
       "category": "combat",
-      "description": "Suppression aura, launches homing missiles that daze",
+      "description": "Jams nearby communications, silencing all heroes who get too close.\n\nLaunches homing missiles that will cause the targeted hero to be briefly stunned as well as dazed.\n\nUses the opportunity created by the missiles to close in and slam heroes with its fist.",
       "is_combatant": true,
       "placements": [
         {
@@ -23425,7 +23425,7 @@
       "element": "cyber",
       "image": "/image/npc/5b9a7245.png",
       "category": "combat",
-      "description": "Launches homing missiles",
+      "description": "Launches homing missiles while in stationary mode.\n\nSwitches modes when it needs to turn or move.",
       "is_combatant": true,
       "placements": [
         {
@@ -23468,7 +23468,7 @@
       "element": "cyber",
       "image": "/image/npc/5b9a7244.png",
       "category": "combat",
-      "description": "Launches homing missiles",
+      "description": "Launches homing missiles while in stationary mode.\n\nSwitches modes when it needs to turn or move.",
       "is_combatant": true,
       "placements": [
         {
@@ -23511,7 +23511,7 @@
       "element": "cyber",
       "image": "/image/npc/3eb17b02.png",
       "category": "combat",
-      "description": "Launches homing missiles",
+      "description": "Launches homing missiles while in stationary mode.\n\nSwitches modes when it needs to turn or move.",
       "is_combatant": true,
       "placements": [
         {
@@ -23554,7 +23554,7 @@
       "element": "cyber",
       "image": "/image/npc/7a21d73a.png",
       "category": "combat",
-      "description": "Zaps other Voltroids to power them up",
+      "description": "Zaps nearby Voltroids to charge them up.\n\nWill hit a hero with a devastating energy attack once it has been fully charged.",
       "is_combatant": true,
       "placements": [
         {
@@ -23597,7 +23597,7 @@
       "element": "cyber",
       "image": "/image/npc/7a21d73b.png",
       "category": "combat",
-      "description": "Zaps other Voltroids to power them up",
+      "description": "Zaps nearby Voltroids to charge them up.\n\nWill hit a hero with a devastating energy attack once it has been fully charged.",
       "is_combatant": true,
       "placements": [
         {
@@ -23640,7 +23640,7 @@
       "element": "cyber",
       "image": "/image/npc/3eb17b07.png",
       "category": "combat",
-      "description": "Zaps other Voltroids to power them up",
+      "description": "Zaps nearby Voltroids to charge them up.\n\nWill hit a hero with a devastating energy attack once it has been fully charged.",
       "is_combatant": true,
       "placements": [
         {
@@ -23683,7 +23683,7 @@
       "element": "cyber",
       "image": "/image/npc/8e96d670.png",
       "category": "combat",
-      "description": "Rolls grenades that explode in an area",
+      "description": "Rolls grenades towards its target.\n\nUpon reaching the targeted point, grenades will explode dealing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -23740,7 +23740,7 @@
       "element": "cyber",
       "image": "/image/npc/8e96d671.png",
       "category": "combat",
-      "description": "Rolls grenades that explode in an area",
+      "description": "Rolls grenades towards its target.\n\nUpon reaching the targeted point, grenades will explode dealing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -23811,7 +23811,7 @@
       "element": "cyber",
       "image": "/image/npc/3eb17b05.png",
       "category": "combat",
-      "description": "Rolls grenades that explode in an area",
+      "description": "Rolls grenades towards its target.\n\nUpon reaching the targeted point, grenades will explode dealing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -23875,7 +23875,7 @@
       "element": "cyber",
       "image": "/image/npc/340d207f.png",
       "category": "combat",
-      "description": "Taunts heroes that it hits",
+      "description": "Taunts heroes with a melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -23939,7 +23939,7 @@
       "element": "cyber",
       "image": "/image/npc/340d207e.png",
       "category": "combat",
-      "description": "Taunts heroes that it hits",
+      "description": "Taunts heroes with a melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -24003,7 +24003,7 @@
       "element": "cyber",
       "image": "/image/npc/3eb17b04.png",
       "category": "combat",
-      "description": "Taunts heroes that it hits",
+      "description": "Taunts heroes with a melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -24160,7 +24160,7 @@
       "element": "plasma",
       "image": "/image/npc/021ad201.png",
       "category": "combat",
-      "description": "High health, charges at distant heroes",
+      "description": "High hit point melee enemy who can charge at faraway heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -24217,7 +24217,7 @@
       "element": "plasma",
       "image": "/image/npc/021ad200.png",
       "category": "combat",
-      "description": "High health, charges at distant heroes",
+      "description": "High hit point melee enemy who can charge at faraway heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -24267,7 +24267,7 @@
       "element": "plasma",
       "image": "/image/npc/0a03c346.png",
       "category": "combat",
-      "description": "High health, charges at distant heroes",
+      "description": "High hit point melee enemy who can charge at faraway heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -24328,7 +24328,7 @@
       "element": "plasma",
       "image": "/image/npc/f19826d7.png",
       "category": "combat",
-      "description": "Lights anyone it touches on fire",
+      "description": "Melee enemy that is completely shrouded in fire.\n\nHeroes who come into contact with it will catch on fire as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -24375,7 +24375,7 @@
       "element": "plasma",
       "image": "/image/npc/f19826d6.png",
       "category": "combat",
-      "description": "Lights anyone it touches on fire",
+      "description": "Melee enemy that is completely shrouded in fire.\n\nHeroes who come into contact with it will catch on fire as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -24422,7 +24422,7 @@
       "element": "plasma",
       "image": "/image/npc/95bf665c.png",
       "category": "combat",
-      "description": "Lights anyone it touches on fire",
+      "description": "Melee enemy that is completely shrouded in fire.\n\nHeroes who come into contact with it will catch on fire as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -24472,7 +24472,7 @@
       "element": "plasma",
       "image": "/image/npc/930ffd96.png",
       "category": "combat",
-      "description": "Launches a growing fire wave attack",
+      "description": "Launches flame waves that grow in size and power the farther they travel.",
       "is_combatant": true,
       "placements": [
         {
@@ -24522,7 +24522,7 @@
       "element": "plasma",
       "image": "/image/npc/930ffd97.png",
       "category": "combat",
-      "description": "Launches a growing fire wave attack",
+      "description": "Launches flame waves that grow in size and power the farther they travel.",
       "is_combatant": true,
       "placements": [
         {
@@ -24572,7 +24572,7 @@
       "element": "plasma",
       "image": "/image/npc/95bf665b.png",
       "category": "combat",
-      "description": "Launches a growing fire wave attack",
+      "description": "Launches flame waves that grow in size and power the farther they travel.",
       "is_combatant": true,
       "placements": [
         {
@@ -24622,7 +24622,7 @@
       "element": "plasma",
       "image": "/image/npc/83ce0fd3.png",
       "category": "combat",
-      "description": "Melee attacks inflict  energy vulnerability",
+      "description": "Fast moving minions with a plasma energy melee attack.\n\nEach attack causes a permanent stacking energy vulnerability debuff.",
       "is_combatant": true,
       "placements": [
         {
@@ -24672,7 +24672,7 @@
       "element": "plasma",
       "image": "/image/npc/83ce0fd2.png",
       "category": "combat",
-      "description": "Melee attacks inflict  energy vulnerability",
+      "description": "Fast moving minions with a plasma energy melee attack.\n\nEach attack causes a permanent stacking energy vulnerability debuff.",
       "is_combatant": true,
       "placements": [
         {
@@ -24722,7 +24722,7 @@
       "element": "plasma",
       "image": "/image/npc/0a03c340.png",
       "category": "combat",
-      "description": "Melee attacks inflict  energy vulnerability",
+      "description": "Fast moving minions with a plasma energy melee attack.\n\nEach attack causes a permanent stacking energy vulnerability debuff.",
       "is_combatant": true,
       "placements": [
         {
@@ -24772,7 +24772,7 @@
       "element": "plasma",
       "image": "/image/npc/7c03c3fa.png",
       "category": "combat",
-      "description": "Instant lightning attack, can't hit nearby heroes",
+      "description": "Can unleash a lightning bolt that instantly hits its target.\n\nCan't build up enough of a charge on nearby targets, causing the attack to fizzle.",
       "is_combatant": true,
       "placements": [
         {
@@ -24829,7 +24829,7 @@
       "element": "plasma",
       "image": "/image/npc/7c03c3fb.png",
       "category": "combat",
-      "description": "Instant lightning attack, can't hit nearby heroes",
+      "description": "Can unleash a lightning bolt that instantly hits its target.\n\nCan't build up enough of a charge on nearby targets, causing the attack to fizzle.",
       "is_combatant": true,
       "placements": [
         {
@@ -24879,7 +24879,7 @@
       "element": "plasma",
       "image": "/image/npc/0a03c347.png",
       "category": "combat",
-      "description": "Instant lightning attack, can't hit nearby heroes",
+      "description": "Can unleash a lightning bolt that instantly hits its target.\n\nCan't build up enough of a charge on nearby targets, causing the attack to fizzle.",
       "is_combatant": true,
       "placements": [
         {
@@ -24929,7 +24929,7 @@
       "element": "plasma",
       "image": "/image/npc/8393e9f3.png",
       "category": "combat",
-      "description": "Lightning melee attack that arcs to nearby targets",
+      "description": "Has a close range arc lightning attack that will jump between targets.\n\nThese lightning arcs will diminish in damage after each jump.",
       "is_combatant": true,
       "placements": [
         {
@@ -24972,7 +24972,7 @@
       "element": "plasma",
       "image": "/image/npc/8393e9f2.png",
       "category": "combat",
-      "description": "Lightning melee attack that arcs to nearby targets",
+      "description": "Has a close range arc lightning attack that will jump between targets.\n\nThese lightning arcs will diminish in damage after each jump.",
       "is_combatant": true,
       "placements": [
         {
@@ -25015,7 +25015,7 @@
       "element": "plasma",
       "image": "/image/npc/01edcea0.png",
       "category": "combat",
-      "description": "Lightning melee attack that arcs to nearby targets",
+      "description": "Has a close range arc lightning attack that will jump between targets.\n\nThese lightning arcs will diminish in damage after each jump.",
       "is_combatant": true,
       "placements": [
         {
@@ -25069,7 +25069,7 @@
       "element": "bio",
       "image": "/image/npc/dc4b78fb.png",
       "category": "combat",
-      "description": "Melee attacks sometimes inject poison",
+      "description": "Attempts to close with the hero to use a short range melee attack.\n\nEach melee attack that connects has a chance to inject poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -25116,7 +25116,7 @@
       "element": "bio",
       "image": "/image/npc/dc4b78fa.png",
       "category": "combat",
-      "description": "Melee attacks inject poison",
+      "description": "Attempts to close with the hero to use a short range melee attack.\n\nEach melee attack that connects has a chance to inject poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -25177,7 +25177,7 @@
       "element": "bio",
       "image": "/image/npc/b8121488.png",
       "category": "combat",
-      "description": "Melee attacks occasionally inject poison",
+      "description": "Attempts to close with the hero to use a short range melee attack.\n\nEach melee attack that connects has a chance to inject poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -25235,7 +25235,7 @@
       "element": "plasma",
       "image": "/image/npc/0ee250ab.png",
       "category": "combat",
-      "description": "Launches orbs that sometimes shock the target",
+      "description": "Slow moving, fires long ranged lightning orbs.\n\nEach orb that connects has a chance to shock its target briefly.",
       "is_combatant": true,
       "placements": [
         {
@@ -25286,7 +25286,7 @@
       "element": "plasma",
       "image": "/image/npc/0ee250aa.png",
       "category": "combat",
-      "description": "Launches orbs that sometimes shock the target",
+      "description": "Slow moving, fires long ranged lightning orbs.\n\nEach orb that connects has a chance to shock its target briefly.",
       "is_combatant": true,
       "placements": [
         {
@@ -25344,7 +25344,7 @@
       "element": "plasma",
       "image": "/image/npc/157211b8.png",
       "category": "combat",
-      "description": "Launches orbs that occasionally shock the target",
+      "description": "Slow moving, fires long ranged lightning orbs.\n\nEach orb that connects has a chance to shock its target briefly.",
       "is_combatant": true,
       "placements": [
         {
@@ -25510,7 +25510,7 @@
       "element": "plasma",
       "image": "/image/npc/d88a0d44.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25567,7 +25567,7 @@
       "element": "plasma",
       "image": "/image/npc/d88a0d45.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25624,7 +25624,7 @@
       "element": "plasma",
       "image": "/image/npc/8914c0d0.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25681,7 +25681,7 @@
       "element": "plasma",
       "image": "/image/npc/8914c0d1.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25731,7 +25731,7 @@
       "element": "plasma",
       "image": "/image/npc/8914c0d3.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25781,7 +25781,7 @@
       "element": "plasma",
       "image": "/image/npc/5f495ee1.png",
       "category": "combat",
-      "description": "Unleashes lightning at all targets, flees when attacked",
+      "description": "Unleashes blazing fast lightning bolts that travel horizontally and can pierce multiple heroes.\n\nEach target in range causes him to launch an additional bolt.\n\nFlees when struck in combat, turning back only to send out lightning.",
       "is_combatant": true,
       "placements": [
         {
@@ -25917,7 +25917,7 @@
       "element": "plasma",
       "image": "/image/npc/bced183f.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -25981,7 +25981,7 @@
       "element": "plasma",
       "image": "/image/npc/bced183e.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -26038,7 +26038,7 @@
       "element": "plasma",
       "image": "/image/npc/f471db42.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -26095,7 +26095,7 @@
       "element": "plasma",
       "image": "/image/npc/f471db43.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -26145,7 +26145,7 @@
       "element": "plasma",
       "image": "/image/npc/f471db41.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -26202,7 +26202,7 @@
       "element": "plasma",
       "image": "/image/npc/5a719044.png",
       "category": "combat",
-      "description": "Fires lightning orb volleys, exhausted afterwards",
+      "description": "Fires devastating volleys of four lightning orbs at a time.\n\nBecomes exhausted for a short period after each volley.",
       "is_combatant": true,
       "placements": [
         {
@@ -26265,7 +26265,7 @@
       "element": "bio",
       "image": "/image/npc/d07a966c.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26356,7 +26356,7 @@
       "element": "bio",
       "image": "/image/npc/d07a966d.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26412,7 +26412,7 @@
       "element": "bio",
       "image": "/image/npc/95246571.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26468,7 +26468,7 @@
       "element": "bio",
       "image": "/image/npc/95246570.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26517,7 +26517,7 @@
       "element": "bio",
       "image": "/image/npc/95246572.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26566,7 +26566,7 @@
       "element": "bio",
       "image": "/image/npc/d904f209.png",
       "category": "combat",
-      "description": "Lobs a sleep pod, nearby allies will auto-resurrect once",
+      "description": "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.\n\nWill close on sleeping heroes and hit them with a melee swipe attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -26634,7 +26634,7 @@
       "element": "plasma",
       "image": "/image/npc/4b7bf290.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -26688,7 +26688,7 @@
       "element": "plasma",
       "image": "/image/npc/4b7bf291.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -26749,7 +26749,7 @@
       "element": "plasma",
       "image": "/image/npc/adc3b76a.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -26803,7 +26803,7 @@
       "element": "plasma",
       "image": "/image/npc/adc3b76b.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -26864,7 +26864,7 @@
       "element": "plasma",
       "image": "/image/npc/adc3b769.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -26925,7 +26925,7 @@
       "element": "plasma",
       "image": "/image/npc/844316e5.png",
       "category": "combat",
-      "description": "Ignites heroes with a spread shot fireball attack",
+      "description": "Throws multiple fireballs in a spread pattern.\n\nHeroes who are hit by a fireball will burn and take damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -28632,7 +28632,7 @@
       "element": "necro",
       "image": "/image/npc/14a5e875.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -28696,7 +28696,7 @@
       "element": "necro",
       "image": "/image/npc/14a5e874.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -28781,7 +28781,7 @@
       "element": "necro",
       "image": "/image/npc/14a5e875.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -28831,7 +28831,7 @@
       "element": "necro",
       "image": "/image/npc/14a5e874.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -28909,7 +28909,7 @@
       "element": "necro",
       "image": "/image/npc/a8ec2d72.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -28959,7 +28959,7 @@
       "element": "necro",
       "image": "/image/npc/a8ec2d72.png",
       "category": "combat",
-      "description": "Stealths, terrifies heroes that it surprises, attacks cause physical vulnerability",
+      "description": "Will stealth in an attempt to move in close.\n\nIf it manages to surprise a hero, it will scream, terrifying anyone near it.\n\nMelee attacks cause the hero to become vulnerable to future physical damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -29014,7 +29014,7 @@
       "element": "necro",
       "image": "/image/npc/04d9380c.png",
       "category": "combat",
-      "description": "Drains power, explodes when full",
+      "description": "Drains power over time from heroes in an effort to replenish its supply.\n\nWhen full, will run towards the nearest hero and explode, causing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -29062,7 +29062,7 @@
       "element": "necro",
       "image": "/image/npc/04d9380d.png",
       "category": "combat",
-      "description": "Drains power, explodes when full",
+      "description": "Drains power over time from heroes in an effort to replenish its supply.\n\nWhen full, will run towards the nearest hero and explode, causing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -29131,7 +29131,7 @@
       "element": "necro",
       "image": "/image/npc/8d4c7be9.png",
       "category": "combat",
-      "description": "Drains power, explodes when full",
+      "description": "Drains power over time from heroes in an effort to replenish its supply.\n\nWhen full, will run towards the nearest hero and explode, causing area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -29510,7 +29510,7 @@
       "element": "necro",
       "image": "/image/npc/b59feddd.png",
       "category": "combat",
-      "description": "Lobs curses with a small area of effect",
+      "description": "Lobs a projectile that will curse any heroes caught in the small area of effect.\n\nThe curse deals damage over time, but has a limit on how much it can stack.",
       "is_combatant": true,
       "placements": [
         {
@@ -29569,7 +29569,7 @@
       "element": "necro",
       "image": "/image/npc/b59feddc.png",
       "category": "combat",
-      "description": "Lobs curses with a small area of effect",
+      "description": "Lobs a projectile that will curse any heroes caught in the small area of effect.\n\nThe curse deals damage over time, but has a limit on how much it can stack.",
       "is_combatant": true,
       "placements": [
         {
@@ -29614,7 +29614,7 @@
       "element": "necro",
       "image": "/image/npc/47adb03a.png",
       "category": "combat",
-      "description": "Lobs curses with a small area of effect",
+      "description": "Lobs a projectile that will curse any heroes caught in the small area of effect.\n\nThe curse deals damage over time, but has a limit on how much it can stack.",
       "is_combatant": true,
       "placements": [
         {
@@ -29671,7 +29671,7 @@
       "element": "necro",
       "image": "/image/npc/8f4fd077.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges through heroes",
+      "description": "Body is ghostly, giving it a very high chance to dodge physical attacks.\n\nCan charge through heroes, damaging anyone it touches.",
       "is_combatant": true,
       "placements": [
         {
@@ -29728,7 +29728,7 @@
       "element": "necro",
       "image": "/image/npc/8f4fd076.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges through heroes",
+      "description": "Body is ghostly, giving it a very high chance to dodge physical attacks.\n\nCan charge through heroes, damaging anyone it touches.",
       "is_combatant": true,
       "placements": [
         {
@@ -29771,7 +29771,7 @@
       "element": "necro",
       "image": "/image/npc/47adb03c.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges through heroes",
+      "description": "Body is ghostly, giving it a very high chance to dodge physical attacks.\n\nCan charge through heroes, damaging anyone it touches.",
       "is_combatant": true,
       "placements": [
         {
@@ -29828,7 +29828,7 @@
       "element": "necro",
       "image": "/image/npc/30c7a736.png",
       "category": "combat",
-      "description": "Hopping area effect attack",
+      "description": "Leaps from place to place to move around.\n\nWhen landing near a hero, emits a damaging area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -29871,7 +29871,7 @@
       "element": "necro",
       "image": "/image/npc/30c7a737.png",
       "category": "combat",
-      "description": "Hopping area effect attack",
+      "description": "Leaps from place to place to move around.\n\nWhen landing near a hero, emits a damaging area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -29921,7 +29921,7 @@
       "element": "necro",
       "image": "/image/npc/47adb03b.png",
       "category": "combat",
-      "description": "Hopping area effect attack",
+      "description": "Leaps from place to place to move around.\n\nWhen landing near a hero, emits a damaging area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -30006,7 +30006,7 @@
       "element": "necro",
       "image": "/image/npc/0bb4bde8.png",
       "category": "combat",
-      "description": "Fast melee attacker, easily distracted",
+      "description": "Fast moving melee enemies who are easily distracted.",
       "is_combatant": true,
       "placements": [
         {
@@ -30049,7 +30049,7 @@
       "element": "necro",
       "image": "/image/npc/0bb4bde9.png",
       "category": "combat",
-      "description": "Fast melee attacker, easily distracted",
+      "description": "Fast moving melee enemies who are easily distracted.",
       "is_combatant": true,
       "placements": [
         {
@@ -30085,7 +30085,7 @@
       "element": "necro",
       "image": "/image/npc/47adb03d.png",
       "category": "combat",
-      "description": "Fast melee attacker, easily distracted",
+      "description": "Fast moving melee enemies who are easily distracted.",
       "is_combatant": true,
       "placements": [
         {
@@ -30135,7 +30135,7 @@
       "element": "necro",
       "image": "/image/npc/44a187ee.png",
       "category": "combat",
-      "description": "Drains health, falls asleep when full",
+      "description": "Can drain health over time if it gets close enough to its target.\n\nBecomes exhausted for a short time after stealing a significant amount of health.",
       "is_combatant": true,
       "placements": [
         {
@@ -30220,7 +30220,7 @@
       "element": "necro",
       "image": "/image/npc/44a187ef.png",
       "category": "combat",
-      "description": "Drains health, falls asleep when full",
+      "description": "Can drain health over time if it gets close enough to its target.\n\nBecomes exhausted for a short time after stealing a significant amount of health.",
       "is_combatant": true,
       "placements": [
         {
@@ -30305,7 +30305,7 @@
       "element": "necro",
       "image": "/image/npc/8fae2153.png",
       "category": "combat",
-      "description": "Drains health, falls asleep when full",
+      "description": "Can drain health over time if it gets close enough to its target.\n\nBecomes exhausted for a short time after stealing a significant amount of health.",
       "is_combatant": true,
       "placements": [
         {
@@ -30377,7 +30377,7 @@
       "element": "necro",
       "image": "/image/npc/c329e34f.png",
       "category": "combat",
-      "description": "Emits suppressive projectiles, sometimes strafes",
+      "description": "Emits slow moving projectiles that will silence heroes on impact.\n\nWill sometimes strafe between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -30421,7 +30421,7 @@
       "element": "necro",
       "image": "/image/npc/c329e34e.png",
       "category": "combat",
-      "description": "Emits suppressive projectiles, strafes",
+      "description": "Emits slow moving projectiles that will silence heroes on impact.\n\nWill sometimes strafe between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -30465,7 +30465,7 @@
       "element": "necro",
       "image": "/image/npc/8fae2154.png",
       "category": "combat",
-      "description": "Emits suppressive projectiles, sometimes strafes",
+      "description": "Emits slow moving projectiles that will silence heroes on impact.\n\nWill sometimes strafe between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -30508,7 +30508,7 @@
       "element": "necro",
       "image": "/image/npc/1d143580.png",
       "category": "combat",
-      "description": "Stealths, appears next to heroes",
+      "description": "Surprises heroes by appearing out of stealth nearby.\n\nEngages in close range melee combat.",
       "is_combatant": true,
       "placements": [
         {
@@ -30565,7 +30565,7 @@
       "element": "necro",
       "image": "/image/npc/1d143581.png",
       "category": "combat",
-      "description": "Stealths, appears next to heroes",
+      "description": "Surprises heroes by appearing out of stealth nearby.\n\nEngages in close range melee combat.",
       "is_combatant": true,
       "placements": [
         {
@@ -30636,7 +30636,7 @@
       "element": "necro",
       "image": "/image/npc/8fae2155.png",
       "category": "combat",
-      "description": "Stealths, appears next to heroes",
+      "description": "Surprises heroes by appearing out of stealth nearby.\n\nEngages in close range melee combat.",
       "is_combatant": true,
       "placements": [
         {
@@ -30687,7 +30687,7 @@
       "element": "necro",
       "image": "/image/npc/6224550f.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges cause suppression, drains life from nearby heroes",
+      "description": "Very difficult to hit with physical attacks.\n\nCharges through heroes silencing them in the process.\n\nEmits an aura that slowly drains life from all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -30752,7 +30752,7 @@
       "element": "necro",
       "image": "/image/npc/6224550e.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges cause suppression, drains life from nearby heroes",
+      "description": "Very difficult to hit with physical attacks.\n\nCharges through heroes silencing them in the process.\n\nEmits an aura that slowly drains life from all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -30831,7 +30831,7 @@
       "element": "necro",
       "image": "/image/npc/5c7bff94.png",
       "category": "combat",
-      "description": "Very high dodge chance, charges cause suppression, drains life from nearby heroes",
+      "description": "Very difficult to hit with physical attacks.\n\nCharges through heroes silencing them in the process.\n\nEmits an aura that slowly drains life from all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -30909,7 +30909,7 @@
       "element": "necro",
       "image": "/image/npc/09ec1774.png",
       "category": "combat",
-      "description": "Emerges from stealth and locks down a nearby hero, steals health for surrounding allies",
+      "description": "Surprises its target by coming out of stealth and afflicting it with a crippling snare.\n\nLocks down that hero with a claw grip and drains health, sharing it with nearby allies.\n\nOther heroes will need to kill it to free that hero from the grip.",
       "is_combatant": true,
       "placements": [
         {
@@ -30945,7 +30945,7 @@
       "element": "necro",
       "image": "/image/npc/09ec1775.png",
       "category": "combat",
-      "description": "Emerges from stealth and locks down a nearby hero, steals health for surrounding allies",
+      "description": "Surprises its target by coming out of stealth and afflicting it with a crippling snare.\n\nLocks down that hero with a claw grip and drains health, sharing it with nearby allies.\n\nOther heroes will need to kill it to free that hero from the grip.",
       "is_combatant": true,
       "placements": [
         {
@@ -30981,7 +30981,7 @@
       "element": "necro",
       "image": "/image/npc/5c7bff91.png",
       "category": "combat",
-      "description": "Emerges from stealth and locks down a nearby hero, steals health for surrounding allies",
+      "description": "Surprises its target by coming out of stealth and afflicting it with a crippling snare.\n\nLocks down that hero with a claw grip and drains health, sharing it with nearby allies.\n\nOther heroes will need to kill it to free that hero from the grip.",
       "is_combatant": true,
       "placements": [
         {
@@ -31018,7 +31018,7 @@
       "element": "necro",
       "image": "/image/npc/887472d5.png",
       "category": "combat",
-      "description": "Launches a homing projectile that terrifies the target",
+      "description": "Launches slow moving homing projectiles, that cause little damage, but will terrify a hero on impact.\n\nChases after terrified heroes and attacks them from melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31069,7 +31069,7 @@
       "element": "necro",
       "image": "/image/npc/887472d4.png",
       "category": "combat",
-      "description": "Launches a homing projectile that terrifies the target",
+      "description": "Launches slow moving homing projectiles, that cause little damage, but will terrify a hero on impact.\n\nChases after terrified heroes and attacks them from melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31141,7 +31141,7 @@
       "element": "necro",
       "image": "/image/npc/5c7bff92.png",
       "category": "combat",
-      "description": "Launches a homing projectile that terrifies the target",
+      "description": "Launches slow moving homing projectiles, that cause little damage, but will terrify a hero on impact.\n\nChases after terrified heroes and attacks them from melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31205,7 +31205,7 @@
       "element": "necro",
       "image": "/image/npc/e39bf9ae.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31262,7 +31262,7 @@
       "element": "necro",
       "image": "/image/npc/e39bf9af.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31305,7 +31305,7 @@
       "element": "necro",
       "image": "/image/npc/ecf8bc72.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31355,7 +31355,7 @@
       "element": "necro",
       "image": "/image/npc/ecf8bc73.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31405,7 +31405,7 @@
       "element": "necro",
       "image": "/image/npc/ecf8bc71.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31455,7 +31455,7 @@
       "element": "necro",
       "image": "/image/npc/5c7bff93.png",
       "category": "combat",
-      "description": "Healed when nearby allies are damaged",
+      "description": "Fires long range necro projectiles.\n\nWill regain health when nearby allies are damaged.",
       "is_combatant": true,
       "placements": [
         {
@@ -31540,7 +31540,7 @@
       "element": "necro",
       "image": "/image/npc/8c5db0b0.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31583,7 +31583,7 @@
       "element": "necro",
       "image": "/image/npc/8c5db0b1.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31640,7 +31640,7 @@
       "element": "necro",
       "image": "/image/npc/bbecfea8.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31690,7 +31690,7 @@
       "element": "necro",
       "image": "/image/npc/bbecfea9.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31740,7 +31740,7 @@
       "element": "necro",
       "image": "/image/npc/bbecfeab.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31825,7 +31825,7 @@
       "element": "necro",
       "image": "/image/npc/030c00c5.png",
       "category": "combat",
-      "description": "Grows stronger from feeding on corpses",
+      "description": "Can consume the corpses of its allies to become larger and stronger.\n\nUses its large fists to smash heroes in melee range.",
       "is_combatant": true,
       "placements": [
         {
@@ -31910,7 +31910,7 @@
       "element": "bio",
       "image": "/image/npc/b2d2da7b.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -31981,7 +31981,7 @@
       "element": "bio",
       "image": "/image/npc/abe26e0c.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32038,7 +32038,7 @@
       "element": "bio",
       "image": "/image/npc/abe26e0d.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32088,7 +32088,7 @@
       "element": "bio",
       "image": "/image/npc/b2d2da7a.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32124,7 +32124,7 @@
       "element": "bio",
       "image": "/image/npc/abe26e0e.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32167,7 +32167,7 @@
       "element": "bio",
       "image": "/image/npc/b049c908.png",
       "category": "combat",
-      "description": "Pounces, fluctuating self-resurrection buff",
+      "description": "Can close distance quickly with his leap attack.\n\nWill resurrect if killed at the wrong time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32225,7 +32225,7 @@
       "element": "cyber",
       "image": "/image/npc/0cc0ec6e.png",
       "category": "combat",
-      "description": "Locks down heroes with an energy cage, has a self repair drone",
+      "description": "Locks down a nearby hero by surrounding them with an energy cage.\n\nOther heroes will need to kill it to free that hero from the cage.\n\nHas a repair drone that orbits, healing it constantly over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32262,7 +32262,7 @@
       "element": "cyber",
       "image": "/image/npc/0cc0ec6f.png",
       "category": "combat",
-      "description": "Locks down heroes with an energy cage, has a self repair drone",
+      "description": "Locks down a nearby hero by surrounding them with an energy cage.\n\nOther heroes will need to kill it to free that hero from the cage.\n\nHas a repair drone that orbits, healing it constantly over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32377,7 +32377,7 @@
       "element": "cyber",
       "image": "/image/npc/16e8fed3.png",
       "category": "combat",
-      "description": "Locks down heroes with an energy cage, has a self repair drone",
+      "description": "Locks down a nearby hero by surrounding them with an energy cage.\n\nOther heroes will need to kill it to free that hero from the cage.\n\nHas a repair drone that orbits, healing it constantly over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32413,7 +32413,7 @@
       "element": "quantum",
       "image": "/image/npc/66096f19.png",
       "category": "combat",
-      "description": "Creates time bubbles, attacks heroes with rocks from above",
+      "description": "Can create a lasting sphere that slows all heroes and projectiles entering it.\n\nWhile protected in the sphere, calls down space debris in an attempt to crush its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -32470,7 +32470,7 @@
       "element": "quantum",
       "image": "/image/npc/66096f18.png",
       "category": "combat",
-      "description": "Creates time bubbles, attacks heroes with rocks from above",
+      "description": "Can create a lasting sphere that slows all heroes and projectiles entering it.\n\nWhile protected in the sphere, calls down space debris in an attempt to crush its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -32520,7 +32520,7 @@
       "element": "quantum",
       "image": "/image/npc/5c6f339e.png",
       "category": "combat",
-      "description": "Creates time bubbles, attacks heroes with rocks from above",
+      "description": "Can create a lasting sphere that slows all heroes and projectiles entering it.\n\nWhile protected in the sphere, calls down space debris in an attempt to crush its target.",
       "is_combatant": true,
       "placements": [
         {
@@ -32765,7 +32765,7 @@
       "element": "plasma",
       "image": "/image/npc/2549fb27.png",
       "category": "combat",
-      "description": "Summons two minions, one that locks down a hero and one that breathes a continuous stream of fire.",
+      "description": "Summons two different minions upon encountering a hero.\n\nThe first minion will lock down a target with lightning if it manages to get close.\n\nThe second minion will bathe a hero in fire, dealing damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32801,7 +32801,7 @@
       "element": "plasma",
       "image": "/image/npc/2549fb26.png",
       "category": "combat",
-      "description": "Summons two minions, one that locks down a hero and one that breathes a continuous stream of fire.",
+      "description": "Summons two different minions upon encountering a hero.\n\nThe first minion will lock down a target with lightning if it manages to get close.\n\nThe second minion will bathe a hero in fire, dealing damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32837,7 +32837,7 @@
       "element": "plasma",
       "image": "/image/npc/dcee78ec.png",
       "category": "combat",
-      "description": "Summons two minions, one that locks down a hero and one that breathes a continuous stream of fire.",
+      "description": "Summons two different minions upon encountering a hero.\n\nThe first minion will lock down a target with lightning if it manages to get close.\n\nThe second minion will bathe a hero in fire, dealing damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -32873,7 +32873,7 @@
       "element": "plasma",
       "image": "/image/npc/c4e539a6.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -32923,7 +32923,7 @@
       "element": "plasma",
       "image": "/image/npc/c4e539a7.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -32987,7 +32987,7 @@
       "element": "plasma",
       "image": "/image/npc/91ee2732.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -33037,7 +33037,7 @@
       "element": "plasma",
       "image": "/image/npc/91ee2733.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -33094,7 +33094,7 @@
       "element": "plasma",
       "image": "/image/npc/91ee2731.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -33144,7 +33144,7 @@
       "element": "plasma",
       "image": "/image/npc/dcee78eb.png",
       "category": "combat",
-      "description": "Hurls magma to create lava pools",
+      "description": "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.\n\nHas a standard melee attack when it manages to get close.",
       "is_combatant": true,
       "placements": [
         {
@@ -33676,7 +33676,7 @@
       "element": "cyber",
       "image": "/image/npc/e5339a00.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -33740,7 +33740,7 @@
       "element": "cyber",
       "image": "/image/npc/e5339a01.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -33811,7 +33811,7 @@
       "element": "cyber",
       "image": "/image/npc/c874732e.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -33861,7 +33861,7 @@
       "element": "cyber",
       "image": "/image/npc/c874732f.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -33911,7 +33911,7 @@
       "element": "cyber",
       "image": "/image/npc/c874732d.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -33961,7 +33961,7 @@
       "element": "cyber",
       "image": "/image/npc/16e8fed5.png",
       "category": "combat",
-      "description": "Immune from the front; lobs cluster grenades",
+      "description": "Has an impenetrable shield that prevents all damage from the front.\n\nLobs exploding cluster grenades from behind the shield.\n\nWill knock back heroes that venture too close to his front.",
       "is_combatant": true,
       "placements": [
         {
@@ -34010,7 +34010,7 @@
       "element": "quantum",
       "image": "/image/npc/424662fc.png",
       "category": "combat",
-      "description": "Significantly slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34059,7 +34059,7 @@
       "element": "quantum",
       "image": "/image/npc/424662fd.png",
       "category": "combat",
-      "description": "Drastically slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34136,7 +34136,7 @@
       "element": "quantum",
       "image": "/image/npc/4e059710.png",
       "category": "combat",
-      "description": "Significantly slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34185,7 +34185,7 @@
       "element": "quantum",
       "image": "/image/npc/4e059711.png",
       "category": "combat",
-      "description": "Drastically slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34234,7 +34234,7 @@
       "element": "quantum",
       "image": "/image/npc/4e059713.png",
       "category": "combat",
-      "description": "Significantly slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34283,7 +34283,7 @@
       "element": "quantum",
       "image": "/image/npc/5c6f3399.png",
       "category": "combat",
-      "description": "Significantly slows hero attack and movement speed.",
+      "description": "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.\n\nChases after slowed heroes and uses a physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -34341,7 +34341,7 @@
       "element": "quantum",
       "image": "/image/npc/bff3c152.png",
       "category": "combat",
-      "description": "Locks down heroes with a long range gravity bubble, can teleport when in danger",
+      "description": "Locks down a hero with a medium range levitation ability.\n\nBlinks away to a random location when its health gets too low.",
       "is_combatant": true,
       "placements": [
         {
@@ -34378,7 +34378,7 @@
       "element": "quantum",
       "image": "/image/npc/bff3c153.png",
       "category": "combat",
-      "description": "Locks down heroes with a long range gravity bubble, can teleport when in danger",
+      "description": "Locks down a hero with a medium range levitation ability.\n\nBlinks away to a random location when its health gets too low.",
       "is_combatant": true,
       "placements": [
         {
@@ -34415,7 +34415,7 @@
       "element": "quantum",
       "image": "/image/npc/5c6f339f.png",
       "category": "combat",
-      "description": "Locks down heroes with a long range gravity bubble, can teleport when in danger",
+      "description": "Locks down a hero with a medium range levitation ability.\n\nBlinks away to a random location when its health gets too low.",
       "is_combatant": true,
       "placements": [
         {
@@ -34449,7 +34449,7 @@
       "element": "bio",
       "image": "/image/npc/50806b09.png",
       "category": "combat",
-      "description": "Locks down heroes in a crystalline substance, also creates poison pools",
+      "description": "Spits an acidic substance that will lock down a hero by crystallizing around them.\n\nOther heroes will need to attack the crystal to free that hero.\n\nIn between spitting, will hop around and create poisonous puddles.",
       "is_combatant": true,
       "placements": [
         {
@@ -34483,7 +34483,7 @@
       "element": "bio",
       "image": "/image/npc/50806b08.png",
       "category": "combat",
-      "description": "Locks down heroes in a crystalline substance, also creates poison pools",
+      "description": "Spits an acidic substance that will lock down a hero by crystallizing around them.\n\nOther heroes will need to attack the crystal to free that hero.\n\nIn between spitting, will hop around and create poisonous puddles.",
       "is_combatant": true,
       "placements": [
         {
@@ -34517,7 +34517,7 @@
       "element": "bio",
       "image": "/image/npc/b049c90e.png",
       "category": "combat",
-      "description": "Locks down heroes in a crystalline substance, also creates poison pools",
+      "description": "Spits an acidic substance that will lock down a hero by crystallizing around them.\n\nOther heroes will need to attack the crystal to free that hero.\n\nIn between spitting, will hop around and create poisonous puddles.",
       "is_combatant": true,
       "placements": [
         {
@@ -34551,7 +34551,7 @@
       "element": "bio",
       "image": "/image/npc/066d4106.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34606,7 +34606,7 @@
       "element": "bio",
       "image": "/image/npc/066d4107.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34703,7 +34703,7 @@
       "element": "bio",
       "image": "/image/npc/38e8fccb.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34758,7 +34758,7 @@
       "element": "bio",
       "image": "/image/npc/38e8fcca.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34820,7 +34820,7 @@
       "element": "bio",
       "image": "/image/npc/38e8fcc8.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34875,7 +34875,7 @@
       "element": "bio",
       "image": "/image/npc/b049c90b.png",
       "category": "combat",
-      "description": "Charges and knocks up, enrages when allies are killed",
+      "description": "Has a vicious charge that will knock affected heroes up into the air.\n\nEnrages when nearby corrupted are killed, growing in size and dealing more damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -34939,7 +34939,7 @@
       "element": "bio",
       "image": "/image/npc/2dfa936c.png",
       "category": "combat",
-      "description": "Energy resistant, can withdraw into shell and become immune to physical damage",
+      "description": "Spits acid at the heroes while strafing between attacks.\n\nHighly resistant to energy damage while mobile.\n\nAt half health, withdraws into its shell, becoming immune to physical damage and emitting area effect poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -34989,7 +34989,7 @@
       "element": "bio",
       "image": "/image/npc/2dfa936d.png",
       "category": "combat",
-      "description": "Energy resistant, can withdraw into shell and become immune to physical damage",
+      "description": "Spits acid at the heroes while strafing between attacks.\n\nHighly resistant to energy damage while mobile.\n\nAt half health, withdraws into its shell, becoming immune to physical damage and emitting area effect poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -35046,7 +35046,7 @@
       "element": "bio",
       "image": "/image/npc/b049c909.png",
       "category": "combat",
-      "description": "Energy resistant, can withdraw into shell and become immune to physical damage",
+      "description": "Spits acid at the heroes while strafing between attacks.\n\nHighly resistant to energy damage while mobile.\n\nAt half health, withdraws into its shell, becoming immune to physical damage and emitting area effect poison.",
       "is_combatant": true,
       "placements": [
         {
@@ -35152,7 +35152,7 @@
       "element": "cyber",
       "image": "/image/npc/8b4947cf.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35272,7 +35272,7 @@
       "element": "cyber",
       "image": "/image/npc/8b4947ce.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35322,7 +35322,7 @@
       "element": "cyber",
       "image": "/image/npc/38fdcaa0.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35379,7 +35379,7 @@
       "element": "cyber",
       "image": "/image/npc/38fdcaa1.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35429,7 +35429,7 @@
       "element": "cyber",
       "image": "/image/npc/38fdcaa3.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35479,7 +35479,7 @@
       "element": "cyber",
       "image": "/image/npc/16e8fed4.png",
       "category": "combat",
-      "description": "Becomes temporarily invincible at half health",
+      "description": "Has an orbiting drone that will shoot lasers at heroes.\n\nAt half health, will become invulnerable for a limited time.",
       "is_combatant": true,
       "placements": [
         {
@@ -35541,7 +35541,7 @@
       "element": "necro",
       "image": "/image/npc/6f832b25.png",
       "category": "combat",
-      "description": "Resurrects dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35631,7 +35631,7 @@
       "element": "necro",
       "image": "/image/npc/6f832b24.png",
       "category": "combat",
-      "description": "Resurrects multiple dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35700,7 +35700,7 @@
       "element": "necro",
       "image": "/image/npc/6665697d.png",
       "category": "combat",
-      "description": "Resurrects dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35783,7 +35783,7 @@
       "element": "necro",
       "image": "/image/npc/6665697c.png",
       "category": "combat",
-      "description": "Resurrects multiple dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35838,7 +35838,7 @@
       "element": "necro",
       "image": "/image/npc/6665697e.png",
       "category": "combat",
-      "description": "Resurrects dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35886,7 +35886,7 @@
       "element": "necro",
       "image": "/image/npc/65cf3e22.png",
       "category": "combat",
-      "description": "Resurrects dead allies, flees",
+      "description": "Resurrects nearby allies who have recently been killed.\n\nIn between resurrections, flees and throws ghostly projectiles.",
       "is_combatant": true,
       "placements": [
         {
@@ -35969,7 +35969,7 @@
       "element": "quantum",
       "image": "/image/npc/13ba4d6d.png",
       "category": "combat",
-      "description": "Rapid blinking movement and attacks",
+      "description": "Blinks into melee range with its target and unleashes a rapid fire melee attack.\n\nAfter attacking, blinks away and bides its time before blinking in again.",
       "is_combatant": true,
       "placements": [
         {
@@ -36019,7 +36019,7 @@
       "element": "quantum",
       "image": "/image/npc/13ba4d6c.png",
       "category": "combat",
-      "description": "Rapid blinking movement and attacks",
+      "description": "Blinks into melee range with its target and unleashes a rapid fire melee attack.\n\nAfter attacking, blinks away and bides its time before blinking in again.",
       "is_combatant": true,
       "placements": [
         {
@@ -36062,7 +36062,7 @@
       "element": "quantum",
       "image": "/image/npc/cf727d4a.png",
       "category": "combat",
-      "description": "Rapid blinking movement and attacks",
+      "description": "Blinks into melee range with its target and unleashes a rapid fire melee attack.\n\nAfter attacking, blinks away and bides its time before blinking in again.",
       "is_combatant": true,
       "placements": [
         {
@@ -36105,7 +36105,7 @@
       "element": "cyber",
       "image": "/image/npc/6485fb7c.png",
       "category": "combat",
-      "description": "Connects to other Hover-bots with damaging laser beams",
+      "description": "Flying robots that connect to each other with damaging laser beams.",
       "is_combatant": true,
       "placements": [
         {
@@ -36155,7 +36155,7 @@
       "element": "cyber",
       "image": "/image/npc/6485fb7d.png",
       "category": "combat",
-      "description": "Connects to other Hover-bots with damaging laser beams",
+      "description": "Flying robots that connect to each other with damaging laser beams.",
       "is_combatant": true,
       "placements": [
         {
@@ -36219,7 +36219,7 @@
       "element": "cyber",
       "image": "/image/npc/a8b62d19.png",
       "category": "combat",
-      "description": "Connects to other Hover-bots with damaging laser beams",
+      "description": "Flying robots that connect to each other with damaging laser beams.",
       "is_combatant": true,
       "placements": [
         {
@@ -36270,7 +36270,7 @@
       "element": "necro",
       "image": "/image/npc/66910f28.png",
       "category": "combat",
-      "description": "Strafing melee attacker that inflicts phyiscal vulnerability",
+      "description": "Fast moving enemies that strafe while closing in on heroes.\n\nHas a vicious melee attack that causes the target to make more damage from future physical attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -36321,7 +36321,7 @@
       "element": "necro",
       "image": "/image/npc/66910f29.png",
       "category": "combat",
-      "description": "Strafing melee attacker that inflicts phyiscal vulnerability",
+      "description": "Fast moving enemies that strafe while closing in on heroes.\n\nHas a vicious melee attack that causes the target to make more damage from future physical attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -36365,7 +36365,7 @@
       "element": "necro",
       "image": "/image/npc/28ebd5fd.png",
       "category": "combat",
-      "description": "Strafing melee attacker that inflicts phyiscal vulnerability",
+      "description": "Fast moving enemies that strafe while closing in on heroes.\n\nHas a vicious melee attack that causes the target to make more damage from future physical attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -36408,7 +36408,7 @@
       "element": "necro",
       "image": "/image/npc/d51951b9.png",
       "category": "combat",
-      "description": "Stealths and creates a copy of itself",
+      "description": "Has a ranged attack that deals energy damage.\n\nCan fade into the shadows and create a copy of itself.",
       "is_combatant": true,
       "placements": [
         {
@@ -36465,7 +36465,7 @@
       "element": "necro",
       "image": "/image/npc/d51951b8.png",
       "category": "combat",
-      "description": "Stealths and creates a copy of itself",
+      "description": "Has a ranged attack that deals energy damage.\n\nCan fade into the shadows and create a copy of itself.",
       "is_combatant": true,
       "placements": [
         {
@@ -36515,7 +36515,7 @@
       "element": "necro",
       "image": "/image/npc/28ebd5fe.png",
       "category": "combat",
-      "description": "Stealths and creates a copy of itself",
+      "description": "Has a ranged attack that deals energy damage.\n\nCan fade into the shadows and create a copy of itself.",
       "is_combatant": true,
       "placements": [
         {
@@ -36649,7 +36649,7 @@
       "element": "cyber",
       "image": "/image/npc/c3ad887d.png",
       "category": "combat",
-      "description": "Short range laser attack, can cleanse debuffs from allies",
+      "description": "Attacks heroes with a short range laser emitter.\n\nWill scan allies for debuffs and send out a cleansing pulse when necessary.",
       "is_combatant": true,
       "placements": [
         {
@@ -36692,7 +36692,7 @@
       "element": "cyber",
       "image": "/image/npc/c3ad887c.png",
       "category": "combat",
-      "description": "Short range laser attack, can cleanse debuffs from allies",
+      "description": "Attacks heroes with a short range laser emitter.\n\nWill scan allies for debuffs and send out a cleansing pulse when necessary.",
       "is_combatant": true,
       "placements": [
         {
@@ -36728,7 +36728,7 @@
       "element": "cyber",
       "image": "/image/npc/a8b62d1a.png",
       "category": "combat",
-      "description": "Short range laser attack, can cleanse debuffs from allies",
+      "description": "Attacks heroes with a short range laser emitter.\n\nWill scan allies for debuffs and send out a cleansing pulse when necessary.",
       "is_combatant": true,
       "placements": [
         {
@@ -36771,7 +36771,7 @@
       "element": "plasma",
       "image": "/image/npc/e1ce5936.png",
       "category": "combat",
-      "description": "Drops plasma mines after death that explode on contact",
+      "description": "Attempts to close in to melee range to attack.\n\nLeaves behind mines after death that explode on contact.",
       "is_combatant": true,
       "placements": [
         {
@@ -36814,7 +36814,7 @@
       "element": "plasma",
       "image": "/image/npc/e1ce5937.png",
       "category": "combat",
-      "description": "Drops plasma mines after death that explode on contact",
+      "description": "Attempts to close in to melee range to attack.\n\nLeaves behind mines after death that explode on contact.",
       "is_combatant": true,
       "placements": [
         {
@@ -36871,7 +36871,7 @@
       "element": "plasma",
       "image": "/image/npc/af60863b.png",
       "category": "combat",
-      "description": "Drops plasma mines after death that explode on contact",
+      "description": "Attempts to close in to melee range to attack.\n\nLeaves behind mines after death that explode on contact.",
       "is_combatant": true,
       "placements": [
         {
@@ -36932,7 +36932,7 @@
       "element": "plasma",
       "image": "/image/npc/8e33f22b.png",
       "category": "combat",
-      "description": "Explodes when close, igniting nearby heroes",
+      "description": "Runs towards the nearest hero and explodes.\n\nThe explosion will cause nearby heroes to burn, taking heavy amounts of damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -36986,7 +36986,7 @@
       "element": "plasma",
       "image": "/image/npc/8e33f22a.png",
       "category": "combat",
-      "description": "Explodes when close, igniting nearby heroes",
+      "description": "Runs towards the nearest hero and explodes.\n\nThe explosion will cause nearby heroes to burn, taking heavy amounts of damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -37033,7 +37033,7 @@
       "element": "plasma",
       "image": "/image/npc/af608638.png",
       "category": "combat",
-      "description": "Explodes when close, igniting nearby heroes",
+      "description": "Runs towards the nearest hero and explodes.\n\nThe explosion will cause nearby heroes to burn, taking heavy amounts of damage over time.",
       "is_combatant": true,
       "placements": [
         {
@@ -37083,7 +37083,7 @@
       "element": "bio",
       "image": "/image/npc/d1f9c8da.png",
       "category": "combat",
-      "description": "Extremely fast, darting movements",
+      "description": "Extremely fast enemy that likes to dart in and swipe before dancing away.\n\nHas a straightforward physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -37133,7 +37133,7 @@
       "element": "bio",
       "image": "/image/npc/d1f9c8db.png",
       "category": "combat",
-      "description": "Extremely fast, darting movements",
+      "description": "Extremely fast enemy that likes to dart in and swipe before dancing away.\n\nHas a straightforward physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -37176,7 +37176,7 @@
       "element": "bio",
       "image": "/image/npc/2b6ace67.png",
       "category": "combat",
-      "description": "Extremely fast, darting movements",
+      "description": "Extremely fast enemy that likes to dart in and swipe before dancing away.\n\nHas a straightforward physical melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -37219,7 +37219,7 @@
       "element": "quantum",
       "image": "/image/npc/b532242c.png",
       "category": "combat",
-      "description": "Periodically surrounds itself with a gravity well",
+      "description": "Periodically summons a gravity well that pulls in nearby heroes and projectiles.\n\nTakes reduced damage when channeling the gravity well ability.",
       "is_combatant": true,
       "placements": [
         {
@@ -37262,7 +37262,7 @@
       "element": "quantum",
       "image": "/image/npc/b532242d.png",
       "category": "combat",
-      "description": "Periodically surrounds itself with a gravity well",
+      "description": "Periodically summons a gravity well that pulls in nearby heroes and projectiles.\n\nTakes reduced damage when channeling the gravity well ability.",
       "is_combatant": true,
       "placements": [
         {
@@ -37298,7 +37298,7 @@
       "element": "quantum",
       "image": "/image/npc/cf727d49.png",
       "category": "combat",
-      "description": "Periodically surrounds itself with a gravity well",
+      "description": "Periodically summons a gravity well that pulls in nearby heroes and projectiles.\n\nTakes reduced damage when channeling the gravity well ability.",
       "is_combatant": true,
       "placements": [
         {
@@ -37362,7 +37362,7 @@
       "element": "bio",
       "image": "/image/npc/8be5121f.png",
       "category": "combat",
-      "description": "Attacks in a circular pattern, protected by thorns",
+      "description": "Launches thorns in a circular pattern.\n\nA thorny exterior makes it resistant to physical damage.\n\nHeroes who use physical melee attacks will take damage in return.",
       "is_combatant": true,
       "placements": [
         {
@@ -37412,7 +37412,7 @@
       "element": "bio",
       "image": "/image/npc/8be5121e.png",
       "category": "combat",
-      "description": "Attacks in a circular pattern, protected by thorns",
+      "description": "Launches thorns in a circular pattern.\n\nA thorny exterior makes it resistant to physical damage.\n\nHeroes who use physical melee attacks will take damage in return.",
       "is_combatant": true,
       "placements": [
         {
@@ -37455,7 +37455,7 @@
       "element": "bio",
       "image": "/image/npc/2b6ace64.png",
       "category": "combat",
-      "description": "Attacks in a circular pattern, protected by thorns",
+      "description": "Launches thorns in a circular pattern.\n\nA thorny exterior makes it resistant to physical damage.\n\nHeroes who use physical melee attacks will take damage in return.",
       "is_combatant": true,
       "placements": [
         {
@@ -37746,7 +37746,7 @@
       "element": "necro",
       "image": "/image/npc/08850b0d.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": []
     },
@@ -37774,7 +37774,7 @@
       "element": "necro",
       "image": "/image/npc/08850b0c.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": []
     },
@@ -37802,7 +37802,7 @@
       "element": "necro",
       "image": "/image/npc/cf56672a.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": []
     },
@@ -37830,7 +37830,7 @@
       "element": "necro",
       "image": "/image/npc/08850b0d.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -37922,7 +37922,7 @@
       "element": "necro",
       "image": "/image/npc/08850b0c.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -37972,7 +37972,7 @@
       "element": "necro",
       "image": "/image/npc/cf56672a.png",
       "category": "combat",
-      "description": "Spits shadowbolts, strafes",
+      "description": "Shoots ranged projectiles that move fairly slowly.\n\nStrafes sideways between attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -38022,7 +38022,7 @@
       "element": "plasma",
       "image": "/image/npc/526dbb74.png",
       "category": "combat",
-      "description": "Slow moving, heavily armored",
+      "description": "Attacks when in close range combat.\n\nSlow moving but will aggressively chase any hero that comes in close proximity.",
       "is_combatant": true,
       "placements": [
         {
@@ -38058,7 +38058,7 @@
       "element": "plasma",
       "image": "/image/npc/526dbb75.png",
       "category": "combat",
-      "description": "Slow moving, heavily armored",
+      "description": "Attacks when in close range combat.\n\nSlow moving but will aggressively chase any hero that comes in close proximity.",
       "is_combatant": true,
       "placements": [
         {
@@ -38108,7 +38108,7 @@
       "element": "plasma",
       "image": "/image/npc/d2566b91.png",
       "category": "combat",
-      "description": "Slow moving, heavily armored",
+      "description": "Attacks when in close range combat.\n\nSlow moving but will aggressively chase any hero that comes in close proximity.",
       "is_combatant": true,
       "placements": [
         {
@@ -39859,7 +39859,7 @@
       "element": "bio",
       "image": "/image/npc/1828eb21.png",
       "category": "combat",
-      "description": "Launches clouds that sometimes inflict a spreading disease",
+      "description": "Fires projectiles that inflicts a disease that can jump between nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -39913,7 +39913,7 @@
       "element": "bio",
       "image": "/image/npc/1828eb20.png",
       "category": "combat",
-      "description": "Launches clouds that  inflict a spreading disease",
+      "description": "Fires projectiles that inflicts a disease that can jump between nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -39960,7 +39960,7 @@
       "element": "bio",
       "image": "/image/npc/d2785226.png",
       "category": "combat",
-      "description": "Launches clouds that occasionally inflict a spreading disease",
+      "description": "Fires projectiles that inflicts a disease that can jump between nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -40017,7 +40017,7 @@
       "element": "bio",
       "image": "/image/npc/f90c7ddf.png",
       "category": "combat",
-      "description": "Channels a healing aura, rapid thorn attack",
+      "description": "When friends are nearby, roots in place and begins channeling a healing aura.\n\nWhen alone or with other Weeds, launches a rapid-fire thorn attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -40074,7 +40074,7 @@
       "element": "bio",
       "image": "/image/npc/f90c7dde.png",
       "category": "combat",
-      "description": "Channels a healing aura, rapid thorn attack",
+      "description": "When friends are nearby, roots in place and begins channeling a healing aura.\n\nWhen alone or with other Weeds, launches a rapid-fire thorn attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -40159,7 +40159,7 @@
       "element": "bio",
       "image": "/image/npc/dae4bfa4.png",
       "category": "combat",
-      "description": "Channels a healing aura, rapid thorn attack",
+      "description": "When friends are nearby, roots in place and begins channeling a healing aura.\n\nWhen alone or with other Weeds, launches a rapid-fire thorn attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -40210,7 +40210,7 @@
       "element": "quantum",
       "image": "/image/npc/002be21e.png",
       "category": "combat",
-      "description": "Attack slows heroes, flees when allies die",
+      "description": "Has a tail strike that damages and slows the heroes' movement and attack speed.\n\nRuns away when others of its species perish nearby.",
       "is_combatant": true,
       "placements": [
         {
@@ -40261,7 +40261,7 @@
       "element": "quantum",
       "image": "/image/npc/002be21f.png",
       "category": "combat",
-      "description": "Attack slows heroes greatly, flees when allies die",
+      "description": "Has a tail strike that damages and slows the heroes' movement and attack speed.\n\nRuns away when others of its species perish nearby.",
       "is_combatant": true,
       "placements": [
         {
@@ -40305,7 +40305,7 @@
       "element": "quantum",
       "image": "/image/npc/bfc80a43.png",
       "category": "combat",
-      "description": "Attack slows heroes, flees when allies die",
+      "description": "Has a tail strike that damages and slows the heroes' movement and attack speed.\n\nRuns away when others of its species perish nearby.",
       "is_combatant": true,
       "placements": [
         {
@@ -40348,7 +40348,7 @@
       "element": "bio",
       "image": "/image/npc/cc5f87b8.png",
       "category": "combat",
-      "description": "Grows stronger over time",
+      "description": "Ooze-like creature with a tentacle melee attack.\n\nAutomatically grows in size over time, increasing its damage and health.",
       "is_combatant": true,
       "placements": [
         {
@@ -40398,7 +40398,7 @@
       "element": "bio",
       "image": "/image/npc/cc5f87b9.png",
       "category": "combat",
-      "description": "Grows stronger over time",
+      "description": "Ooze-like creature with a tentacle melee attack.\n\nAutomatically grows in size over time, increasing its damage and health.",
       "is_combatant": true,
       "placements": [
         {
@@ -40448,7 +40448,7 @@
       "element": "bio",
       "image": "/image/npc/92e44e0d.png",
       "category": "combat",
-      "description": "Grows stronger over time",
+      "description": "Ooze-like creature with a tentacle melee attack.\n\nAutomatically grows in size over time, increasing its damage and health.",
       "is_combatant": true,
       "placements": [
         {
@@ -40496,7 +40496,7 @@
       "element": "bio",
       "image": "/image/npc/78c6b3ad.png",
       "category": "combat",
-      "description": "Sometimes charges at the most distant hero",
+      "description": "Generally seeks out the closest hero and hits with a melee attack.\n\nOccasionally will charge at the hero who is furthest away.",
       "is_combatant": true,
       "placements": [
         {
@@ -40544,7 +40544,7 @@
       "element": "bio",
       "image": "/image/npc/78c6b3ac.png",
       "category": "combat",
-      "description": "Often charges at the most distant hero",
+      "description": "Generally seeks out the closest hero and hits with a melee attack.\n\nOccasionally will charge at the hero who is furthest away.",
       "is_combatant": true,
       "placements": [
         {
@@ -40592,7 +40592,7 @@
       "element": "bio",
       "image": "/image/npc/92e44e0a.png",
       "category": "combat",
-      "description": "Occasionally charges at the most distant hero",
+      "description": "Generally seeks out the closest hero and hits with a melee attack.\n\nOccasionally will charge at the hero who is furthest away.",
       "is_combatant": true,
       "placements": [
         {
@@ -40642,7 +40642,7 @@
       "element": "bio",
       "image": "/image/npc/5394a0d0.png",
       "category": "combat",
-      "description": "Causes damaging spikes to emerge beneath its target",
+      "description": "Causes spiky thorns to emerge from underneath a hero..\n\nDamage can be avoided by staying mobile.",
       "is_combatant": true,
       "placements": [
         {
@@ -40699,7 +40699,7 @@
       "element": "bio",
       "image": "/image/npc/5394a0d1.png",
       "category": "combat",
-      "description": "Causes damaging spikes to emerge beneath its target",
+      "description": "Causes spiky thorns to emerge from underneath a hero..\n\nDamage can be avoided by staying mobile.",
       "is_combatant": true,
       "placements": [
         {
@@ -40742,7 +40742,7 @@
       "element": "bio",
       "image": "/image/npc/dae4bfa5.png",
       "category": "combat",
-      "description": "Causes damaging spikes to emerge beneath its target",
+      "description": "Causes spiky thorns to emerge from underneath a hero..\n\nDamage can be avoided by staying mobile.",
       "is_combatant": true,
       "placements": [
         {
@@ -40827,7 +40827,7 @@
       "element": "bio",
       "image": "/image/npc/f6869a13.png",
       "category": "combat",
-      "description": "Homing attack, stationary",
+      "description": "Stationary plant-like enemy that will become active when threatened.\n\nWhen angered, it launches slow homing attacks that will ruthlessly chase after their target.",
       "is_combatant": true,
       "placements": [
         {
@@ -40884,7 +40884,7 @@
       "element": "bio",
       "image": "/image/npc/f6869a12.png",
       "category": "combat",
-      "description": "Homing attack, stationary",
+      "description": "Stationary plant-like enemy that will become active when threatened.\n\nWhen angered, it launches slow homing attacks that will ruthlessly chase after their target.",
       "is_combatant": true,
       "placements": [
         {
@@ -40948,7 +40948,7 @@
       "element": "bio",
       "image": "/image/npc/8dbf8000.png",
       "category": "combat",
-      "description": "Homing attack, stationary",
+      "description": "Stationary plant-like enemy that will become active when threatened.\n\nWhen angered, it launches slow homing attacks that will ruthlessly chase after their target.",
       "is_combatant": true,
       "placements": [
         {
@@ -41006,7 +41006,7 @@
       "element": "bio",
       "image": "/image/npc/f2b13806.png",
       "category": "combat",
-      "description": "Melee attack that sometimes roots the target",
+      "description": "Has a melee attack that will briefly root the hero in place.\n\nGetting hit by Dread Root will allow its friends to close in as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -41057,7 +41057,7 @@
       "element": "bio",
       "image": "/image/npc/f2b13807.png",
       "category": "combat",
-      "description": "Melee attack that roots the target",
+      "description": "Has a melee attack that will briefly root the hero in place.\n\nGetting hit by Dread Root will allow its friends to close in as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -41122,7 +41122,7 @@
       "element": "bio",
       "image": "/image/npc/92e44e0b.png",
       "category": "combat",
-      "description": "Melee attack that occasionally roots the target",
+      "description": "Has a melee attack that will briefly root the hero in place.\n\nGetting hit by Dread Root will allow its friends to close in as well.",
       "is_combatant": true,
       "placements": [
         {
@@ -41172,7 +41172,7 @@
       "element": "bio",
       "image": "/image/npc/1f5c9ba5.png",
       "category": "combat",
-      "description": "Strafes in a circle, fast darting attacks",
+      "description": "Fast moving, tend to circle their target while waiting to strike.\n\nPeriodically darts in for a fast stinging attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41264,7 +41264,7 @@
       "element": "bio",
       "image": "/image/npc/1f5c9ba4.png",
       "category": "combat",
-      "description": "Strafes in a circle, fast darting attacks",
+      "description": "Fast moving, tend to circle their target while waiting to strike.\n\nPeriodically darts in for a fast stinging attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41307,7 +41307,7 @@
       "element": "bio",
       "image": "/image/npc/dae4bfa2.png",
       "category": "combat",
-      "description": "Strafes in a circle, fast darting attacks",
+      "description": "Fast moving, tend to circle their target while waiting to strike.\n\nPeriodically darts in for a fast stinging attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41462,7 +41462,7 @@
       "element": "bio",
       "image": "/image/npc/167c95fb.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41523,7 +41523,7 @@
       "element": "bio",
       "image": "/image/npc/167c95fa.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41584,7 +41584,7 @@
       "element": "bio",
       "image": "/image/npc/167c95fb.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41645,7 +41645,7 @@
       "element": "bio",
       "image": "/image/npc/167c95fa.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41706,7 +41706,7 @@
       "element": "bio",
       "image": "/image/npc/fd964b88.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41767,7 +41767,7 @@
       "element": "bio",
       "image": "/image/npc/fd964b88.png",
       "category": "combat",
-      "description": "Burrows underground, poisons all nearby heroes upon emerging",
+      "description": "Burrows underground and tunnels until close to a hero.\n\nSprings from the earth launching a poison area effect attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -41830,7 +41830,7 @@
       "element": "quantum",
       "image": "/image/npc/b9778e1b.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -41893,7 +41893,7 @@
       "element": "quantum",
       "image": "/image/npc/b9778e1a.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -41942,7 +41942,7 @@
       "element": "quantum",
       "image": "/image/npc/8883b443.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -41991,7 +41991,7 @@
       "element": "quantum",
       "image": "/image/npc/8883b442.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42047,7 +42047,7 @@
       "element": "quantum",
       "image": "/image/npc/8883b440.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42103,7 +42103,7 @@
       "element": "quantum",
       "image": "/image/npc/782e2268.png",
       "category": "combat",
-      "description": "Pulls heroes close and unleashes rapid melee attacks",
+      "description": "Pulls its target into melee range with dual gravitic beams.\n\nAnyone caught by the beams will be slowed afterwards.\n\nFollows up a successful pull with rapid-fire melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42196,7 +42196,7 @@
       "element": "bio",
       "image": "/image/npc/0f79ada4.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42261,7 +42261,7 @@
       "element": "bio",
       "image": "/image/npc/0f79ada5.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42312,7 +42312,7 @@
       "element": "bio",
       "image": "/image/npc/7f4f49f2.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42363,7 +42363,7 @@
       "element": "bio",
       "image": "/image/npc/7f4f49f3.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42414,7 +42414,7 @@
       "element": "bio",
       "image": "/image/npc/7f4f49f1.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42472,7 +42472,7 @@
       "element": "bio",
       "image": "/image/npc/22198181.png",
       "category": "combat",
-      "description": "Roots heroes, heals allies and calls them to focus their attacks",
+      "description": "Heals nearby friends who are heavily damaged.\n\nRoots players in place and calls all nearby friends to attack them.",
       "is_combatant": true,
       "placements": [
         {
@@ -42536,7 +42536,7 @@
       "element": "quantum",
       "image": "/image/npc/62190bff.png",
       "category": "combat",
-      "description": "Can knock back heroes after charging up",
+      "description": "Attacks heroes with a physical melee attack.\n\nOccasionally stands still and charges up, causing the next attack to deal more damage and knockback.",
       "is_combatant": true,
       "placements": [
         {
@@ -42579,7 +42579,7 @@
       "element": "quantum",
       "image": "/image/npc/62190bfe.png",
       "category": "combat",
-      "description": "Can knock back heroes after charging up",
+      "description": "Attacks heroes with a physical melee attack.\n\nOccasionally stands still and charges up, causing the next attack to deal more damage and knockback.",
       "is_combatant": true,
       "placements": [
         {
@@ -42622,7 +42622,7 @@
       "element": "quantum",
       "image": "/image/npc/9f968d84.png",
       "category": "combat",
-      "description": "Can knock back heroes after charging up",
+      "description": "Attacks heroes with a physical melee attack.\n\nOccasionally stands still and charges up, causing the next attack to deal more damage and knockback.",
       "is_combatant": true,
       "placements": [
         {
@@ -42665,7 +42665,7 @@
       "element": "quantum",
       "image": "/image/npc/ab3712dd.png",
       "category": "combat",
-      "description": "Melee flier, resists area attacks",
+      "description": "Fast flying close range attacker that can swarm heroes.\n\nShifted form allows it to defend strongly against area effect attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42715,7 +42715,7 @@
       "element": "quantum",
       "image": "/image/npc/ab3712dc.png",
       "category": "combat",
-      "description": "Melee flier, resists area attacks",
+      "description": "Fast flying close range attacker that can swarm heroes.\n\nShifted form allows it to defend strongly against area effect attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42758,7 +42758,7 @@
       "element": "quantum",
       "image": "/image/npc/e796ff3a.png",
       "category": "combat",
-      "description": "Melee flier, resists area attacks",
+      "description": "Fast flying close range attacker that can swarm heroes.\n\nShifted form allows it to defend strongly against area effect attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42815,7 +42815,7 @@
       "element": "quantum",
       "image": "/image/npc/84e6f577.png",
       "category": "combat",
-      "description": "Fires slow  damaging projectiles, will melee when close",
+      "description": "Fires a large slow moving projectile when at a distance from his target.\n\nWhen engaging in close combat, will switch to close range melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42865,7 +42865,7 @@
       "element": "quantum",
       "image": "/image/npc/84e6f576.png",
       "category": "combat",
-      "description": "Fires slow  damaging projectiles, will melee when close",
+      "description": "Fires a large slow moving projectile when at a distance from his target.\n\nWhen engaging in close combat, will switch to close range melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42922,7 +42922,7 @@
       "element": "quantum",
       "image": "/image/npc/e796ff3c.png",
       "category": "combat",
-      "description": "Fires slow  damaging projectiles, will melee when close",
+      "description": "Fires a large slow moving projectile when at a distance from his target.\n\nWhen engaging in close combat, will switch to close range melee attacks.",
       "is_combatant": true,
       "placements": [
         {
@@ -42979,7 +42979,7 @@
       "element": "quantum",
       "image": "/image/npc/e3d565bc.png",
       "category": "combat",
-      "description": "Can trade speed for resistance to area attacks",
+      "description": "Fast moving, closes in for quick melee attacks.\n\nCan trade movement speed for high resistance to area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -43029,7 +43029,7 @@
       "element": "quantum",
       "image": "/image/npc/e3d565bd.png",
       "category": "combat",
-      "description": "Can trade speed for resistance to area attacks",
+      "description": "Fast moving, closes in for quick melee attacks.\n\nCan trade movement speed for high resistance to area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -43079,7 +43079,7 @@
       "element": "quantum",
       "image": "/image/npc/650a89d9.png",
       "category": "combat",
-      "description": "Can trade speed for resistance to area attacks",
+      "description": "Fast moving, closes in for quick melee attacks.\n\nCan trade movement speed for high resistance to area effect damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -43129,7 +43129,7 @@
       "element": "quantum",
       "image": "/image/npc/e43013de.png",
       "category": "combat",
-      "description": "Hastes nearby members of its species",
+      "description": "Flying enemy with a physical melee attack.\n\nMoves and attacks more quickly when near others of its species.",
       "is_combatant": true,
       "placements": [
         {
@@ -43172,7 +43172,7 @@
       "element": "quantum",
       "image": "/image/npc/e43013df.png",
       "category": "combat",
-      "description": "Hastes nearby members of its species",
+      "description": "Flying enemy with a physical melee attack.\n\nMoves and attacks more quickly when near others of its species.",
       "is_combatant": true,
       "placements": [
         {
@@ -43229,7 +43229,7 @@
       "element": "quantum",
       "image": "/image/npc/9f968d83.png",
       "category": "combat",
-      "description": "Hastes nearby members of its species",
+      "description": "Flying enemy with a physical melee attack.\n\nMoves and attacks more quickly when near others of its species.",
       "is_combatant": true,
       "placements": [
         {
@@ -43272,7 +43272,7 @@
       "element": "quantum",
       "image": "/image/npc/4d4cba5c.png",
       "category": "combat",
-      "description": "Cowers when alone",
+      "description": "Believes in the safety of numbers and will cower if alone.\n\nOnce an ally is nearby, will work up the courage to deliver a powerful melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -43322,7 +43322,7 @@
       "element": "quantum",
       "image": "/image/npc/4d4cba5d.png",
       "category": "combat",
-      "description": "Cowers when alone",
+      "description": "Believes in the safety of numbers and will cower if alone.\n\nOnce an ally is nearby, will work up the courage to deliver a powerful melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -43379,7 +43379,7 @@
       "element": "quantum",
       "image": "/image/npc/e796ff39.png",
       "category": "combat",
-      "description": "Cowers when alone",
+      "description": "Believes in the safety of numbers and will cower if alone.\n\nOnce an ally is nearby, will work up the courage to deliver a powerful melee attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -43427,7 +43427,7 @@
       "element": "quantum",
       "image": "/image/npc/42fb5fbc.png",
       "category": "combat",
-      "description": "Teleports to a new random location periodically",
+      "description": "Will periodically bend space and teleport to a new location.\n\nFires ranged projectiles of quantum energy.",
       "is_combatant": true,
       "placements": [
         {
@@ -43482,7 +43482,7 @@
       "element": "quantum",
       "image": "/image/npc/42fb5fbd.png",
       "category": "combat",
-      "description": "Teleports to a new random location frequently",
+      "description": "Will periodically bend space and teleport to a new location.\n\nFires ranged projectiles of quantum energy.",
       "is_combatant": true,
       "placements": [
         {
@@ -43537,7 +43537,7 @@
       "element": "quantum",
       "image": "/image/npc/650a89da.png",
       "category": "combat",
-      "description": "Teleports to a new random location occasionally",
+      "description": "Will periodically bend space and teleport to a new location.\n\nFires ranged projectiles of quantum energy.",
       "is_combatant": true,
       "placements": [
         {
@@ -43601,7 +43601,7 @@
       "element": "quantum",
       "image": "/image/npc/014be2e8.png",
       "category": "combat",
-      "description": "Fires projectiles with erratic tracking",
+      "description": "Fires projectiles that periodically home in on the closest hero.\n\nThe projectiles will expire after a short period of time.",
       "is_combatant": true,
       "placements": [
         {
@@ -43658,7 +43658,7 @@
       "element": "quantum",
       "image": "/image/npc/014be2e9.png",
       "category": "combat",
-      "description": "Fires projectiles with erratic tracking",
+      "description": "Fires projectiles that periodically home in on the closest hero.\n\nThe projectiles will expire after a short period of time.",
       "is_combatant": true,
       "placements": [
         {
@@ -43715,7 +43715,7 @@
       "element": "quantum",
       "image": "/image/npc/e796ff3d.png",
       "category": "combat",
-      "description": "Fires projectiles with erratic tracking",
+      "description": "Fires projectiles that periodically home in on the closest hero.\n\nThe projectiles will expire after a short period of time.",
       "is_combatant": true,
       "placements": [
         {
@@ -43772,7 +43772,7 @@
       "element": "cyber",
       "image": "/image/npc/0d3c3286.png",
       "category": "combat",
-      "description": "Can bring dead robots back to life",
+      "description": "Repairs nearby fallen robots, bringing them back to life if given enough time.\n\nCan use its repair tools as melee weapons if given the opportunity.",
       "is_combatant": true,
       "placements": [
         {
@@ -43829,7 +43829,7 @@
       "element": "cyber",
       "image": "/image/npc/0d3c3287.png",
       "category": "combat",
-      "description": "Can bring dead robots back to life",
+      "description": "Repairs nearby fallen robots, bringing them back to life if given enough time.\n\nCan use its repair tools as melee weapons if given the opportunity.",
       "is_combatant": true,
       "placements": [
         {
@@ -43893,7 +43893,7 @@
       "element": "cyber",
       "image": "/image/npc/410e2d8b.png",
       "category": "combat",
-      "description": "Can bring dead robots back to life",
+      "description": "Repairs nearby fallen robots, bringing them back to life if given enough time.\n\nCan use its repair tools as melee weapons if given the opportunity.",
       "is_combatant": true,
       "placements": [
         {
@@ -44048,7 +44048,7 @@
       "element": "quantum",
       "image": "/image/npc/05440131.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44125,7 +44125,7 @@
       "element": "quantum",
       "image": "/image/npc/05440130.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44188,7 +44188,7 @@
       "element": "quantum",
       "image": "/image/npc/62290af8.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44244,7 +44244,7 @@
       "element": "quantum",
       "image": "/image/npc/62290af9.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44300,7 +44300,7 @@
       "element": "quantum",
       "image": "/image/npc/62290afb.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44391,7 +44391,7 @@
       "element": "quantum",
       "image": "/image/npc/6dafb2f6.png",
       "category": "combat",
-      "description": "Speeds up time for allies",
+      "description": "Can bend time to haste a nearby ally's movement and attack speed.\n\nHas a moderately damaging projectile attack.",
       "is_combatant": true,
       "placements": [
         {
@@ -44449,7 +44449,7 @@
       "element": "quantum",
       "image": "/image/npc/29782c01.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44507,7 +44507,7 @@
       "element": "quantum",
       "image": "/image/npc/29782c00.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44572,7 +44572,7 @@
       "element": "quantum",
       "image": "/image/npc/29782c01.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44630,7 +44630,7 @@
       "element": "quantum",
       "image": "/image/npc/29782c00.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44681,7 +44681,7 @@
       "element": "quantum",
       "image": "/image/npc/cde99146.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44732,7 +44732,7 @@
       "element": "quantum",
       "image": "/image/npc/cde99146.png",
       "category": "combat",
-      "description": "Resists area attacks, projectiles teleport their target",
+      "description": "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.\n\nLaunches time-space warping projectiles that will randomly teleport heroes who are hit by them.",
       "is_combatant": true,
       "placements": [
         {
@@ -44782,7 +44782,7 @@
       "element": "cyber",
       "image": "/image/npc/ee92e2f5.png",
       "category": "combat",
-      "description": "Buffs ally energy damage, fires piercing lasers",
+      "description": "Fires piercing laser attacks that can go through multiple heroes.\n\nCan place a buff on nearby allies that greatly increases their energy damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -44839,7 +44839,7 @@
       "element": "cyber",
       "image": "/image/npc/ee92e2f4.png",
       "category": "combat",
-      "description": "Buffs ally energy damage, fires piercing lasers",
+      "description": "Fires piercing laser attacks that can go through multiple heroes.\n\nCan place a buff on nearby allies that greatly increases their energy damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -44903,7 +44903,7 @@
       "element": "cyber",
       "image": "/image/npc/15fc0cf2.png",
       "category": "combat",
-      "description": "Buffs ally energy damage, fires piercing lasers",
+      "description": "Fires piercing laser attacks that can go through multiple heroes.\n\nCan place a buff on nearby allies that greatly increases their energy damage.",
       "is_combatant": true,
       "placements": [
         {
@@ -44985,7 +44985,7 @@
       "element": "quantum",
       "image": "/image/npc/ba508630.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -45032,7 +45032,7 @@
       "element": "quantum",
       "image": "/image/npc/ba508631.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -45086,7 +45086,7 @@
       "element": "quantum",
       "image": "/image/npc/af89b4d9.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -45133,7 +45133,7 @@
       "element": "quantum",
       "image": "/image/npc/af89b4d8.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -45187,7 +45187,7 @@
       "element": "quantum",
       "image": "/image/npc/af89b4da.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {
@@ -45234,7 +45234,7 @@
       "element": "quantum",
       "image": "/image/npc/cde99145.png",
       "category": "combat",
-      "description": "Manipulates gravity, flees",
+      "description": "Support enemy who tries to stay away from close combat.\n\nMastery of gravity allows him to pull heroes towards his friends.\n\nCan send out a circular gravitational push that damages and knocks back all nearby heroes.",
       "is_combatant": true,
       "placements": [
         {

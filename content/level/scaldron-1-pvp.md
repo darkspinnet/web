@@ -1,5 +1,5 @@
 +++
-title = "scaldron 1 PVP"
+title = "Desert Necropolis"
 level = "scaldron-1-pvp"
 generated = true
 +++

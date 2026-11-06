@@ -1,5 +1,5 @@
 +++
-title = "Spectra 4"
+title = "Spectral Forest"
 level = "spectra-4"
 generated = true
 +++

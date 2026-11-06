@@ -10,7 +10,7 @@ import (
 func TestProgressionCoversAllPassesAndBoundaries(t *testing.T) {
 	levels := []levelReport{{Name: "tutorial", Slug: "tutorial"}}
 	for n := 24; n >= 1; n-- {
-		levels = append(levels, levelReport{Name: fmt.Sprintf("map%d", n), Slug: fmt.Sprintf("map-%d", n), CampaignOrders: []int{n, n + 24, n + 48}})
+		levels = append(levels, levelReport{Name: fmt.Sprintf("map%d", n), Slug: fmt.Sprintf("map-%d", n), CampaignOrders: []int{n, 49 - n, n + 48}})
 	}
 	reports := expandProgression(levels)
 	groups := buildGroups(reports)
@@ -32,7 +32,7 @@ func TestProgressionCoversAllPassesAndBoundaries(t *testing.T) {
 	if last.Next != first.Slug || first.Previous != last.Slug {
 		t.Fatal("pass boundary navigation is disconnected")
 	}
-	if groups[0].Levels[0].Slug != "map-1" || first.Slot != "1-1" || first.Slug != "invasion-map-1" {
+	if groups[0].Levels[0].Slug != "map-1" || first.Slot != "1-1" || first.Slug != "invasion-map-24" {
 		t.Fatal("canonical URLs or stage reset changed")
 	}
 	if groups[2].Levels[23].Next != "" {

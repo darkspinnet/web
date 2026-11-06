@@ -1,5 +1,5 @@
 +++
-title = "cryos 1 SM"
+title = "Glacial Rifts"
 level = "cryos-1-sm"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "cryos 2 PVP"
+title = "Arctic Ridge"
 level = "cryos-2-pvp"
 generated = true
 +++
