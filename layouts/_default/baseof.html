@@ -40,6 +40,7 @@
   <style>html,body{min-height:100%;margin:0;background:#09090b;color:#fafafa;color-scheme:dark}</style>
   {{- $css := resources.FromString "css/main.bundle.css" (readFile "static/css/main.css") | fingerprint -}}
   {{- if eq .Section "npc" }}{{ $npcJS := resources.FromString "js/npc-difficulty.bundle.js" (readFile "static/js/npc-difficulty.js") | fingerprint }}<script src="{{ $npcJS.RelPermalink }}" integrity="{{ $npcJS.Data.Integrity }}" defer></script>{{ end -}}
+  {{- if and .IsPage (eq .Section "level") }}{{ $mapJS := resources.FromString "js/level-map.bundle.js" (readFile "static/js/level-map.js") | fingerprint }}<script src="{{ $mapJS.RelPermalink }}" integrity="{{ $mapJS.Data.Integrity }}" defer></script>{{ end -}}
   {{- $js := resources.FromString "js/main.bundle.js" (readFile "static/js/main.js") | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

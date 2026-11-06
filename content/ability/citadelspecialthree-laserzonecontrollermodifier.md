@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Three Laser Zone Controller Modifier"
+title = "Laser Zone Controller"
 ability = "citadelspecialthree-laserzonecontrollermodifier"
 generated = true
 +++

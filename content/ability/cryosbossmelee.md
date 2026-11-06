@@ -1,5 +1,5 @@
 +++
-title = "Cryos Boss Melee"
+title = "Merak Strike"
 ability = "cryosbossmelee"
 generated = true
 +++

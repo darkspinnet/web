@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Column Death"
+title = "Column Destruction"
 ability = "scaldroncolumndeath"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Channel Lightning Cage"
+title = "Lightning Cage"
 ability = "channellightningcage"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Cast Scope Burn"
+title = "Scope Burn"
 ability = "castscopeburn"
 generated = true
 +++

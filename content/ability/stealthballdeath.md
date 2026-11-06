@@ -1,5 +1,5 @@
 +++
-title = "Stealth Ball Death"
+title = "Stealth Ball Break"
 ability = "stealthballdeath"
 generated = true
 +++

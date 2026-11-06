@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Fire Wave"
+title = "Fire Wave"
 ability = "cryosbasicfirewave"
 generated = true
 +++

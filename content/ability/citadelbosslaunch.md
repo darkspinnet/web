@@ -1,5 +1,5 @@
 +++
-title = "Citadel Boss Launch"
+title = "Minion Launch"
 ability = "citadelbosslaunch"
 generated = true
 +++

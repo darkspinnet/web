@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Shadow Boss"
+title = "Nashira Entrance"
 ability = "firstaggro-shadowboss"
 generated = true
 +++

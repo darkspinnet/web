@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Roar"
+title = "Opening Roar"
 ability = "firstaggro-roar"
 generated = true
 +++

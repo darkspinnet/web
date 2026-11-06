@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Ranged Blink"
+title = "Raytheoid Blink"
 ability = "zelembasicranged-blink"
 generated = true
 +++

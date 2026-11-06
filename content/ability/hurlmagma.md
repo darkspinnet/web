@@ -1,5 +1,5 @@
 +++
-title = "Hurl Magma"
+title = "Magma Lob"
 ability = "hurlmagma"
 generated = true
 +++

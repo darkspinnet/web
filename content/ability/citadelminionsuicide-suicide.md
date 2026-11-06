@@ -1,5 +1,5 @@
 +++
-title = "Citadel Minion Suicide Suicide"
+title = "Self-Destruct"
 ability = "citadelminionsuicide-suicide"
 generated = true
 +++

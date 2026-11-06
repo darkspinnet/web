@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Doppler Shot"
+title = "Doppler Shot"
 ability = "scaldronbasicdoppler-shot"
 generated = true
 +++

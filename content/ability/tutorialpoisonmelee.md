@@ -1,5 +1,5 @@
 +++
-title = "Tutorial Poison Melee"
+title = "Tutorial Poison Strike"
 ability = "tutorialpoisonmelee"
 generated = true
 +++

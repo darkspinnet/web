@@ -1,5 +1,5 @@
 +++
-title = "Shadow Boss Passive"
+title = "Nashira Encounter Passive"
 ability = "shadowbosspassive"
 generated = true
 +++

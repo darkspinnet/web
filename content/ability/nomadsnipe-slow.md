@@ -1,5 +1,5 @@
 +++
-title = "Nomad Snipe Slow"
+title = "Slowing Snipe"
 ability = "nomadsnipe-slow"
 generated = true
 +++

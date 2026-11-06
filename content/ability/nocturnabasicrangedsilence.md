@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Ranged Silence"
+title = "Silencing Shot"
 ability = "nocturnabasicrangedsilence"
 generated = true
 +++

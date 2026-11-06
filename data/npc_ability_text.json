@@ -1,45 +1,1892 @@
 {
+  "AcDeath": {
+    "label": "Air Conditioner Breakdown",
+    "short_label": "AC Breakdown",
+    "description": "Breaks the air conditioner and spawns a separate damaged unit in its place."
+  },
+  "AcDeathFreeze": {
+    "label": "Air Conditioner Freeze",
+    "short_label": "AC Freeze",
+    "description": "Runs the freeze variant of the air conditioner destruction callback and leaves a damaged unit behind. The destruction freeze's target rules are unverified."
+  },
+  "AcMalfunction": {
+    "label": "Air Conditioner Malfunction",
+    "short_label": "AC Malfunction",
+    "description": "Periodically vents a warning and then briefly freezes a nearby hero."
+  },
   "ArcWeldingMelee": {
-    "description": "Strikes a nearby target with an arc welder, dealing physical damage.",
-    "source": "Build 103 ArcWeldingMelee registration and server/zone/npc/action.go"
+    "label": "Arc Welder Strike",
+    "short_label": "Welder Strike",
+    "description": "Strikes a nearby target with an arc welder, dealing physical damage."
+  },
+  "BabyToss": {
+    "label": "Mortar Lob",
+    "short_label": "Mortar Lob",
+    "description": "Lobs a fireball in a high arc that damages targets around its impact point."
+  },
+  "BeastPetPassive": {
+    "label": "Beast Companion Revival",
+    "short_label": "Beast Revival",
+    "description": "Checks whether the beast companion can revive its owner, with a separate use during Overdrive."
+  },
+  "BeastSentinelPetAttack": {
+    "label": "Beast Companion Strike",
+    "short_label": "Beast Strike",
+    "description": "Strikes an enemy in melee on behalf of the Beast Sentinel's owner."
+  },
+  "BeastSentinelPetRespawn": {
+    "label": "Beast Companion Respawn",
+    "short_label": "Beast Respawn",
+    "description": "Handles the Beast Sentinel companion's respawn."
+  },
+  "Bite": {
+    "label": "Bite",
+    "short_label": "Bite",
+    "description": "Bites a target within melee reach."
+  },
+  "BoomerCharge": {
+    "label": "Boomer Rush",
+    "short_label": "Boomer Rush",
+    "description": "Charges toward the target to close into striking range."
+  },
+  "Burrow": {
+    "label": "Burrow",
+    "short_label": "Burrow",
+    "description": "Digs underground. The trigger and follow-up depend on the creature's kit."
+  },
+  "BurstShot": {
+    "label": "Fireball Burst",
+    "short_label": "Fireball Burst",
+    "description": "Fires a rapid sequence of fireballs at the target."
+  },
+  "CastMarkOfZelem": {
+    "label": "Mark of Zelem",
+    "short_label": "Mark of Zelem",
+    "description": "Marks a hero for Polaris's follow-up attack."
+  },
+  "CastScopeBurn": {
+    "label": "Scope Burn",
+    "short_label": "Scope Burn",
+    "description": "Applies a burn that damages the target over time."
+  },
+  "CastScopeDebuff": {
+    "label": "Scope Energy Vulnerability",
+    "short_label": "Energy Weakness",
+    "description": "Makes the target take more energy damage. The increase depends on Scope's rank."
+  },
+  "CastScopeThorns": {
+    "label": "Scope Thorns",
+    "short_label": "Scope Thorns",
+    "description": "Grants another allied creature a temporary effect that returns flat energy damage to melee attackers."
+  },
+  "CastShadowCurse": {
+    "label": "Shadow Curse",
+    "short_label": "Shadow Curse",
+    "description": "Applies a curse that deals Supernatural energy damage over time."
+  },
+  "CastShadowPanic": {
+    "label": "Shadow Panic",
+    "short_label": "Shadow Panic",
+    "description": "Frightens heroes caught in the shadow effect."
+  },
+  "CastZelemHasteBuff": {
+    "label": "Raytheoid Haste",
+    "short_label": "Raytheoid Haste",
+    "description": "Grants the Haster a temporary buff to movement and attack speed and reduces its cooldowns."
+  },
+  "ChainLightning": {
+    "label": "Chain Lightning",
+    "short_label": "Chain Lightning",
+    "description": "Uses the Cryos melee creature's lightning attack. Its jump behavior is unverified in build 103."
+  },
+  "ChainLightningBolt": {
+    "label": "Lightning Sweep",
+    "short_label": "Lightning Sweep",
+    "description": "Sweeps lightning across an area in front of the caster."
+  },
+  "ChannelLightningCage": {
+    "label": "Lightning Cage",
+    "short_label": "Lightning Cage",
+    "description": "Channels a cage that holds the targeted hero until the effect ends."
+  },
+  "CircleTarget": {
+    "label": "Circle Target",
+    "short_label": "Circle Target",
+    "description": "Moves around the target to maintain a circling path while in combat."
+  },
+  "CitadelBasicGunner_Shot": {
+    "label": "Gunner Shot",
+    "short_label": "Gunner Shot",
+    "description": "Fires a single projectile at the target."
+  },
+  "CitadelBasicRanged_Bolt": {
+    "label": "Citadel Bolt",
+    "short_label": "Citadel Bolt",
+    "description": "Fires a ranged energy bolt at the target."
+  },
+  "CitadelBasicShield_Melee": {
+    "label": "Shield Sweep",
+    "short_label": "Shield Sweep",
+    "description": "Swings the shield in a cone at close range."
+  },
+  "CitadelBasicShield_Passive": {
+    "label": "Directional Shield",
+    "short_label": "Directional Shield",
+    "description": "Protects the shield carrier against attacks from the direction it is facing."
+  },
+  "CitadelBossLaunch": {
+    "label": "Minion Launch",
+    "short_label": "Minion Launch",
+    "description": "Launches reinforcements during the Citadel boss encounter."
+  },
+  "CitadelBossMissile": {
+    "label": "Arcturus Missile",
+    "short_label": "Arcturus Missile",
+    "description": "Launches a missile that deals area damage on impact."
+  },
+  "CitadelBossPassive": {
+    "label": "Citadel Boss Passive",
+    "short_label": "Boss Passive",
+    "description": "Runs the Citadel boss's passive encounter logic. Individual effects of this hook are unverified in build 103."
+  },
+  "CitadelChargeFriend": {
+    "label": "Charge Ally",
+    "short_label": "Charge Ally",
+    "description": "Transfers a charge to a nearby ally so that it can use its charged attack."
+  },
+  "CitadelDischarge": {
+    "label": "Citadel Discharge",
+    "short_label": "Citadel Discharge",
+    "description": "Releases the caster's stored charge in an attack."
+  },
+  "CitadelGrenadeRoll": {
+    "label": "Rolling Grenade",
+    "short_label": "Rolling Grenade",
+    "description": "Rolls a grenade toward the target, where it detonates."
+  },
+  "CitadelMinionMelee_Flamethrower": {
+    "label": "Flamethrower",
+    "short_label": "Flamethrower",
+    "description": "Projects fire in a cone in front of the caster."
+  },
+  "CitadelMinionSuicide_Suicide": {
+    "label": "Self-Destruct",
+    "short_label": "Self-Destruct",
+    "description": "Detonates the caster to damage nearby targets."
+  },
+  "CitadelPlasmaAura": {
+    "label": "Plasma Pool",
+    "short_label": "Plasma Pool",
+    "description": "Deals repeated damage to targets standing in the plasma pool."
+  },
+  "CitadelPlasmaBurn": {
+    "label": "Plasma Burn",
+    "short_label": "Plasma Burn",
+    "description": "Deals damage over time to targets burned by plasma."
+  },
+  "CitadelSpecialOne_BurningDOT": {
+    "label": "Burn",
+    "short_label": "Burn",
+    "description": "Applies a burn that damages the target over time."
+  },
+  "CitadelSpecialOne_EnergyVulnerable": {
+    "label": "Energy Vulnerability",
+    "short_label": "Energy Weakness",
+    "description": "Makes the target more vulnerable to energy damage."
+  },
+  "CitadelSpecialOne_FireThorns": {
+    "label": "Fire Thorns",
+    "short_label": "Fire Thorns",
+    "description": "Grants a friendly creature, including the caster, a buff that reflects a small share of incoming melee damage."
+  },
+  "CitadelSpecialThree_LaserZone": {
+    "label": "Laser Zone",
+    "short_label": "Laser Zone",
+    "description": "Sweeps a laser through the area in front of the caster."
+  },
+  "CitadelSpecialThree_LaserZoneControllerModifier": {
+    "label": "Laser Zone Controller",
+    "short_label": "Laser Control",
+    "description": "Runs the controller for the laser zone. Its exact passive timing is unverified in build 103."
+  },
+  "CitadelSpecialTwo_HomingStun": {
+    "label": "Homing Stun Bolt",
+    "short_label": "Stun Bolt",
+    "description": "Fires a homing projectile that stuns its target on impact."
+  },
+  "CitadelSpecialTwo_Melee": {
+    "label": "Citadel Melee Strike",
+    "short_label": "Melee Strike",
+    "description": "Strikes the target at close range."
+  },
+  "CitadelSpecialTwo_SilenceAura": {
+    "label": "Silence Aura",
+    "short_label": "Silence Aura",
+    "description": "Applies silence to heroes within the aura."
+  },
+  "CitadelSpecificFour_Bolt": {
+    "label": "Citadel Energy Bolt",
+    "short_label": "Energy Bolt",
+    "description": "Fires an energy projectile at the target."
+  },
+  "CitadelSpecificFour_Position": {
+    "label": "Firing Position",
+    "short_label": "Firing Position",
+    "description": "Repositions the caster for its ranged attack."
+  },
+  "CitadelSpecificTwo_MeleeTaunt": {
+    "label": "Taunting Strike",
+    "short_label": "Taunting Strike",
+    "description": "Strikes a target in melee and taunts it."
+  },
+  "Consume": {
+    "label": "Devour Minion",
+    "short_label": "Devour Minion",
+    "description": "Orcus consumes one of its minions."
   },
   "ConsumeCorpse": {
-    "description": "Feeds on a nearby corpse to grow larger and stronger.",
-    "source": "Build 103 Carrion Shambler tooltip and server/zone/npc/consume.go"
+    "label": "Corpse Growth",
+    "short_label": "Corpse Growth",
+    "description": "Feeds on a nearby corpse to grow larger and stronger."
+  },
+  "CryosBasicCharge": {
+    "label": "Cryos Rush",
+    "short_label": "Cryos Rush",
+    "description": "Rushes toward the target to close into headbutt range."
+  },
+  "CryosBasicChargeHeadbutt": {
+    "label": "Headbutt",
+    "short_label": "Headbutt",
+    "description": "Strikes the target with a headbutt at close range."
+  },
+  "CryosBasicFieryMelee": {
+    "label": "Fiery Strike",
+    "short_label": "Fiery Strike",
+    "description": "Strikes a nearby target and applies a burn."
+  },
+  "CryosBasicFireWave": {
+    "label": "Fire Wave",
+    "short_label": "Fire Wave",
+    "description": "Sends a wave of fire toward the target."
+  },
+  "CryosBasicLightningMelee": {
+    "label": "Lightning Strike",
+    "short_label": "Lightning Strike",
+    "description": "Strikes a nearby target with lightning."
+  },
+  "CryosBasicLightningRanged": {
+    "label": "Lightning Cone",
+    "short_label": "Lightning Cone",
+    "description": "Projects lightning at targets in a cone."
+  },
+  "CryosBasicPassiveModifier": {
+    "label": "Fiery Passive",
+    "short_label": "Fiery Passive",
+    "description": "Runs the Fiery creature's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "CryosBossDeath": {
+    "label": "Merak Death",
+    "short_label": "Merak Death",
+    "description": "Runs Merak's encounter death sequence."
+  },
+  "CryosBossMelee": {
+    "label": "Merak Strike",
+    "short_label": "Merak Strike",
+    "description": "Strikes a target within Merak's melee reach."
+  },
+  "CryosBossPassive": {
+    "label": "Merak Encounter Passive",
+    "short_label": "Merak Passive",
+    "description": "Runs Merak's passive encounter logic, including its response to damage for spawning reinforcements."
+  },
+  "CryosElementalSpecialThree": {
+    "label": "Cryos Elemental Shot",
+    "short_label": "Elemental Shot",
+    "description": "Fires the Cryos elemental's ranged projectile."
+  },
+  "CryosGeyserDeath": {
+    "label": "Geyser Unseal",
+    "short_label": "Geyser Unseal",
+    "description": "Activates the blocked Cryos geyser's warning and eruption cycle when its obstruction is destroyed."
+  },
+  "CryosGeyserPassive": {
+    "label": "Geyser Eruption",
+    "short_label": "Geyser Eruption",
+    "description": "Warns before sending up a spout that damages targets in the eruption area."
+  },
+  "CryosPlasmaAddPassive": {
+    "label": "Plasma Add Passive",
+    "short_label": "Plasma Add Passive",
+    "description": "Runs the Cryos Plasma Add's passive callback. Its individual effects are unverified in build 103."
+  },
+  "CryosPoisonMelee": {
+    "label": "Poison Strike",
+    "short_label": "Poison Strike",
+    "description": "Strikes the target in melee and applies poison."
+  },
+  "DartingAttack": {
+    "label": "Darting Rush",
+    "short_label": "Darting Rush",
+    "description": "Darts toward the target in a quick rush."
+  },
+  "DeathDetonate": {
+    "label": "Death Blast",
+    "short_label": "Death Blast",
+    "description": "Explodes on death and damages nearby targets."
+  },
+  "Destructible": {
+    "label": "Destruction Setup",
+    "short_label": "Destruction Setup",
+    "description": "Runs the destructible object's passive setup. Its effects depend on the object using it."
   },
   "DirectHeal": {
-    "short_name": "Self Heal",
-    "description": "Restores some of the caster’s own health after it takes enough damage.",
-    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+    "label": "Self Heal",
+    "short_label": "Self Heal",
+    "description": "Restores some of the caster’s own health after it takes enough damage."
+  },
+  "DiseaseCone": {
+    "label": "Disease Cone",
+    "short_label": "Disease Cone",
+    "description": "Projects a cone of disease in front of the caster."
+  },
+  "DrainerDeathDetonate": {
+    "label": "Drainer Death Blast",
+    "short_label": "Death Blast",
+    "description": "Explodes when the Drainer dies, damaging nearby targets."
+  },
+  "DrainerMelee": {
+    "label": "Drainer Strike",
+    "short_label": "Drainer Strike",
+    "description": "Strikes a nearby target when the Drainer is in melee range."
+  },
+  "EggPoison": {
+    "label": "Egg Poison",
+    "short_label": "Egg Poison",
+    "description": "Applies a delayed poison that damages the affected creature over time after the egg bursts."
+  },
+  "EnemyPortalPassive": {
+    "label": "Enemy Portal Passive",
+    "short_label": "Portal Passive",
+    "description": "Runs the enemy portal's passive encounter logic. Its individual effects are unverified in build 103."
+  },
+  "Entangle": {
+    "label": "Entangle",
+    "short_label": "Entangle",
+    "description": "Roots the target in place."
+  },
+  "ExplodingEggDeath": {
+    "label": "Egg Burst",
+    "short_label": "Egg Burst",
+    "description": "Bursts on destruction and can apply delayed poison to nearby creatures."
+  },
+  "ExplodingThornDeath": {
+    "label": "Thorn Burst",
+    "short_label": "Thorn Burst",
+    "description": "Emits a burst effect at the plant's position before removing the destroyed plant."
+  },
+  "ExplodingTreeDeath": {
+    "label": "Fear Burst",
+    "short_label": "Fear Burst",
+    "description": "Releases a delayed fear effect when the tree is destroyed, without dealing damage."
+  },
+  "FactoryLightDeath": {
+    "label": "Factory Light Break",
+    "short_label": "Light Break",
+    "description": "Plays a destruction burst and leaves a broken light without dealing damage."
+  },
+  "FastSwipe": {
+    "label": "Quick Swipe",
+    "short_label": "Quick Swipe",
+    "description": "Quickly swipes at a target in melee range."
+  },
+  "Fireball": {
+    "label": "Fireball",
+    "short_label": "Fireball",
+    "description": "Fires a fireball that damages the target on impact."
+  },
+  "FireElementalPetDeath": {
+    "label": "Fire Elemental Death",
+    "short_label": "Elemental Death",
+    "description": "Runs the summoned fire elemental's death callback. Any additional gameplay effects are unverified in build 103."
+  },
+  "FireStream": {
+    "label": "Fire Stream",
+    "short_label": "Fire Stream",
+    "description": "Channels a stream of fire that repeatedly damages targets in front of the fire pet."
+  },
+  "FirstAggro_ActivateRobot": {
+    "label": "Robot Activation",
+    "short_label": "Robot Activation",
+    "description": "Activates the robot and plays its startup sequence when it first engages."
+  },
+  "FirstAggro_ActivateSpecialRobot": {
+    "label": "Special Robot Activation",
+    "short_label": "Robot Activation",
+    "description": "Plays the special robot's startup sequence on first engagement."
+  },
+  "FirstAggro_Anim": {
+    "label": "Alert Animation",
+    "short_label": "Alert Animation",
+    "description": "Plays the creature's authored animation on first alert."
+  },
+  "FirstAggro_Anim_NonFacing": {
+    "label": "Non-Turning Alert",
+    "short_label": "Alert Animation",
+    "description": "Plays the alert animation without first turning to face the target."
+  },
+  "FirstAggro_BeamIn": {
+    "label": "Beam In",
+    "short_label": "Beam In",
+    "description": "Materializes the creature with its beam-in entrance."
+  },
+  "FirstAggro_BeamIn_Agent": {
+    "label": "Agent Beam In",
+    "short_label": "Beam In",
+    "description": "Materializes an agent with its beam-in entrance."
+  },
+  "FirstAggro_BeamIn_Tutorial": {
+    "label": "Tutorial Beam In",
+    "short_label": "Beam In",
+    "description": "Materializes a tutorial enemy with its beam-in entrance."
+  },
+  "FirstAggro_CitadelBasicMeleeUnburrow": {
+    "label": "Citadel Unburrow",
+    "short_label": "Unburrow",
+    "description": "Emerges from below when the Citadel melee unit engages."
+  },
+  "FirstAggro_CitadelBoss": {
+    "label": "Arcturus Entrance",
+    "short_label": "Arcturus Entrance",
+    "description": "Runs the Citadel boss's encounter introduction."
+  },
+  "FirstAggro_CitadelBossMinion": {
+    "label": "Arcturus Minion Entrance",
+    "short_label": "Minion Entrance",
+    "description": "Runs the Citadel boss minion's entrance sequence."
+  },
+  "FirstAggro_CryosBoss_Minion": {
+    "label": "Merak Minion Entrance",
+    "short_label": "Minion Entrance",
+    "description": "Reveals and plays the entrance animation for a minion summoned by Merak."
+  },
+  "FirstAggro_CryosBossUnburrow": {
+    "label": "Merak Emergence",
+    "short_label": "Merak Emergence",
+    "description": "Brings Merak out from underground at the start of the encounter."
+  },
+  "FirstAggro_CyberDropIn": {
+    "label": "Cyber Drop-In",
+    "short_label": "Cyber Drop-In",
+    "description": "Drops the Cyber creature into the encounter."
+  },
+  "FirstAggro_FaceTarget": {
+    "label": "Face Target",
+    "short_label": "Face Target",
+    "description": "Turns the creature toward the target on first engagement."
+  },
+  "FirstAggro_FlyIn": {
+    "label": "Fly In",
+    "short_label": "Fly In",
+    "description": "Flies into the encounter."
+  },
+  "FirstAggro_FlyIn_Zlm": {
+    "label": "Raytheoid Fly In",
+    "short_label": "Fly In",
+    "description": "Plays the Zelem flying creature's entrance on first engagement."
+  },
+  "FirstAggro_Lowblow": {
+    "label": "Lowblow Entrance",
+    "short_label": "Lowblow Entrance",
+    "description": "Runs the Citadel unit's Lowblow opening callback. Any effect beyond its entrance is unverified in build 103."
+  },
+  "FirstAggro_Roar": {
+    "label": "Opening Roar",
+    "short_label": "Opening Roar",
+    "description": "Roars as the creature first engages."
+  },
+  "FirstAggro_Roar33": {
+    "label": "Alternate Opening Roar",
+    "short_label": "Opening Roar",
+    "description": "Plays the alternate roar on first engagement."
+  },
+  "FirstAggro_ScaldronBoss": {
+    "label": "Corruptor Entrance",
+    "short_label": "Corruptor Entrance",
+    "description": "Runs the Corruptor's initial encounter introduction."
+  },
+  "FirstAggro_ShadowBoss": {
+    "label": "Nashira Entrance",
+    "short_label": "Nashira Entrance",
+    "description": "Runs Nashira's encounter introduction."
+  },
+  "FirstAggro_ShadowSpawn": {
+    "label": "Shadow Spawn Entrance",
+    "short_label": "Shadow Entrance",
+    "description": "Plays the shadow creature's entrance sequence."
+  },
+  "FirstAggro_ShadowSpawnLeech": {
+    "label": "Shadow Leech Entrance",
+    "short_label": "Leech Entrance",
+    "description": "Plays the shadow leech's entrance sequence."
+  },
+  "FirstAggro_SpawnEater": {
+    "label": "Orcus Entrance",
+    "short_label": "Orcus Entrance",
+    "description": "Runs the Spawn Eater's encounter introduction."
+  },
+  "FirstAggro_SpawnEater_Minion": {
+    "label": "Orcus Minion Entrance",
+    "short_label": "Minion Entrance",
+    "description": "Reveals a minion spawned by Orcus and plays its entrance."
+  },
+  "FirstAggro_SpecialOne": {
+    "label": "Tutorial Special Entrance",
+    "short_label": "Tutorial Entrance",
+    "description": "Runs the tutorial special enemy's first engagement sequence."
+  },
+  "FirstAggro_SpreadUnburrow": {
+    "label": "Spread Unburrow",
+    "short_label": "Unburrow",
+    "description": "Uses the spread unit's emergence sequence on first engagement."
+  },
+  "FirstAggro_Turret": {
+    "label": "Turret Activation",
+    "short_label": "Turret Activation",
+    "description": "Plays the turret's activation sequence as it engages."
+  },
+  "FirstAggro_Unburrow": {
+    "label": "Unburrow",
+    "short_label": "Unburrow",
+    "description": "Emerges from underground when alerted."
+  },
+  "FirstAggro_VerdanthBasicHealer": {
+    "label": "Rooted Healer Entrance",
+    "short_label": "Healer Entrance",
+    "description": "Plays the Verdanth healer's entrance sequence."
+  },
+  "FirstAggro_ZelemBoss": {
+    "label": "Polaris Entrance",
+    "short_label": "Polaris Entrance",
+    "description": "Runs Polaris's encounter introduction."
+  },
+  "Flee": {
+    "label": "Retreat",
+    "short_label": "Retreat",
+    "description": "Moves away from the threat. Some creatures trigger this after a nearby ally dies."
+  },
+  "FollowOwner": {
+    "label": "Follow Owner",
+    "short_label": "Follow Owner",
+    "description": "Moves toward the creature's owner when it falls behind."
+  },
+  "GhostlyBolt": {
+    "label": "Ghostly Bolt",
+    "short_label": "Ghostly Bolt",
+    "description": "Fires a spectral projectile at the target."
+  },
+  "GhostlyBoltFlee": {
+    "label": "Rezzer Retreat",
+    "short_label": "Rezzer Retreat",
+    "description": "Moves the Rezzer to a retreat point to regain distance from its target."
+  },
+  "GravityOrbPassive": {
+    "label": "Gravity Orb Field",
+    "short_label": "Gravity Field",
+    "description": "Runs the summoned gravity orb's effect on nearby targets."
+  },
+  "GroundSlam": {
+    "label": "Ground Slam",
+    "short_label": "Ground Slam",
+    "description": "Slams the ground to damage targets in the affected area."
+  },
+  "HeadstatueDeath": {
+    "label": "Statue Head Break",
+    "short_label": "Statue Break",
+    "description": "Runs the statue head's destruction response."
+  },
+  "HomingSwarm": {
+    "label": "Homing Swarm",
+    "short_label": "Homing Swarm",
+    "description": "Launches a swarm that homes in on the target."
+  },
+  "HurlMagma": {
+    "label": "Magma Lob",
+    "short_label": "Magma Lob",
+    "description": "Lobs magma that leaves a damaging pool and burns targets caught in it."
+  },
+  "InstantNova": {
+    "label": "Instant Nova",
+    "short_label": "Instant Nova",
+    "description": "Applies the Instant Nova modifier to the target without direct damage from the cast."
+  },
+  "InstrumentDeath": {
+    "label": "Stabilizer Blast",
+    "short_label": "Stabilizer Blast",
+    "description": "Deals damage and knocks back nearby targets on the stabilizer's own team when it breaks. The base remains."
+  },
+  "InstrumentDeath2": {
+    "label": "Regulator Blast",
+    "short_label": "Regulator Blast",
+    "description": "Deals damage to nearby targets on the regulator's own team when it breaks. The base remains."
+  },
+  "InstrumentSlowAura": {
+    "label": "Instrument Slow Field",
+    "short_label": "Slow Field",
+    "description": "Slows projectiles that pass through the instrument's aura."
+  },
+  "LightningBallDeath": {
+    "label": "Lightning Ball Break",
+    "short_label": "Ball Break",
+    "description": "Runs the lightning ball fixture's destruction response."
+  },
+  "LightningStorm": {
+    "label": "Lightning Storm",
+    "short_label": "Lightning Storm",
+    "description": "Marks the target's position at cast time, then repeatedly strikes that fixed area."
+  },
+  "ManaDrain": {
+    "label": "Power Drain",
+    "short_label": "Power Drain",
+    "description": "Channels a drain that removes power from the targeted hero."
+  },
+  "ManaOverloadWarningModifier": {
+    "label": "Power Overload Warning",
+    "short_label": "Overload Warning",
+    "description": "Runs the Drainer's overload warning modifier. The warning conditions are unverified in build 103."
+  },
+  "MushroomCryosPoison": {
+    "label": "Cryos Mushroom Poison",
+    "short_label": "Mushroom Poison",
+    "description": "Applies the Cryos mushroom's recurring poison damage."
+  },
+  "MushroomDeath": {
+    "label": "Mushroom Break",
+    "short_label": "Mushroom Break",
+    "description": "Runs the living Cryos mushroom's destruction response."
+  },
+  "MushroomPassive": {
+    "label": "Mushroom Poison",
+    "short_label": "Mushroom Poison",
+    "description": "Applies the living Cryos mushroom's poison effect to targets in its area."
+  },
+  "MutationAgent_AoE": {
+    "label": "Mutation Burst",
+    "short_label": "Mutation Burst",
+    "description": "Damages targets within the Mutation Agent's area burst."
+  },
+  "MutationAgentDeath": {
+    "label": "Mutation Agent Death",
+    "short_label": "Mutation Death",
+    "description": "Removes the dead Mutation Agent instead of leaving a repairable corpse."
+  },
+  "MutationAgentPassive": {
+    "label": "Mutation Agent Passive",
+    "short_label": "Mutation Passive",
+    "description": "Runs the Mutation Agent's passive behavior during its encounter."
+  },
+  "MutationBeam": {
+    "label": "Mutation Beam",
+    "short_label": "Mutation Beam",
+    "description": "Channels a beam at a creature and mutates it if the channel reaches the mutation step."
+  },
+  "nAbility_Bite": {
+    "label": "Bite",
+    "short_label": "Bite",
+    "description": "Bites a target within melee reach. This is the identifier used by the Spoffit Victim AI."
+  },
+  "nBehavior_CombatIdle": {
+    "label": "Combat Idle",
+    "short_label": "Combat Idle",
+    "description": "Holds position during combat when another action takes priority over movement or none is selected."
+  },
+  "nBehavior_Flee": {
+    "label": "Retreat",
+    "short_label": "Retreat",
+    "description": "Moves away from the target."
+  },
+  "nBehavior_FleeFacing": {
+    "label": "Facing Retreat",
+    "short_label": "Facing Retreat",
+    "description": "Retreats while continuing to face the target."
+  },
+  "nBehavior_Follow": {
+    "label": "Pursuit",
+    "short_label": "Pursuit",
+    "description": "Follows the target during combat."
+  },
+  "nBehavior_Follow_Owner_Flying": {
+    "label": "Flying Follow",
+    "short_label": "Flying Follow",
+    "description": "Flies after the creature's owner."
+  },
+  "nBehavior_FollowOwner": {
+    "label": "Follow Owner",
+    "short_label": "Follow Owner",
+    "description": "Moves after the creature's owner."
+  },
+  "nBehavior_FollowStrafe": {
+    "label": "Strafing Pursuit",
+    "short_label": "Strafing Pursuit",
+    "description": "Follows the target with lateral movement."
+  },
+  "nBehavior_Idle": {
+    "label": "Idle",
+    "short_label": "Idle",
+    "description": "Remains in place while no movement action is selected."
+  },
+  "nBehavior_JumpToRangeFrog": {
+    "label": "Frog Reposition",
+    "short_label": "Reposition",
+    "description": "Jumps to get into range for the frog agent's attacks."
+  },
+  "nBehavior_MutationAgent_Wander": {
+    "label": "Mutation Agent Wander",
+    "short_label": "Wander",
+    "description": "Moves the Mutation Agent around when it has no active combat target."
+  },
+  "nBehavior_NomadCyberOne_Flee": {
+    "label": "Cyber Agent Retreat",
+    "short_label": "Retreat",
+    "description": "Moves the Cyber Agent away from its threat."
+  },
+  "nBehavior_SmallStrafe": {
+    "label": "Short Strafe",
+    "short_label": "Short Strafe",
+    "description": "Shifts sideways a short distance around the target."
+  },
+  "nBehavior_Strafe": {
+    "label": "Strafe",
+    "short_label": "Strafe",
+    "description": "Moves sideways relative to the target."
+  },
+  "nBehavior_StrafeOrIdle": {
+    "label": "Strafe or Hold",
+    "short_label": "Strafe or Hold",
+    "description": "Alternates between lateral movement and holding position."
+  },
+  "nBehavior_Stroll": {
+    "label": "Stroll",
+    "short_label": "Stroll",
+    "description": "Moves at a walk while no higher priority action is selected."
+  },
+  "nBehavior_Wander": {
+    "label": "Wander",
+    "short_label": "Wander",
+    "description": "Roams without actively pursuing a target."
+  },
+  "NightmareVineRoots": {
+    "label": "Nightmare Roots",
+    "short_label": "Nightmare Roots",
+    "description": "Damages targets that remain near the nightmare vine's roots."
+  },
+  "NoctBasicMeleeDogAttack": {
+    "label": "Shadow Hound Strike",
+    "short_label": "Hound Strike",
+    "description": "Strikes a target in melee."
+  },
+  "NoctBasicMeleeDogDistraction": {
+    "label": "Hound Distraction",
+    "short_label": "Hound Distraction",
+    "description": "Briefly interrupts the shadow hound's melee attack with a distraction."
+  },
+  "NoctFlyerLob": {
+    "label": "Shadow Lob",
+    "short_label": "Shadow Lob",
+    "description": "Lobs a projectile at the target from range."
+  },
+  "NoctGhostCharge": {
+    "label": "Ghost Charge",
+    "short_label": "Ghost Charge",
+    "description": "Rushes toward the target in a charge."
+  },
+  "NoctGhostChargerPassive": {
+    "label": "Ghost Charger Passive",
+    "short_label": "Ghost Charger Passive",
+    "description": "Runs the Ghost Charger's passive callback. Its individual effects are unverified in build 103."
+  },
+  "NoctGhostChargerPose": {
+    "label": "Ghost Charger Pose",
+    "short_label": "Ghost Pose",
+    "description": "Plays the Ghost Charger's combat pose."
+  },
+  "NoctHopperJump": {
+    "label": "Hopper Leap",
+    "short_label": "Hopper Leap",
+    "description": "Leaps at the target to attack."
+  },
+  "NocturnaBasicHealthDrain": {
+    "label": "Health Drain",
+    "short_label": "Health Drain",
+    "description": "Channels a drain that damages the target and restores the caster's health."
+  },
+  "NocturnaBasicRangedSilence": {
+    "label": "Silencing Shot",
+    "short_label": "Silencing Shot",
+    "description": "Fires a projectile that silences the target on impact."
+  },
+  "NocturnaBasicStealthMelee": {
+    "label": "Shadow Stealth Strike",
+    "short_label": "Stealth Strike",
+    "description": "Strikes a nearby target with the Nocturna stealth unit's melee attack."
+  },
+  "NocturnaBasicStealthPassive": {
+    "label": "Stealth Passive",
+    "short_label": "Stealth Passive",
+    "description": "Runs the Nocturna stealth unit's passive stealth logic."
+  },
+  "NocturnaEggDeath": {
+    "label": "Nocturna Egg Burst",
+    "short_label": "Egg Burst",
+    "description": "Triggers a burst when the egg is destroyed. The Mutation Egg variant damages nearby targets before it disappears."
+  },
+  "NocturnaSpecialDriftAura": {
+    "label": "Drift Life Drain",
+    "short_label": "Life Drain",
+    "description": "Damages nearby targets and heals the Drift creature for the damage it deals."
+  },
+  "NocturnaSpecialDriftCharge": {
+    "label": "Drift Charge",
+    "short_label": "Drift Charge",
+    "description": "Rushes toward the target as the Drift creature's charge attack."
+  },
+  "NocturnaSpecialDriftPassive": {
+    "label": "Drift Life Drain",
+    "short_label": "Life Drain",
+    "description": "Drains health from targets around the Drift creature during its charge sequence."
+  },
+  "NocturnaSpecialHauntLockdown": {
+    "label": "Haunt Lockdown",
+    "short_label": "Haunt Lockdown",
+    "description": "Channels a damaging lockdown that holds the target in place."
+  },
+  "NocturnaSpecialHauntPassive": {
+    "label": "Haunt Stealth",
+    "short_label": "Haunt Stealth",
+    "description": "Starts Haunt in stealth and attaches its operative effect."
+  },
+  "NocturnaSpecialHomer": {
+    "label": "Shadow Seeker",
+    "short_label": "Shadow Seeker",
+    "description": "Fires a projectile that homes in on the target."
+  },
+  "NocturnaSpecialHomerMelee": {
+    "label": "Homer Strike",
+    "short_label": "Homer Strike",
+    "description": "Uses a close-range strike when the target is within reach."
+  },
+  "NocturnaSpecialHomerPassive": {
+    "label": "Homer Passive",
+    "short_label": "Homer Passive",
+    "description": "Runs the Homer creature's passive callback. Its individual effects are unverified in build 103."
+  },
+  "NocturnaSpecialLeech": {
+    "label": "Leech Shot",
+    "short_label": "Leech Shot",
+    "description": "Fires the Leech creature's ranged projectile at the target."
+  },
+  "NocturnaSpecialLeech_HealAura": {
+    "label": "Leech Healing Aura",
+    "short_label": "Healing Aura",
+    "description": "Grants nearby allies an effect that heals the living Leech for a share of the damage they deal."
+  },
+  "NocturnaSpecialMunchMelee": {
+    "label": "Munch Sweep",
+    "short_label": "Munch Sweep",
+    "description": "Swipes at targets in a cone in front of the caster."
+  },
+  "NocturnaSuperNatEggDeath": {
+    "label": "Supernatural Egg Burst",
+    "short_label": "Egg Burst",
+    "description": "Plays a Supernatural burst at the egg's position before removing it. The fixture can frighten nearby enemies."
+  },
+  "NomadBioSpecialTwoJumpAttack": {
+    "label": "Nomad Leap Strike",
+    "short_label": "Leap Strike",
+    "description": "Leaps at the target to deliver a melee attack."
+  },
+  "NomadBioSpecialTwoPassiveModifier": {
+    "label": "Nomad Jumper Passive",
+    "short_label": "Jumper Passive",
+    "description": "Runs the Nomad jumper's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "NomadBioSpecialTwoSwipe": {
+    "label": "Nomad Swipe",
+    "short_label": "Nomad Swipe",
+    "description": "Swipes at targets in a cone at close range."
+  },
+  "NomadCyberOne_Cage": {
+    "label": "Cyber Lightning Cage",
+    "short_label": "Lightning Cage",
+    "description": "Traps a hero in a lightning cage."
+  },
+  "NomadCyberOne_Droid": {
+    "label": "Healing Droid",
+    "short_label": "Healing Droid",
+    "description": "Deploys a droid that heals its owner."
+  },
+  "NomadCyberOne_Droid_Heal": {
+    "label": "Droid Heal",
+    "short_label": "Droid Heal",
+    "description": "Restores the owning Cyber Agent's missing health in repeated ticks."
+  },
+  "NomadDrag_Meteor": {
+    "label": "Meteor Impact",
+    "short_label": "Meteor Impact",
+    "description": "Calls down a meteor that damages targets in its impact area."
+  },
+  "NomadDrag_SlowShield": {
+    "label": "Slow Shield",
+    "short_label": "Slow Shield",
+    "description": "Creates a slowing field at the Drag agent's position. The field's radius varies by rank."
+  },
+  "NomadDrag_Taunt": {
+    "label": "Drag Taunt",
+    "short_label": "Drag Taunt",
+    "description": "Plays the Drag agent's taunt after Meteor. A separate gameplay effect is unverified in build 103."
+  },
+  "NomadDroneLaser": {
+    "label": "Drone Laser",
+    "short_label": "Drone Laser",
+    "description": "Fires the attached drone's laser at the target."
+  },
+  "NomadPetsMelee": {
+    "label": "Pet Summoner Strike",
+    "short_label": "Summoner Strike",
+    "description": "Strikes nearby targets when the Nomad pet summoner is in melee range."
+  },
+  "NomadPetsPassive": {
+    "label": "Pet Summoner Passive",
+    "short_label": "Summoner Passive",
+    "description": "Applies the operative effect and controls whether summoned pets persist after their owner dies."
+  },
+  "NomadRuptionMeleeAttack": {
+    "label": "Ruption Strike",
+    "short_label": "Ruption Strike",
+    "description": "Strikes a target within the Ruption agent's melee reach."
+  },
+  "NomadScope_BurningDebuff": {
+    "label": "Scope Burn",
+    "short_label": "Scope Burn",
+    "description": "Applies a burn that damages the target over time. This is the server action name recorded in the audit."
+  },
+  "NomadShielderBash": {
+    "label": "Shield Bash",
+    "short_label": "Shield Bash",
+    "description": "Bashes a nearby target with the shield."
+  },
+  "NomadShielderGrenade": {
+    "label": "Shielder Grenade",
+    "short_label": "Shielder Grenade",
+    "description": "Throws a grenade at the target."
+  },
+  "NomadShielderPositionForAttack": {
+    "label": "Shield Positioning",
+    "short_label": "Reposition",
+    "description": "Repositions the Shielder for its attack."
+  },
+  "NomadSnipe_Melee": {
+    "label": "Sniper Strike",
+    "short_label": "Sniper Strike",
+    "description": "Uses a close-range strike when the Nomad sniper is in melee reach."
+  },
+  "NomadSnipe_Slow": {
+    "label": "Slowing Snipe",
+    "short_label": "Slowing Snipe",
+    "description": "Shoots the target and reduces its movement speed."
+  },
+  "NomadSpacetimeAgent_Blink": {
+    "label": "Spacetime Blink",
+    "short_label": "Blink",
+    "description": "At half health or less, moves the agent rapidly to a new position with collision disabled before it resumes its cage attack."
+  },
+  "NomadSpacetimeAgent_Cage": {
+    "label": "Spacetime Cage",
+    "short_label": "Spacetime Cage",
+    "description": "Restrains the target in a cage."
+  },
+  "NomadSpecialFour": {
+    "label": "Frog Attack Windup",
+    "short_label": "Frog Windup",
+    "description": "Charges up before selecting either the frog agent's toss or vomit attack."
+  },
+  "NomadSpecialFourPoison": {
+    "label": "Frog Pool Poison",
+    "short_label": "Pool Poison",
+    "description": "Applies recurring poison damage to targets exposed to the frog agent's lingering pool."
+  },
+  "NomadSpecialFourToss": {
+    "label": "Goop Toss",
+    "short_label": "Goop Toss",
+    "description": "Lobs a glob of goop that bursts on impact."
+  },
+  "NomadSpecialFourVomit": {
+    "label": "Frog Vomit",
+    "short_label": "Frog Vomit",
+    "description": "Spews goop over a nearby area as part of the frog agent's cage and poison sequence."
+  },
+  "NomadSpecialOneCharge": {
+    "label": "Nomad Charge",
+    "short_label": "Nomad Charge",
+    "description": "Charges toward the target to engage at close range."
+  },
+  "NomadSpecialOneChargeChargingAttack": {
+    "label": "Nomad Charge Impact",
+    "short_label": "Charge Impact",
+    "description": "Strikes the target at the end of the Nomad's charge."
+  },
+  "NomadSpecialOneCleave": {
+    "label": "Nomad Cleave",
+    "short_label": "Nomad Cleave",
+    "description": "Swings in a broad arc in front of the Nomad, striking one target."
+  },
+  "NomadSpecialOnePassiveModifier": {
+    "label": "Nomad Charger Passive",
+    "short_label": "Charger Passive",
+    "description": "Runs the Nomad charger's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "NomadSpecialThree": {
+    "label": "Nomad Projectile",
+    "short_label": "Nomad Shot",
+    "description": "Fires the Nomad's ranged projectile at the target."
+  },
+  "NomadSpecialThreePassiveModifier": {
+    "label": "Nomad Energy Defense",
+    "short_label": "Energy Defense",
+    "description": "Grants rank-based energy defense and supports the Nomad's defensive turtle response."
+  },
+  "NomadSpecialThreeTurtle": {
+    "label": "Turtle Poison Burst",
+    "short_label": "Turtle Burst",
+    "description": "Hunkers down and repeatedly releases a damaging poison burst around the caster."
+  },
+  "NomadWithDronePassive": {
+    "label": "Invincitron Shield",
+    "short_label": "Invincitron Shield",
+    "description": "On the first surviving hit below half health, cleanses hostile effects, raises a shield, and briefly boosts the owner's drones."
+  },
+  "NomadWithDronePunch": {
+    "label": "Drone Carrier Punch",
+    "short_label": "Carrier Punch",
+    "description": "Punches a target within the drone carrier's melee reach."
+  },
+  "nScaldronBasicNestle_Wander": {
+    "label": "Nestle Wander",
+    "short_label": "Nestle Wander",
+    "description": "Moves the Nestle between positions when it has no active combat target."
+  },
+  "OozeGrow": {
+    "label": "Ooze Growth",
+    "short_label": "Ooze Growth",
+    "description": "Restores some of the Ooze's health, increases its size, and adds a growth stack."
+  },
+  "OozeMelee": {
+    "label": "Ooze Strike",
+    "short_label": "Ooze Strike",
+    "description": "Strikes a target within the Ooze's melee reach."
+  },
+  "OozePassive": {
+    "label": "Ooze Growth Passive",
+    "short_label": "Growth Passive",
+    "description": "Runs the Ooze's passive callback. Its individual effects are unverified in build 103."
+  },
+  "OperativeModifier": {
+    "label": "Operative Passive",
+    "short_label": "Operative Passive",
+    "description": "Runs the frog operative's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "PackflyAttack": {
+    "label": "Packfly Strike",
+    "short_label": "Packfly Strike",
+    "description": "Strikes a nearby target while flying."
+  },
+  "PackflyPassive": {
+    "label": "Packfly Boost",
+    "short_label": "Packfly Boost",
+    "description": "Increases movement and attack speed for each nearby Packfly, up to a limit."
+  },
+  "PipeBombPassiveModifier": {
+    "label": "Pipe Bomb Passive",
+    "short_label": "Pipe Bomb Passive",
+    "description": "Runs the Pipe Bomb's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "PistonPunch": {
+    "label": "Piston Punch",
+    "short_label": "Piston Punch",
+    "description": "Punches a nearby target with the caster's piston arm."
+  },
+  "PlasmaLightning": {
+    "label": "Plasma Lightning",
+    "short_label": "Plasma Lightning",
+    "description": "Fires a plasma lightning projectile at the target."
+  },
+  "PlasmaSentinelPet_FireThorns": {
+    "label": "Sentinel Fire Thorns",
+    "short_label": "Fire Thorns",
+    "description": "Runs the Plasma Sentinel's reactive fire thorns effect."
+  },
+  "PlasmaSentinelPetDeath": {
+    "label": "Plasma Sentinel Death",
+    "short_label": "Sentinel Death",
+    "description": "Runs the summoned Plasma Sentinel's death callback."
+  },
+  "PlasmaSentinelPetMelee": {
+    "label": "Plasma Sentinel Strike",
+    "short_label": "Sentinel Strike",
+    "description": "Strikes a nearby enemy on behalf of the Plasma Sentinel's owner."
+  },
+  "PlasmaSentinelPetSpawn": {
+    "label": "Plasma Sentinel Entrance",
+    "short_label": "Sentinel Entrance",
+    "description": "Runs the summoned Plasma Sentinel's entrance sequence."
+  },
+  "PlasmaWall": {
+    "label": "Moving Plasma Wall",
+    "short_label": "Plasma Wall",
+    "description": "Sends a moving line of plasma across the area that burns targets it crosses."
+  },
+  "PlungeAttack": {
+    "label": "Plunge Attack",
+    "short_label": "Plunge Attack",
+    "description": "Dives onto an area and damages targets near the landing point."
+  },
+  "PoisonCloud": {
+    "label": "Poison Cloud",
+    "short_label": "Poison Cloud",
+    "description": "Lobs a projectile that releases a poisonous cloud at impact."
+  },
+  "PoisonSpit": {
+    "label": "Poison Spit",
+    "short_label": "Poison Spit",
+    "description": "Spits a poisonous projectile at the target."
+  },
+  "PositionFirePet": {
+    "label": "Fire Pet Positioning",
+    "short_label": "Reposition",
+    "description": "Moves the fire pet into position to use its fire stream."
+  },
+  "PositionShadowBossMinion": {
+    "label": "Shadow Minion Positioning",
+    "short_label": "Reposition",
+    "description": "Moves Nashira's minion into position for its ranged attack."
+  },
+  "Puller": {
+    "label": "Pulling Shot",
+    "short_label": "Pulling Shot",
+    "description": "Fires a projectile that pulls the target toward the caster."
   },
   "Repair": {
-    "description": "Revives an eligible fallen Cyber ally nearby and restores a portion of its maximum health.",
-    "source": "server/gameplay/combat_repair.go, reparatronRepairProfile and reparatronRepairCandidates"
+    "label": "Cyber Revival",
+    "short_label": "Cyber Revival",
+    "description": "Revives an eligible fallen Cyber ally nearby and restores a portion of its maximum health."
+  },
+  "Resurrect": {
+    "label": "Ally Revival",
+    "short_label": "Ally Revival",
+    "description": "Revives an eligible fallen ally."
+  },
+  "ResurrectAlliesAuraMod": {
+    "label": "Revival Aura",
+    "short_label": "Revival Aura",
+    "description": "Grants eligible nearby allies one revival while the caster is alive and close enough."
+  },
+  "RezMelee": {
+    "label": "Reviver Strike",
+    "short_label": "Reviver Strike",
+    "description": "Uses the Sleep Mushroom caster's close-range attack. This is the name emitted by the server."
   },
   "RoboRepair": {
-    "short_name": "Self Repair",
-    "description": "Repairs the caster over several ticks after it takes enough damage.",
-    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+    "label": "Self Repair",
+    "short_label": "Self Repair",
+    "description": "Repairs the caster over several ticks after it takes enough damage."
+  },
+  "RootedHeal": {
+    "label": "Rooted Ally Heal",
+    "short_label": "Ally Heal",
+    "description": "Heals an injured ally in repeated steps while the caster remains rooted."
+  },
+  "RuptionPassive": {
+    "label": "Ruption Passive",
+    "short_label": "Ruption Passive",
+    "description": "Runs the Ruption agent's passive callback. Its individual effects are unverified in build 103."
+  },
+  "SawBladeShot": {
+    "label": "Saw Blade Shot",
+    "short_label": "Saw Blade Shot",
+    "description": "Fires a spinning saw blade at the target."
+  },
+  "ScalDiseasePlant": {
+    "label": "Disease Plant Burst",
+    "short_label": "Disease Burst",
+    "description": "Spreads a damaging infection on destruction and leaves the plant's wreck behind."
+  },
+  "ScaldronBasicBlink_Attack": {
+    "label": "Blink Strike",
+    "short_label": "Blink Strike",
+    "description": "Attacks a nearby target as part of the Scaldron Blink kit."
+  },
+  "ScaldronBasicBlink_AttackBlink": {
+    "label": "Blink Ambush",
+    "short_label": "Blink Ambush",
+    "description": "Teleports as part of an attack on the target."
+  },
+  "ScaldronBasicCopter_Passive": {
+    "label": "Copter Flight Passive",
+    "short_label": "Flight Passive",
+    "description": "Runs the Copter's passive callback. Its individual effects are unverified in build 103."
+  },
+  "ScaldronBasicDog_Attack": {
+    "label": "Scaldron Hound Strike",
+    "short_label": "Hound Strike",
+    "description": "Strikes the target at close range."
+  },
+  "ScaldronBasicDoppler_Clone": {
+    "label": "Doppler Clone",
+    "short_label": "Doppler Clone",
+    "description": "Creates a Doppler duplicate with current health drawn from the caster and capped by the duplicate's own maximum."
+  },
+  "ScaldronBasicDoppler_Passive": {
+    "label": "Doppler Passive",
+    "short_label": "Doppler Passive",
+    "description": "Runs the Doppler's passive callback. Its individual effects are unverified in build 103."
+  },
+  "ScaldronBasicDoppler_Shot": {
+    "label": "Doppler Shot",
+    "short_label": "Doppler Shot",
+    "description": "Fires the Doppler's projectile at the target."
+  },
+  "ScaldronBasicDopplerFake_Death": {
+    "label": "Doppler Clone Death",
+    "short_label": "Clone Death",
+    "description": "Runs the duplicate's death callback."
+  },
+  "ScaldronBasicDopplerFake_Passive": {
+    "label": "Doppler Clone Passive",
+    "short_label": "Clone Passive",
+    "description": "Runs the Doppler duplicate's passive callback. Its individual effects are unverified in build 103."
+  },
+  "ScaldronBasicMaser_Cleanse": {
+    "label": "Maser Cleanse",
+    "short_label": "Maser Cleanse",
+    "description": "Sends out a pulse that removes debuffs from nearby allies."
+  },
+  "ScaldronBasicMaser_Shot": {
+    "label": "Maser Beam",
+    "short_label": "Maser Beam",
+    "description": "Sweeps a beam through the area in front of the caster."
+  },
+  "ScaldronBasicMines_Melee": {
+    "label": "Mine Strike",
+    "short_label": "Mine Strike",
+    "description": "Uses the mine creature's close-range attack."
+  },
+  "ScaldronBasicMines_OnDeath": {
+    "label": "Mine Death Blast",
+    "short_label": "Death Blast",
+    "description": "Explodes when the mine creature dies, damaging targets in the surrounding area."
+  },
+  "ScaldronBasicMonk_Firebomb": {
+    "label": "Firebomb",
+    "short_label": "Firebomb",
+    "description": "Detonates to damage nearby targets with fire."
+  },
+  "ScaldronBasicNestle_Melee": {
+    "label": "Nestle Strike",
+    "short_label": "Nestle Strike",
+    "description": "Strikes a nearby target."
+  },
+  "ScaldronBasicNestle_Wander": {
+    "label": "Nestle Wander",
+    "short_label": "Nestle Wander",
+    "description": "Moves the Nestle between positions when it has no active combat target. This is the server action name for the authored wander hook."
+  },
+  "ScaldronBasicSinkhole_Projectile": {
+    "label": "Sinkhole Shot",
+    "short_label": "Sinkhole Shot",
+    "description": "Fires the Sinkhole creature's ranged projectile."
+  },
+  "ScaldronBasicSinkhole_Sinkhole": {
+    "label": "Sinkhole",
+    "short_label": "Sinkhole",
+    "description": "Creates a sinkhole that pulls targets toward its center."
+  },
+  "ScaldronBasicThorno_ThornNova": {
+    "label": "Thorn Nova",
+    "short_label": "Thorn Nova",
+    "description": "Releases a burst of thorns around the caster."
+  },
+  "ScaldronBasicThorno_ThornsPassive": {
+    "label": "Thorno Thorns",
+    "short_label": "Thorno Thorns",
+    "description": "Retaliates against attackers with thorns."
+  },
+  "ScaldronBoss_AIPassive": {
+    "label": "Corruptor Phase Passive",
+    "short_label": "Phase Passive",
+    "description": "Runs the Corruptor's first-stage passive encounter logic."
+  },
+  "ScaldronBoss_AIPassiveStage2": {
+    "label": "Corruptor Final Phase Passive",
+    "short_label": "Phase Passive",
+    "description": "Runs the Corruptor's second-stage passive encounter logic."
+  },
+  "ScaldronBoss_ChainLightningBolt": {
+    "label": "Corruptor Lightning Sweep",
+    "short_label": "Lightning Sweep",
+    "description": "Sweeps lightning across a cone in front of the Corruptor."
+  },
+  "ScaldronBoss_DiseaseCone": {
+    "label": "Corruptor Disease Cone",
+    "short_label": "Disease Cone",
+    "description": "Projects a damaging cone of disease in front of the Corruptor."
+  },
+  "ScaldronBoss_GravityOrb": {
+    "label": "Corruptor Gravity Orb",
+    "short_label": "Gravity Orb",
+    "description": "Summons a gravity orb as part of the Corruptor's attack sequence."
+  },
+  "ScaldronBoss_MeleeBio": {
+    "label": "Corruptor Bio Strike",
+    "short_label": "Bio Strike",
+    "description": "Uses the Corruptor's Life-based melee attack."
+  },
+  "ScaldronBoss_MeleeCyber": {
+    "label": "Corruptor Cyber Strike",
+    "short_label": "Cyber Strike",
+    "description": "Uses the Corruptor's Technology-based melee attack."
+  },
+  "ScaldronBoss_MeleeNecro": {
+    "label": "Corruptor Necro Strike",
+    "short_label": "Necro Strike",
+    "description": "Uses the Corruptor's Supernatural melee attack."
+  },
+  "ScaldronBoss_MeleePlasma": {
+    "label": "Corruptor Plasma Strike",
+    "short_label": "Plasma Strike",
+    "description": "Uses the Corruptor's Plasma melee attack."
+  },
+  "ScaldronBoss_MeleeQuantum": {
+    "label": "Corruptor Quantum Strike",
+    "short_label": "Quantum Strike",
+    "description": "Uses the Corruptor's Quantum melee attack."
+  },
+  "ScaldronBoss_Pose": {
+    "label": "Corruptor Pose",
+    "short_label": "Corruptor Pose",
+    "description": "Plays the Corruptor's combat pose during its attack sequence."
+  },
+  "ScaldronBoss_ShadowCharge": {
+    "label": "Corruptor Shadow Charge",
+    "short_label": "Shadow Charge",
+    "description": "Charges toward the target during the Corruptor's shadow phase."
+  },
+  "ScaldronBoss_ShadowPanic": {
+    "label": "Corruptor Shadow Panic",
+    "short_label": "Shadow Panic",
+    "description": "Frightens heroes caught in the Corruptor's shadow attack."
+  },
+  "ScaldronBoss_Stage1Death": {
+    "label": "Corruptor Phase Transition",
+    "short_label": "Phase Transition",
+    "description": "Runs the first-stage death sequence that leads into the second encounter stage."
+  },
+  "ScaldronBoss_Stage2Death": {
+    "label": "Corruptor Final Death",
+    "short_label": "Final Death",
+    "description": "Runs the second-stage death job in its authored encounter context."
+  },
+  "ScaldronBoss_TwinLaser": {
+    "label": "Corruptor Twin Laser",
+    "short_label": "Twin Laser",
+    "description": "Channels twin beams through their windup, sustained attack, and shutdown sequence."
+  },
+  "ScaldronBossDeath": {
+    "label": "Corruptor Death",
+    "short_label": "Corruptor Death",
+    "description": "Runs the Corruptor's second-stage death callback."
+  },
+  "ScaldronColumnDeath": {
+    "label": "Column Destruction",
+    "short_label": "Column Destruction",
+    "description": "Runs the destruction callback shared by several scenery fixtures. The result depends on the fixture."
+  },
+  "ScaldronPlantDeath": {
+    "label": "Scaldron Plant Burst",
+    "short_label": "Plant Burst",
+    "description": "Plays a burst at the small plant's position and removes the destroyed plant."
+  },
+  "ScaldronTempleColumn": {
+    "label": "Warp Totem",
+    "short_label": "Warp Totem",
+    "description": "Periodically warns before randomly teleporting nearby hostile creatures."
+  },
+  "SecondAggro_ScaldronBoss": {
+    "label": "Corruptor Reengagement",
+    "short_label": "Reengage",
+    "description": "Runs the Corruptor's later engagement sequence."
+  },
+  "SelfHeal": {
+    "label": "Self Heal",
+    "short_label": "Self Heal",
+    "description": "Restores the caster's own health."
+  },
+  "SentiosFuelCanisterDeath": {
+    "label": "Fuel Canister Blast",
+    "short_label": "Canister Blast",
+    "description": "Explodes when destroyed, damaging nearby targets."
+  },
+  "SentiosPipeDeath": {
+    "label": "Factory Pipe Blast",
+    "short_label": "Pipe Blast",
+    "description": "Explodes when the factory pipe is destroyed, damaging and burning nearby targets and leaving a wreck."
+  },
+  "SentryDroneLaser": {
+    "label": "Sentry Laser",
+    "short_label": "Sentry Laser",
+    "description": "Fires a laser from the sentry drone at its target."
+  },
+  "ShadowBossDeath": {
+    "label": "Nashira Death",
+    "short_label": "Nashira Death",
+    "description": "Runs Nashira's encounter death sequence."
   },
   "ShadowBossDuplicate": {
-    "name": "Shadow Duplicate",
-    "short_name": "Duplicate",
-    "description": "Creates a mirror image of Nashira that copies her remaining health.",
-    "source": "Build 103 Nashira tooltip and server/gameplay/combat_nashira.go"
+    "label": "Nashira Mirror Image",
+    "short_label": "Mirror Image",
+    "description": "Creates a mirror image of Nashira that copies her remaining health."
+  },
+  "ShadowBossMinionBolt": {
+    "label": "Shadow Minion Bolt",
+    "short_label": "Shadow Bolt",
+    "description": "Fires a shadow bolt from Nashira's minion."
+  },
+  "ShadowBossPassive": {
+    "label": "Nashira Encounter Passive",
+    "short_label": "Nashira Passive",
+    "description": "Runs Nashira's passive encounter logic. Its individual effects are unverified in build 103."
+  },
+  "ShadowBossPose": {
+    "label": "Nashira Pose",
+    "short_label": "Nashira Pose",
+    "description": "Plays Nashira's combat pose during her attack sequence."
+  },
+  "ShadowBossSwipe": {
+    "label": "Nashira Swipe",
+    "short_label": "Nashira Swipe",
+    "description": "Swipes at nearby targets."
+  },
+  "ShadowPanic": {
+    "label": "Shadow Panic",
+    "short_label": "Shadow Panic",
+    "description": "Frightens targets caught in the shadow attack."
   },
   "ShadowToss": {
-    "description": "Lobs a shadow projectile at a hero. It deals Supernatural energy damage on impact.",
-    "source": "server/zone/npc/nashira.go, NashiraShadowTossProfile"
+    "label": "Shadow Projectile",
+    "short_label": "Shadow Projectile",
+    "description": "Lobs a shadow projectile at a hero. It deals Supernatural energy damage on impact."
+  },
+  "SilenceTnxModifier": {
+    "label": "Field Silence",
+    "short_label": "Field Silence",
+    "description": "Prevents a target from using abilities while the field's silence applies."
+  },
+  "SleepMushroom": {
+    "label": "Sleep Mushroom",
+    "short_label": "Sleep Mushroom",
+    "description": "Fires a mushroom projectile that puts targets to sleep."
+  },
+  "SleepRezMelee": {
+    "label": "Sleepcaster Strike",
+    "short_label": "Sleepcaster Strike",
+    "description": "Uses the Sleep Mushroom caster's close-range attack."
+  },
+  "SlothPassive": {
+    "label": "Sloth Passive",
+    "short_label": "Sloth Passive",
+    "description": "Runs the Sloth creature's passive callback. Its individual effects are unverified in build 103."
+  },
+  "SlowingMelee": {
+    "label": "Slowing Strike",
+    "short_label": "Slowing Strike",
+    "description": "Strikes at close range and reduces the target's movement speed."
+  },
+  "SlowNova": {
+    "label": "Slowing Nova",
+    "short_label": "Slowing Nova",
+    "description": "Damages and slows targets around the caster."
+  },
+  "Smash": {
+    "label": "Boomer Smash",
+    "short_label": "Boomer Smash",
+    "description": "Smashes the target after closing into melee range."
+  },
+  "SpacetimeAgentPassive": {
+    "label": "Spacetime Agent Passive",
+    "short_label": "Agent Passive",
+    "description": "Attaches the operative and jetpack effects to the Spacetime Agent."
+  },
+  "Spawn": {
+    "label": "Spawn Minions",
+    "short_label": "Spawn Minions",
+    "description": "Creates reinforcements during the encounter."
+  },
+  "SpectraGhostColumn": {
+    "label": "Ghost Column Passive",
+    "short_label": "Ghost Column",
+    "description": "Runs the ghost column's passive callback. Its individual effects are unverified in build 103."
+  },
+  "SpreadShot": {
+    "label": "Fireball Fan",
+    "short_label": "Fireball Fan",
+    "description": "Fires several projectiles in a spread."
+  },
+  "SpriteHealerPassive": {
+    "label": "Healing Sprite Passive",
+    "short_label": "Sprite Passive",
+    "description": "Runs the healing sprite's passive callback."
+  },
+  "SpritePetHeal": {
+    "label": "Sprite Heal",
+    "short_label": "Sprite Heal",
+    "description": "Restores health to an eligible ally."
+  },
+  "StagnantNova": {
+    "label": "Stagnant Nova",
+    "short_label": "Stagnant Nova",
+    "description": "Releases the Stagnant's standard nova."
+  },
+  "StagnantNovaAbove": {
+    "label": "Elevated Nova",
+    "short_label": "Elevated Nova",
+    "description": "Uses the Stagnant's alternate nova attack when the target is above it."
+  },
+  "StalagmiteDeath": {
+    "label": "Fixture Break",
+    "short_label": "Fixture Break",
+    "description": "Runs a shared destruction callback used by breakable stalagmites and some turrets."
+  },
+  "StealthAttack": {
+    "label": "Stealth Pounce",
+    "short_label": "Stealth Pounce",
+    "description": "Leaps at the target from stealth."
+  },
+  "StealthBallDeath": {
+    "label": "Stealth Ball Break",
+    "short_label": "Ball Break",
+    "description": "Runs the stealth ball's destruction callback. Its additional effects are unverified in build 103."
+  },
+  "StealtherMelee": {
+    "label": "Stealther Strike",
+    "short_label": "Stealther Strike",
+    "description": "Strikes at close range as the Stealther's melee follow-up."
+  },
+  "SubsequentAggro_ActivateRobot": {
+    "label": "Robot Reactivation",
+    "short_label": "Reactivate",
+    "description": "Plays the robot's activation sequence when it reengages."
+  },
+  "SubsequentAggro_ActivateSpecialRobot": {
+    "label": "Special Robot Reactivation",
+    "short_label": "Reactivate",
+    "description": "Plays the special robot's activation sequence when it reengages."
+  },
+  "SummonGravityOrb": {
+    "label": "Summon Gravity Orb",
+    "short_label": "Gravity Orb",
+    "description": "Creates a gravity orb that acts independently after it is summoned."
+  },
+  "SummonPlasmaMinion": {
+    "label": "Summon Plasma Minion",
+    "short_label": "Plasma Minion",
+    "description": "Summons a plasma minion to fight for the caster."
+  },
+  "SupportHealerPetBasic": {
+    "label": "Healer Companion Shot",
+    "short_label": "Companion Shot",
+    "description": "Uses the healer companion's basic ranged attack."
+  },
+  "TailZap": {
+    "label": "Tail Zap",
+    "short_label": "Tail Zap",
+    "description": "Zaps a nearby target with the caster's tail."
+  },
+  "Teleport": {
+    "label": "Owner Recall",
+    "short_label": "Recall",
+    "description": "Teleports the Plasma Sentinel back toward its owner when it falls too far behind."
+  },
+  "ThornBark": {
+    "label": "Thorn Bark",
+    "short_label": "Thorn Bark",
+    "description": "Grants the caster a protective thorn bark effect."
+  },
+  "ThornBarkModifier": {
+    "label": "Thorn Bark",
+    "short_label": "Thorn Bark",
+    "description": "Grants the caster a thorn bark modifier."
+  },
+  "ThornDart": {
+    "label": "Thorn Dart",
+    "short_label": "Thorn Dart",
+    "description": "Fires a thorn projectile at the target."
+  },
+  "TNXEnragePlant": {
+    "label": "Enrage Plant",
+    "short_label": "Enrage Plant",
+    "description": "Runs the enrage plant's passive callback. Its target and buff rules are unverified in build 103."
+  },
+  "TNXNoPhysics": {
+    "label": "Physics Disable",
+    "short_label": "Physics Disable",
+    "description": "Runs the fixture's physics setup callback. Its exact collision changes are unverified in build 103."
+  },
+  "TNXPetCageDeath": {
+    "label": "Pet Cage Break",
+    "short_label": "Pet Cage Break",
+    "description": "Runs the pet cage's destruction callback. Its follow-up effects are unverified in build 103."
+  },
+  "TNXSuppressionAura": {
+    "label": "Silence Field",
+    "short_label": "Silence Field",
+    "description": "Silences heroes inside the field and removes its own silence when they leave."
+  },
+  "TNXTripMineMissle": {
+    "label": "Trip Mine Missile",
+    "short_label": "Trip Mine Missile",
+    "description": "Launches a missile that damages the target on impact."
+  },
+  "TNXTripMinePassive": {
+    "label": "Trip Mine Launcher",
+    "short_label": "Trip Mine",
+    "description": "Periodically launches missiles while the Trip Mine fixture is active."
+  },
+  "TurretLaser": {
+    "label": "Turret Laser",
+    "short_label": "Turret Laser",
+    "description": "Fires a laser at the target."
+  },
+  "TurretLaserSweep": {
+    "label": "Turret Laser Sweep",
+    "short_label": "Laser Sweep",
+    "description": "Sweeps a turret laser across an area."
+  },
+  "TurretTrapPassiveModifier": {
+    "label": "Turret Trap Passive",
+    "short_label": "Trap Passive",
+    "description": "Runs the turret trap's passive modifier. Its individual effects are unverified in build 103."
+  },
+  "TutorialPlasmaLightning": {
+    "label": "Tutorial Plasma Lightning",
+    "short_label": "Plasma Lightning",
+    "description": "Fires a plasma lightning projectile at the tutorial target."
+  },
+  "TutorialPoisonCloud": {
+    "label": "Tutorial Poison Cloud",
+    "short_label": "Poison Cloud",
+    "description": "Lobs a projectile that releases a poison cloud during the tutorial."
+  },
+  "TutorialPoisonMelee": {
+    "label": "Tutorial Poison Strike",
+    "short_label": "Poison Strike",
+    "description": "Strikes at close range and poisons the target during the tutorial."
+  },
+  "TwinLaser": {
+    "label": "Twin Laser",
+    "short_label": "Twin Laser",
+    "description": "Sweeps an area with twin laser beams."
+  },
+  "VentFlameCone": {
+    "label": "Flame Vent",
+    "short_label": "Flame Vent",
+    "description": "Projects flames in a cone from the vent."
+  },
+  "VerdanthBasicPicky": {
+    "label": "Picky Charge",
+    "short_label": "Picky Charge",
+    "description": "Rushes toward the target to close into striking range."
+  },
+  "VerdanthBasicPickyChargingAttack": {
+    "label": "Picky Charge Impact",
+    "short_label": "Charge Impact",
+    "description": "Strikes the target when Picky finishes its charge."
+  },
+  "VerdanthBasicPickyMelee": {
+    "label": "Picky Strike",
+    "short_label": "Picky Strike",
+    "description": "Strikes the target within Picky's melee reach."
+  },
+  "VerdanthBasicRootMobMelee": {
+    "label": "Rooted Strike",
+    "short_label": "Rooted Strike",
+    "description": "Strikes targets that come within the rooted creature's reach."
+  },
+  "VerdanthBoss_GroundSlam": {
+    "label": "Orcus Ground Slam",
+    "short_label": "Ground Slam",
+    "description": "Slams the ground to damage targets in the affected area."
+  },
+  "VerdanthBossDeath": {
+    "label": "Orcus Death",
+    "short_label": "Orcus Death",
+    "description": "Runs the Spawn Eater's encounter death sequence."
+  },
+  "VerdanthBossDiseaseCone": {
+    "label": "Orcus Disease Cone",
+    "short_label": "Disease Cone",
+    "description": "Projects a damaging cone of disease in front of the Spawn Eater."
+  },
+  "VerdanthBossFallbackMelee": {
+    "label": "Orcus Fallback Strike",
+    "short_label": "Orcus Strike",
+    "description": "Uses a close-range strike when Orcus falls back to its basic attack."
+  },
+  "VerdanthBossMelee": {
+    "label": "Orcus Strike",
+    "short_label": "Orcus Strike",
+    "description": "Uses the Spawn Eater's close-range attack."
+  },
+  "VerdanthBossMinionMelee": {
+    "label": "Orcus Minion Strike",
+    "short_label": "Minion Strike",
+    "description": "Strikes a nearby target on behalf of the Spawn Eater."
+  },
+  "VerdanthBossPassive": {
+    "label": "Orcus Encounter Passive",
+    "short_label": "Orcus Passive",
+    "description": "Runs the Spawn Eater's passive encounter logic."
+  },
+  "ZelemBasicFlyingMeleeAttack": {
+    "label": "Raytheoid Flying Strike",
+    "short_label": "Flying Strike",
+    "description": "Strikes a nearby target with the flying Raytheoid's melee attack."
+  },
+  "ZelemBasicHybridMelee": {
+    "label": "Hybrid Strike",
+    "short_label": "Hybrid Strike",
+    "description": "Strikes when the target is within the Hybrid's melee reach."
+  },
+  "ZelemBasicHybridProjectile": {
+    "label": "Hybrid Shot",
+    "short_label": "Hybrid Shot",
+    "description": "Fires the Hybrid's ranged projectile when the target is farther away."
+  },
+  "ZelemBasicMeleeAttack": {
+    "label": "Raytheoid Strike",
+    "short_label": "Raytheoid Strike",
+    "description": "Strikes a target within melee reach."
+  },
+  "ZelemBasicMeleePassive": {
+    "label": "Raytheoid Area Resistance",
+    "short_label": "Area Resistance",
+    "description": "Reduces incoming area damage by an amount based on the Raytheoid's rank."
+  },
+  "ZelemBasicPackMeleeAttack": {
+    "label": "Raytheoid Pack Strike",
+    "short_label": "Pack Strike",
+    "description": "Strikes at close range as part of the Raytheoid pack creature's kit."
+  },
+  "ZelemBasicPackMeleeCower": {
+    "label": "Pack Cower",
+    "short_label": "Pack Cower",
+    "description": "Plays the pack creature's cowering response."
+  },
+  "ZelemBasicRanged": {
+    "label": "Raytheoid Shot",
+    "short_label": "Raytheoid Shot",
+    "description": "Fires a ranged projectile at the target."
+  },
+  "ZelemBasicRanged_Blink": {
+    "label": "Raytheoid Blink",
+    "short_label": "Blink",
+    "description": "Teleports to a new position before resuming ranged attacks."
+  },
+  "ZelemBasicRangedHomingProjectile": {
+    "label": "Raytheoid Homing Shot",
+    "short_label": "Homing Shot",
+    "description": "Fires a projectile that homes in on the target."
+  },
+  "ZelemBossBlink": {
+    "label": "Polaris Blink",
+    "short_label": "Polaris Blink",
+    "description": "Teleports Polaris to a new position during combat."
+  },
+  "ZelemBossPassive": {
+    "label": "Polaris Encounter Passive",
+    "short_label": "Polaris Passive",
+    "description": "Runs Polaris's passive encounter logic. Its individual effects are unverified in build 103."
+  },
+  "ZelemBossPose": {
+    "label": "Polaris Pose",
+    "short_label": "Polaris Pose",
+    "description": "Plays Polaris's combat pose."
+  },
+  "ZelemBossPush": {
+    "label": "Polaris Repulsion",
+    "short_label": "Repulsion",
+    "description": "Pushes heroes away from Polaris."
+  },
+  "ZelemChargeupBuildCharge": {
+    "label": "Build Charge",
+    "short_label": "Build Charge",
+    "description": "Stores energy for the caster's discharge attack."
+  },
+  "ZelemChargeupDischargeAttack": {
+    "label": "Repelling Discharge",
+    "short_label": "Discharge",
+    "description": "Releases stored energy in an attack that knocks targets back."
+  },
+  "ZelemChargeupStandardAttack": {
+    "label": "Chargeup Strike",
+    "short_label": "Chargeup Strike",
+    "description": "Uses the Chargeup creature's ordinary close-range attack."
+  },
+  "ZelemHasterAttack": {
+    "label": "Haster Shot",
+    "short_label": "Haster Shot",
+    "description": "Fires a damaging projectile at the target."
+  },
+  "ZelemMarkSeeker": {
+    "label": "Mark Seeker",
+    "short_label": "Mark Seeker",
+    "description": "Fires a seeking projectile as a follow-up to the Mark of Zelem."
+  },
+  "ZelemSlowAura": {
+    "label": "Slowing Field",
+    "short_label": "Slowing Field",
+    "description": "Reduces movement speed inside the field."
   },
   "ZelemSP1_TeleportGun": {
-    "name": "Teleport Gun",
-    "description": "Fires a warping projectile that randomly teleports the hero it hits.",
-    "source": "Build 103 Warp Spawner tooltip and server/zone/npc/action.go"
+    "label": "Teleport Shot",
+    "short_label": "Teleport Shot",
+    "description": "Fires a warping projectile that randomly teleports the hero it hits."
+  },
+  "ZelemSP1Passive": {
+    "label": "Raytheoid Special Passive",
+    "short_label": "Raytheoid Passive",
+    "description": "Runs a passive callback shared by the Teleport Shot and flying Raytheoid kits. Its individual effects are unverified in build 103."
+  },
+  "ZelemSpecialThree": {
+    "label": "Raytheoid Energy Shot",
+    "short_label": "Energy Shot",
+    "description": "Fires a ranged projectile at the target."
   },
   "ZelemSpecialThreeEnergyBuff": {
-    "name": "Raytheoid Energy Buff",
-    "short_name": "Energy Buff",
-    "description": "Applies a temporary energy buff to an allied Raytheoid.",
-    "source": "Build 103 NPC threshold audit in notes/npc-ability-audit.md"
+    "label": "Raytheoid Energy Boost",
+    "short_label": "Energy Boost",
+    "description": "Applies a temporary energy buff to an allied Raytheoid."
+  },
+  "ZelemSpecialTwo": {
+    "label": "Tractor Control",
+    "short_label": "Tractor Control",
+    "description": "Pulls distant targets closer or pushes nearby targets away."
+  },
+  "ZelemSpecialTwo_Pull": {
+    "label": "Tractor Pull",
+    "short_label": "Tractor Pull",
+    "description": "Pulls the target toward the caster."
+  },
+  "ZelemSpecialTwo_Push": {
+    "label": "Repelling Push",
+    "short_label": "Repelling Push",
+    "description": "Pushes the target away from the caster."
   }
 }

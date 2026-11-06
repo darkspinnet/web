@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Copter Passive"
+title = "Copter Flight Passive"
 ability = "scaldronbasiccopter-passive"
 generated = true
 +++

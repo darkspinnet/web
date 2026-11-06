@@ -1,5 +1,5 @@
 +++
-title = "Stealth Attack"
+title = "Stealth Pounce"
 ability = "stealthattack"
 generated = true
 +++

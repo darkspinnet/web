@@ -1,5 +1,5 @@
 +++
-title = "Cryos Boss Passive"
+title = "Merak Encounter Passive"
 ability = "cryosbosspassive"
 generated = true
 +++

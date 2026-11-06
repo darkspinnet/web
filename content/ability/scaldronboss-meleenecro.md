@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Melee Necro"
+title = "Corruptor Necro Strike"
 ability = "scaldronboss-meleenecro"
 generated = true
 +++

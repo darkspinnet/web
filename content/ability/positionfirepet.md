@@ -1,5 +1,5 @@
 +++
-title = "Position Fire Pet"
+title = "Fire Pet Positioning"
 ability = "positionfirepet"
 generated = true
 +++

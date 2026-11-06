@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Munch Melee"
+title = "Munch Sweep"
 ability = "nocturnaspecialmunchmelee"
 generated = true
 +++

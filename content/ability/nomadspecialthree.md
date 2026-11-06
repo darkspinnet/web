@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special Three"
+title = "Nomad Projectile"
 ability = "nomadspecialthree"
 generated = true
 +++

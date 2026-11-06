@@ -1,5 +1,5 @@
 +++
-title = "Noct Ghost Charge"
+title = "Ghost Charge"
 ability = "noctghostcharge"
 generated = true
 +++

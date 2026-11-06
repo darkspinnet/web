@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Dog Attack"
+title = "Scaldron Hound Strike"
 ability = "scaldronbasicdog-attack"
 generated = true
 +++

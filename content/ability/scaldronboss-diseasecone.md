@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Disease Cone"
+title = "Corruptor Disease Cone"
 ability = "scaldronboss-diseasecone"
 generated = true
 +++

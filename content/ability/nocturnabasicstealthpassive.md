@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Stealth Passive"
+title = "Stealth Passive"
 ability = "nocturnabasicstealthpassive"
 generated = true
 +++

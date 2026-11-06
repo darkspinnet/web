@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Super Nat Egg Death"
+title = "Supernatural Egg Burst"
 ability = "nocturnasupernateggdeath"
 generated = true
 +++

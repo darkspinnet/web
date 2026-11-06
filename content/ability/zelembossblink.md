@@ -1,5 +1,5 @@
 +++
-title = "Zelem Boss Blink"
+title = "Polaris Blink"
 ability = "zelembossblink"
 generated = true
 +++

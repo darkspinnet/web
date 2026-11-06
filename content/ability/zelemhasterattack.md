@@ -1,5 +1,5 @@
 +++
-title = "Zelem Haster Attack"
+title = "Haster Shot"
 ability = "zelemhasterattack"
 generated = true
 +++

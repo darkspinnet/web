@@ -1,5 +1,5 @@
 +++
-title = "Stagnant Nova Above"
+title = "Elevated Nova"
 ability = "stagnantnovaabove"
 generated = true
 +++

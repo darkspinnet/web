@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Scaldron Boss"
+title = "Corruptor Entrance"
 ability = "firstaggro-scaldronboss"
 generated = true
 +++

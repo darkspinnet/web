@@ -1,5 +1,5 @@
 +++
-title = "Zelem Boss Pose"
+title = "Polaris Pose"
 ability = "zelembosspose"
 generated = true
 +++

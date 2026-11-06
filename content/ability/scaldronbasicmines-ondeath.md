@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Mines On Death"
+title = "Mine Death Blast"
 ability = "scaldronbasicmines-ondeath"
 generated = true
 +++

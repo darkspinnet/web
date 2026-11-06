@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Flying Melee Attack"
+title = "Raytheoid Flying Strike"
 ability = "zelembasicflyingmeleeattack"
 generated = true
 +++

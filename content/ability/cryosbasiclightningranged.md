@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Lightning Ranged"
+title = "Lightning Cone"
 ability = "cryosbasiclightningranged"
 generated = true
 +++

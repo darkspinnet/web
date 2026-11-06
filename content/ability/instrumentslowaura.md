@@ -1,5 +1,5 @@
 +++
-title = "Instrument Slow Aura"
+title = "Instrument Slow Field"
 ability = "instrumentslowaura"
 generated = true
 +++

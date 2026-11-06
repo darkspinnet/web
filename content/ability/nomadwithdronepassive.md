@@ -1,5 +1,5 @@
 +++
-title = "Nomad With Drone Passive"
+title = "Invincitron Shield"
 ability = "nomadwithdronepassive"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Basic Stealth Melee"
+title = "Shadow Stealth Strike"
 ability = "nocturnabasicstealthmelee"
 generated = true
 +++

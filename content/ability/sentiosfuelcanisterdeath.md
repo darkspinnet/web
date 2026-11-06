@@ -1,5 +1,5 @@
 +++
-title = "Sentios Fuel Canister Death"
+title = "Fuel Canister Blast"
 ability = "sentiosfuelcanisterdeath"
 generated = true
 +++

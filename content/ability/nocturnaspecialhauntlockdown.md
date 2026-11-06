@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Haunt Lockdown"
+title = "Haunt Lockdown"
 ability = "nocturnaspecialhauntlockdown"
 generated = true
 +++

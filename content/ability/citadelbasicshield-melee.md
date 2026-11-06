@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Shield Melee"
+title = "Shield Sweep"
 ability = "citadelbasicshield-melee"
 generated = true
 +++

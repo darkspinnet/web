@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Shield Passive"
+title = "Directional Shield"
 ability = "citadelbasicshield-passive"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Mana Overload Warning Modifier"
+title = "Power Overload Warning"
 ability = "manaoverloadwarningmodifier"
 generated = true
 +++

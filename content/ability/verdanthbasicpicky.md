@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Picky"
+title = "Picky Charge"
 ability = "verdanthbasicpicky"
 generated = true
 +++

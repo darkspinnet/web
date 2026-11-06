@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Citadel Boss Minion"
+title = "Arcturus Minion Entrance"
 ability = "firstaggro-citadelbossminion"
 generated = true
 +++

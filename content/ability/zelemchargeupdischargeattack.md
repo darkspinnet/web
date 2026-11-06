@@ -1,5 +1,5 @@
 +++
-title = "Zelem Chargeup Discharge Attack"
+title = "Repelling Discharge"
 ability = "zelemchargeupdischargeattack"
 generated = true
 +++

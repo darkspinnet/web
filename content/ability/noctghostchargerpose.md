@@ -1,5 +1,5 @@
 +++
-title = "Noct Ghost Charger Pose"
+title = "Ghost Charger Pose"
 ability = "noctghostchargerpose"
 generated = true
 +++

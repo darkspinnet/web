@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Cryos Boss Minion"
+title = "Merak Minion Entrance"
 ability = "firstaggro-cryosboss-minion"
 generated = true
 +++

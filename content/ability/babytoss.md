@@ -1,5 +1,5 @@
 +++
-title = "Baby Toss"
+title = "Mortar Lob"
 ability = "babytoss"
 generated = true
 +++

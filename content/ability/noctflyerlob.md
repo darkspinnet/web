@@ -1,5 +1,5 @@
 +++
-title = "Noct Flyer Lob"
+title = "Shadow Lob"
 ability = "noctflyerlob"
 generated = true
 +++

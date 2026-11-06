@@ -1,5 +1,5 @@
 +++
-title = "Shadow Boss Pose"
+title = "Nashira Pose"
 ability = "shadowbosspose"
 generated = true
 +++

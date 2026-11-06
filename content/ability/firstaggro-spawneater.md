@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Spawn Eater"
+title = "Orcus Entrance"
 ability = "firstaggro-spawneater"
 generated = true
 +++

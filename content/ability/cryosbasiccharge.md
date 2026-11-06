@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Charge"
+title = "Cryos Rush"
 ability = "cryosbasiccharge"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Maser Cleanse"
+title = "Maser Cleanse"
 ability = "scaldronbasicmaser-cleanse"
 generated = true
 +++

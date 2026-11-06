@@ -1,5 +1,5 @@
 +++
-title = "Position Shadow Boss Minion"
+title = "Shadow Minion Positioning"
 ability = "positionshadowbossminion"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Zelem SP1Passive"
+title = "Raytheoid Special Passive"
 ability = "zelemsp1passive"
 generated = true
 +++

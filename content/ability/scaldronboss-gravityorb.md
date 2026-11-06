@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Gravity Orb"
+title = "Corruptor Gravity Orb"
 ability = "scaldronboss-gravityorb"
 generated = true
 +++

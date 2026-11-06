@@ -1,0 +1,29 @@
+{{ $preview := .preview }}
+{{ $combat := .ability.combat | default dict }}
+{{ $cooldown := $preview.cooldown | default 0 }}
+{{ $range := $preview.range | default 0 }}
+{{ if and (not $preview) (not .ability.heroes) }}
+  {{ $cooldown = $combat.cooldown_seconds | default 0 }}
+  {{ $range = $combat.range_meters | default 0 }}
+{{ end }}
+{{ $stats := slice }}
+{{ range slice
+  (dict "label" "Damage" "min" $preview.minimum_damage "max" $preview.maximum_damage "round" true)
+  (dict "label" "Damage / tick" "min" $preview.minimum_tick_damage "max" $preview.maximum_tick_damage "round" true)
+  (dict "label" "Healing" "min" $preview.minimum_healing "max" $preview.maximum_healing "round" false) }}
+  {{ if and .min .max (ge .max .min) }}{{ $stats = $stats | append . }}{{ end }}
+{{ end }}
+{{ range slice
+  (dict "label" "Range" "value" $range "unit" "m")
+  (dict "label" "Cooldown" "value" $cooldown "unit" "s")
+  (dict "label" "Duration" "value" $preview.duration "unit" "s")
+  (dict "label" "Tick interval" "value" $preview.tick_seconds "unit" "s") }}
+  {{ if and .value (gt .value 0) }}{{ $stats = $stats | append . }}{{ end }}
+{{ end }}
+{{ with $stats }}
+<dl class="npc-ability-stats">
+  {{ range . }}
+  <div><dt>{{ .label }}</dt><dd>{{ if .min }}{{ partial "npc-combat-range.html" . }}{{ else }}{{ .value }} {{ .unit }}{{ end }}</dd></div>
+  {{ end }}
+</dl>
+{{ end }}

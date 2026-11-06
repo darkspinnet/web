@@ -1,5 +1,5 @@
 +++
-title = "Nomad Snipe Melee"
+title = "Sniper Strike"
 ability = "nomadsnipe-melee"
 generated = true
 +++

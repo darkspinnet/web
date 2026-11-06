@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Boss Death"
+title = "Orcus Death"
 ability = "verdanthbossdeath"
 generated = true
 +++

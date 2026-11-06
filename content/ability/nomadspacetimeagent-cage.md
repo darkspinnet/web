@@ -1,5 +1,5 @@
 +++
-title = "Nomad Spacetime Agent Cage"
+title = "Spacetime Cage"
 ability = "nomadspacetimeagent-cage"
 generated = true
 +++

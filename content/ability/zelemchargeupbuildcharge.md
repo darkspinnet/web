@@ -1,5 +1,5 @@
 +++
-title = "Zelem Chargeup Build Charge"
+title = "Build Charge"
 ability = "zelemchargeupbuildcharge"
 generated = true
 +++

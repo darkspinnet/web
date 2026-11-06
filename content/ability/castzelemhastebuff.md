@@ -1,5 +1,5 @@
 +++
-title = "Cast Zelem Haste Buff"
+title = "Raytheoid Haste"
 ability = "castzelemhastebuff"
 generated = true
 +++

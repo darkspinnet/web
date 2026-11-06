@@ -1,5 +1,5 @@
 +++
-title = "Repair"
+title = "Cyber Revival"
 ability = "repair"
 generated = true
 +++

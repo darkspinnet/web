@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Twin Laser"
+title = "Corruptor Twin Laser"
 ability = "scaldronboss-twinlaser"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special One Cleave"
+title = "Nomad Cleave"
 ability = "nomadspecialonecleave"
 generated = true
 +++

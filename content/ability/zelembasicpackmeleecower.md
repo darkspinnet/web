@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Pack Melee Cower"
+title = "Pack Cower"
 ability = "zelembasicpackmeleecower"
 generated = true
 +++

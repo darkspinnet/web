@@ -1,5 +1,5 @@
 +++
-title = "Nomad Pets Passive"
+title = "Pet Summoner Passive"
 ability = "nomadpetspassive"
 generated = true
 +++

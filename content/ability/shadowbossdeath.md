@@ -1,5 +1,5 @@
 +++
-title = "Shadow Boss Death"
+title = "Nashira Death"
 ability = "shadowbossdeath"
 generated = true
 +++

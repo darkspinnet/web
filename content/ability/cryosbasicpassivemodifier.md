@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Passive Modifier"
+title = "Fiery Passive"
 ability = "cryosbasicpassivemodifier"
 generated = true
 +++

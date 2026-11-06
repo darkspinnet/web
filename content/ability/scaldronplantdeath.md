@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Plant Death"
+title = "Scaldron Plant Burst"
 ability = "scaldronplantdeath"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two Jump Attack"
+title = "Nomad Leap Strike"
 ability = "nomadbiospecialtwojumpattack"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special One Burning DOT"
+title = "Burn"
 ability = "citadelspecialone-burningdot"
 generated = true
 +++

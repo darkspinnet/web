@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Anim"
+title = "Alert Animation"
 ability = "firstaggro-anim"
 generated = true
 +++

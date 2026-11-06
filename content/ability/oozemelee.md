@@ -1,5 +1,5 @@
 +++
-title = "Ooze Melee"
+title = "Ooze Strike"
 ability = "oozemelee"
 generated = true
 +++

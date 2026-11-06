@@ -1,5 +1,5 @@
 +++
-title = "Raytheoid Energy Buff"
+title = "Raytheoid Energy Boost"
 ability = "zelemspecialthreeenergybuff"
 generated = true
 +++

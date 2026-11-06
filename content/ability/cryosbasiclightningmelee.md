@@ -1,5 +1,5 @@
 +++
-title = "Cryos Basic Lightning Melee"
+title = "Lightning Strike"
 ability = "cryosbasiclightningmelee"
 generated = true
 +++

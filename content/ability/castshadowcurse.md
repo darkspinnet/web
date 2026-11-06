@@ -1,5 +1,5 @@
 +++
-title = "Cast Shadow Curse"
+title = "Shadow Curse"
 ability = "castshadowcurse"
 generated = true
 +++

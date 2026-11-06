@@ -1,5 +1,5 @@
 +++
-title = "Exploding Thorn Death"
+title = "Thorn Burst"
 ability = "explodingthorndeath"
 generated = true
 +++

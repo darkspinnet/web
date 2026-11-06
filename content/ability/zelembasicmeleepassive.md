@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Melee Passive"
+title = "Raytheoid Area Resistance"
 ability = "zelembasicmeleepassive"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Citadel Basic Melee Unburrow"
+title = "Citadel Unburrow"
 ability = "firstaggro-citadelbasicmeleeunburrow"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Temple Column"
+title = "Warp Totem"
 ability = "scaldrontemplecolumn"
 generated = true
 +++

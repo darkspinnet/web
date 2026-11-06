@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Activate Special Robot"
+title = "Special Robot Activation"
 ability = "firstaggro-activatespecialrobot"
 generated = true
 +++

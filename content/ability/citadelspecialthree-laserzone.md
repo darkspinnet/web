@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Three Laser Zone"
+title = "Laser Zone"
 ability = "citadelspecialthree-laserzone"
 generated = true
 +++

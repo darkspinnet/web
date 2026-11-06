@@ -1,5 +1,5 @@
 +++
-title = "Zelem Boss Push"
+title = "Polaris Repulsion"
 ability = "zelembosspush"
 generated = true
 +++

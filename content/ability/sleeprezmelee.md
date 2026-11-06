@@ -1,5 +1,5 @@
 +++
-title = "Sleep Rez Melee"
+title = "Sleepcaster Strike"
 ability = "sleeprezmelee"
 generated = true
 +++

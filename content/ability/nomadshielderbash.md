@@ -1,5 +1,5 @@
 +++
-title = "Nomad Shielder Bash"
+title = "Shield Bash"
 ability = "nomadshielderbash"
 generated = true
 +++

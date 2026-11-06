@@ -1,5 +1,5 @@
 +++
-title = "Citadel Basic Ranged Bolt"
+title = "Citadel Bolt"
 ability = "citadelbasicranged-bolt"
 generated = true
 +++

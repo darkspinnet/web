@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two Passive Modifier"
+title = "Nomad Jumper Passive"
 ability = "nomadbiospecialtwopassivemodifier"
 generated = true
 +++

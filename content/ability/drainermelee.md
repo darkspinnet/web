@@ -1,5 +1,5 @@
 +++
-title = "Drainer Melee"
+title = "Drainer Strike"
 ability = "drainermelee"
 generated = true
 +++

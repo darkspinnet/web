@@ -1,5 +1,5 @@
 +++
-title = "Spectra Ghost Column"
+title = "Ghost Column Passive"
 ability = "spectraghostcolumn"
 generated = true
 +++

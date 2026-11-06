@@ -1,5 +1,5 @@
 +++
-title = "Shadow Boss Swipe"
+title = "Nashira Swipe"
 ability = "shadowbossswipe"
 generated = true
 +++

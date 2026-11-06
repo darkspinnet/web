@@ -1,5 +1,5 @@
 +++
-title = "Zelem Mark Seeker"
+title = "Mark Seeker"
 ability = "zelemmarkseeker"
 generated = true
 +++

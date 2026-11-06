@@ -1,5 +1,5 @@
 +++
-title = "Zelem Chargeup Standard Attack"
+title = "Chargeup Strike"
 ability = "zelemchargeupstandardattack"
 generated = true
 +++

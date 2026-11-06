@@ -1,5 +1,5 @@
 +++
-title = "Sentios Pipe Death"
+title = "Factory Pipe Blast"
 ability = "sentiospipedeath"
 generated = true
 +++

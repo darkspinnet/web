@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Shadow Spawn Leech"
+title = "Shadow Leech Entrance"
 ability = "firstaggro-shadowspawnleech"
 generated = true
 +++

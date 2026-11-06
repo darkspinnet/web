@@ -26,40 +26,43 @@ type campaignDetail struct {
 }
 
 type campaignEnemy struct {
-	Name                string   `json:"name"`
-	Noun                string   `json:"noun"`
-	Slug                string   `json:"slug"`
-	Role                string   `json:"role"`
-	ChallengeValue      int      `json:"challenge_value"`
-	BaseHitPoints       float64  `json:"base_hit_points"`
-	EstimatedHitPoints  float64  `json:"estimated_hit_points"`
-	EstimatedDamageMin  *float64 `json:"estimated_damage_min,omitempty"`
-	EstimatedDamageMax  *float64 `json:"estimated_damage_max,omitempty"`
-	EstimatedDamageType string   `json:"estimated_damage_type,omitempty"`
-	Descriptions        []string `json:"descriptions"`
-	Behavior            string   `json:"behavior"`
+	Name                string               `json:"name"`
+	Noun                string               `json:"noun"`
+	Slug                string               `json:"slug"`
+	Role                string               `json:"role"`
+	ChallengeValue      int                  `json:"challenge_value"`
+	BaseHitPoints       float64              `json:"base_hit_points"`
+	EstimatedHitPoints  float64              `json:"estimated_hit_points"`
+	EstimatedDamageMin  *float64             `json:"estimated_damage_min,omitempty"`
+	EstimatedDamageMax  *float64             `json:"estimated_damage_max,omitempty"`
+	EstimatedDamageType string               `json:"estimated_damage_type,omitempty"`
+	Descriptions        []string             `json:"descriptions"`
+	Behavior            string               `json:"behavior"`
+	SeededVariants      []seededEnemyVariant `json:"seeded_variants,omitempty"`
 }
 
 type campaignMap struct {
-	RunSeed        string               `json:"run_seed,omitempty"`
-	PopulationSeed uint32               `json:"population_seed,omitempty"`
-	UnmappedSpawns int                  `json:"unmapped_spawns,omitempty"`
-	Selection      string               `json:"selection"`
-	Level          string               `json:"level"`
-	Legend         map[string]string    `json:"legend"`
-	Labels         map[string]string    `json:"labels"`
-	Notes          []string             `json:"enemy_class_notes"`
-	Sections       []campaignMapSection `json:"sections"`
-	Markers        []campaignMapMarker  `json:"markers,omitempty"`
-	Positions      []campaignPosition   `json:"positions,omitempty"`
+	RunSeed         string               `json:"run_seed,omitempty"`
+	PopulationSeed  uint32               `json:"population_seed,omitempty"`
+	UnmappedSpawns  int                  `json:"unmapped_spawns,omitempty"`
+	UnmappedObjects int                  `json:"unmapped_objects,omitempty"`
+	Selection       string               `json:"selection"`
+	Level           string               `json:"level"`
+	Legend          map[string]string    `json:"legend"`
+	Labels          map[string]string    `json:"labels"`
+	Notes           []string             `json:"enemy_class_notes"`
+	Sections        []campaignMapSection `json:"sections"`
+	Markers         []campaignMapMarker  `json:"markers,omitempty"`
+	Positions       []campaignPosition   `json:"positions,omitempty"`
 }
 
 type campaignMapSection struct {
-	Spawns      []seededMapPoint `json:"spawns,omitempty"`
-	ComponentID uint32           `json:"component_id"`
-	Image       string           `json:"image"`
-	MarkerCount int              `json:"marker_count"`
-	ImageURL    string           `json:"image_url"`
+	Spawns      []seededMapPoint  `json:"spawns,omitempty"`
+	Objects     []seededMapObject `json:"objects,omitempty"`
+	ComponentID uint32            `json:"component_id"`
+	Image       string            `json:"image"`
+	MarkerCount int               `json:"marker_count"`
+	ImageURL    string            `json:"image_url"`
 }
 
 type campaignMapMarker struct {

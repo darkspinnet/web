@@ -1,5 +1,5 @@
 +++
-title = "Operative Modifier"
+title = "Operative Passive"
 ability = "operativemodifier"
 generated = true
 +++

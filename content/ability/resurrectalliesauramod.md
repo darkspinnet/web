@@ -1,5 +1,5 @@
 +++
-title = "Resurrect Allies Aura Mod"
+title = "Revival Aura"
 ability = "resurrectalliesauramod"
 generated = true
 +++

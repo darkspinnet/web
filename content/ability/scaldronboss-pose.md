@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Pose"
+title = "Corruptor Pose"
 ability = "scaldronboss-pose"
 generated = true
 +++

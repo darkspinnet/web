@@ -1,5 +1,5 @@
 +++
-title = "Scal Disease Plant"
+title = "Disease Plant Burst"
 ability = "scaldiseaseplant"
 generated = true
 +++

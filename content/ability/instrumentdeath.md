@@ -1,5 +1,5 @@
 +++
-title = "Instrument Death"
+title = "Stabilizer Blast"
 ability = "instrumentdeath"
 generated = true
 +++

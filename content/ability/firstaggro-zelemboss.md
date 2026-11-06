@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Zelem Boss"
+title = "Polaris Entrance"
 ability = "firstaggro-zelemboss"
 generated = true
 +++

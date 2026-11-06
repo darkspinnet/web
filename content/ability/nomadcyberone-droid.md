@@ -1,5 +1,5 @@
 +++
-title = "Nomad Cyber One Droid"
+title = "Healing Droid"
 ability = "nomadcyberone-droid"
 generated = true
 +++

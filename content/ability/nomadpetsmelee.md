@@ -1,5 +1,5 @@
 +++
-title = "Nomad Pets Melee"
+title = "Pet Summoner Strike"
 ability = "nomadpetsmelee"
 generated = true
 +++

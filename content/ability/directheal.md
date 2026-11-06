@@ -1,5 +1,5 @@
 +++
-title = "Direct Heal"
+title = "Self Heal"
 ability = "directheal"
 generated = true
 +++

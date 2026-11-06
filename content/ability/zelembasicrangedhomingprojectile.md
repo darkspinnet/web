@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Ranged Homing Projectile"
+title = "Raytheoid Homing Shot"
 ability = "zelembasicrangedhomingprojectile"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Nomad Shielder Position For Attack"
+title = "Shield Positioning"
 ability = "nomadshielderpositionforattack"
 generated = true
 +++

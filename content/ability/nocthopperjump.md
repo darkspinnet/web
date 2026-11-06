@@ -1,5 +1,5 @@
 +++
-title = "Noct Hopper Jump"
+title = "Hopper Leap"
 ability = "nocthopperjump"
 generated = true
 +++

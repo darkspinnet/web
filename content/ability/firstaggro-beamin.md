@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Beam In"
+title = "Beam In"
 ability = "firstaggro-beamin"
 generated = true
 +++

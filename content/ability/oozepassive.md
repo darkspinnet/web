@@ -1,5 +1,5 @@
 +++
-title = "Ooze Passive"
+title = "Ooze Growth Passive"
 ability = "oozepassive"
 generated = true
 +++

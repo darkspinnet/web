@@ -277,10 +277,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos_stalagmite_small.Noun",
+          "asset_name": "DEST_prefab_cryos_stalagmite_large.Noun",
           "name": "Stalagmite",
-          "slug": "dest-prefab-cryos-stalagmite-small-noun",
-          "instance_id": 2177136693,
+          "slug": "dest-prefab-cryos-stalagmite-large-noun",
+          "instance_id": 2566882845,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -289,10 +289,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos_stalagmite_large.Noun",
+          "asset_name": "DEST_prefab_cryos_stalagmite_small.Noun",
           "name": "Stalagmite",
-          "slug": "dest-prefab-cryos-stalagmite-large-noun",
-          "instance_id": 2566882845,
+          "slug": "dest-prefab-cryos-stalagmite-small-noun",
+          "instance_id": 2177136693,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -1604,18 +1604,6 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_cryos3_stalagmite_small.Noun",
-          "name": "Stalagmite",
-          "slug": "dest-prefab-cryos3-stalagmite-small-noun",
-          "instance_id": 3599808182,
-          "hit_points": 1,
-          "category": "destructables",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
           "asset_name": "cryos_stalagmite_small_destructible.Noun",
           "name": "Stalagmite",
           "slug": "cryos-stalagmite-small-destructible-noun",
@@ -1632,6 +1620,18 @@
           "name": "Stalagmite",
           "slug": "dest-prefab-cryos3-stalagmite-large-noun",
           "instance_id": 1461008522,
+          "hit_points": 1,
+          "category": "destructables",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
+          "asset_name": "DEST_prefab_cryos3_stalagmite_small.Noun",
+          "name": "Stalagmite",
+          "slug": "dest-prefab-cryos3-stalagmite-small-noun",
+          "instance_id": 3599808182,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -2163,6 +2163,21 @@
           ]
         },
         {
+          "asset_name": "TutorialSpecialOne_Intro.Noun",
+          "name": "Simulated corrupted Quadra",
+          "slug": "tutorialspecialone-intro-noun",
+          "instance_id": 176731811,
+          "hit_points": 140,
+          "element": "plasma",
+          "image": "/image/npc/3bedd74d.png",
+          "category": "combat",
+          "description": "Fires lightning orb volleys, exhausted afterwards",
+          "is_combatant": true,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
           "asset_name": "TutorialSpecialOne.Noun",
           "name": "Simulated corrupted Quadra",
           "slug": "tutorialspecialone-noun",
@@ -2175,21 +2190,6 @@
           "is_combatant": true,
           "sources": [
             "director",
-            "marker"
-          ]
-        },
-        {
-          "asset_name": "TutorialSpecialOne_Intro.Noun",
-          "name": "Simulated corrupted Quadra",
-          "slug": "tutorialspecialone-intro-noun",
-          "instance_id": 176731811,
-          "hit_points": 140,
-          "element": "plasma",
-          "image": "/image/npc/3bedd74d.png",
-          "category": "combat",
-          "description": "Fires lightning orb volleys, exhausted afterwards",
-          "is_combatant": true,
-          "sources": [
             "marker"
           ]
         },
@@ -2324,10 +2324,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2337,10 +2337,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2708,10 +2708,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -2721,10 +2721,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -3053,10 +3053,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
+          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
+          "instance_id": 3581870773,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -3066,10 +3066,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
           "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
-          "instance_id": 3581870773,
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -3456,6 +3456,19 @@
           ]
         },
         {
+          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
+          "name": "Factory Pipe",
+          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
+          "instance_id": 2965694226,
+          "hit_points": 1,
+          "category": "destructables",
+          "description": "Explodes when destroyed, damaging enemies",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
           "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-noun",
@@ -3473,19 +3486,6 @@
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
           "instance_id": 3581870773,
-          "hit_points": 1,
-          "category": "destructables",
-          "description": "Explodes when destroyed, damaging enemies",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
-          "asset_name": "DEST_prefab_citadel_factorypipe_smoke.Noun",
-          "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
-          "instance_id": 2965694226,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -10955,11 +10955,11 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_7.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_8.Noun",
           "name": "Gravitic Stabilizer",
-          "slug": "dest-prefab-islands-instrument-scitech-7-noun",
-          "instance_id": 945107639,
-          "hit_points": 20,
+          "slug": "dest-prefab-islands-instrument-scitech-8-noun",
+          "instance_id": 945107640,
+          "hit_points": 30,
           "category": "destructables",
           "description": "Slows heroes, damages nearby enemies when destroyed",
           "is_combatant": false,
@@ -10968,11 +10968,11 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_8.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_7.Noun",
           "name": "Gravitic Stabilizer",
-          "slug": "dest-prefab-islands-instrument-scitech-8-noun",
-          "instance_id": 945107640,
-          "hit_points": 30,
+          "slug": "dest-prefab-islands-instrument-scitech-7-noun",
+          "instance_id": 945107639,
+          "hit_points": 20,
           "category": "destructables",
           "description": "Slows heroes, damages nearby enemies when destroyed",
           "is_combatant": false,
@@ -12006,6 +12006,19 @@
           ]
         },
         {
+          "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
+          "name": "Factory Pipe",
+          "slug": "dest-prefab-citadel-factorypipe-noun",
+          "instance_id": 1841571896,
+          "hit_points": 1,
+          "category": "destructables",
+          "description": "Explodes when destroyed, damaging enemies",
+          "is_combatant": false,
+          "sources": [
+            "marker"
+          ]
+        },
+        {
           "asset_name": "DEST_prefab_citadel_factorypipe_plasma.Noun",
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-plasma-noun",
@@ -12023,19 +12036,6 @@
           "name": "Factory Pipe",
           "slug": "dest-prefab-citadel-factorypipe-smoke-noun",
           "instance_id": 2965694226,
-          "hit_points": 1,
-          "category": "destructables",
-          "description": "Explodes when destroyed, damaging enemies",
-          "is_combatant": false,
-          "sources": [
-            "marker"
-          ]
-        },
-        {
-          "asset_name": "DEST_prefab_citadel_factorypipe.Noun",
-          "name": "Factory Pipe",
-          "slug": "dest-prefab-citadel-factorypipe-noun",
-          "instance_id": 1841571896,
           "hit_points": 1,
           "category": "destructables",
           "description": "Explodes when destroyed, damaging enemies",
@@ -19429,10 +19429,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11_noShadow.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noshadow-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
+          "instance_id": 945107635,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -19441,10 +19441,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11_noShadow.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
-          "instance_id": 945107635,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noshadow-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20152,10 +20152,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
+          "instance_id": 945107635,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20164,10 +20164,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_3.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-3-noun",
-          "instance_id": 945107635,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20913,10 +20913,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_2.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-2-noun",
-          "instance_id": 945107634,
+          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
+          "instance_id": 1595853970,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,
@@ -20925,10 +20925,10 @@
           ]
         },
         {
-          "asset_name": "DEST_prefab_islands_instrument_scitech_11.Noun",
+          "asset_name": "DEST_prefab_islands_instrument_scitech_2.Noun",
           "name": "Gravitic Regulator",
-          "slug": "dest-prefab-islands-instrument-scitech-11-noun",
-          "instance_id": 1595853970,
+          "slug": "dest-prefab-islands-instrument-scitech-2-noun",
+          "instance_id": 945107634,
           "hit_points": 1,
           "category": "destructables",
           "is_combatant": false,

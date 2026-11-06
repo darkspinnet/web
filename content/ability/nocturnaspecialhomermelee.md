@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Homer Melee"
+title = "Homer Strike"
 ability = "nocturnaspecialhomermelee"
 generated = true
 +++

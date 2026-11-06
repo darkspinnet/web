@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Maser Shot"
+title = "Maser Beam"
 ability = "scaldronbasicmaser-shot"
 generated = true
 +++

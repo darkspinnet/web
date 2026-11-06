@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Boss Minion Melee"
+title = "Orcus Minion Strike"
 ability = "verdanthbossminionmelee"
 generated = true
 +++

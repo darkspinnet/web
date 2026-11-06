@@ -1,5 +1,5 @@
 +++
-title = "Boomer Charge"
+title = "Boomer Rush"
 ability = "boomercharge"
 generated = true
 +++

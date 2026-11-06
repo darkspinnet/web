@@ -1,5 +1,5 @@
 +++
-title = "Cryos Boss Death"
+title = "Merak Death"
 ability = "cryosbossdeath"
 generated = true
 +++

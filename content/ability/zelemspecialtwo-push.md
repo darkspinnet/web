@@ -1,5 +1,5 @@
 +++
-title = "Zelem Special Two Push"
+title = "Repelling Push"
 ability = "zelemspecialtwo-push"
 generated = true
 +++

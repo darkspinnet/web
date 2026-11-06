@@ -2,7 +2,6 @@
 {{ $npc := . }}
 {{ $family := $npc.family_slug | default $npc.slug }}
 {{ $items := slice }}
-{{ $previews := slice }}
 {{ range site.Data.generated.ability.items }}
   {{ $ability := . }}{{ $rank := 4 }}{{ $own := dict }}{{ $fallback := dict }}{{ $fallbackRank := 4 }}
   {{ range .enemies }}
@@ -20,8 +19,7 @@
   {{ end }}
   {{ if lt $rank 4 }}
     {{ $label := index site.Data.npc_basic_attacks $ability.slug | default ($ability.short_name | default $ability.name) }}
-    {{ $items = $items | append (dict "ability" $ability "rank" $rank "label" $label) }}
-    {{ if $own }}{{ $previews = $previews | append $own }}{{ else if $fallback }}{{ $previews = $previews | append $fallback }}{{ end }}
+    {{ $items = $items | append (dict "ability" $ability "rank" $rank "label" $label "preview" ($own | default $fallback) "own_preview" $own) }}
   {{ end }}
 {{ end }}
-{{ return (dict "items" (partial "npc-ability-order.html" $items) "previews" $previews) }}
+{{ return (partial "npc-ability-order.html" $items) }}

@@ -1,5 +1,5 @@
 +++
-title = "Citadel Charge Friend"
+title = "Charge Ally"
 ability = "citadelchargefriend"
 generated = true
 +++

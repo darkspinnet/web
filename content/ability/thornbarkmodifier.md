@@ -1,5 +1,5 @@
 +++
-title = "Thorn Bark Modifier"
+title = "Thorn Bark"
 ability = "thornbarkmodifier"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Ac Death Freeze"
+title = "Air Conditioner Freeze"
 ability = "acdeathfreeze"
 generated = true
 +++

@@ -32,31 +32,23 @@
   const renderProfile = () => {
     const profile = document.querySelector('[data-npc-profile]');
     if (!profile) return;
-    const hp = health(Number(profile.dataset.baseHp), Number(profile.dataset.partyHealth), profile.dataset.healthPolicy);
-    profile.querySelector('[data-npc-health]').textContent = format(hp);
-    profile.querySelector('[data-npc-health-basis]').textContent = profile.dataset.healthPolicy === 'base' ? 'Fixed object HP' : `${format(profile.dataset.baseHp)} base × ${format(stage().health)} difficulty × ${format(partyHealth(Number(profile.dataset.partyHealth)))} party`;
-    let previews = [];
-    try { previews = JSON.parse(document.querySelector('#npc-combat-data')?.textContent || '[]') || []; } catch {}
-    profile.querySelectorAll('[data-npc-ability]').forEach(container => {
-      const preview = previews.find(p => p.asset_name.toLowerCase() === container.dataset.npcAbility.toLowerCase());
-      const values = [];
-      const range = (minimum, maximum, label, rounded) => {
-        if (!(minimum > 0 && maximum >= minimum)) return;
-        const scalar = profile.dataset.healthPolicy === 'base' ? 1 : damageMultiplier();
-        const min = rounded ? Math.floor(Math.fround(minimum * scalar)) : Math.fround(minimum * scalar);
-        const max = rounded ? Math.ceil(Math.fround(maximum * scalar)) : Math.fround(maximum * scalar);
-        values.push(`${format(min)}${min === max ? '' : '–' + format(max)} ${label}`);
+    const {baseHp, partyHealth: coefficient, healthPolicy} = profile.dataset;
+    if (baseHp !== '') {
+      const hp = health(Number(baseHp), Number(coefficient), healthPolicy);
+      profile.querySelector('[data-npc-health]').textContent = format(Math.round(hp));
+      profile.querySelector('[data-npc-health-basis]').title = healthPolicy === 'base'
+        ? `${format(baseHp)} fixed health`
+        : `${format(baseHp)} base × ${format(stage().health)} difficulty × ${format(partyHealth(Number(coefficient)))} party`;
+    }
+    const scalar = healthPolicy === 'base' ? 1 : damageMultiplier();
+    profile.querySelectorAll('[data-npc-combat-range]').forEach(container => {
+      const value = base => {
+        const scaled = Math.fround(Number(base) * scalar);
+        return format(container.hasAttribute('data-round') ? Math.round(scaled) : scaled);
       };
-      if (preview) {
-        range(preview.minimum_damage, preview.maximum_damage, 'damage', true);
-        range(preview.minimum_tick_damage, preview.maximum_tick_damage, 'damage per tick', true);
-        range(preview.minimum_healing, preview.maximum_healing, 'healing', false);
-        if (preview.cooldown > 0) values.push(`${format(preview.cooldown)}s cooldown`);
-        if (preview.range > 0) values.push(`${format(preview.range)}m range`);
-        if (preview.duration > 0) values.push(`${format(preview.duration)}s duration`);
-        if (preview.tick_seconds > 0) values.push(`${format(preview.tick_seconds)}s tick interval`);
-      }
-      container.textContent = values.length ? values.join(' · ') : 'Numeric values unavailable.';
+      const min = value(container.dataset.min);
+      const max = value(container.dataset.max);
+      container.textContent = min === max ? min : `${min}–${max}`;
     });
   };
   const render = () => {

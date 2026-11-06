@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Boss Passive"
+title = "Orcus Encounter Passive"
 ability = "verdanthbosspassive"
 generated = true
 +++

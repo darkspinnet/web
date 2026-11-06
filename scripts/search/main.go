@@ -67,6 +67,7 @@ type abilityCatalog struct {
 }
 type abilityEntry struct {
 	Name        string         `json:"name"`
+	ShortName   string         `json:"short_name"`
 	AssetName   string         `json:"asset_name"`
 	Description string         `json:"description"`
 	Slug        string         `json:"slug"`
@@ -180,7 +181,11 @@ func build(dataPath string) ([][]string, error) {
 			heroes = append(heroes, owner.Name, owner.Element, owner.Class)
 		}
 		meta := strings.ToUpper(strings.ReplaceAll(ability.PrimarySlot, "_", " ")) + " / ABILITY"
-		rows = append(rows, searchRow(ability.Name, "ABILITY", meta, "/ability/"+ability.Slug+"/", ability.Name+" "+ability.AssetName+" "+ability.Description+" "+strings.Join(heroes, " ")+" "+meta))
+		terms := []string{ability.Name, ability.AssetName, ability.Description, strings.Join(heroes, " "), meta}
+		if ability.ShortName != "" && ability.ShortName != ability.Name {
+			terms = append(terms, ability.ShortName)
+		}
+		rows = append(rows, searchRow(ability.Name, "ABILITY", meta, "/ability/"+ability.Slug+"/", strings.Join(terms, " ")))
 	}
 	var buffs buffCatalog
 	err = readJSON(filepath.Join(dataPath, "buff.json"), &buffs)

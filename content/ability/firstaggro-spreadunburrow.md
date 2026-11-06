@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Spread Unburrow"
+title = "Spread Unburrow"
 ability = "firstaggro-spreadunburrow"
 generated = true
 +++

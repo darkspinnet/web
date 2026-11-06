@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Melee Dog Distraction"
+title = "Hound Distraction"
 ability = "noctbasicmeleedogdistraction"
 generated = true
 +++

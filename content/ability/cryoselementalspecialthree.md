@@ -1,5 +1,5 @@
 +++
-title = "Cryos Elemental Special Three"
+title = "Cryos Elemental Shot"
 ability = "cryoselementalspecialthree"
 generated = true
 +++

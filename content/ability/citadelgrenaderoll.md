@@ -1,5 +1,5 @@
 +++
-title = "Citadel Grenade Roll"
+title = "Rolling Grenade"
 ability = "citadelgrenaderoll"
 generated = true
 +++

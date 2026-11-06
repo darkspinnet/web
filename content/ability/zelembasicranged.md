@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Ranged"
+title = "Raytheoid Shot"
 ability = "zelembasicranged"
 generated = true
 +++

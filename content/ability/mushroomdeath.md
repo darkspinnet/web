@@ -1,5 +1,5 @@
 +++
-title = "Mushroom Death"
+title = "Mushroom Break"
 ability = "mushroomdeath"
 generated = true
 +++

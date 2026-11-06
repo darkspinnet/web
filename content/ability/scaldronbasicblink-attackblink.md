@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Blink Attack Blink"
+title = "Blink Ambush"
 ability = "scaldronbasicblink-attackblink"
 generated = true
 +++

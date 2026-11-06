@@ -1,5 +1,5 @@
 +++
-title = "Citadel Minion Melee Flamethrower"
+title = "Flamethrower"
 ability = "citadelminionmelee-flamethrower"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Zelem Basic Hybrid Melee"
+title = "Hybrid Strike"
 ability = "zelembasichybridmelee"
 generated = true
 +++

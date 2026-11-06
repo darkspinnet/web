@@ -1,5 +1,5 @@
 +++
-title = "Nomad Bio Special Two Swipe"
+title = "Nomad Swipe"
 ability = "nomadbiospecialtwoswipe"
 generated = true
 +++

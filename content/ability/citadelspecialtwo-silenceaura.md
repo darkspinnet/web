@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Two Silence Aura"
+title = "Silence Aura"
 ability = "citadelspecialtwo-silenceaura"
 generated = true
 +++

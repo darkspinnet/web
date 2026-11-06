@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special One Passive Modifier"
+title = "Nomad Charger Passive"
 ability = "nomadspecialonepassivemodifier"
 generated = true
 +++

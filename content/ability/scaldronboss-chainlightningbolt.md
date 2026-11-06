@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Chain Lightning Bolt"
+title = "Corruptor Lightning Sweep"
 ability = "scaldronboss-chainlightningbolt"
 generated = true
 +++

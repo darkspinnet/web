@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Drift Passive"
+title = "Drift Life Drain"
 ability = "nocturnaspecialdriftpassive"
 generated = true
 +++

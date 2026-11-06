@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Sinkhole Projectile"
+title = "Sinkhole Shot"
 ability = "scaldronbasicsinkhole-projectile"
 generated = true
 +++

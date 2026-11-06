@@ -1,5 +1,5 @@
 +++
-title = "Nomad Drag Taunt"
+title = "Drag Taunt"
 ability = "nomaddrag-taunt"
 generated = true
 +++

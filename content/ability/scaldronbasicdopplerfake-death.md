@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Doppler Fake Death"
+title = "Doppler Clone Death"
 ability = "scaldronbasicdopplerfake-death"
 generated = true
 +++

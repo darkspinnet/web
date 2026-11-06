@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Homer Passive"
+title = "Homer Passive"
 ability = "nocturnaspecialhomerpassive"
 generated = true
 +++

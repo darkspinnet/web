@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Special One"
+title = "Tutorial Special Entrance"
 ability = "firstaggro-specialone"
 generated = true
 +++

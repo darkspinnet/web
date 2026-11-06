@@ -1,5 +1,5 @@
 +++
-title = "Stealther Melee"
+title = "Stealther Strike"
 ability = "stealthermelee"
 generated = true
 +++

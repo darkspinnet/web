@@ -1,5 +1,5 @@
 +++
-title = "Slow Nova"
+title = "Slowing Nova"
 ability = "slownova"
 generated = true
 +++

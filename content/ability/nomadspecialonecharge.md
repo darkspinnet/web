@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special One Charge"
+title = "Nomad Charge"
 ability = "nomadspecialonecharge"
 generated = true
 +++

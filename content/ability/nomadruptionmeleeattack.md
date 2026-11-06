@@ -1,5 +1,5 @@
 +++
-title = "Nomad Ruption Melee Attack"
+title = "Ruption Strike"
 ability = "nomadruptionmeleeattack"
 generated = true
 +++

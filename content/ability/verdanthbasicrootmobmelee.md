@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Root Mob Melee"
+title = "Rooted Strike"
 ability = "verdanthbasicrootmobmelee"
 generated = true
 +++

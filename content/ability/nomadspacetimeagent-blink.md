@@ -1,5 +1,5 @@
 +++
-title = "Nomad Spacetime Agent Blink"
+title = "Spacetime Blink"
 ability = "nomadspacetimeagent-blink"
 generated = true
 +++

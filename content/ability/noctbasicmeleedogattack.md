@@ -1,5 +1,5 @@
 +++
-title = "Noct Basic Melee Dog Attack"
+title = "Shadow Hound Strike"
 ability = "noctbasicmeleedogattack"
 generated = true
 +++

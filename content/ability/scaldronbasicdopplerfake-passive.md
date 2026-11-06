@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Doppler Fake Passive"
+title = "Doppler Clone Passive"
 ability = "scaldronbasicdopplerfake-passive"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Mines Melee"
+title = "Mine Strike"
 ability = "scaldronbasicmines-melee"
 generated = true
 +++

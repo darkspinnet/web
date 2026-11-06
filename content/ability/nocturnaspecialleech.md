@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Leech"
+title = "Leech Shot"
 ability = "nocturnaspecialleech"
 generated = true
 +++

@@ -1,5 +1,5 @@
 +++
-title = "Drainer Death Detonate"
+title = "Drainer Death Blast"
 ability = "drainerdeathdetonate"
 generated = true
 +++

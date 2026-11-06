@@ -1,5 +1,5 @@
 +++
-title = "Cryos Poison Melee"
+title = "Poison Strike"
 ability = "cryospoisonmelee"
 generated = true
 +++

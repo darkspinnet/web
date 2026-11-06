@@ -1,5 +1,9 @@
 {{ $level := .level }}
 {{ $map := .map }}
+{{ $lieutenants := slice }}
+{{ with $level.campaign }}
+  {{ range where .enemies "role" "Lieutenant" }}{{ $lieutenants = $lieutenants | append .slug }}{{ end }}
+{{ end }}
 <article class="console-panel level-map-panel">
   <header><div><span>{{ .number }}</span><h2>{{ if $level.campaign }}Mission{{ else }}Navigation{{ end }} minimap</h2></div><small>{{ len $map.sections }} CONNECTED COMPONENTS</small></header>
   {{ if and $level.replay $map.labels }}
@@ -7,35 +11,103 @@
   {{ else if and (not $map.run_seed) $map.labels }}
   <p class="level-estimate-note">Each image shows a connected area and its authored encounter points.</p>
   {{ end }}
+  {{ if $map.run_seed }}
+  <div class="level-map-legend level-map-filters" role="group" aria-label="Visible minimap markers">
+    {{ range slice
+      (dict "kind" "destructible" "label" "Destructibles" "icon" true)
+      (dict "kind" "obelisk" "label" "Obelisks" "icon" true)
+      (dict "kind" "teleport" "label" "Teleporters" "icon" true)
+      (dict "kind" "minion" "label" "Minions")
+      (dict "kind" "lieutenant" "label" "Lieutenants")
+      (dict "kind" "captain" "label" "Captains")
+      (dict "kind" "destructor" "label" "Destructors") }}
+    <label>
+      <input type="checkbox" data-map-toggle="{{ .kind }}"{{ if ne .kind "destructible" }} checked{{ end }}>
+      {{ if .icon }}
+      <svg class="level-map-object is-{{ .kind }}" viewBox="{{ if eq .kind "teleport" }}-12 -12 24 24{{ else }}-10 -10 20 20{{ end }}" width="20" height="20" aria-hidden="true">{{ partial "level-map-object-icon.html" .kind }}</svg>
+      {{ end }}
+      {{ .label }}
+    </label>
+    {{ end }}
+  </div>
+  {{ end }}
   <div class="level-map-gallery">
     {{ range $map.sections }}
-    <figure>
+    <figure{{ if $map.run_seed }} data-map-viewport{{ end }}>
       {{ if $map.run_seed }}
       <svg class="level-seeded-map" viewBox="0 0 512 512" role="group" aria-label="{{ $level.display_name }} spawn map, component {{ .component_id }}">
         <image href="{{ .image_url | strings.TrimPrefix "/" | relURL }}" width="512" height="512"/>
-        {{ range .spawns }}
-          {{ $npc := index site.Data.generated.npc.entry .slug }}
-          {{ $name := $npc.name | default .name }}
-          <g transform="translate({{ .x }} {{ .y }})" class="level-map-spawn{{ if .destructor }} is-destructor{{ end }}">
-            <title>{{ $name }}{{ if .destructor }} (Destructor encounter){{ end }}</title>
-            {{ if .destructor }}
-              <circle r="15"/>
-              {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-13" y="-13" width="26" height="26"/>{{ end }}
-            {{ else }}
-              <circle r="7"/>
-              {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-7" y="-7" width="14" height="14"/>{{ end }}
-            {{ end }}
+        {{ with .objects }}{{ range sort (where . "kind" "ne" "teleport") "kind" }}
+          {{ $label := .name }}
+          {{ if eq .kind "destructible" }}
+            {{ with index site.Data.generated.npc.entry .slug }}{{ $label = .name | default $label }}{{ end }}
+            {{ $label = printf "%s (destructible)" $label }}
+          {{ end }}
+          <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-{{ .kind }}" role="img" aria-label="{{ $label }}">
+            <title>{{ $label }}</title>
+            {{ partial "level-map-object-icon.html" .kind }}
           </g>
+        {{ end }}{{ end }}
+        {{ $minionSpawns := slice }}
+        {{ $lieutenantSpawns := slice }}
+        {{ $encounterSpawns := slice }}
+        {{ range .spawns }}
+          {{ if or .captain .destructor }}
+            {{ $encounterSpawns = $encounterSpawns | append . }}
+          {{ else if in $lieutenants .slug }}
+            {{ $lieutenantSpawns = $lieutenantSpawns | append . }}
+          {{ else }}
+            {{ $minionSpawns = $minionSpawns | append . }}
+          {{ end }}
+        {{ end }}
+        {{ $objects := .objects | default slice }}
+        {{ range $layer, $spawns := slice $minionSpawns $lieutenantSpawns $encounterSpawns }}
+          {{ if eq $layer 2 }}
+            {{ range where $objects "kind" "teleport" }}
+              {{ $label := .name }}
+              {{ with .destination_component }}{{ $label = printf "%s → Component %02.0f" $label . }}{{ end }}
+              <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-teleport" role="img" aria-label="{{ $label }}">
+                <title>{{ $label }}</title>
+                {{ partial "level-map-object-icon.html" "teleport" }}
+              </g>
+            {{ end }}
+          {{ end }}
+          {{ range $spawns }}
+          {{ $npc := index site.Data.generated.npc.entry .slug }}
+          {{ $name := .spawn_name | default ($npc.name | default .name) }}
+          {{ $role := "minion" }}
+          {{ $radius := 7 }}{{ $portrait := 7 }}
+          {{ if .destructor }}
+            {{ $role = "destructor" }}{{ $radius = 15 }}{{ $portrait = 13 }}
+          {{ else if .captain }}
+            {{ $role = "captain" }}{{ $radius = 13 }}{{ $portrait = 12 }}
+          {{ else if in $lieutenants .slug }}
+            {{ $role = "lieutenant" }}{{ $radius = 11 }}{{ $portrait = 10 }}
+          {{ end }}
+          <g transform="translate({{ .x }} {{ .y }})" class="level-map-spawn is-{{ $role }}{{ if and .affixes (not (or .captain .destructor)) }} is-affixed{{ end }}">
+            <title>{{ $name }}{{ if .destructor }} (Destructor encounter){{ else if .captain }} (Captain encounter){{ else if eq $role "lieutenant" }} (Lieutenant){{ end }}{{ with .affixes }} · {{ delimit . ", " }}{{ end }}</title>
+            <circle r="{{ $radius }}"/>
+            {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-{{ $portrait }}" y="-{{ $portrait }}" width="{{ mul $portrait 2 }}" height="{{ mul $portrait 2 }}"/>{{ end }}
+          </g>
+          {{ end }}
         {{ end }}
       </svg>
+      <div class="level-map-navigation" role="group" aria-label="Component {{ printf "%02.0f" .component_id }} map controls" hidden>
+        <span>Scroll to zoom · Drag to pan</span>
+        <button type="button" data-map-action="out" aria-label="Zoom out">−</button>
+        <button type="button" data-map-action="in" aria-label="Zoom in">+</button>
+        <button type="button" data-map-action="reset">Reset</button>
+      </div>
       {{ else }}
       <a href="{{ .image_url | strings.TrimPrefix "/" | relURL }}"><img src="{{ .image_url | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.display_name }} navigation component {{ .component_id }}" loading="lazy"></a>
       {{ end }}
-      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} {{ if $map.run_seed }}enemy markers{{ else }}mapped points{{ end }}</strong></figcaption>
+      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} {{ if $map.run_seed }}total enemy markers{{ else }}mapped points{{ end }}</strong></figcaption>
     </figure>
     {{ end }}
   </div>
-  <div class="level-map-legend">
-    {{ range $label, $meaning := $map.labels }}<span><b>{{ $label }}</b>{{ $meaning }}</span>{{ end }}
-  </div>
+  {{ with $map.labels }}
+    <div class="level-map-legend">
+      {{ range $label, $meaning := . }}<span><b>{{ $label }}</b>{{ $meaning }}</span>{{ end }}
+    </div>
+  {{ end }}
 </article>

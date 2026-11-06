@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Boss Ground Slam"
+title = "Orcus Ground Slam"
 ability = "verdanthboss-groundslam"
 generated = true
 +++

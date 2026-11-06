@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special Four"
+title = "Frog Attack Windup"
 ability = "nomadspecialfour"
 generated = true
 +++

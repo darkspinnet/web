@@ -1,5 +1,5 @@
 +++
-title = "Nocturna Special Drift Charge"
+title = "Drift Charge"
 ability = "nocturnaspecialdriftcharge"
 generated = true
 +++

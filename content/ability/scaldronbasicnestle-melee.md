@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Nestle Melee"
+title = "Nestle Strike"
 ability = "scaldronbasicnestle-melee"
 generated = true
 +++

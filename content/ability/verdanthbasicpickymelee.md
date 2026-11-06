@@ -1,5 +1,5 @@
 +++
-title = "Verdanth Basic Picky Melee"
+title = "Picky Strike"
 ability = "verdanthbasicpickymelee"
 generated = true
 +++

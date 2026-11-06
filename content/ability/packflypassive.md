@@ -1,5 +1,5 @@
 +++
-title = "Packfly Passive"
+title = "Packfly Boost"
 ability = "packflypassive"
 generated = true
 +++

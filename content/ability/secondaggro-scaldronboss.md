@@ -1,5 +1,5 @@
 +++
-title = "Second Aggro Scaldron Boss"
+title = "Corruptor Reengagement"
 ability = "secondaggro-scaldronboss"
 generated = true
 +++

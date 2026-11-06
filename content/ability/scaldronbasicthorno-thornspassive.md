@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Basic Thorno Thorns Passive"
+title = "Thorno Thorns"
 ability = "scaldronbasicthorno-thornspassive"
 generated = true
 +++

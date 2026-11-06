@@ -1,5 +1,5 @@
 +++
-title = "Nomad Special Three Passive Modifier"
+title = "Nomad Energy Defense"
 ability = "nomadspecialthreepassivemodifier"
 generated = true
 +++

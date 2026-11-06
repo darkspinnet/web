@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Turret"
+title = "Turret Activation"
 ability = "firstaggro-turret"
 generated = true
 +++

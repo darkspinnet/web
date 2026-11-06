@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Death"
+title = "Corruptor Death"
 ability = "scaldronbossdeath"
 generated = true
 +++

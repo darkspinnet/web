@@ -1,5 +1,5 @@
 +++
-title = "Chain Lightning Bolt"
+title = "Lightning Sweep"
 ability = "chainlightningbolt"
 generated = true
 +++

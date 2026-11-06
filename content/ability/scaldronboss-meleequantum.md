@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss Melee Quantum"
+title = "Corruptor Quantum Strike"
 ability = "scaldronboss-meleequantum"
 generated = true
 +++

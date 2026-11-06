@@ -1,5 +1,5 @@
 +++
-title = "Nomad Drag Slow Shield"
+title = "Slow Shield"
 ability = "nomaddrag-slowshield"
 generated = true
 +++

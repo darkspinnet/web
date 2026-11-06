@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Two Homing Stun"
+title = "Homing Stun Bolt"
 ability = "citadelspecialtwo-homingstun"
 generated = true
 +++

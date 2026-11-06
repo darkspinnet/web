@@ -1,5 +1,5 @@
 +++
-title = "Fast Swipe"
+title = "Quick Swipe"
 ability = "fastswipe"
 generated = true
 +++

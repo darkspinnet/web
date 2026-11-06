@@ -22,7 +22,7 @@ func Hero() error {
 	return nil
 }
 
-// Ability refreshes the hero ability ownership catalog and global lookup index.
+// Ability refreshes creature data, the hero and enemy ability catalog, and search.
 func Ability() error {
 	if err := Npc(); err != nil {
 		return err

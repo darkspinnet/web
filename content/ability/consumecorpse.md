@@ -1,5 +1,5 @@
 +++
-title = "Consume Corpse"
+title = "Corpse Growth"
 ability = "consumecorpse"
 generated = true
 +++

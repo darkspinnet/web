@@ -1,5 +1,5 @@
 +++
-title = "Exploding Egg Death"
+title = "Egg Burst"
 ability = "explodingeggdeath"
 generated = true
 +++

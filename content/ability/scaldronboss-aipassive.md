@@ -1,5 +1,5 @@
 +++
-title = "Scaldron Boss AIPassive"
+title = "Corruptor Phase Passive"
 ability = "scaldronboss-aipassive"
 generated = true
 +++

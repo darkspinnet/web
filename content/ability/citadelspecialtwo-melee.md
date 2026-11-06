@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special Two Melee"
+title = "Citadel Melee Strike"
 ability = "citadelspecialtwo-melee"
 generated = true
 +++

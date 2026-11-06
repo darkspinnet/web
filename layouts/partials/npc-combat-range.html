@@ -1,0 +1,7 @@
+{{ $min := printf "%.3f" .min | replaceRE "[.]?0+$" "" }}
+{{ $max := printf "%.3f" .max | replaceRE "[.]?0+$" "" }}
+{{ if .round }}
+  {{ $min = printf "%.0f" (math.Round .min) }}
+  {{ $max = printf "%.0f" (math.Round .max) }}
+{{ end }}
+<span data-npc-combat-range data-min="{{ .min }}" data-max="{{ .max }}"{{ if .round }} data-round{{ end }}>{{ $min }}{{ if ne $min $max }}–{{ $max }}{{ end }}</span>

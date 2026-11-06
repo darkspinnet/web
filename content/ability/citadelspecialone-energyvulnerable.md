@@ -1,5 +1,5 @@
 +++
-title = "Citadel Special One Energy Vulnerable"
+title = "Energy Vulnerability"
 ability = "citadelspecialone-energyvulnerable"
 generated = true
 +++

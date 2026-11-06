@@ -1,5 +1,5 @@
 +++
-title = "First Aggro Anim Non Facing"
+title = "Non-Turning Alert"
 ability = "firstaggro-anim-nonfacing"
 generated = true
 +++

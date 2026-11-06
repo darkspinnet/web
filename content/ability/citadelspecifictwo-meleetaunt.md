@@ -1,5 +1,5 @@
 +++
-title = "Citadel Specific Two Melee Taunt"
+title = "Taunting Strike"
 ability = "citadelspecifictwo-meleetaunt"
 generated = true
 +++
