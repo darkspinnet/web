@@ -23719,7 +23719,7 @@
             "NomadSnipe_2.Noun",
             "VerdanthSpecialTwo_2.Noun",
             "ZelemSpecialThree_2.Noun",
-            "NomadSnipe_Captain_2.Noun"
+            "ZelemBoss_2.Noun"
           ],
           "aliases": [
             "zelems_3",
@@ -24453,15 +24453,10 @@
                   {
                     "x": 212,
                     "y": 223,
-                    "slug": "nomadsnipe-captain-2-noun",
-                    "name": "Nomad Snipe Captain 2",
-                    "captain": true,
-                    "spawn_name": "Aloys the Velocity Archfiend",
-                    "affixes": [
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Tough"
-                    ]
+                    "slug": "zelemboss-2-noun",
+                    "name": "Zelem Boss 2",
+                    "destructor": true,
+                    "spawn_name": "Polaris, The Gravity Manipulator"
                   }
                 ],
                 "objects": [
@@ -24590,29 +24585,20 @@
                 "behavior": ""
               },
               {
-                "name": "Aloys the Velocity Archfiend",
-                "noun": "NomadSnipe_Captain_2",
-                "slug": "nomadsnipe-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 70,
-                "base_hit_points": 70,
-                "estimated_hit_points": 5267.5,
+                "name": "Polaris, The Gravity Manipulator",
+                "noun": "ZelemBoss_2",
+                "slug": "zelemboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1750,
+                "estimated_hit_points": 18812.5,
+                "estimated_damage_min": 283.3,
+                "estimated_damage_max": 283.3,
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.",
-                  "Chases after slowed heroes and uses a physical melee attack."
+                  "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Aloys the Velocity Archfiend",
-                    "affixes": [
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Tough"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -27338,7 +27324,7 @@
             "VerdanthSpecialOne_2.Noun",
             "NocturnaSpecialLeech_2.Noun",
             "NomadScope_2.Noun",
-            "VerdanthSpecialOne_Captain_2.Noun"
+            "VerdanthBoss_2.Noun"
           ],
           "aliases": [
             "verdanth_3",
@@ -27908,15 +27894,10 @@
                   {
                     "x": 258,
                     "y": 292,
-                    "slug": "verdanthspecialone-captain-2-noun",
-                    "name": "Verdanth Special One Captain 2",
-                    "captain": true,
-                    "spawn_name": "Cormeer the Cloud of Death",
-                    "affixes": [
-                      "Swift",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ]
+                    "slug": "verdanthboss-2-noun",
+                    "name": "Verdanth Boss 2",
+                    "destructor": true,
+                    "spawn_name": "Orcus, Devourer of Life"
                   }
                 ],
                 "objects": [
@@ -28075,32 +28056,17 @@
                 "behavior": ""
               },
               {
-                "name": "Cormeer the Cloud of Death",
-                "noun": "VerdanthSpecialOne_Captain_2",
-                "slug": "verdanthspecialone-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 69,
-                "base_hit_points": 120,
-                "estimated_hit_points": 9528,
-                "estimated_damage_min": 22.2,
-                "estimated_damage_max": 44.4,
-                "estimated_damage_type": "Elements (energy)",
+                "name": "Orcus, Devourer of Life",
+                "noun": "VerdanthBoss_2",
+                "slug": "verdanthboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1750,
+                "estimated_hit_points": 27790,
                 "descriptions": [
-                  "Burrows underground and tunnels until close to a hero.",
-                  "Springs from the earth launching a poison area effect attack."
+                  "Consumes spawns, breathes disease, thorn barrage"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Cormeer the Cloud of Death",
-                    "affixes": [
-                      "Swift",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -30308,7 +30274,7 @@
             "CryosSpecialTwo_2.Noun",
             "ZelemSpecialTwo_2.Noun",
             "NomadSpecialThree_2.Noun",
-            "CryosSpecialTwo_Captain_2.Noun"
+            "CryosBoss_2.Noun"
           ],
           "aliases": [
             "cryos_3",
@@ -31922,15 +31888,10 @@
                   {
                     "x": 243,
                     "y": 259,
-                    "slug": "cryosspecialtwo-captain-2-noun",
-                    "name": "Cryos Special Two Captain 2",
-                    "captain": true,
-                    "spawn_name": "Astri the Magnificent Igniter",
-                    "affixes": [
-                      "Persistent",
-                      "Persistent Aura",
-                      "Reflective"
-                    ]
+                    "slug": "cryosboss-2-noun",
+                    "name": "Cryos Boss 2",
+                    "destructor": true,
+                    "spawn_name": "Merak, The Devastator"
                   }
                 ],
                 "objects": [
@@ -32295,32 +32256,20 @@
                 "behavior": ""
               },
               {
-                "name": "Astri the Magnificent Igniter",
-                "noun": "CryosSpecialTwo_Captain_2",
-                "slug": "cryosspecialtwo-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 78,
-                "base_hit_points": 120,
-                "estimated_hit_points": 14070,
-                "estimated_damage_min": 47,
-                "estimated_damage_max": 94,
+                "name": "Merak, The Devastator",
+                "noun": "CryosBoss_2",
+                "slug": "cryosboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1400,
+                "estimated_hit_points": 32830,
+                "estimated_damage_min": 187.9,
+                "estimated_damage_max": 469.8,
                 "estimated_damage_type": "Elements (energy)",
                 "descriptions": [
-                  "Throws multiple fireballs in a spread pattern.",
-                  "Heroes who are hit by a fireball will burn and take damage over time."
+                  "Chain lightning, geysers, summons minions when damaged"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Astri the Magnificent Igniter",
-                    "affixes": [
-                      "Persistent",
-                      "Persistent Aura",
-                      "Reflective"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -34972,7 +34921,7 @@
             "NomadShielder_2.Noun",
             "CryosElementalSpecialThree_2.Noun",
             "NocturnaSpecialDrift_2.Noun",
-            "NomadShielder_Captain_2.Noun"
+            "CitadelBoss_2.Noun"
           ],
           "aliases": [
             "infinity_2",
@@ -35870,15 +35819,10 @@
                   {
                     "x": 272,
                     "y": 283,
-                    "slug": "nomadshielder-captain-2-noun",
-                    "name": "Nomad Shielder Captain 2",
-                    "captain": true,
-                    "spawn_name": "MKS-522 the Shielded Explosionist",
-                    "affixes": [
-                      "Accurate",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ]
+                    "slug": "citadelboss-2-noun",
+                    "name": "Citadel Boss 2",
+                    "destructor": true,
+                    "spawn_name": "Arcturus, the Cybernetic Colossus"
                   }
                 ],
                 "objects": [
@@ -36016,33 +35960,20 @@
                 "behavior": ""
               },
               {
-                "name": "MKS-522 the Shielded Explosionist",
-                "noun": "NomadShielder_Captain_2",
-                "slug": "nomadshielder-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 35,
-                "base_hit_points": 90,
-                "estimated_hit_points": 15583.5,
+                "name": "Arcturus, the Cybernetic Colossus",
+                "noun": "CitadelBoss_2",
+                "slug": "citadelboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1750,
+                "estimated_hit_points": 60602.5,
                 "estimated_damage_min": 88.4,
                 "estimated_damage_max": 176.7,
-                "estimated_damage_type": "Technology (physical)",
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Has an impenetrable shield that prevents all damage from the front.",
-                  "Lobs exploding cluster grenades from behind the shield.",
-                  "Will knock back heroes that venture too close to his front."
+                  "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "MKS-522 the Shielded Explosionist",
-                    "affixes": [
-                      "Accurate",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -38754,7 +38685,7 @@
             "Rezzer_2.Noun",
             "CryosSpecialThree_2.Noun",
             "NomadWithDrone_2.Noun",
-            "Rezzer_Captain_2.Noun"
+            "ShadowBoss_2.Noun"
           ],
           "aliases": [
             "nocturna_3",
@@ -39359,15 +39290,10 @@
                   {
                     "x": 312,
                     "y": 128,
-                    "slug": "rezzer-captain-2-noun",
-                    "name": "Rezzer Captain 2",
-                    "captain": true,
-                    "spawn_name": "Zabbe the Grand Overseer",
-                    "affixes": [
-                      "Ghostly",
-                      "Swift",
-                      "Tough"
-                    ]
+                    "slug": "shadowboss-2-noun",
+                    "name": "Shadow Boss 2",
+                    "destructor": true,
+                    "spawn_name": "Nashira, The Shadow Void"
                   }
                 ],
                 "objects": [
@@ -39608,29 +39534,20 @@
                 "behavior": ""
               },
               {
-                "name": "Zabbe the Grand Overseer",
-                "noun": "Rezzer_Captain_2",
-                "slug": "rezzer-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 75,
-                "base_hit_points": 80,
-                "estimated_hit_points": 28644,
+                "name": "Nashira, The Shadow Void",
+                "noun": "ShadowBoss_2",
+                "slug": "shadowboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1500,
+                "estimated_hit_points": 76725,
+                "estimated_damage_min": 747.8,
+                "estimated_damage_max": 934.8,
+                "estimated_damage_type": "Supernatural (energy)",
                 "descriptions": [
-                  "Resurrects nearby allies who have recently been killed.",
-                  "In between resurrections, flees and throws ghostly projectiles."
+                  "Lobs shadow attacks and creates mirror images"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Zabbe the Grand Overseer",
-                    "affixes": [
-                      "Ghostly",
-                      "Swift",
-                      "Tough"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -41723,7 +41640,7 @@
             "NomadBioSpecialTwo_2.Noun",
             "NomadShielder_2.Noun",
             "NomadScope_2.Noun",
-            "NomadBioSpecialTwo_Captain_2.Noun"
+            "ScaldronBoss_2.Noun"
           ],
           "aliases": [
             "scaldron_1",
@@ -42391,15 +42308,10 @@
                   {
                     "x": 253,
                     "y": 255,
-                    "slug": "nomadbiospecialtwo-captain-2-noun",
-                    "name": "Nomad Bio Special Two Captain 2",
-                    "captain": true,
-                    "spawn_name": "Roart the Blitzkrieg",
-                    "affixes": [
-                      "Deadly",
-                      "Tough",
-                      "Unstoppable"
-                    ]
+                    "slug": "scaldronboss-2-noun",
+                    "name": "Scaldron Boss 2",
+                    "destructor": true,
+                    "spawn_name": "The Corruptor"
                   }
                 ],
                 "objects": [
@@ -42527,32 +42439,20 @@
                 "behavior": ""
               },
               {
-                "name": "Roart the Blitzkrieg",
-                "noun": "NomadBioSpecialTwo_Captain_2",
-                "slug": "nomadbiospecialtwo-captain-2-noun",
-                "role": "Captain",
-                "challenge_value": 75,
-                "base_hit_points": 100,
-                "estimated_hit_points": 52885,
-                "estimated_damage_min": 351.6,
-                "estimated_damage_max": 703.2,
-                "estimated_damage_type": "Life (physical)",
+                "name": "The Corruptor",
+                "noun": "ScaldronBoss_2",
+                "slug": "scaldronboss-2-noun",
+                "role": "Destructor",
+                "challenge_value": 0,
+                "base_hit_points": 1000,
+                "estimated_hit_points": 75550,
+                "estimated_damage_min": 219.8,
+                "estimated_damage_max": 219.8,
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Can close distance quickly with his leap attack.",
-                  "Will resurrect if killed at the wrong time."
+                  "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Roart the Blitzkrieg",
-                    "affixes": [
-                      "Deadly",
-                      "Tough",
-                      "Unstoppable"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -45416,7 +45316,7 @@
             "CryosSpecialThree_3.Noun",
             "CitadelSpecialFour_3.Noun",
             "Boomer_3.Noun",
-            "CryosSpecialThree_Captain_3.Noun"
+            "VerdanthBoss_3.Noun"
           ],
           "aliases": [
             "verdanth_1",
@@ -45916,16 +45816,10 @@
                   {
                     "x": 241,
                     "y": 211,
-                    "slug": "cryosspecialthree-captain-3-noun",
-                    "name": "Cryos Special Three Captain 3",
-                    "captain": true,
-                    "spawn_name": "Ulf the Dark Sunderer",
-                    "affixes": [
-                      "Armored",
-                      "Carapace",
-                      "Swift",
-                      "Swift Aura"
-                    ]
+                    "slug": "verdanthboss-3-noun",
+                    "name": "Verdanth Boss 3",
+                    "destructor": true,
+                    "spawn_name": "Orcus, Devourer of Life"
                   }
                 ],
                 "objects": [
@@ -46055,30 +45949,17 @@
                 "behavior": ""
               },
               {
-                "name": "Ulf the Dark Sunderer",
-                "noun": "CryosSpecialThree_Captain_3",
-                "slug": "cryosspecialthree-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 75,
-                "base_hit_points": 100,
-                "estimated_hit_points": 56185,
+                "name": "Orcus, Devourer of Life",
+                "noun": "VerdanthBoss_3",
+                "slug": "verdanthboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 2000,
+                "estimated_hit_points": 224740,
                 "descriptions": [
-                  "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.",
-                  "Will close on sleeping heroes and hit them with a melee swipe attack."
+                  "Consumes spawns, breathes disease, thorn barrage"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Ulf the Dark Sunderer",
-                    "affixes": [
-                      "Armored",
-                      "Carapace",
-                      "Swift",
-                      "Swift Aura"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -48776,7 +48657,7 @@
             "CitadelSpecialTwo_3.Noun",
             "CryosSpecialThree_3.Noun",
             "Boomer_3.Noun",
-            "CitadelSpecialFour_Captain_3.Noun"
+            "CitadelBoss_3.Noun"
           ],
           "aliases": [
             "infinity_3",
@@ -49424,16 +49305,10 @@
                   {
                     "x": 241,
                     "y": 288,
-                    "slug": "citadelspecialfour-captain-3-noun",
-                    "name": "Citadel Special Four Captain 3",
-                    "captain": true,
-                    "spawn_name": "ZW-08 the Omnipotent",
-                    "affixes": [
-                      "Frenzied",
-                      "Shielded",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ]
+                    "slug": "citadelboss-3-noun",
+                    "name": "Citadel Boss 3",
+                    "destructor": true,
+                    "spawn_name": "Arcturus, the Cybernetic Colossus"
                   }
                 ],
                 "objects": [
@@ -49593,33 +49468,20 @@
                 "behavior": ""
               },
               {
-                "name": "ZW-08 the Omnipotent",
-                "noun": "CitadelSpecialFour_Captain_3",
-                "slug": "citadelspecialfour-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 75,
-                "base_hit_points": 100,
-                "estimated_hit_points": 84240,
+                "name": "Arcturus, the Cybernetic Colossus",
+                "noun": "CitadelBoss_3",
+                "slug": "citadelboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 2000,
+                "estimated_hit_points": 336960,
                 "estimated_damage_min": 536.8,
-                "estimated_damage_max": 894.6,
-                "estimated_damage_type": "Technology (physical)",
+                "estimated_damage_max": 1073.5,
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Can slam the ground, knocking nearby heroes up into the air.",
-                  "When damaged, will use a repair arm to restore its own health."
+                  "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "ZW-08 the Omnipotent",
-                    "affixes": [
-                      "Frenzied",
-                      "Shielded",
-                      "Unstoppable",
-                      "Unstoppable Aura"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -51935,7 +51797,7 @@
             "NomadRuption_3.Noun",
             "Rezzer_3.Noun",
             "NomadDrag_3.Noun",
-            "NomadRuption_Captain_3.Noun"
+            "CryosBoss_3.Noun"
           ],
           "aliases": [
             "cryos_1",
@@ -52631,16 +52493,10 @@
                   {
                     "x": 258,
                     "y": 247,
-                    "slug": "nomadruption-captain-3-noun",
-                    "name": "Nomad Ruption Captain 3",
-                    "captain": true,
-                    "spawn_name": "Marqx the Fiery Terror",
-                    "affixes": [
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Shifted",
-                      "Tough"
-                    ]
+                    "slug": "cryosboss-3-noun",
+                    "name": "Cryos Boss 3",
+                    "destructor": true,
+                    "spawn_name": "Merak, The Devastator"
                   }
                 ],
                 "objects": [
@@ -52805,33 +52661,20 @@
                 "behavior": ""
               },
               {
-                "name": "Marqx the Fiery Terror",
-                "noun": "NomadRuption_Captain_3",
-                "slug": "nomadruption-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 80,
-                "base_hit_points": 90,
-                "estimated_hit_points": 159144.3,
-                "estimated_damage_min": 640.7,
-                "estimated_damage_max": 1025.2,
-                "estimated_damage_type": "Spacetime (physical)",
+                "name": "Merak, The Devastator",
+                "noun": "CryosBoss_3",
+                "slug": "cryosboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1600,
+                "estimated_hit_points": 404176,
+                "estimated_damage_min": 2050.4,
+                "estimated_damage_max": 3844.5,
+                "estimated_damage_type": "Elements (energy)",
                 "descriptions": [
-                  "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.",
-                  "Has a standard melee attack when it manages to get close."
+                  "Chain lightning, meteor showers, geysers, summons minions"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Marqx the Fiery Terror",
-                    "affixes": [
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Shifted",
-                      "Tough"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -56823,7 +56666,7 @@
             "NocturnaSpecialLeech_3.Noun",
             "CryosSpecialTwo_3.Noun",
             "ZelemSpecialThree_3.Noun",
-            "NocturnaSpecialLeech_Captain_3.Noun"
+            "ShadowBoss_3.Noun"
           ],
           "aliases": [
             "nocturna_2",
@@ -57303,16 +57146,10 @@
                   {
                     "x": 361,
                     "y": 413,
-                    "slug": "nocturnaspecialleech-captain-3-noun",
-                    "name": "Nocturna Special Leech Captain 3",
-                    "captain": true,
-                    "spawn_name": "Sumaya the Loathing Succubus",
-                    "affixes": [
-                      "Accurate",
-                      "Spiky",
-                      "Spiky Aura",
-                      "Tough"
-                    ]
+                    "slug": "shadowboss-3-noun",
+                    "name": "Shadow Boss 3",
+                    "destructor": true,
+                    "spawn_name": "Nashira, The Shadow Void"
                   }
                 ],
                 "objects": [
@@ -57443,33 +57280,20 @@
                 "behavior": ""
               },
               {
-                "name": "Sumaya the Loathing Succubus",
-                "noun": "NocturnaSpecialLeech_Captain_3",
-                "slug": "nocturnaspecialleech-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 65,
-                "base_hit_points": 75,
-                "estimated_hit_points": 198843.8,
-                "estimated_damage_min": 367.2,
-                "estimated_damage_max": 1101.5,
+                "name": "Nashira, The Shadow Void",
+                "noun": "ShadowBoss_3",
+                "slug": "shadowboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 1500,
+                "estimated_hit_points": 568125,
+                "estimated_damage_min": 5507.4,
+                "estimated_damage_max": 6608.9,
                 "estimated_damage_type": "Supernatural (energy)",
                 "descriptions": [
-                  "Fires long range necro projectiles.",
-                  "Will regain health when nearby allies are damaged."
+                  "Lobs shadow attacks and creates mirror images"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Sumaya the Loathing Succubus",
-                    "affixes": [
-                      "Accurate",
-                      "Spiky",
-                      "Spiky Aura",
-                      "Tough"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -60129,7 +59953,7 @@
             "ZelemSpecialTwo_3.Noun",
             "NomadShielder_3.Noun",
             "NocturnaSpecialHomer_3.Noun",
-            "ZelemSpecialTwo_Captain_3.Noun"
+            "ZelemBoss_3.Noun"
           ],
           "aliases": [
             "zelems_1",
@@ -60660,16 +60484,10 @@
                   {
                     "x": 280,
                     "y": 253,
-                    "slug": "zelemspecialtwo-captain-3-noun",
-                    "name": "Zelem Special Two Captain 3",
-                    "captain": true,
-                    "spawn_name": "Spcmnspf the Quantum Annihilator",
-                    "affixes": [
-                      "Ghostly",
-                      "Ghostly Aura",
-                      "Spiky",
-                      "Unstoppable"
-                    ]
+                    "slug": "zelemboss-3-noun",
+                    "name": "Zelem Boss 3",
+                    "destructor": true,
+                    "spawn_name": "Polaris, The Gravity Manipulator"
                   }
                 ],
                 "objects": [
@@ -60866,31 +60684,20 @@
                 "behavior": ""
               },
               {
-                "name": "Spcmnspf the Quantum Annihilator",
-                "noun": "ZelemSpecialTwo_Captain_3",
-                "slug": "zelemspecialtwo-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 69,
-                "base_hit_points": 90,
-                "estimated_hit_points": 255541.5,
+                "name": "Polaris, The Gravity Manipulator",
+                "noun": "ZelemBoss_3",
+                "slug": "zelemboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 500,
+                "base_hit_points": 2000,
+                "estimated_hit_points": 1135740,
+                "estimated_damage_min": 9468,
+                "estimated_damage_max": 9468,
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Support enemy who tries to stay away from close combat.",
-                  "Mastery of gravity allows him to pull heroes towards his friends.",
-                  "Can send out a circular gravitational push that damages and knocks back all nearby heroes."
+                  "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "Spcmnspf the Quantum Annihilator",
-                    "affixes": [
-                      "Ghostly",
-                      "Ghostly Aura",
-                      "Spiky",
-                      "Unstoppable"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -63689,7 +63496,7 @@
             "NomadWithDrone_3.Noun",
             "ZelemSpecialOne_3.Noun",
             "NomadScope_3.Noun",
-            "NomadWithDrone_Captain_3.Noun"
+            "ScaldronBoss_3.Noun"
           ],
           "aliases": [
             "scaldron_3",
@@ -64107,16 +63914,10 @@
                   {
                     "x": 257,
                     "y": 256,
-                    "slug": "nomadwithdrone-captain-3-noun",
-                    "name": "Nomad With Drone Captain 3",
-                    "captain": true,
-                    "spawn_name": "DAG-09 the Invincible Guardian",
-                    "affixes": [
-                      "Deadly",
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Shielded"
-                    ]
+                    "slug": "scaldronboss-3-noun",
+                    "name": "Scaldron Boss 3",
+                    "destructor": true,
+                    "spawn_name": "The Corruptor"
                   }
                 ],
                 "objects": [
@@ -64316,33 +64117,20 @@
                 "behavior": ""
               },
               {
-                "name": "DAG-09 the Invincible Guardian",
-                "noun": "NomadWithDrone_Captain_3",
-                "slug": "nomadwithdrone-captain-3-noun",
-                "role": "Captain",
-                "challenge_value": 75,
-                "base_hit_points": 110,
-                "estimated_hit_points": 468286.5,
+                "name": "The Corruptor",
+                "noun": "ScaldronBoss_3",
+                "slug": "scaldronboss-3-noun",
+                "role": "Destructor",
+                "challenge_value": 0,
+                "base_hit_points": 1000,
+                "estimated_hit_points": 851430,
                 "estimated_damage_min": 1883.8,
-                "estimated_damage_max": 3014.2,
-                "estimated_damage_type": "Supernatural (physical)",
+                "estimated_damage_max": 1883.8,
+                "estimated_damage_type": "Technology (energy)",
                 "descriptions": [
-                  "Has an orbiting drone that will shoot lasers at heroes.",
-                  "At half health, will become invulnerable for a limited time."
+                  "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions and lieutenants"
                 ],
-                "behavior": "",
-                "seeded_variants": [
-                  {
-                    "name": "DAG-09 the Invincible Guardian",
-                    "affixes": [
-                      "Deadly",
-                      "Frenzied",
-                      "Frenzied Aura",
-                      "Shielded"
-                    ],
-                    "count": 1
-                  }
-                ]
+                "behavior": ""
               }
             ]
           }
@@ -94841,7 +94629,7 @@
         "NomadRuption_3.Noun",
         "Rezzer_3.Noun",
         "NomadDrag_3.Noun",
-        "NomadRuption_Captain_3.Noun"
+        "CryosBoss_3.Noun"
       ],
       "aliases": [
         "cryos_1",
@@ -95537,16 +95325,10 @@
               {
                 "x": 258,
                 "y": 247,
-                "slug": "nomadruption-captain-3-noun",
-                "name": "Nomad Ruption Captain 3",
-                "captain": true,
-                "spawn_name": "Marqx the Fiery Terror",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shifted",
-                  "Tough"
-                ]
+                "slug": "cryosboss-3-noun",
+                "name": "Cryos Boss 3",
+                "destructor": true,
+                "spawn_name": "Merak, The Devastator"
               }
             ],
             "objects": [
@@ -95711,33 +95493,20 @@
             "behavior": ""
           },
           {
-            "name": "Marqx the Fiery Terror",
-            "noun": "NomadRuption_Captain_3",
-            "slug": "nomadruption-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 80,
-            "base_hit_points": 90,
-            "estimated_hit_points": 159144.3,
-            "estimated_damage_min": 640.7,
-            "estimated_damage_max": 1025.2,
-            "estimated_damage_type": "Spacetime (physical)",
+            "name": "Merak, The Devastator",
+            "noun": "CryosBoss_3",
+            "slug": "cryosboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1600,
+            "estimated_hit_points": 404176,
+            "estimated_damage_min": 2050.4,
+            "estimated_damage_max": 3844.5,
+            "estimated_damage_type": "Elements (energy)",
             "descriptions": [
-              "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.",
-              "Has a standard melee attack when it manages to get close."
+              "Chain lightning, meteor showers, geysers, summons minions"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Marqx the Fiery Terror",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shifted",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -100218,7 +99987,7 @@
         "CryosSpecialTwo_2.Noun",
         "ZelemSpecialTwo_2.Noun",
         "NomadSpecialThree_2.Noun",
-        "CryosSpecialTwo_Captain_2.Noun"
+        "CryosBoss_2.Noun"
       ],
       "aliases": [
         "cryos_3",
@@ -101832,15 +101601,10 @@
               {
                 "x": 243,
                 "y": 259,
-                "slug": "cryosspecialtwo-captain-2-noun",
-                "name": "Cryos Special Two Captain 2",
-                "captain": true,
-                "spawn_name": "Astri the Magnificent Igniter",
-                "affixes": [
-                  "Persistent",
-                  "Persistent Aura",
-                  "Reflective"
-                ]
+                "slug": "cryosboss-2-noun",
+                "name": "Cryos Boss 2",
+                "destructor": true,
+                "spawn_name": "Merak, The Devastator"
               }
             ],
             "objects": [
@@ -102205,32 +101969,20 @@
             "behavior": ""
           },
           {
-            "name": "Astri the Magnificent Igniter",
-            "noun": "CryosSpecialTwo_Captain_2",
-            "slug": "cryosspecialtwo-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 78,
-            "base_hit_points": 120,
-            "estimated_hit_points": 14070,
-            "estimated_damage_min": 47,
-            "estimated_damage_max": 94,
+            "name": "Merak, The Devastator",
+            "noun": "CryosBoss_2",
+            "slug": "cryosboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1400,
+            "estimated_hit_points": 32830,
+            "estimated_damage_min": 187.9,
+            "estimated_damage_max": 469.8,
             "estimated_damage_type": "Elements (energy)",
             "descriptions": [
-              "Throws multiple fireballs in a spread pattern.",
-              "Heroes who are hit by a fireball will burn and take damage over time."
+              "Chain lightning, geysers, summons minions when damaged"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Astri the Magnificent Igniter",
-                "affixes": [
-                  "Persistent",
-                  "Persistent Aura",
-                  "Reflective"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -111283,7 +111035,7 @@
         "NomadShielder_2.Noun",
         "CryosElementalSpecialThree_2.Noun",
         "NocturnaSpecialDrift_2.Noun",
-        "NomadShielder_Captain_2.Noun"
+        "CitadelBoss_2.Noun"
       ],
       "aliases": [
         "infinity_2",
@@ -112181,15 +111933,10 @@
               {
                 "x": 272,
                 "y": 283,
-                "slug": "nomadshielder-captain-2-noun",
-                "name": "Nomad Shielder Captain 2",
-                "captain": true,
-                "spawn_name": "MKS-522 the Shielded Explosionist",
-                "affixes": [
-                  "Accurate",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "citadelboss-2-noun",
+                "name": "Citadel Boss 2",
+                "destructor": true,
+                "spawn_name": "Arcturus, the Cybernetic Colossus"
               }
             ],
             "objects": [
@@ -112327,33 +112074,20 @@
             "behavior": ""
           },
           {
-            "name": "MKS-522 the Shielded Explosionist",
-            "noun": "NomadShielder_Captain_2",
-            "slug": "nomadshielder-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 35,
-            "base_hit_points": 90,
-            "estimated_hit_points": 15583.5,
+            "name": "Arcturus, the Cybernetic Colossus",
+            "noun": "CitadelBoss_2",
+            "slug": "citadelboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 60602.5,
             "estimated_damage_min": 88.4,
             "estimated_damage_max": 176.7,
-            "estimated_damage_type": "Technology (physical)",
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Has an impenetrable shield that prevents all damage from the front.",
-              "Lobs exploding cluster grenades from behind the shield.",
-              "Will knock back heroes that venture too close to his front."
+              "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "MKS-522 the Shielded Explosionist",
-                "affixes": [
-                  "Accurate",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -115344,7 +115078,7 @@
         "CitadelSpecialTwo_3.Noun",
         "CryosSpecialThree_3.Noun",
         "Boomer_3.Noun",
-        "CitadelSpecialFour_Captain_3.Noun"
+        "CitadelBoss_3.Noun"
       ],
       "aliases": [
         "infinity_3",
@@ -115992,16 +115726,10 @@
               {
                 "x": 241,
                 "y": 288,
-                "slug": "citadelspecialfour-captain-3-noun",
-                "name": "Citadel Special Four Captain 3",
-                "captain": true,
-                "spawn_name": "ZW-08 the Omnipotent",
-                "affixes": [
-                  "Frenzied",
-                  "Shielded",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "citadelboss-3-noun",
+                "name": "Citadel Boss 3",
+                "destructor": true,
+                "spawn_name": "Arcturus, the Cybernetic Colossus"
               }
             ],
             "objects": [
@@ -116161,33 +115889,20 @@
             "behavior": ""
           },
           {
-            "name": "ZW-08 the Omnipotent",
-            "noun": "CitadelSpecialFour_Captain_3",
-            "slug": "citadelspecialfour-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 84240,
+            "name": "Arcturus, the Cybernetic Colossus",
+            "noun": "CitadelBoss_3",
+            "slug": "citadelboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 336960,
             "estimated_damage_min": 536.8,
-            "estimated_damage_max": 894.6,
-            "estimated_damage_type": "Technology (physical)",
+            "estimated_damage_max": 1073.5,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can slam the ground, knocking nearby heroes up into the air.",
-              "When damaged, will use a repair arm to restore its own health."
+              "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "ZW-08 the Omnipotent",
-                "affixes": [
-                  "Frenzied",
-                  "Shielded",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -123685,7 +123400,7 @@
         "NocturnaSpecialLeech_3.Noun",
         "CryosSpecialTwo_3.Noun",
         "ZelemSpecialThree_3.Noun",
-        "NocturnaSpecialLeech_Captain_3.Noun"
+        "ShadowBoss_3.Noun"
       ],
       "aliases": [
         "nocturna_2",
@@ -124165,16 +123880,10 @@
               {
                 "x": 361,
                 "y": 413,
-                "slug": "nocturnaspecialleech-captain-3-noun",
-                "name": "Nocturna Special Leech Captain 3",
-                "captain": true,
-                "spawn_name": "Sumaya the Loathing Succubus",
-                "affixes": [
-                  "Accurate",
-                  "Spiky",
-                  "Spiky Aura",
-                  "Tough"
-                ]
+                "slug": "shadowboss-3-noun",
+                "name": "Shadow Boss 3",
+                "destructor": true,
+                "spawn_name": "Nashira, The Shadow Void"
               }
             ],
             "objects": [
@@ -124305,33 +124014,20 @@
             "behavior": ""
           },
           {
-            "name": "Sumaya the Loathing Succubus",
-            "noun": "NocturnaSpecialLeech_Captain_3",
-            "slug": "nocturnaspecialleech-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 65,
-            "base_hit_points": 75,
-            "estimated_hit_points": 198843.8,
-            "estimated_damage_min": 367.2,
-            "estimated_damage_max": 1101.5,
+            "name": "Nashira, The Shadow Void",
+            "noun": "ShadowBoss_3",
+            "slug": "shadowboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1500,
+            "estimated_hit_points": 568125,
+            "estimated_damage_min": 5507.4,
+            "estimated_damage_max": 6608.9,
             "estimated_damage_type": "Supernatural (energy)",
             "descriptions": [
-              "Fires long range necro projectiles.",
-              "Will regain health when nearby allies are damaged."
+              "Lobs shadow attacks and creates mirror images"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Sumaya the Loathing Succubus",
-                "affixes": [
-                  "Accurate",
-                  "Spiky",
-                  "Spiky Aura",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -125496,7 +125192,7 @@
         "Rezzer_2.Noun",
         "CryosSpecialThree_2.Noun",
         "NomadWithDrone_2.Noun",
-        "Rezzer_Captain_2.Noun"
+        "ShadowBoss_2.Noun"
       ],
       "aliases": [
         "nocturna_3",
@@ -126101,15 +125797,10 @@
               {
                 "x": 312,
                 "y": 128,
-                "slug": "rezzer-captain-2-noun",
-                "name": "Rezzer Captain 2",
-                "captain": true,
-                "spawn_name": "Zabbe the Grand Overseer",
-                "affixes": [
-                  "Ghostly",
-                  "Swift",
-                  "Tough"
-                ]
+                "slug": "shadowboss-2-noun",
+                "name": "Shadow Boss 2",
+                "destructor": true,
+                "spawn_name": "Nashira, The Shadow Void"
               }
             ],
             "objects": [
@@ -126350,29 +126041,20 @@
             "behavior": ""
           },
           {
-            "name": "Zabbe the Grand Overseer",
-            "noun": "Rezzer_Captain_2",
-            "slug": "rezzer-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 80,
-            "estimated_hit_points": 28644,
+            "name": "Nashira, The Shadow Void",
+            "noun": "ShadowBoss_2",
+            "slug": "shadowboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1500,
+            "estimated_hit_points": 76725,
+            "estimated_damage_min": 747.8,
+            "estimated_damage_max": 934.8,
+            "estimated_damage_type": "Supernatural (energy)",
             "descriptions": [
-              "Resurrects nearby allies who have recently been killed.",
-              "In between resurrections, flees and throws ghostly projectiles."
+              "Lobs shadow attacks and creates mirror images"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Zabbe the Grand Overseer",
-                "affixes": [
-                  "Ghostly",
-                  "Swift",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -131022,7 +130704,7 @@
         "NomadBioSpecialTwo_2.Noun",
         "NomadShielder_2.Noun",
         "NomadScope_2.Noun",
-        "NomadBioSpecialTwo_Captain_2.Noun"
+        "ScaldronBoss_2.Noun"
       ],
       "aliases": [
         "scaldron_1",
@@ -131690,15 +131372,10 @@
               {
                 "x": 253,
                 "y": 255,
-                "slug": "nomadbiospecialtwo-captain-2-noun",
-                "name": "Nomad Bio Special Two Captain 2",
-                "captain": true,
-                "spawn_name": "Roart the Blitzkrieg",
-                "affixes": [
-                  "Deadly",
-                  "Tough",
-                  "Unstoppable"
-                ]
+                "slug": "scaldronboss-2-noun",
+                "name": "Scaldron Boss 2",
+                "destructor": true,
+                "spawn_name": "The Corruptor"
               }
             ],
             "objects": [
@@ -131826,32 +131503,20 @@
             "behavior": ""
           },
           {
-            "name": "Roart the Blitzkrieg",
-            "noun": "NomadBioSpecialTwo_Captain_2",
-            "slug": "nomadbiospecialtwo-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 52885,
-            "estimated_damage_min": 351.6,
-            "estimated_damage_max": 703.2,
-            "estimated_damage_type": "Life (physical)",
+            "name": "The Corruptor",
+            "noun": "ScaldronBoss_2",
+            "slug": "scaldronboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 0,
+            "base_hit_points": 1000,
+            "estimated_hit_points": 75550,
+            "estimated_damage_min": 219.8,
+            "estimated_damage_max": 219.8,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can close distance quickly with his leap attack.",
-              "Will resurrect if killed at the wrong time."
+              "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Roart the Blitzkrieg",
-                "affixes": [
-                  "Deadly",
-                  "Tough",
-                  "Unstoppable"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -136658,7 +136323,7 @@
         "NomadWithDrone_3.Noun",
         "ZelemSpecialOne_3.Noun",
         "NomadScope_3.Noun",
-        "NomadWithDrone_Captain_3.Noun"
+        "ScaldronBoss_3.Noun"
       ],
       "aliases": [
         "scaldron_3",
@@ -137076,16 +136741,10 @@
               {
                 "x": 257,
                 "y": 256,
-                "slug": "nomadwithdrone-captain-3-noun",
-                "name": "Nomad With Drone Captain 3",
-                "captain": true,
-                "spawn_name": "DAG-09 the Invincible Guardian",
-                "affixes": [
-                  "Deadly",
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shielded"
-                ]
+                "slug": "scaldronboss-3-noun",
+                "name": "Scaldron Boss 3",
+                "destructor": true,
+                "spawn_name": "The Corruptor"
               }
             ],
             "objects": [
@@ -137285,33 +136944,20 @@
             "behavior": ""
           },
           {
-            "name": "DAG-09 the Invincible Guardian",
-            "noun": "NomadWithDrone_Captain_3",
-            "slug": "nomadwithdrone-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 110,
-            "estimated_hit_points": 468286.5,
+            "name": "The Corruptor",
+            "noun": "ScaldronBoss_3",
+            "slug": "scaldronboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 0,
+            "base_hit_points": 1000,
+            "estimated_hit_points": 851430,
             "estimated_damage_min": 1883.8,
-            "estimated_damage_max": 3014.2,
-            "estimated_damage_type": "Supernatural (physical)",
+            "estimated_damage_max": 1883.8,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Has an orbiting drone that will shoot lasers at heroes.",
-              "At half health, will become invulnerable for a limited time."
+              "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions and lieutenants"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "DAG-09 the Invincible Guardian",
-                "affixes": [
-                  "Deadly",
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shielded"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -145509,7 +145155,7 @@
         "CryosSpecialThree_3.Noun",
         "CitadelSpecialFour_3.Noun",
         "Boomer_3.Noun",
-        "CryosSpecialThree_Captain_3.Noun"
+        "VerdanthBoss_3.Noun"
       ],
       "aliases": [
         "verdanth_1",
@@ -146009,16 +145655,10 @@
               {
                 "x": 241,
                 "y": 211,
-                "slug": "cryosspecialthree-captain-3-noun",
-                "name": "Cryos Special Three Captain 3",
-                "captain": true,
-                "spawn_name": "Ulf the Dark Sunderer",
-                "affixes": [
-                  "Armored",
-                  "Carapace",
-                  "Swift",
-                  "Swift Aura"
-                ]
+                "slug": "verdanthboss-3-noun",
+                "name": "Verdanth Boss 3",
+                "destructor": true,
+                "spawn_name": "Orcus, Devourer of Life"
               }
             ],
             "objects": [
@@ -146148,30 +145788,17 @@
             "behavior": ""
           },
           {
-            "name": "Ulf the Dark Sunderer",
-            "noun": "CryosSpecialThree_Captain_3",
-            "slug": "cryosspecialthree-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 56185,
+            "name": "Orcus, Devourer of Life",
+            "noun": "VerdanthBoss_3",
+            "slug": "verdanthboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 224740,
             "descriptions": [
-              "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.",
-              "Will close on sleeping heroes and hit them with a melee swipe attack."
+              "Consumes spawns, breathes disease, thorn barrage"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Ulf the Dark Sunderer",
-                "affixes": [
-                  "Armored",
-                  "Carapace",
-                  "Swift",
-                  "Swift Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -149069,7 +148696,7 @@
         "VerdanthSpecialOne_2.Noun",
         "NocturnaSpecialLeech_2.Noun",
         "NomadScope_2.Noun",
-        "VerdanthSpecialOne_Captain_2.Noun"
+        "VerdanthBoss_2.Noun"
       ],
       "aliases": [
         "verdanth_3",
@@ -149639,15 +149266,10 @@
               {
                 "x": 258,
                 "y": 292,
-                "slug": "verdanthspecialone-captain-2-noun",
-                "name": "Verdanth Special One Captain 2",
-                "captain": true,
-                "spawn_name": "Cormeer the Cloud of Death",
-                "affixes": [
-                  "Swift",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "verdanthboss-2-noun",
+                "name": "Verdanth Boss 2",
+                "destructor": true,
+                "spawn_name": "Orcus, Devourer of Life"
               }
             ],
             "objects": [
@@ -149806,32 +149428,17 @@
             "behavior": ""
           },
           {
-            "name": "Cormeer the Cloud of Death",
-            "noun": "VerdanthSpecialOne_Captain_2",
-            "slug": "verdanthspecialone-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 69,
-            "base_hit_points": 120,
-            "estimated_hit_points": 9528,
-            "estimated_damage_min": 22.2,
-            "estimated_damage_max": 44.4,
-            "estimated_damage_type": "Elements (energy)",
+            "name": "Orcus, Devourer of Life",
+            "noun": "VerdanthBoss_2",
+            "slug": "verdanthboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 27790,
             "descriptions": [
-              "Burrows underground and tunnels until close to a hero.",
-              "Springs from the earth launching a poison area effect attack."
+              "Consumes spawns, breathes disease, thorn barrage"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Cormeer the Cloud of Death",
-                "affixes": [
-                  "Swift",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -154785,7 +154392,7 @@
         "ZelemSpecialTwo_3.Noun",
         "NomadShielder_3.Noun",
         "NocturnaSpecialHomer_3.Noun",
-        "ZelemSpecialTwo_Captain_3.Noun"
+        "ZelemBoss_3.Noun"
       ],
       "aliases": [
         "zelems_1",
@@ -155316,16 +154923,10 @@
               {
                 "x": 280,
                 "y": 253,
-                "slug": "zelemspecialtwo-captain-3-noun",
-                "name": "Zelem Special Two Captain 3",
-                "captain": true,
-                "spawn_name": "Spcmnspf the Quantum Annihilator",
-                "affixes": [
-                  "Ghostly",
-                  "Ghostly Aura",
-                  "Spiky",
-                  "Unstoppable"
-                ]
+                "slug": "zelemboss-3-noun",
+                "name": "Zelem Boss 3",
+                "destructor": true,
+                "spawn_name": "Polaris, The Gravity Manipulator"
               }
             ],
             "objects": [
@@ -155522,31 +155123,20 @@
             "behavior": ""
           },
           {
-            "name": "Spcmnspf the Quantum Annihilator",
-            "noun": "ZelemSpecialTwo_Captain_3",
-            "slug": "zelemspecialtwo-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 69,
-            "base_hit_points": 90,
-            "estimated_hit_points": 255541.5,
+            "name": "Polaris, The Gravity Manipulator",
+            "noun": "ZelemBoss_3",
+            "slug": "zelemboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 1135740,
+            "estimated_damage_min": 9468,
+            "estimated_damage_max": 9468,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Support enemy who tries to stay away from close combat.",
-              "Mastery of gravity allows him to pull heroes towards his friends.",
-              "Can send out a circular gravitational push that damages and knocks back all nearby heroes."
+              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Spcmnspf the Quantum Annihilator",
-                "affixes": [
-                  "Ghostly",
-                  "Ghostly Aura",
-                  "Spiky",
-                  "Unstoppable"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -159056,7 +158646,7 @@
         "NomadSnipe_2.Noun",
         "VerdanthSpecialTwo_2.Noun",
         "ZelemSpecialThree_2.Noun",
-        "NomadSnipe_Captain_2.Noun"
+        "ZelemBoss_2.Noun"
       ],
       "aliases": [
         "zelems_3",
@@ -159790,15 +159380,10 @@
               {
                 "x": 212,
                 "y": 223,
-                "slug": "nomadsnipe-captain-2-noun",
-                "name": "Nomad Snipe Captain 2",
-                "captain": true,
-                "spawn_name": "Aloys the Velocity Archfiend",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Tough"
-                ]
+                "slug": "zelemboss-2-noun",
+                "name": "Zelem Boss 2",
+                "destructor": true,
+                "spawn_name": "Polaris, The Gravity Manipulator"
               }
             ],
             "objects": [
@@ -159927,29 +159512,20 @@
             "behavior": ""
           },
           {
-            "name": "Aloys the Velocity Archfiend",
-            "noun": "NomadSnipe_Captain_2",
-            "slug": "nomadsnipe-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 70,
-            "base_hit_points": 70,
-            "estimated_hit_points": 5267.5,
+            "name": "Polaris, The Gravity Manipulator",
+            "noun": "ZelemBoss_2",
+            "slug": "zelemboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 18812.5,
+            "estimated_damage_min": 283.3,
+            "estimated_damage_max": 283.3,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.",
-              "Chases after slowed heroes and uses a physical melee attack."
+              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Aloys the Velocity Archfiend",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -185493,7 +185069,7 @@
         "NomadRuption_3.Noun",
         "Rezzer_3.Noun",
         "NomadDrag_3.Noun",
-        "NomadRuption_Captain_3.Noun"
+        "CryosBoss_3.Noun"
       ],
       "aliases": [
         "cryos_1",
@@ -186189,16 +185765,10 @@
               {
                 "x": 258,
                 "y": 247,
-                "slug": "nomadruption-captain-3-noun",
-                "name": "Nomad Ruption Captain 3",
-                "captain": true,
-                "spawn_name": "Marqx the Fiery Terror",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shifted",
-                  "Tough"
-                ]
+                "slug": "cryosboss-3-noun",
+                "name": "Cryos Boss 3",
+                "destructor": true,
+                "spawn_name": "Merak, The Devastator"
               }
             ],
             "objects": [
@@ -186363,33 +185933,20 @@
             "behavior": ""
           },
           {
-            "name": "Marqx the Fiery Terror",
-            "noun": "NomadRuption_Captain_3",
-            "slug": "nomadruption-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 80,
-            "base_hit_points": 90,
-            "estimated_hit_points": 159144.3,
-            "estimated_damage_min": 640.7,
-            "estimated_damage_max": 1025.2,
-            "estimated_damage_type": "Spacetime (physical)",
+            "name": "Merak, The Devastator",
+            "noun": "CryosBoss_3",
+            "slug": "cryosboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1600,
+            "estimated_hit_points": 404176,
+            "estimated_damage_min": 2050.4,
+            "estimated_damage_max": 3844.5,
+            "estimated_damage_type": "Elements (energy)",
             "descriptions": [
-              "Occasionally launches a chunk of magma at each nearby hero, creating a damaging lava pool.",
-              "Has a standard melee attack when it manages to get close."
+              "Chain lightning, meteor showers, geysers, summons minions"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Marqx the Fiery Terror",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shifted",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -192200,7 +191757,7 @@
         "CitadelSpecialTwo_3.Noun",
         "CryosSpecialThree_3.Noun",
         "Boomer_3.Noun",
-        "CitadelSpecialFour_Captain_3.Noun"
+        "CitadelBoss_3.Noun"
       ],
       "aliases": [
         "infinity_3",
@@ -192848,16 +192405,10 @@
               {
                 "x": 241,
                 "y": 288,
-                "slug": "citadelspecialfour-captain-3-noun",
-                "name": "Citadel Special Four Captain 3",
-                "captain": true,
-                "spawn_name": "ZW-08 the Omnipotent",
-                "affixes": [
-                  "Frenzied",
-                  "Shielded",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "citadelboss-3-noun",
+                "name": "Citadel Boss 3",
+                "destructor": true,
+                "spawn_name": "Arcturus, the Cybernetic Colossus"
               }
             ],
             "objects": [
@@ -193017,33 +192568,20 @@
             "behavior": ""
           },
           {
-            "name": "ZW-08 the Omnipotent",
-            "noun": "CitadelSpecialFour_Captain_3",
-            "slug": "citadelspecialfour-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 84240,
+            "name": "Arcturus, the Cybernetic Colossus",
+            "noun": "CitadelBoss_3",
+            "slug": "citadelboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 336960,
             "estimated_damage_min": 536.8,
-            "estimated_damage_max": 894.6,
-            "estimated_damage_type": "Technology (physical)",
+            "estimated_damage_max": 1073.5,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can slam the ground, knocking nearby heroes up into the air.",
-              "When damaged, will use a repair arm to restore its own health."
+              "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "ZW-08 the Omnipotent",
-                "affixes": [
-                  "Frenzied",
-                  "Shielded",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -195046,7 +194584,7 @@
         "NocturnaSpecialLeech_3.Noun",
         "CryosSpecialTwo_3.Noun",
         "ZelemSpecialThree_3.Noun",
-        "NocturnaSpecialLeech_Captain_3.Noun"
+        "ShadowBoss_3.Noun"
       ],
       "aliases": [
         "nocturna_2",
@@ -195526,16 +195064,10 @@
               {
                 "x": 361,
                 "y": 413,
-                "slug": "nocturnaspecialleech-captain-3-noun",
-                "name": "Nocturna Special Leech Captain 3",
-                "captain": true,
-                "spawn_name": "Sumaya the Loathing Succubus",
-                "affixes": [
-                  "Accurate",
-                  "Spiky",
-                  "Spiky Aura",
-                  "Tough"
-                ]
+                "slug": "shadowboss-3-noun",
+                "name": "Shadow Boss 3",
+                "destructor": true,
+                "spawn_name": "Nashira, The Shadow Void"
               }
             ],
             "objects": [
@@ -195666,33 +195198,20 @@
             "behavior": ""
           },
           {
-            "name": "Sumaya the Loathing Succubus",
-            "noun": "NocturnaSpecialLeech_Captain_3",
-            "slug": "nocturnaspecialleech-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 65,
-            "base_hit_points": 75,
-            "estimated_hit_points": 198843.8,
-            "estimated_damage_min": 367.2,
-            "estimated_damage_max": 1101.5,
+            "name": "Nashira, The Shadow Void",
+            "noun": "ShadowBoss_3",
+            "slug": "shadowboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1500,
+            "estimated_hit_points": 568125,
+            "estimated_damage_min": 5507.4,
+            "estimated_damage_max": 6608.9,
             "estimated_damage_type": "Supernatural (energy)",
             "descriptions": [
-              "Fires long range necro projectiles.",
-              "Will regain health when nearby allies are damaged."
+              "Lobs shadow attacks and creates mirror images"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Sumaya the Loathing Succubus",
-                "affixes": [
-                  "Accurate",
-                  "Spiky",
-                  "Spiky Aura",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -199348,7 +198867,7 @@
         "NomadWithDrone_3.Noun",
         "ZelemSpecialOne_3.Noun",
         "NomadScope_3.Noun",
-        "NomadWithDrone_Captain_3.Noun"
+        "ScaldronBoss_3.Noun"
       ],
       "aliases": [
         "scaldron_3",
@@ -199766,16 +199285,10 @@
               {
                 "x": 257,
                 "y": 256,
-                "slug": "nomadwithdrone-captain-3-noun",
-                "name": "Nomad With Drone Captain 3",
-                "captain": true,
-                "spawn_name": "DAG-09 the Invincible Guardian",
-                "affixes": [
-                  "Deadly",
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shielded"
-                ]
+                "slug": "scaldronboss-3-noun",
+                "name": "Scaldron Boss 3",
+                "destructor": true,
+                "spawn_name": "The Corruptor"
               }
             ],
             "objects": [
@@ -199975,33 +199488,20 @@
             "behavior": ""
           },
           {
-            "name": "DAG-09 the Invincible Guardian",
-            "noun": "NomadWithDrone_Captain_3",
-            "slug": "nomadwithdrone-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 110,
-            "estimated_hit_points": 468286.5,
+            "name": "The Corruptor",
+            "noun": "ScaldronBoss_3",
+            "slug": "scaldronboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 0,
+            "base_hit_points": 1000,
+            "estimated_hit_points": 851430,
             "estimated_damage_min": 1883.8,
-            "estimated_damage_max": 3014.2,
-            "estimated_damage_type": "Supernatural (physical)",
+            "estimated_damage_max": 1883.8,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Has an orbiting drone that will shoot lasers at heroes.",
-              "At half health, will become invulnerable for a limited time."
+              "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions and lieutenants"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "DAG-09 the Invincible Guardian",
-                "affixes": [
-                  "Deadly",
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Shielded"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -200793,7 +200293,7 @@
         "CryosSpecialThree_3.Noun",
         "CitadelSpecialFour_3.Noun",
         "Boomer_3.Noun",
-        "CryosSpecialThree_Captain_3.Noun"
+        "VerdanthBoss_3.Noun"
       ],
       "aliases": [
         "verdanth_1",
@@ -201293,16 +200793,10 @@
               {
                 "x": 241,
                 "y": 211,
-                "slug": "cryosspecialthree-captain-3-noun",
-                "name": "Cryos Special Three Captain 3",
-                "captain": true,
-                "spawn_name": "Ulf the Dark Sunderer",
-                "affixes": [
-                  "Armored",
-                  "Carapace",
-                  "Swift",
-                  "Swift Aura"
-                ]
+                "slug": "verdanthboss-3-noun",
+                "name": "Verdanth Boss 3",
+                "destructor": true,
+                "spawn_name": "Orcus, Devourer of Life"
               }
             ],
             "objects": [
@@ -201432,30 +200926,17 @@
             "behavior": ""
           },
           {
-            "name": "Ulf the Dark Sunderer",
-            "noun": "CryosSpecialThree_Captain_3",
-            "slug": "cryosspecialthree-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 56185,
+            "name": "Orcus, Devourer of Life",
+            "noun": "VerdanthBoss_3",
+            "slug": "verdanthboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 224740,
             "descriptions": [
-              "Can lob a spore pod that breaks open and forms a sleeping cloud in a small area.",
-              "Will close on sleeping heroes and hit them with a melee swipe attack."
+              "Consumes spawns, breathes disease, thorn barrage"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Ulf the Dark Sunderer",
-                "affixes": [
-                  "Armored",
-                  "Carapace",
-                  "Swift",
-                  "Swift Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -203819,7 +203300,7 @@
         "ZelemSpecialTwo_3.Noun",
         "NomadShielder_3.Noun",
         "NocturnaSpecialHomer_3.Noun",
-        "ZelemSpecialTwo_Captain_3.Noun"
+        "ZelemBoss_3.Noun"
       ],
       "aliases": [
         "zelems_1",
@@ -204350,16 +203831,10 @@
               {
                 "x": 280,
                 "y": 253,
-                "slug": "zelemspecialtwo-captain-3-noun",
-                "name": "Zelem Special Two Captain 3",
-                "captain": true,
-                "spawn_name": "Spcmnspf the Quantum Annihilator",
-                "affixes": [
-                  "Ghostly",
-                  "Ghostly Aura",
-                  "Spiky",
-                  "Unstoppable"
-                ]
+                "slug": "zelemboss-3-noun",
+                "name": "Zelem Boss 3",
+                "destructor": true,
+                "spawn_name": "Polaris, The Gravity Manipulator"
               }
             ],
             "objects": [
@@ -204556,31 +204031,20 @@
             "behavior": ""
           },
           {
-            "name": "Spcmnspf the Quantum Annihilator",
-            "noun": "ZelemSpecialTwo_Captain_3",
-            "slug": "zelemspecialtwo-captain-3-noun",
-            "role": "Captain",
-            "challenge_value": 69,
-            "base_hit_points": 90,
-            "estimated_hit_points": 255541.5,
+            "name": "Polaris, The Gravity Manipulator",
+            "noun": "ZelemBoss_3",
+            "slug": "zelemboss-3-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 2000,
+            "estimated_hit_points": 1135740,
+            "estimated_damage_min": 9468,
+            "estimated_damage_max": 9468,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Support enemy who tries to stay away from close combat.",
-              "Mastery of gravity allows him to pull heroes towards his friends.",
-              "Can send out a circular gravitational push that damages and knocks back all nearby heroes."
+              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Spcmnspf the Quantum Annihilator",
-                "affixes": [
-                  "Ghostly",
-                  "Ghostly Aura",
-                  "Spiky",
-                  "Unstoppable"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -218676,7 +218140,7 @@
         "CryosSpecialTwo_2.Noun",
         "ZelemSpecialTwo_2.Noun",
         "NomadSpecialThree_2.Noun",
-        "CryosSpecialTwo_Captain_2.Noun"
+        "CryosBoss_2.Noun"
       ],
       "aliases": [
         "cryos_3",
@@ -220290,15 +219754,10 @@
               {
                 "x": 243,
                 "y": 259,
-                "slug": "cryosspecialtwo-captain-2-noun",
-                "name": "Cryos Special Two Captain 2",
-                "captain": true,
-                "spawn_name": "Astri the Magnificent Igniter",
-                "affixes": [
-                  "Persistent",
-                  "Persistent Aura",
-                  "Reflective"
-                ]
+                "slug": "cryosboss-2-noun",
+                "name": "Cryos Boss 2",
+                "destructor": true,
+                "spawn_name": "Merak, The Devastator"
               }
             ],
             "objects": [
@@ -220663,32 +220122,20 @@
             "behavior": ""
           },
           {
-            "name": "Astri the Magnificent Igniter",
-            "noun": "CryosSpecialTwo_Captain_2",
-            "slug": "cryosspecialtwo-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 78,
-            "base_hit_points": 120,
-            "estimated_hit_points": 14070,
-            "estimated_damage_min": 47,
-            "estimated_damage_max": 94,
+            "name": "Merak, The Devastator",
+            "noun": "CryosBoss_2",
+            "slug": "cryosboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1400,
+            "estimated_hit_points": 32830,
+            "estimated_damage_min": 187.9,
+            "estimated_damage_max": 469.8,
             "estimated_damage_type": "Elements (energy)",
             "descriptions": [
-              "Throws multiple fireballs in a spread pattern.",
-              "Heroes who are hit by a fireball will burn and take damage over time."
+              "Chain lightning, geysers, summons minions when damaged"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Astri the Magnificent Igniter",
-                "affixes": [
-                  "Persistent",
-                  "Persistent Aura",
-                  "Reflective"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -222384,7 +221831,7 @@
         "NomadShielder_2.Noun",
         "CryosElementalSpecialThree_2.Noun",
         "NocturnaSpecialDrift_2.Noun",
-        "NomadShielder_Captain_2.Noun"
+        "CitadelBoss_2.Noun"
       ],
       "aliases": [
         "infinity_2",
@@ -223282,15 +222729,10 @@
               {
                 "x": 272,
                 "y": 283,
-                "slug": "nomadshielder-captain-2-noun",
-                "name": "Nomad Shielder Captain 2",
-                "captain": true,
-                "spawn_name": "MKS-522 the Shielded Explosionist",
-                "affixes": [
-                  "Accurate",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "citadelboss-2-noun",
+                "name": "Citadel Boss 2",
+                "destructor": true,
+                "spawn_name": "Arcturus, the Cybernetic Colossus"
               }
             ],
             "objects": [
@@ -223428,33 +222870,20 @@
             "behavior": ""
           },
           {
-            "name": "MKS-522 the Shielded Explosionist",
-            "noun": "NomadShielder_Captain_2",
-            "slug": "nomadshielder-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 35,
-            "base_hit_points": 90,
-            "estimated_hit_points": 15583.5,
+            "name": "Arcturus, the Cybernetic Colossus",
+            "noun": "CitadelBoss_2",
+            "slug": "citadelboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 60602.5,
             "estimated_damage_min": 88.4,
             "estimated_damage_max": 176.7,
-            "estimated_damage_type": "Technology (physical)",
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Has an impenetrable shield that prevents all damage from the front.",
-              "Lobs exploding cluster grenades from behind the shield.",
-              "Will knock back heroes that venture too close to his front."
+              "Converging laser beams, sawblades, missiles, summons Scarabs, laser turret"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "MKS-522 the Shielded Explosionist",
-                "affixes": [
-                  "Accurate",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -227078,7 +226507,7 @@
         "Rezzer_2.Noun",
         "CryosSpecialThree_2.Noun",
         "NomadWithDrone_2.Noun",
-        "Rezzer_Captain_2.Noun"
+        "ShadowBoss_2.Noun"
       ],
       "aliases": [
         "nocturna_3",
@@ -227683,15 +227112,10 @@
               {
                 "x": 312,
                 "y": 128,
-                "slug": "rezzer-captain-2-noun",
-                "name": "Rezzer Captain 2",
-                "captain": true,
-                "spawn_name": "Zabbe the Grand Overseer",
-                "affixes": [
-                  "Ghostly",
-                  "Swift",
-                  "Tough"
-                ]
+                "slug": "shadowboss-2-noun",
+                "name": "Shadow Boss 2",
+                "destructor": true,
+                "spawn_name": "Nashira, The Shadow Void"
               }
             ],
             "objects": [
@@ -227932,29 +227356,20 @@
             "behavior": ""
           },
           {
-            "name": "Zabbe the Grand Overseer",
-            "noun": "Rezzer_Captain_2",
-            "slug": "rezzer-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 80,
-            "estimated_hit_points": 28644,
+            "name": "Nashira, The Shadow Void",
+            "noun": "ShadowBoss_2",
+            "slug": "shadowboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1500,
+            "estimated_hit_points": 76725,
+            "estimated_damage_min": 747.8,
+            "estimated_damage_max": 934.8,
+            "estimated_damage_type": "Supernatural (energy)",
             "descriptions": [
-              "Resurrects nearby allies who have recently been killed.",
-              "In between resurrections, flees and throws ghostly projectiles."
+              "Lobs shadow attacks and creates mirror images"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Zabbe the Grand Overseer",
-                "affixes": [
-                  "Ghostly",
-                  "Swift",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -228855,7 +228270,7 @@
         "NomadBioSpecialTwo_2.Noun",
         "NomadShielder_2.Noun",
         "NomadScope_2.Noun",
-        "NomadBioSpecialTwo_Captain_2.Noun"
+        "ScaldronBoss_2.Noun"
       ],
       "aliases": [
         "scaldron_1",
@@ -229523,15 +228938,10 @@
               {
                 "x": 253,
                 "y": 255,
-                "slug": "nomadbiospecialtwo-captain-2-noun",
-                "name": "Nomad Bio Special Two Captain 2",
-                "captain": true,
-                "spawn_name": "Roart the Blitzkrieg",
-                "affixes": [
-                  "Deadly",
-                  "Tough",
-                  "Unstoppable"
-                ]
+                "slug": "scaldronboss-2-noun",
+                "name": "Scaldron Boss 2",
+                "destructor": true,
+                "spawn_name": "The Corruptor"
               }
             ],
             "objects": [
@@ -229659,32 +229069,20 @@
             "behavior": ""
           },
           {
-            "name": "Roart the Blitzkrieg",
-            "noun": "NomadBioSpecialTwo_Captain_2",
-            "slug": "nomadbiospecialtwo-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 75,
-            "base_hit_points": 100,
-            "estimated_hit_points": 52885,
-            "estimated_damage_min": 351.6,
-            "estimated_damage_max": 703.2,
-            "estimated_damage_type": "Life (physical)",
+            "name": "The Corruptor",
+            "noun": "ScaldronBoss_2",
+            "slug": "scaldronboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 0,
+            "base_hit_points": 1000,
+            "estimated_hit_points": 75550,
+            "estimated_damage_min": 219.8,
+            "estimated_damage_max": 219.8,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can close distance quickly with his leap attack.",
-              "Will resurrect if killed at the wrong time."
+              "Shifts genesis types, has a variety of area effect abilities, spawns portals that summon minions"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Roart the Blitzkrieg",
-                "affixes": [
-                  "Deadly",
-                  "Tough",
-                  "Unstoppable"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -233331,7 +232729,7 @@
         "VerdanthSpecialOne_2.Noun",
         "NocturnaSpecialLeech_2.Noun",
         "NomadScope_2.Noun",
-        "VerdanthSpecialOne_Captain_2.Noun"
+        "VerdanthBoss_2.Noun"
       ],
       "aliases": [
         "verdanth_3",
@@ -233901,15 +233299,10 @@
               {
                 "x": 258,
                 "y": 292,
-                "slug": "verdanthspecialone-captain-2-noun",
-                "name": "Verdanth Special One Captain 2",
-                "captain": true,
-                "spawn_name": "Cormeer the Cloud of Death",
-                "affixes": [
-                  "Swift",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ]
+                "slug": "verdanthboss-2-noun",
+                "name": "Verdanth Boss 2",
+                "destructor": true,
+                "spawn_name": "Orcus, Devourer of Life"
               }
             ],
             "objects": [
@@ -234068,32 +233461,17 @@
             "behavior": ""
           },
           {
-            "name": "Cormeer the Cloud of Death",
-            "noun": "VerdanthSpecialOne_Captain_2",
-            "slug": "verdanthspecialone-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 69,
-            "base_hit_points": 120,
-            "estimated_hit_points": 9528,
-            "estimated_damage_min": 22.2,
-            "estimated_damage_max": 44.4,
-            "estimated_damage_type": "Elements (energy)",
+            "name": "Orcus, Devourer of Life",
+            "noun": "VerdanthBoss_2",
+            "slug": "verdanthboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 27790,
             "descriptions": [
-              "Burrows underground and tunnels until close to a hero.",
-              "Springs from the earth launching a poison area effect attack."
+              "Consumes spawns, breathes disease, thorn barrage"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Cormeer the Cloud of Death",
-                "affixes": [
-                  "Swift",
-                  "Unstoppable",
-                  "Unstoppable Aura"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
@@ -236333,7 +235711,7 @@
         "NomadSnipe_2.Noun",
         "VerdanthSpecialTwo_2.Noun",
         "ZelemSpecialThree_2.Noun",
-        "NomadSnipe_Captain_2.Noun"
+        "ZelemBoss_2.Noun"
       ],
       "aliases": [
         "zelems_3",
@@ -237067,15 +236445,10 @@
               {
                 "x": 212,
                 "y": 223,
-                "slug": "nomadsnipe-captain-2-noun",
-                "name": "Nomad Snipe Captain 2",
-                "captain": true,
-                "spawn_name": "Aloys the Velocity Archfiend",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Tough"
-                ]
+                "slug": "zelemboss-2-noun",
+                "name": "Zelem Boss 2",
+                "destructor": true,
+                "spawn_name": "Polaris, The Gravity Manipulator"
               }
             ],
             "objects": [
@@ -237204,29 +236577,20 @@
             "behavior": ""
           },
           {
-            "name": "Aloys the Velocity Archfiend",
-            "noun": "NomadSnipe_Captain_2",
-            "slug": "nomadsnipe-captain-2-noun",
-            "role": "Captain",
-            "challenge_value": 70,
-            "base_hit_points": 70,
-            "estimated_hit_points": 5267.5,
+            "name": "Polaris, The Gravity Manipulator",
+            "noun": "ZelemBoss_2",
+            "slug": "zelemboss-2-noun",
+            "role": "Destructor",
+            "challenge_value": 500,
+            "base_hit_points": 1750,
+            "estimated_hit_points": 18812.5,
+            "estimated_damage_min": 283.3,
+            "estimated_damage_max": 283.3,
+            "estimated_damage_type": "Technology (energy)",
             "descriptions": [
-              "Can instantly inflict a crippling debuff on nearby heroes, slowing their movement and attack speed.",
-              "Chases after slowed heroes and uses a physical melee attack."
+              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
             ],
-            "behavior": "",
-            "seeded_variants": [
-              {
-                "name": "Aloys the Velocity Archfiend",
-                "affixes": [
-                  "Frenzied",
-                  "Frenzied Aura",
-                  "Tough"
-                ],
-                "count": 1
-              }
-            ]
+            "behavior": ""
           }
         ]
       }
