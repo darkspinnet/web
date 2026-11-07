@@ -9,6 +9,10 @@
 
   const jsonCache = new Map();
   const normalize = (text) => (text || "").toLowerCase().trim();
+  const setField = (container, name, value) => {
+    const field = container.querySelector(`[data-field="${name}"]`);
+    if (field) field.textContent = value ?? "—";
+  };
   const loadJSON = (url) => {
     if (!jsonCache.has(url)) {
       jsonCache.set(url, fetch(url, { cache: "no-cache" }).then((response) => {
