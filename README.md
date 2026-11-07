@@ -62,7 +62,9 @@ The sibling Darkspin CLI lists both campaign shortcuts and every prepared miscel
 d:\src\darkspin\bin\game\darkrun.exe map --config d:\src\darkspin\bin\game\darkspin.toml
 ```
 
-Run `mage level` to generate the campaign minimaps and refresh the level catalog. The maps show the standing enemy population and any Destructor encounter for a solo first clear with Darkspin's default spawn rules. To preview a different run seed, use `go run ./scripts/level -campaign-seed 42`. Darkspin derives the first-clear population seed from the stage and uses the run seed for layout selection. Run `mage search` to refresh the global index after regenerating level data.
+Run `mage level` to generate the campaign minimaps and refresh the level catalog. The maps show the standing enemy population and any Destructor encounter for a solo first clear with Darkspin's mission rules. To preview a different run seed, use `go run ./scripts/level -campaign-seed 42`. Darkspin derives the first-clear population seed from the stage and uses the run seed for layout selection. Run `mage search` to refresh the global index after regenerating level data.
+
+The level generator loads `../darkspin/server/runtime/zone-rules.json`; use `-zone-rules <path>` for another checkout or a preview file. Campaign overrides replace the complete default entry, matching the server's loader. These values drive population, boss, and horde planning and appear in the Zone rules section below Mission environment. Rows that differ from the JSON default are highlighted with their baseline values. Regenerate level data after changing this file; Hugo builds use the generated snapshot without needing the sibling source.
 
 For auxiliary maps, render a selection into the directory for its website level slug, then refresh the level catalog. The selection may be the `tutorial` shortcut or a canonical PvP, arena, small-map, Spectra/TNX, or test level name.
 

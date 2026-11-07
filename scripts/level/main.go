@@ -47,6 +47,7 @@ type levelReport struct {
 	Aliases         []string        `json:"aliases"`
 	Map             *campaignMap    `json:"map,omitempty"`
 	Campaign        *campaignDetail `json:"campaign,omitempty"`
+	ZoneRules       *zoneRuleReport `json:"zone_rules,omitempty"`
 	Replay          *replayDetail   `json:"replay,omitempty"`
 }
 
@@ -73,6 +74,7 @@ func main() {
 	gamePath := flag.String("game", catalog.DefaultGamePath, "installed client root for creature tooltip descriptions")
 	mapPath := flag.String("campaign-maps", filepath.Join("static", "maps"), "rendered campaign map path")
 	runSeed := flag.Uint64("campaign-seed", 1, "nonzero run seed for solo first-clear campaign maps")
+	zoneRulesPath := flag.String("zone-rules", filepath.Join("..", "darkspin", "server", "runtime", "zone-rules.json"), "server-owned zone rule document")
 	outputPath := flag.String("out", filepath.Join("data", "generated", "level.json"), "generated JSON path")
 	lookupPath := flag.String("lookup", filepath.Join("static", "data", "level"), "compact report directory")
 	contentPath := flag.String("content", filepath.Join("content", "level"), "generated level content directory")
@@ -100,6 +102,9 @@ func main() {
 	}
 	err = enrichLevelMaps(database, result.Levels, *mapPath)
 	if err != nil {
+		fatal(err)
+	}
+	if err = enrichZoneRules(*zoneRulesPath, result.Levels); err != nil {
 		fatal(err)
 	}
 	if err = generateSeededMaps(database, *databasePath, *mapPath, *runSeed, result.Levels, descriptions); err != nil {

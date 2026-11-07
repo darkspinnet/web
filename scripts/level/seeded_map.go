@@ -198,6 +198,11 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 	if err != nil {
 		return err
 	}
+	if level.ZoneRules != nil {
+		director.ZoneRules = level.ZoneRules.resolved
+		director.EnemyPopulationRules = director.ZoneRules.EnemyPopulation
+		director.BossSpawnRules = director.ZoneRules.BossSpawning
+	}
 	director, err = game.ApplyPopulationRules(director)
 	if err != nil {
 		return err

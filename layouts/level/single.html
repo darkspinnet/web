@@ -169,6 +169,11 @@
       <div><dt>Physics</dt><dd>{{ $level.physics_mesh | default "—" }}</dd></div>
     </dl>
   </article>
+  {{ with $level.zone_rules }}
+    {{ $number := "03" }}
+    {{ if $level.map.positions }}{{ $number = "05" }}{{ else if $level.map }}{{ $number = "04" }}{{ end }}
+    {{ partial "level-zone-rules.html" (dict "rules" . "number" $number) }}
+  {{ end }}
 </section>
 {{ else }}
 {{ if $level.replay }}

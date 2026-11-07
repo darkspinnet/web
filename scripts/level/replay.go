@@ -56,6 +56,7 @@ func loadReplayLevels(dbPath, mapPath string, levels []levelReport) ([]levelRepo
 		report.Slug = "replay-" + level.Slug
 		report.Mode, report.Slot, report.Previous, report.Next = "", "", "", ""
 		report.Progression, report.Campaign, report.CampaignOrders = 0, nil, nil
+		report.ZoneRules = nil // Replay rules depend on the selected threat, not this destination.
 		report.Region = levelRegion(report.Name, director.PlanetConfigName)
 		report.Replay = &replayDetail{Enemies: replayRoster(director)}
 		report.NPCs = make([]string, 0, len(report.Replay.Enemies))

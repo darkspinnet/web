@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sort"
+	"time"
 
 	"github.com/darkspinnet/darkspin/server/game"
 	zonehorde "github.com/darkspinnet/darkspin/server/zone/horde"
@@ -104,7 +105,13 @@ func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director g
 }
 
 func planSeededHorde(director game.CampaignDirector, publication game.CampaignDirectorPublication, sections []zonepopulation.SectionRoster, completedStages uint32) ([]seededHordeWave, error) {
-	session := zonehorde.NewCampaignSession(completedStages)
+	rules := director.ZoneRules.MutationAgent
+	session := zonehorde.NewCampaignSessionWithPolicy(completedStages, zonehorde.Policy{
+		IsMutationAgentEnabled: rules.IsEnabled, MutationAgentMinChainLevel: rules.MinimumChainLevel,
+		WaveCount: rules.WaveCount, MutationAgentWaveOrdinal: rules.SpawnWave,
+		InterWaveDelay:                  time.Duration(rules.InterWaveDelayMillisecond) * time.Millisecond,
+		IsMutationAgentDefeatCompleting: rules.IsAgentDefeatCompleting,
+	})
 	policy := session.Policy()
 	plans, nextID, err := zonehorde.PlanFirstWaveWithPolicy(director, publication, 1, 1, sections, policy)
 	if err != nil {

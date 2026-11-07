@@ -2196,6 +2196,18 @@ body {
 .level-map-wave-enemy a { min-width: 0; color: hsl(var(--foreground)); text-decoration-color: hsl(var(--border)); text-underline-offset: 3px; }
 .level-map-wave-enemy a:hover { color: hsl(var(--primary)); text-decoration: underline; }
 .level-map-hordes small { color: hsl(var(--muted-foreground)); }
+.zone-rule-groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px 32px; padding: 24px; }
+.zone-rule-groups section { min-width: 0; }
+.zone-rule-groups h3 { margin: 0 0 10px; font-size: .9rem; }
+.zone-rule-groups dl { margin: 0; }
+.zone-rule-groups dl > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: baseline; gap: 12px; padding: 10px 8px; border-bottom: 1px solid hsl(var(--border)); font-size: .8rem; }
+.zone-rule-groups dt { color: hsl(var(--muted-foreground)); }
+.zone-rule-groups dd { display: grid; gap: 4px; margin: 0; text-align: right; overflow-wrap: anywhere; }
+.zone-rule-groups dd strong { font-weight: 500; }
+.zone-rule-groups dd small { color: hsl(var(--muted-foreground)); font-size: .7rem; }
+.zone-rule-groups .is-modified { border-left: 3px solid #e3b76f; background: #282115; }
+.zone-rule-groups .is-modified strong, .zone-rule-groups .is-modified dd small span, .level-zone-rules .zone-rule-status.is-modified { color: #e3b76f; }
+@media(max-width:700px) { .zone-rule-groups { grid-template-columns: minmax(0,1fr); gap: 24px; padding: 18px; } }
 .level-map-object.is-entry { color: #8dffa8; }
 .level-map-connections { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 15px; border-top: 1px solid hsl(var(--border)); font-size: .78rem; }
 .level-map-connections span { color: hsl(var(--muted-foreground)); }
