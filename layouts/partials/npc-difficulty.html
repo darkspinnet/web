@@ -1,9 +1,7 @@
 <section class="npc-difficulty-controls" data-npc-difficulty data-scaling-url="{{ "/data/npc/scaling.json" | strings.TrimPrefix "/" | relURL }}" aria-label="Enemy difficulty preview">
   <div class="npc-difficulty-fields">
-    <label>Difficulty<select data-npc-mode disabled><option value="onslaught">Onslaught</option><option value="invasion">Invasion</option><option value="apocalypse">Apocalypse</option></select></label>
-    <label>Mission<select data-npc-mission disabled>{{ range seq 1 24 }}<option value="{{ . }}">{{ add 1 (div (sub . 1) 4) }}-{{ add 1 (mod (sub . 1) 4) }}</option>{{ end }}</select></label>
-    <label>Play mode<select data-npc-party-mode disabled><option value="solo">Solo</option><option value="coop">Co-op</option></select></label>
-    <label data-npc-player-field hidden>Players<select data-npc-players disabled><option value="2">2 players</option><option value="3">3 players</option><option value="4">4 players</option></select></label>
+    <label>Mission<select data-npc-mission disabled>{{ range seq 1 72 }}<option value="{{ . }}">{{ add 1 (div (sub . 1) 4) }}-{{ add 1 (mod (sub . 1) 4) }}</option>{{ end }}</select></label>
+    {{ partial "npc-players.html" . }}
   </div>
   <p data-npc-difficulty-summary role="status">Loading difficulty values…</p>
 </section>

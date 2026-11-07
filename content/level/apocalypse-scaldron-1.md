@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 2-1 · Desert Necropolis"
+title = "Apocalypse 14-1 · Desert Necropolis"
 level = "apocalypse-scaldron-1"
 generated = true
 +++

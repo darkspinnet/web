@@ -25,6 +25,10 @@ func TestProgressionCoversAllPassesAndBoundaries(t *testing.T) {
 			if report.Progression != pass*24+i+1 {
 				t.Fatalf("wrong order: %s", report.DisplayName)
 			}
+			stage := pass*24 + i + 1
+			if report.Slot != fmt.Sprintf("%d-%d", (stage-1)/4+1, (stage-1)%4+1) {
+				t.Fatalf("wrong mission number at stage %d: %s", stage, report.Slot)
+			}
 		}
 	}
 	last := groups[0].Levels[23]
@@ -32,8 +36,8 @@ func TestProgressionCoversAllPassesAndBoundaries(t *testing.T) {
 	if last.Next != first.Slug || first.Previous != last.Slug {
 		t.Fatal("pass boundary navigation is disconnected")
 	}
-	if groups[0].Levels[0].Slug != "map-1" || first.Slot != "1-1" || first.Slug != "invasion-map-24" {
-		t.Fatal("canonical URLs or stage reset changed")
+	if groups[0].Levels[0].Slug != "map-1" || first.Slot != "7-1" || first.Slug != "invasion-map-24" {
+		t.Fatal("canonical URLs or continuous mission numbering changed")
 	}
 	if groups[2].Levels[23].Next != "" {
 		t.Fatal("final mission should not link past Apocalypse")

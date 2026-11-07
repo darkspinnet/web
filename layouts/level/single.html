@@ -7,22 +7,37 @@
     <h1>{{ .Title }}</h1>
     <p>{{ $level.region }} · {{ $level.name }} · {{ if $level.replay }}replay randomizer{{ else }}mission field guide{{ end }}</p>
   </div>
+  {{ $planet := index site.Data.planet_images $level.region }}
+  {{ $preview := index site.Data.level_images $level.name }}
+  {{ if or $planet $preview }}
+  <div class="level-detail-artwork">
+    {{ with $planet }}
+    <figure><img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.region }}" width="240" height="160" decoding="async"><figcaption>{{ $level.region }}</figcaption></figure>
+    {{ end }}
+    {{ with $preview }}
+    <figure><img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.display_name }} level preview" width="163" height="130" decoding="async"><figcaption>{{ $level.display_name }}</figcaption></figure>
+    {{ end }}
+  </div>
+  {{ end }}
   <div class="page-counter"><strong>{{ with $campaign }}{{ len .enemies }}{{ else }}{{ $level.npc_count }}{{ end }}</strong><span>ENEMY<br>ROSTER</span></div>
 </header>
 
 {{ if $level.mode }}
 <nav class="mission-nav" aria-label="Campaign progression">
-  {{ with $level.previous }}<a class="mission-nav-previous" href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">← Previous mission</a>{{ end }}
+  {{ with $level.previous }}<a class="mission-nav-previous" data-campaign-context-link href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">← Previous mission</a>{{ end }}
   <span class="mission-nav-progress">{{ $level.progression }} / 72 · {{ $level.mode }}</span>
-  {{ with $level.next }}<a class="mission-nav-next" href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">Next mission →</a>{{ end }}
+  {{ with $level.next }}<a class="mission-nav-next" data-campaign-context-link href="{{ printf "/level/%s/" . | strings.TrimPrefix "/" | relURL }}">Next mission →</a>{{ end }}
 </nav>
 {{ end }}
 {{ with $campaign }}
-<section class="detail-metric level-run-metrics">
-  <div><span>{{ upper $level.mode }}</span><strong>{{ .difficulty }}</strong><small>DIFFICULTY</small></div>
-  <div><span>SUGGESTED</span><strong>{{ if gt .expected_avatar_level 0 }}{{ .expected_avatar_level }}{{ else }}—{{ end }}</strong><small>HERO LEVEL</small></div>
-  <div><span>ENEMY HP</span><strong>{{ printf "%.0f%%" (mul .health_multiplier 100) }}</strong><small>BASE HEALTH</small></div>
-  <div><span>ENEMY DAMAGE</span><strong>{{ printf "%.0f%%" (mul .damage_multiplier 100) }}</strong><small>BASE DAMAGE</small></div>
+<section class="detail-metric level-run-metrics" data-npc-difficulty data-stage="{{ $level.progression }}" data-level-modifier="{{ .expected_avatar_level }}" data-scaling-url="{{ "data/npc/scaling.json" | relURL }}" aria-label="Campaign stats and party size">
+  <div><span>Difficulty</span><strong>{{ .difficulty }}</strong></div>
+  <div><span>Gear Score</span><strong>{{ printf "%.0f–%.0f" .recommended_squad_min .recommended_squad_max }}</strong></div>
+  <div class="level-run-explained" title="Health = base × {{ printf "%.2f" .health_multiplier }} difficulty × 1 party. level_modifier {{ .expected_avatar_level }}"><span>Enemy Health</span><strong data-campaign-health-multiplier>{{ printf "%.0f%%" (mul .health_multiplier 100) }}</strong></div>
+  <div class="level-run-explained" title="Damage = base × {{ printf "%.2f" .damage_multiplier }} difficulty × 1 party. level_modifier {{ .expected_avatar_level }}"><span>Enemy Damage</span><strong data-campaign-damage-multiplier>{{ printf "%.0f%%" (mul .damage_multiplier 100) }}</strong></div>
+  <div class="level-run-party">
+    {{ partial "npc-players.html" . }}
+  </div>
 </section>
 
 <section class="level-campaign-stack">
@@ -31,11 +46,11 @@
     <div class="level-dossier-grid">
       {{ range .enemies }}
       {{ $npc := index site.Data.generated.npc.entry .slug }}
-      <article class="level-enemy-dossier{{ if eq .role "Destructor" }} level-enemy-destructor{{ end }}" id="{{ .slug }}" data-role="{{ lower .role }}">
+      <article class="level-enemy-dossier{{ if eq .role "Destructor" }} level-enemy-destructor{{ end }}" id="{{ .slug }}" data-role="{{ lower .role }}" data-campaign-enemy data-party-health="{{ $npc.player_count_health_scale }}" data-health-policy="{{ $npc.health_scaling }}">
         <header class="level-enemy-header">
-          <h3><a href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}" title="{{ .noun }}">{{ .name }}</a></h3>
+          <h3><a data-npc-context-link href="{{ printf "/npc/%s/" .slug | strings.TrimPrefix "/" | relURL }}" title="{{ .noun }}">{{ .name }}</a></h3>
           <div class="level-enemy-profile">
-            <span class="level-enemy-stat" role="img" aria-label="{{ printf "%.0f" .estimated_hit_points }} estimated HP, {{ .base_hit_points }} base" title="{{ .base_hit_points }} base">
+            <span class="level-enemy-stat" data-campaign-health="{{ .estimated_hit_points }}" data-base-hp="{{ .base_hit_points }}" role="img" aria-label="{{ printf "%.0f" .estimated_hit_points }} estimated HP, {{ .base_hit_points }} base" title="{{ .base_hit_points }} base">
               {{ partial "enemy-stat-icon.html" "health" }}
               <strong>{{ printf "%.0f" .estimated_hit_points }}</strong>
             </span>
@@ -55,7 +70,7 @@
               {{ $damage = printf "%.0f–%.0f" (math.Round .estimated_damage_min) (math.Round .estimated_damage_max) }}
               {{ $damageTip = .estimated_damage_type | default "Damage type unavailable" }}
             {{ end }}
-            <span class="level-enemy-stat" role="img" aria-label="Estimated damage {{ $damage }}. {{ $damageTip }}" title="{{ $damageTip }}">
+            <span class="level-enemy-stat"{{ if isset . "estimated_damage_min" }} data-campaign-damage data-min="{{ .estimated_damage_min }}" data-max="{{ .estimated_damage_max }}"{{ end }} role="img" aria-label="Estimated damage {{ $damage }}. {{ $damageTip }}" title="{{ $damageTip }}">
               {{ partial "enemy-stat-icon.html" "damage" }}
               <strong>{{ $damage }}</strong>
             </span>

@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 6-2 · Shadowglades"
+title = "Apocalypse 18-2 · Shadowglades"
 level = "apocalypse-nocturna-1"
 generated = true
 +++

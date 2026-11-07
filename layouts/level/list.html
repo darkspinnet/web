@@ -13,7 +13,7 @@
   {{ range $data.groups }}
   <article class="level-group-card">
     <header>
-      <div><span class="level-index">{{ if eq .slug "other" }}Auxiliary{{ else if eq .slug "replay" }}Randomizer{{ else }}Campaign{{ end }}</span><h2>{{ .name }}</h2></div>
+      <div><span class="level-index">{{ if eq .slug "other" }}Auxiliary{{ else if eq .slug "replay" }}Randomizer{{ else }}Campaign{{ end }}</span><h2>{{ with index site.Data.campaign_icons .slug }}<img class="campaign-heading-icon" src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="" width="32" height="32">{{ end }}{{ .name }}</h2></div>
       <div class="group-stats"><b>{{ .count }}</b> {{ if in (slice "other" "replay") .slug }}maps{{ else }}missions{{ end }}</div>
     </header>
     {{ if eq .slug "replay" }}

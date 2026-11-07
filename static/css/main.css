@@ -1074,13 +1074,12 @@ body { background: #090c10; font-size: 15px; }
 .level-group-card h2 { margin: 0; color: #d0d7dc; font-size: 1rem; letter-spacing: .04em; text-transform: uppercase; }
 .level-stage-list { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: #293642; }
 .level-group-card:last-child .level-stage-list { grid-template-columns: repeat(3, minmax(0,1fr)); }
-.level-stage-link { display: grid; grid-template-columns: minmax(0,1fr) 16px; gap: 10px; align-items: center; min-height: 68px; padding: 10px 12px; background: #0d1318; }
+.level-stage-link { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; align-items: center; min-height: 68px; padding: 10px 12px; background: #0d1318; }
 .level-stage-link:hover { background: #111820; }
 .level-stage-link .stage-number { color: var(--acid); font: 600 .75rem/1 monospace; }
 .level-stage-link strong, .level-stage-link small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .level-stage-link strong { color: #b8c1c8; font-size: .72rem; }
 .level-stage-link small { margin-top: .28rem; color: #697681; font: .62rem/1 monospace; }
-.level-stage-link em { color: #61707c; font-style: normal; text-align: right; }
 .level-enemy-list { display: grid; grid-template-columns: 1fr 1fr; }
 .level-enemy-list > a { display: grid; grid-template-columns: minmax(110px,.7fr) minmax(0,1.3fr) 16px; gap: 10px; align-items: center; min-height: 46px; padding: 6px 14px; border-right: 1px solid #202a32; border-bottom: 1px solid #202a32; }
 .level-enemy-list > a:hover { background: #141c23; }
@@ -1978,7 +1977,22 @@ body {
 .level-stage-link:hover { background: hsl(var(--accent-bg)); }
 .level-stage-link strong { color: hsl(var(--foreground)); font-size: .85rem; font-weight: 600; white-space: normal; }
 .level-stage-link small { color: hsl(var(--muted-foreground)); font: .6875rem/1.2 inherit; text-transform: none; }
-.level-stage-link em { color: hsl(var(--muted-foreground)); }
+.level-stage-link.has-planet-image { grid-template-columns: 88px minmax(0, 1fr); }
+.level-stage-link > span { min-width: 0; width: 100%; }
+.level-stage-link.has-planet-image { padding-inline-end: 8px; }
+.level-stage-link small { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.4; }
+.level-planet-thumbnail { display: block; width: 88px; height: 60px; object-fit: contain; }
+.level-detail-heading { gap: 20px; }
+.level-detail-heading > div:not(.page-counter) { flex: 1; min-width: 0; }
+.level-detail-heading > .level-detail-artwork { flex: 0 1 400px; display: flex; align-items: center; gap: 12px; }
+.level-detail-artwork figure { flex: 1; min-width: 0; margin: 0; text-align: center; }
+.level-detail-artwork img { display: block; width: 100%; height: 130px; object-fit: contain; }
+.level-detail-artwork figcaption { margin-top: 5px; color: hsl(var(--muted-foreground)); font-size: .75rem; }
+.level-group-card > header h2 { display: flex; align-items: center; gap: 8px; }
+.campaign-heading-icon { flex: none; display: block; width: 32px; height: 32px; object-fit: contain; }
+@media (max-width: 1000px) {
+  .level-detail-heading > .level-detail-artwork { flex: none; width: min(100%, 400px); align-self: flex-start; }
+}
 .level-replay-planet h3 { margin: 0; padding: 12px 16px; border-bottom: 1px solid hsl(var(--border)); font-size: .85rem; }
 .level-replay-planet + .level-replay-planet { border-top: 1px solid hsl(var(--border)); }
 .level-replay-roster { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); gap: 8px; margin: 0; padding: 12px; list-style: none; }
@@ -2214,6 +2228,24 @@ body {
 .npc-difficulty-fields label { display: flex; flex-direction: column; gap: 8px; min-width: 120px; color: hsl(var(--muted-foreground)); font-size: .8rem; }
 .npc-difficulty-fields label[hidden] { display: none; }
 .npc-difficulty-fields select { min-height: 38px; padding: 8px 32px 8px 12px; border: 1px solid hsl(var(--border)); border-radius: 6px; background: hsl(var(--background)); color: hsl(var(--foreground)); font: inherit; }
+.npc-player-control { display: grid; gap: 8px; color: hsl(var(--muted-foreground)); font-size: .8rem; }
+.npc-player-buttons { display: flex; }
+.npc-player-buttons button { width: 38px; min-height: 38px; border: 1px solid hsl(var(--border)); background: hsl(var(--background)); color: hsl(var(--muted-foreground)); cursor: pointer; font: inherit; }
+.npc-player-buttons button + button { border-left: 0; }
+.npc-player-buttons button:first-child { border-radius: 6px 0 0 6px; }
+.npc-player-buttons button:last-child { border-radius: 0 6px 6px 0; }
+.npc-player-buttons button[aria-pressed="true"] { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); font-weight: 700; }
+.npc-player-buttons button:focus-visible { position: relative; outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+.npc-player-buttons button:disabled { opacity: .5; cursor: default; }
+.level-run-metrics { grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; gap: 24px; padding: 24px 28px; background: hsl(var(--card)); }
+.level-run-metrics > div { padding: 0; }
+.level-run-metrics > div { text-align: center; }
+.level-run-party .npc-player-control { justify-items: center; }
+.level-run-explained { cursor: help; }
+@media (max-width: 900px) {
+  .level-run-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; padding: 20px; }
+  .level-run-party { grid-column: 1 / -1; }
+}
 .npc-difficulty-controls > p { margin: 14px 0 0; color: hsl(var(--muted-foreground)); font-size: .8rem; }
 .npc-profile-abilities { padding: 20px 24px; border-top: 1px solid hsl(var(--border)); }
 .npc-profile-abilities h2 { margin: 0 0 10px; font-size: 1rem; }

@@ -5,9 +5,9 @@
   "campaign_count": 72,
   "regions": {
     "Cryos": 7,
+    "Infinity": 8,
     "Nocturna": 10,
-    "Other": 23,
-    "PvP": 1,
+    "Other": 16,
     "Scaldron": 6,
     "Verdanth": 7,
     "Zelem": 7
@@ -692,6 +692,8 @@
           "campaign": {
             "difficulty": 1,
             "expected_avatar_level": 4,
+            "recommended_squad_min": 0,
+            "recommended_squad_max": 4,
             "health_multiplier": 0.6000000238418579,
             "damage_multiplier": 1,
             "enemies": [
@@ -1637,6 +1639,8 @@
           "campaign": {
             "difficulty": 2,
             "expected_avatar_level": 5,
+            "recommended_squad_min": 2,
+            "recommended_squad_max": 5,
             "health_multiplier": 0.7200000286102295,
             "damage_multiplier": 1.0499999523162842,
             "enemies": [
@@ -2523,6 +2527,8 @@
           "campaign": {
             "difficulty": 3,
             "expected_avatar_level": 5,
+            "recommended_squad_min": 3,
+            "recommended_squad_max": 6,
             "health_multiplier": 0.8600000143051147,
             "damage_multiplier": 1.100000023841858,
             "enemies": [
@@ -3316,6 +3322,8 @@
           "campaign": {
             "difficulty": 4,
             "expected_avatar_level": 6,
+            "recommended_squad_min": 4,
+            "recommended_squad_max": 8,
             "health_multiplier": 1.0299999713897705,
             "damage_multiplier": 1.159999966621399,
             "enemies": [
@@ -3997,6 +4005,8 @@
           "campaign": {
             "difficulty": 5,
             "expected_avatar_level": 6,
+            "recommended_squad_min": 8,
+            "recommended_squad_max": 12,
             "health_multiplier": 1.2799999713897705,
             "damage_multiplier": 1.3899999856948853,
             "enemies": [
@@ -4789,6 +4799,8 @@
           "campaign": {
             "difficulty": 6,
             "expected_avatar_level": 7,
+            "recommended_squad_min": 10,
+            "recommended_squad_max": 14,
             "health_multiplier": 1.3600000143051147,
             "damage_multiplier": 1.4600000381469727,
             "enemies": [
@@ -5549,6 +5561,8 @@
           "campaign": {
             "difficulty": 7,
             "expected_avatar_level": 8,
+            "recommended_squad_min": 12,
+            "recommended_squad_max": 16,
             "health_multiplier": 1.440000057220459,
             "damage_multiplier": 1.5299999713897705,
             "enemies": [
@@ -6560,6 +6574,8 @@
           "campaign": {
             "difficulty": 8,
             "expected_avatar_level": 8,
+            "recommended_squad_min": 14,
+            "recommended_squad_max": 18,
             "health_multiplier": 1.5299999713897705,
             "damage_multiplier": 1.6100000143051147,
             "enemies": [
@@ -7161,6 +7177,8 @@
           "campaign": {
             "difficulty": 9,
             "expected_avatar_level": 9,
+            "recommended_squad_min": 18,
+            "recommended_squad_max": 22,
             "health_multiplier": 1.899999976158142,
             "damage_multiplier": 1.9299999475479126,
             "enemies": [
@@ -9221,6 +9239,8 @@
           "campaign": {
             "difficulty": 10,
             "expected_avatar_level": 10,
+            "recommended_squad_min": 20,
+            "recommended_squad_max": 24,
             "health_multiplier": 2.009999990463257,
             "damage_multiplier": 2.0299999713897705,
             "enemies": [
@@ -9922,6 +9942,8 @@
           "campaign": {
             "difficulty": 11,
             "expected_avatar_level": 10,
+            "recommended_squad_min": 22,
+            "recommended_squad_max": 26,
             "health_multiplier": 2.130000114440918,
             "damage_multiplier": 2.130000114440918,
             "enemies": [
@@ -10643,6 +10665,8 @@
           "campaign": {
             "difficulty": 12,
             "expected_avatar_level": 11,
+            "recommended_squad_min": 24,
+            "recommended_squad_max": 28,
             "health_multiplier": 2.259999990463257,
             "damage_multiplier": 2.240000009536743,
             "enemies": [
@@ -10773,7 +10797,7 @@
           "group_name": "Onslaught",
           "group_slug": "onslaught",
           "stage": 13,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             13
           ],
@@ -11724,6 +11748,8 @@
           "campaign": {
             "difficulty": 13,
             "expected_avatar_level": 12,
+            "recommended_squad_min": 28,
+            "recommended_squad_max": 32,
             "health_multiplier": 2.799999952316284,
             "damage_multiplier": 2.5199999809265137,
             "enemies": [
@@ -11867,7 +11893,7 @@
           "group_name": "Onslaught",
           "group_slug": "onslaught",
           "stage": 14,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             14
           ],
@@ -12586,6 +12612,8 @@
           "campaign": {
             "difficulty": 14,
             "expected_avatar_level": 12,
+            "recommended_squad_min": 30,
+            "recommended_squad_max": 34,
             "health_multiplier": 2.9700000286102295,
             "damage_multiplier": 2.6500000953674316,
             "enemies": [
@@ -13502,6 +13530,8 @@
           "campaign": {
             "difficulty": 15,
             "expected_avatar_level": 13,
+            "recommended_squad_min": 32,
+            "recommended_squad_max": 36,
             "health_multiplier": 3.1500000953674316,
             "damage_multiplier": 2.7799999713897705,
             "enemies": [
@@ -14192,6 +14222,8 @@
           "campaign": {
             "difficulty": 16,
             "expected_avatar_level": 14,
+            "recommended_squad_min": 34,
+            "recommended_squad_max": 38,
             "health_multiplier": 3.3399999141693115,
             "damage_multiplier": 2.9200000762939453,
             "enemies": [
@@ -15188,6 +15220,8 @@
           "campaign": {
             "difficulty": 17,
             "expected_avatar_level": 14,
+            "recommended_squad_min": 38,
+            "recommended_squad_max": 42,
             "health_multiplier": 4.139999866485596,
             "damage_multiplier": 3.5,
             "enemies": [
@@ -15862,6 +15896,8 @@
           "campaign": {
             "difficulty": 18,
             "expected_avatar_level": 15,
+            "recommended_squad_min": 40,
+            "recommended_squad_max": 44,
             "health_multiplier": 4.389999866485596,
             "damage_multiplier": 3.680000066757202,
             "enemies": [
@@ -15998,7 +16034,7 @@
           "group_name": "Onslaught",
           "group_slug": "onslaught",
           "stage": 19,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             19
           ],
@@ -16984,6 +17020,8 @@
           "campaign": {
             "difficulty": 19,
             "expected_avatar_level": 16,
+            "recommended_squad_min": 42,
+            "recommended_squad_max": 46,
             "health_multiplier": 4.650000095367432,
             "damage_multiplier": 3.859999895095825,
             "enemies": [
@@ -17130,7 +17168,7 @@
           "group_name": "Onslaught",
           "group_slug": "onslaught",
           "stage": 20,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             20
           ],
@@ -18193,6 +18231,8 @@
           "campaign": {
             "difficulty": 20,
             "expected_avatar_level": 16,
+            "recommended_squad_min": 44,
+            "recommended_squad_max": 48,
             "health_multiplier": 4.929999828338623,
             "damage_multiplier": 4.050000190734863,
             "enemies": [
@@ -18992,6 +19032,8 @@
           "campaign": {
             "difficulty": 21,
             "expected_avatar_level": 17,
+            "recommended_squad_min": 48,
+            "recommended_squad_max": 52,
             "health_multiplier": 6.110000133514404,
             "damage_multiplier": 4.860000133514404,
             "enemies": [
@@ -19746,6 +19788,8 @@
           "campaign": {
             "difficulty": 22,
             "expected_avatar_level": 18,
+            "recommended_squad_min": 50,
+            "recommended_squad_max": 54,
             "health_multiplier": 6.480000019073486,
             "damage_multiplier": 5.099999904632568,
             "enemies": [
@@ -20386,6 +20430,8 @@
           "campaign": {
             "difficulty": 23,
             "expected_avatar_level": 18,
+            "recommended_squad_min": 52,
+            "recommended_squad_max": 56,
             "health_multiplier": 6.869999885559082,
             "damage_multiplier": 5.360000133514404,
             "enemies": [
@@ -21122,6 +21168,8 @@
           "campaign": {
             "difficulty": 24,
             "expected_avatar_level": 19,
+            "recommended_squad_min": 54,
+            "recommended_squad_max": 62,
             "health_multiplier": 7.28000020980835,
             "damage_multiplier": 5.630000114440918,
             "enemies": [
@@ -21254,7 +21302,7 @@
       "levels": [
         {
           "mode": "Invasion",
-          "slot": "1-1",
+          "slot": "7-1",
           "progression": 25,
           "previous": "scaldron-4",
           "next": "invasion-cryos-2",
@@ -21300,7 +21348,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 421003523,
-            "selection": "1-1",
+            "selection": "7-1",
             "level": "cryos_1",
             "legend": null,
             "labels": null,
@@ -22050,6 +22098,8 @@
           "campaign": {
             "difficulty": 25,
             "expected_avatar_level": 20,
+            "recommended_squad_min": 62,
+            "recommended_squad_max": 66,
             "health_multiplier": 9.029999732971191,
             "damage_multiplier": 6.760000228881836,
             "enemies": [
@@ -22188,7 +22238,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "1-2",
+          "slot": "7-2",
           "progression": 26,
           "previous": "invasion-cryos-1",
           "next": "invasion-zelems-2",
@@ -22234,7 +22284,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 437846275,
-            "selection": "1-2",
+            "selection": "7-2",
             "level": "cryos_2",
             "legend": null,
             "labels": null,
@@ -22746,6 +22796,8 @@
           "campaign": {
             "difficulty": 26,
             "expected_avatar_level": 21,
+            "recommended_squad_min": 64,
+            "recommended_squad_max": 68,
             "health_multiplier": 9.569999694824219,
             "damage_multiplier": 7.110000133514404,
             "enemies": [
@@ -22879,7 +22931,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "1-3",
+          "slot": "7-3",
           "progression": 27,
           "previous": "invasion-cryos-2",
           "next": "invasion-zelems-3",
@@ -22925,7 +22977,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 454689027,
-            "selection": "1-3",
+            "selection": "7-3",
             "level": "zelems_2",
             "legend": null,
             "labels": null,
@@ -23493,6 +23545,8 @@
           "campaign": {
             "difficulty": 27,
             "expected_avatar_level": 22,
+            "recommended_squad_min": 66,
+            "recommended_squad_max": 70,
             "health_multiplier": 10.140000343322754,
             "damage_multiplier": 7.480000019073486,
             "enemies": [
@@ -23628,7 +23682,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "1-4",
+          "slot": "7-4",
           "progression": 28,
           "previous": "invasion-zelems-2",
           "next": "invasion-infinity-1",
@@ -23674,7 +23728,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 471531779,
-            "selection": "1-4",
+            "selection": "7-4",
             "level": "zelems_3",
             "legend": null,
             "labels": null,
@@ -24434,6 +24488,8 @@
           "campaign": {
             "difficulty": 28,
             "expected_avatar_level": 23,
+            "recommended_squad_min": 68,
+            "recommended_squad_max": 72,
             "health_multiplier": 10.75,
             "damage_multiplier": 7.869999885559082,
             "enemies": [
@@ -24563,7 +24619,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "2-1",
+          "slot": "8-1",
           "progression": 29,
           "previous": "invasion-zelems-3",
           "next": "invasion-infinity-3",
@@ -24574,7 +24630,7 @@
           "group_name": "Invasion",
           "group_slug": "invasion",
           "stage": 29,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             29
           ],
@@ -24609,7 +24665,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 488374531,
-            "selection": "2-1",
+            "selection": "8-1",
             "level": "infinity_1",
             "legend": null,
             "labels": null,
@@ -25456,6 +25512,8 @@
           "campaign": {
             "difficulty": 29,
             "expected_avatar_level": 23,
+            "recommended_squad_min": 72,
+            "recommended_squad_max": 76,
             "health_multiplier": 13.329999923706055,
             "damage_multiplier": 9.520000457763672,
             "enemies": [
@@ -25593,7 +25651,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "2-2",
+          "slot": "8-2",
           "progression": 30,
           "previous": "invasion-infinity-1",
           "next": "invasion-verdanth-2",
@@ -25604,7 +25662,7 @@
           "group_name": "Invasion",
           "group_slug": "invasion",
           "stage": 30,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             30
           ],
@@ -25639,7 +25697,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 505217283,
-            "selection": "2-2",
+            "selection": "8-2",
             "level": "infinity_3",
             "legend": null,
             "labels": null,
@@ -26430,6 +26488,8 @@
           "campaign": {
             "difficulty": 30,
             "expected_avatar_level": 24,
+            "recommended_squad_min": 74,
+            "recommended_squad_max": 78,
             "health_multiplier": 14.130000114440918,
             "damage_multiplier": 10.020000457763672,
             "enemies": [
@@ -26563,7 +26623,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "2-3",
+          "slot": "8-3",
           "progression": 31,
           "previous": "invasion-infinity-3",
           "next": "invasion-verdanth-3",
@@ -26609,7 +26669,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 522060035,
-            "selection": "2-3",
+            "selection": "8-3",
             "level": "verdanth_2",
             "legend": null,
             "labels": null,
@@ -27107,6 +27167,8 @@
           "campaign": {
             "difficulty": 31,
             "expected_avatar_level": 25,
+            "recommended_squad_min": 76,
+            "recommended_squad_max": 80,
             "health_multiplier": 14.979999542236328,
             "damage_multiplier": 10.550000190734863,
             "enemies": [
@@ -27239,7 +27301,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "2-4",
+          "slot": "8-4",
           "progression": 32,
           "previous": "invasion-verdanth-2",
           "next": "invasion-scaldron-2",
@@ -27285,7 +27347,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 538902787,
-            "selection": "2-4",
+            "selection": "8-4",
             "level": "verdanth_3",
             "legend": null,
             "labels": null,
@@ -27909,6 +27971,8 @@
           "campaign": {
             "difficulty": 32,
             "expected_avatar_level": 26,
+            "recommended_squad_min": 78,
+            "recommended_squad_max": 82,
             "health_multiplier": 15.880000114440918,
             "damage_multiplier": 11.100000381469727,
             "enemies": [
@@ -28043,7 +28107,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "3-1",
+          "slot": "9-1",
           "progression": 33,
           "previous": "invasion-verdanth-3",
           "next": "invasion-scaldron-4",
@@ -28089,7 +28153,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 555745539,
-            "selection": "3-1",
+            "selection": "9-1",
             "level": "scaldron_2",
             "legend": null,
             "labels": null,
@@ -28706,6 +28770,8 @@
           "campaign": {
             "difficulty": 33,
             "expected_avatar_level": 26,
+            "recommended_squad_min": 82,
+            "recommended_squad_max": 86,
             "health_multiplier": 19.690000534057617,
             "damage_multiplier": 13.430000305175781,
             "enemies": [
@@ -28840,7 +28906,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "3-2",
+          "slot": "9-2",
           "progression": 34,
           "previous": "invasion-scaldron-2",
           "next": "invasion-cryos-4",
@@ -28886,7 +28952,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 572588291,
-            "selection": "3-2",
+            "selection": "9-2",
             "level": "scaldron_4",
             "legend": null,
             "labels": null,
@@ -29446,6 +29512,8 @@
           "campaign": {
             "difficulty": 34,
             "expected_avatar_level": 27,
+            "recommended_squad_min": 84,
+            "recommended_squad_max": 88,
             "health_multiplier": 20.8700008392334,
             "damage_multiplier": 14.140000343322754,
             "enemies": [
@@ -29583,7 +29651,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "3-3",
+          "slot": "9-3",
           "progression": 35,
           "previous": "invasion-scaldron-4",
           "next": "invasion-cryos-3",
@@ -29629,7 +29697,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 589431043,
-            "selection": "3-3",
+            "selection": "9-3",
             "level": "cryos_4",
             "legend": null,
             "labels": null,
@@ -30064,6 +30132,8 @@
           "campaign": {
             "difficulty": 35,
             "expected_avatar_level": 28,
+            "recommended_squad_min": 86,
+            "recommended_squad_max": 90,
             "health_multiplier": 22.1200008392334,
             "damage_multiplier": 14.880000114440918,
             "enemies": [
@@ -30201,7 +30271,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "3-4",
+          "slot": "9-4",
           "progression": 36,
           "previous": "invasion-cryos-4",
           "next": "invasion-nocturna-1",
@@ -30247,7 +30317,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 606273795,
-            "selection": "3-4",
+            "selection": "9-4",
             "level": "cryos_3",
             "legend": null,
             "labels": null,
@@ -32121,6 +32191,8 @@
           "campaign": {
             "difficulty": 36,
             "expected_avatar_level": 29,
+            "recommended_squad_min": 88,
+            "recommended_squad_max": 92,
             "health_multiplier": 23.450000762939453,
             "damage_multiplier": 15.65999984741211,
             "enemies": [
@@ -32255,7 +32327,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "4-1",
+          "slot": "10-1",
           "progression": 37,
           "previous": "invasion-cryos-3",
           "next": "invasion-nocturna-2",
@@ -32301,7 +32373,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 623116547,
-            "selection": "4-1",
+            "selection": "10-1",
             "level": "nocturna_1",
             "legend": null,
             "labels": null,
@@ -32912,6 +32984,8 @@
           "campaign": {
             "difficulty": 37,
             "expected_avatar_level": 29,
+            "recommended_squad_min": 92,
+            "recommended_squad_max": 96,
             "health_multiplier": 29.079999923706055,
             "damage_multiplier": 18.950000762939453,
             "enemies": [
@@ -33047,7 +33121,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "4-2",
+          "slot": "10-2",
           "progression": 38,
           "previous": "invasion-nocturna-1",
           "next": "invasion-infinity-4",
@@ -33094,7 +33168,7 @@
             "run_seed": "1",
             "population_seed": 639959299,
             "unmapped_objects": 1,
-            "selection": "4-2",
+            "selection": "10-2",
             "level": "nocturna_2",
             "legend": null,
             "labels": null,
@@ -33613,6 +33687,8 @@
           "campaign": {
             "difficulty": 38,
             "expected_avatar_level": 30,
+            "recommended_squad_min": 94,
+            "recommended_squad_max": 98,
             "health_multiplier": 30.81999969482422,
             "damage_multiplier": 19.940000534057617,
             "enemies": [
@@ -33749,7 +33825,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "4-3",
+          "slot": "10-3",
           "progression": 39,
           "previous": "invasion-nocturna-2",
           "next": "invasion-infinity-2",
@@ -33760,7 +33836,7 @@
           "group_name": "Invasion",
           "group_slug": "invasion",
           "stage": 39,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             39
           ],
@@ -33795,7 +33871,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 656802051,
-            "selection": "4-3",
+            "selection": "10-3",
             "level": "infinity_4",
             "legend": null,
             "labels": null,
@@ -34727,6 +34803,8 @@
           "campaign": {
             "difficulty": 39,
             "expected_avatar_level": 31,
+            "recommended_squad_min": 96,
+            "recommended_squad_max": 100,
             "health_multiplier": 32.66999816894531,
             "damage_multiplier": 20.989999771118164,
             "enemies": [
@@ -34857,7 +34935,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "4-4",
+          "slot": "10-4",
           "progression": 40,
           "previous": "invasion-infinity-4",
           "next": "invasion-zelems-1",
@@ -34868,7 +34946,7 @@
           "group_name": "Invasion",
           "group_slug": "invasion",
           "stage": 40,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             40
           ],
@@ -34903,7 +34981,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 673644803,
-            "selection": "4-4",
+            "selection": "10-4",
             "level": "infinity_2",
             "legend": null,
             "labels": null,
@@ -35827,6 +35905,8 @@
           "campaign": {
             "difficulty": 40,
             "expected_avatar_level": 32,
+            "recommended_squad_min": 98,
+            "recommended_squad_max": 102,
             "health_multiplier": 34.630001068115234,
             "damage_multiplier": 22.09000015258789,
             "enemies": [
@@ -35969,7 +36049,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "5-1",
+          "slot": "11-1",
           "progression": 41,
           "previous": "invasion-infinity-2",
           "next": "invasion-zelems-4",
@@ -36015,7 +36095,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 690487555,
-            "selection": "5-1",
+            "selection": "11-1",
             "level": "zelems_1",
             "legend": null,
             "labels": null,
@@ -36616,6 +36696,8 @@
           "campaign": {
             "difficulty": 41,
             "expected_avatar_level": 32,
+            "recommended_squad_min": 102,
+            "recommended_squad_max": 106,
             "health_multiplier": 42.939998626708984,
             "damage_multiplier": 26.729999542236328,
             "enemies": [
@@ -36744,7 +36826,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "5-2",
+          "slot": "11-2",
           "progression": 42,
           "previous": "invasion-zelems-1",
           "next": "invasion-nocturna-4",
@@ -36781,7 +36863,7 @@
             "ZelemSpecialHaster_2.Noun",
             "nct_lieu_su_stealther_2.Noun",
             "ZelemSpecialThree_2.Noun",
-            "ZelemBoss_2.Noun"
+            "ZelemSpecialHaster_Captain_2.Noun"
           ],
           "aliases": [
             "zelems_4",
@@ -36790,7 +36872,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 707330307,
-            "selection": "5-2",
+            "selection": "11-2",
             "level": "zelems_4",
             "legend": null,
             "labels": null,
@@ -37509,10 +37591,15 @@
                   {
                     "x": 252,
                     "y": 224,
-                    "slug": "zelemboss-2-noun",
-                    "name": "Zelem Boss 2",
-                    "destructor": true,
-                    "spawn_name": "Polaris, The Gravity Manipulator"
+                    "slug": "zelemspecialhaster-captain-2-noun",
+                    "name": "Zelem Special Haster Captain 2",
+                    "captain": true,
+                    "spawn_name": "Mikk the Luminal Aggressor",
+                    "affixes": [
+                      "Frenzied",
+                      "Swift",
+                      "Swift Aura"
+                    ]
                   }
                 ],
                 "objects": [
@@ -37641,6 +37728,8 @@
           "campaign": {
             "difficulty": 42,
             "expected_avatar_level": 33,
+            "recommended_squad_min": 104,
+            "recommended_squad_max": 108,
             "health_multiplier": 45.52000045776367,
             "damage_multiplier": 28.1299991607666,
             "enemies": [
@@ -37742,27 +37831,36 @@
                 "behavior": ""
               },
               {
-                "name": "Polaris, The Gravity Manipulator",
-                "noun": "ZelemBoss_2",
-                "slug": "zelemboss-2-noun",
-                "role": "Destructor",
-                "challenge_value": 500,
-                "base_hit_points": 1750,
-                "estimated_hit_points": 79660,
-                "estimated_damage_min": 1012.7,
-                "estimated_damage_max": 1012.7,
-                "estimated_damage_type": "Technology (energy)",
+                "name": "Mikk the Luminal Aggressor",
+                "noun": "ZelemSpecialHaster_Captain_2",
+                "slug": "zelemspecialhaster-captain-2-noun",
+                "role": "Captain",
+                "challenge_value": 75,
+                "base_hit_points": 110,
+                "estimated_hit_points": 25036,
                 "descriptions": [
-                  "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+                  "Can bend time to haste a nearby ally's movement and attack speed.",
+                  "Has a moderately damaging projectile attack."
                 ],
-                "behavior": ""
+                "behavior": "",
+                "seeded_variants": [
+                  {
+                    "name": "Mikk the Luminal Aggressor",
+                    "affixes": [
+                      "Frenzied",
+                      "Swift",
+                      "Swift Aura"
+                    ],
+                    "count": 1
+                  }
+                ]
               }
             ]
           }
         },
         {
           "mode": "Invasion",
-          "slot": "5-3",
+          "slot": "11-3",
           "progression": 43,
           "previous": "invasion-zelems-4",
           "next": "invasion-nocturna-3",
@@ -37808,7 +37906,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 724173059,
-            "selection": "5-3",
+            "selection": "11-3",
             "level": "nocturna_4",
             "legend": null,
             "labels": null,
@@ -38479,6 +38577,8 @@
           "campaign": {
             "difficulty": 43,
             "expected_avatar_level": 34,
+            "recommended_squad_min": 106,
+            "recommended_squad_max": 110,
             "health_multiplier": 48.25,
             "damage_multiplier": 29.610000610351562,
             "enemies": [
@@ -38617,7 +38717,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "5-4",
+          "slot": "11-4",
           "progression": 44,
           "previous": "invasion-nocturna-4",
           "next": "invasion-verdanth-1",
@@ -38663,7 +38763,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 741015811,
-            "selection": "5-4",
+            "selection": "11-4",
             "level": "nocturna_3",
             "legend": null,
             "labels": null,
@@ -39406,6 +39506,8 @@
           "campaign": {
             "difficulty": 44,
             "expected_avatar_level": 35,
+            "recommended_squad_min": 108,
+            "recommended_squad_max": 112,
             "health_multiplier": 51.150001525878906,
             "damage_multiplier": 31.15999984741211,
             "enemies": [
@@ -39535,7 +39637,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "6-1",
+          "slot": "12-1",
           "progression": 45,
           "previous": "invasion-nocturna-3",
           "next": "invasion-verdanth-4",
@@ -39581,7 +39683,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 757858563,
-            "selection": "6-1",
+            "selection": "12-1",
             "level": "verdanth_1",
             "legend": null,
             "labels": null,
@@ -40107,6 +40209,8 @@
           "campaign": {
             "difficulty": 45,
             "expected_avatar_level": 35,
+            "recommended_squad_min": 112,
+            "recommended_squad_max": 116,
             "health_multiplier": 63.43000030517578,
             "damage_multiplier": 37.70000076293945,
             "enemies": [
@@ -40236,7 +40340,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "6-2",
+          "slot": "12-2",
           "progression": 46,
           "previous": "invasion-verdanth-1",
           "next": "invasion-scaldron-3",
@@ -40273,7 +40377,7 @@
             "NomadSpecialOne_2.Noun",
             "Rezzer_2.Noun",
             "NomadDrag_2.Noun",
-            "VerdanthBoss_2.Noun"
+            "NomadSpecialOne_Captain_2.Noun"
           ],
           "aliases": [
             "verdanth_4",
@@ -40282,7 +40386,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 774701315,
-            "selection": "6-2",
+            "selection": "12-2",
             "level": "verdanth_4",
             "legend": null,
             "labels": null,
@@ -40738,10 +40842,15 @@
                   {
                     "x": 165,
                     "y": 258,
-                    "slug": "verdanthboss-2-noun",
-                    "name": "Verdanth Boss 2",
-                    "destructor": true,
-                    "spawn_name": "Orcus, Devourer of Life"
+                    "slug": "nomadspecialone-captain-2-noun",
+                    "name": "Nomad Special One Captain 2",
+                    "captain": true,
+                    "spawn_name": "Kuma the Berserker",
+                    "affixes": [
+                      "Shielded",
+                      "Surefooted",
+                      "Surefooted Aura"
+                    ]
                   }
                 ],
                 "objects": [
@@ -40768,6 +40877,8 @@
           "campaign": {
             "difficulty": 46,
             "expected_avatar_level": 36,
+            "recommended_squad_min": 114,
+            "recommended_squad_max": 118,
             "health_multiplier": 67.23999786376953,
             "damage_multiplier": 39.68000030517578,
             "enemies": [
@@ -40868,24 +40979,36 @@
                 "behavior": ""
               },
               {
-                "name": "Orcus, Devourer of Life",
-                "noun": "VerdanthBoss_2",
-                "slug": "verdanthboss-2-noun",
-                "role": "Destructor",
-                "challenge_value": 500,
-                "base_hit_points": 1750,
-                "estimated_hit_points": 117670,
+                "name": "Kuma the Berserker",
+                "noun": "NomadSpecialOne_Captain_2",
+                "slug": "nomadspecialone-captain-2-noun",
+                "role": "Captain",
+                "challenge_value": 75,
+                "base_hit_points": 130,
+                "estimated_hit_points": 43706,
                 "descriptions": [
-                  "Consumes spawns, breathes disease, thorn barrage"
+                  "Has a vicious charge that will knock affected heroes up into the air.",
+                  "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
                 ],
-                "behavior": ""
+                "behavior": "",
+                "seeded_variants": [
+                  {
+                    "name": "Kuma the Berserker",
+                    "affixes": [
+                      "Shielded",
+                      "Surefooted",
+                      "Surefooted Aura"
+                    ],
+                    "count": 1
+                  }
+                ]
               }
             ]
           }
         },
         {
           "mode": "Invasion",
-          "slot": "6-3",
+          "slot": "12-3",
           "progression": 47,
           "previous": "invasion-verdanth-4",
           "next": "invasion-scaldron-1",
@@ -40931,7 +41054,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 791544067,
-            "selection": "6-3",
+            "selection": "12-3",
             "level": "scaldron_3",
             "legend": null,
             "labels": null,
@@ -41431,6 +41554,8 @@
           "campaign": {
             "difficulty": 47,
             "expected_avatar_level": 37,
+            "recommended_squad_min": 116,
+            "recommended_squad_max": 120,
             "health_multiplier": 71.2699966430664,
             "damage_multiplier": 41.7599983215332,
             "enemies": [
@@ -41561,7 +41686,7 @@
         },
         {
           "mode": "Invasion",
-          "slot": "6-4",
+          "slot": "12-4",
           "progression": 48,
           "previous": "invasion-scaldron-3",
           "next": "apocalypse-nocturna-3",
@@ -41607,7 +41732,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 808386819,
-            "selection": "6-4",
+            "selection": "12-4",
             "level": "scaldron_1",
             "legend": null,
             "labels": null,
@@ -42301,6 +42426,8 @@
           "campaign": {
             "difficulty": 48,
             "expected_avatar_level": 38,
+            "recommended_squad_min": 118,
+            "recommended_squad_max": 126,
             "health_multiplier": 75.55000305175781,
             "damage_multiplier": 43.95000076293945,
             "enemies": [
@@ -42439,7 +42566,7 @@
       "levels": [
         {
           "mode": "Apocalypse",
-          "slot": "1-1",
+          "slot": "13-1",
           "progression": 49,
           "previous": "invasion-scaldron-1",
           "next": "apocalypse-infinity-4",
@@ -42485,7 +42612,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 825229571,
-            "selection": "1-1",
+            "selection": "13-1",
             "level": "nocturna_3",
             "legend": null,
             "labels": null,
@@ -43313,6 +43440,8 @@
           "campaign": {
             "difficulty": 49,
             "expected_avatar_level": 39,
+            "recommended_squad_min": 126,
+            "recommended_squad_max": 130,
             "health_multiplier": 93.68000030517578,
             "damage_multiplier": 53.18000030517578,
             "enemies": [
@@ -43446,7 +43575,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "1-2",
+          "slot": "13-2",
           "progression": 50,
           "previous": "apocalypse-nocturna-3",
           "next": "apocalypse-cryos-2",
@@ -43457,7 +43586,7 @@
           "group_name": "Apocalypse",
           "group_slug": "apocalypse",
           "stage": 50,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             50
           ],
@@ -43492,7 +43621,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 842072323,
-            "selection": "1-2",
+            "selection": "13-2",
             "level": "infinity_4",
             "legend": null,
             "labels": null,
@@ -44417,6 +44546,8 @@
           "campaign": {
             "difficulty": 50,
             "expected_avatar_level": 40,
+            "recommended_squad_min": 128,
+            "recommended_squad_max": 132,
             "health_multiplier": 99.54000091552734,
             "damage_multiplier": 56.099998474121094,
             "enemies": [
@@ -44555,7 +44686,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "1-3",
+          "slot": "13-3",
           "progression": 51,
           "previous": "apocalypse-infinity-4",
           "next": "apocalypse-verdanth-1",
@@ -44601,7 +44732,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 858915075,
-            "selection": "1-3",
+            "selection": "13-3",
             "level": "cryos_2",
             "legend": null,
             "labels": null,
@@ -45116,6 +45247,8 @@
           "campaign": {
             "difficulty": 51,
             "expected_avatar_level": 41,
+            "recommended_squad_min": 130,
+            "recommended_squad_max": 134,
             "health_multiplier": 105.76000213623047,
             "damage_multiplier": 59.189998626708984,
             "enemies": [
@@ -45246,7 +45379,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "1-4",
+          "slot": "13-4",
           "progression": 52,
           "previous": "apocalypse-cryos-2",
           "next": "apocalypse-scaldron-1",
@@ -45292,7 +45425,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 875757827,
-            "selection": "1-4",
+            "selection": "13-4",
             "level": "verdanth_1",
             "legend": null,
             "labels": null,
@@ -45819,6 +45952,8 @@
           "campaign": {
             "difficulty": 52,
             "expected_avatar_level": 43,
+            "recommended_squad_min": 132,
+            "recommended_squad_max": 136,
             "health_multiplier": 112.37000274658203,
             "damage_multiplier": 62.45000076293945,
             "enemies": [
@@ -45950,7 +46085,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "2-1",
+          "slot": "14-1",
           "progression": 53,
           "previous": "apocalypse-verdanth-1",
           "next": "apocalypse-zelems-3",
@@ -45996,7 +46131,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 892600579,
-            "selection": "2-1",
+            "selection": "14-1",
             "level": "scaldron_1",
             "legend": null,
             "labels": null,
@@ -46697,6 +46832,8 @@
           "campaign": {
             "difficulty": 53,
             "expected_avatar_level": 44,
+            "recommended_squad_min": 136,
+            "recommended_squad_max": 140,
             "health_multiplier": 140.4600067138672,
             "damage_multiplier": 76.19000244140625,
             "enemies": [
@@ -46830,7 +46967,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "2-2",
+          "slot": "14-2",
           "progression": 54,
           "previous": "apocalypse-scaldron-1",
           "next": "apocalypse-nocturna-4",
@@ -46876,7 +47013,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 909443331,
-            "selection": "2-2",
+            "selection": "14-2",
             "level": "zelems_3",
             "legend": null,
             "labels": null,
@@ -47563,6 +47700,8 @@
           "campaign": {
             "difficulty": 54,
             "expected_avatar_level": 45,
+            "recommended_squad_min": 138,
+            "recommended_squad_max": 142,
             "health_multiplier": 149.24000549316406,
             "damage_multiplier": 80.37999725341797,
             "enemies": [
@@ -47691,7 +47830,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "2-3",
+          "slot": "14-3",
           "progression": 55,
           "previous": "apocalypse-zelems-3",
           "next": "apocalypse-infinity-3",
@@ -47737,7 +47876,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 926286083,
-            "selection": "2-3",
+            "selection": "14-3",
             "level": "nocturna_4",
             "legend": null,
             "labels": null,
@@ -48458,6 +48597,8 @@
           "campaign": {
             "difficulty": 55,
             "expected_avatar_level": 46,
+            "recommended_squad_min": 140,
+            "recommended_squad_max": 144,
             "health_multiplier": 158.57000732421875,
             "damage_multiplier": 84.80000305175781,
             "enemies": [
@@ -48598,7 +48739,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "2-4",
+          "slot": "14-4",
           "progression": 56,
           "previous": "apocalypse-nocturna-4",
           "next": "apocalypse-zelems-2",
@@ -48609,7 +48750,7 @@
           "group_name": "Apocalypse",
           "group_slug": "apocalypse",
           "stage": 56,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             56
           ],
@@ -48644,7 +48785,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 943128835,
-            "selection": "2-4",
+            "selection": "14-4",
             "level": "infinity_3",
             "legend": null,
             "labels": null,
@@ -49348,6 +49489,8 @@
           "campaign": {
             "difficulty": 56,
             "expected_avatar_level": 47,
+            "recommended_squad_min": 142,
+            "recommended_squad_max": 146,
             "health_multiplier": 168.47999572753906,
             "damage_multiplier": 89.45999908447266,
             "enemies": [
@@ -49483,7 +49626,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "3-1",
+          "slot": "15-1",
           "progression": 57,
           "previous": "apocalypse-infinity-3",
           "next": "apocalypse-verdanth-4",
@@ -49529,7 +49672,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 959971587,
-            "selection": "3-1",
+            "selection": "15-1",
             "level": "zelems_2",
             "legend": null,
             "labels": null,
@@ -50068,6 +50211,8 @@
           "campaign": {
             "difficulty": 57,
             "expected_avatar_level": 48,
+            "recommended_squad_min": 146,
+            "recommended_squad_max": 150,
             "health_multiplier": 210.60000610351562,
             "damage_multiplier": 109.13999938964844,
             "enemies": [
@@ -50197,7 +50342,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "3-2",
+          "slot": "15-2",
           "progression": 58,
           "previous": "apocalypse-zelems-2",
           "next": "apocalypse-scaldron-4",
@@ -50234,7 +50379,7 @@
             "NomadSpecialOne_3.Noun",
             "NocturnaSpecialMunch_3.Noun",
             "ZelemSpecialHaster_3.Noun",
-            "VerdanthBoss_3.Noun"
+            "NomadSpecialOne_Captain_3.Noun"
           ],
           "aliases": [
             "verdanth_4",
@@ -50244,7 +50389,7 @@
             "run_seed": "1",
             "population_seed": 976814339,
             "unmapped_objects": 2,
-            "selection": "3-2",
+            "selection": "15-2",
             "level": "verdanth_4",
             "legend": null,
             "labels": null,
@@ -50840,10 +50985,16 @@
                   {
                     "x": 165,
                     "y": 258,
-                    "slug": "verdanthboss-3-noun",
-                    "name": "Verdanth Boss 3",
-                    "destructor": true,
-                    "spawn_name": "Orcus, Devourer of Life"
+                    "slug": "nomadspecialone-captain-3-noun",
+                    "name": "Nomad Special One Captain 3",
+                    "captain": true,
+                    "spawn_name": "Stonn the Punishing Brute",
+                    "affixes": [
+                      "Deadly",
+                      "Shielded",
+                      "Surefooted",
+                      "Surefooted Aura"
+                    ]
                   }
                 ],
                 "objects": [
@@ -50870,6 +51021,8 @@
           "campaign": {
             "difficulty": 58,
             "expected_avatar_level": 49,
+            "recommended_squad_min": 148,
+            "recommended_squad_max": 152,
             "health_multiplier": 223.75999450683594,
             "damage_multiplier": 115.13999938964844,
             "enemies": [
@@ -50967,24 +51120,37 @@
                 "behavior": ""
               },
               {
-                "name": "Orcus, Devourer of Life",
-                "noun": "VerdanthBoss_3",
-                "slug": "verdanthboss-3-noun",
-                "role": "Destructor",
-                "challenge_value": 500,
-                "base_hit_points": 2000,
-                "estimated_hit_points": 447520,
+                "name": "Stonn the Punishing Brute",
+                "noun": "NomadSpecialOne_Captain_3",
+                "slug": "nomadspecialone-captain-3-noun",
+                "role": "Captain",
+                "challenge_value": 75,
+                "base_hit_points": 140,
+                "estimated_hit_points": 156632,
                 "descriptions": [
-                  "Consumes spawns, breathes disease, thorn barrage"
+                  "Has a vicious charge that will knock affected heroes up into the air.",
+                  "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
                 ],
-                "behavior": ""
+                "behavior": "",
+                "seeded_variants": [
+                  {
+                    "name": "Stonn the Punishing Brute",
+                    "affixes": [
+                      "Deadly",
+                      "Shielded",
+                      "Surefooted",
+                      "Surefooted Aura"
+                    ],
+                    "count": 1
+                  }
+                ]
               }
             ]
           }
         },
         {
           "mode": "Apocalypse",
-          "slot": "3-3",
+          "slot": "15-3",
           "progression": 59,
           "previous": "apocalypse-verdanth-4",
           "next": "apocalypse-cryos-1",
@@ -51030,7 +51196,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 993657091,
-            "selection": "3-3",
+            "selection": "15-3",
             "level": "scaldron_4",
             "legend": null,
             "labels": null,
@@ -51598,6 +51764,8 @@
           "campaign": {
             "difficulty": 59,
             "expected_avatar_level": 50,
+            "recommended_squad_min": 150,
+            "recommended_squad_max": 154,
             "health_multiplier": 237.75,
             "damage_multiplier": 121.47000122070312,
             "enemies": [
@@ -51730,7 +51898,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "3-4",
+          "slot": "15-4",
           "progression": 60,
           "previous": "apocalypse-scaldron-4",
           "next": "apocalypse-verdanth-3",
@@ -51776,7 +51944,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1010499843,
-            "selection": "3-4",
+            "selection": "15-4",
             "level": "cryos_1",
             "legend": null,
             "labels": null,
@@ -52533,6 +52701,8 @@
           "campaign": {
             "difficulty": 60,
             "expected_avatar_level": 51,
+            "recommended_squad_min": 152,
+            "recommended_squad_max": 156,
             "health_multiplier": 252.61000061035156,
             "damage_multiplier": 128.14999389648438,
             "enemies": [
@@ -52668,7 +52838,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "4-1",
+          "slot": "16-1",
           "progression": 61,
           "previous": "apocalypse-cryos-1",
           "next": "apocalypse-cryos-3",
@@ -52714,7 +52884,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1027342595,
-            "selection": "4-1",
+            "selection": "16-1",
             "level": "verdanth_3",
             "legend": null,
             "labels": null,
@@ -53339,6 +53509,8 @@
           "campaign": {
             "difficulty": 61,
             "expected_avatar_level": 52,
+            "recommended_squad_min": 156,
+            "recommended_squad_max": 160,
             "health_multiplier": 315.760009765625,
             "damage_multiplier": 156.33999633789062,
             "enemies": [
@@ -53479,7 +53651,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "4-2",
+          "slot": "16-2",
           "progression": 62,
           "previous": "apocalypse-verdanth-3",
           "next": "apocalypse-zelems-4",
@@ -53525,7 +53697,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1044185347,
-            "selection": "4-2",
+            "selection": "16-2",
             "level": "cryos_3",
             "legend": null,
             "labels": null,
@@ -55402,6 +55574,8 @@
           "campaign": {
             "difficulty": 62,
             "expected_avatar_level": 53,
+            "recommended_squad_min": 158,
+            "recommended_squad_max": 162,
             "health_multiplier": 335.5,
             "damage_multiplier": 164.94000244140625,
             "enemies": [
@@ -55539,7 +55713,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "4-3",
+          "slot": "16-3",
           "progression": 63,
           "previous": "apocalypse-cryos-3",
           "next": "apocalypse-nocturna-2",
@@ -55576,7 +55750,7 @@
             "ZelemSpecialOne_3.Noun",
             "NocturnaSpecialDrift_3.Noun",
             "NomadBioSpecialTwo_3.Noun",
-            "ZelemBoss_3.Noun"
+            "ZelemSpecialOne_Captain_3.Noun"
           ],
           "aliases": [
             "zelems_4",
@@ -55585,7 +55759,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1061028099,
-            "selection": "4-3",
+            "selection": "16-3",
             "level": "zelems_4",
             "legend": null,
             "labels": null,
@@ -56339,10 +56513,16 @@
                   {
                     "x": 252,
                     "y": 224,
-                    "slug": "zelemboss-3-noun",
-                    "name": "Zelem Boss 3",
-                    "destructor": true,
-                    "spawn_name": "Polaris, The Gravity Manipulator"
+                    "slug": "zelemspecialone-captain-3-noun",
+                    "name": "Zelem Special One Captain 3",
+                    "captain": true,
+                    "spawn_name": "Cyluk the Wormhole Dominator",
+                    "affixes": [
+                      "Ghostly",
+                      "Ghostly Aura",
+                      "Shifted",
+                      "Shifted Aura"
+                    ]
                   }
                 ],
                 "objects": [
@@ -56471,6 +56651,8 @@
           "campaign": {
             "difficulty": 63,
             "expected_avatar_level": 54,
+            "recommended_squad_min": 160,
+            "recommended_squad_max": 164,
             "health_multiplier": 356.4700012207031,
             "damage_multiplier": 174.00999450683594,
             "enemies": [
@@ -56574,27 +56756,37 @@
                 "behavior": ""
               },
               {
-                "name": "Polaris, The Gravity Manipulator",
-                "noun": "ZelemBoss_3",
-                "slug": "zelemboss-3-noun",
-                "role": "Destructor",
-                "challenge_value": 500,
-                "base_hit_points": 2000,
-                "estimated_hit_points": 712940,
-                "estimated_damage_min": 6264.4,
-                "estimated_damage_max": 6264.4,
-                "estimated_damage_type": "Technology (energy)",
+                "name": "Cyluk the Wormhole Dominator",
+                "noun": "ZelemSpecialOne_Captain_3",
+                "slug": "zelemspecialone-captain-3-noun",
+                "role": "Captain",
+                "challenge_value": 75,
+                "base_hit_points": 110,
+                "estimated_hit_points": 196058.5,
                 "descriptions": [
-                  "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+                  "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.",
+                  "Launches time-space warping projectiles that will randomly teleport heroes who are hit by them."
                 ],
-                "behavior": ""
+                "behavior": "",
+                "seeded_variants": [
+                  {
+                    "name": "Cyluk the Wormhole Dominator",
+                    "affixes": [
+                      "Ghostly",
+                      "Ghostly Aura",
+                      "Shifted",
+                      "Shifted Aura"
+                    ],
+                    "count": 1
+                  }
+                ]
               }
             ]
           }
         },
         {
           "mode": "Apocalypse",
-          "slot": "4-4",
+          "slot": "16-4",
           "progression": 64,
           "previous": "apocalypse-zelems-4",
           "next": "apocalypse-infinity-2",
@@ -56641,7 +56833,7 @@
             "run_seed": "1",
             "population_seed": 1077870851,
             "unmapped_objects": 1,
-            "selection": "4-4",
+            "selection": "16-4",
             "level": "nocturna_2",
             "legend": null,
             "labels": null,
@@ -57147,6 +57339,8 @@
           "campaign": {
             "difficulty": 64,
             "expected_avatar_level": 55,
+            "recommended_squad_min": 162,
+            "recommended_squad_max": 166,
             "health_multiplier": 378.75,
             "damage_multiplier": 183.5800018310547,
             "enemies": [
@@ -57282,7 +57476,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "5-1",
+          "slot": "17-1",
           "progression": 65,
           "previous": "apocalypse-nocturna-2",
           "next": "apocalypse-scaldron-2",
@@ -57293,7 +57487,7 @@
           "group_name": "Apocalypse",
           "group_slug": "apocalypse",
           "stage": 65,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             65
           ],
@@ -57328,7 +57522,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1094713603,
-            "selection": "5-1",
+            "selection": "17-1",
             "level": "infinity_2",
             "legend": null,
             "labels": null,
@@ -58253,6 +58447,8 @@
           "campaign": {
             "difficulty": 65,
             "expected_avatar_level": 56,
+            "recommended_squad_min": 166,
+            "recommended_squad_max": 170,
             "health_multiplier": 473.44000244140625,
             "damage_multiplier": 223.97000122070312,
             "enemies": [
@@ -58384,7 +58580,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "5-2",
+          "slot": "17-2",
           "progression": 66,
           "previous": "apocalypse-infinity-2",
           "next": "apocalypse-verdanth-2",
@@ -58430,7 +58626,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1111556355,
-            "selection": "5-2",
+            "selection": "17-2",
             "level": "scaldron_2",
             "legend": null,
             "labels": null,
@@ -59062,6 +59258,8 @@
           "campaign": {
             "difficulty": 66,
             "expected_avatar_level": 57,
+            "recommended_squad_min": 168,
+            "recommended_squad_max": 172,
             "health_multiplier": 503.0299987792969,
             "damage_multiplier": 236.2899932861328,
             "enemies": [
@@ -59195,7 +59393,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "5-3",
+          "slot": "17-3",
           "progression": 67,
           "previous": "apocalypse-scaldron-2",
           "next": "apocalypse-zelems-1",
@@ -59241,7 +59439,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1128399107,
-            "selection": "5-3",
+            "selection": "17-3",
             "level": "verdanth_2",
             "legend": null,
             "labels": null,
@@ -59761,6 +59959,8 @@
           "campaign": {
             "difficulty": 67,
             "expected_avatar_level": 58,
+            "recommended_squad_min": 170,
+            "recommended_squad_max": 174,
             "health_multiplier": 534.469970703125,
             "damage_multiplier": 249.2899932861328,
             "enemies": [
@@ -59892,7 +60092,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "5-4",
+          "slot": "17-4",
           "progression": 68,
           "previous": "apocalypse-verdanth-2",
           "next": "apocalypse-cryos-4",
@@ -59938,7 +60138,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1145241859,
-            "selection": "5-4",
+            "selection": "17-4",
             "level": "zelems_1",
             "legend": null,
             "labels": null,
@@ -60562,6 +60762,8 @@
           "campaign": {
             "difficulty": 68,
             "expected_avatar_level": 59,
+            "recommended_squad_min": 172,
+            "recommended_squad_max": 176,
             "health_multiplier": 567.8699951171875,
             "damage_multiplier": 263,
             "enemies": [
@@ -60695,7 +60897,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "6-1",
+          "slot": "18-1",
           "progression": 69,
           "previous": "apocalypse-zelems-1",
           "next": "apocalypse-nocturna-1",
@@ -60741,7 +60943,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1162084611,
-            "selection": "6-1",
+            "selection": "18-1",
             "level": "cryos_4",
             "legend": null,
             "labels": null,
@@ -61177,6 +61379,8 @@
           "campaign": {
             "difficulty": 69,
             "expected_avatar_level": 0,
+            "recommended_squad_min": 176,
+            "recommended_squad_max": 180,
             "health_multiplier": 709.8400268554688,
             "damage_multiplier": 320.8599853515625,
             "enemies": [
@@ -61314,7 +61518,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "6-2",
+          "slot": "18-2",
           "progression": 70,
           "previous": "apocalypse-cryos-4",
           "next": "apocalypse-infinity-1",
@@ -61360,7 +61564,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1178927363,
-            "selection": "6-2",
+            "selection": "18-2",
             "level": "nocturna_1",
             "legend": null,
             "labels": null,
@@ -62024,6 +62228,8 @@
           "campaign": {
             "difficulty": 70,
             "expected_avatar_level": 0,
+            "recommended_squad_min": 178,
+            "recommended_squad_max": 182,
             "health_multiplier": 754.2100219726562,
             "damage_multiplier": 338.510009765625,
             "enemies": [
@@ -62160,7 +62366,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "6-3",
+          "slot": "18-3",
           "progression": 71,
           "previous": "apocalypse-nocturna-1",
           "next": "apocalypse-scaldron-3",
@@ -62171,7 +62377,7 @@
           "group_name": "Apocalypse",
           "group_slug": "apocalypse",
           "stage": 71,
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": [
             71
           ],
@@ -62206,7 +62412,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1195770115,
-            "selection": "6-3",
+            "selection": "18-3",
             "level": "infinity_1",
             "legend": null,
             "labels": null,
@@ -63306,6 +63512,8 @@
           "campaign": {
             "difficulty": 71,
             "expected_avatar_level": 0,
+            "recommended_squad_min": 180,
+            "recommended_squad_max": 184,
             "health_multiplier": 801.3499755859375,
             "damage_multiplier": 357.1300048828125,
             "enemies": [
@@ -63445,7 +63653,7 @@
         },
         {
           "mode": "Apocalypse",
-          "slot": "6-4",
+          "slot": "18-4",
           "progression": 72,
           "previous": "apocalypse-infinity-1",
           "id": 27,
@@ -63490,7 +63698,7 @@
           "map": {
             "run_seed": "1",
             "population_seed": 1212612867,
-            "selection": "6-4",
+            "selection": "18-4",
             "level": "scaldron_3",
             "legend": null,
             "labels": null,
@@ -64008,6 +64216,8 @@
           "campaign": {
             "difficulty": 72,
             "expected_avatar_level": 0,
+            "recommended_squad_min": 182,
+            "recommended_squad_max": 200,
             "health_multiplier": 851.4299926757812,
             "damage_multiplier": 376.7699890136719,
             "enemies": [
@@ -65939,7 +66149,7 @@
           "slug": "replay-infinity-1",
           "group_name": "Replay",
           "group_slug": "replay",
-          "region": "Sentios",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_1!infinity_1.bfx",
@@ -70477,7 +70687,7 @@
           "slug": "replay-infinity-4",
           "group_name": "Replay",
           "group_slug": "replay",
-          "region": "Sentios",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_4!infinity_4.bfx",
@@ -82145,7 +82355,7 @@
           "slug": "replay-infinity-3",
           "group_name": "Replay",
           "group_slug": "replay",
-          "region": "Sentios",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_3!infinity_3.bfx",
@@ -83951,7 +84161,7 @@
           "slug": "replay-infinity-2",
           "group_name": "Replay",
           "group_slug": "replay",
-          "region": "Sentios",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_2!infinity_2.bfx",
@@ -85807,7 +86017,7 @@
           "slug": "infinity-1-pvp",
           "group_name": "Other",
           "group_slug": "other",
-          "region": "PvP",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_1_PVP!infinity_1_PVP.bfx",
@@ -86605,7 +86815,7 @@
           "slug": "tnx173-2",
           "group_name": "Other",
           "group_slug": "other",
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "",
           "navigation_mesh": "tnx173_2!tnx173_2.bfx",
@@ -87187,7 +87397,7 @@
           "slug": "tnx173-3",
           "group_name": "Other",
           "group_slug": "other",
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "",
           "navigation_mesh": "tnx173_3!tnx173_3.bfx",
@@ -90373,7 +90583,7 @@
           "slug": "infinity-4-sm",
           "group_name": "Other",
           "group_slug": "other",
-          "region": "Other",
+          "region": "Infinity",
           "campaign_orders": null,
           "music": "music_set_tech",
           "navigation_mesh": "infinity_4_SM!infinity_4_SM.bfx",
@@ -93519,6 +93729,8 @@
       "campaign": {
         "difficulty": 15,
         "expected_avatar_level": 13,
+        "recommended_squad_min": 32,
+        "recommended_squad_max": 36,
         "health_multiplier": 3.1500000953674316,
         "damage_multiplier": 2.7799999713897705,
         "enemies": [
@@ -93656,7 +93868,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "1-1",
+      "slot": "7-1",
       "progression": 25,
       "previous": "scaldron-4",
       "next": "invasion-cryos-2",
@@ -93702,7 +93914,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 421003523,
-        "selection": "1-1",
+        "selection": "7-1",
         "level": "cryos_1",
         "legend": null,
         "labels": null,
@@ -94452,6 +94664,8 @@
       "campaign": {
         "difficulty": 25,
         "expected_avatar_level": 20,
+        "recommended_squad_min": 62,
+        "recommended_squad_max": 66,
         "health_multiplier": 9.029999732971191,
         "damage_multiplier": 6.760000228881836,
         "enemies": [
@@ -94590,7 +94804,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "3-4",
+      "slot": "15-4",
       "progression": 60,
       "previous": "apocalypse-scaldron-4",
       "next": "apocalypse-verdanth-3",
@@ -94636,7 +94850,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1010499843,
-        "selection": "3-4",
+        "selection": "15-4",
         "level": "cryos_1",
         "legend": null,
         "labels": null,
@@ -95393,6 +95607,8 @@
       "campaign": {
         "difficulty": 60,
         "expected_avatar_level": 51,
+        "recommended_squad_min": 152,
+        "recommended_squad_max": 156,
         "health_multiplier": 252.61000061035156,
         "damage_multiplier": 128.14999389648438,
         "enemies": [
@@ -96266,6 +96482,8 @@
       "campaign": {
         "difficulty": 16,
         "expected_avatar_level": 14,
+        "recommended_squad_min": 34,
+        "recommended_squad_max": 38,
         "health_multiplier": 3.3399999141693115,
         "damage_multiplier": 2.9200000762939453,
         "enemies": [
@@ -96390,7 +96608,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "1-2",
+      "slot": "7-2",
       "progression": 26,
       "previous": "invasion-cryos-1",
       "next": "invasion-zelems-2",
@@ -96436,7 +96654,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 437846275,
-        "selection": "1-2",
+        "selection": "7-2",
         "level": "cryos_2",
         "legend": null,
         "labels": null,
@@ -96948,6 +97166,8 @@
       "campaign": {
         "difficulty": 26,
         "expected_avatar_level": 21,
+        "recommended_squad_min": 64,
+        "recommended_squad_max": 68,
         "health_multiplier": 9.569999694824219,
         "damage_multiplier": 7.110000133514404,
         "enemies": [
@@ -97081,7 +97301,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "1-3",
+      "slot": "13-3",
       "progression": 51,
       "previous": "apocalypse-infinity-4",
       "next": "apocalypse-verdanth-1",
@@ -97127,7 +97347,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 858915075,
-        "selection": "1-3",
+        "selection": "13-3",
         "level": "cryos_2",
         "legend": null,
         "labels": null,
@@ -97642,6 +97862,8 @@
       "campaign": {
         "difficulty": 51,
         "expected_avatar_level": 41,
+        "recommended_squad_min": 130,
+        "recommended_squad_max": 134,
         "health_multiplier": 105.76000213623047,
         "damage_multiplier": 59.189998626708984,
         "enemies": [
@@ -99820,6 +100042,8 @@
       "campaign": {
         "difficulty": 10,
         "expected_avatar_level": 10,
+        "recommended_squad_min": 20,
+        "recommended_squad_max": 24,
         "health_multiplier": 2.009999990463257,
         "damage_multiplier": 2.0299999713897705,
         "enemies": [
@@ -99957,7 +100181,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "3-4",
+      "slot": "9-4",
       "progression": 36,
       "previous": "invasion-cryos-4",
       "next": "invasion-nocturna-1",
@@ -100003,7 +100227,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 606273795,
-        "selection": "3-4",
+        "selection": "9-4",
         "level": "cryos_3",
         "legend": null,
         "labels": null,
@@ -101877,6 +102101,8 @@
       "campaign": {
         "difficulty": 36,
         "expected_avatar_level": 29,
+        "recommended_squad_min": 88,
+        "recommended_squad_max": 92,
         "health_multiplier": 23.450000762939453,
         "damage_multiplier": 15.65999984741211,
         "enemies": [
@@ -102011,7 +102237,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "4-2",
+      "slot": "16-2",
       "progression": 62,
       "previous": "apocalypse-verdanth-3",
       "next": "apocalypse-zelems-4",
@@ -102057,7 +102283,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1044185347,
-        "selection": "4-2",
+        "selection": "16-2",
         "level": "cryos_3",
         "legend": null,
         "labels": null,
@@ -103934,6 +104160,8 @@
       "campaign": {
         "difficulty": 62,
         "expected_avatar_level": 53,
+        "recommended_squad_min": 158,
+        "recommended_squad_max": 162,
         "health_multiplier": 335.5,
         "damage_multiplier": 164.94000244140625,
         "enemies": [
@@ -104551,6 +104779,8 @@
       "campaign": {
         "difficulty": 9,
         "expected_avatar_level": 9,
+        "recommended_squad_min": 18,
+        "recommended_squad_max": 22,
         "health_multiplier": 1.899999976158142,
         "damage_multiplier": 1.9299999475479126,
         "enemies": [
@@ -104690,7 +104920,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "3-3",
+      "slot": "9-3",
       "progression": 35,
       "previous": "invasion-scaldron-4",
       "next": "invasion-cryos-3",
@@ -104736,7 +104966,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 589431043,
-        "selection": "3-3",
+        "selection": "9-3",
         "level": "cryos_4",
         "legend": null,
         "labels": null,
@@ -105171,6 +105401,8 @@
       "campaign": {
         "difficulty": 35,
         "expected_avatar_level": 28,
+        "recommended_squad_min": 86,
+        "recommended_squad_max": 90,
         "health_multiplier": 22.1200008392334,
         "damage_multiplier": 14.880000114440918,
         "enemies": [
@@ -105308,7 +105540,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "6-1",
+      "slot": "18-1",
       "progression": 69,
       "previous": "apocalypse-zelems-1",
       "next": "apocalypse-nocturna-1",
@@ -105354,7 +105586,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1162084611,
-        "selection": "6-1",
+        "selection": "18-1",
         "level": "cryos_4",
         "legend": null,
         "labels": null,
@@ -105790,6 +106022,8 @@
       "campaign": {
         "difficulty": 69,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 176,
+        "recommended_squad_max": 180,
         "health_multiplier": 709.8400268554688,
         "damage_multiplier": 320.8599853515625,
         "enemies": [
@@ -106363,7 +106597,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 19,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         19
       ],
@@ -107349,6 +107583,8 @@
       "campaign": {
         "difficulty": 19,
         "expected_avatar_level": 16,
+        "recommended_squad_min": 42,
+        "recommended_squad_max": 46,
         "health_multiplier": 4.650000095367432,
         "damage_multiplier": 3.859999895095825,
         "enemies": [
@@ -107484,7 +107720,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "2-1",
+      "slot": "8-1",
       "progression": 29,
       "previous": "invasion-zelems-3",
       "next": "invasion-infinity-3",
@@ -107495,7 +107731,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 29,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         29
       ],
@@ -107530,7 +107766,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 488374531,
-        "selection": "2-1",
+        "selection": "8-1",
         "level": "infinity_1",
         "legend": null,
         "labels": null,
@@ -108377,6 +108613,8 @@
       "campaign": {
         "difficulty": 29,
         "expected_avatar_level": 23,
+        "recommended_squad_min": 72,
+        "recommended_squad_max": 76,
         "health_multiplier": 13.329999923706055,
         "damage_multiplier": 9.520000457763672,
         "enemies": [
@@ -108514,7 +108752,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "6-3",
+      "slot": "18-3",
       "progression": 71,
       "previous": "apocalypse-nocturna-1",
       "next": "apocalypse-scaldron-3",
@@ -108525,7 +108763,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 71,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         71
       ],
@@ -108560,7 +108798,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1195770115,
-        "selection": "6-3",
+        "selection": "18-3",
         "level": "infinity_1",
         "legend": null,
         "labels": null,
@@ -109660,6 +109898,8 @@
       "campaign": {
         "difficulty": 71,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 180,
+        "recommended_squad_max": 184,
         "health_multiplier": 801.3499755859375,
         "damage_multiplier": 357.1300048828125,
         "enemies": [
@@ -109804,7 +110044,7 @@
       "slug": "infinity-1-pvp",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "PvP",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_1_PVP!infinity_1_PVP.bfx",
@@ -109921,7 +110161,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 13,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         13
       ],
@@ -110872,6 +111112,8 @@
       "campaign": {
         "difficulty": 13,
         "expected_avatar_level": 12,
+        "recommended_squad_min": 28,
+        "recommended_squad_max": 32,
         "health_multiplier": 2.799999952316284,
         "damage_multiplier": 2.5199999809265137,
         "enemies": [
@@ -111004,7 +111246,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "4-4",
+      "slot": "10-4",
       "progression": 40,
       "previous": "invasion-infinity-4",
       "next": "invasion-zelems-1",
@@ -111015,7 +111257,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 40,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         40
       ],
@@ -111050,7 +111292,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 673644803,
-        "selection": "4-4",
+        "selection": "10-4",
         "level": "infinity_2",
         "legend": null,
         "labels": null,
@@ -111974,6 +112216,8 @@
       "campaign": {
         "difficulty": 40,
         "expected_avatar_level": 32,
+        "recommended_squad_min": 98,
+        "recommended_squad_max": 102,
         "health_multiplier": 34.630001068115234,
         "damage_multiplier": 22.09000015258789,
         "enemies": [
@@ -112116,7 +112360,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "5-1",
+      "slot": "17-1",
       "progression": 65,
       "previous": "apocalypse-nocturna-2",
       "next": "apocalypse-scaldron-2",
@@ -112127,7 +112371,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 65,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         65
       ],
@@ -112162,7 +112406,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1094713603,
-        "selection": "5-1",
+        "selection": "17-1",
         "level": "infinity_2",
         "legend": null,
         "labels": null,
@@ -113087,6 +113331,8 @@
       "campaign": {
         "difficulty": 65,
         "expected_avatar_level": 56,
+        "recommended_squad_min": 166,
+        "recommended_squad_max": 170,
         "health_multiplier": 473.44000244140625,
         "damage_multiplier": 223.97000122070312,
         "enemies": [
@@ -113229,7 +113475,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 14,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         14
       ],
@@ -113948,6 +114194,8 @@
       "campaign": {
         "difficulty": 14,
         "expected_avatar_level": 12,
+        "recommended_squad_min": 30,
+        "recommended_squad_max": 34,
         "health_multiplier": 2.9700000286102295,
         "damage_multiplier": 2.6500000953674316,
         "enemies": [
@@ -114087,7 +114335,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "2-2",
+      "slot": "8-2",
       "progression": 30,
       "previous": "invasion-infinity-1",
       "next": "invasion-verdanth-2",
@@ -114098,7 +114346,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 30,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         30
       ],
@@ -114133,7 +114381,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 505217283,
-        "selection": "2-2",
+        "selection": "8-2",
         "level": "infinity_3",
         "legend": null,
         "labels": null,
@@ -114924,6 +115172,8 @@
       "campaign": {
         "difficulty": 30,
         "expected_avatar_level": 24,
+        "recommended_squad_min": 74,
+        "recommended_squad_max": 78,
         "health_multiplier": 14.130000114440918,
         "damage_multiplier": 10.020000457763672,
         "enemies": [
@@ -115057,7 +115307,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "2-4",
+      "slot": "14-4",
       "progression": 56,
       "previous": "apocalypse-nocturna-4",
       "next": "apocalypse-zelems-2",
@@ -115068,7 +115318,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 56,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         56
       ],
@@ -115103,7 +115353,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 943128835,
-        "selection": "2-4",
+        "selection": "14-4",
         "level": "infinity_3",
         "legend": null,
         "labels": null,
@@ -115807,6 +116057,8 @@
       "campaign": {
         "difficulty": 56,
         "expected_avatar_level": 47,
+        "recommended_squad_min": 142,
+        "recommended_squad_max": 146,
         "health_multiplier": 168.47999572753906,
         "damage_multiplier": 89.45999908447266,
         "enemies": [
@@ -115953,7 +116205,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 20,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         20
       ],
@@ -117016,6 +117268,8 @@
       "campaign": {
         "difficulty": 20,
         "expected_avatar_level": 16,
+        "recommended_squad_min": 44,
+        "recommended_squad_max": 48,
         "health_multiplier": 4.929999828338623,
         "damage_multiplier": 4.050000190734863,
         "enemies": [
@@ -117139,7 +117393,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "4-3",
+      "slot": "10-3",
       "progression": 39,
       "previous": "invasion-nocturna-2",
       "next": "invasion-infinity-2",
@@ -117150,7 +117404,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 39,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         39
       ],
@@ -117185,7 +117439,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 656802051,
-        "selection": "4-3",
+        "selection": "10-3",
         "level": "infinity_4",
         "legend": null,
         "labels": null,
@@ -118117,6 +118371,8 @@
       "campaign": {
         "difficulty": 39,
         "expected_avatar_level": 31,
+        "recommended_squad_min": 96,
+        "recommended_squad_max": 100,
         "health_multiplier": 32.66999816894531,
         "damage_multiplier": 20.989999771118164,
         "enemies": [
@@ -118247,7 +118503,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "1-2",
+      "slot": "13-2",
       "progression": 50,
       "previous": "apocalypse-nocturna-3",
       "next": "apocalypse-cryos-2",
@@ -118258,7 +118514,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 50,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         50
       ],
@@ -118293,7 +118549,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 842072323,
-        "selection": "1-2",
+        "selection": "13-2",
         "level": "infinity_4",
         "legend": null,
         "labels": null,
@@ -119218,6 +119474,8 @@
       "campaign": {
         "difficulty": 50,
         "expected_avatar_level": 40,
+        "recommended_squad_min": 128,
+        "recommended_squad_max": 132,
         "health_multiplier": 99.54000091552734,
         "damage_multiplier": 56.099998474121094,
         "enemies": [
@@ -119361,7 +119619,7 @@
       "slug": "infinity-4-sm",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_4_SM!infinity_4_SM.bfx",
@@ -120250,6 +120508,8 @@
       "campaign": {
         "difficulty": 4,
         "expected_avatar_level": 6,
+        "recommended_squad_min": 4,
+        "recommended_squad_max": 8,
         "health_multiplier": 1.0299999713897705,
         "damage_multiplier": 1.159999966621399,
         "enemies": [
@@ -120376,7 +120636,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "4-1",
+      "slot": "10-1",
       "progression": 37,
       "previous": "invasion-cryos-3",
       "next": "invasion-nocturna-2",
@@ -120422,7 +120682,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 623116547,
-        "selection": "4-1",
+        "selection": "10-1",
         "level": "nocturna_1",
         "legend": null,
         "labels": null,
@@ -121033,6 +121293,8 @@
       "campaign": {
         "difficulty": 37,
         "expected_avatar_level": 29,
+        "recommended_squad_min": 92,
+        "recommended_squad_max": 96,
         "health_multiplier": 29.079999923706055,
         "damage_multiplier": 18.950000762939453,
         "enemies": [
@@ -121168,7 +121430,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "6-2",
+      "slot": "18-2",
       "progression": 70,
       "previous": "apocalypse-cryos-4",
       "next": "apocalypse-infinity-1",
@@ -121214,7 +121476,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1178927363,
-        "selection": "6-2",
+        "selection": "18-2",
         "level": "nocturna_1",
         "legend": null,
         "labels": null,
@@ -121878,6 +122140,8 @@
       "campaign": {
         "difficulty": 70,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 178,
+        "recommended_squad_max": 182,
         "health_multiplier": 754.2100219726562,
         "damage_multiplier": 338.510009765625,
         "enemies": [
@@ -122553,6 +122817,8 @@
       "campaign": {
         "difficulty": 18,
         "expected_avatar_level": 15,
+        "recommended_squad_min": 40,
+        "recommended_squad_max": 44,
         "health_multiplier": 4.389999866485596,
         "damage_multiplier": 3.680000066757202,
         "enemies": [
@@ -122678,7 +122944,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "4-2",
+      "slot": "10-2",
       "progression": 38,
       "previous": "invasion-nocturna-1",
       "next": "invasion-infinity-4",
@@ -122725,7 +122991,7 @@
         "run_seed": "1",
         "population_seed": 639959299,
         "unmapped_objects": 1,
-        "selection": "4-2",
+        "selection": "10-2",
         "level": "nocturna_2",
         "legend": null,
         "labels": null,
@@ -123244,6 +123510,8 @@
       "campaign": {
         "difficulty": 38,
         "expected_avatar_level": 30,
+        "recommended_squad_min": 94,
+        "recommended_squad_max": 98,
         "health_multiplier": 30.81999969482422,
         "damage_multiplier": 19.940000534057617,
         "enemies": [
@@ -123380,7 +123648,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "4-4",
+      "slot": "16-4",
       "progression": 64,
       "previous": "apocalypse-zelems-4",
       "next": "apocalypse-infinity-2",
@@ -123427,7 +123695,7 @@
         "run_seed": "1",
         "population_seed": 1077870851,
         "unmapped_objects": 1,
-        "selection": "4-4",
+        "selection": "16-4",
         "level": "nocturna_2",
         "legend": null,
         "labels": null,
@@ -123933,6 +124201,8 @@
       "campaign": {
         "difficulty": 64,
         "expected_avatar_level": 55,
+        "recommended_squad_min": 162,
+        "recommended_squad_max": 166,
         "health_multiplier": 378.75,
         "damage_multiplier": 183.5800018310547,
         "enemies": [
@@ -125052,6 +125322,8 @@
       "campaign": {
         "difficulty": 17,
         "expected_avatar_level": 14,
+        "recommended_squad_min": 38,
+        "recommended_squad_max": 42,
         "health_multiplier": 4.139999866485596,
         "damage_multiplier": 3.5,
         "enemies": [
@@ -125187,7 +125459,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "5-4",
+      "slot": "11-4",
       "progression": 44,
       "previous": "invasion-nocturna-4",
       "next": "invasion-verdanth-1",
@@ -125233,7 +125505,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 741015811,
-        "selection": "5-4",
+        "selection": "11-4",
         "level": "nocturna_3",
         "legend": null,
         "labels": null,
@@ -125976,6 +126248,8 @@
       "campaign": {
         "difficulty": 44,
         "expected_avatar_level": 35,
+        "recommended_squad_min": 108,
+        "recommended_squad_max": 112,
         "health_multiplier": 51.150001525878906,
         "damage_multiplier": 31.15999984741211,
         "enemies": [
@@ -126105,7 +126379,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "1-1",
+      "slot": "13-1",
       "progression": 49,
       "previous": "invasion-scaldron-1",
       "next": "apocalypse-infinity-4",
@@ -126151,7 +126425,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 825229571,
-        "selection": "1-1",
+        "selection": "13-1",
         "level": "nocturna_3",
         "legend": null,
         "labels": null,
@@ -126979,6 +127253,8 @@
       "campaign": {
         "difficulty": 49,
         "expected_avatar_level": 39,
+        "recommended_squad_min": 126,
+        "recommended_squad_max": 130,
         "health_multiplier": 93.68000030517578,
         "damage_multiplier": 53.18000030517578,
         "enemies": [
@@ -128065,6 +128341,8 @@
       "campaign": {
         "difficulty": 3,
         "expected_avatar_level": 5,
+        "recommended_squad_min": 3,
+        "recommended_squad_max": 6,
         "health_multiplier": 0.8600000143051147,
         "damage_multiplier": 1.100000023841858,
         "enemies": [
@@ -128196,7 +128474,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "5-3",
+      "slot": "11-3",
       "progression": 43,
       "previous": "invasion-zelems-4",
       "next": "invasion-nocturna-3",
@@ -128242,7 +128520,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 724173059,
-        "selection": "5-3",
+        "selection": "11-3",
         "level": "nocturna_4",
         "legend": null,
         "labels": null,
@@ -128913,6 +129191,8 @@
       "campaign": {
         "difficulty": 43,
         "expected_avatar_level": 34,
+        "recommended_squad_min": 106,
+        "recommended_squad_max": 110,
         "health_multiplier": 48.25,
         "damage_multiplier": 29.610000610351562,
         "enemies": [
@@ -129051,7 +129331,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "2-3",
+      "slot": "14-3",
       "progression": 55,
       "previous": "apocalypse-zelems-3",
       "next": "apocalypse-infinity-3",
@@ -129097,7 +129377,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 926286083,
-        "selection": "2-3",
+        "selection": "14-3",
         "level": "nocturna_4",
         "legend": null,
         "labels": null,
@@ -129818,6 +130098,8 @@
       "campaign": {
         "difficulty": 55,
         "expected_avatar_level": 46,
+        "recommended_squad_min": 140,
+        "recommended_squad_max": 144,
         "health_multiplier": 158.57000732421875,
         "damage_multiplier": 84.80000305175781,
         "enemies": [
@@ -130578,6 +130860,8 @@
       "campaign": {
         "difficulty": 22,
         "expected_avatar_level": 18,
+        "recommended_squad_min": 50,
+        "recommended_squad_max": 54,
         "health_multiplier": 6.480000019073486,
         "damage_multiplier": 5.099999904632568,
         "enemies": [
@@ -130701,7 +130985,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "6-4",
+      "slot": "12-4",
       "progression": 48,
       "previous": "invasion-scaldron-3",
       "next": "apocalypse-nocturna-3",
@@ -130747,7 +131031,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 808386819,
-        "selection": "6-4",
+        "selection": "12-4",
         "level": "scaldron_1",
         "legend": null,
         "labels": null,
@@ -131441,6 +131725,8 @@
       "campaign": {
         "difficulty": 48,
         "expected_avatar_level": 38,
+        "recommended_squad_min": 118,
+        "recommended_squad_max": 126,
         "health_multiplier": 75.55000305175781,
         "damage_multiplier": 43.95000076293945,
         "enemies": [
@@ -131572,7 +131858,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "2-1",
+      "slot": "14-1",
       "progression": 53,
       "previous": "apocalypse-verdanth-1",
       "next": "apocalypse-zelems-3",
@@ -131618,7 +131904,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 892600579,
-        "selection": "2-1",
+        "selection": "14-1",
         "level": "scaldron_1",
         "legend": null,
         "labels": null,
@@ -132319,6 +132605,8 @@
       "campaign": {
         "difficulty": 53,
         "expected_avatar_level": 44,
+        "recommended_squad_min": 136,
+        "recommended_squad_max": 140,
         "health_multiplier": 140.4600067138672,
         "damage_multiplier": 76.19000244140625,
         "enemies": [
@@ -133254,6 +133542,8 @@
       "campaign": {
         "difficulty": 21,
         "expected_avatar_level": 17,
+        "recommended_squad_min": 48,
+        "recommended_squad_max": 52,
         "health_multiplier": 6.110000133514404,
         "damage_multiplier": 4.860000133514404,
         "enemies": [
@@ -133388,7 +133678,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "3-1",
+      "slot": "9-1",
       "progression": 33,
       "previous": "invasion-verdanth-3",
       "next": "invasion-scaldron-4",
@@ -133434,7 +133724,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 555745539,
-        "selection": "3-1",
+        "selection": "9-1",
         "level": "scaldron_2",
         "legend": null,
         "labels": null,
@@ -134051,6 +134341,8 @@
       "campaign": {
         "difficulty": 33,
         "expected_avatar_level": 26,
+        "recommended_squad_min": 82,
+        "recommended_squad_max": 86,
         "health_multiplier": 19.690000534057617,
         "damage_multiplier": 13.430000305175781,
         "enemies": [
@@ -134185,7 +134477,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "5-2",
+      "slot": "17-2",
       "progression": 66,
       "previous": "apocalypse-infinity-2",
       "next": "apocalypse-verdanth-2",
@@ -134231,7 +134523,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1111556355,
-        "selection": "5-2",
+        "selection": "17-2",
         "level": "scaldron_2",
         "legend": null,
         "labels": null,
@@ -134863,6 +135155,8 @@
       "campaign": {
         "difficulty": 66,
         "expected_avatar_level": 57,
+        "recommended_squad_min": 168,
+        "recommended_squad_max": 172,
         "health_multiplier": 503.0299987792969,
         "damage_multiplier": 236.2899932861328,
         "enemies": [
@@ -135513,6 +135807,8 @@
       "campaign": {
         "difficulty": 23,
         "expected_avatar_level": 18,
+        "recommended_squad_min": 52,
+        "recommended_squad_max": 56,
         "health_multiplier": 6.869999885559082,
         "damage_multiplier": 5.360000133514404,
         "enemies": [
@@ -135648,7 +135944,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "6-3",
+      "slot": "12-3",
       "progression": 47,
       "previous": "invasion-verdanth-4",
       "next": "invasion-scaldron-1",
@@ -135694,7 +135990,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 791544067,
-        "selection": "6-3",
+        "selection": "12-3",
         "level": "scaldron_3",
         "legend": null,
         "labels": null,
@@ -136194,6 +136490,8 @@
       "campaign": {
         "difficulty": 47,
         "expected_avatar_level": 37,
+        "recommended_squad_min": 116,
+        "recommended_squad_max": 120,
         "health_multiplier": 71.2699966430664,
         "damage_multiplier": 41.7599983215332,
         "enemies": [
@@ -136324,7 +136622,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "6-4",
+      "slot": "18-4",
       "progression": 72,
       "previous": "apocalypse-infinity-1",
       "id": 27,
@@ -136369,7 +136667,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1212612867,
-        "selection": "6-4",
+        "selection": "18-4",
         "level": "scaldron_3",
         "legend": null,
         "labels": null,
@@ -136887,6 +137185,8 @@
       "campaign": {
         "difficulty": 72,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 182,
+        "recommended_squad_max": 200,
         "health_multiplier": 851.4299926757812,
         "damage_multiplier": 376.7699890136719,
         "enemies": [
@@ -137619,6 +137919,8 @@
       "campaign": {
         "difficulty": 24,
         "expected_avatar_level": 19,
+        "recommended_squad_min": 54,
+        "recommended_squad_max": 62,
         "health_multiplier": 7.28000020980835,
         "damage_multiplier": 5.630000114440918,
         "enemies": [
@@ -137744,7 +138046,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "3-2",
+      "slot": "9-2",
       "progression": 34,
       "previous": "invasion-scaldron-2",
       "next": "invasion-cryos-4",
@@ -137790,7 +138092,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 572588291,
-        "selection": "3-2",
+        "selection": "9-2",
         "level": "scaldron_4",
         "legend": null,
         "labels": null,
@@ -138350,6 +138652,8 @@
       "campaign": {
         "difficulty": 34,
         "expected_avatar_level": 27,
+        "recommended_squad_min": 84,
+        "recommended_squad_max": 88,
         "health_multiplier": 20.8700008392334,
         "damage_multiplier": 14.140000343322754,
         "enemies": [
@@ -138487,7 +138791,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "3-3",
+      "slot": "15-3",
       "progression": 59,
       "previous": "apocalypse-verdanth-4",
       "next": "apocalypse-cryos-1",
@@ -138533,7 +138837,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 993657091,
-        "selection": "3-3",
+        "selection": "15-3",
         "level": "scaldron_4",
         "legend": null,
         "labels": null,
@@ -139101,6 +139405,8 @@
       "campaign": {
         "difficulty": 59,
         "expected_avatar_level": 50,
+        "recommended_squad_min": 150,
+        "recommended_squad_max": 154,
         "health_multiplier": 237.75,
         "damage_multiplier": 121.47000122070312,
         "enemies": [
@@ -143106,7 +143412,7 @@
       "slug": "tnx173-2",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "",
       "navigation_mesh": "tnx173_2!tnx173_2.bfx",
@@ -143688,7 +143994,7 @@
       "slug": "tnx173-3",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "",
       "navigation_mesh": "tnx173_3!tnx173_3.bfx",
@@ -144324,6 +144630,8 @@
       "campaign": {
         "difficulty": 5,
         "expected_avatar_level": 6,
+        "recommended_squad_min": 8,
+        "recommended_squad_max": 12,
         "health_multiplier": 1.2799999713897705,
         "damage_multiplier": 1.3899999856948853,
         "enemies": [
@@ -144461,7 +144769,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "6-1",
+      "slot": "12-1",
       "progression": 45,
       "previous": "invasion-nocturna-3",
       "next": "invasion-verdanth-4",
@@ -144507,7 +144815,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 757858563,
-        "selection": "6-1",
+        "selection": "12-1",
         "level": "verdanth_1",
         "legend": null,
         "labels": null,
@@ -145033,6 +145341,8 @@
       "campaign": {
         "difficulty": 45,
         "expected_avatar_level": 35,
+        "recommended_squad_min": 112,
+        "recommended_squad_max": 116,
         "health_multiplier": 63.43000030517578,
         "damage_multiplier": 37.70000076293945,
         "enemies": [
@@ -145162,7 +145472,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "1-4",
+      "slot": "13-4",
       "progression": 52,
       "previous": "apocalypse-cryos-2",
       "next": "apocalypse-scaldron-1",
@@ -145208,7 +145518,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 875757827,
-        "selection": "1-4",
+        "selection": "13-4",
         "level": "verdanth_1",
         "legend": null,
         "labels": null,
@@ -145735,6 +146045,8 @@
       "campaign": {
         "difficulty": 52,
         "expected_avatar_level": 43,
+        "recommended_squad_min": 132,
+        "recommended_squad_max": 136,
         "health_multiplier": 112.37000274658203,
         "damage_multiplier": 62.45000076293945,
         "enemies": [
@@ -146430,6 +146742,8 @@
       "campaign": {
         "difficulty": 11,
         "expected_avatar_level": 10,
+        "recommended_squad_min": 22,
+        "recommended_squad_max": 26,
         "health_multiplier": 2.130000114440918,
         "damage_multiplier": 2.130000114440918,
         "enemies": [
@@ -146556,7 +146870,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "2-3",
+      "slot": "8-3",
       "progression": 31,
       "previous": "invasion-infinity-3",
       "next": "invasion-verdanth-3",
@@ -146602,7 +146916,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 522060035,
-        "selection": "2-3",
+        "selection": "8-3",
         "level": "verdanth_2",
         "legend": null,
         "labels": null,
@@ -147100,6 +147414,8 @@
       "campaign": {
         "difficulty": 31,
         "expected_avatar_level": 25,
+        "recommended_squad_min": 76,
+        "recommended_squad_max": 80,
         "health_multiplier": 14.979999542236328,
         "damage_multiplier": 10.550000190734863,
         "enemies": [
@@ -147232,7 +147548,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "5-3",
+      "slot": "17-3",
       "progression": 67,
       "previous": "apocalypse-scaldron-2",
       "next": "apocalypse-zelems-1",
@@ -147278,7 +147594,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1128399107,
-        "selection": "5-3",
+        "selection": "17-3",
         "level": "verdanth_2",
         "legend": null,
         "labels": null,
@@ -147798,6 +148114,8 @@
       "campaign": {
         "difficulty": 67,
         "expected_avatar_level": 58,
+        "recommended_squad_min": 170,
+        "recommended_squad_max": 174,
         "health_multiplier": 534.469970703125,
         "damage_multiplier": 249.2899932861328,
         "enemies": [
@@ -148584,6 +148902,8 @@
       "campaign": {
         "difficulty": 6,
         "expected_avatar_level": 7,
+        "recommended_squad_min": 10,
+        "recommended_squad_max": 14,
         "health_multiplier": 1.3600000143051147,
         "damage_multiplier": 1.4600000381469727,
         "enemies": [
@@ -148712,7 +149032,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "2-4",
+      "slot": "8-4",
       "progression": 32,
       "previous": "invasion-verdanth-2",
       "next": "invasion-scaldron-2",
@@ -148758,7 +149078,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 538902787,
-        "selection": "2-4",
+        "selection": "8-4",
         "level": "verdanth_3",
         "legend": null,
         "labels": null,
@@ -149382,6 +149702,8 @@
       "campaign": {
         "difficulty": 32,
         "expected_avatar_level": 26,
+        "recommended_squad_min": 78,
+        "recommended_squad_max": 82,
         "health_multiplier": 15.880000114440918,
         "damage_multiplier": 11.100000381469727,
         "enemies": [
@@ -149516,7 +149838,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "4-1",
+      "slot": "16-1",
       "progression": 61,
       "previous": "apocalypse-cryos-1",
       "next": "apocalypse-cryos-3",
@@ -149562,7 +149884,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1027342595,
-        "selection": "4-1",
+        "selection": "16-1",
         "level": "verdanth_3",
         "legend": null,
         "labels": null,
@@ -150187,6 +150509,8 @@
       "campaign": {
         "difficulty": 61,
         "expected_avatar_level": 52,
+        "recommended_squad_min": 156,
+        "recommended_squad_max": 160,
         "health_multiplier": 315.760009765625,
         "damage_multiplier": 156.33999633789062,
         "enemies": [
@@ -151063,6 +151387,8 @@
       "campaign": {
         "difficulty": 12,
         "expected_avatar_level": 11,
+        "recommended_squad_min": 24,
+        "recommended_squad_max": 28,
         "health_multiplier": 2.259999990463257,
         "damage_multiplier": 2.240000009536743,
         "enemies": [
@@ -151182,7 +151508,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "6-2",
+      "slot": "12-2",
       "progression": 46,
       "previous": "invasion-verdanth-1",
       "next": "invasion-scaldron-3",
@@ -151219,7 +151545,7 @@
         "NomadSpecialOne_2.Noun",
         "Rezzer_2.Noun",
         "NomadDrag_2.Noun",
-        "VerdanthBoss_2.Noun"
+        "NomadSpecialOne_Captain_2.Noun"
       ],
       "aliases": [
         "verdanth_4",
@@ -151228,7 +151554,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 774701315,
-        "selection": "6-2",
+        "selection": "12-2",
         "level": "verdanth_4",
         "legend": null,
         "labels": null,
@@ -151684,10 +152010,15 @@
               {
                 "x": 165,
                 "y": 258,
-                "slug": "verdanthboss-2-noun",
-                "name": "Verdanth Boss 2",
-                "destructor": true,
-                "spawn_name": "Orcus, Devourer of Life"
+                "slug": "nomadspecialone-captain-2-noun",
+                "name": "Nomad Special One Captain 2",
+                "captain": true,
+                "spawn_name": "Kuma the Berserker",
+                "affixes": [
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ]
               }
             ],
             "objects": [
@@ -151714,6 +152045,8 @@
       "campaign": {
         "difficulty": 46,
         "expected_avatar_level": 36,
+        "recommended_squad_min": 114,
+        "recommended_squad_max": 118,
         "health_multiplier": 67.23999786376953,
         "damage_multiplier": 39.68000030517578,
         "enemies": [
@@ -151814,24 +152147,36 @@
             "behavior": ""
           },
           {
-            "name": "Orcus, Devourer of Life",
-            "noun": "VerdanthBoss_2",
-            "slug": "verdanthboss-2-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 1750,
-            "estimated_hit_points": 117670,
+            "name": "Kuma the Berserker",
+            "noun": "NomadSpecialOne_Captain_2",
+            "slug": "nomadspecialone-captain-2-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 130,
+            "estimated_hit_points": 43706,
             "descriptions": [
-              "Consumes spawns, breathes disease, thorn barrage"
+              "Has a vicious charge that will knock affected heroes up into the air.",
+              "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Kuma the Berserker",
+                "affixes": [
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
     },
     {
       "mode": "Apocalypse",
-      "slot": "3-2",
+      "slot": "15-2",
       "progression": 58,
       "previous": "apocalypse-zelems-2",
       "next": "apocalypse-scaldron-4",
@@ -151868,7 +152213,7 @@
         "NomadSpecialOne_3.Noun",
         "NocturnaSpecialMunch_3.Noun",
         "ZelemSpecialHaster_3.Noun",
-        "VerdanthBoss_3.Noun"
+        "NomadSpecialOne_Captain_3.Noun"
       ],
       "aliases": [
         "verdanth_4",
@@ -151878,7 +152223,7 @@
         "run_seed": "1",
         "population_seed": 976814339,
         "unmapped_objects": 2,
-        "selection": "3-2",
+        "selection": "15-2",
         "level": "verdanth_4",
         "legend": null,
         "labels": null,
@@ -152474,10 +152819,16 @@
               {
                 "x": 165,
                 "y": 258,
-                "slug": "verdanthboss-3-noun",
-                "name": "Verdanth Boss 3",
-                "destructor": true,
-                "spawn_name": "Orcus, Devourer of Life"
+                "slug": "nomadspecialone-captain-3-noun",
+                "name": "Nomad Special One Captain 3",
+                "captain": true,
+                "spawn_name": "Stonn the Punishing Brute",
+                "affixes": [
+                  "Deadly",
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ]
               }
             ],
             "objects": [
@@ -152504,6 +152855,8 @@
       "campaign": {
         "difficulty": 58,
         "expected_avatar_level": 49,
+        "recommended_squad_min": 148,
+        "recommended_squad_max": 152,
         "health_multiplier": 223.75999450683594,
         "damage_multiplier": 115.13999938964844,
         "enemies": [
@@ -152601,17 +152954,30 @@
             "behavior": ""
           },
           {
-            "name": "Orcus, Devourer of Life",
-            "noun": "VerdanthBoss_3",
-            "slug": "verdanthboss-3-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 2000,
-            "estimated_hit_points": 447520,
+            "name": "Stonn the Punishing Brute",
+            "noun": "NomadSpecialOne_Captain_3",
+            "slug": "nomadspecialone-captain-3-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 140,
+            "estimated_hit_points": 156632,
             "descriptions": [
-              "Consumes spawns, breathes disease, thorn barrage"
+              "Has a vicious charge that will knock affected heroes up into the air.",
+              "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Stonn the Punishing Brute",
+                "affixes": [
+                  "Deadly",
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
@@ -153475,6 +153841,8 @@
       "campaign": {
         "difficulty": 1,
         "expected_avatar_level": 4,
+        "recommended_squad_min": 0,
+        "recommended_squad_max": 4,
         "health_multiplier": 0.6000000238418579,
         "damage_multiplier": 1,
         "enemies": [
@@ -153603,7 +153971,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "5-1",
+      "slot": "11-1",
       "progression": 41,
       "previous": "invasion-infinity-2",
       "next": "invasion-zelems-4",
@@ -153649,7 +154017,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 690487555,
-        "selection": "5-1",
+        "selection": "11-1",
         "level": "zelems_1",
         "legend": null,
         "labels": null,
@@ -154250,6 +154618,8 @@
       "campaign": {
         "difficulty": 41,
         "expected_avatar_level": 32,
+        "recommended_squad_min": 102,
+        "recommended_squad_max": 106,
         "health_multiplier": 42.939998626708984,
         "damage_multiplier": 26.729999542236328,
         "enemies": [
@@ -154378,7 +154748,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "5-4",
+      "slot": "17-4",
       "progression": 68,
       "previous": "apocalypse-verdanth-2",
       "next": "apocalypse-cryos-4",
@@ -154424,7 +154794,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1145241859,
-        "selection": "5-4",
+        "selection": "17-4",
         "level": "zelems_1",
         "legend": null,
         "labels": null,
@@ -155048,6 +155418,8 @@
       "campaign": {
         "difficulty": 68,
         "expected_avatar_level": 59,
+        "recommended_squad_min": 172,
+        "recommended_squad_max": 176,
         "health_multiplier": 567.8699951171875,
         "damage_multiplier": 263,
         "enemies": [
@@ -156000,6 +156372,8 @@
       "campaign": {
         "difficulty": 7,
         "expected_avatar_level": 8,
+        "recommended_squad_min": 12,
+        "recommended_squad_max": 16,
         "health_multiplier": 1.440000057220459,
         "damage_multiplier": 1.5299999713897705,
         "enemies": [
@@ -156128,7 +156502,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "1-3",
+      "slot": "7-3",
       "progression": 27,
       "previous": "invasion-cryos-2",
       "next": "invasion-zelems-3",
@@ -156174,7 +156548,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 454689027,
-        "selection": "1-3",
+        "selection": "7-3",
         "level": "zelems_2",
         "legend": null,
         "labels": null,
@@ -156742,6 +157116,8 @@
       "campaign": {
         "difficulty": 27,
         "expected_avatar_level": 22,
+        "recommended_squad_min": 66,
+        "recommended_squad_max": 70,
         "health_multiplier": 10.140000343322754,
         "damage_multiplier": 7.480000019073486,
         "enemies": [
@@ -156877,7 +157253,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "3-1",
+      "slot": "15-1",
       "progression": 57,
       "previous": "apocalypse-infinity-3",
       "next": "apocalypse-verdanth-4",
@@ -156923,7 +157299,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 959971587,
-        "selection": "3-1",
+        "selection": "15-1",
         "level": "zelems_2",
         "legend": null,
         "labels": null,
@@ -157462,6 +157838,8 @@
       "campaign": {
         "difficulty": 57,
         "expected_avatar_level": 48,
+        "recommended_squad_min": 146,
+        "recommended_squad_max": 150,
         "health_multiplier": 210.60000610351562,
         "damage_multiplier": 109.13999938964844,
         "enemies": [
@@ -158518,6 +158896,8 @@
       "campaign": {
         "difficulty": 2,
         "expected_avatar_level": 5,
+        "recommended_squad_min": 2,
+        "recommended_squad_max": 5,
         "health_multiplier": 0.7200000286102295,
         "damage_multiplier": 1.0499999523162842,
         "enemies": [
@@ -158639,7 +159019,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "1-4",
+      "slot": "7-4",
       "progression": 28,
       "previous": "invasion-zelems-2",
       "next": "invasion-infinity-1",
@@ -158685,7 +159065,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 471531779,
-        "selection": "1-4",
+        "selection": "7-4",
         "level": "zelems_3",
         "legend": null,
         "labels": null,
@@ -159445,6 +159825,8 @@
       "campaign": {
         "difficulty": 28,
         "expected_avatar_level": 23,
+        "recommended_squad_min": 68,
+        "recommended_squad_max": 72,
         "health_multiplier": 10.75,
         "damage_multiplier": 7.869999885559082,
         "enemies": [
@@ -159574,7 +159956,7 @@
     },
     {
       "mode": "Apocalypse",
-      "slot": "2-2",
+      "slot": "14-2",
       "progression": 54,
       "previous": "apocalypse-scaldron-1",
       "next": "apocalypse-nocturna-4",
@@ -159620,7 +160002,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 909443331,
-        "selection": "2-2",
+        "selection": "14-2",
         "level": "zelems_3",
         "legend": null,
         "labels": null,
@@ -160307,6 +160689,8 @@
       "campaign": {
         "difficulty": 54,
         "expected_avatar_level": 45,
+        "recommended_squad_min": 138,
+        "recommended_squad_max": 142,
         "health_multiplier": 149.24000549316406,
         "damage_multiplier": 80.37999725341797,
         "enemies": [
@@ -161318,6 +161702,8 @@
       "campaign": {
         "difficulty": 8,
         "expected_avatar_level": 8,
+        "recommended_squad_min": 14,
+        "recommended_squad_max": 18,
         "health_multiplier": 1.5299999713897705,
         "damage_multiplier": 1.6100000143051147,
         "enemies": [
@@ -161439,7 +161825,7 @@
     },
     {
       "mode": "Invasion",
-      "slot": "5-2",
+      "slot": "11-2",
       "progression": 42,
       "previous": "invasion-zelems-1",
       "next": "invasion-nocturna-4",
@@ -161476,7 +161862,7 @@
         "ZelemSpecialHaster_2.Noun",
         "nct_lieu_su_stealther_2.Noun",
         "ZelemSpecialThree_2.Noun",
-        "ZelemBoss_2.Noun"
+        "ZelemSpecialHaster_Captain_2.Noun"
       ],
       "aliases": [
         "zelems_4",
@@ -161485,7 +161871,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 707330307,
-        "selection": "5-2",
+        "selection": "11-2",
         "level": "zelems_4",
         "legend": null,
         "labels": null,
@@ -162204,10 +162590,15 @@
               {
                 "x": 252,
                 "y": 224,
-                "slug": "zelemboss-2-noun",
-                "name": "Zelem Boss 2",
-                "destructor": true,
-                "spawn_name": "Polaris, The Gravity Manipulator"
+                "slug": "zelemspecialhaster-captain-2-noun",
+                "name": "Zelem Special Haster Captain 2",
+                "captain": true,
+                "spawn_name": "Mikk the Luminal Aggressor",
+                "affixes": [
+                  "Frenzied",
+                  "Swift",
+                  "Swift Aura"
+                ]
               }
             ],
             "objects": [
@@ -162336,6 +162727,8 @@
       "campaign": {
         "difficulty": 42,
         "expected_avatar_level": 33,
+        "recommended_squad_min": 104,
+        "recommended_squad_max": 108,
         "health_multiplier": 45.52000045776367,
         "damage_multiplier": 28.1299991607666,
         "enemies": [
@@ -162437,27 +162830,36 @@
             "behavior": ""
           },
           {
-            "name": "Polaris, The Gravity Manipulator",
-            "noun": "ZelemBoss_2",
-            "slug": "zelemboss-2-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 1750,
-            "estimated_hit_points": 79660,
-            "estimated_damage_min": 1012.7,
-            "estimated_damage_max": 1012.7,
-            "estimated_damage_type": "Technology (energy)",
+            "name": "Mikk the Luminal Aggressor",
+            "noun": "ZelemSpecialHaster_Captain_2",
+            "slug": "zelemspecialhaster-captain-2-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 110,
+            "estimated_hit_points": 25036,
             "descriptions": [
-              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+              "Can bend time to haste a nearby ally's movement and attack speed.",
+              "Has a moderately damaging projectile attack."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Mikk the Luminal Aggressor",
+                "affixes": [
+                  "Frenzied",
+                  "Swift",
+                  "Swift Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
     },
     {
       "mode": "Apocalypse",
-      "slot": "4-3",
+      "slot": "16-3",
       "progression": 63,
       "previous": "apocalypse-cryos-3",
       "next": "apocalypse-nocturna-2",
@@ -162494,7 +162896,7 @@
         "ZelemSpecialOne_3.Noun",
         "NocturnaSpecialDrift_3.Noun",
         "NomadBioSpecialTwo_3.Noun",
-        "ZelemBoss_3.Noun"
+        "ZelemSpecialOne_Captain_3.Noun"
       ],
       "aliases": [
         "zelems_4",
@@ -162503,7 +162905,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1061028099,
-        "selection": "4-3",
+        "selection": "16-3",
         "level": "zelems_4",
         "legend": null,
         "labels": null,
@@ -163257,10 +163659,16 @@
               {
                 "x": 252,
                 "y": 224,
-                "slug": "zelemboss-3-noun",
-                "name": "Zelem Boss 3",
-                "destructor": true,
-                "spawn_name": "Polaris, The Gravity Manipulator"
+                "slug": "zelemspecialone-captain-3-noun",
+                "name": "Zelem Special One Captain 3",
+                "captain": true,
+                "spawn_name": "Cyluk the Wormhole Dominator",
+                "affixes": [
+                  "Ghostly",
+                  "Ghostly Aura",
+                  "Shifted",
+                  "Shifted Aura"
+                ]
               }
             ],
             "objects": [
@@ -163389,6 +163797,8 @@
       "campaign": {
         "difficulty": 63,
         "expected_avatar_level": 54,
+        "recommended_squad_min": 160,
+        "recommended_squad_max": 164,
         "health_multiplier": 356.4700012207031,
         "damage_multiplier": 174.00999450683594,
         "enemies": [
@@ -163492,20 +163902,30 @@
             "behavior": ""
           },
           {
-            "name": "Polaris, The Gravity Manipulator",
-            "noun": "ZelemBoss_3",
-            "slug": "zelemboss-3-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 2000,
-            "estimated_hit_points": 712940,
-            "estimated_damage_min": 6264.4,
-            "estimated_damage_max": 6264.4,
-            "estimated_damage_type": "Technology (energy)",
+            "name": "Cyluk the Wormhole Dominator",
+            "noun": "ZelemSpecialOne_Captain_3",
+            "slug": "zelemspecialone-captain-3-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 110,
+            "estimated_hit_points": 196058.5,
             "descriptions": [
-              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+              "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.",
+              "Launches time-space warping projectiles that will randomly teleport heroes who are hit by them."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Cyluk the Wormhole Dominator",
+                "affixes": [
+                  "Ghostly",
+                  "Ghostly Aura",
+                  "Shifted",
+                  "Shifted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
@@ -167051,7 +167471,7 @@
       "slug": "replay-infinity-1",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_1!infinity_1.bfx",
@@ -167966,7 +168386,7 @@
       "slug": "replay-infinity-2",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_2!infinity_2.bfx",
@@ -168845,7 +169265,7 @@
       "slug": "replay-infinity-3",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_3!infinity_3.bfx",
@@ -169766,7 +170186,7 @@
       "slug": "replay-infinity-4",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_4!infinity_4.bfx",
@@ -185036,7 +185456,7 @@
   "entry": {
     "apocalypse-cryos-1": {
       "mode": "Apocalypse",
-      "slot": "3-4",
+      "slot": "15-4",
       "progression": 60,
       "previous": "apocalypse-scaldron-4",
       "next": "apocalypse-verdanth-3",
@@ -185082,7 +185502,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1010499843,
-        "selection": "3-4",
+        "selection": "15-4",
         "level": "cryos_1",
         "legend": null,
         "labels": null,
@@ -185839,6 +186259,8 @@
       "campaign": {
         "difficulty": 60,
         "expected_avatar_level": 51,
+        "recommended_squad_min": 152,
+        "recommended_squad_max": 156,
         "health_multiplier": 252.61000061035156,
         "damage_multiplier": 128.14999389648438,
         "enemies": [
@@ -185974,7 +186396,7 @@
     },
     "apocalypse-cryos-2": {
       "mode": "Apocalypse",
-      "slot": "1-3",
+      "slot": "13-3",
       "progression": 51,
       "previous": "apocalypse-infinity-4",
       "next": "apocalypse-verdanth-1",
@@ -186020,7 +186442,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 858915075,
-        "selection": "1-3",
+        "selection": "13-3",
         "level": "cryos_2",
         "legend": null,
         "labels": null,
@@ -186535,6 +186957,8 @@
       "campaign": {
         "difficulty": 51,
         "expected_avatar_level": 41,
+        "recommended_squad_min": 130,
+        "recommended_squad_max": 134,
         "health_multiplier": 105.76000213623047,
         "damage_multiplier": 59.189998626708984,
         "enemies": [
@@ -186665,7 +187089,7 @@
     },
     "apocalypse-cryos-3": {
       "mode": "Apocalypse",
-      "slot": "4-2",
+      "slot": "16-2",
       "progression": 62,
       "previous": "apocalypse-verdanth-3",
       "next": "apocalypse-zelems-4",
@@ -186711,7 +187135,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1044185347,
-        "selection": "4-2",
+        "selection": "16-2",
         "level": "cryos_3",
         "legend": null,
         "labels": null,
@@ -188588,6 +189012,8 @@
       "campaign": {
         "difficulty": 62,
         "expected_avatar_level": 53,
+        "recommended_squad_min": 158,
+        "recommended_squad_max": 162,
         "health_multiplier": 335.5,
         "damage_multiplier": 164.94000244140625,
         "enemies": [
@@ -188725,7 +189151,7 @@
     },
     "apocalypse-cryos-4": {
       "mode": "Apocalypse",
-      "slot": "6-1",
+      "slot": "18-1",
       "progression": 69,
       "previous": "apocalypse-zelems-1",
       "next": "apocalypse-nocturna-1",
@@ -188771,7 +189197,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1162084611,
-        "selection": "6-1",
+        "selection": "18-1",
         "level": "cryos_4",
         "legend": null,
         "labels": null,
@@ -189207,6 +189633,8 @@
       "campaign": {
         "difficulty": 69,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 176,
+        "recommended_squad_max": 180,
         "health_multiplier": 709.8400268554688,
         "damage_multiplier": 320.8599853515625,
         "enemies": [
@@ -189344,7 +189772,7 @@
     },
     "apocalypse-infinity-1": {
       "mode": "Apocalypse",
-      "slot": "6-3",
+      "slot": "18-3",
       "progression": 71,
       "previous": "apocalypse-nocturna-1",
       "next": "apocalypse-scaldron-3",
@@ -189355,7 +189783,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 71,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         71
       ],
@@ -189390,7 +189818,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1195770115,
-        "selection": "6-3",
+        "selection": "18-3",
         "level": "infinity_1",
         "legend": null,
         "labels": null,
@@ -190490,6 +190918,8 @@
       "campaign": {
         "difficulty": 71,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 180,
+        "recommended_squad_max": 184,
         "health_multiplier": 801.3499755859375,
         "damage_multiplier": 357.1300048828125,
         "enemies": [
@@ -190629,7 +191059,7 @@
     },
     "apocalypse-infinity-2": {
       "mode": "Apocalypse",
-      "slot": "5-1",
+      "slot": "17-1",
       "progression": 65,
       "previous": "apocalypse-nocturna-2",
       "next": "apocalypse-scaldron-2",
@@ -190640,7 +191070,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 65,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         65
       ],
@@ -190675,7 +191105,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1094713603,
-        "selection": "5-1",
+        "selection": "17-1",
         "level": "infinity_2",
         "legend": null,
         "labels": null,
@@ -191600,6 +192030,8 @@
       "campaign": {
         "difficulty": 65,
         "expected_avatar_level": 56,
+        "recommended_squad_min": 166,
+        "recommended_squad_max": 170,
         "health_multiplier": 473.44000244140625,
         "damage_multiplier": 223.97000122070312,
         "enemies": [
@@ -191731,7 +192163,7 @@
     },
     "apocalypse-infinity-3": {
       "mode": "Apocalypse",
-      "slot": "2-4",
+      "slot": "14-4",
       "progression": 56,
       "previous": "apocalypse-nocturna-4",
       "next": "apocalypse-zelems-2",
@@ -191742,7 +192174,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 56,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         56
       ],
@@ -191777,7 +192209,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 943128835,
-        "selection": "2-4",
+        "selection": "14-4",
         "level": "infinity_3",
         "legend": null,
         "labels": null,
@@ -192481,6 +192913,8 @@
       "campaign": {
         "difficulty": 56,
         "expected_avatar_level": 47,
+        "recommended_squad_min": 142,
+        "recommended_squad_max": 146,
         "health_multiplier": 168.47999572753906,
         "damage_multiplier": 89.45999908447266,
         "enemies": [
@@ -192616,7 +193050,7 @@
     },
     "apocalypse-infinity-4": {
       "mode": "Apocalypse",
-      "slot": "1-2",
+      "slot": "13-2",
       "progression": 50,
       "previous": "apocalypse-nocturna-3",
       "next": "apocalypse-cryos-2",
@@ -192627,7 +193061,7 @@
       "group_name": "Apocalypse",
       "group_slug": "apocalypse",
       "stage": 50,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         50
       ],
@@ -192662,7 +193096,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 842072323,
-        "selection": "1-2",
+        "selection": "13-2",
         "level": "infinity_4",
         "legend": null,
         "labels": null,
@@ -193587,6 +194021,8 @@
       "campaign": {
         "difficulty": 50,
         "expected_avatar_level": 40,
+        "recommended_squad_min": 128,
+        "recommended_squad_max": 132,
         "health_multiplier": 99.54000091552734,
         "damage_multiplier": 56.099998474121094,
         "enemies": [
@@ -193725,7 +194161,7 @@
     },
     "apocalypse-nocturna-1": {
       "mode": "Apocalypse",
-      "slot": "6-2",
+      "slot": "18-2",
       "progression": 70,
       "previous": "apocalypse-cryos-4",
       "next": "apocalypse-infinity-1",
@@ -193771,7 +194207,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1178927363,
-        "selection": "6-2",
+        "selection": "18-2",
         "level": "nocturna_1",
         "legend": null,
         "labels": null,
@@ -194435,6 +194871,8 @@
       "campaign": {
         "difficulty": 70,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 178,
+        "recommended_squad_max": 182,
         "health_multiplier": 754.2100219726562,
         "damage_multiplier": 338.510009765625,
         "enemies": [
@@ -194571,7 +195009,7 @@
     },
     "apocalypse-nocturna-2": {
       "mode": "Apocalypse",
-      "slot": "4-4",
+      "slot": "16-4",
       "progression": 64,
       "previous": "apocalypse-zelems-4",
       "next": "apocalypse-infinity-2",
@@ -194618,7 +195056,7 @@
         "run_seed": "1",
         "population_seed": 1077870851,
         "unmapped_objects": 1,
-        "selection": "4-4",
+        "selection": "16-4",
         "level": "nocturna_2",
         "legend": null,
         "labels": null,
@@ -195124,6 +195562,8 @@
       "campaign": {
         "difficulty": 64,
         "expected_avatar_level": 55,
+        "recommended_squad_min": 162,
+        "recommended_squad_max": 166,
         "health_multiplier": 378.75,
         "damage_multiplier": 183.5800018310547,
         "enemies": [
@@ -195259,7 +195699,7 @@
     },
     "apocalypse-nocturna-3": {
       "mode": "Apocalypse",
-      "slot": "1-1",
+      "slot": "13-1",
       "progression": 49,
       "previous": "invasion-scaldron-1",
       "next": "apocalypse-infinity-4",
@@ -195305,7 +195745,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 825229571,
-        "selection": "1-1",
+        "selection": "13-1",
         "level": "nocturna_3",
         "legend": null,
         "labels": null,
@@ -196133,6 +196573,8 @@
       "campaign": {
         "difficulty": 49,
         "expected_avatar_level": 39,
+        "recommended_squad_min": 126,
+        "recommended_squad_max": 130,
         "health_multiplier": 93.68000030517578,
         "damage_multiplier": 53.18000030517578,
         "enemies": [
@@ -196266,7 +196708,7 @@
     },
     "apocalypse-nocturna-4": {
       "mode": "Apocalypse",
-      "slot": "2-3",
+      "slot": "14-3",
       "progression": 55,
       "previous": "apocalypse-zelems-3",
       "next": "apocalypse-infinity-3",
@@ -196312,7 +196754,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 926286083,
-        "selection": "2-3",
+        "selection": "14-3",
         "level": "nocturna_4",
         "legend": null,
         "labels": null,
@@ -197033,6 +197475,8 @@
       "campaign": {
         "difficulty": 55,
         "expected_avatar_level": 46,
+        "recommended_squad_min": 140,
+        "recommended_squad_max": 144,
         "health_multiplier": 158.57000732421875,
         "damage_multiplier": 84.80000305175781,
         "enemies": [
@@ -197173,7 +197617,7 @@
     },
     "apocalypse-scaldron-1": {
       "mode": "Apocalypse",
-      "slot": "2-1",
+      "slot": "14-1",
       "progression": 53,
       "previous": "apocalypse-verdanth-1",
       "next": "apocalypse-zelems-3",
@@ -197219,7 +197663,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 892600579,
-        "selection": "2-1",
+        "selection": "14-1",
         "level": "scaldron_1",
         "legend": null,
         "labels": null,
@@ -197920,6 +198364,8 @@
       "campaign": {
         "difficulty": 53,
         "expected_avatar_level": 44,
+        "recommended_squad_min": 136,
+        "recommended_squad_max": 140,
         "health_multiplier": 140.4600067138672,
         "damage_multiplier": 76.19000244140625,
         "enemies": [
@@ -198053,7 +198499,7 @@
     },
     "apocalypse-scaldron-2": {
       "mode": "Apocalypse",
-      "slot": "5-2",
+      "slot": "17-2",
       "progression": 66,
       "previous": "apocalypse-infinity-2",
       "next": "apocalypse-verdanth-2",
@@ -198099,7 +198545,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1111556355,
-        "selection": "5-2",
+        "selection": "17-2",
         "level": "scaldron_2",
         "legend": null,
         "labels": null,
@@ -198731,6 +199177,8 @@
       "campaign": {
         "difficulty": 66,
         "expected_avatar_level": 57,
+        "recommended_squad_min": 168,
+        "recommended_squad_max": 172,
         "health_multiplier": 503.0299987792969,
         "damage_multiplier": 236.2899932861328,
         "enemies": [
@@ -198864,7 +199312,7 @@
     },
     "apocalypse-scaldron-3": {
       "mode": "Apocalypse",
-      "slot": "6-4",
+      "slot": "18-4",
       "progression": 72,
       "previous": "apocalypse-infinity-1",
       "id": 27,
@@ -198909,7 +199357,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1212612867,
-        "selection": "6-4",
+        "selection": "18-4",
         "level": "scaldron_3",
         "legend": null,
         "labels": null,
@@ -199427,6 +199875,8 @@
       "campaign": {
         "difficulty": 72,
         "expected_avatar_level": 0,
+        "recommended_squad_min": 182,
+        "recommended_squad_max": 200,
         "health_multiplier": 851.4299926757812,
         "damage_multiplier": 376.7699890136719,
         "enemies": [
@@ -199558,7 +200008,7 @@
     },
     "apocalypse-scaldron-4": {
       "mode": "Apocalypse",
-      "slot": "3-3",
+      "slot": "15-3",
       "progression": 59,
       "previous": "apocalypse-verdanth-4",
       "next": "apocalypse-cryos-1",
@@ -199604,7 +200054,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 993657091,
-        "selection": "3-3",
+        "selection": "15-3",
         "level": "scaldron_4",
         "legend": null,
         "labels": null,
@@ -200172,6 +200622,8 @@
       "campaign": {
         "difficulty": 59,
         "expected_avatar_level": 50,
+        "recommended_squad_min": 150,
+        "recommended_squad_max": 154,
         "health_multiplier": 237.75,
         "damage_multiplier": 121.47000122070312,
         "enemies": [
@@ -200304,7 +200756,7 @@
     },
     "apocalypse-verdanth-1": {
       "mode": "Apocalypse",
-      "slot": "1-4",
+      "slot": "13-4",
       "progression": 52,
       "previous": "apocalypse-cryos-2",
       "next": "apocalypse-scaldron-1",
@@ -200350,7 +200802,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 875757827,
-        "selection": "1-4",
+        "selection": "13-4",
         "level": "verdanth_1",
         "legend": null,
         "labels": null,
@@ -200877,6 +201329,8 @@
       "campaign": {
         "difficulty": 52,
         "expected_avatar_level": 43,
+        "recommended_squad_min": 132,
+        "recommended_squad_max": 136,
         "health_multiplier": 112.37000274658203,
         "damage_multiplier": 62.45000076293945,
         "enemies": [
@@ -201008,7 +201462,7 @@
     },
     "apocalypse-verdanth-2": {
       "mode": "Apocalypse",
-      "slot": "5-3",
+      "slot": "17-3",
       "progression": 67,
       "previous": "apocalypse-scaldron-2",
       "next": "apocalypse-zelems-1",
@@ -201054,7 +201508,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1128399107,
-        "selection": "5-3",
+        "selection": "17-3",
         "level": "verdanth_2",
         "legend": null,
         "labels": null,
@@ -201574,6 +202028,8 @@
       "campaign": {
         "difficulty": 67,
         "expected_avatar_level": 58,
+        "recommended_squad_min": 170,
+        "recommended_squad_max": 174,
         "health_multiplier": 534.469970703125,
         "damage_multiplier": 249.2899932861328,
         "enemies": [
@@ -201705,7 +202161,7 @@
     },
     "apocalypse-verdanth-3": {
       "mode": "Apocalypse",
-      "slot": "4-1",
+      "slot": "16-1",
       "progression": 61,
       "previous": "apocalypse-cryos-1",
       "next": "apocalypse-cryos-3",
@@ -201751,7 +202207,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1027342595,
-        "selection": "4-1",
+        "selection": "16-1",
         "level": "verdanth_3",
         "legend": null,
         "labels": null,
@@ -202376,6 +202832,8 @@
       "campaign": {
         "difficulty": 61,
         "expected_avatar_level": 52,
+        "recommended_squad_min": 156,
+        "recommended_squad_max": 160,
         "health_multiplier": 315.760009765625,
         "damage_multiplier": 156.33999633789062,
         "enemies": [
@@ -202516,7 +202974,7 @@
     },
     "apocalypse-verdanth-4": {
       "mode": "Apocalypse",
-      "slot": "3-2",
+      "slot": "15-2",
       "progression": 58,
       "previous": "apocalypse-zelems-2",
       "next": "apocalypse-scaldron-4",
@@ -202553,7 +203011,7 @@
         "NomadSpecialOne_3.Noun",
         "NocturnaSpecialMunch_3.Noun",
         "ZelemSpecialHaster_3.Noun",
-        "VerdanthBoss_3.Noun"
+        "NomadSpecialOne_Captain_3.Noun"
       ],
       "aliases": [
         "verdanth_4",
@@ -202563,7 +203021,7 @@
         "run_seed": "1",
         "population_seed": 976814339,
         "unmapped_objects": 2,
-        "selection": "3-2",
+        "selection": "15-2",
         "level": "verdanth_4",
         "legend": null,
         "labels": null,
@@ -203159,10 +203617,16 @@
               {
                 "x": 165,
                 "y": 258,
-                "slug": "verdanthboss-3-noun",
-                "name": "Verdanth Boss 3",
-                "destructor": true,
-                "spawn_name": "Orcus, Devourer of Life"
+                "slug": "nomadspecialone-captain-3-noun",
+                "name": "Nomad Special One Captain 3",
+                "captain": true,
+                "spawn_name": "Stonn the Punishing Brute",
+                "affixes": [
+                  "Deadly",
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ]
               }
             ],
             "objects": [
@@ -203189,6 +203653,8 @@
       "campaign": {
         "difficulty": 58,
         "expected_avatar_level": 49,
+        "recommended_squad_min": 148,
+        "recommended_squad_max": 152,
         "health_multiplier": 223.75999450683594,
         "damage_multiplier": 115.13999938964844,
         "enemies": [
@@ -203286,24 +203752,37 @@
             "behavior": ""
           },
           {
-            "name": "Orcus, Devourer of Life",
-            "noun": "VerdanthBoss_3",
-            "slug": "verdanthboss-3-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 2000,
-            "estimated_hit_points": 447520,
+            "name": "Stonn the Punishing Brute",
+            "noun": "NomadSpecialOne_Captain_3",
+            "slug": "nomadspecialone-captain-3-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 140,
+            "estimated_hit_points": 156632,
             "descriptions": [
-              "Consumes spawns, breathes disease, thorn barrage"
+              "Has a vicious charge that will knock affected heroes up into the air.",
+              "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Stonn the Punishing Brute",
+                "affixes": [
+                  "Deadly",
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
     },
     "apocalypse-zelems-1": {
       "mode": "Apocalypse",
-      "slot": "5-4",
+      "slot": "17-4",
       "progression": 68,
       "previous": "apocalypse-verdanth-2",
       "next": "apocalypse-cryos-4",
@@ -203349,7 +203828,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1145241859,
-        "selection": "5-4",
+        "selection": "17-4",
         "level": "zelems_1",
         "legend": null,
         "labels": null,
@@ -203973,6 +204452,8 @@
       "campaign": {
         "difficulty": 68,
         "expected_avatar_level": 59,
+        "recommended_squad_min": 172,
+        "recommended_squad_max": 176,
         "health_multiplier": 567.8699951171875,
         "damage_multiplier": 263,
         "enemies": [
@@ -204106,7 +204587,7 @@
     },
     "apocalypse-zelems-2": {
       "mode": "Apocalypse",
-      "slot": "3-1",
+      "slot": "15-1",
       "progression": 57,
       "previous": "apocalypse-infinity-3",
       "next": "apocalypse-verdanth-4",
@@ -204152,7 +204633,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 959971587,
-        "selection": "3-1",
+        "selection": "15-1",
         "level": "zelems_2",
         "legend": null,
         "labels": null,
@@ -204691,6 +205172,8 @@
       "campaign": {
         "difficulty": 57,
         "expected_avatar_level": 48,
+        "recommended_squad_min": 146,
+        "recommended_squad_max": 150,
         "health_multiplier": 210.60000610351562,
         "damage_multiplier": 109.13999938964844,
         "enemies": [
@@ -204820,7 +205303,7 @@
     },
     "apocalypse-zelems-3": {
       "mode": "Apocalypse",
-      "slot": "2-2",
+      "slot": "14-2",
       "progression": 54,
       "previous": "apocalypse-scaldron-1",
       "next": "apocalypse-nocturna-4",
@@ -204866,7 +205349,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 909443331,
-        "selection": "2-2",
+        "selection": "14-2",
         "level": "zelems_3",
         "legend": null,
         "labels": null,
@@ -205553,6 +206036,8 @@
       "campaign": {
         "difficulty": 54,
         "expected_avatar_level": 45,
+        "recommended_squad_min": 138,
+        "recommended_squad_max": 142,
         "health_multiplier": 149.24000549316406,
         "damage_multiplier": 80.37999725341797,
         "enemies": [
@@ -205681,7 +206166,7 @@
     },
     "apocalypse-zelems-4": {
       "mode": "Apocalypse",
-      "slot": "4-3",
+      "slot": "16-3",
       "progression": 63,
       "previous": "apocalypse-cryos-3",
       "next": "apocalypse-nocturna-2",
@@ -205718,7 +206203,7 @@
         "ZelemSpecialOne_3.Noun",
         "NocturnaSpecialDrift_3.Noun",
         "NomadBioSpecialTwo_3.Noun",
-        "ZelemBoss_3.Noun"
+        "ZelemSpecialOne_Captain_3.Noun"
       ],
       "aliases": [
         "zelems_4",
@@ -205727,7 +206212,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 1061028099,
-        "selection": "4-3",
+        "selection": "16-3",
         "level": "zelems_4",
         "legend": null,
         "labels": null,
@@ -206481,10 +206966,16 @@
               {
                 "x": 252,
                 "y": 224,
-                "slug": "zelemboss-3-noun",
-                "name": "Zelem Boss 3",
-                "destructor": true,
-                "spawn_name": "Polaris, The Gravity Manipulator"
+                "slug": "zelemspecialone-captain-3-noun",
+                "name": "Zelem Special One Captain 3",
+                "captain": true,
+                "spawn_name": "Cyluk the Wormhole Dominator",
+                "affixes": [
+                  "Ghostly",
+                  "Ghostly Aura",
+                  "Shifted",
+                  "Shifted Aura"
+                ]
               }
             ],
             "objects": [
@@ -206613,6 +207104,8 @@
       "campaign": {
         "difficulty": 63,
         "expected_avatar_level": 54,
+        "recommended_squad_min": 160,
+        "recommended_squad_max": 164,
         "health_multiplier": 356.4700012207031,
         "damage_multiplier": 174.00999450683594,
         "enemies": [
@@ -206716,20 +207209,30 @@
             "behavior": ""
           },
           {
-            "name": "Polaris, The Gravity Manipulator",
-            "noun": "ZelemBoss_3",
-            "slug": "zelemboss-3-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 2000,
-            "estimated_hit_points": 712940,
-            "estimated_damage_min": 6264.4,
-            "estimated_damage_max": 6264.4,
-            "estimated_damage_type": "Technology (energy)",
+            "name": "Cyluk the Wormhole Dominator",
+            "noun": "ZelemSpecialOne_Captain_3",
+            "slug": "zelemspecialone-captain-3-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 110,
+            "estimated_hit_points": 196058.5,
             "descriptions": [
-              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+              "Being shifted halfway into an alternate dimension makes them highly resistant to area effect attacks.",
+              "Launches time-space warping projectiles that will randomly teleport heroes who are hit by them."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Cyluk the Wormhole Dominator",
+                "affixes": [
+                  "Ghostly",
+                  "Ghostly Aura",
+                  "Shifted",
+                  "Shifted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
@@ -208041,6 +208544,8 @@
       "campaign": {
         "difficulty": 15,
         "expected_avatar_level": 13,
+        "recommended_squad_min": 32,
+        "recommended_squad_max": 36,
         "health_multiplier": 3.1500000953674316,
         "damage_multiplier": 2.7799999713897705,
         "enemies": [
@@ -208916,6 +209421,8 @@
       "campaign": {
         "difficulty": 16,
         "expected_avatar_level": 14,
+        "recommended_squad_min": 34,
+        "recommended_squad_max": 38,
         "health_multiplier": 3.3399999141693115,
         "damage_multiplier": 2.9200000762939453,
         "enemies": [
@@ -211088,6 +211595,8 @@
       "campaign": {
         "difficulty": 10,
         "expected_avatar_level": 10,
+        "recommended_squad_min": 20,
+        "recommended_squad_max": 24,
         "health_multiplier": 2.009999990463257,
         "damage_multiplier": 2.0299999713897705,
         "enemies": [
@@ -211705,6 +212214,8 @@
       "campaign": {
         "difficulty": 9,
         "expected_avatar_level": 9,
+        "recommended_squad_min": 18,
+        "recommended_squad_max": 22,
         "health_multiplier": 1.899999976158142,
         "damage_multiplier": 1.9299999475479126,
         "enemies": [
@@ -211951,7 +212462,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 19,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         19
       ],
@@ -212937,6 +213448,8 @@
       "campaign": {
         "difficulty": 19,
         "expected_avatar_level": 16,
+        "recommended_squad_min": 42,
+        "recommended_squad_max": 46,
         "health_multiplier": 4.650000095367432,
         "damage_multiplier": 3.859999895095825,
         "enemies": [
@@ -213077,7 +213590,7 @@
       "slug": "infinity-1-pvp",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "PvP",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_1_PVP!infinity_1_PVP.bfx",
@@ -213194,7 +213707,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 13,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         13
       ],
@@ -214145,6 +214658,8 @@
       "campaign": {
         "difficulty": 13,
         "expected_avatar_level": 12,
+        "recommended_squad_min": 28,
+        "recommended_squad_max": 32,
         "health_multiplier": 2.799999952316284,
         "damage_multiplier": 2.5199999809265137,
         "enemies": [
@@ -214288,7 +214803,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 14,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         14
       ],
@@ -215007,6 +215522,8 @@
       "campaign": {
         "difficulty": 14,
         "expected_avatar_level": 12,
+        "recommended_squad_min": 30,
+        "recommended_squad_max": 34,
         "health_multiplier": 2.9700000286102295,
         "damage_multiplier": 2.6500000953674316,
         "enemies": [
@@ -215157,7 +215674,7 @@
       "group_name": "Onslaught",
       "group_slug": "onslaught",
       "stage": 20,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         20
       ],
@@ -216220,6 +216737,8 @@
       "campaign": {
         "difficulty": 20,
         "expected_avatar_level": 16,
+        "recommended_squad_min": 44,
+        "recommended_squad_max": 48,
         "health_multiplier": 4.929999828338623,
         "damage_multiplier": 4.050000190734863,
         "enemies": [
@@ -216348,7 +216867,7 @@
       "slug": "infinity-4-sm",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_4_SM!infinity_4_SM.bfx",
@@ -216491,7 +217010,7 @@
     },
     "invasion-cryos-1": {
       "mode": "Invasion",
-      "slot": "1-1",
+      "slot": "7-1",
       "progression": 25,
       "previous": "scaldron-4",
       "next": "invasion-cryos-2",
@@ -216537,7 +217056,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 421003523,
-        "selection": "1-1",
+        "selection": "7-1",
         "level": "cryos_1",
         "legend": null,
         "labels": null,
@@ -217287,6 +217806,8 @@
       "campaign": {
         "difficulty": 25,
         "expected_avatar_level": 20,
+        "recommended_squad_min": 62,
+        "recommended_squad_max": 66,
         "health_multiplier": 9.029999732971191,
         "damage_multiplier": 6.760000228881836,
         "enemies": [
@@ -217425,7 +217946,7 @@
     },
     "invasion-cryos-2": {
       "mode": "Invasion",
-      "slot": "1-2",
+      "slot": "7-2",
       "progression": 26,
       "previous": "invasion-cryos-1",
       "next": "invasion-zelems-2",
@@ -217471,7 +217992,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 437846275,
-        "selection": "1-2",
+        "selection": "7-2",
         "level": "cryos_2",
         "legend": null,
         "labels": null,
@@ -217983,6 +218504,8 @@
       "campaign": {
         "difficulty": 26,
         "expected_avatar_level": 21,
+        "recommended_squad_min": 64,
+        "recommended_squad_max": 68,
         "health_multiplier": 9.569999694824219,
         "damage_multiplier": 7.110000133514404,
         "enemies": [
@@ -218116,7 +218639,7 @@
     },
     "invasion-cryos-3": {
       "mode": "Invasion",
-      "slot": "3-4",
+      "slot": "9-4",
       "progression": 36,
       "previous": "invasion-cryos-4",
       "next": "invasion-nocturna-1",
@@ -218162,7 +218685,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 606273795,
-        "selection": "3-4",
+        "selection": "9-4",
         "level": "cryos_3",
         "legend": null,
         "labels": null,
@@ -220036,6 +220559,8 @@
       "campaign": {
         "difficulty": 36,
         "expected_avatar_level": 29,
+        "recommended_squad_min": 88,
+        "recommended_squad_max": 92,
         "health_multiplier": 23.450000762939453,
         "damage_multiplier": 15.65999984741211,
         "enemies": [
@@ -220170,7 +220695,7 @@
     },
     "invasion-cryos-4": {
       "mode": "Invasion",
-      "slot": "3-3",
+      "slot": "9-3",
       "progression": 35,
       "previous": "invasion-scaldron-4",
       "next": "invasion-cryos-3",
@@ -220216,7 +220741,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 589431043,
-        "selection": "3-3",
+        "selection": "9-3",
         "level": "cryos_4",
         "legend": null,
         "labels": null,
@@ -220651,6 +221176,8 @@
       "campaign": {
         "difficulty": 35,
         "expected_avatar_level": 28,
+        "recommended_squad_min": 86,
+        "recommended_squad_max": 90,
         "health_multiplier": 22.1200008392334,
         "damage_multiplier": 14.880000114440918,
         "enemies": [
@@ -220788,7 +221315,7 @@
     },
     "invasion-infinity-1": {
       "mode": "Invasion",
-      "slot": "2-1",
+      "slot": "8-1",
       "progression": 29,
       "previous": "invasion-zelems-3",
       "next": "invasion-infinity-3",
@@ -220799,7 +221326,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 29,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         29
       ],
@@ -220834,7 +221361,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 488374531,
-        "selection": "2-1",
+        "selection": "8-1",
         "level": "infinity_1",
         "legend": null,
         "labels": null,
@@ -221681,6 +222208,8 @@
       "campaign": {
         "difficulty": 29,
         "expected_avatar_level": 23,
+        "recommended_squad_min": 72,
+        "recommended_squad_max": 76,
         "health_multiplier": 13.329999923706055,
         "damage_multiplier": 9.520000457763672,
         "enemies": [
@@ -221818,7 +222347,7 @@
     },
     "invasion-infinity-2": {
       "mode": "Invasion",
-      "slot": "4-4",
+      "slot": "10-4",
       "progression": 40,
       "previous": "invasion-infinity-4",
       "next": "invasion-zelems-1",
@@ -221829,7 +222358,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 40,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         40
       ],
@@ -221864,7 +222393,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 673644803,
-        "selection": "4-4",
+        "selection": "10-4",
         "level": "infinity_2",
         "legend": null,
         "labels": null,
@@ -222788,6 +223317,8 @@
       "campaign": {
         "difficulty": 40,
         "expected_avatar_level": 32,
+        "recommended_squad_min": 98,
+        "recommended_squad_max": 102,
         "health_multiplier": 34.630001068115234,
         "damage_multiplier": 22.09000015258789,
         "enemies": [
@@ -222930,7 +223461,7 @@
     },
     "invasion-infinity-3": {
       "mode": "Invasion",
-      "slot": "2-2",
+      "slot": "8-2",
       "progression": 30,
       "previous": "invasion-infinity-1",
       "next": "invasion-verdanth-2",
@@ -222941,7 +223472,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 30,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         30
       ],
@@ -222976,7 +223507,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 505217283,
-        "selection": "2-2",
+        "selection": "8-2",
         "level": "infinity_3",
         "legend": null,
         "labels": null,
@@ -223767,6 +224298,8 @@
       "campaign": {
         "difficulty": 30,
         "expected_avatar_level": 24,
+        "recommended_squad_min": 74,
+        "recommended_squad_max": 78,
         "health_multiplier": 14.130000114440918,
         "damage_multiplier": 10.020000457763672,
         "enemies": [
@@ -223900,7 +224433,7 @@
     },
     "invasion-infinity-4": {
       "mode": "Invasion",
-      "slot": "4-3",
+      "slot": "10-3",
       "progression": 39,
       "previous": "invasion-nocturna-2",
       "next": "invasion-infinity-2",
@@ -223911,7 +224444,7 @@
       "group_name": "Invasion",
       "group_slug": "invasion",
       "stage": 39,
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": [
         39
       ],
@@ -223946,7 +224479,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 656802051,
-        "selection": "4-3",
+        "selection": "10-3",
         "level": "infinity_4",
         "legend": null,
         "labels": null,
@@ -224878,6 +225411,8 @@
       "campaign": {
         "difficulty": 39,
         "expected_avatar_level": 31,
+        "recommended_squad_min": 96,
+        "recommended_squad_max": 100,
         "health_multiplier": 32.66999816894531,
         "damage_multiplier": 20.989999771118164,
         "enemies": [
@@ -225008,7 +225543,7 @@
     },
     "invasion-nocturna-1": {
       "mode": "Invasion",
-      "slot": "4-1",
+      "slot": "10-1",
       "progression": 37,
       "previous": "invasion-cryos-3",
       "next": "invasion-nocturna-2",
@@ -225054,7 +225589,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 623116547,
-        "selection": "4-1",
+        "selection": "10-1",
         "level": "nocturna_1",
         "legend": null,
         "labels": null,
@@ -225665,6 +226200,8 @@
       "campaign": {
         "difficulty": 37,
         "expected_avatar_level": 29,
+        "recommended_squad_min": 92,
+        "recommended_squad_max": 96,
         "health_multiplier": 29.079999923706055,
         "damage_multiplier": 18.950000762939453,
         "enemies": [
@@ -225800,7 +226337,7 @@
     },
     "invasion-nocturna-2": {
       "mode": "Invasion",
-      "slot": "4-2",
+      "slot": "10-2",
       "progression": 38,
       "previous": "invasion-nocturna-1",
       "next": "invasion-infinity-4",
@@ -225847,7 +226384,7 @@
         "run_seed": "1",
         "population_seed": 639959299,
         "unmapped_objects": 1,
-        "selection": "4-2",
+        "selection": "10-2",
         "level": "nocturna_2",
         "legend": null,
         "labels": null,
@@ -226366,6 +226903,8 @@
       "campaign": {
         "difficulty": 38,
         "expected_avatar_level": 30,
+        "recommended_squad_min": 94,
+        "recommended_squad_max": 98,
         "health_multiplier": 30.81999969482422,
         "damage_multiplier": 19.940000534057617,
         "enemies": [
@@ -226502,7 +227041,7 @@
     },
     "invasion-nocturna-3": {
       "mode": "Invasion",
-      "slot": "5-4",
+      "slot": "11-4",
       "progression": 44,
       "previous": "invasion-nocturna-4",
       "next": "invasion-verdanth-1",
@@ -226548,7 +227087,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 741015811,
-        "selection": "5-4",
+        "selection": "11-4",
         "level": "nocturna_3",
         "legend": null,
         "labels": null,
@@ -227291,6 +227830,8 @@
       "campaign": {
         "difficulty": 44,
         "expected_avatar_level": 35,
+        "recommended_squad_min": 108,
+        "recommended_squad_max": 112,
         "health_multiplier": 51.150001525878906,
         "damage_multiplier": 31.15999984741211,
         "enemies": [
@@ -227420,7 +227961,7 @@
     },
     "invasion-nocturna-4": {
       "mode": "Invasion",
-      "slot": "5-3",
+      "slot": "11-3",
       "progression": 43,
       "previous": "invasion-zelems-4",
       "next": "invasion-nocturna-3",
@@ -227466,7 +228007,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 724173059,
-        "selection": "5-3",
+        "selection": "11-3",
         "level": "nocturna_4",
         "legend": null,
         "labels": null,
@@ -228137,6 +228678,8 @@
       "campaign": {
         "difficulty": 43,
         "expected_avatar_level": 34,
+        "recommended_squad_min": 106,
+        "recommended_squad_max": 110,
         "health_multiplier": 48.25,
         "damage_multiplier": 29.610000610351562,
         "enemies": [
@@ -228275,7 +228818,7 @@
     },
     "invasion-scaldron-1": {
       "mode": "Invasion",
-      "slot": "6-4",
+      "slot": "12-4",
       "progression": 48,
       "previous": "invasion-scaldron-3",
       "next": "apocalypse-nocturna-3",
@@ -228321,7 +228864,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 808386819,
-        "selection": "6-4",
+        "selection": "12-4",
         "level": "scaldron_1",
         "legend": null,
         "labels": null,
@@ -229015,6 +229558,8 @@
       "campaign": {
         "difficulty": 48,
         "expected_avatar_level": 38,
+        "recommended_squad_min": 118,
+        "recommended_squad_max": 126,
         "health_multiplier": 75.55000305175781,
         "damage_multiplier": 43.95000076293945,
         "enemies": [
@@ -229146,7 +229691,7 @@
     },
     "invasion-scaldron-2": {
       "mode": "Invasion",
-      "slot": "3-1",
+      "slot": "9-1",
       "progression": 33,
       "previous": "invasion-verdanth-3",
       "next": "invasion-scaldron-4",
@@ -229192,7 +229737,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 555745539,
-        "selection": "3-1",
+        "selection": "9-1",
         "level": "scaldron_2",
         "legend": null,
         "labels": null,
@@ -229809,6 +230354,8 @@
       "campaign": {
         "difficulty": 33,
         "expected_avatar_level": 26,
+        "recommended_squad_min": 82,
+        "recommended_squad_max": 86,
         "health_multiplier": 19.690000534057617,
         "damage_multiplier": 13.430000305175781,
         "enemies": [
@@ -229943,7 +230490,7 @@
     },
     "invasion-scaldron-3": {
       "mode": "Invasion",
-      "slot": "6-3",
+      "slot": "12-3",
       "progression": 47,
       "previous": "invasion-verdanth-4",
       "next": "invasion-scaldron-1",
@@ -229989,7 +230536,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 791544067,
-        "selection": "6-3",
+        "selection": "12-3",
         "level": "scaldron_3",
         "legend": null,
         "labels": null,
@@ -230489,6 +231036,8 @@
       "campaign": {
         "difficulty": 47,
         "expected_avatar_level": 37,
+        "recommended_squad_min": 116,
+        "recommended_squad_max": 120,
         "health_multiplier": 71.2699966430664,
         "damage_multiplier": 41.7599983215332,
         "enemies": [
@@ -230619,7 +231168,7 @@
     },
     "invasion-scaldron-4": {
       "mode": "Invasion",
-      "slot": "3-2",
+      "slot": "9-2",
       "progression": 34,
       "previous": "invasion-scaldron-2",
       "next": "invasion-cryos-4",
@@ -230665,7 +231214,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 572588291,
-        "selection": "3-2",
+        "selection": "9-2",
         "level": "scaldron_4",
         "legend": null,
         "labels": null,
@@ -231225,6 +231774,8 @@
       "campaign": {
         "difficulty": 34,
         "expected_avatar_level": 27,
+        "recommended_squad_min": 84,
+        "recommended_squad_max": 88,
         "health_multiplier": 20.8700008392334,
         "damage_multiplier": 14.140000343322754,
         "enemies": [
@@ -231362,7 +231913,7 @@
     },
     "invasion-verdanth-1": {
       "mode": "Invasion",
-      "slot": "6-1",
+      "slot": "12-1",
       "progression": 45,
       "previous": "invasion-nocturna-3",
       "next": "invasion-verdanth-4",
@@ -231408,7 +231959,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 757858563,
-        "selection": "6-1",
+        "selection": "12-1",
         "level": "verdanth_1",
         "legend": null,
         "labels": null,
@@ -231934,6 +232485,8 @@
       "campaign": {
         "difficulty": 45,
         "expected_avatar_level": 35,
+        "recommended_squad_min": 112,
+        "recommended_squad_max": 116,
         "health_multiplier": 63.43000030517578,
         "damage_multiplier": 37.70000076293945,
         "enemies": [
@@ -232063,7 +232616,7 @@
     },
     "invasion-verdanth-2": {
       "mode": "Invasion",
-      "slot": "2-3",
+      "slot": "8-3",
       "progression": 31,
       "previous": "invasion-infinity-3",
       "next": "invasion-verdanth-3",
@@ -232109,7 +232662,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 522060035,
-        "selection": "2-3",
+        "selection": "8-3",
         "level": "verdanth_2",
         "legend": null,
         "labels": null,
@@ -232607,6 +233160,8 @@
       "campaign": {
         "difficulty": 31,
         "expected_avatar_level": 25,
+        "recommended_squad_min": 76,
+        "recommended_squad_max": 80,
         "health_multiplier": 14.979999542236328,
         "damage_multiplier": 10.550000190734863,
         "enemies": [
@@ -232739,7 +233294,7 @@
     },
     "invasion-verdanth-3": {
       "mode": "Invasion",
-      "slot": "2-4",
+      "slot": "8-4",
       "progression": 32,
       "previous": "invasion-verdanth-2",
       "next": "invasion-scaldron-2",
@@ -232785,7 +233340,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 538902787,
-        "selection": "2-4",
+        "selection": "8-4",
         "level": "verdanth_3",
         "legend": null,
         "labels": null,
@@ -233409,6 +233964,8 @@
       "campaign": {
         "difficulty": 32,
         "expected_avatar_level": 26,
+        "recommended_squad_min": 78,
+        "recommended_squad_max": 82,
         "health_multiplier": 15.880000114440918,
         "damage_multiplier": 11.100000381469727,
         "enemies": [
@@ -233543,7 +234100,7 @@
     },
     "invasion-verdanth-4": {
       "mode": "Invasion",
-      "slot": "6-2",
+      "slot": "12-2",
       "progression": 46,
       "previous": "invasion-verdanth-1",
       "next": "invasion-scaldron-3",
@@ -233580,7 +234137,7 @@
         "NomadSpecialOne_2.Noun",
         "Rezzer_2.Noun",
         "NomadDrag_2.Noun",
-        "VerdanthBoss_2.Noun"
+        "NomadSpecialOne_Captain_2.Noun"
       ],
       "aliases": [
         "verdanth_4",
@@ -233589,7 +234146,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 774701315,
-        "selection": "6-2",
+        "selection": "12-2",
         "level": "verdanth_4",
         "legend": null,
         "labels": null,
@@ -234045,10 +234602,15 @@
               {
                 "x": 165,
                 "y": 258,
-                "slug": "verdanthboss-2-noun",
-                "name": "Verdanth Boss 2",
-                "destructor": true,
-                "spawn_name": "Orcus, Devourer of Life"
+                "slug": "nomadspecialone-captain-2-noun",
+                "name": "Nomad Special One Captain 2",
+                "captain": true,
+                "spawn_name": "Kuma the Berserker",
+                "affixes": [
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ]
               }
             ],
             "objects": [
@@ -234075,6 +234637,8 @@
       "campaign": {
         "difficulty": 46,
         "expected_avatar_level": 36,
+        "recommended_squad_min": 114,
+        "recommended_squad_max": 118,
         "health_multiplier": 67.23999786376953,
         "damage_multiplier": 39.68000030517578,
         "enemies": [
@@ -234175,24 +234739,36 @@
             "behavior": ""
           },
           {
-            "name": "Orcus, Devourer of Life",
-            "noun": "VerdanthBoss_2",
-            "slug": "verdanthboss-2-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 1750,
-            "estimated_hit_points": 117670,
+            "name": "Kuma the Berserker",
+            "noun": "NomadSpecialOne_Captain_2",
+            "slug": "nomadspecialone-captain-2-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 130,
+            "estimated_hit_points": 43706,
             "descriptions": [
-              "Consumes spawns, breathes disease, thorn barrage"
+              "Has a vicious charge that will knock affected heroes up into the air.",
+              "Enrages when nearby corrupted are killed, growing in size and dealing more damage."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Kuma the Berserker",
+                "affixes": [
+                  "Shielded",
+                  "Surefooted",
+                  "Surefooted Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
     },
     "invasion-zelems-1": {
       "mode": "Invasion",
-      "slot": "5-1",
+      "slot": "11-1",
       "progression": 41,
       "previous": "invasion-infinity-2",
       "next": "invasion-zelems-4",
@@ -234238,7 +234814,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 690487555,
-        "selection": "5-1",
+        "selection": "11-1",
         "level": "zelems_1",
         "legend": null,
         "labels": null,
@@ -234839,6 +235415,8 @@
       "campaign": {
         "difficulty": 41,
         "expected_avatar_level": 32,
+        "recommended_squad_min": 102,
+        "recommended_squad_max": 106,
         "health_multiplier": 42.939998626708984,
         "damage_multiplier": 26.729999542236328,
         "enemies": [
@@ -234967,7 +235545,7 @@
     },
     "invasion-zelems-2": {
       "mode": "Invasion",
-      "slot": "1-3",
+      "slot": "7-3",
       "progression": 27,
       "previous": "invasion-cryos-2",
       "next": "invasion-zelems-3",
@@ -235013,7 +235591,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 454689027,
-        "selection": "1-3",
+        "selection": "7-3",
         "level": "zelems_2",
         "legend": null,
         "labels": null,
@@ -235581,6 +236159,8 @@
       "campaign": {
         "difficulty": 27,
         "expected_avatar_level": 22,
+        "recommended_squad_min": 66,
+        "recommended_squad_max": 70,
         "health_multiplier": 10.140000343322754,
         "damage_multiplier": 7.480000019073486,
         "enemies": [
@@ -235716,7 +236296,7 @@
     },
     "invasion-zelems-3": {
       "mode": "Invasion",
-      "slot": "1-4",
+      "slot": "7-4",
       "progression": 28,
       "previous": "invasion-zelems-2",
       "next": "invasion-infinity-1",
@@ -235762,7 +236342,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 471531779,
-        "selection": "1-4",
+        "selection": "7-4",
         "level": "zelems_3",
         "legend": null,
         "labels": null,
@@ -236522,6 +237102,8 @@
       "campaign": {
         "difficulty": 28,
         "expected_avatar_level": 23,
+        "recommended_squad_min": 68,
+        "recommended_squad_max": 72,
         "health_multiplier": 10.75,
         "damage_multiplier": 7.869999885559082,
         "enemies": [
@@ -236651,7 +237233,7 @@
     },
     "invasion-zelems-4": {
       "mode": "Invasion",
-      "slot": "5-2",
+      "slot": "11-2",
       "progression": 42,
       "previous": "invasion-zelems-1",
       "next": "invasion-nocturna-4",
@@ -236688,7 +237270,7 @@
         "ZelemSpecialHaster_2.Noun",
         "nct_lieu_su_stealther_2.Noun",
         "ZelemSpecialThree_2.Noun",
-        "ZelemBoss_2.Noun"
+        "ZelemSpecialHaster_Captain_2.Noun"
       ],
       "aliases": [
         "zelems_4",
@@ -236697,7 +237279,7 @@
       "map": {
         "run_seed": "1",
         "population_seed": 707330307,
-        "selection": "5-2",
+        "selection": "11-2",
         "level": "zelems_4",
         "legend": null,
         "labels": null,
@@ -237416,10 +237998,15 @@
               {
                 "x": 252,
                 "y": 224,
-                "slug": "zelemboss-2-noun",
-                "name": "Zelem Boss 2",
-                "destructor": true,
-                "spawn_name": "Polaris, The Gravity Manipulator"
+                "slug": "zelemspecialhaster-captain-2-noun",
+                "name": "Zelem Special Haster Captain 2",
+                "captain": true,
+                "spawn_name": "Mikk the Luminal Aggressor",
+                "affixes": [
+                  "Frenzied",
+                  "Swift",
+                  "Swift Aura"
+                ]
               }
             ],
             "objects": [
@@ -237548,6 +238135,8 @@
       "campaign": {
         "difficulty": 42,
         "expected_avatar_level": 33,
+        "recommended_squad_min": 104,
+        "recommended_squad_max": 108,
         "health_multiplier": 45.52000045776367,
         "damage_multiplier": 28.1299991607666,
         "enemies": [
@@ -237649,20 +238238,29 @@
             "behavior": ""
           },
           {
-            "name": "Polaris, The Gravity Manipulator",
-            "noun": "ZelemBoss_2",
-            "slug": "zelemboss-2-noun",
-            "role": "Destructor",
-            "challenge_value": 500,
-            "base_hit_points": 1750,
-            "estimated_hit_points": 79660,
-            "estimated_damage_min": 1012.7,
-            "estimated_damage_max": 1012.7,
-            "estimated_damage_type": "Technology (energy)",
+            "name": "Mikk the Luminal Aggressor",
+            "noun": "ZelemSpecialHaster_Captain_2",
+            "slug": "zelemspecialhaster-captain-2-noun",
+            "role": "Captain",
+            "challenge_value": 75,
+            "base_hit_points": 110,
+            "estimated_hit_points": 25036,
             "descriptions": [
-              "Creates gravity orbs, cone push attack, rapid fire homing projectiles"
+              "Can bend time to haste a nearby ally's movement and attack speed.",
+              "Has a moderately damaging projectile attack."
             ],
-            "behavior": ""
+            "behavior": "",
+            "seeded_variants": [
+              {
+                "name": "Mikk the Luminal Aggressor",
+                "affixes": [
+                  "Frenzied",
+                  "Swift",
+                  "Swift Aura"
+                ],
+                "count": 1
+              }
+            ]
           }
         ]
       }
@@ -238415,6 +239013,8 @@
       "campaign": {
         "difficulty": 4,
         "expected_avatar_level": 6,
+        "recommended_squad_min": 4,
+        "recommended_squad_max": 8,
         "health_multiplier": 1.0299999713897705,
         "damage_multiplier": 1.159999966621399,
         "enemies": [
@@ -239080,6 +239680,8 @@
       "campaign": {
         "difficulty": 18,
         "expected_avatar_level": 15,
+        "recommended_squad_min": 40,
+        "recommended_squad_max": 44,
         "health_multiplier": 4.389999866485596,
         "damage_multiplier": 3.680000066757202,
         "enemies": [
@@ -240189,6 +240791,8 @@
       "campaign": {
         "difficulty": 17,
         "expected_avatar_level": 14,
+        "recommended_squad_min": 38,
+        "recommended_squad_max": 42,
         "health_multiplier": 4.139999866485596,
         "damage_multiplier": 3.5,
         "enemies": [
@@ -241277,6 +241881,8 @@
       "campaign": {
         "difficulty": 3,
         "expected_avatar_level": 5,
+        "recommended_squad_min": 3,
+        "recommended_squad_max": 6,
         "health_multiplier": 0.8600000143051147,
         "damage_multiplier": 1.100000023841858,
         "enemies": [
@@ -244947,7 +245553,7 @@
       "slug": "replay-infinity-1",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_1!infinity_1.bfx",
@@ -245862,7 +246468,7 @@
       "slug": "replay-infinity-2",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_2!infinity_2.bfx",
@@ -246741,7 +247347,7 @@
       "slug": "replay-infinity-3",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_3!infinity_3.bfx",
@@ -247662,7 +248268,7 @@
       "slug": "replay-infinity-4",
       "group_name": "Replay",
       "group_slug": "replay",
-      "region": "Sentios",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "music_set_tech",
       "navigation_mesh": "infinity_4!infinity_4.bfx",
@@ -263550,6 +264156,8 @@
       "campaign": {
         "difficulty": 22,
         "expected_avatar_level": 18,
+        "recommended_squad_min": 50,
+        "recommended_squad_max": 54,
         "health_multiplier": 6.480000019073486,
         "damage_multiplier": 5.099999904632568,
         "enemies": [
@@ -264475,6 +265083,8 @@
       "campaign": {
         "difficulty": 21,
         "expected_avatar_level": 17,
+        "recommended_squad_min": 48,
+        "recommended_squad_max": 52,
         "health_multiplier": 6.110000133514404,
         "damage_multiplier": 4.860000133514404,
         "enemies": [
@@ -265126,6 +265736,8 @@
       "campaign": {
         "difficulty": 23,
         "expected_avatar_level": 18,
+        "recommended_squad_min": 52,
+        "recommended_squad_max": 56,
         "health_multiplier": 6.869999885559082,
         "damage_multiplier": 5.360000133514404,
         "enemies": [
@@ -265862,6 +266474,8 @@
       "campaign": {
         "difficulty": 24,
         "expected_avatar_level": 19,
+        "recommended_squad_min": 54,
+        "recommended_squad_max": 62,
         "health_multiplier": 7.28000020980835,
         "damage_multiplier": 5.630000114440918,
         "enemies": [
@@ -269894,7 +270508,7 @@
       "slug": "tnx173-2",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "",
       "navigation_mesh": "tnx173_2!tnx173_2.bfx",
@@ -270476,7 +271090,7 @@
       "slug": "tnx173-3",
       "group_name": "Other",
       "group_slug": "other",
-      "region": "Other",
+      "region": "Infinity",
       "campaign_orders": null,
       "music": "",
       "navigation_mesh": "tnx173_3!tnx173_3.bfx",
@@ -271078,6 +271692,8 @@
       "campaign": {
         "difficulty": 5,
         "expected_avatar_level": 6,
+        "recommended_squad_min": 8,
+        "recommended_squad_max": 12,
         "health_multiplier": 1.2799999713897705,
         "damage_multiplier": 1.3899999856948853,
         "enemies": [
@@ -271779,6 +272395,8 @@
       "campaign": {
         "difficulty": 11,
         "expected_avatar_level": 10,
+        "recommended_squad_min": 22,
+        "recommended_squad_max": 26,
         "health_multiplier": 2.130000114440918,
         "damage_multiplier": 2.130000114440918,
         "enemies": [
@@ -272560,6 +273178,8 @@
       "campaign": {
         "difficulty": 6,
         "expected_avatar_level": 7,
+        "recommended_squad_min": 10,
+        "recommended_squad_max": 14,
         "health_multiplier": 1.3600000143051147,
         "damage_multiplier": 1.4600000381469727,
         "enemies": [
@@ -273424,6 +274044,8 @@
       "campaign": {
         "difficulty": 12,
         "expected_avatar_level": 11,
+        "recommended_squad_min": 24,
+        "recommended_squad_max": 28,
         "health_multiplier": 2.259999990463257,
         "damage_multiplier": 2.240000009536743,
         "enemies": [
@@ -274400,6 +275022,8 @@
       "campaign": {
         "difficulty": 1,
         "expected_avatar_level": 4,
+        "recommended_squad_min": 0,
+        "recommended_squad_max": 4,
         "health_multiplier": 0.6000000238418579,
         "damage_multiplier": 1,
         "enemies": [
@@ -275347,6 +275971,8 @@
       "campaign": {
         "difficulty": 7,
         "expected_avatar_level": 8,
+        "recommended_squad_min": 12,
+        "recommended_squad_max": 16,
         "health_multiplier": 1.440000057220459,
         "damage_multiplier": 1.5299999713897705,
         "enemies": [
@@ -276402,6 +277028,8 @@
       "campaign": {
         "difficulty": 2,
         "expected_avatar_level": 5,
+        "recommended_squad_min": 2,
+        "recommended_squad_max": 5,
         "health_multiplier": 0.7200000286102295,
         "damage_multiplier": 1.0499999523162842,
         "enemies": [
@@ -277406,6 +278034,8 @@
       "campaign": {
         "difficulty": 8,
         "expected_avatar_level": 8,
+        "recommended_squad_min": 14,
+        "recommended_squad_max": 18,
         "health_multiplier": 1.5299999713897705,
         "damage_multiplier": 1.6100000143051147,
         "enemies": [

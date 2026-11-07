@@ -1,0 +1,6 @@
+<div class="npc-player-control">
+  <span>Players</span>
+  <div class="npc-player-buttons" role="group" aria-label="Players">
+    {{ range seq 1 4 }}<button type="button" data-npc-players="{{ . }}" aria-label="{{ . }} {{ if eq . 1 }}player{{ else }}players{{ end }}" aria-pressed="{{ if eq . 1 }}true{{ else }}false{{ end }}" disabled>{{ . }}</button>{{ end }}
+  </div>
+</div>

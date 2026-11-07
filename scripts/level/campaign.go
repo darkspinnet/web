@@ -20,6 +20,8 @@ import (
 type campaignDetail struct {
 	Difficulty          int             `json:"difficulty"`
 	ExpectedAvatarLevel int             `json:"expected_avatar_level"`
+	RecommendedSquadMin float32         `json:"recommended_squad_min"`
+	RecommendedSquadMax float32         `json:"recommended_squad_max"`
 	HealthMultiplier    float64         `json:"health_multiplier"`
 	DamageMultiplier    float64         `json:"damage_multiplier"`
 	Enemies             []campaignEnemy `json:"enemies"`

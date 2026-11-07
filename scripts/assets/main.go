@@ -143,6 +143,15 @@ func generate(ctx context.Context, gamePath, outputPath, heroDataPath, itemDataP
 	if err = generateElementIcons(gamePath, filepath.Join("static", "image", "element")); err != nil {
 		return fmt.Errorf("elementIcons: %w", err)
 	}
+	if err = generateMapArtwork(gamePath, "planet_images.json", filepath.Join("static", "image", "planet")); err != nil {
+		return fmt.Errorf("planetImages: %w", err)
+	}
+	if err = generateMapArtwork(gamePath, "level_images.json", filepath.Join("static", "image", "level")); err != nil {
+		return fmt.Errorf("levelImages: %w", err)
+	}
+	if err = generateMapArtwork(gamePath, "campaign_icons.json", filepath.Join("static", "image", "campaign")); err != nil {
+		return fmt.Errorf("campaignIcons: %w", err)
+	}
 	return nil
 }
 

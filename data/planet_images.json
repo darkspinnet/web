@@ -1,0 +1,8 @@
+{
+  "Cryos": {"image": "/image/planet/cryos.png", "source": "GalaxyMap_I48"},
+  "Infinity": {"image": "/image/planet/infinity.png", "source": "GalaxyMap_I3F"},
+  "Nocturna": {"image": "/image/planet/nocturna.png", "source": "GalaxyMap_I4A"},
+  "Scaldron": {"image": "/image/planet/scaldron.png", "source": "GalaxyMap_I44"},
+  "Verdanth": {"image": "/image/planet/verdanth.png", "source": "GalaxyMap_I46"},
+  "Zelem": {"image": "/image/planet/zelem.png", "source": "GalaxyMap_I4C"}
+}

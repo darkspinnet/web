@@ -1,0 +1,17 @@
+{
+  "onslaught": {
+    "image": "/image/campaign/onslaught.png",
+    "source": "FE_MM2b_IB5",
+    "crop": {"x": 156, "y": 133, "width": 48, "height": 48}
+  },
+  "invasion": {
+    "image": "/image/campaign/invasion.png",
+    "source": "FE_MM2b_I8F",
+    "crop": {"x": 166, "y": 0, "width": 48, "height": 48}
+  },
+  "apocalypse": {
+    "image": "/image/campaign/apocalypse.png",
+    "source": "FE_MM2b_IB5",
+    "crop": {"x": 166, "y": 67, "width": 48, "height": 48}
+  }
+}

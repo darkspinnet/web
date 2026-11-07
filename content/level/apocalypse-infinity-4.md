@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 1-2 · Fragmented Peak"
+title = "Apocalypse 13-2 · Fragmented Peak"
 level = "apocalypse-infinity-4"
 generated = true
 +++

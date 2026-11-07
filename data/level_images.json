@@ -1,0 +1,242 @@
+{
+  "zelems_1": {
+    "image": "/image/level/zelems-1.png",
+    "source": "FE_MM2b_I139",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "zelems_3": {
+    "image": "/image/level/zelems-3.png",
+    "source": "FE_MM2b_I13B",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "nocturna_4": {
+    "image": "/image/level/nocturna-4.png",
+    "source": "FE_MM2b_I13D",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "nocturna_1": {
+    "image": "/image/level/nocturna-1.png",
+    "source": "FE_MM2b_I13F",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "verdanth_1": {
+    "image": "/image/level/verdanth-1.png",
+    "source": "FE_MM2b_I141",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "verdanth_3": {
+    "image": "/image/level/verdanth-3.png",
+    "source": "FE_MM2b_I143",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "zelems_2": {
+    "image": "/image/level/zelems-2.png",
+    "source": "FE_MM2b_I145",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "zelems_4": {
+    "image": "/image/level/zelems-4.png",
+    "source": "FE_MM2b_I8F",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "cryos_4": {
+    "image": "/image/level/cryos-4.png",
+    "source": "FE_MM2b_I149",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "cryos_3": {
+    "image": "/image/level/cryos-3.png",
+    "source": "FE_MM2b_IB5",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "verdanth_2": {
+    "image": "/image/level/verdanth-2.png",
+    "source": "FE_MM2b_I14D",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "verdanth_4": {
+    "image": "/image/level/verdanth-4.png",
+    "source": "FE_MM2b_I14F",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "infinity_2": {
+    "image": "/image/level/infinity-2.png",
+    "source": "FE_MM2b_I151",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "infinity_3": {
+    "image": "/image/level/infinity-3.png",
+    "source": "FE_MM2b_ID5",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "cryos_1": {
+    "image": "/image/level/cryos-1.png",
+    "source": "FE_MM2b_I155",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "cryos_2": {
+    "image": "/image/level/cryos-2.png",
+    "source": "FE_MM2b_I157",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "nocturna_3": {
+    "image": "/image/level/nocturna-3.png",
+    "source": "FE_MM2b_I159",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "nocturna_2": {
+    "image": "/image/level/nocturna-2.png",
+    "source": "FE_MM2b_I15B",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "infinity_1": {
+    "image": "/image/level/infinity-1.png",
+    "source": "FE_MM2b_I15D",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "infinity_4": {
+    "image": "/image/level/infinity-4.png",
+    "source": "FE_MM2b_I15F",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "scaldron_2": {
+    "image": "/image/level/scaldron-2.png",
+    "source": "FE_MM2b_I161",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "scaldron_1": {
+    "image": "/image/level/scaldron-1.png",
+    "source": "FE_MM2b_I163",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "scaldron_3": {
+    "image": "/image/level/scaldron-3.png",
+    "source": "FE_MM2b_I165",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  },
+  "scaldron_4": {
+    "image": "/image/level/scaldron-4.png",
+    "source": "FE_MM2b_I167",
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 163,
+      "height": 130
+    }
+  }
+}

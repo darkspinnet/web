@@ -1,11 +1,12 @@
 <div class="level-stage-list">
   {{ range . }}
-  <a class="level-stage-link" href="{{ printf "level/%s/" .slug | relURL }}">
+  {{ $planet := index site.Data.planet_images .region }}
+  <a class="level-stage-link{{ with $planet }} has-planet-image{{ end }}" href="{{ printf "level/%s/" .slug | relURL }}">
+    {{ with $planet }}<img class="level-planet-thumbnail" src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="" width="88" height="60" loading="lazy" decoding="async">{{ end }}
     <span>
       <strong>{{ with .slot }}<span class="stage-number">{{ . }}</span> · {{ end }}{{ .display_name | default .name }}</strong>
-      <small>{{ if .campaign }}Difficulty {{ .campaign.difficulty }} · {{ .region }}{{ else if .replay }}{{ .npc_count }} possible enemies{{ else }}{{ .name }} · {{ .region }} · {{ .npc_count }} enemies{{ end }}</small>
+      <small>{{ if .campaign }}{{ .region }} - Item Level {{ printf "%.0f–%.0f" .campaign.recommended_squad_min .campaign.recommended_squad_max }}{{ else if .replay }}{{ .npc_count }} possible enemies{{ else }}{{ .name }} · {{ .region }} · {{ .npc_count }} enemies{{ end }}</small>
     </span>
-    <em aria-hidden="true">→</em>
   </a>
   {{ end }}
 </div>

@@ -95,6 +95,9 @@ func main() {
 	if err != nil {
 		fatal(err)
 	}
+	if err = enrichRecommendedSquadLevels(*gamePath, result.Levels); err != nil {
+		fatal(err)
+	}
 	err = enrichLevelMaps(database, result.Levels, *mapPath)
 	if err != nil {
 		fatal(err)
@@ -257,12 +260,12 @@ func expandProgression(levels []levelReport) []levelReport {
 			if stage < 1 || stage > 72 {
 				continue
 			}
-			pass, position := (stage-1)/24, (stage-1)%24
+			pass := (stage - 1) / 24
 			mode := modes[pass]
 			mission := level
 			mission.Progression = stage
 			mission.Mode = mode
-			mission.Slot = fmt.Sprintf("%d-%d", position/4+1, position%4+1)
+			mission.Slot = fmt.Sprintf("%d-%d", (stage-1)/4+1, (stage-1)%4+1)
 			if pass > 0 {
 				mission.Slug = strings.ToLower(mode) + "-" + level.Slug
 			}
@@ -410,11 +413,14 @@ func sensibleCamera(number float64) *float64 {
 
 func levelRegion(name, planetConfig string) string {
 	identity := strings.ToLower(name + " " + planetConfig)
-	regions := []string{"Cryos", "Nocturna", "Scaldron", "Verdanth", "Zelem"}
+	regions := []string{"Cryos", "Infinity", "Nocturna", "Scaldron", "Verdanth", "Zelem"}
 	for _, region := range regions {
 		if strings.Contains(identity, strings.ToLower(region)) {
 			return region
 		}
+	}
+	if strings.Contains(identity, "sentios") {
+		return "Infinity"
 	}
 	if strings.Contains(identity, "tutorial") {
 		return "Tutorial"

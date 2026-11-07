@@ -1,5 +1,5 @@
 +++
-title = "Apocalypse 1-1 · Spectral Forest"
+title = "Apocalypse 13-1 · Spectral Forest"
 level = "apocalypse-nocturna-3"
 generated = true
 +++
