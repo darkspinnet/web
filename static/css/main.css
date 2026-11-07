@@ -2178,6 +2178,11 @@ body {
 .level-map-spawn.is-affixed circle { stroke: #d4aaff; stroke-width: 2; }
 .level-map-object.is-obelisk { color: #ffe08a; }
 .level-map-object.is-teleport { color: #a2f3ff; }
+.level-map-object.is-arrival { color: #ffc660; }
+.level-map-object.is-entry { color: #8dffa8; }
+.level-map-connections { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 15px; border-top: 1px solid hsl(var(--border)); font-size: .78rem; }
+.level-map-connections span { color: hsl(var(--muted-foreground)); }
+.level-map-gallery figure { scroll-margin-top: 80px; }
 .level-map-object.is-destructible { color: #ffb298; }
 .level-map-object circle { fill: #111820; stroke: currentColor; stroke-width: 1.25; }
 .level-map-object path { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
@@ -2188,6 +2193,7 @@ body {
 .level-map-panel:has([data-map-toggle="destructible"]:not(:checked)) .level-seeded-map .is-destructible,
 .level-map-panel:has([data-map-toggle="obelisk"]:not(:checked)) .level-seeded-map .is-obelisk,
 .level-map-panel:has([data-map-toggle="teleport"]:not(:checked)) .level-seeded-map .is-teleport,
+.level-map-panel:has([data-map-toggle="entry"]:not(:checked)) .level-seeded-map .is-entry,
 .level-map-panel:has([data-map-toggle="minion"]:not(:checked)) .level-seeded-map .is-minion,
 .level-map-panel:has([data-map-toggle="lieutenant"]:not(:checked)) .level-seeded-map .is-lieutenant,
 .level-map-panel:has([data-map-toggle="captain"]:not(:checked)) .level-seeded-map .is-captain,

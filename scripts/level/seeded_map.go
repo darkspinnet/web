@@ -44,12 +44,13 @@ type seededEnemyVariant struct {
 }
 
 type seededMapObject struct {
-	X           int    `json:"x"`
-	Y           int    `json:"y"`
-	Kind        string `json:"kind"`
-	Name        string `json:"name"`
-	Slug        string `json:"slug,omitempty"`
-	Destination uint32 `json:"destination_component,omitempty"`
+	X           int     `json:"x"`
+	Y           int     `json:"y"`
+	Kind        string  `json:"kind"`
+	Name        string  `json:"name"`
+	Slug        string  `json:"slug,omitempty"`
+	Destination *uint32 `json:"destination_component,omitempty"`
+	Arrival     bool    `json:"arrival,omitempty"`
 }
 
 type seededMapGeometry struct {
@@ -146,6 +147,46 @@ func renderSeededGeometry(ctx context.Context, store *contentsqlite.Store, mapPa
 
 func seededBackground(component uint32) string {
 	return fmt.Sprintf("navigation-%02d.png", component)
+}
+
+// Follow outgoing teleport routes from the player entrance. Retain disconnected
+// components afterward, without inventing connections to them.
+func orderSeededMapSections(levelMap *campaignMap) {
+	byID := make(map[uint32]campaignMapSection, len(levelMap.Sections))
+	var start uint32
+	foundStart := false
+	for _, section := range levelMap.Sections {
+		byID[section.ComponentID] = section
+		for _, object := range section.Objects {
+			if object.Kind == "entry" {
+				start, foundStart = section.ComponentID, true
+			}
+		}
+	}
+	if !foundStart {
+		return
+	}
+	ordered := make([]campaignMapSection, 0, len(levelMap.Sections))
+	seen := make(map[uint32]bool)
+	var visit func(uint32)
+	visit = func(id uint32) {
+		section, exists := byID[id]
+		if seen[id] || !exists {
+			return
+		}
+		seen[id] = true
+		ordered = append(ordered, section)
+		for _, object := range section.Objects {
+			if object.Kind == "teleport" && object.Destination != nil {
+				visit(*object.Destination)
+			}
+		}
+	}
+	visit(start)
+	for _, section := range levelMap.Sections {
+		visit(section.ComponentID)
+	}
+	levelMap.Sections = ordered
 }
 
 func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.CampaignSetup, level *levelReport, nav seededMapGeometry, base string, seed uint64, descriptions map[uint32][]string, affixLabels map[string]string) error {
@@ -253,6 +294,7 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 			enemy.addSeededVariant(variant)
 		}
 	}
+	orderSeededMapSections(levelMap)
 	level.Map = levelMap
 	return nil
 }
@@ -346,6 +388,12 @@ func addSeededMapObjects(levelMap *campaignMap, nav seededMapGeometry, director 
 		object.X, object.Y = point.X, point.Y
 		levelMap.Sections[section].Objects = append(levelMap.Sections[section].Objects, object)
 	}
+	// Match gameplay.campaignEntryPosition for the solo opening represented here.
+	entry := game.Vec3{X: -123.8707, Y: -151.64705, Z: 10.037109}
+	if !strings.EqualFold(director.Level, "zelems_1") && len(director.EntryPositions) > 0 {
+		entry = director.EntryPositions[0]
+	}
+	add(entry, seededMapObject{Kind: "entry", Name: "Player spawn point"})
 	obeliskObjects, err := director.CampaignInteractables(0)
 	if err != nil {
 		return fmt.Errorf("map obelisks: %w", err)
@@ -360,9 +408,13 @@ func addSeededMapObjects(levelMap *campaignMap, nav seededMapGeometry, director 
 	addTeleport := func(source, destination game.Vec3, name string) {
 		object := seededMapObject{Kind: "teleport", Name: name}
 		if section, _, ok := projectSeededMapPoint(nav, destination); ok {
-			object.Destination = nav.sections[section].ComponentID
+			destination := nav.sections[section].ComponentID
+			object.Destination = &destination
 		}
 		add(source, object)
+		if name == "Boss teleporter" {
+			add(destination, seededMapObject{Kind: "teleport", Name: "Boss teleporter arrival (one-way entrance)", Arrival: true})
+		}
 	}
 	for _, route := range director.TeleportRoutes() {
 		name := "Teleporter"

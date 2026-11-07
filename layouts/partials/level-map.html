@@ -20,7 +20,8 @@
       (dict "kind" "minion" "label" "Minions")
       (dict "kind" "lieutenant" "label" "Lieutenants")
       (dict "kind" "captain" "label" "Captains")
-      (dict "kind" "destructor" "label" "Destructors") }}
+      (dict "kind" "destructor" "label" "Destructors")
+      (dict "kind" "entry" "label" "Player spawn" "icon" true) }}
     <label>
       <input type="checkbox" data-map-toggle="{{ .kind }}"{{ if ne .kind "destructible" }} checked{{ end }}>
       {{ if .icon }}
@@ -33,11 +34,11 @@
   {{ end }}
   <div class="level-map-gallery">
     {{ range $map.sections }}
-    <figure{{ if $map.run_seed }} data-map-viewport{{ end }}>
+    <figure id="map-component-{{ .component_id }}"{{ if $map.run_seed }} data-map-viewport{{ end }}>
       {{ if $map.run_seed }}
       <svg class="level-seeded-map" viewBox="0 0 512 512" role="group" aria-label="{{ $level.display_name }} spawn map, component {{ .component_id }}">
         <image href="{{ .image_url | strings.TrimPrefix "/" | relURL }}" width="512" height="512"/>
-        {{ with .objects }}{{ range sort (where . "kind" "ne" "teleport") "kind" }}
+        {{ with .objects }}{{ range sort (where (where . "kind" "ne" "teleport") "kind" "ne" "entry") "kind" }}
           {{ $label := .name }}
           {{ if eq .kind "destructible" }}
             {{ with index site.Data.generated.npc.entry .slug }}{{ $label = .name | default $label }}{{ end }}
@@ -64,12 +65,14 @@
         {{ range $layer, $spawns := slice $minionSpawns $lieutenantSpawns $encounterSpawns }}
           {{ if eq $layer 2 }}
             {{ range where $objects "kind" "teleport" }}
+              {{ if not .arrival }}
               {{ $label := .name }}
               {{ with .destination_component }}{{ $label = printf "%s → Component %02.0f" $label . }}{{ end }}
-              <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-teleport" role="img" aria-label="{{ $label }}">
+              <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-teleport{{ if .arrival }} is-arrival{{ end }}" role="img" aria-label="{{ $label }}">
                 <title>{{ $label }}</title>
-                {{ partial "level-map-object-icon.html" "teleport" }}
+                {{ partial "level-map-object-icon.html" (cond .arrival "arrival" "teleport") }}
               </g>
+              {{ end }}
             {{ end }}
           {{ end }}
           {{ range $spawns }}
@@ -91,6 +94,18 @@
           </g>
           {{ end }}
         {{ end }}
+        {{ range where $objects "arrival" true }}
+          <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-teleport is-arrival" role="img" aria-label="{{ .name }}">
+            <title>{{ .name }}</title>
+            {{ partial "level-map-object-icon.html" "arrival" }}
+          </g>
+        {{ end }}
+        {{ range where $objects "kind" "entry" }}
+          <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-entry" role="img" aria-label="{{ .name }}">
+            <title>{{ .name }}</title>
+            {{ partial "level-map-object-icon.html" "entry" }}
+          </g>
+        {{ end }}
       </svg>
       <div class="level-map-navigation" role="group" aria-label="Component {{ printf "%02.0f" .component_id }} map controls" hidden>
         <span>Scroll to zoom · Drag to pan</span>
@@ -101,7 +116,20 @@
       {{ else }}
       <a href="{{ .image_url | strings.TrimPrefix "/" | relURL }}"><img src="{{ .image_url | strings.TrimPrefix "/" | relURL }}" alt="{{ $level.display_name }} navigation component {{ .component_id }}" loading="lazy"></a>
       {{ end }}
-      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}</span><strong>{{ .marker_count }} {{ if $map.run_seed }}total enemy markers{{ else }}mapped points{{ end }}</strong></figcaption>
+      <figcaption><span>COMPONENT {{ printf "%02.0f" .component_id }}{{ if where (.objects | default slice) "kind" "entry" }} · START{{ end }}</span><strong>{{ .marker_count }} {{ if $map.run_seed }}total enemy markers{{ else }}mapped points{{ end }}</strong></figcaption>
+      {{ $component := .component_id }}
+      {{ $destinations := slice }}
+      {{ range where (.objects | default slice) "kind" "teleport" }}
+        {{ if and (isset . "destination_component") (ne .destination_component $component) }}
+          {{ $destinations = $destinations | append .destination_component }}
+        {{ end }}
+      {{ end }}
+      {{ with uniq $destinations }}
+      <nav class="level-map-connections" aria-label="Teleport destinations from component {{ $component }}">
+        <span>Teleports to</span>
+        {{ range . }}<a href="#map-component-{{ . }}">Component {{ printf "%02.0f" . }} →</a>{{ end }}
+      </nav>
+      {{ end }}
     </figure>
     {{ end }}
   </div>
