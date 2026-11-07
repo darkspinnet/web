@@ -256,7 +256,7 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 	if err = addSeededMapObjects(levelMap, nav, director); err != nil {
 		return err
 	}
-	if err = addSeededMapHordes(levelMap, nav, director, population.SectionRosters(), stage-1); err != nil {
+	if err = addSeededMapHordes(levelMap, nav, director, population.SectionRosters(), stage-1, seed); err != nil {
 		return err
 	}
 	for _, plan := range plans {

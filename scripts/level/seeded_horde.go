@@ -13,6 +13,7 @@ import (
 )
 
 type seededMapHorde struct {
+	Fixed  bool              `json:"fixed,omitempty"`
 	Number int               `json:"number"`
 	X      int               `json:"x"`
 	Y      int               `json:"y"`
@@ -57,7 +58,7 @@ type seededHordeEnemy struct {
 	Count int    `json:"count"`
 }
 
-func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director game.CampaignDirector, sections []zonepopulation.SectionRoster, completedStages uint32) error {
+func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director game.CampaignDirector, sections []zonepopulation.SectionRoster, completedStages uint32, seed uint64) error {
 	number := 0
 	for _, set := range director.MarkerSets {
 		for _, trigger := range set.Triggers {
@@ -84,7 +85,7 @@ func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director g
 				if publication.TriggerMarkerID != trigger.MarkerID || !zonehorde.IsTrigger(publication) {
 					continue
 				}
-				waves, err := planSeededHorde(director, publication, sections, completedStages)
+				waves, err := planSeededHorde(director, publication, sections, completedStages, seed)
 				if err != nil {
 					return fmt.Errorf("horde %s: %w", set.Name, err)
 				}
@@ -93,7 +94,7 @@ func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director g
 					return fmt.Errorf("horde %s: trigger cannot be mapped", set.Name)
 				}
 				number++
-				horde := seededMapHorde{Number: number, X: point.X, Y: point.Y, Waves: waves}
+				horde := seededMapHorde{Number: number, X: point.X, Y: point.Y, Waves: waves, Fixed: len(director.ZoneRules.MutationAgent.FixedWaves) > 0}
 				for _, wave := range waves {
 					horde.Total += wave.Count
 				}
@@ -101,18 +102,37 @@ func addSeededMapHordes(levelMap *campaignMap, nav seededMapGeometry, director g
 			}
 		}
 	}
+	if number == 0 && len(director.ZoneRules.MutationAgent.FixedWaves) > 0 {
+		// An override does not create a trigger in a layout that selected none.
+		// Retain its roster as conditional reference information, not a map event.
+		rules := director.ZoneRules.MutationAgent
+		for i, enemies := range rules.FixedWaves {
+			var plans []zonenpc.SpawnPlan
+			for _, enemy := range enemies {
+				for count := uint32(0); count < enemy.Count; count++ {
+					plans = append(plans, zonenpc.SpawnPlan{NounName: enemy.NounName})
+				}
+			}
+			if i == len(rules.FixedWaves)-1 && rules.IsEnabled && completedStages >= rules.MinimumChainLevel {
+				plans = append(plans, zonenpc.SpawnPlan{NounName: zonenpc.MutationAgentNounName})
+			}
+			levelMap.ConfiguredHordeWaves = append(levelMap.ConfiguredHordeWaves, summarizeSeededWave(i+1, plans))
+		}
+	}
 	return nil
 }
 
-func planSeededHorde(director game.CampaignDirector, publication game.CampaignDirectorPublication, sections []zonepopulation.SectionRoster, completedStages uint32) ([]seededHordeWave, error) {
+func planSeededHorde(director game.CampaignDirector, publication game.CampaignDirectorPublication, sections []zonepopulation.SectionRoster, completedStages uint32, seed uint64) ([]seededHordeWave, error) {
 	rules := director.ZoneRules.MutationAgent
-	session := zonehorde.NewCampaignSessionWithPolicy(completedStages, zonehorde.Policy{
+	session := zonehorde.NewCampaignSessionWithSeed(completedStages, zonehorde.Policy{
 		IsMutationAgentEnabled: rules.IsEnabled, MutationAgentMinChainLevel: rules.MinimumChainLevel,
 		WaveCount: rules.WaveCount, MutationAgentWaveOrdinal: rules.SpawnWave,
+		FixedWaves: game.CloneZoneHordeWaves(rules.FixedWaves), AdditionalWaveChancePercents: append([]uint32(nil), rules.AdditionalWaveChancePercents...),
+		LieutenantChancePercent: rules.LieutenantChancePercent, LieutenantLimitPerWave: rules.LieutenantLimitPerWave,
 		InterWaveDelay:                  time.Duration(rules.InterWaveDelayMillisecond) * time.Millisecond,
 		IsMutationAgentDefeatCompleting: rules.IsAgentDefeatCompleting,
-	})
-	policy := session.Policy()
+	}, seed)
+	policy := session.EncounterPolicy(publication)
 	plans, nextID, err := zonehorde.PlanFirstWaveWithPolicy(director, publication, 1, 1, sections, policy)
 	if err != nil {
 		return nil, err

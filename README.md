@@ -66,6 +66,8 @@ Run `mage level` to generate the campaign minimaps and refresh the level catalog
 
 The level generator loads `../darkspin/server/runtime/zone-rules.json`; use `-zone-rules <path>` for another checkout or a preview file. Campaign overrides replace the complete default entry, matching the server's loader. These values drive population, boss, and horde planning and appear in the Zone rules section below Mission environment. Rows that differ from the JSON default are highlighted with their baseline values. Regenerate level data after changing this file; Hugo builds use the generated snapshot without needing the sibling source.
 
+Horde previews support fixed enemy rosters, lieutenant chances and limits, and Mutation Agents on the final wave. Fixed roster details appear in the wave breakdown rather than the rules panel. If the selected layout has no horde trigger, its fixed roster is shown as conditional reference information. The loader also supports `replay_default` inheritance and replay continuation chances; replay destination pages remain aggregate population references rather than previews of a selected replay threat and seed.
+
 For auxiliary maps, render a selection into the directory for its website level slug, then refresh the level catalog. The selection may be the `tutorial` shortcut or a canonical PvP, arena, small-map, Spectra/TNX, or test level name.
 
 ```powershell

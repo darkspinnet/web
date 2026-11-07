@@ -44,18 +44,19 @@ type campaignEnemy struct {
 }
 
 type campaignMap struct {
-	RunSeed         string               `json:"run_seed,omitempty"`
-	PopulationSeed  uint32               `json:"population_seed,omitempty"`
-	UnmappedSpawns  int                  `json:"unmapped_spawns,omitempty"`
-	UnmappedObjects int                  `json:"unmapped_objects,omitempty"`
-	Selection       string               `json:"selection"`
-	Level           string               `json:"level"`
-	Legend          map[string]string    `json:"legend"`
-	Labels          map[string]string    `json:"labels"`
-	Notes           []string             `json:"enemy_class_notes"`
-	Sections        []campaignMapSection `json:"sections"`
-	Markers         []campaignMapMarker  `json:"markers,omitempty"`
-	Positions       []campaignPosition   `json:"positions,omitempty"`
+	ConfiguredHordeWaves []seededHordeWave    `json:"configured_horde_waves,omitempty"`
+	RunSeed              string               `json:"run_seed,omitempty"`
+	PopulationSeed       uint32               `json:"population_seed,omitempty"`
+	UnmappedSpawns       int                  `json:"unmapped_spawns,omitempty"`
+	UnmappedObjects      int                  `json:"unmapped_objects,omitempty"`
+	Selection            string               `json:"selection"`
+	Level                string               `json:"level"`
+	Legend               map[string]string    `json:"legend"`
+	Labels               map[string]string    `json:"labels"`
+	Notes                []string             `json:"enemy_class_notes"`
+	Sections             []campaignMapSection `json:"sections"`
+	Markers              []campaignMapMarker  `json:"markers,omitempty"`
+	Positions            []campaignPosition   `json:"positions,omitempty"`
 }
 
 type campaignMapSection struct {

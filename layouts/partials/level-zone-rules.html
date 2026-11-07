@@ -1,5 +1,5 @@
 <article class="console-panel level-zone-rules">
-  <header><div><span>{{ .number }}</span><h2>Zone rules</h2></div><small{{ if .rules.changed_count }} class="zone-rule-status is-modified"{{ end }}>{{ if .rules.changed_count }}{{ .rules.changed_count }} modified{{ else }}Default rules{{ end }}</small></header>
+  <header><div><span>{{ .number }}</span><h2>Zone rules</h2></div><small{{ if .rules.modified }} class="zone-rule-status is-modified"{{ end }}>{{ if .rules.modified }}Mission override{{ else }}Default rules{{ end }}</small></header>
   <div class="zone-rule-groups">
     {{ range .rules.groups }}
     <section>

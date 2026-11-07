@@ -148,7 +148,7 @@
       <div class="level-map-hordes is-horde">
         {{ range . }}
         <details id="map-horde-{{ .number }}" open>
-          <summary>Horde {{ .number }} <span>{{ len .waves }} {{ if eq (len .waves) 1 }}wave{{ else }}waves{{ end }} · {{ .total }} enemies</span></summary>
+          <summary>Horde {{ .number }} <span>{{ len .waves }} {{ if eq (len .waves) 1 }}wave{{ else }}waves{{ end }} · {{ .total }} enemies{{ if .fixed }} · Fixed roster{{ end }}</span></summary>
           {{ partial "level-map-waves.html" .waves }}
         </details>
         {{ end }}
@@ -167,6 +167,15 @@
     </figure>
     {{ end }}
   </div>
+  {{ with $map.configured_horde_waves }}
+  <div class="level-map-hordes is-horde">
+    <details open>
+      <summary>Configured horde <span>{{ len . }} waves · Fixed roster</span></summary>
+      {{ partial "level-map-waves.html" . }}
+    </details>
+    <small>This seed has no horde trigger. These waves apply if a horde is triggered in another layout.</small>
+  </div>
+  {{ end }}
   {{ with $map.labels }}
     <div class="level-map-legend">
       {{ range $label, $meaning := . }}<span><b>{{ $label }}</b>{{ $meaning }}</span>{{ end }}
