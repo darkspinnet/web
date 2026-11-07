@@ -1,0 +1,7 @@
+<ol>
+{{ range . }}
+  <li><strong class="level-map-wave-heading">{{ .label | default (printf "Wave %.0f" .number) }}<small>{{ .count }} {{ if eq .count 1 }}enemy{{ else }}enemies{{ end }}</small></strong>
+    <div class="level-map-wave-enemies">{{ range .enemies }}{{ $npc := index site.Data.generated.npc.entry .slug }}<span class="level-map-wave-enemy"><b>{{ .count }}×</b>{{ if $npc }}<a href="{{ printf "npc/%s/" .slug | relURL }}">{{ .name | default $npc.name }}</a>{{ else }}<span>{{ .name | default (.slug | humanize) }}</span>{{ end }}</span>{{ end }}</div>
+  </li>
+{{ end }}
+</ol>

@@ -21,6 +21,8 @@
       (dict "kind" "lieutenant" "label" "Lieutenants")
       (dict "kind" "captain" "label" "Captains")
       (dict "kind" "destructor" "label" "Destructors")
+      (dict "kind" "horde" "label" "Hordes" "icon" true)
+      (dict "kind" "boss-waves" "label" "Boss waves")
       (dict "kind" "entry" "label" "Player spawn" "icon" true) }}
     <label>
       <input type="checkbox" data-map-toggle="{{ .kind }}"{{ if ne .kind "destructible" }} checked{{ end }}>
@@ -62,6 +64,7 @@
           {{ end }}
         {{ end }}
         {{ $objects := .objects | default slice }}
+        {{ $bossEncounter := .boss_encounter }}
         {{ range $layer, $spawns := slice $minionSpawns $lieutenantSpawns $encounterSpawns }}
           {{ if eq $layer 2 }}
             {{ range where $objects "kind" "teleport" }}
@@ -87,12 +90,23 @@
           {{ else if in $lieutenants .slug }}
             {{ $role = "lieutenant" }}{{ $radius = 11 }}{{ $portrait = 10 }}
           {{ end }}
+          {{ if and $bossEncounter (or .captain .destructor) }}<a href="#boss-waves-{{ $map.selection }}" aria-label="{{ $name }} encounter waves">{{ end }}
           <g transform="translate({{ .x }} {{ .y }})" class="level-map-spawn is-{{ $role }}{{ if and .affixes (not (or .captain .destructor)) }} is-affixed{{ end }}">
-            <title>{{ $name }}{{ if .destructor }} (Destructor encounter){{ else if .captain }} (Captain encounter){{ else if eq $role "lieutenant" }} (Lieutenant){{ end }}{{ with .affixes }} · {{ delimit . ", " }}{{ end }}</title>
+            <title>{{ $name }}{{ if .destructor }} (Destructor encounter){{ else if .captain }} (Captain encounter){{ else if eq $role "lieutenant" }} (Lieutenant){{ end }}{{ with .affixes }} · {{ delimit . ", " }}{{ end }}{{ if and $bossEncounter (or .captain .destructor) }}&#10;{{ range $bossEncounter.waves }}{{ .label }}: {{ .count }} enemies&#10;{{ end }}Click for encounter waves{{ end }}</title>
             <circle r="{{ $radius }}"/>
             {{ with $npc.image }}<image href="{{ . | strings.TrimPrefix "/" | relURL }}" x="-{{ $portrait }}" y="-{{ $portrait }}" width="{{ mul $portrait 2 }}" height="{{ mul $portrait 2 }}"/>{{ end }}
           </g>
+          {{ if and $bossEncounter (or .captain .destructor) }}</a>{{ end }}
           {{ end }}
+        {{ end }}
+        {{ range .hordes }}
+          <a href="#map-horde-{{ .number }}" class="level-map-object is-horde" aria-label="Horde {{ .number }}: {{ len .waves }} waves, {{ .total }} enemies">
+            <g transform="translate({{ .x }} {{ .y }})">
+              <title>Horde {{ .number }} · {{ len .waves }} waves · {{ .total }} enemies{{ range .waves }}&#10;Wave {{ .number }}: {{ .count }} enemies{{ end }}</title>
+              {{ partial "level-map-object-icon.html" "horde" }}
+              <text x="13" y="4">{{ .number }}</text>
+            </g>
+          </a>
         {{ end }}
         {{ range where $objects "arrival" true }}
           <g transform="translate({{ .x }} {{ .y }})" class="level-map-object is-teleport is-arrival" role="img" aria-label="{{ .name }}">
@@ -129,6 +143,26 @@
         <span>Teleports to</span>
         {{ range . }}<a href="#map-component-{{ . }}">Component {{ printf "%02.0f" . }} →</a>{{ end }}
       </nav>
+      {{ end }}
+      {{ with .hordes }}
+      <div class="level-map-hordes is-horde">
+        {{ range . }}
+        <details id="map-horde-{{ .number }}" open>
+          <summary>Horde {{ .number }} <span>{{ len .waves }} {{ if eq (len .waves) 1 }}wave{{ else }}waves{{ end }} · {{ .total }} enemies</span></summary>
+          {{ partial "level-map-waves.html" .waves }}
+        </details>
+        {{ end }}
+        <small>On entering the trigger · First-clear preview at normal campaign progress</small>
+      </div>
+      {{ end }}
+      {{ with .boss_encounter }}
+      <div class="level-map-hordes is-boss-waves">
+        <details id="boss-waves-{{ $map.selection }}" open>
+          <summary>Boss encounter <span>{{ .name }} · {{ .total }} enemies</span></summary>
+          {{ partial "level-map-waves.html" .waves }}
+        </details>
+        <small>Clear the opening wave to bring in the boss</small>
+      </div>
       {{ end }}
     </figure>
     {{ end }}

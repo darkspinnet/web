@@ -251,6 +251,9 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 	if err = addSeededMapObjects(levelMap, nav, director); err != nil {
 		return err
 	}
+	if err = addSeededMapHordes(levelMap, nav, director, population.SectionRosters(), stage-1); err != nil {
+		return err
+	}
 	for _, plan := range plans {
 		variant := seededVariant(plan.BossIdentity, affixLabels)
 		if len(variant.Affixes) > 0 {
@@ -266,7 +269,7 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 	}
 	leader, found := zoneboss.NamedBossNounForDirector(director, stage)
 	if found {
-		boss, err := planSeededEncounter(director, stage)
+		boss, waves, err := planSeededEncounter(director, stage)
 		if err != nil {
 			return err
 		}
@@ -274,6 +277,17 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 			return fmt.Errorf("expected encounter leader %s, planned %s", leader, boss.NounName)
 		}
 		variant := seededVariant(boss.BossIdentity, affixLabels)
+		if len(waves) > 0 {
+			section, _, ok := projectSeededMapPoint(nav, boss.Position)
+			if !ok {
+				return fmt.Errorf("boss wave location cannot be mapped")
+			}
+			encounter := &seededBossWaves{Name: variant.Name, Waves: waves}
+			for _, wave := range waves {
+				encounter.Total += wave.Count
+			}
+			levelMap.Sections[section].BossEncounter = encounter
+		}
 		if !addSeededMapPoint(levelMap, nav, boss, variant) {
 			levelMap.UnmappedSpawns++
 		}
@@ -299,29 +313,55 @@ func generateSeededMission(ctx context.Context, database *sql.DB, setup *game.Ca
 	return nil
 }
 
-func planSeededEncounter(director game.CampaignDirector, stage uint32) (zonenpc.SpawnPlan, error) {
+func planSeededEncounter(director game.CampaignDirector, stage uint32) (zonenpc.SpawnPlan, []seededHordeWave, error) {
 	var plans []zonenpc.SpawnPlan
+	var publication game.CampaignDirectorPublication
 	var err error
 	if strings.EqualFold(director.Level, "zelems_1") {
-		publication, publicationErr := zoneboss.InitialDeveloperPublication(director)
+		var publicationErr error
+		publication, publicationErr = zoneboss.InitialDeveloperPublication(director)
 		if publicationErr != nil {
-			return zonenpc.SpawnPlan{}, publicationErr
+			return zonenpc.SpawnPlan{}, nil, publicationErr
 		}
 		plans, _, err = zoneboss.PlanInitialEncounter(director, publication, 1, 1, stage)
 	} else {
-		publication, publicationErr := zoneboss.DeveloperPublication(director)
+		namedPublication, publicationErr := zoneboss.DeveloperPublication(director)
 		if publicationErr != nil {
-			return zonenpc.SpawnPlan{}, publicationErr
+			return zonenpc.SpawnPlan{}, nil, publicationErr
 		}
-		_, plans, _, err = zoneboss.PlanNamedEncounter(director, publication, 1, 1, stage)
+		publication, plans, _, err = zoneboss.PlanNamedEncounter(director, namedPublication, 1, 1, stage)
 	}
 	if err != nil {
-		return zonenpc.SpawnPlan{}, err
+		return zonenpc.SpawnPlan{}, nil, err
 	}
 	if len(plans) == 0 {
-		return zonenpc.SpawnPlan{}, fmt.Errorf("named encounter has no leader")
+		return zonenpc.SpawnPlan{}, nil, fmt.Errorf("named encounter has no leader")
 	}
-	return plans[0], nil
+	session := zoneboss.NewSession(director.BossSpawnRules)
+	if err = session.Arm(publication, plans); err != nil {
+		return zonenpc.SpawnPlan{}, nil, err
+	}
+	var waves []seededHordeWave
+	if session.IsLeaderDeferred() && len(plans) > 1 {
+		opening := summarizeSeededWave(1, plans[1:])
+		opening.Label = "Before boss"
+		waves = append(waves, opening)
+		bossPlans := plans[:1]
+		if strings.EqualFold(director.Level, "zelems_1") {
+			adds, _, err := zoneboss.PlanInitialSecondWave(director, publication, uint32(len(plans)+1), 1)
+			if err != nil {
+				return zonenpc.SpawnPlan{}, nil, err
+			}
+			bossPlans = append(append([]zonenpc.SpawnPlan(nil), bossPlans...), adds...)
+		}
+		bossWave := summarizeSeededWave(2, bossPlans)
+		bossWave.Label = "Boss"
+		if len(bossPlans) > 1 {
+			bossWave.Label = "Boss + reinforcements"
+		}
+		waves = append(waves, bossWave)
+	}
+	return plans[0], waves, nil
 }
 
 func seededVariant(identity zonenpc.BossIdentity, affixLabels map[string]string) seededEnemyVariant {

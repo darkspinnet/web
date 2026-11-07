@@ -59,12 +59,14 @@ type campaignMap struct {
 }
 
 type campaignMapSection struct {
-	Spawns      []seededMapPoint  `json:"spawns,omitempty"`
-	Objects     []seededMapObject `json:"objects,omitempty"`
-	ComponentID uint32            `json:"component_id"`
-	Image       string            `json:"image"`
-	MarkerCount int               `json:"marker_count"`
-	ImageURL    string            `json:"image_url"`
+	BossEncounter *seededBossWaves  `json:"boss_encounter,omitempty"`
+	Hordes        []seededMapHorde  `json:"hordes,omitempty"`
+	Spawns        []seededMapPoint  `json:"spawns,omitempty"`
+	Objects       []seededMapObject `json:"objects,omitempty"`
+	ComponentID   uint32            `json:"component_id"`
+	Image         string            `json:"image"`
+	MarkerCount   int               `json:"marker_count"`
+	ImageURL      string            `json:"image_url"`
 }
 
 type campaignMapMarker struct {

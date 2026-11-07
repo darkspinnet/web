@@ -1098,7 +1098,7 @@ body { background: #090c10; font-size: 15px; }
 .level-campaign-stack { display: grid; gap: 14px; margin-bottom: 42px; }
 .level-map-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 640px)); gap: 1px; padding: 1px; background: #26333f; }
 .level-map-gallery figure { min-width: 0; margin: 0; background: #080c10; }
-.level-map-gallery a { display: block; overflow: hidden; background: rgba(62,81,96,.2); }
+.level-map-gallery figure > a { display: block; overflow: hidden; background: rgba(62,81,96,.2); }
 .level-map-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; transition: filter .2s ease; }
 .level-map-gallery a:hover img { filter: brightness(1.12); }
 .level-map-gallery figcaption { display: flex; justify-content: space-between; gap: 12px; padding: 9px 12px; border-top: 1px solid #26333f; color: #75838e; font: .6rem/1.2 monospace; letter-spacing: .05em; text-transform: uppercase; }
@@ -2007,7 +2007,7 @@ body {
 .level-map-gallery figure, .level-position-card, .level-enemy-dossier { overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) - 2px); background: hsl(var(--card)); }
 .level-enemy-dossier:is([data-role="lieutenant"], [data-role="captain"]) { background: #14233c; --enemy-detail-fill: #233957; --enemy-detail-edge: #3c567a; }
 .level-enemy-dossier[data-role="destructor"] { background: #39171f; --enemy-detail-fill: #542832; --enemy-detail-edge: #76404c; }
-.level-map-gallery a, .level-position-map { background: hsl(var(--background)); }
+.level-map-gallery figure > a, .level-position-map { background: hsl(var(--background)); }
 .level-map-gallery figcaption, .level-map-legend, .level-position-card > header, .level-position-map, .level-position-block, .level-position-entries { border-color: hsl(var(--border)); }
 .level-map-gallery figcaption, .level-map-legend { color: hsl(var(--muted-foreground)); background: hsl(var(--card)); }
 .level-map-gallery figcaption strong { color: hsl(var(--foreground)); }
@@ -2179,6 +2179,23 @@ body {
 .level-map-object.is-obelisk { color: #ffe08a; }
 .level-map-object.is-teleport { color: #a2f3ff; }
 .level-map-object.is-arrival { color: #ffc660; }
+.level-map-object.is-horde { color: #ffb36d; }
+.level-map-object text { fill: currentColor; stroke: #111820; stroke-width: 3px; paint-order: stroke; font: bold 12px monospace; }
+.level-map-hordes { padding: 12px 15px; border-top: 1px solid hsl(var(--border)); font-size: .8rem; }
+.level-map-hordes details { padding-block: 6px; scroll-margin-top: 80px; }
+.level-map-hordes summary { cursor: pointer; color: #ffb36d; font-weight: 600; }
+.level-map-hordes summary span { margin-left: 8px; color: hsl(var(--muted-foreground)); font-weight: 400; }
+.level-map-hordes ol { margin: 12px 0; padding: 0; list-style: none; }
+.level-map-hordes li { display: grid; grid-template-columns: 80px minmax(0,1fr); align-items: start; gap: 12px; padding-block: 10px; border-top: 1px solid hsl(var(--border)); }
+.level-map-wave-heading { display: grid; gap: 3px; line-height: 1.4; }
+.level-map-wave-heading small { font-weight: 400; font-size: .72rem; }
+.is-boss-waves li { grid-template-columns: 120px minmax(0,1fr); }
+.level-map-wave-enemies { display: flex; flex-wrap: wrap; gap: 6px 12px; min-width: 0; }
+.level-map-wave-enemy { display: inline-flex; align-items: baseline; gap: 5px; max-width: 100%; line-height: 1.5; }
+.level-map-wave-enemy b { flex: none; color: hsl(var(--muted-foreground)); font-weight: 500; font-variant-numeric: tabular-nums; }
+.level-map-wave-enemy a { min-width: 0; color: hsl(var(--foreground)); text-decoration-color: hsl(var(--border)); text-underline-offset: 3px; }
+.level-map-wave-enemy a:hover { color: hsl(var(--primary)); text-decoration: underline; }
+.level-map-hordes small { color: hsl(var(--muted-foreground)); }
 .level-map-object.is-entry { color: #8dffa8; }
 .level-map-connections { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 15px; border-top: 1px solid hsl(var(--border)); font-size: .78rem; }
 .level-map-connections span { color: hsl(var(--muted-foreground)); }
@@ -2194,6 +2211,8 @@ body {
 .level-map-panel:has([data-map-toggle="obelisk"]:not(:checked)) .level-seeded-map .is-obelisk,
 .level-map-panel:has([data-map-toggle="teleport"]:not(:checked)) .level-seeded-map .is-teleport,
 .level-map-panel:has([data-map-toggle="entry"]:not(:checked)) .level-seeded-map .is-entry,
+.level-map-panel:has([data-map-toggle="horde"]:not(:checked)) .is-horde,
+.level-map-panel:has([data-map-toggle="boss-waves"]:not(:checked)) .is-boss-waves,
 .level-map-panel:has([data-map-toggle="minion"]:not(:checked)) .level-seeded-map .is-minion,
 .level-map-panel:has([data-map-toggle="lieutenant"]:not(:checked)) .level-seeded-map .is-lieutenant,
 .level-map-panel:has([data-map-toggle="captain"]:not(:checked)) .level-seeded-map .is-captain,
